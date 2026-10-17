@@ -20,7 +20,8 @@ TAXONOMY_PATH = ROOT / "taxonomy" / "taxonomy.yaml"
 MOEX_BASE = "https://wwwq.moex.gov.tw/exam/"
 SEARCH_URL = MOEX_BASE + "wFrmExamQandASearch.aspx"
 FILE_URL = MOEX_BASE + "wHandExamQandA_File.ashx"
-USER_AGENT = "ptking-questionbank/0.1 (+https://github.com/<owner>/ptking-questionbank; 個人刷題 App 題庫整理，低頻率存取)"
+# HTTP header 只能用 latin-1，這裡不可放中文
+USER_AGENT = "ptking-questionbank/0.1 (+https://github.com/JaroCho1030/ptking-questionbank; personal exam-practice app, low-frequency access)"
 REQUEST_DELAY_SEC = 1.0  # 對考選部溫柔一點
 
 # 類科名稱（結果頁的群組標題會長得像「專技高考_物理治療師」）

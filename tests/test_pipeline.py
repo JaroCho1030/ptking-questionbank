@@ -176,3 +176,9 @@ def test_assemble_validate_build_end_to_end(tmp_path, monkeypatch):
     assert con.execute("SELECT id FROM questions_fts WHERE questions_fts MATCH '布朗斯壯'").fetchone()[0].startswith("108-1-NEURO")
     manifest = json.loads((dist_dir / "manifest.json").read_text("utf-8"))
     assert manifest["question_count"] == 80 and manifest["sqlite"]["url"].endswith("/questions.sqlite")
+
+
+def test_user_agent_is_latin1():
+    """HTTP header 必須能用 latin-1 編碼，否則 requests 送出前就會 UnicodeEncodeError。"""
+    from pipeline import config as C
+    C.USER_AGENT.encode("latin-1")
