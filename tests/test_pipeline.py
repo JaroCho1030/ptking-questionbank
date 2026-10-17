@@ -311,3 +311,18 @@ def test_normalize_scripts_chained_sub_sup():
     from pdfplumber.utils import extract_text
     chars = [_ch("C", 10, 100, 10), _ch("O", 16, 100, 10), _ch("3", 22, 105, 7), _ch("-", 26.2, 97, 7)]
     assert extract_text(normalize_scripts(chars)) == "CO₃⁻"
+
+
+def test_assign_groups():
+    from pipeline.parse import assign_groups
+    stems = {
+        1: "一般題目", 2: "王先生，58歲…", 3: "承上題，最可能的診斷？", 4: "承上題，下一步？",
+        5: "請依下列迴歸分析結果表回答以下3題。何者影響社會參與？", 6: "年齡越大時分數如何？", 7: "由此分析結果發現…",
+        8: "承上題之家庭所得統計圖，何者正確？", 9: "一般題目",
+    }
+    qs = [{"number": n, "stem": s} for n, s in stems.items()]
+    assign_groups(qs)
+    got = {q["number"]: (q["group_lead"], q["group_pos"]) for q in qs}
+    assert got[1] == (None, None) and got[9] == (None, None)
+    assert [got[n] for n in (2, 3, 4)] == [(2, 1), (2, 2), (2, 3)]
+    assert [got[n] for n in (5, 6, 7, 8)] == [(5, 1), (5, 2), (5, 3), (5, 4)]

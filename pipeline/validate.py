@@ -56,6 +56,16 @@ def validate_file(path: Path, data: dict, topics: dict) -> tuple[list[dict], lis
         if n > 1:
             errors.append(f"{label}: 重複題幹 x{n}: {stem[:30]}…")
 
+    groups: dict[str, list[dict]] = {}
+    for q in qs:
+        if q.get("group_id"):
+            groups.setdefault(q["group_id"], []).append(q)
+    for gid, members in groups.items():
+        nums = [m["number"] for m in members]
+        if (len(members) < 2 or members[0]["id"] != gid or [m["group_pos"] for m in members] != list(range(1, len(members) + 1))
+                or nums != list(range(nums[0], nums[0] + len(nums)))):
+            errors.append(f"{label}: 題組 {gid} 結構不對（題號 {nums}）")
+
     for q in qs:
         reasons = list(q.get("review_flags") or [])
         if not q["stem"].strip():
@@ -94,7 +104,7 @@ def main(argv=None):
 
     tax = load_taxonomy()
     all_rows, all_errors = [], []
-    total, tagged, voided, figures = 0, 0, 0, 0
+    total, tagged, voided, figures, grouped, group_ids = 0, 0, 0, 0, 0, set()
     for path, data in iter_json_files():
         rows, errors = validate_file(path, data, tax["topics"])
         all_rows += rows
@@ -104,6 +114,9 @@ def main(argv=None):
             tagged += bool(q.get("topic"))
             voided += bool(q["is_voided"])
             figures += bool(q.get("figure"))
+            if q.get("group_id"):
+                grouped += 1
+                group_ids.add(q["group_id"])
 
     C.REVIEW_DIR.mkdir(parents=True, exist_ok=True)
     out = C.REVIEW_DIR / "review_queue.csv"
@@ -112,7 +125,7 @@ def main(argv=None):
         w.writeheader()
         w.writerows(all_rows)
 
-    print(f"題目總數 {total}，已標主題 {tagged}，送分 {voided}，附圖 {figures}")
+    print(f"題目總數 {total}，已標主題 {tagged}，送分 {voided}，附圖 {figures}，題組 {len(group_ids)} 組 {grouped} 題")
     print(f"待審核 {len(all_rows)} 題 → {out}")
     for e in all_errors:
         print("[error]", e)

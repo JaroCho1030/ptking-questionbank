@@ -41,6 +41,10 @@ _CLASS_NAME = re.compile(r"類科名稱[:：]\s*(\S+)")
 _FIGURE_HINTS = ("如下圖", "如圖", "下圖", "圖中", "附圖", "如右圖", "見圖", "依圖", "圖示", "此圖",
                  "如下表", "下表", "表中", "附表", "如右表", "見表", "影像判斷", "光影像", "光片", "示意圖")
 _FW = {"Ａ": "A", "Ｂ": "B", "Ｃ": "C", "Ｄ": "D"}
+_GROUP_FOLLOW = re.compile(r"^\s*承上")                                  # 「承上題，…」「承上題之…」
+_GROUP_LEAD_N = re.compile(r"回答(?:以下|下列|下面)\s*([0-9０-９一二三四五六七八九])\s*題")  # 「請依下表回答以下3題」
+_CN_NUM = {**{c: i for i, c in enumerate("一二三四五六七八九", start=1)},
+           **{c: i for i, c in enumerate("０１２３４５６７８９")}}
 _BARE_OPT = re.compile(r"^\s*[A-DＡ-Ｄ][\.．]\s*$", re.M)  # 只有「A.」、文字跑到另一行
 _LOOSE_Y_TOLERANCE = 5
 
@@ -326,6 +330,35 @@ def parse_pages(pages: list[list[str]]) -> tuple[dict, list[dict], list[str]]:
     return header, questions, warnings
 
 
+def assign_groups(questions: list[dict]) -> None:
+    """標出題組（純函式，測試用）：同一組的題目要一起出，後面的題目離開前題就看不懂。
+
+    - 「承上…」開頭 → 跟上一題同組（可連續好幾題，例 110-2 NEURO 78–80）。
+    - 「…回答以下 N 題」→ 本題起連續 N 題同組（例 108-2 INTRO 78–80，後兩題沒寫承上題）。
+    每題加上 group_lead（組內第一題題號，非題組為 None）與 group_pos（1 起算）。
+    """
+    for q in questions:
+        q["group_lead"], q["group_pos"] = None, None
+    by_number = {q["number"]: q for q in questions}
+
+    def join(lead: dict, q: dict) -> None:
+        if lead["group_lead"] is None:
+            lead["group_lead"], lead["group_pos"] = lead["number"], 1
+        lead_q = by_number[lead["group_lead"]]
+        size = sum(1 for x in questions if x["group_lead"] == lead_q["number"])
+        q["group_lead"], q["group_pos"] = lead_q["number"], size + 1
+
+    for i, q in enumerate(questions):
+        m = _GROUP_LEAD_N.search(q["stem"])
+        if m:
+            n = int(_CN_NUM.get(m.group(1), m.group(1)))
+            for follower in questions[i + 1:i + n]:
+                if follower["group_lead"] is None:
+                    join(q, follower)
+        if i > 0 and q["group_lead"] is None and _GROUP_FOLLOW.match(q["stem"]):
+            join(questions[i - 1], q)
+
+
 def has_figure_hint(stem: str) -> bool:
     """題幹有沒有提到圖表。「量表中」「森林圖」這類詞不算。"""
     s = stem.replace("量表", "")
@@ -511,6 +544,7 @@ def parse_one(key: str, subj: str, sub: dict, exam_code: str) -> dict:
     extract_warnings: list[str] = []
     pages = extract_pages(q_pdf, extract_warnings)
     header, questions, warnings = parse_pages(pages)
+    assign_groups(questions)
     warnings = extract_warnings + warnings
 
     s_text = extract_answer_text(C.ROOT / sub["s_file"]["path"]) if sub.get("s_file") else ""
@@ -552,6 +586,8 @@ def assemble(header: dict, questions: list[dict], answer_map: dict, warnings: li
             "has_figure": q["has_figure"],
             "figure": q.get("figure"),
             "figure_kind": q.get("figure_kind"),
+            "group_id": qid(q["group_lead"]) if q.get("group_lead") else None,
+            "group_pos": q.get("group_pos"),
             "page": q["page"],
             "topic": tags.get("topic"),
             "tags": tags.get("tags") or [],

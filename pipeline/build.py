@@ -79,11 +79,14 @@ CREATE TABLE questions (
     is_voided        INTEGER NOT NULL DEFAULT 0,
     correction_note  TEXT,
     has_figure       INTEGER NOT NULL DEFAULT 0,
+    group_id         TEXT,               -- 題組第一題的 id；非題組為 NULL
+    group_pos        INTEGER,            -- 組內順序 1..n
     tags             TEXT NOT NULL DEFAULT '[]'   -- JSON array
 );
 CREATE INDEX idx_questions_exam    ON questions(exam_id, number);
 CREATE INDEX idx_questions_subject ON questions(subject_code);
 CREATE INDEX idx_questions_topic   ON questions(topic_code);
+CREATE INDEX idx_questions_group   ON questions(group_id, group_pos);
 
 CREATE TABLE figures (
     question_id TEXT PRIMARY KEY REFERENCES questions(id),
@@ -134,11 +137,11 @@ def build(version: str, release_base_url: str | None) -> None:
                      len(qs), ex.get("source_q"), ex.get("source_s"), ex.get("source_m")))
         for q in qs:
             con.execute(
-                "INSERT INTO questions VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                "INSERT INTO questions VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                 (q["id"], ex["id"], ex["subject_code"], q.get("topic"), q["number"], q["stem"],
                  q["options"]["A"], q["options"]["B"], q["options"]["C"], q["options"]["D"],
                  ",".join(q["accepted_answers"]), q.get("official_answer"), int(q["is_voided"]),
-                 q.get("correction_note"), int(bool(q.get("figure"))), json.dumps(q.get("tags") or [], ensure_ascii=False)))
+                 q.get("correction_note"), int(bool(q.get("figure"))), q.get("group_id"), q.get("group_pos"), json.dumps(q.get("tags") or [], ensure_ascii=False)))
             con.execute("INSERT INTO questions_fts VALUES (?,?,?,?,?,?)",
                         (q["id"], q["stem"], q["options"]["A"], q["options"]["B"], q["options"]["C"], q["options"]["D"]))
             if q.get("figure"):
