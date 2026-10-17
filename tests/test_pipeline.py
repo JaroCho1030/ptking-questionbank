@@ -182,3 +182,52 @@ def test_user_agent_is_latin1():
     """HTTP header 必須能用 latin-1 編碼，否則 requests 送出前就會 UnicodeEncodeError。"""
     from pipeline import config as C
     C.USER_AGENT.encode("latin-1")
+
+
+def test_fix_broken_circled():
+    from pipeline.textnorm import fix_broken_circled, has_broken_circled
+    raw = "\u045b總時間 \u045c相對時間 \u0460環境因素"  # 113-1 NEURO 用 PyMuPDF 抽出的樣子
+    assert has_broken_circled(raw)
+    assert fix_broken_circled(raw) == "①總時間 ②相對時間 ⑥環境因素"
+    assert not has_broken_circled("①②③ 正常的圈號")
+
+
+def test_glyphs_to_chars_places_recovered_glyph():
+    from pipeline.parse import glyphs_to_chars
+    tmpl = {"text": "總", "x0": 50, "x1": 61, "top": 100, "bottom": 111, "doctop": 900, "size": 11, "upright": True}
+    [c] = glyphs_to_chars([("①", (39, 100, 50, 111), 11)], tmpl)
+    assert (c["text"], c["x0"], c["doctop"], c["upright"]) == ("①", 39, 900, True)
+
+
+def test_circled_warnings():
+    from pipeline.parse import circled_warnings
+    assert circled_warnings(["A.①②"], ["A.\u045b\u045c"]) == []
+    assert any("圈號數量不一致" in w for w in circled_warnings(["A.②"], ["A.①②"]))
+    assert any("西里爾" in w for w in circled_warnings(["A.\u045b"], ["A.\u045b"]))
+
+
+def test_figure_boxes_ignores_page_frame_and_neighbours():
+    from pipeline.parse import figure_boxes
+    page_area = 595 * 842
+    region = (24, 300, 571, 500)
+    frame = (20, 20, 575, 822)        # 整頁外框：不算
+    own = (60, 330, 400, 480)         # 本題的圖：算
+    neighbour = (60, 480, 400, 700)   # 下一題的圖，只碰到邊：不算
+    line = (60, 350, 500, 351)        # 細線：不算
+    assert figure_boxes([frame, own, neighbour, line], region, page_area) == [own]
+
+
+def test_render_clips_writes_webp(tmp_path):
+    import pymupdf
+    from pipeline.parse import _render_clips
+    doc = pymupdf.open()
+    for _ in range(2):  # 兩頁各畫一個框，模擬跨頁附圖
+        page = doc.new_page(width=300, height=400)
+        page.draw_rect(pymupdf.Rect(50, 50, 250, 150), color=(0, 0, 0), fill=(0.8, 0.2, 0.2))
+    out = tmp_path / "x.webp"
+    _render_clips(pymupdf, doc, [(0, pymupdf.Rect(40, 40, 260, 160)), (1, pymupdf.Rect(40, 40, 260, 160))], out)
+    data = out.read_bytes()
+    assert data[:4] == b"RIFF" and data[8:12] == b"WEBP"
+    from PIL import Image
+    assert Image.open(out).size == (440, 480)  # 220x120pt ×2 倍、兩張上下拼
+

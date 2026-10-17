@@ -7,7 +7,7 @@
 
 ```
 考選部 PDF ──fetch──▶ data/raw/{年}-{次}/{科}.{Q|S|M}.pdf
-            ──parse──▶ data/json/{年}-{次}/{科}.json  (+ data/figures/*.png)
+            ──parse──▶ data/json/{年}-{次}/{科}.json  (+ data/figures/*.webp)
             ──validate▶ data/review/review_queue.csv   （人工看）
             ──tag────▶ 回寫 topic / tags 到 JSON
             ──build──▶ dist/questions.sqlite + dist/manifest.json
@@ -16,7 +16,7 @@
 | 指令 | 做什麼 |
 |---|---|
 | `python -m pipeline.fetch --years 105-115` | 抓缺的試題；**最近 4 回合的答案與更正答案一律重抓比對**，有變動寫進 `data/raw/changes.log` |
-| `python -m pipeline.parse` | 解析 `needs_parse` 的科目成 JSON，附圖裁成 PNG。`--dump some.pdf` 看抽出的文字 |
+| `python -m pipeline.parse` | 解析 `needs_parse` 的科目成 JSON，附圖裁成 WebP。`--dump some.pdf` 看抽出的文字 |
 | `python -m pipeline.validate` | 結構檢查，產出審核清單 |
 | `python -m pipeline.tag --subject NEURO --limit 40` | 先小量試標；滿意再 `python -m pipeline.tag` 全跑（需 `ANTHROPIC_API_KEY`） |
 | `python -m pipeline.tag --apply-overrides` | 把 `data/review/topic_overrides.csv` 的人工修正寫回 |

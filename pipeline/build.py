@@ -87,7 +87,7 @@ CREATE INDEX idx_questions_topic   ON questions(topic_code);
 
 CREATE TABLE figures (
     question_id TEXT PRIMARY KEY REFERENCES questions(id),
-    png         BLOB NOT NULL,
+    image       BLOB NOT NULL,   -- WebP
     kind        TEXT
 );
 

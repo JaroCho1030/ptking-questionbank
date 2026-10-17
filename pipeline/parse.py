@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import logging
 import re
 import sys
 from datetime import datetime, timezone
@@ -24,7 +25,12 @@ from pathlib import Path
 
 from . import config as C
 from .answers import build_answer_map, extract_text as extract_answer_text
-from .textnorm import clean_text, fix_radicals
+from .textnorm import (clean_text, count_circled, fix_broken_circled, fix_radicals,
+                       has_broken_circled, has_cyrillic)
+
+# pdfminer（pdfplumber 底層）遇到字型描述缺欄位會印「Could not get FontBBox…」等提醒，
+# 不影響抽字結果，只留真正的錯誤。
+logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 _Q_START = re.compile(r"^\s*(\d{1,3})[\.．]\s*(.*)$")
 _OPT_START = re.compile(r"^\s*([A-DＡ-Ｄ])[\.．]\s*(.*)$")
@@ -39,16 +45,85 @@ _FW = {"Ａ": "A", "Ｂ": "B", "Ｃ": "C", "Ｄ": "D"}
 
 # ---------------------------------------------------------------- 文字抽取
 
-def extract_pages(pdf_path: Path) -> list[list[str]]:
-    """每頁一個 list，list 裡是去掉頁首頁尾的文字行。"""
+def _mupdf_pages(pdf_path: Path):
+    try:
+        import pymupdf
+    except ImportError:  # 舊版只有 fitz 這個名字
+        import fitz as pymupdf
+    return list(pymupdf.open(str(pdf_path)))
+
+
+def _broken_glyphs(mpage) -> list[tuple[str, tuple[float, float, float, float], float]]:
+    """PyMuPDF 看得到、但 pdfplumber 會丟掉的壞圈號：回傳 (修正後的字, bbox, 字級)。"""
+    out = []
+    for block in mpage.get_text("rawdict")["blocks"]:
+        for line in block.get("lines", []):
+            for span in line["spans"]:
+                for c in span["chars"]:
+                    if has_broken_circled(c["c"]):
+                        out.append((fix_broken_circled(c["c"]), tuple(c["bbox"]), span["size"]))
+    return out
+
+
+def glyphs_to_chars(glyphs, template: dict) -> list[dict]:
+    """把補回的字做成 pdfplumber 的 char dict（複製同頁一個字當樣板，只改文字與位置）。"""
+    chars = []
+    for text, (x0, y0, x1, y1), size in glyphs:
+        d = dict(template)
+        d.update(text=text, x0=x0, x1=x1, top=y0, bottom=y1, width=x1 - x0, height=y1 - y0, size=size,
+                 doctop=template["doctop"] - template["top"] + y0)
+        chars.append(d)
+    return chars
+
+
+def circled_warnings(final_texts: list[str], mupdf_texts: list[str]) -> list[str]:
+    """逐頁比對圈號數量（純函式）。不一致代表某個抽取器漏字，寧可發 warning 也不要默默少字。"""
+    warnings = []
+    if len(final_texts) != len(mupdf_texts):
+        warnings.append(f"兩個抽取器頁數不同（pdfplumber {len(final_texts)}、PyMuPDF {len(mupdf_texts)}）")
+    for i, (a, b) in enumerate(zip(final_texts, mupdf_texts), start=1):
+        b = fix_broken_circled(b)
+        if count_circled(a) != count_circled(b):
+            warnings.append(f"第 {i} 頁圈號數量不一致（pdfplumber {count_circled(a)}、PyMuPDF {count_circled(b)}），可能有字被吃掉")
+        if has_cyrillic(a):
+            warnings.append(f"第 {i} 頁有西里爾字母，可能是新的字型對應錯誤")
+    return warnings
+
+
+def extract_pages(pdf_path: Path, warnings: list[str] | None = None) -> list[list[str]]:
+    """每頁一個 list，list 裡是去掉頁首頁尾的文字行。抽取時的警告會附加到 warnings。
+
+    以 pdfplumber 為主，另外兩個補強：
+    - dedupe_chars()：部分 PDF 用「疊印」做粗體，同一個字畫好幾次，不去重會變成「殘殘留留」。
+    - 圈號字型壞掉的 PDF（例：113-1 NEURO），pdfplumber 會把 ①② 整個丟掉；
+      從 PyMuPDF 取回這些字的位置，塞回 pdfplumber 的字元清單再排版。
+    """
     import pdfplumber
-    pages: list[list[str]] = []
+    from pdfplumber.utils import extract_text as chars_to_text
+
+    mpages = _mupdf_pages(pdf_path)
+    texts: list[str] = []
+    recovered = 0
     with pdfplumber.open(str(pdf_path)) as pdf:
-        for page in pdf.pages:
-            text = fix_radicals(page.extract_text() or "")
-            lines = [ln.rstrip() for ln in text.splitlines()]
-            lines = [ln for ln in lines if ln.strip() and not _PAGE_HDR.search(ln)]
-            pages.append(lines)
+        for i, page in enumerate(pdf.pages):
+            page = page.dedupe_chars()
+            glyphs = _broken_glyphs(mpages[i]) if i < len(mpages) else []
+            if glyphs and page.chars:
+                recovered += len(glyphs)
+                text = chars_to_text(list(page.chars) + glyphs_to_chars(glyphs, page.chars[0]))
+            else:
+                text = page.extract_text()
+            texts.append(fix_radicals(text or ""))
+    if recovered:
+        print(f"  [info] {pdf_path.name}：補回 {recovered} 個圈號（字型對應錯誤）", file=sys.stderr)
+    if warnings is not None:
+        warnings.extend(circled_warnings(texts, [m.get_text() for m in mpages]))
+
+    pages: list[list[str]] = []
+    for text in texts:
+        lines = [ln.rstrip() for ln in text.splitlines()]
+        lines = [ln for ln in lines if ln.strip() and not _PAGE_HDR.search(ln)]
+        pages.append(lines)
     return pages
 
 
@@ -139,57 +214,122 @@ def _next_option_letter(q: dict) -> str | None:
 
 # ---------------------------------------------------------------- 附圖裁切
 
+def figure_boxes(boxes: list[tuple[float, float, float, float]], region: tuple[float, float, float, float],
+                 page_area: float) -> list[tuple[float, float, float, float]]:
+    """從頁面上所有圖形/圖片框，挑出屬於這一題的（純函式，測試用）。
+
+    - 太小的（線條、雜點）不算：寬 > 20 且高 > 10。
+    - 跟頁面差不多大的（例如外框）不算：面積 < 頁面 60%。
+    - 至少 60% 面積落在這題的範圍內才算 —— 只「碰到」不夠，否則整頁外框會讓每題都被裁成整頁。
+    """
+    rx0, ry0, rx1, ry1 = region
+    out = []
+    for x0, y0, x1, y1 in boxes:
+        w, h = x1 - x0, y1 - y0
+        if w <= 20 or h <= 10 or w * h >= 0.6 * page_area:
+            continue
+        ix = max(0.0, min(x1, rx1) - max(x0, rx0))
+        iy = max(0.0, min(y1, ry1) - max(y0, ry0))
+        if ix * iy >= 0.6 * w * h:
+            out.append((x0, y0, x1, y1))
+    return out
+
+
 def crop_figures(pdf_path: Path, questions: list[dict], out_dir: Path, id_for) -> None:
-    """對 has_figure 的題目，用 PyMuPDF 裁出該題區域（優先裁圖形/圖片的聯集框）。"""
+    """找出每題範圍內的圖形/圖片並裁成 WebP。
+
+    題目範圍 = 從本題題號到下一題題號，可以跨頁（圖常被排到下一頁頂端，或選項是照片、分在兩頁）。
+    has_figure 以「範圍內真的有圖形物件」為準（表格、照片、線圖），題幹提到「如下圖」只是輔助：
+    - 有圖形 → 裁圖；分在多頁就上下拼成一張。
+    - 有提示字但找不到圖形 → 不裁圖、標記人工確認。
+    重新裁切時會刪掉不再需要的舊圖檔。
+    """
     try:
-        import fitz  # PyMuPDF
+        import pymupdf as fitz
     except ImportError:
-        print("[warn] 沒有 PyMuPDF，略過附圖裁切（pip install pymupdf）", file=sys.stderr)
-        return
+        try:
+            import fitz  # 舊版 PyMuPDF
+        except ImportError:
+            print("[warn] 沒有 PyMuPDF，略過附圖裁切（pip install pymupdf）", file=sys.stderr)
+            return
     doc = fitz.open(str(pdf_path))
     out_dir.mkdir(parents=True, exist_ok=True)
     by_number = {q["number"]: q for q in questions}
     for q in questions:
-        if not q["has_figure"]:
-            continue
-        page = doc[q["page"] - 1]
-        y0 = _find_question_y(page, q["number"])
-        nxt = by_number.get(q["number"] + 1)
-        y1 = _find_question_y(page, nxt["number"]) if nxt and nxt["page"] == q["page"] else None
+        hinted = q["has_figure"]
+        q["has_figure"], q["figure"], q["figure_kind"] = False, None, None
+        out_path = out_dir / f"{id_for(q['number'])}.webp"
+        legacy_png = out_path.with_suffix(".png")  # 2026-10 以前存 PNG
+        if legacy_png.exists():
+            legacy_png.unlink()
+        start = q["page"] - 1
+        y0 = _find_question_y(doc[start], q["number"])
         if y0 is None:
             q["review_flags"].append("附圖：找不到題號位置")
             continue
-        if y1 is None:
-            y1 = page.rect.y1 - 36
-        region = fitz.Rect(page.rect.x0 + 24, y0 - 4, page.rect.x1 - 24, y1 - 2)
-        # 圖形/圖片的聯集
-        boxes = [fitz.Rect(d["rect"]) for d in page.get_drawings() if fitz.Rect(d["rect"]).intersects(region)]
-        boxes += [fitz.Rect(i["bbox"]) for i in page.get_image_info() if fitz.Rect(i["bbox"]).intersects(region)]
-        boxes = [b for b in boxes if b.width > 20 and b.height > 10]
-        clip = region
-        if boxes:
-            u = boxes[0]
-            for b in boxes[1:]:
-                u |= b
-            clip = (u + (-8, -8, 8, 8)) & page.rect
-            q["figure_kind"] = "graphic"
-        else:
-            q["figure_kind"] = "region"  # 沒抓到圖形物件，整題區域截圖（可能是表格）
-        pix = page.get_pixmap(matrix=fitz.Matrix(2, 2), clip=clip, alpha=False)
-        name = f"{id_for(q['number'])}.png"
-        pix.save(str(out_dir / name))
-        q["figure"] = f"figures/{name}"
+        nxt = by_number.get(q["number"] + 1)
+        end = nxt["page"] - 1 if nxt else len(doc) - 1
+        y_end = _find_question_y(doc[end], nxt["number"]) if nxt else None
+
+        clips = []  # [(頁碼, 裁切框)]
+        for pno in range(start, end + 1):
+            page = doc[pno]
+            top = y0 - 4 if pno == start else page.rect.y0 + 10
+            bottom = (y_end - 2) if (pno == end and y_end is not None) else page.rect.y1 - 36
+            if bottom <= top:
+                continue
+            region = (page.rect.x0 + 24, top, page.rect.x1 - 24, bottom)
+            raw = [tuple(d["rect"]) for d in page.get_drawings()] + [tuple(i["bbox"]) for i in page.get_image_info()]
+            boxes = figure_boxes(raw, region, page.rect.width * page.rect.height)
+            if boxes:
+                u = fitz.Rect(boxes[0])
+                for bx in boxes[1:]:
+                    u |= fitz.Rect(bx)
+                clips.append((pno, (u + (-8, -8, 8, 8)) & page.rect))
+
+        if clips:
+            _render_clips(fitz, doc, clips, out_path)
+            q["has_figure"], q["figure"] = True, f"figures/{out_path.name}"
+            q["figure_kind"] = "graphic" if len(clips) == 1 else "graphic_multipage"
+            continue
+        if out_path.exists():
+            out_path.unlink()  # 舊版裁錯的圖
+        if hinted:
+            q["review_flags"].append("附圖：題幹提到圖表但本題範圍內找不到圖形")
     doc.close()
 
 
+def _render_clips(fitz, doc, clips, out_path: Path, zoom: float = C.FIGURE_ZOOM,
+                  quality: int = C.FIGURE_WEBP_QUALITY) -> None:
+    """把一或多個裁切框（可能在不同頁）由上而下拼成一張 WebP。"""
+    from PIL import Image
+    width = max(c.width for _, c in clips)
+    height = sum(c.height for _, c in clips)
+    canvas_doc = fitz.open()
+    canvas = canvas_doc.new_page(width=width, height=height)
+    y = 0.0
+    for pno, clip in clips:
+        canvas.show_pdf_page(fitz.Rect(0, y, clip.width, y + clip.height), doc, pno, clip=clip)
+        y += clip.height
+    pix = canvas.get_pixmap(matrix=fitz.Matrix(zoom, zoom), alpha=False)
+    Image.frombytes("RGB", (pix.width, pix.height), pix.samples).save(
+        str(out_path), "WEBP", quality=quality, method=6)
+    canvas_doc.close()
+
+
 def _find_question_y(page, number: int) -> float | None:
-    pat = re.compile(rf"^\s*{number}[\.．](?!\d)")
+    """題號那一行的 y。先找「N.」後面不接數字的；找不到再放寬（題幹以數字開頭，例如「47.38 歲」）。"""
+    strict = re.compile(rf"^\s*{number}[\.．](?!\d)")
+    loose = re.compile(rf"^\s*{number}[\.．]")
+    fallback = None
     for block in page.get_text("dict")["blocks"]:
         for line in block.get("lines", []):
-            text = "".join(span["text"] for span in line.get("spans", []))
-            if pat.match(fix_radicals(text)):
+            text = fix_radicals("".join(span["text"] for span in line.get("spans", [])))
+            if strict.match(text):
                 return line["bbox"][1]
-    return None
+            if fallback is None and loose.match(text) and line["bbox"][0] < 60:
+                fallback = line["bbox"][1]
+    return fallback
 
 
 # ---------------------------------------------------------------- 主流程
@@ -204,8 +344,10 @@ def _load_existing_tags(json_path: Path) -> dict[str, dict]:
 def parse_one(key: str, subj: str, sub: dict, exam_code: str) -> dict:
     roc_year, rnd = (int(x) for x in key.split("-"))
     q_pdf = C.ROOT / sub["q"]["path"]
-    pages = extract_pages(q_pdf)
+    extract_warnings: list[str] = []
+    pages = extract_pages(q_pdf, extract_warnings)
     header, questions, warnings = parse_pages(pages)
+    warnings = extract_warnings + warnings
 
     s_text = extract_answer_text(C.ROOT / sub["s_file"]["path"]) if sub.get("s_file") else ""
     m_text = extract_answer_text(C.ROOT / sub["m_file"]["path"]) if sub.get("m_file") else None

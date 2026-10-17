@@ -34,6 +34,31 @@ def fix_radicals(text: str) -> str:
     return "".join(out)
 
 
+# 部分 PDF（例：113-1 NEURO）的圈號字型 ToUnicode 對錯：①–⑥ 被對到西里爾字母
+# U+045B–U+0460（ћ ќ ѝ ў џ Ѡ），pdfplumber 甚至直接丟掉這些字。①–⑥ 已對照 PDF 畫面確認，
+# ⑦–⑩ 依同樣位移推定。考題不會出現西里爾字母，所以整段替換是安全的。
+_BROKEN_CIRCLED_BASE = 0x045B
+_BROKEN_CIRCLED = {_BROKEN_CIRCLED_BASE + i: chr(0x2460 + i) for i in range(10)}
+_CIRCLED_RE = re.compile(r"[\u2460-\u2473]")  # ①–⑳
+_CYRILLIC_RE = re.compile(r"[\u0400-\u04FF]")
+
+
+def has_broken_circled(text: str) -> bool:
+    return any(ord(ch) in _BROKEN_CIRCLED for ch in text)
+
+
+def fix_broken_circled(text: str) -> str:
+    return text.translate(_BROKEN_CIRCLED)
+
+
+def count_circled(text: str) -> int:
+    return len(_CIRCLED_RE.findall(text))
+
+
+def has_cyrillic(text: str) -> bool:
+    return bool(_CYRILLIC_RE.search(text))
+
+
 def normalize_answer_letter(ch: str) -> str:
     """Ａ→A，容忍全形/半形/小寫。"""
     ch = ch.strip()
