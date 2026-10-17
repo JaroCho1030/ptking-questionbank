@@ -1,0 +1,30 @@
+# 打 tag（例如 v2026.10.16-1）就自動 build 題庫並發 GitHub Release。
+# App 固定抓 https://github.com/<owner>/<repo>/releases/latest/download/manifest.json
+name: release-questionbank
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q
+      - run: python -m pipeline.validate --strict
+      - name: build
+        env:
+          BANK_VERSION: ${{ github.ref_name }}
+        run: |
+          VERSION="${BANK_VERSION#v}"
+          python -m pipeline.build --version "$VERSION" \
+            --release-base-url "https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}"
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/questions.sqlite
+            dist/manifest.json

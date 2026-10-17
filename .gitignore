@@ -1,0 +1,8 @@
+# 原始 PDF 不進 git（考選部可重抓；想保留可拿掉這行，約 10 年 ≈ 40 MB）
+data/raw/*/
+dist/
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+.DS_Store
