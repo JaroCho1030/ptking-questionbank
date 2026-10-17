@@ -71,6 +71,28 @@ def _broken_glyphs(mpage) -> list[tuple[str, tuple[float, float, float, float], 
     return out
 
 
+def _fffd_glyphs(mpage, unknown: list[tuple[str, tuple]]):
+    """字型 cmap 壞掉、只剩 U+FFFD 的字（pdfplumber 會丟掉）：依「字型:gid」查 config.BROKEN_GLYPHS 補回。
+
+    回傳 [(字, bbox, 字級)]；查不到的（排除寬度為 0 的）以 (key, bbox) 記進 unknown 讓上層發 warning。
+    """
+    out = []
+    for span in mpage.get_texttrace():
+        font = span["font"]
+        for uni, gid, _origin, bbox in span["chars"]:
+            if uni != 0xFFFD:
+                continue
+            key = f"{font}:{gid}"
+            text = C.BROKEN_GLYPHS.get(key)
+            if text is None:
+                if bbox[2] - bbox[0] > 1:
+                    unknown.append((key, tuple(bbox)))
+                continue
+            if text:
+                out.append((text, tuple(bbox), span["size"]))
+    return out
+
+
 def is_inline_glyph(bbox) -> bool:
     x0, y0, x1, y1 = bbox
     return x1 - x0 < C.INLINE_GLYPH_MAX and 5 < y1 - y0 < C.INLINE_GLYPH_MAX
@@ -152,9 +174,11 @@ def normalize_scripts(chars: list[dict]) -> list[dict]:
         if base["size"] < c["size"] / 0.87:
             continue
         h = c["bottom"] - c["top"]
-        if c["bottom"] - base["bottom"] > 0.25 * h:
+        bh = base["bottom"] - base["top"]
+        tiny = c["size"] <= 0.7 * base["size"]  # 半大小的下標（111-2 BASIC「PCO₂」：5.5pt 對 11pt，底線沒低於基準字）
+        if c["bottom"] - base["bottom"] > 0.25 * h or (tiny and c["top"] - base["top"] > 0.3 * bh):
             kind = "sub"
-        elif base["top"] - c["top"] > 0.25 * h:
+        elif base["top"] - c["top"] > 0.25 * h or (tiny and base["bottom"] - c["bottom"] > 0.3 * bh):
             kind = "sup"
         else:
             continue
@@ -225,8 +249,17 @@ def extract_pages(pdf_path: Path, warnings: list[str] | None = None) -> list[lis
     unknown_glyphs: list[str] = []
     with pdfplumber.open(str(pdf_path)) as pdf:
         for i, page in enumerate(pdf.pages):
-            page = page.dedupe_chars()
+            # 字級比對用浮點數，疊印的同一個字字級可能差 1e-14 → 只比字型（105-2 BASIC「（（gomphoses））」）
+            page = page.dedupe_chars(extra_attrs=("fontname",))
             glyphs = _broken_glyphs(mpages[i]) if i < len(mpages) else []
+            if i < len(mpages):
+                fffd_unknown: list[tuple[str, tuple]] = []
+                # 壞圈號（113-1 NEURO）在 texttrace 也是 U+FFFD，已由 _broken_glyphs 補回，不算未知
+                circled = [((b[0] + b[2]) / 2, (b[1] + b[3]) / 2) for _t, b, _s in glyphs]
+                glyphs += _fffd_glyphs(mpages[i], fffd_unknown)
+                unknown_glyphs.extend(
+                    f"{key}（第 {i + 1} 頁）" for key, b in fffd_unknown
+                    if not any(b[0] <= cx <= b[2] and b[1] <= cy <= b[3] for cx, cy in circled))
             if i < len(mpages) and page.chars:
                 glyphs += _image_glyphs(mpages[i], page.chars, unknown_glyphs)
             chars = list(page.chars)
@@ -248,7 +281,7 @@ def extract_pages(pdf_path: Path, warnings: list[str] | None = None) -> list[lis
         print(f"  [info] {pdf_path.name}：補回 {recovered} 個圈號／圖片字", file=sys.stderr)
     if warnings is not None:
         for d in sorted(set(unknown_glyphs)):
-            warnings.append(f"沒見過的行內圖片字 {d}（字會不見），確認後加進 config.GLYPH_IMAGES")
+            warnings.append(f"沒見過的圖片字／壞字形 {d}（字會不見），確認後加進 config.GLYPH_IMAGES 或 BROKEN_GLYPHS")
         warnings.extend(circled_warnings(texts, [m.get_text() for m in mpages]))
 
     pages: list[list[str]] = []

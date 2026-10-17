@@ -76,5 +76,14 @@ def squash_spaces(text: str) -> str:
     return text
 
 
+# 私用區（PUA）裡的字：字型自造字，對回標準字。112-1 BASIC 的「𧿹」(拇) 用 U+EEE7。
+_PUA_FIXES = {"\ueee7": "拇"}
+# 控制字元（例：\x81，零寬的壞字形被 pdfplumber 當成 C1 控制碼），保留換行與 tab
+_CONTROL = re.compile(r"[\x00-\x08\x0b-\x1f\x7f-\x9f]")
+
+
 def clean_text(text: str) -> str:
+    text = _CONTROL.sub("", text)
+    for bad, good in _PUA_FIXES.items():
+        text = text.replace(bad, good)
     return squash_spaces(fix_radicals(text))

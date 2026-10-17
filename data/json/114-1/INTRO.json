@@ -14,7 +14,7 @@
   "source_m": "https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=M&code=114020&c=311&s=0705&q=1",
   "answer_sha256": "ba561c6de86b770bce9db61f12ea44ebeb13f55eb1a5b81ce3f5e24dda96908e",
   "correction_sha256": "e0e66d8f1a76668cea5b02498e288f646ec09e176c07d84ebd76cec16d7c40bd",
-  "parsed_at": "2026-10-17T18:05:43+00:00",
+  "parsed_at": "2026-10-17T18:39:25+00:00",
   "warnings": []
  },
  "questions": [
@@ -1767,8 +1767,13 @@
     "D": "維生素D"
    },
    "official_answer": "B",
-   "accepted_answers": [],
-   "is_voided": true,
+   "accepted_answers": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "is_voided": false,
    "correction_note": "第63題除未作答者不給分外，其餘均給分",
    "has_figure": false,
    "figure": null,

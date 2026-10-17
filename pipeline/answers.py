@@ -16,6 +16,7 @@ import re
 import sys
 from pathlib import Path
 
+from . import config as C
 from .textnorm import fix_radicals, normalize_answer_letter
 
 _COUNT_RE = re.compile(r"題\s*數[:：]\s*(\d+)\s*題")
@@ -73,7 +74,7 @@ def parse_notes(notes: list[str]) -> dict[int, dict]:
     joined = " ".join(notes)
     out: dict[int, dict] = {}
     for chunk in _NOTE_SPLIT_RE.split(joined):
-        chunk = chunk.strip(" 。.;；")
+        chunk = chunk.strip(" 。.;；，,、")
         if not chunk:
             continue
         qm = _NOTE_Q_RE.search(chunk)
@@ -82,7 +83,10 @@ def parse_notes(notes: list[str]) -> dict[int, dict]:
         num = int(qm.group(1))
         body = chunk[qm.end():]
         entry = {"accepted": [], "voided": False, "note": chunk, "needs_review": False}
-        if _VOID_RE.search(body) and not _LETTERS_RE.search(body):
+        if "未作答" in body and "不給分" in body:
+            # 「除未作答者不給分外，其餘均給分」：有作答就對，沒作答照樣算錯 → 不是送分（送分題連未作答都給分）
+            entry["accepted"] = list(C.OPTION_LETTERS)
+        elif _VOID_RE.search(body) and not _LETTERS_RE.search(body):
             entry["voided"] = True
         else:
             letters = []

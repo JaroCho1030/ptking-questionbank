@@ -80,6 +80,7 @@ def test_answers_without_correction():
     ("第5題一律給分。", {"accepted": [], "voided": True}),
     ("第12題答案更正為Ｂ。", {"accepted": ["B"], "voided": False}),
     ("第3題答Ｂ、Ｄ均給分；第9題送分", {"accepted": ["B", "D"], "voided": False}),
+    ("第63題除未作答者不給分外，其餘均給分", {"accepted": ["A", "B", "C", "D"], "voided": False}),
 ])
 def test_note_phrasings(note, expect):
     parsed = parse_notes([note])
@@ -326,3 +327,21 @@ def test_assign_groups():
     assert got[1] == (None, None) and got[9] == (None, None)
     assert [got[n] for n in (2, 3, 4)] == [(2, 1), (2, 2), (2, 3)]
     assert [got[n] for n in (5, 6, 7, 8)] == [(5, 1), (5, 2), (5, 3), (5, 4)]
+
+
+def test_note_trailing_comma_stripped():
+    assert parse_notes(["第22題答Ａ、Ｂ給分，"])[22]["note"] == "第22題答Ａ、Ｂ給分"
+
+
+def test_clean_text_strips_control_and_pua():
+    assert clean_text("何者正確？\x81①水平") == "何者正確？①水平"
+    assert clean_text("伸趾長肌") == "伸拇趾長肌"
+
+
+def test_normalize_scripts_half_size_subscript():
+    """111-2 BASIC：下標 2 只有一半大、底線沒低於基準字，靠「頂端明顯偏低」判定。"""
+    from pipeline.parse import normalize_scripts
+    from pdfplumber.utils import extract_text
+    chars = [_ch("C", 171.0, 444.8, 11.0), _ch("O", 177.9, 444.8, 11.0), _ch("2", 185.4, 449.2, 5.5)]
+    chars[1]["x1"] = 185.4
+    assert extract_text(normalize_scripts(chars)) == "CO₂"
