@@ -243,3 +243,71 @@ def test_parse_exam_options_combined_title():
     found = parse_exam_options(html)
     assert [(e["exam_code"], e["roc_year"], e["round"]) for e in found] == [("105100", 105, 2), ("105020", 105, 1)]
 
+
+
+def test_merge_strips_rebuilds_sliced_image():
+    """105-1 TECH 第 3 題：一張圖被切成很多 1pt 高的圖片條，要先合併才不會被當雜點濾掉。"""
+    from pipeline.parse import figure_boxes, merge_strips
+    strips = [(50 + (i % 3), 300 + i, 150 - (i % 3), 301 + i) for i in range(80)]
+    glyph = (218, 504, 226, 513)  # 隔很遠的行內圖片字：不併入
+    merged = merge_strips(strips + [glyph])
+    assert (50, 300, 150, 380) in merged and glyph in merged and len(merged) == 2
+    assert figure_boxes(merged, (24, 290, 571, 450), 595 * 842) == [(50, 300, 150, 380)]
+
+
+def test_has_figure_hint_ignores_scale_names():
+    from pipeline.parse import has_figure_hint
+    assert not has_figure_hint("下列量表中，何者最適合評估多發性硬化症？")
+    assert has_figure_hint("承上題，有關表中的「90%信賴區間」")
+
+
+def test_inline_glyph_size():
+    from pipeline.parse import is_inline_glyph
+    assert is_inline_glyph((218, 504, 232, 518))       # 14×14 的「拇」
+    assert not is_inline_glyph((50, 300, 150, 380))    # 附圖
+    assert not is_inline_glyph((60, 350, 70, 351))     # 細線
+
+
+def _ch(text, x0, top, size):
+    return {"text": text, "x0": x0, "x1": x0 + size * 0.6, "top": top, "bottom": top + size,
+            "doctop": top, "size": size, "upright": True, "fontname": "F", "width": size * 0.6, "height": size}
+
+
+def test_normalize_scripts_subscript_and_superscript():
+    from pipeline.parse import normalize_scripts
+    from pdfplumber.utils import extract_text
+    # cmH₂O：下標 2 字小、往下偏
+    h2o = [_ch("H", 67.7, 160.3, 8.5), _ch("2", 72.8, 164.7, 7.1), _ch("O", 77.1, 160.3, 8.5)]
+    assert extract_text(normalize_scripts(h2o)) == "H₂O"
+    # Ca²⁺：上標往上偏
+    ca = [_ch("C", 10, 100, 10), _ch("a", 16, 100, 10), _ch("2", 22, 97, 7), _ch("+", 26.2, 97, 7)]
+    assert extract_text(normalize_scripts(ca)) == "Ca²⁺"
+    # 同樣大小、同一行的字不動
+    plain = [_ch("A", 10, 100, 10), _ch("2", 16, 100, 10)]
+    assert extract_text(normalize_scripts(plain)) == "A2"
+
+
+def test_normalize_scripts_keeps_unmappable_run_plain():
+    from pipeline.parse import normalize_scripts
+    from pdfplumber.utils import extract_text
+    # 下標「bc」沒有 Unicode 下標 b → 整段保持原字，但要回到同一行
+    chars = [_ch("X", 10, 100, 10), _ch("b", 16, 105, 7), _ch("c", 20.2, 105, 7), _ch("Y", 25, 100, 10)]
+    assert extract_text(normalize_scripts(chars)) == "XbcY"
+
+
+def test_normalize_scripts_ignores_smaller_option_text():
+    """109-2 CARDPED：「A.」12.8pt、選項文字 10.8pt 且偏低，不是下標。"""
+    from pipeline.parse import normalize_scripts
+    from pdfplumber.utils import extract_text
+    chars = [_ch("A", 45.4, 646.4, 12.8), _ch(".", 53.1, 646.4, 12.8)]
+    x = 60.8
+    for t in "pH=7.25，":
+        chars.append(_ch(t, x, 651.6, 10.8)); x += 6.48
+    assert normalize_scripts(chars) == chars
+
+
+def test_normalize_scripts_chained_sub_sup():
+    from pipeline.parse import normalize_scripts
+    from pdfplumber.utils import extract_text
+    chars = [_ch("C", 10, 100, 10), _ch("O", 16, 100, 10), _ch("3", 22, 105, 7), _ch("-", 26.2, 97, 7)]
+    assert extract_text(normalize_scripts(chars)) == "CO₃⁻"

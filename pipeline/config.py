@@ -69,3 +69,24 @@ def question_id(roc_year: int, rnd: int, subject_code: str, number: int) -> str:
 
 def exam_id(roc_year: int, rnd: int, subject_code: str) -> str:
     return f"{roc_year}-{rnd}-{subject_code}"
+
+
+# 行內「圖片字」：PDF 把某些字印成小圖片（多半是「𧿹」＝拇，Word 缺字）。抽字時會整個消失，
+# 解析時依圖片的 MD5（PyMuPDF get_image_info(hashes=True) 的 digest）換回文字。
+# 新年度出現沒見過的小圖片會發 warning，看過再加進來。2026-10 逐一目視確認。
+INLINE_GLYPH_MAX = 17   # 寬、高都小於這個（pt）才當成行內字，不當附圖
+GLYPH_IMAGES = {
+    "08896543fb074b2aad9ef42264c52648": "拇",
+    "42c924ec721cb42b0c78dfec237896b1": "拇",
+    "7e3015273268de9e2290e1ffe78f121e": "拇",
+    "8cf6a0c8c25cbb5b9b8ad57f4fc77401": "拇",
+    "d5751a83dae8b852032804d672fb5077": "拇",
+    "e68e418225d92dff4600d88fdb66302c": "拇",
+    "ec6cb74004bd0363b85d1fe7fa065039": "拇",
+    "fd147ab8d68c1abf65ccdade08c3a3b0": "拇",
+    "98e545f2f960cb075419602f2d4cfb01": "大",      # 115-1 ORTHO 獵場看守員大拇指
+    "0dc7b67256744d5bab2b7256f6b9329a": "用",      # 112-1 NEURO 運用
+    "c000fada70a966dd3f1904f3b4ffe775": "V\u0307E",  # 106-1 CARDPED 分鐘換氣量 V̇E
+    "88177a0f0fc29b6381656442b2652bd4": "V\u0307",   # 107-2 BASIC V̇
+    "17fd3041e5ba186d5508086b57217559": "V\u0307/Q",  # 114-1 BASIC V̇/Q
+}

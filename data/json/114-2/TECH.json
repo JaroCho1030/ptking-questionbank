@@ -1,0 +1,2102 @@
+{
+ "exam": {
+  "id": "114-2-TECH",
+  "roc_year": 114,
+  "round": 2,
+  "subject_code": "TECH",
+  "subject_name": "物理治療技術學",
+  "exam_code": "114090",
+  "class_code": "311",
+  "subject_param": "0706",
+  "paper_code": null,
+  "source_q": "https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=Q&code=114090&c=311&s=0706&q=1",
+  "source_s": "https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=S&code=114090&c=311&s=0706&q=1",
+  "source_m": null,
+  "answer_sha256": "c8d99fff5b2984922f746228d5c6314c5db1d2f52bfabf326675108c7196ab1f",
+  "correction_sha256": null,
+  "parsed_at": "2026-10-17T07:58:51+00:00",
+  "warnings": []
+ },
+ "questions": [
+  {
+   "id": "114-2-TECH-001",
+   "number": 1,
+   "stem": "以電刺激訓練肌肉時，若治療目標為肌肉每2秒強直收縮一次，收縮時間1秒，放鬆時間1秒，下列何種電刺激參數的組合最為適當？",
+   "options": {
+    "A": "波長1秒，波與波間歇時間1秒，頻率1 Hz",
+    "B": "波長1秒，波與波間歇時間1秒，頻率2 Hz",
+    "C": "波長1毫秒，波與波間歇時間99毫秒，頻率10 Hz，持續1秒",
+    "D": "波長1毫秒，波與波間歇時間19毫秒，頻率50 Hz，持續1秒"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 1,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-002",
+   "number": 2,
+   "stem": "關於經皮神經電刺激（TENS）的敘述與模式設定，下列何者正確？",
+   "options": {
+    "A": "傳統式（conventional）TENS：頻率為 75～100 pps，波寬為200毫秒，強度為舒服麻刺感且沒有肌肉收縮",
+    "B": "類針灸式（acupuncture-like）TENS：頻率為1～4 pps，波寬為200～300微秒，強度為產生強烈的肌肉收縮",
+    "C": "脈波叢式（burst）TENS：頻率為5～100 pps，分成1～4個脈波叢，結合傳統與類針灸式的模式",
+    "D": "短強式（brief and intense）TENS：頻率大於100 pps，波寬大於200毫秒，強度為產生輕微的肌肉收縮"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 1,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-003",
+   "number": 3,
+   "stem": "下列何者不是經皮神經電刺激（TENS）的禁忌症？",
+   "options": {
+    "A": "有開放性傷口之部位",
+    "B": "頸動脈竇",
+    "C": "糖尿病神經病變之疼痛",
+    "D": "裝有心律調節器之區域"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 1,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-004",
+   "number": 4,
+   "stem": "有關雙動態波（diadynamic currents）之MF（monophasé fixe）波與DF（diphasé fixe）波之敘述，下列何者正確？",
+   "options": {
+    "A": "MF波與DF波有相同的刺激頻率",
+    "B": "MF波比DF波有較高的刺激頻率",
+    "C": "MF波比DF波有較低的刺激頻率",
+    "D": "MF波與DF波的刺激頻率不固定，會根據臨床目標適當調整"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 1,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-005",
+   "number": 5,
+   "stem": "使用功能性電刺激來改善或增加肢體功能，下列敘述何者錯誤？",
+   "options": {
+    "A": "電刺激脈衝以平衡雙相波模式較為理想",
+    "B": "電刺激之強度應造成明顯肌肉收縮",
+    "C": "為避免疲勞，使用之電刺激參數主要是徵召type I動作單元",
+    "D": "波寬以200至400微秒較為常見"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 2,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-006",
+   "number": 6,
+   "stem": "使用功能性電刺激來治療垂足患者，主要是刺激那條神經？",
+   "options": {
+    "A": "脛神經（tibial nerve）",
+    "B": "腓腸神經（sural nerve）",
+    "C": "股神經（femoral nerve）",
+    "D": "腓神經（peroneal nerve）"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 2,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-007",
+   "number": 7,
+   "stem": "關於干擾波的治療原理及電生理效應，下列敘述何者錯誤？",
+   "options": {
+    "A": "利用中頻電流比低頻電流有較低的阻抗，所以有更高的穿透性，更能透入人體組織的深層",
+    "B": "利用兩組分別的中頻直流信號，產生波的干擾，達到治療效益",
+    "C": "兩組中頻電流互相干擾產生的低頻波差，才能引起神經的動作電位和肌肉的收縮",
+    "D": "使用干擾波時產生和刺激不同步去極化的現象稱為Gildemeiser效應"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 2,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-008",
+   "number": 8,
+   "stem": "對於干擾波（interferential currents）之頻率與操作敘述，何者正確？",
+   "options": {
+    "A": "常見電流頻率一組為4000 Hz ，另一組為4100 Hz",
+    "B": "須同時使用兩組不同頻率電流，擺放方式兩組電流平行",
+    "C": "須同時使用兩組吸盤式電極，調整吸力至有按摩效果",
+    "D": "須同時使用兩組吸盤式電極，調整吸力至少可將吸盤吸附至皮膚"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 2,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-009",
+   "number": 9,
+   "stem": "關於高壓間歇式直流電（high-voltage plused galvanic current）之敘述，下列何者錯誤？",
+   "options": {
+    "A": "雙尖峰的單相波（twin peak monophasic wave）",
+    "B": "波寬很短（約50～200微秒）且高電壓（大於100伏特）之直流電",
+    "C": "可用於刺激去神經肌肉（denervated muscle），以延緩肌肉萎縮",
+    "D": "常用於傷口癒合"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 2,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-010",
+   "number": 10,
+   "stem": "有關高壓間歇式直流電（high-voltage pulsed galvanic current）的波型特性與生理機制，下列敘述何者正確？",
+   "options": {
+    "A": "波型特性可降低皮膚阻抗的影響，讓有效電流能深入皮下組織",
+    "B": "比起其他波型的直流電刺激，體內組織接受的總電量較高",
+    "C": "比起其他波型的直流電刺激，體內組織產生的電熱效應（electrothermal effect）較高",
+    "D": "比起其他波型的直流電刺激，組織會產生較明顯的極性效應"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 2,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-011",
+   "number": 11,
+   "stem": "關於離子電泳法的電極，下列敘述何者錯誤？",
+   "options": {
+    "A": "電極的極性應與導入藥物離子的極性相同",
+    "B": "電流密度正極不超過0.5 mA/cm²，負極不超過1 mA/cm²為原則",
+    "C": "正極下皮膚容易因為酸鹼值低，造成酸灼傷",
+    "D": "導入藥物的電極應擺放在病理區域"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 3,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-012",
+   "number": 12,
+   "stem": "關於影響肌電生物回饋儀偵測肌電生理訊號之因子，下列敘述何者正確？",
+   "options": {
+    "A": "肌肉愈表淺其肌電訊號愈明顯",
+    "B": "皮膚的毛髮不會影響肌電訊號的大小",
+    "C": "無論電極放置的位置，皆可收集到清楚的肌肉活化電訊號",
+    "D": "置於肌腹上的電極片大小和間距不影響肌電訊號的振幅"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 3,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-013",
+   "number": 13,
+   "stem": "下列那位患者最需要接受進一步的神經傳導速度檢查？",
+   "options": {
+    "A": "出現巴賓斯基徵象（Babinski's sign）的臥床患者",
+    "B": "上肢出現協同動作（synergy movement）的患者",
+    "C": "手指出現漸進性疼痛、燒灼與麻鈍感的患者",
+    "D": "查達克氏測試（Chaddock test）出現異常的患者"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 3,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-014",
+   "number": 14,
+   "stem": "使用強度－時間曲線（strength-duration curve）的電生理檢查時，選用方形波的主要目的為何？",
+   "options": {
+    "A": "避免肌肉組織失去對電刺激的反應",
+    "B": "增加肌肉組織對電刺激的反應",
+    "C": "避免神經組織失去對電刺激的反應",
+    "D": "增加神經組織對電刺激的反應"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 3,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-015",
+   "number": 15,
+   "stem": "有關蠟療的敘述，下列何者正確？",
+   "options": {
+    "A": "蠟療比熱比水高，傳導速率比水慢，因此對組織的加溫比較慢",
+    "B": "蠟的熔點54℃，加入礦物油降低熔點，使用時溫度約35～40℃",
+    "C": "蠟療可與不規則肢體有良好接觸，可濕潤皮膚為舒適的淺層熱",
+    "D": "蠟療有交叉感染風險，屬於乾熱，活動易使蠟脫落，無法執行運動"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 3,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-016",
+   "number": 16,
+   "stem": "冷療的生理反應，下列何者正確？①短時間（5分鐘內）會增加肌力 ②長時間（20分鐘以上）會降低肌力 ③降低神經傳導速度 ④增加血流黏滯度 ⑤降低代謝速率",
+   "options": {
+    "A": "①②③④⑤",
+    "B": "僅②③⑤",
+    "C": "僅①③④⑤",
+    "D": "僅①②④"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 3,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-017",
+   "number": 17,
+   "stem": "下列有關超音波的敘述，何者錯誤？",
+   "options": {
+    "A": "理想的波束不均勻比值（BNR）為2～6",
+    "B": "治療最適當的部位大小為有效發射區（ERA）的2～3倍面積",
+    "C": "若總效率週期使用100%，治療的目標為增加組織的溫度",
+    "D": "1 MHz的超音波較3 MHz的超音波更快能讓組織達到加熱的目的"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 4,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-018",
+   "number": 18,
+   "stem": "選用理想的治療用超音波儀器，下列敘述何者正確？",
+   "options": {
+    "A": "有效發射區（effective radiating area）越小越好",
+    "B": "有效發射區（effective radiating area）越大越好",
+    "C": "波束輸出不平均比值（beam nonuniformity ration）越小越好",
+    "D": "波束輸出不平均比值（beam nonuniformity ration）越大越好"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 4,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-019",
+   "number": 19,
+   "stem": "王同學4週前進行了阿基里斯腱肌腱修補手術，目前正在水中練習踮腳尖來強化小腿後側肌群的肌力。他／她發現水深至頸部比水深至髖部墊腳尖較不費力，這是因為水的什麼物理特性所致？",
+   "options": {
+    "A": "靜水壓（hydrostatic pressure）",
+    "B": "阻力（resistance）",
+    "C": "浮力（buoyancy）",
+    "D": "比重（specific gravity）"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 4,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-020",
+   "number": 20,
+   "stem": "有關水療的物理特性與生理效應，下列何者正確？",
+   "options": {
+    "A": "浮力可減少載重，適合關節炎病患減少關節壓迫力，並方便肌力訓練",
+    "B": "靜水壓（hydrostatic pressure）與物體浸泡深度成反比，可協助靜脈回流，減少水腫",
+    "C": "擾流（turbulence）是數個力共同作用在水中的水流，可視為阻力，越靠近水面擾流越小",
+    "D": "水的比熱（specific heat）比空氣大，因此在陸上溫差一度比水中的感受明顯"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 4,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-021",
+   "number": 21,
+   "stem": "關於低能量雷射對於細胞的生理效應，下列敘述何者錯誤？",
+   "options": {
+    "A": "提高細胞內的氧化壓力",
+    "B": "增加鈣離子流入細胞",
+    "C": "增加細胞內ATP與cAMP形成",
+    "D": "促進DNA修復與複製"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 4,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-022",
+   "number": 22,
+   "stem": "被診斷為系統性紅斑狼瘡（systemic lupus erythematosus）的患者，較不適合使用下列何種物理因子？",
+   "options": {
+    "A": "紫外線C",
+    "B": "連續式超音波",
+    "C": "經皮神經電刺激",
+    "D": "紅內線"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 4,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-023",
+   "number": 23,
+   "stem": "有關短波治療時之注意事項，下列敘述何者錯誤？",
+   "options": {
+    "A": "治療部位的金屬飾品或電子產品需移除",
+    "B": "治療溫度以患者感覺微溫即可",
+    "C": "其他電子儀器應與短波保持1公尺以上距離",
+    "D": "治療師操作後應與短波保持1公尺以上距離"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 5,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-024",
+   "number": 24,
+   "stem": "使用腰椎牽引時，為了使腰薦關節能達到最大鬆弛，建議最適合之髖關節屈曲角度為何？",
+   "options": {
+    "A": "70～90 度",
+    "B": "60～75 度",
+    "C": "45～60 度",
+    "D": "30～45 度"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 5,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-025",
+   "number": 25,
+   "stem": "下列那種脊椎牽引方式易引起心血管系統壓力，較不建議使用？",
+   "options": {
+    "A": "重力輔助牽引（gravity-assisted traction）",
+    "B": "反向倒立牽引（traction by inversion）",
+    "C": "間歇性機械式牽引（intermittent mechanical traction）",
+    "D": "水中牽引（traction in water）"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 5,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-026",
+   "number": 26,
+   "stem": "乳房切除術後的上肢水腫控制，下列那一項方式不恰當？",
+   "options": {
+    "A": "間歇式加壓（intermittent compression）治療",
+    "B": "穿戴壓縮束套（compressive garment）",
+    "C": "主動運動（active exercise）",
+    "D": "熱敷（hot packing）"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 5,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-027",
+   "number": 27,
+   "stem": "關於微電流電刺激或電磁場刺激對於促進骨折癒合的臨床應用，下列敘述何者錯誤？",
+   "options": {
+    "A": "治療理論來自於在骨折處觀察到每平方公分約有5微安培電流密度的電流",
+    "B": "電刺激引發肌肉收縮造成骨折處的壓電效應可促進骨折的癒合",
+    "C": "非侵入式、半侵入式或全侵入式電磁刺激均具有促進骨折癒合的效果",
+    "D": "電流強度不得高於10毫安培，否則將傷害新生的成骨細胞"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 5,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-028",
+   "number": 28,
+   "stem": "關於超音波（ultrasound）與體外震波治療（extracorporeal shockwave therapy）的比較，下列敘述何者正確？",
+   "options": {
+    "A": "超音波是機械波、體外震波是電磁波",
+    "B": "體外震波的尖峰壓力（peak pressure）是超音波的10倍以上",
+    "C": "體外震波的頻率遠大於超音波，達20倍以上",
+    "D": "超音波是雙相波（biphase）、體外震波是單相波（monophase）"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 5,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-029",
+   "number": 29,
+   "stem": "使用Norkin等人提出的方式測試關節活動度時，因不同擺位而影響評估結果的因素，包括下列何者？①軟組織被牽張的狀態 ②關節或其他肢段的穩定度 ③舒適度或其他關節相對角度",
+   "options": {
+    "A": "僅①②",
+    "B": "僅②③",
+    "C": "僅①③",
+    "D": "①②③"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 6,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-030",
+   "number": 30,
+   "stem": "根據Norkin等人提出的手腕屈曲關節活動度測試，下列何者錯誤？",
+   "options": {
+    "A": "可於坐姿下接受評估",
+    "B": "正常手腕屈曲之主動關節活動度約為60～80度",
+    "C": "起始姿勢可為肩外展90度、肘屈曲90度，且手掌心面向地板",
+    "D": "執行評估時，前臂可允許有些許旋前或旋後動作"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 6,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-031",
+   "number": 31,
+   "stem": "根據Norkin等人提出的髖關節外展之關節活動度測試方法，下列何者錯誤？",
+   "options": {
+    "A": "起始姿勢應於骨盆正中位置",
+    "B": "給予受測者之口令為：請將大腿向外打開",
+    "C": "髖外展角度因人而異，但正常範圍大約為40～55度",
+    "D": "使用關節量角器量測之遠端臂（distal arm）應對齊股骨中線，且以脛骨粗隆為參考點"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 6,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-032",
+   "number": 32,
+   "stem": "依據Magee提出之髖關節功能性關節活動度（functional range of motion）為下列何者？",
+   "options": {
+    "A": "屈曲120度、外展20度、外轉20度",
+    "B": "伸直30度、內收30度、內轉20度",
+    "C": "屈曲150度、內收30度、內轉20度",
+    "D": "屈曲150度、外展45度、內轉20度"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 6,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-033",
+   "number": 33,
+   "stem": "執行髖關節外展的終末感覺（end feel）評估，下列敘述何者正確？",
+   "options": {
+    "A": "只有出現硬（hard）的感覺是正常的",
+    "B": "只有出現緊實（firm）的感覺是正常的",
+    "C": "只有出現軟（soft）的感覺是正常的",
+    "D": "出現緊實（firm）的感覺或是軟（soft）的感覺都是正常的"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 6,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-034",
+   "number": 34,
+   "stem": "有關骨盆上提（pelvic elevation）之徒手肌力測試，下列敘述何者正確？",
+   "options": {
+    "A": "測試姿勢為站姿",
+    "B": "若患者只能做出部分範圍之骨盆上提動作，可評定其肌力等級為差（poor）",
+    "C": "治療師給予阻力於雙側骨盆之髂前上棘（ASIS）",
+    "D": "此動作肌肉主要為髂腰肌（iliopsoas）"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 6,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-035",
+   "number": 35,
+   "stem": "有關軀幹核心測試之敘述，下列何者錯誤？",
+   "options": {
+    "A": "核心肌肉全為慢肌",
+    "B": "腹橫肌收縮會增加腹內壓以增加脊椎穩定",
+    "C": "可以利用側身橋式耐力測試（side bridge endurance test）檢測核心肌群肌力",
+    "D": "核心肌群分成表淺肌肉和深層肌肉"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 7,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-036",
+   "number": 36,
+   "stem": "以徒手肌力測試檢查髖伸直動作之肌力，下列敘述何者正確？",
+   "options": {
+    "A": "為了減少患者姿勢的變化，各肌力等級測試皆可採用趴姿來測",
+    "B": "若單獨測臀大肌肌力，患者膝關節須保持伸直姿勢",
+    "C": "若患者有髖屈曲攣縮（contracture）肌力等級小於3分者，應於站姿下測試",
+    "D": "若患者採用正躺姿勢施測髖伸直肌力，當軀幹保持相對靜止時，骨盆易向後傾斜"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 7,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-037",
+   "number": 37,
+   "stem": "以徒手肌力測試檢查患者軀幹旋轉（trunk rotation）動作之肌力，若患者呈現聳肩或肩膀抬離床面動作，則最有可能是下列那條肌肉出現代償收縮？",
+   "options": {
+    "A": "腹外斜肌",
+    "B": "腹直肌",
+    "C": "胸大肌",
+    "D": "棘上肌"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 7,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-038",
+   "number": 38,
+   "stem": "欲評估頭長肌（longus capitis）與頸長肌（longus colli）之肌力，則兩者之測試姿勢－阻力位置之組合分別為何？",
+   "options": {
+    "A": "仰臥－下顎／仰臥－下顎",
+    "B": "俯臥－頂骨／俯臥－枕骨",
+    "C": "仰臥－頂骨／仰臥－枕骨",
+    "D": "俯臥－下顎／俯臥－前額"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 7,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-039",
+   "number": 39,
+   "stem": "檢查軀幹屈曲之肌力時，若雙手環抱胸前時，僅能屈曲軀幹至肩胛骨完全抬離床面，則其肌力為下列何者？",
+   "options": {
+    "A": "5分",
+    "B": "4分",
+    "C": "3分",
+    "D": "2分"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 7,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-040",
+   "number": 40,
+   "stem": "下列有關徒手阻力運動的敘述，何者錯誤？",
+   "options": {
+    "A": "當施予阻力於訓練肢段遠端時，必要時可以用手固定收縮肌肉的近端附著處",
+    "B": "訓練的動作速度可以慢速到快速，且可以轉移到大部分功能性活動中",
+    "C": "在復健早期肌肉無力時最有效",
+    "D": "對動態或靜態肌力都有強化的效果"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 8,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-041",
+   "number": 41,
+   "stem": "有關延遲性肌肉痠痛（delay onset muscle soreness, DOMS）的敘述，下列何者正確？",
+   "options": {
+    "A": "只要運動就會產生",
+    "B": "DOMS可能增加後續運動傷害的風險",
+    "C": "向心收縮較離心收縮運動更容易誘發",
+    "D": "痠痛程度在運動後24小時內最明顯"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 8,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-042",
+   "number": 42,
+   "stem": "有關漸進式阻力訓練，下列敘述何者錯誤？",
+   "options": {
+    "A": "以自己體重做為阻力的運動都較為輕鬆",
+    "B": "可逆原則（reversibility principle），指一陣子不訓練後，肌力會下降",
+    "C": "超載原則（overload principle），指進行超過平常所能承受之阻力訓練",
+    "D": "漸進式阻力訓練可以用於病人、亞健康與健康族群"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 8,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-043",
+   "number": 43,
+   "stem": "關於DeLorme和Oxford兩學派的漸進式阻力運動設計比較，下列何者錯誤？",
+   "options": {
+    "A": "兩學派都先決定10 RM",
+    "B": "DeLorme建議阻力逐漸增加，而Oxford則是阻力逐漸減少",
+    "C": "DeLorme建議從10下，50%的10 RM阻力開始",
+    "D": "Oxford建議從10下，75%的10 RM阻力開始"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 8,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-044",
+   "number": 44,
+   "stem": "有關阻力性運動的效果，下列何者錯誤？",
+   "options": {
+    "A": "增加結締組織的強度",
+    "B": "改善受傷軟組織修補與癒合的能力",
+    "C": "可減少骨質流失",
+    "D": "可降低肌纖維增生，提高單位肌纖維的輸出力量"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 8,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-045",
+   "number": 45,
+   "stem": "有關使用懸吊設備進行運動訓練的敘述，下列何者正確？",
+   "options": {
+    "A": "僅能進行閉鎖鏈運動（closed chain exercise）訓練",
+    "B": "無法應用於身心障礙幼童的知覺動作訓練",
+    "C": "具變化性，可針對不同之肌筋膜鏈（myofascial chain）來設計並進行動作訓練",
+    "D": "目前已經被證實是治療非特異性下背痛最有效的方法"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 8,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-046",
+   "number": 46,
+   "stem": "有關助行器的訓練與使用，下列敘述何者錯誤？",
+   "options": {
+    "A": "助行器握把的最佳高度應該是手握握把時，手肘屈曲20～30度",
+    "B": "從輪椅上站起來使用助行器時，可以手扶助行器橫桿協助支撐",
+    "C": "為避免行走時危險，足部不應跨越助行器的前支撐腳",
+    "D": "助行器的擺盪步態（swing gait）是指助行器的後支撐腳先觸地後，再接下來前支撐腳觸地"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 8,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-047",
+   "number": 47,
+   "stem": "當物理治療師使用移位腰帶協助個案轉位時，下列敘述何者錯誤？",
+   "options": {
+    "A": "當個案的能力不可能進行任何轉位活動時，移位腰帶可能會比用手引導有用",
+    "B": "靠移位腰帶可以提供個案在轉位活動期間所需的特定協助",
+    "C": "當個案能夠參與轉位活動，且訓練目標是讓個案能執行大部分轉位活動時，用手引導可能更合適",
+    "D": "無論選擇用手引導或使用移位腰帶協助轉位時，都必須確保個案和使用者的安全"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 9,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-048",
+   "number": 48,
+   "stem": "物理治療師在評估狀況後，決定讓病患以半蹲旋轉（squat pivot）由輪椅轉位至治療床時，下列敘述何者錯誤？",
+   "options": {
+    "A": "病患下肢應該有承重能力",
+    "B": "只需給予最小程度的協助",
+    "C": "病患重心上下起伏相當大",
+    "D": "治療師採坐姿於病患前方"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 9,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-049",
+   "number": 49,
+   "stem": "治療師執行如圖的膝關節鬆動術，股骨遠端固定於床緣，治療師的鬆動手在脛骨近端前內側，下列敘述何者正確？",
+   "options": {
+    "A": "此技術可增加膝關節屈曲角度",
+    "B": "因脛骨是凸面，所以是依據凸出原則（convex rule）",
+    "C": "此技術可增加脛骨外轉角度",
+    "D": "此技術可增加膝關節外翻"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": true,
+   "figure": "figures/114-2-TECH-049.webp",
+   "figure_kind": "graphic",
+   "page": 9,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-050",
+   "number": 50,
+   "stem": "下圖為肘關節的動態關節鬆動術（mobilization with movement）動作，患者做出合併肘屈曲主動動作，下列敘述何者錯誤？",
+   "options": {
+    "A": "主要用以改善肘關節的屈曲",
+    "B": "主要用以改善肘關節的伸直",
+    "C": "可以合併不痛的主動抓握動作",
+    "D": "可以合併不痛的被動過度壓力（overpressure）"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": true,
+   "figure": "figures/114-2-TECH-050.webp",
+   "figure_kind": "graphic",
+   "page": 10,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-051",
+   "number": 51,
+   "stem": "執行關節鬆動術時，治療師不同的施力方式將直接導致病人關節受到角度牽張（angular\nstretch）或滑動牽張（glide-stretch），下列關於兩者比較之敘述，何者錯誤？",
+   "options": {
+    "A": "角度牽張對關節面產生較大壓迫（compression）",
+    "B": "滑動牽張所產生的力矩（moment）較大",
+    "C": "若施力大小一樣，角度牽張可能使病人較為疼痛",
+    "D": "執行滑動牽張時，施力位置須較靠近關節面"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 10,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-052",
+   "number": 52,
+   "stem": "下列那些胸鎖關節（sternoclavicular joint）之鬆動術有助於肩外展動作？①anterior glide\n②posterior glide ③superior glide ④inferior glide",
+   "options": {
+    "A": "①③",
+    "B": "②④",
+    "C": "①④",
+    "D": "①②③"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 10,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-053",
+   "number": 53,
+   "stem": "病人在睡醒後頸痛，且發現頸椎側彎至右方受限。若利用SNAG方式進行治療，下列敘述何者正確？",
+   "options": {
+    "A": "施加右滑（right glide）推力於受限頸椎之棘突",
+    "B": "治療師保持施予前滑（anterior glide）推力，同時病人主動側彎頸椎至左方",
+    "C": "治療選擇之推力與主動動作是以產生疼痛為指標",
+    "D": "當次治療過程中，病人做主動動作時，治療師應維持住推力"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 10,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-054",
+   "number": 54,
+   "stem": "有關脊椎活動的彈壓測試（spring test）之敘述，下列何者錯誤？",
+   "options": {
+    "A": "按壓在棘突，施以向前壓力（posteroanterior pressure）",
+    "B": "按壓在棘突側方，施以橫向壓力（transverse pressure），並比較兩側的活動度",
+    "C": "按壓在上下兩節棘突之對側方，施以相對橫向壓力（counter-transverse pressure）",
+    "D": "按壓在一側小面關節的乳突處，施以向前壓力（posteroanterior pressure），並比較兩側的活動度"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 11,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-055",
+   "number": 55,
+   "stem": "針對Kaltenborn 所提出的第三級關節牽張鬆動術（stretch mobilization），下列敘述何者錯誤？",
+   "options": {
+    "A": "相對於第一級和第二級的關節鬆動術，第三級的牽張鬆動術有較多的禁忌症",
+    "B": "接受人工關節置換術後的病患須有影像學檢查篩檢，才可執行此等級之鬆動術",
+    "C": "僵直性脊椎炎是此等級鬆動術的絕對禁忌症",
+    "D": "施行關節面之擠壓測試（compression test）時，產生陽性反應的病患不適用此等級的鬆動術"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 11,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-056",
+   "number": 56,
+   "stem": "下列那些關節鬆動術學派理論包含凹凸定律（concave-convex rule）的應用？",
+   "options": {
+    "A": "僅 Maitland 及Kaltenborn 的關節鬆動術",
+    "B": "僅 Maitland 的關節鬆動術及Mulligan的動態關節鬆動術",
+    "C": "僅 Kaltenborn 的關節鬆動術及Mulligan的動態關節鬆動術",
+    "D": "Maitland 及Kaltenborn 的關節鬆動術與Mulligan的動態關節鬆動術"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 11,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-057",
+   "number": 57,
+   "stem": "以prone knee bend方式進行股神經鬆動術時，下列何動作較能有效地改變股神經張力？",
+   "options": {
+    "A": "腰椎後凸（kyphosis）／過度前凸（hyperlordosis）",
+    "B": "髖伸直／屈曲",
+    "C": "膝伸直／屈曲",
+    "D": "踝背屈／蹠屈"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 11,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-058",
+   "number": 58,
+   "stem": "有關深層摩擦按摩的敘述，下列何者錯誤？",
+   "options": {
+    "A": "對於慢性的局部肌肉傷害特別有效",
+    "B": "主要用來治療肌腱、韌帶、腱鞘等結締組織",
+    "C": "可用來鬆弛疤痕組織",
+    "D": "讓病患在不痛的治療過程中達到止痛的目的"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 11,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-059",
+   "number": 59,
+   "stem": "治療區域出現下列何種情況時，不是撫摩法（stroking）的絕對禁忌症？",
+   "options": {
+    "A": "感覺過度敏感區域",
+    "B": "大面積的開放傷口，且尚未處置",
+    "C": "剛接受放射性治療後3至6個月",
+    "D": "明顯水腫且皮膚看似有裂開的可能"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 11,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-060",
+   "number": 60,
+   "stem": "有關按摩手法中揉按法（kneading）的敘述，下列何者正確？",
+   "options": {
+    "A": "有助於鬆動慢性腫脹",
+    "B": "當在體表移動按揉時，手是在施壓的那半圈進行移動的",
+    "C": "若用指腹操作，因面積較小，所以按揉速度需加快",
+    "D": "應在病患皮表塗抹按摩油，以利手的移動"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 12,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-061",
+   "number": 61,
+   "stem": "有關減少淋巴水腫風險的作法，下列敘述何者正確？",
+   "options": {
+    "A": "在水腫的手臂上量血壓，可同時減輕水腫",
+    "B": "坐飛機時不應穿著壓力衣",
+    "C": "避免暴露在極端寒冷或熱氣中",
+    "D": "從事需用力的活動時，患側肢體不需穿著壓力衣"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 12,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-062",
+   "number": 62,
+   "stem": "下列何者不屬於結締組織按摩後的整體反應？",
+   "options": {
+    "A": "血壓上升",
+    "B": "呼吸急促",
+    "C": "心悸",
+    "D": "頭暈"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 12,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-063",
+   "number": 63,
+   "stem": "下列按摩策略何者不符合競技前按摩的目標？",
+   "options": {
+    "A": "採用撫摩法以促進大範圍肢體及全身的放鬆",
+    "B": "局部特定點的張力緩解，以促進該肢體柔軟度",
+    "C": "以叩擊法作為按摩的結束手法",
+    "D": "採用按壓法和深層摩擦按摩，以促進局部循環及肌肉放鬆"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 12,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-064",
+   "number": 64,
+   "stem": "下列有關國際健康功能與身心障礙分類系統（ICF）的敘述，何者錯誤？",
+   "options": {
+    "A": "其前身為Nagi的失能模型",
+    "B": "以正面思考為主，避免使用殘障的名詞",
+    "C": "加入環境與個人的因素",
+    "D": "雙向影響的架構"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 12,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-065",
+   "number": 65,
+   "stem": "下列關於不同的團隊合作模式之敘述，何者錯誤？",
+   "options": {
+    "A": "多專業團隊模式（multidisciplinary model）在各專業間缺乏正式會議溝通",
+    "B": "專業間團隊模式（interdisciplinary model）透過會議共同決定計畫目標，定期個案討論進行評估治療服務",
+    "C": "跨專業團隊模式（transdisciplinary model）認為每個專業都很重要，平行式的提供評估治療服務",
+    "D": "整合性專業團隊模式（collaborative model）以個案為中心，融入專業互動與跨專業共同合作"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 12,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-066",
+   "number": 66,
+   "stem": "為一位準備上小學的特教生進行評估，以設計入學後的物理治療計畫，治療師先打電話去了解未來學生上課教室的位置及學校將提供的體育活動。這是屬於國際健康功能與身心障礙分類系統（ICF）中的那個面向評估？",
+   "options": {
+    "A": "身體功能",
+    "B": "社會參與",
+    "C": "個人因素",
+    "D": "環境因素"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 13,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-067",
+   "number": 67,
+   "stem": "訓練脊髓損傷個案進行輪椅至床上的轉位，若不使用輔助設備且個案的肱三頭肌不具功能時，下列敘述何者正確？",
+   "options": {
+    "A": "手部的支撐儘量在髖關節後面",
+    "B": "須利用肩關節內轉及前臂旋前將手肘伸直以固定鎖住整個手臂",
+    "C": "為穩固支撐床面，手指須全部張開伸展支撐在床面",
+    "D": "應儘量使用具功能的前鋸肌與闊背肌，將肩胛骨往前及往下推"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 13,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-068",
+   "number": 68,
+   "stem": "有關脊髓損傷患者的排便功能訓練，下列敘述何者正確？",
+   "options": {
+    "A": "為了防止突發性排便造成污染，最好以不定時的方式訓練，目的是訓練成任何時間都可以進行排便",
+    "B": "為了軟化糞便使易於排出，訓練初期建議攝取含大量油脂的食物",
+    "C": "液態不成形的糞便最有助於輔助排便訓練",
+    "D": "有嚴重姿勢性低血壓的患者，建議側躺於左側進行排便"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 13,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-069",
+   "number": 69,
+   "stem": "一位大學生因車禍造成脛骨遠端骨折，術後建議可使用下圖的短腿步行器（short leg walker），下列敘述何者正確？①可替代石膏固定 ②可減輕行走時足踝的負重 ③當傷口需照護時可立即拆下 ④不可用於跟腱修復（Achilles tendon repair）患者",
+   "options": {
+    "A": "僅①②③",
+    "B": "僅②③④",
+    "C": "僅①②④",
+    "D": "①②③④"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": true,
+   "figure": "figures/114-2-TECH-069.webp",
+   "figure_kind": "graphic",
+   "page": 13,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-070",
+   "number": 70,
+   "stem": "關於高溫熱塑材質的踝足裝具（ankle foot orthosis），下列敘述何者正確？",
+   "options": {
+    "A": "後葉式（posterior leaf spring type）：適合下肢高張力的患者",
+    "B": "地面反作用式（floor reaction type）：適合下肢無力垂足的患者",
+    "C": "固定踝關節式（solid ankle type）：適合有膝反曲（genu recurvatum）的患者",
+    "D": "關節式加蹠屈阻擋（hinged type with plantarflexion stop）：適合有蹲伏步態（crouch\ngait）的腦性麻痺兒童"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 14,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-071",
+   "number": 71,
+   "stem": "有關各種上肢裝具（orthosis）之敘述，下列何者錯誤？",
+   "options": {
+    "A": "環狀副木（ring splint）可用於減少指關節變形",
+    "B": "蜘蛛副木（spider splint）可用於抓握的動作訓練",
+    "C": "糖夾型副木（sugar-tong splint）可用於前臂骨折後的固定",
+    "D": "抗痙攣抓握裝具（anti-spasticity grasp orthosis）可抑制張力，矯正嚴重痙攣"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 14,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-072",
+   "number": 72,
+   "stem": "圖A為一款步行輔具，圖B為這款輔具的底座，其左右寬度不對稱。下列敘述何者錯誤？",
+   "options": {
+    "A": "圖A輔具為偏癱助行器（hemi walker），適合中風偏癱患者使用",
+    "B": "圖A輔具因為底面積較大，可以提升支撐時的穩定度",
+    "C": "圖B顯示的底座，左右寬度不同的目的是避免行走時絆到腳",
+    "D": "使用此輔具時，應將底座較窄的那一側靠近身體"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": true,
+   "figure": "figures/114-2-TECH-072.webp",
+   "figure_kind": "graphic",
+   "page": 14,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-073",
+   "number": 73,
+   "stem": "下圖中三台尺寸相同、驅動輪位置不同的電動輪椅，若沿著狹窄的走廊前進，向右垂直轉進房間，下列敘述何者正確？",
+   "options": {
+    "A": "後輪驅動電動輪椅建議在B區垂直轉向",
+    "B": "中輪驅動電動輪椅建議在A區垂直轉向",
+    "C": "前輪驅動電動輪椅建議在C區垂直轉向",
+    "D": "電動輪椅的驅動輪位置不影響垂直轉向時所需之空間"
+   },
+   "official_answer": "C",
+   "accepted_answers": [
+    "C"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": true,
+   "figure": "figures/114-2-TECH-073.webp",
+   "figure_kind": "graphic",
+   "page": 14,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-074",
+   "number": 74,
+   "stem": "有關輪椅座椅參數之設定，下列敘述何者錯誤？",
+   "options": {
+    "A": "當輪椅的座深（seat depth）設定得太淺時，容易在大腿近端形成壓力集中點，而且乘坐者骨盆容易前滑",
+    "B": "當輪椅座深設定得太深時，容易在膕窩形成壓力點，而且乘坐者骨盆容易前傾（anterior tilt）",
+    "C": "當輪椅座高（seat height）設定得太高時，手推圈（hand rim）距離肩關節會變得太遠，乘坐者自推輪椅將變得費力",
+    "D": "當輪椅座寬（seat width）設定得太寬時，乘坐者自推輪椅將變得困難，而且坐姿穩定性可能會不足"
+   },
+   "official_answer": "B",
+   "accepted_answers": [
+    "B"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 15,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-075",
+   "number": 75,
+   "stem": "有關各種義肢膝關節的適用性，下列敘述何者正確？①重量啟動站立期控制式（weight activated\nstance control type）適合年長且活動性不高的患者 ②多中心式（polycentric type）適合殘肢髖伸直肌無力的患者 ③微處理器控制式（microprocessor controlled type）常使用在高活動性的跑步或競賽選手 ④手動鎖定式（manual locking type）適合初次裝配義肢的患者在訓練初期使用",
+   "options": {
+    "A": "僅①②④",
+    "B": "僅①③④",
+    "C": "僅②③④",
+    "D": "①②③④"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 15,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-076",
+   "number": 76,
+   "stem": "有關經脛骨截肢者（transtibial amputee）所使用的懸吊系統，下列敘述何者錯誤？",
+   "options": {
+    "A": "膝袖套（knee sleeve）：以彈性材質製作，對膝關節活動較不受限，長時間使用時容易悶熱流汗",
+    "B": "側邊膝關節及大腿皮套（thigh corset）：適用於殘肢較短或膝關節不穩定者，使用上會較笨重",
+    "C": "髁上懸吊（supracondylar suspension）：藉著承筒自身懸吊，不需外加其他懸吊裝置，適合手功能不佳者",
+    "D": "髕骨上方環帶（suprapatellar cuff strap）：下方連接承筒，上方環繞大腿作懸吊，可避免膝關節出現過度伸展現象"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 15,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-077",
+   "number": 77,
+   "stem": "一位經橈骨截肢（transradial amputation）患者穿著義肢在揮桿打高爾夫球時，發現肘關節屈曲角度不足，下列何者是最不可能造成此問題的原因？",
+   "options": {
+    "A": "殘肢長度過長",
+    "B": "義肢懸吊太鬆",
+    "C": "殘肢肘關節角度受限",
+    "D": "採用自我懸吊承筒（self-suspending socket）"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 16,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-078",
+   "number": 78,
+   "stem": "某國中教室之室外走廊規格如圖所示，經檢查不符合無障礙規範，其原因可能為下列何者？",
+   "options": {
+    "A": "懸空突出物（空調室外機）離地高度不足",
+    "B": "室外通路寬度不足",
+    "C": "懸空突出物（空調室外機）突出建物長度過多",
+    "D": "未設置室外通路邊緣防護"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": true,
+   "figure": "figures/114-2-TECH-078.webp",
+   "figure_kind": "graphic",
+   "page": 16,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-079",
+   "number": 79,
+   "stem": "下圖輪椅座墊覆套具有不同分區之設計，坐骨附近為甲區，其餘區域為乙區。有關此設計之敘述，下列何者正確？",
+   "options": {
+    "A": "覆套表面分區設計成不同摩擦係數，可提供乘坐者更明顯的皮膚感覺回饋",
+    "B": "覆套表面分區設計成不同摩擦係數，可將乘坐時座面發生前滑的剪力完全消除",
+    "C": "覆套甲區設計成低摩擦係數，可使乘坐時增加更大的座墊沉入量",
+    "D": "覆套乙區設計成高摩擦係數，可承接較多因臀部前滑所產生的剪力"
+   },
+   "official_answer": "D",
+   "accepted_answers": [
+    "D"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": true,
+   "figure": "figures/114-2-TECH-079.webp",
+   "figure_kind": "graphic",
+   "page": 16,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  },
+  {
+   "id": "114-2-TECH-080",
+   "number": 80,
+   "stem": "有關臺灣的輔具服務系統，下列何者未提供民眾購買或租用電動輪椅的費用補助？",
+   "options": {
+    "A": "全民健康保險",
+    "B": "勞工職業災害保險",
+    "C": "長照十年計畫2.0",
+    "D": "身心障礙者職務再設計服務"
+   },
+   "official_answer": "A",
+   "accepted_answers": [
+    "A"
+   ],
+   "is_voided": false,
+   "correction_note": null,
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
+   "page": 17,
+   "topic": null,
+   "tags": [],
+   "topic_confidence": null,
+   "topic_source": null,
+   "review_flags": []
+  }
+ ]
+}

@@ -14,7 +14,7 @@
   "source_m": "https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=M&code=113020&c=311&s=33&q=1",
   "answer_sha256": "cffbbd26355a9090d80d3578788133dd4e787f22beb89bfd669cb8f69cea9721",
   "correction_sha256": "06230f619ff6c0b3cdd2c019733a7f6b8791a06f63e50ebb2636322fe7ee8c55",
-  "parsed_at": "2026-10-17T03:43:07+00:00",
+  "parsed_at": "2026-10-17T07:58:13+00:00",
   "warnings": []
  },
  "questions": [
@@ -78,7 +78,7 @@
     "A": "最大呼吸時，肺泡內壓則可高達 ±200 mmHg",
     "B": "死腔是不參與氣體交換的部分，通常在145～155 mL之間",
     "C": "死腔與潮氣量的比值常用來表示機械性換氣的有效性，正常值約為25～40%",
-    "D": "容量彈性（compliance）的倒數即為彈性程度（elastance），一般正常值在2.5～8.5 cmH O/L\n2"
+    "D": "容量彈性（compliance）的倒數即為彈性程度（elastance），一般正常值在2.5～8.5 cmH₂O/L"
    },
    "official_answer": "A",
    "accepted_answers": [
@@ -201,7 +201,7 @@
   {
    "id": "113-1-CARDPED-008",
    "number": 8,
-   "stem": "李先生是慢性阻塞性肺疾病患者，肺功能的檢查為FEV ＝65%；D ＝65%；FVC＝70%。根據美國醫學會\n1 LCO\n（AMA）對呼吸障礙（disability）的分級標準，李先生分級屬於何者？",
+   "stem": "李先生是慢性阻塞性肺疾病患者，肺功能的檢查為FEV₁＝65%；DLCO＝65%；FVC＝70%。根據美國醫學會（AMA）對呼吸障礙（disability）的分級標準，李先生分級屬於何者？",
    "options": {
     "A": "Class 1",
     "B": "Class 2",
@@ -361,7 +361,7 @@
    "options": {
     "A": "心率",
     "B": "吸氣尖峰流速",
-    "C": "脈搏血氧飽和度（pulse oxygen saturation, SpO ）\n2",
+    "C": "脈搏血氧飽和度（pulse oxygen saturation, SpO₂）",
     "D": "吐氣尖峰流速"
    },
    "official_answer": "D",
@@ -539,7 +539,7 @@
   {
    "id": "113-1-CARDPED-021",
    "number": 21,
-   "stem": "賈先生為缺血性心臟病患者，其最大攝氧量（VO max）為 25 mL/kg/min。依「美國心血管和肺部復健學\n2\n會」、「美國醫師學會」準則，以METs（metabolic equivalents）為危險性分級指標時，其危險性分級為何？",
+   "stem": "賈先生為缺血性心臟病患者，其最大攝氧量（VO₂ max）為 25 mL/kg/min。依「美國心血管和肺部復健學會」、「美國醫師學會」準則，以METs（metabolic equivalents）為危險性分級指標時，其危險性分級為何？",
    "options": {
     "A": "無危險性",
     "B": "低危險性",
@@ -695,7 +695,7 @@
   {
    "id": "113-1-CARDPED-027",
    "number": 27,
-   "stem": "李先生55歲冠狀動脈繞道手術之後，進行第二期的心臟復健運動訓練，最大運動測試結果，最大攝氧量為30\nmL/kg/min，預備以50%的攝氧量儲存量（VO ）進行運動訓練，目標攝氧量建議訂在那個強度\n2Reserve\nmL/kg/min？",
+   "stem": "李先生55歲冠狀動脈繞道手術之後，進行第二期的心臟復健運動訓練，最大運動測試結果，最大攝氧量為30\nmL/kg/min，預備以50%的攝氧量儲存量（VO2Reserve）進行運動訓練，目標攝氧量建議訂在那個強度\nmL/kg/min？",
    "options": {
     "A": "13.3",
     "B": "15.0",
@@ -856,7 +856,7 @@
     "A": "與非懷孕婦女相比，孕婦從事負重運動時，耗氧量會明顯增加；而在靜止或非負重運動時的變化並不明顯",
     "B": "懷孕階段的孕婦在休息時、非最大運動、及最大運動時的心率皆會明顯增加",
     "C": "懷孕階段孕婦血容量（blood volume）會增加約50%，產後會回復",
-    "D": "懷孕期間孕婦的通氣量（minute ventilation, V ）會增加，氧耗當量（V /VO ）和二氧化碳當量\nE E 2\n（V /VCO ）會因此而增加\nE 2"
+    "D": "懷孕期間孕婦的通氣量（minute ventilation, VE）會增加，氧耗當量（VE/VO₂）和二氧化碳當量（VE/VCO₂）會因此而增加"
    },
    "official_answer": "B",
    "accepted_answers": [
@@ -877,12 +877,12 @@
   {
    "id": "113-1-CARDPED-034",
    "number": 34,
-   "stem": "同齡的男、女族群接受10週條件匹配的運動處方（comparable programs），訓練前發現女性最大耗氧量（maximal VO [mL/kg/min]）普遍較男性低，而訓練後發現兩個族群的最大耗氧量皆有明顯提升。以下針對\n2\n訓練對性別特異性改善（sex-specific improvement）的敘述，何者最不恰當？",
+   "stem": "同齡的男、女族群接受10週條件匹配的運動處方（comparable programs），訓練前發現女性最大耗氧量（maximal VO₂ [mL/kg/min]）普遍較男性低，而訓練後發現兩個族群的最大耗氧量皆有明顯提升。以下針對訓練對性別特異性改善（sex-specific improvement）的敘述，何者最不恰當？",
    "options": {
-    "A": "女性訓練前的Peak VO 普遍較男性低。此外，接受訓練後提升Peak VO 的增加幅度，女性亦明顯較男性低\n2 2",
-    "B": "女性的基本體脂肪（body fat）較高，是造成訓練前的Peak VO 較男性低的原因之一\n2",
-    "C": "女性的血紅素（hemoglobin）普遍較男性低，是造成訓練前的Peak VO 較男性低的原因之一\n2",
-    "D": "女性的左心室容積較小，使得尖峰心搏量（stroke volume）較男性少，是造成訓練前的Peak VO 較男性低\n2\n的原因之一"
+    "A": "女性訓練前的Peak VO₂普遍較男性低。此外，接受訓練後提升Peak VO₂的增加幅度，女性亦明顯較男性低",
+    "B": "女性的基本體脂肪（body fat）較高，是造成訓練前的Peak VO₂較男性低的原因之一",
+    "C": "女性的血紅素（hemoglobin）普遍較男性低，是造成訓練前的Peak VO₂較男性低的原因之一",
+    "D": "女性的左心室容積較小，使得尖峰心搏量（stroke volume）較男性少，是造成訓練前的Peak VO₂較男性低的原因之一"
    },
    "official_answer": "A",
    "accepted_answers": [
@@ -1007,7 +1007,7 @@
   {
    "id": "113-1-CARDPED-039",
    "number": 39,
-   "stem": "針對一位以中度強度進行的運動訓練之癌症治療中的患者，目前白血球數為2800/mm3，發燒中，此時針對訓練的最佳策略為何？",
+   "stem": "針對一位以中度強度進行的運動訓練之癌症治療中的患者，目前白血球數為2800/mm³，發燒中，此時針對訓練的最佳策略為何？",
    "options": {
     "A": "降低強度至非常輕度（very light）",
     "B": "暫時停止訓練",
@@ -1556,9 +1556,9 @@
    "stem": "有關發展性協調障礙之以成果為導向的標準化評估工具，下列何者錯誤？",
    "options": {
     "A": "粗大動作功能量表（Gross Motor Function Measure）",
-    "B": "兒童動作評量測驗第二版（Movement Assessment Battery for Children 2ndEdition）",
+    "B": "兒童動作評量測驗第二版（Movement Assessment Battery for Children 2ⁿᵈEdition）",
     "C": "布魯茵克斯—歐希瑞斯基動作精熟度測試（Bruininks-Oseretsky Test of Motor Proficiency）",
-    "D": "皮巴迪動作量表第二版（Peabody Developmental Motor Scales 2nd Edition）"
+    "D": "皮巴迪動作量表第二版（Peabody Developmental Motor Scales 2ⁿᵈ Edition）"
    },
    "official_answer": "A",
    "accepted_answers": [
@@ -1843,7 +1843,7 @@
    "options": {
     "A": "呼吸速率在出生時約每分鐘35次，在8歲時下降至每分鐘約20次",
     "B": "心跳速率在出生後5分鐘時為每分鐘約80次，在8歲時升高至每分鐘約100次",
-    "C": "動脈血氧分壓（PaO ）在出生後5小時約為62～86 mmHg，在青少年時增加至約為80～100 mmHg\n2",
+    "C": "動脈血氧分壓（PaO₂）在出生後5小時約為62～86 mmHg，在青少年時增加至約為80～100 mmHg",
     "D": "肺泡數量在嬰兒出生時約為2千5百萬個，在8歲時增加至2億5千萬個以上"
    },
    "official_answer": "B",

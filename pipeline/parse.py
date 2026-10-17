@@ -41,6 +41,8 @@ _CLASS_NAME = re.compile(r"類科名稱[:：]\s*(\S+)")
 _FIGURE_HINTS = ("如下圖", "如圖", "下圖", "圖中", "附圖", "如右圖", "見圖", "依圖", "圖示", "此圖",
                  "如下表", "下表", "表中", "附表", "如右表", "見表", "影像判斷", "光影像", "光片", "示意圖")
 _FW = {"Ａ": "A", "Ｂ": "B", "Ｃ": "C", "Ｄ": "D"}
+_BARE_OPT = re.compile(r"^\s*[A-DＡ-Ｄ][\.．]\s*$", re.M)  # 只有「A.」、文字跑到另一行
+_LOOSE_Y_TOLERANCE = 5
 
 
 # ---------------------------------------------------------------- 文字抽取
@@ -63,6 +65,116 @@ def _broken_glyphs(mpage) -> list[tuple[str, tuple[float, float, float, float], 
                     if has_broken_circled(c["c"]):
                         out.append((fix_broken_circled(c["c"]), tuple(c["bbox"]), span["size"]))
     return out
+
+
+def is_inline_glyph(bbox) -> bool:
+    x0, y0, x1, y1 = bbox
+    return x1 - x0 < C.INLINE_GLYPH_MAX and 5 < y1 - y0 < C.INLINE_GLYPH_MAX
+
+
+def _image_glyphs(mpage, page_chars: list[dict], unknown: list[str]):
+    """行內圖片字 → (字, bbox, 字級)。bbox 的上下緣對齊同一行的文字，排版時才會落在同一行。"""
+    out = []
+    for info in mpage.get_image_info(hashes=True):
+        bbox = tuple(info["bbox"])
+        if not is_inline_glyph(bbox):
+            continue
+        digest = info["digest"].hex()
+        text = C.GLYPH_IMAGES.get(digest)
+        if text is None:
+            unknown.append(digest)
+            continue
+        cy, cx = (bbox[1] + bbox[3]) / 2, (bbox[0] + bbox[2]) / 2
+        near = [c for c in page_chars if abs((c["top"] + c["bottom"]) / 2 - cy) < 6]
+        if near:
+            ref = min(near, key=lambda c: abs((c["x0"] + c["x1"]) / 2 - cx))
+            bbox = (bbox[0], ref["top"], bbox[2], ref["bottom"])
+            size = ref["size"]
+        else:
+            size = bbox[3] - bbox[1]
+        out.append((text, bbox, size))
+    return out
+
+
+_SUB = dict(zip("0123456789+-=()aehijklmnoprstuvx",
+               "₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ"))
+_SUP = dict(zip("0123456789+-=()abcdefghijklmnoprstuvwxyzABDEGHIJKLMNOPRTUVW",
+               "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻᴬᴮᴰᴱᴳᴴᴵᴶᴷᴸᴹᴺᴼᴾᴿᵀᵁⱽᵂ"))
+_SUB.update({"−": "₋", "–": "₋"})
+_SUP.update({"−": "⁻", "–": "⁻"})
+
+
+def _is_cjk(ch: str) -> bool:
+    return ord(ch[:1] or " ") >= 0x2E80
+
+
+def normalize_scripts(chars: list[dict]) -> list[dict]:
+    """把上下標換成 Unicode 上下標，位置拉回大字那一行（純函式，測試用）。
+
+    判定（都要成立，避免把「A.」後面字級較小的選項文字當成上標）：
+    - 一段連續、同字級、同高度的小字（≤ 左邊字的 87%），裡面沒有中文/全形字，最多 8 個字；
+    - 緊貼在左邊的字比較大，而且小字的底往下（下標）或頂往上（上標）偏超過字高 25%；
+      左邊是上一段上下標時（HCO₃⁻ 的 ⁻），以那一段的基準字比。
+    整段都有對應的 Unicode 才轉換（VO₂max → VO₂ₘₐₓ）；有一個字沒有（下標 b、%、~）
+    就整段保持原字、只拉回同一行（FEF25~75%），避免半套轉換。
+    """
+    import bisect
+    if not chars:
+        return chars
+    by_top = sorted(chars, key=lambda c: c["top"])
+    tops = [c["top"] for c in by_top]
+
+    def near(c):
+        lo = bisect.bisect_left(tops, c["top"] - 3 * c["size"])
+        hi = bisect.bisect_right(tops, c["bottom"] + c["size"])
+        return [r for r in by_top[lo:hi] if r is not c]
+
+    def overlaps(a, b):
+        return a["top"] < b["bottom"] and a["bottom"] > b["top"]
+
+    base_of: dict[int, dict] = {}   # 上下標字 → 基準字
+    replaced: dict[int, dict] = {}
+    done: set[int] = set()
+    for c in sorted(chars, key=lambda c: c["x0"]):
+        if id(c) in done or not c["text"].strip() or _is_cjk(c["text"]):
+            continue
+        cand = near(c)
+        left = [r for r in cand if r["text"].strip() and c["x0"] - 0.3 * c["size"] <= r["x1"] <= c["x0"] + 1
+                and r["x0"] < c["x0"] and overlaps(base_of.get(id(r), r), c)]
+        if not left:
+            continue
+        L = max(left, key=lambda r: r["x1"])
+        base = base_of.get(id(L), L)
+        if base["size"] < c["size"] / 0.87:
+            continue
+        h = c["bottom"] - c["top"]
+        if c["bottom"] - base["bottom"] > 0.25 * h:
+            kind = "sub"
+        elif base["top"] - c["top"] > 0.25 * h:
+            kind = "sup"
+        else:
+            continue
+        run, cur = [c], c
+        while len(run) <= 8:
+            nxt = [r for r in cand if r is not cur and cur["x1"] - 1 <= r["x0"] <= cur["x1"] + 0.5 * c["size"]
+                   and abs(r["top"] - c["top"]) < 0.5 and abs(r["size"] - c["size"]) < 0.3 and r["text"].strip()]
+            if not nxt:
+                break
+            cur = min(nxt, key=lambda r: r["x0"])
+            run.append(cur)
+        done.update(id(r) for r in run)
+        if len(run) > 8 or any(_is_cjk(r["text"]) for r in run):
+            continue
+        table = _SUB if kind == "sub" else _SUP
+        convert = all(r["text"] in table for r in run)
+        for r in run:
+            d = dict(r)
+            if convert:
+                d["text"] = table[r["text"]]
+            d.update(top=base["top"], bottom=base["bottom"], doctop=base["doctop"], size=base["size"])
+            replaced[id(r)] = d
+            base_of[id(r)] = base
+    return [replaced.get(id(c), c) for c in chars]
 
 
 def glyphs_to_chars(glyphs, template: dict) -> list[dict]:
@@ -97,6 +209,8 @@ def extract_pages(pdf_path: Path, warnings: list[str] | None = None) -> list[lis
     - dedupe_chars()：部分 PDF 用「疊印」做粗體，同一個字畫好幾次，不去重會變成「殘殘留留」。
     - 圈號字型壞掉的 PDF（例：113-1 NEURO），pdfplumber 會把 ①② 整個丟掉；
       從 PyMuPDF 取回這些字的位置，塞回 pdfplumber 的字元清單再排版。
+    - 上下標（H₂O、FEV₁、Ca²⁺）：normalize_scripts() 換成 Unicode 上下標並拉回同一行，
+      否則下標會被排到下一行（「cmH O\n2」）。
     """
     import pdfplumber
     from pdfplumber.utils import extract_text as chars_to_text
@@ -104,19 +218,33 @@ def extract_pages(pdf_path: Path, warnings: list[str] | None = None) -> list[lis
     mpages = _mupdf_pages(pdf_path)
     texts: list[str] = []
     recovered = 0
+    unknown_glyphs: list[str] = []
     with pdfplumber.open(str(pdf_path)) as pdf:
         for i, page in enumerate(pdf.pages):
             page = page.dedupe_chars()
             glyphs = _broken_glyphs(mpages[i]) if i < len(mpages) else []
-            if glyphs and page.chars:
+            if i < len(mpages) and page.chars:
+                glyphs += _image_glyphs(mpages[i], page.chars, unknown_glyphs)
+            chars = list(page.chars)
+            if glyphs and chars:
                 recovered += len(glyphs)
-                text = chars_to_text(list(page.chars) + glyphs_to_chars(glyphs, page.chars[0]))
-            else:
-                text = page.extract_text()
+                chars += glyphs_to_chars(glyphs, chars[0])
+            chars = normalize_scripts(chars)
+            extract = lambda tol, chars=chars: chars_to_text(chars, y_tolerance=tol)  # noqa: E731
+            text = extract(3) or ""
+            # 行內有圖片字（例：105-2 BASIC 第 72 題的「拇」）時，選項代號會比文字低一點，
+            # 預設 y_tolerance=3 會把「A.」和文字拆成兩行，選項整個錯位。只有這種頁面才放寬重抽。
+            if _BARE_OPT.search(text):
+                loose = extract(_LOOSE_Y_TOLERANCE) or ""
+                if len(_BARE_OPT.findall(loose)) < len(_BARE_OPT.findall(text)):
+                    print(f"  [info] {pdf_path.name} 第 {i + 1} 頁：選項代號與文字分行，放寬 y_tolerance 重抽", file=sys.stderr)
+                    text = loose
             texts.append(fix_radicals(text or ""))
     if recovered:
-        print(f"  [info] {pdf_path.name}：補回 {recovered} 個圈號（字型對應錯誤）", file=sys.stderr)
+        print(f"  [info] {pdf_path.name}：補回 {recovered} 個圈號／圖片字", file=sys.stderr)
     if warnings is not None:
+        for d in sorted(set(unknown_glyphs)):
+            warnings.append(f"沒見過的行內圖片字 {d}（字會不見），確認後加進 config.GLYPH_IMAGES")
         warnings.extend(circled_warnings(texts, [m.get_text() for m in mpages]))
 
     pages: list[list[str]] = []
@@ -191,11 +319,17 @@ def parse_pages(pages: list[list[str]]) -> tuple[dict, list[dict], list[str]]:
         missing = [k for k in C.OPTION_LETTERS if not q["options"].get(k)]
         if missing:
             q["review_flags"].append(f"缺選項 {''.join(missing)}")
-        if any(h in q["stem"] for h in _FIGURE_HINTS):
+        if has_figure_hint(q["stem"]):
             q["has_figure"] = True
     if len(questions) != C.QUESTIONS_PER_PAPER:
         warnings.append(f"只解析到 {len(questions)} 題（預期 {C.QUESTIONS_PER_PAPER}）")
     return header, questions, warnings
+
+
+def has_figure_hint(stem: str) -> bool:
+    """題幹有沒有提到圖表。「量表中」「森林圖」這類詞不算。"""
+    s = stem.replace("量表", "")
+    return any(h in s for h in _FIGURE_HINTS)
 
 
 def _new_question(number: int, first_line: str, page: int) -> dict:
@@ -235,6 +369,30 @@ def figure_boxes(boxes: list[tuple[float, float, float, float]], region: tuple[f
     return out
 
 
+def merge_strips(boxes: list[tuple[float, float, float, float]], gap: float = 1.0
+                 ) -> list[tuple[float, float, float, float]]:
+    """把相鄰（上下左右相距 ≤ gap）的圖片框合併成一個（純函式，測試用）。
+
+    部分早期 PDF（例：105-1、106-1 TECH 第 1 頁）把一張圖切成上百條 1pt 高的圖片條，
+    單條會被 figure_boxes 當雜點濾掉，整張圖就消失了。
+    """
+    merged: list[list[float]] = []
+    for b in sorted(boxes, key=lambda b: (b[1], b[0])):
+        cur = list(b)
+        changed = True
+        while changed:
+            changed = False
+            for m in merged:
+                if (cur[0] <= m[2] + gap and m[0] <= cur[2] + gap
+                        and cur[1] <= m[3] + gap and m[1] <= cur[3] + gap):
+                    cur = [min(cur[0], m[0]), min(cur[1], m[1]), max(cur[2], m[2]), max(cur[3], m[3])]
+                    merged.remove(m)
+                    changed = True
+                    break
+        merged.append(cur)
+    return [tuple(m) for m in merged]
+
+
 def crop_figures(pdf_path: Path, questions: list[dict], out_dir: Path, id_for) -> None:
     """找出每題範圍內的圖形/圖片並裁成 WebP。
 
@@ -255,7 +413,9 @@ def crop_figures(pdf_path: Path, questions: list[dict], out_dir: Path, id_for) -
     doc = fitz.open(str(pdf_path))
     out_dir.mkdir(parents=True, exist_ok=True)
     by_number = {q["number"]: q for q in questions}
+    prev = None
     for q in questions:
+        prev, q_prev = q, prev
         hinted = q["has_figure"]
         q["has_figure"], q["figure"], q["figure_kind"] = False, None, None
         out_path = out_dir / f"{id_for(q['number'])}.webp"
@@ -279,7 +439,7 @@ def crop_figures(pdf_path: Path, questions: list[dict], out_dir: Path, id_for) -
             if bottom <= top:
                 continue
             region = (page.rect.x0 + 24, top, page.rect.x1 - 24, bottom)
-            raw = [tuple(d["rect"]) for d in page.get_drawings()] + [tuple(i["bbox"]) for i in page.get_image_info()]
+            raw = [tuple(d["rect"]) for d in page.get_drawings()] + merge_strips([tuple(i["bbox"]) for i in page.get_image_info() if not is_inline_glyph(i["bbox"])])
             boxes = figure_boxes(raw, region, page.rect.width * page.rect.height)
             if boxes:
                 u = fitz.Rect(boxes[0])
@@ -294,6 +454,10 @@ def crop_figures(pdf_path: Path, questions: list[dict], out_dir: Path, id_for) -
             continue
         if out_path.exists():
             out_path.unlink()  # 舊版裁錯的圖
+        # 「承上題，此圖…」：圖印在上一題，共用同一張
+        if hinted and q["stem"].lstrip().startswith("承上題") and q_prev and q_prev.get("figure"):
+            q["has_figure"], q["figure"], q["figure_kind"] = True, q_prev["figure"], "inherited"
+            continue
         if hinted:
             q["review_flags"].append("附圖：題幹提到圖表但本題範圍內找不到圖形")
     doc.close()
