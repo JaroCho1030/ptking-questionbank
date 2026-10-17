@@ -231,3 +231,15 @@ def test_render_clips_writes_webp(tmp_path):
     from PIL import Image
     assert Image.open(out).size == (440, 480)  # 220x120pt ×2 倍、兩張上下拼
 
+
+def test_parse_exam_options_combined_title():
+    """105 年的考試名稱把物理、職能、呼吸治療師合寫，不能只比對「物理治療」。"""
+    html = """<select id="ctl00_holderContent_ddlExamCode">
+      <option value="105100">105年第二次醫師牙醫師藥師分階段、藥師醫檢師醫放師助產師物理職能呼吸治療師獸醫師考試</option>
+      <option value="105090">105年第二次中醫師分階段營養師心理師護理師社工師暨法醫師語言治療師聽力師牙體技術師考試</option>
+      <option value="105020">105年第一次醫師牙醫師藥師分階段、藥師醫檢師醫放師助產師物理職能呼吸治療師獸醫師考試</option>
+      <option value="105150">105年公務人員高等考試一級暨二級考試</option>
+    </select>"""
+    found = parse_exam_options(html)
+    assert [(e["exam_code"], e["roc_year"], e["round"]) for e in found] == [("105100", 105, 2), ("105020", 105, 1)]
+

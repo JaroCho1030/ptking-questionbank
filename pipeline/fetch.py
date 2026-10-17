@@ -37,6 +37,8 @@ INDEX_PATH = C.RAW_DIR / "index.json"
 CHANGES_LOG = C.RAW_DIR / "changes.log"
 
 _ROUND_RE = re.compile(r"(\d{3})\s*年\s*第\s*([一二三四])\s*次")
+# 考試名稱有時把幾個治療師合寫：「物理治療師」或「物理職能呼吸治療師」（105 年）
+_PT_EXAM_RE = re.compile(r"物理[^、，,\s]{0,8}治療")
 _CN_NUM = {"一": 1, "二": 2, "三": 3, "四": 4}
 _CHK_RE = re.compile(r"chk_(\d+)_(\d+)_(\d+)$")
 
@@ -77,7 +79,7 @@ def parse_exam_options(html: str) -> list[dict]:
     for opt in sel.find_all("option"):
         code = (opt.get("value") or "").strip()
         title = opt.get_text(" ", strip=True)
-        if not code or "物理治療" not in title:
+        if not code or not _PT_EXAM_RE.search(title):
             continue
         m = _ROUND_RE.search(title)
         if m:
