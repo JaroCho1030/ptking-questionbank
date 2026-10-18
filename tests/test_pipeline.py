@@ -345,3 +345,9 @@ def test_normalize_scripts_half_size_subscript():
     chars = [_ch("C", 171.0, 444.8, 11.0), _ch("O", 177.9, 444.8, 11.0), _ch("2", 185.4, 449.2, 5.5)]
     chars[1]["x1"] = 185.4
     assert extract_text(normalize_scripts(chars)) == "CO₂"
+
+
+def test_clean_text_latin_apostrophe():
+    assert clean_text("克隆氏病（Crohn’s Disease）") == "克隆氏病（Crohn's Disease）"
+    assert clean_text("Colles’ fracture") == "Colles' fracture"
+    assert clean_text("「中文’」") == "「中文’」"

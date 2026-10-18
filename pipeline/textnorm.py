@@ -82,8 +82,14 @@ _PUA_FIXES = {"\ueee7": "拇"}
 _CONTROL = re.compile(r"[\x00-\x08\x0b-\x1f\x7f-\x9f]")
 
 
+# 英文撇號用彎引號（Crohn’s）時，中文字型（PingFang、Noto Sans TC）會把 ’ 畫成全形，看起來像「Crohn’ s」。
+# 前後接英文字母的一律換成直撇號 '（題庫裡其他地方本來就用直撇號，例：Romberg's）。
+_LATIN_APOS = re.compile(r"(?<=[A-Za-z])[’‘]|[’‘](?=[A-Za-z])")
+
+
 def clean_text(text: str) -> str:
     text = _CONTROL.sub("", text)
+    text = _LATIN_APOS.sub("'", text)
     for bad, good in _PUA_FIXES.items():
         text = text.replace(bad, good)
     return squash_spaces(fix_radicals(text))
