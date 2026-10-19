@@ -14,7 +14,7 @@
   "source_m": null,
   "answer_sha256": "628a2c35f2a1c373a86abfa52e7f4017f15595db407598d136eb515a9c7ef50a",
   "correction_sha256": null,
-  "parsed_at": "2026-10-19T04:12:41+00:00",
+  "parsed_at": "2026-10-19T10:33:53+00:00",
   "warnings": []
  },
  "questions": [
@@ -716,10 +716,10 @@
     "心導管",
     "藥物"
    ],
-   "topic_confidence": 0.5,
-   "topic_source": "llm",
+   "topic_confidence": 1.0,
+   "topic_source": "human",
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-ASSESS",
+   "alt_topic": null,
    "review_flags": []
   },
   {
@@ -984,10 +984,10 @@
     "淋巴水腫",
     "淋巴同位素閃光檢查"
    ],
-   "topic_confidence": 0.8,
-   "topic_source": "llm",
+   "topic_confidence": 1.0,
+   "topic_source": "human",
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-TX",
+   "alt_topic": null,
    "review_flags": []
   },
   {
@@ -1477,16 +1477,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": "CARDPED-PED-FOUND",
+   "topic": "NEURO-BALANCE",
    "tags": [
     "視覺干擾",
     "感覺整合",
     "姿勢調整"
    ],
-   "topic_confidence": 0.5,
-   "topic_source": "llm",
+   "topic_confidence": 1.0,
+   "topic_source": "human",
    "secondary_topics": [],
-   "alt_topic": "NEURO-BALANCE",
+   "alt_topic": null,
    "review_flags": []
   },
   {

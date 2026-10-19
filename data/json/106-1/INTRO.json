@@ -14,7 +14,7 @@
   "source_m": "https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=M&code=106020&c=311&s=22&q=1",
   "answer_sha256": "4f1a8d613ef7838d18157d109a985b6a95d1bea02cfbd2165e5cc308878e5c17",
   "correction_sha256": "60248e9f021395ce53210b18656ee7b66915b1a797a27f97379ec4a8de225503",
-  "parsed_at": "2026-10-19T04:08:35+00:00",
+  "parsed_at": "2026-10-19T10:30:50+00:00",
   "warnings": []
  },
  "questions": [
@@ -1695,10 +1695,10 @@
     "擺位",
     "腰椎前凸"
    ],
-   "topic_confidence": 0.5,
-   "topic_source": "llm",
+   "topic_confidence": 1.0,
+   "topic_source": "human",
    "secondary_topics": [],
-   "alt_topic": "BASIC-KIN-SPINE",
+   "alt_topic": null,
    "review_flags": []
   },
   {
@@ -1888,15 +1888,15 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": "NEURO-FOUND",
+   "topic": "CARDPED-PED-DEV",
    "tags": [
     "STNR",
     "原始反射"
    ],
-   "topic_confidence": 0.5,
-   "topic_source": "llm",
+   "topic_confidence": 1.0,
+   "topic_source": "human",
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-DEV",
+   "alt_topic": null,
    "review_flags": []
   },
   {
@@ -2651,10 +2651,10 @@
     "間歇性跛行",
     "走路運動"
    ],
-   "topic_confidence": 0.6,
-   "topic_source": "llm",
+   "topic_confidence": 1.0,
+   "topic_source": "human",
    "secondary_topics": [],
-   "alt_topic": "INTRO-MED",
+   "alt_topic": null,
    "review_flags": []
   }
  ]

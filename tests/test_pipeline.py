@@ -614,3 +614,36 @@ def test_drop_reviewed():
     reviewed = {("a", "選項 A 空白"), ("b", "附圖：舊原因")}
     kept, n = drop_reviewed(rows, reviewed)
     assert [r["id"] for r in kept] == ["b", "a2"] and n == 1   # 原因變了要再出現
+
+
+def test_include_option_labels():
+    """107-2-TECH-076：選項是照片，「A.」在圖左邊 35.8–47，圖從 47 開始 → 裁切框要往左包到代號。"""
+    from pipeline.parse import include_option_labels
+    fig = (47, 275, 88, 523)
+    clip = (39, 267, 96, 531)
+    lines = [((35.8, 275.9, 47.0, 292.4), "A."), ((35.8, 338.1, 47.0, 354.6), "B."),
+             ((35.8, 540.9, 120.8, 560.1), "A.髖關節屈肌攣縮"),   # 圖下方的別題選項：不動
+             ((300, 280, 400, 292), "如圖所示")]                  # 不是選項代號
+    assert include_option_labels(fig, clip, lines) == (34.8, 267, 96, 531)
+
+
+def test_include_bare_label_below_figure():
+    """114-2-ORTHO-028：「B.」印在第一頁底、B 圖在下一頁 → 框進第一頁的裁切；有文字的選項行不框。"""
+    from pipeline.parse import include_option_labels
+    fig = (58, 603, 145, 740)
+    clip = (50, 595, 153, 748)
+    assert include_option_labels(fig, clip, [((45.0, 749.8, 57.9, 762.4), "B.")]) == (44.0, 595, 153, 763.4)
+    assert include_option_labels(fig, clip, [((45.0, 749.8, 300, 762.4), "B.雙側非對稱性")]) == clip
+
+
+def test_include_labels_when_options_interleave_with_images():
+    """115-2-ORTHO-033：「A.文字」圖「B.文字」圖…交錯 → 最上面的 A、最下面的 C 也要框進來。"""
+    from pipeline.parse import include_option_labels
+    fig = (50, 323, 275, 686)
+    clip = (42, 322, 283, 694)    # trim_clip 收過的
+    a = ((39.2, 309.8, 204.1, 320.8), "A.以背部支撐方式之腳踏車訓練")
+    b = ((39.2, 546.8, 198.6, 557.8), "B.以上坡坡度模式的跑步機訓練")
+    c = ((39.2, 699.8, 220.7, 710.8), "C.以搭配四肢動作之越野滑雪機訓練")
+    assert include_option_labels(fig, clip, [a, b, c]) == (38.2, 308.8, 283, 711.8)
+    # 沒有交錯（圖是題幹的一部分）→ 圖下方的選項 A 不框
+    assert include_option_labels(fig, clip, [c]) == clip

@@ -14,7 +14,7 @@
   "source_m": "https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=M&code=115020&c=311&s=0702&q=1",
   "answer_sha256": "08e59482a4606a882f4362a1ccab6784fed06e0db028ae9f1e9d02589c188484",
   "correction_sha256": "946ab262d99f96459fbe2f5541ae295184262d4e53dc35abda87785190c72d18",
-  "parsed_at": "2026-10-19T04:15:04+00:00",
+  "parsed_at": "2026-10-19T10:35:39+00:00",
   "warnings": []
  },
  "questions": [
@@ -1442,18 +1442,19 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": "ORTHO-SHOULDER",
+   "topic": "ORTHO-HIP",
    "tags": [
     "肩髖比較",
     "杵臼關節",
     "傾斜角"
    ],
-   "topic_confidence": 0.3,
-   "topic_source": "llm",
+   "topic_confidence": 1.0,
+   "topic_source": "human",
    "secondary_topics": [
+    "ORTHO-SHOULDER",
     "BASIC-ANA-MSK"
    ],
-   "alt_topic": "ORTHO-HIP",
+   "alt_topic": null,
    "review_flags": []
   },
   {

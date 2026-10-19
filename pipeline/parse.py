@@ -492,6 +492,47 @@ def trim_clip(fig: tuple[float, float, float, float], clip: tuple[float, float, 
     return (cx0, cy0, cx1, cy1)
 
 
+_OPTION_LABEL = re.compile(r"^\s*[A-DＡ-Ｄ][\.．]")
+_BARE_LABEL = re.compile(r"^\s*[A-DＡ-Ｄ][\.．]\s*$")
+
+
+def include_option_labels(fig: tuple[float, float, float, float], clip: tuple[float, float, float, float],
+                          lines: list[tuple[tuple[float, float, float, float], str]], reach: float = 24.0,
+                          gap: float = 1.0) -> tuple[float, float, float, float]:
+    """選項是圖片時，選項代號「A.」要整個框進來（純函式，測試用）。
+
+    2026-10-19 Jaro 抽查：9 題的「A.」左半被切掉（留白 8pt 只框到右半），114-2-ORTHO-028 的「B.」
+    印在頁底、圖在下一頁，被 trim_clip 當成圖下方的選項文字收掉。
+    - 圖旁：以選項代號開頭、垂直方向一半以上落在圖範圍內、離裁切框 ≤ reach → 左右放寬。
+    - 圖上下：只有代號沒有文字的行（「B.」）、離裁切框 ≤ reach → 上下放寬。
+      有文字的選項行（「A.雙側對稱性…」）是題目選項，仍由 trim_clip 排除；
+      但圖範圍「中間」夾著選項行時（115-2-ORTHO-033：每個選項是「A.文字」接一張圖），
+      選項和圖交錯排，圖上下緣的選項行也要框進來，否則 A、C 的代號會不見。
+    """
+    fx0, fy0, fx1, fy1 = fig
+    cx0, cy0, cx1, cy1 = clip
+    interleaved = any(_OPTION_LABEL.match(t) and y0 > fy0 and y1 < fy1 and x1 > cx0 and x0 < cx1
+                      and not (min(y1, fy1) - max(y0, fy0) >= 0.5 * (y1 - y0) and (x1 <= fx0 or x0 >= fx1))
+                      for (x0, y0, x1, y1), t in lines)
+    for (x0, y0, x1, y1), text in lines:
+        if not _OPTION_LABEL.match(text):
+            continue
+        beside = min(y1, fy1) - max(y0, fy0) >= 0.5 * (y1 - y0)
+        if beside:
+            if x0 < cx0 and x1 > cx0 - reach:
+                cx0 = min(cx0, x0 - gap)
+            if x1 > cx1 and x0 < cx1 + reach:
+                cx1 = max(cx1, x1 + gap)
+        elif (interleaved or _BARE_LABEL.match(text)) and x1 > cx0 - reach and x0 < cx1 + reach:
+            if y0 >= fy1 and y0 < cy1 + reach:
+                cy1 = max(cy1, y1 + gap)
+                cx0 = min(cx0, x0 - gap)
+            elif y1 <= fy0 and y1 > cy0 - reach:
+                cy0 = min(cy0, y0 - gap)
+                cx0 = min(cx0, x0 - gap)
+    return (cx0, cy0, cx1, cy1)
+
+
 def crop_figures(pdf_path: Path, questions: list[dict], out_dir: Path, id_for) -> None:
     """找出每題範圍內的圖形/圖片並裁成 WebP。
 
@@ -550,10 +591,12 @@ def crop_figures(pdf_path: Path, questions: list[dict], out_dir: Path, id_for) -
                 for bx in boxes[1:]:
                     u |= fitz.Rect(bx)
                 padded = (u + (-8, -8, 8, 8)) & page.rect
-                text_lines = [tuple(ln["bbox"]) for blk in page.get_text("dict")["blocks"]
-                              for ln in blk.get("lines", [])
-                              if "".join(sp["text"] for sp in ln["spans"]).strip()]
-                clips.append((pno, fitz.Rect(trim_clip(tuple(u), tuple(padded), text_lines))))
+                text_lines = [(tuple(ln["bbox"]), "".join(sp["text"] for sp in ln["spans"]))
+                              for blk in page.get_text("dict")["blocks"] for ln in blk.get("lines", [])]
+                text_lines = [(b, t) for b, t in text_lines if t.strip()]
+                clip = trim_clip(tuple(u), tuple(padded), [b for b, _ in text_lines])
+                clip = include_option_labels(tuple(u), clip, text_lines)
+                clips.append((pno, fitz.Rect(clip) & page.rect))
 
         if clips:
             _render_clips(fitz, doc, clips, out_path)
