@@ -402,15 +402,15 @@ def test_tag_prompt_and_tool_allow_cross_subject_secondary():
     tool = T.build_tool([t["code"] for t in topics], T.all_topic_codes(tax))
     props = tool["input_schema"]["properties"]["results"]["items"]["properties"]
     assert "NEURO-BALANCE" in props["topic"]["enum"]
-    assert "BASIC-KIN-GAIT" in props["topic"]["enum"]              # 本科放不下時主要主題可跨科（3.8）
+    assert "BASIC-KIN-GAIT" in props["topic"]["enum"]              # 本科只有籠統主題時主要主題可跨科（3.8）
     assert "BASIC-KIN-GAIT" in props["secondary_topics"]["items"]["enum"]  # 次要主題不限科
     assert props["secondary_topics"]["maxItems"] == 2
     assert "secondary_topics" not in tool["input_schema"]["properties"]["results"]["items"]["required"]
     q = {"id": "x-1", "stem": "題幹", "options": {k: "o" for k in C.OPTION_LETTERS},
          "accepted_answers": ["A"], "is_voided": False}
     text = T.format_batch(topics, [q], {"x-1": q}, other)
-    assert "BASIC-KIN-GAIT" in text and "本科放不下時也可當主要主題" in text
-    assert "本科分類表裡找不到能放的主題時" in T.SYSTEM_PROMPT and "不另掛本科次要主題" in T.SYSTEM_PROMPT
+    assert "BASIC-KIN-GAIT" in text and "本科只有籠統主題時也可當主要主題" in text
+    assert "本科只有籠統或勉強相關的主題、而別科有專門的主題時選別科" in T.SYSTEM_PROMPT and "不另掛本科次要主題" in T.SYSTEM_PROMPT
 
 
 def test_tag_prompt_secondary_rules():
@@ -647,3 +647,20 @@ def test_include_labels_when_options_interleave_with_images():
     assert include_option_labels(fig, clip, [a, b, c]) == (38.2, 308.8, 283, 711.8)
     # 沒有交錯（圖是題幹的一部分）→ 圖下方的選項 A 不框
     assert include_option_labels(fig, clip, [c]) == clip
+
+
+def test_apply_rejudge():
+    from pipeline.tag import apply_rejudge
+    q = {"topic": "INTRO-MED", "alt_topic": "NEURO-VESTIB", "secondary_topics": ["NEURO-VESTIB", "BASIC-ANA-NEU"],
+         "topic_confidence": 0.5, "topic_source": "llm"}
+    assert apply_rejudge(q, "INTRO-MED", "NEURO-VESTIB", {"choice": "B", "confidence": 0.8}) is None
+    assert (q["topic"], q["alt_topic"], q["secondary_topics"], q["topic_confidence"]) == \
+        ("NEURO-VESTIB", "INTRO-MED", ["BASIC-ANA-NEU"], 0.8)
+    assert apply_rejudge(q, "INTRO-MED", "NEURO-VESTIB", {"choice": "A", "confidence": 0.8})  # 主題已變 → 略過
+    h = {"topic": "X", "alt_topic": "Y", "topic_source": "human"}
+    assert apply_rejudge(h, "X", "Y", {"choice": "B", "confidence": 0.9}) and h["topic"] == "X"
+
+
+def test_rejudge_prompt_has_rule():
+    from pipeline.tag import REJUDGE_PROMPT
+    assert "本科只有籠統或勉強相關的主題" in REJUDGE_PROMPT and "NEURO-VESTIB" in REJUDGE_PROMPT

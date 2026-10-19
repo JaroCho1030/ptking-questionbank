@@ -7,6 +7,11 @@
     python -m pipeline.tag --import-results data/tagging/full/results --batches-dir data/tagging/full/batches
         → 檢查（主題 code 必須在分類表、次要主題 clean_secondary、缺題列出）後寫回 data/json
 
+跨科重判（2026-10-19，跨科規則修訂後用；ARCHITECTURE 3.8）：
+    python -m pipeline.tag --export-rejudge data/tagging/rejudge/batches --rejudge-conf 0.5,0.6
+        → 主要主題與 alt_topic 一個本科一個別科的題目，子代理只選 A（維持）或 B（改用第二候選）
+    python -m pipeline.tag --import-rejudge data/tagging/rejudge/results --batches-dir data/tagging/rejudge/batches
+
 Claude API（備用）：
     export ANTHROPIC_API_KEY=...
     python -m pipeline.tag                       # 標記所有還沒有 topic 的題目
@@ -38,7 +43,7 @@ from .taxonomy_doc import topic_lines
 
 SYSTEM_PROMPT = """你是台灣物理治療師國家考試的資深出題委員與教師。
 你會收到同一科目的多道選擇題，以及這一科的主題分類表（code、名稱、包含、不含、關鍵字）。「不含」列的是容易混淆、要歸到別處的內容，箭頭後面是該歸的主題。
-請替每一題選出「最主要」考的一個主題 code，只能從給定清單選，原則上選本科主題。判斷依據是題目在考什麼知識點，
+請替每一題選出「最主要」考的一個主題 code，只能從給定清單選，先看本科主題（規則 5）。判斷依據是題目在考什麼知識點，
 而不是題幹裡出現的場景（例如題目用中風病人當情境但其實在考 Berg 量表的計分，主題應是評估與量表）。
 confidence 依下列刻度給（只用這幾個值附近）：
   0.95：只可能是這個主題。
@@ -57,10 +62,14 @@ secondary_topics（次要主題）是可選的，預設給空陣列；全部題�
 3. 本科試卷單純問解剖構造或神經支配範圍（例：食指掌側感覺由哪條神經支配）→ 主要主題選本科最接近的主題，
    次要主題加基礎學的解剖主題；若問的是損傷後的表現或處置，就只標本科主題。
 4. 典型的跨科例子：神經科試卷考正常步態週期的肌肉活動 → 主要選本科、次要加基礎學的步態與姿態。
-5. 跨科：本科分類表裡找不到能放的主題時（題目考的完全是別科的內容，例：心肺試卷考洗手時機 → INTRO-SAFETY、
-   技術學試卷考 Wernicke 失語症是哪一區受損 → BASIC-ANA-NEU、技術學試卷考脊柱側彎肋骨隆起怎麼量 → ORTHO-THORACIC），
-   主要主題直接選「其他科目主題」裡最合適的那個，信心照刻度給，不另掛本科次要主題。
-   本科有合理的主題就一定留本科（例：神經科試卷考神經解剖 → NEURO-FOUND；考周邊神經支配 → NEURO-PNI）。
+5. 跨科：本科有專門涵蓋這個考點的主題就留本科；本科只有籠統或勉強相關的主題、而別科有專門的主題時選別科。
+   籠統主題指概論類、「基礎與原理」、內外科概論、兒童發展這類大類，只是沾得上邊、不是專門講這個考點。
+   跨科例：概論試卷考良性陣發性姿勢性眩暈 → NEURO-VESTIB；心肺小兒試卷考站姿動作控制 → NEURO-BALANCE；
+   骨科試卷考 Kaltenborn 肩關節鬆動 → TECH-JOINTMOB；骨科試卷考小孩腳趾內向 → CARDPED-PED-OTHER；
+   心肺試卷考洗手時機 → INTRO-SAFETY；技術學試卷考 Wernicke 失語症是哪一區受損 → BASIC-ANA-NEU。
+   留本科例：心肺試卷考冠狀動脈分支 → CARDPED-CV-FOUND（本科專門講循環系統）；骨科試卷考脊椎韌帶扭傷 → ORTHO-LUMBAR；
+   神經科試卷考神經解剖 → NEURO-FOUND；考周邊神經支配 → NEURO-PNI。
+   跨科時主要主題直接選「其他科目主題」裡最合適的那個，信心照刻度給，不另掛本科次要主題。
 清單分成「本科主題」與「其他科目主題」兩段。"""
 
 TOOL_NAME = "tag_questions"
@@ -120,7 +129,7 @@ def format_batch(topics: list[dict], questions: list[dict], by_id: dict[str, dic
         lines.append(f"- {t['code']}：{grp}{t['name']}")
         lines += topic_lines(t)
     if other_topics:
-        lines.append("\n## 其他科目的主題（次要主題可用；本科放不下時也可當主要主題）")
+        lines.append("\n## 其他科目的主題（次要主題可用；本科只有籠統主題時也可當主要主題）")
         for t in other_topics:
             lines.append(f"- {t['code']}：{t['name']}")
     lines.append("\n## 題目")
@@ -157,7 +166,7 @@ def clean_secondary(r: dict, primary: str, valid: set[str]) -> list[str]:
 
 def apply_result(q: dict, r: dict, valid_codes: set[str]) -> str | None:
     """把一筆模型結果寫進題目；API 與子代理共用。不合格回傳原因（題目不動），合格回傳 None。
-    主要主題原則上本科，本科放不下時可跨科（ARCHITECTURE 3.8），所以這裡只檢查 code 在分類表內。"""
+    主要主題可跨科（ARCHITECTURE 3.8），所以這裡只檢查 code 在分類表內。"""
     topic = str(r.get("topic") or "").strip()
     if topic not in valid_codes:
         return f"主要主題 {topic or '（空）'} 不在分類表"
@@ -265,7 +274,7 @@ def batch_closing(name: str, n: int) -> str:
     return (f"## 輸出\n把全部 {n} 題的結果寫成一個 JSON 檔（UTF-8），內容只有這個物件、不要加說明文字：\n"
             f'{{"batch": "{name}", "results": [{{"id": "題目 id", "topic": "主題 code（原則上本科）", "confidence": 0.0–1.0, '
             f'"tags": ["1–3 個關鍵字"], "alt_topic": "第二可能的主題 code 或 null", "secondary_topics": []}}]}}\n'
-            "每一題都要有一筆；topic 原則上用「本科主題分類表」的 code，本科放不下才用其他科目的 code；"
+            "每一題都要有一筆；topic 先看「本科主題分類表」，本科只有籠統主題而別科有專門主題時才用其他科目的 code；"
             "secondary_topics 大多是空陣列，最多 2 個。")
 
 
@@ -286,6 +295,112 @@ def export_batches(args, out_dir: Path) -> None:
         print(f"{name}: {len(todo)} 題")
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), "utf-8")
     print(f"共 {total} 題，批次檔在 {out_dir}")
+
+
+REJUDGE_PROMPT = """你是台灣物理治療師國家考試的資深出題委員與教師。
+每一題有兩個候選主題：A 是目前的主要主題，B 是第二候選；其中一個屬於題目所在試卷的科目（本科），另一個屬於別科。
+請依下面的規則選 A 或 B 當主要主題，並給信心。
+規則：""" + SYSTEM_PROMPT.split("5. 跨科：", 1)[1].split("清單分成", 1)[0].strip().replace("\n   ", "\n") + """
+另外：看題目考的知識點，不看題幹情境（題目用中風病人當情境但考 Berg 量表計分 → 評估與量表）。
+confidence 刻度：0.95 只可能是這個；0.8 主要是這個；0.6 較核心但另一個也說得通；0.5 兩個同樣合理；0.3 拿不準。"""
+
+REJUDGE_BATCH_SIZE = 60
+
+
+def rejudge_candidates(confidences: set[float], tax: dict) -> list[tuple[dict, str, str]]:
+    """信心在 confidences、topic 與 alt_topic 剛好一個在本科的 llm 題目 → [(題目, A, B)]。"""
+    subj_of = {t["code"]: s["code"] for s in tax["subjects"] for t in s["topics"]}
+    out = []
+    for p, data in iter_files(None, None):
+        paper = data["exam"]["subject_code"]
+        for q in data["questions"]:
+            a, b = q.get("topic"), q.get("alt_topic")
+            if (q.get("topic_source") == "llm" and a and b and q.get("topic_confidence") in confidences
+                    and (subj_of.get(a) == paper) != (subj_of.get(b) == paper)):
+                out.append((q, a, b))
+    return out
+
+
+def format_rejudge(items: list[tuple[dict, str, str]], tax: dict, name: str) -> str:
+    topics = {t["code"]: (s["code"], s.get("name", s["code"]), t) for s in tax["subjects"] for t in s["topics"]}
+    lines = [f"# 重判批次 {name}", "", "## 任務說明", REJUDGE_PROMPT, "", "## 題目"]
+    for q, a, b in items:
+        paper = q["id"].split("-")[2]
+        ans = "/".join(q["accepted_answers"]) or ("送分" if q["is_voided"] else "?")
+        lines += [f"\n### {q['id']}（試卷科目：{topics[a][1] if topics[a][0] == paper else topics[b][1]}）", q["stem"]]
+        lines += [f"{k}. {q['options'][k]}" for k in C.OPTION_LETTERS] + [f"答案：{ans}"]
+        for label, code in (("A", a), ("B", b)):
+            s, sname, t = topics[code]
+            lines.append(f"候選 {label}：{code}（{'本科' if s == paper else '別科：' + sname}）{t['name']}")
+            lines += topic_lines(t)
+    lines += ["", "## 輸出",
+              f"把全部 {len(items)} 題的結果寫成一個 JSON 檔（UTF-8），內容只有這個物件、不要加說明文字：",
+              f'{{"batch": "{name}", "results": [{{"id": "題目 id", "choice": "A 或 B", "confidence": 0.0–1.0}}]}}',
+              "每一題都要有一筆。"]
+    return "\n".join(lines)
+
+
+def export_rejudge(out_dir: Path, items: list[tuple[dict, str, str]], prefix: str = "rejudge") -> None:
+    tax = load_taxonomy()
+    out_dir.mkdir(parents=True, exist_ok=True)
+    manifest = {}
+    for i in range(0, len(items), REJUDGE_BATCH_SIZE):
+        chunk = items[i:i + REJUDGE_BATCH_SIZE]
+        name = f"{prefix}_{i // REJUDGE_BATCH_SIZE + 1:02d}"
+        (out_dir / f"{name}.md").write_text(format_rejudge(chunk, tax, name), "utf-8")
+        manifest[name] = [{"id": q["id"], "A": a, "B": b} for q, a, b in chunk]
+    (out_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), "utf-8")
+    print(f"共 {len(items)} 題、{len(manifest)} 批，在 {out_dir}")
+
+
+def apply_rejudge(q: dict, a: str, b: str, r: dict) -> str | None:
+    """選 B 就把主要主題和第二候選對調；次要主題裡若有新的主要主題就拿掉（純函式，測試用）。"""
+    if q.get("topic_source") == "human":
+        return "人工覆寫過，略過"
+    if q.get("topic") != a or q.get("alt_topic") != b:
+        return "題目的主題已經變了，略過"
+    choice = str(r.get("choice") or "").strip().upper()
+    if choice not in ("A", "B"):
+        return f"choice 不是 A/B：{choice!r}"
+    try:
+        conf = round(min(max(float(r.get("confidence")), 0.0), 1.0), 2)
+    except (TypeError, ValueError):
+        return "confidence 不是數字"
+    if choice == "B":
+        q["topic"], q["alt_topic"] = b, a
+        q["secondary_topics"] = [c for c in q.get("secondary_topics") or [] if c != b]
+    q["topic_confidence"] = conf
+    return None
+
+
+def import_rejudge(results_dir: Path, batches_dir: Path) -> None:
+    manifest = json.loads((batches_dir / "manifest.json").read_text("utf-8"))
+    want = {e["id"]: e for entries in manifest.values() for e in entries}
+    results: dict[str, dict] = {}
+    for rp in sorted(results_dir.glob("*.json")):
+        for r in json.loads(rp.read_text("utf-8"))["results"]:
+            results[str(r["id"])] = r
+    n = n_switch = 0
+    problems = []
+    for p, data in iter_files(None, None):
+        changed = False
+        for q in data["questions"]:
+            e = want.get(q["id"])
+            if not e:
+                continue
+            r = results.get(q["id"])
+            err = apply_rejudge(q, e["A"], e["B"], r) if r else "沒有結果"
+            if err:
+                problems.append(f"{q['id']}: {err}")
+                continue
+            n += 1
+            n_switch += q["topic"] == e["B"]
+            changed = True
+        if changed:
+            save(p, data)
+    print(f"重判 {n} 題，改用第二候選 {n_switch} 題")
+    for line in problems:
+        print(f"[warn] {line}", file=sys.stderr)
 
 
 def import_results(results_dir: Path, batches_dir: Path) -> None:
@@ -398,8 +513,17 @@ def main(argv=None):
     ap.add_argument("--import-results", metavar="DIR", help="匯入子代理結果")
     ap.add_argument("--batches-dir", default=str(C.ROOT / "data" / "tagging" / "batches"),
                     help="--import-results 用的 manifest 所在資料夾")
+    ap.add_argument("--export-rejudge", metavar="DIR",
+                    help="重判跨科：信心在 --rejudge-conf、主要主題與 alt_topic 一個本科一個別科的題目，只選 A/B")
+    ap.add_argument("--rejudge-conf", default="0.5,0.6", help="重判哪些信心值，逗號分隔")
+    ap.add_argument("--import-rejudge", metavar="DIR", help="匯入重判結果（manifest 用 --batches-dir）")
     args = ap.parse_args(argv)
-    if args.export_batches:
+    if args.export_rejudge:
+        confs = {float(x) for x in args.rejudge_conf.split(",")}
+        export_rejudge(Path(args.export_rejudge), rejudge_candidates(confs, load_taxonomy()))
+    elif args.import_rejudge:
+        import_rejudge(Path(args.import_rejudge), Path(args.batches_dir))
+    elif args.export_batches:
         export_batches(args, Path(args.export_batches))
     elif args.import_results:
         import_results(Path(args.import_results), Path(args.batches_dir))
