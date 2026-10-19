@@ -40,11 +40,19 @@
    "group_id": null,
    "group_pos": null,
    "page": 1,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-FOUND",
+   "tags": [
+    "呼吸肌神經支配",
+    "橫膈",
+    "腹肌"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [
+    "BASIC-ANA-MSK"
+   ],
+   "alt_topic": "BASIC-ANA-NEU"
   },
   {
    "id": "106-2-CARDPED-002",
@@ -68,11 +76,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 1,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-ASSESS",
+   "tags": [
+    "通氣儲備",
+    "MVV"
+   ],
+   "topic_confidence": 0.5,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-EXPHYS"
   },
   {
    "id": "106-2-CARDPED-003",
@@ -96,11 +109,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 1,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-ASSESS",
+   "tags": [
+    "Biot",
+    "Kussmaul",
+    "Cheyne-Stokes"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-RESP-FOUND"
   },
   {
    "id": "106-2-CARDPED-004",
@@ -124,11 +143,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 1,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-ASSESS",
+   "tags": [
+    "PaCO2",
+    "換氣不足",
+    "過度換氣"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-RESP-FOUND"
   },
   {
    "id": "106-2-CARDPED-005",
@@ -152,11 +177,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 1,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-TX",
+   "tags": [
+    "膿胸",
+    "胸腔穿刺術",
+    "胸膜剝除"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-RESP-ASSESS"
   },
   {
    "id": "106-2-CARDPED-006",
@@ -180,11 +211,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 1,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-ASSESS",
+   "tags": [
+    "觀察",
+    "圓唇呼吸"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-RESP-TX"
   },
   {
    "id": "106-2-CARDPED-007",
@@ -208,11 +244,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-ASSESS",
+   "tags": [
+    "阻塞型肺疾",
+    "吐氣期延長"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-RESP-TX"
   },
   {
    "id": "106-2-CARDPED-008",
@@ -236,11 +277,15 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-ASSESS",
+   "tags": [
+    "胸廓活動度"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-009",
@@ -264,11 +309,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-TX",
+   "tags": [
+    "中葉塌陷",
+    "氣喘",
+    "擺位"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-RESP-FOUND"
   },
   {
    "id": "106-2-CARDPED-010",
@@ -292,11 +343,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-TX",
+   "tags": [
+    "肺移植",
+    "慢性排斥",
+    "阻塞性細支氣管炎"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "INTRO-MED"
   },
   {
    "id": "106-2-CARDPED-011",
@@ -320,11 +377,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-TX",
+   "tags": [
+    "肺氣腫",
+    "大泡",
+    "給氧"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-ONC-ICU"
   },
   {
    "id": "106-2-CARDPED-012",
@@ -348,11 +411,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-TX",
+   "tags": [
+    "肋膜積水",
+    "局部呼吸"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-RESP-FOUND"
   },
   {
    "id": "106-2-CARDPED-013",
@@ -376,11 +444,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-TX",
+   "tags": [
+    "姿位引流",
+    "下肺葉外側基支"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-014",
@@ -404,11 +477,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 3,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-TX",
+   "tags": [
+    "用力吐氣法",
+    "huff"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-RESP-FOUND"
   },
   {
    "id": "106-2-CARDPED-015",
@@ -432,11 +510,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 3,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-CV-TX",
+   "tags": [
+    "周邊動脈疾病",
+    "間歇性跛行"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-ASSESS"
   },
   {
    "id": "106-2-CARDPED-016",
@@ -460,11 +543,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 3,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-HP",
+   "tags": [
+    "阻力訓練",
+    "RM"
+   ],
+   "topic_confidence": 0.5,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "TECH-STRENGTH"
   },
   {
    "id": "106-2-CARDPED-017",
@@ -488,11 +576,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 3,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-CV-ASSESS",
+   "tags": [
+    "左心室肥厚",
+    "心電圖"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-018",
@@ -516,11 +609,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 4,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-CV-ASSESS",
+   "tags": [
+    "心房早期收縮",
+    "PAC"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-019",
@@ -544,11 +642,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 4,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-CV-ASSESS",
+   "tags": [
+    "雙聯律",
+    "PVC"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-020",
@@ -572,11 +675,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 4,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-HP",
+   "tags": [
+    "HDL膽固醇",
+    "血脂"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-EXPHYS"
   },
   {
    "id": "106-2-CARDPED-021",
@@ -600,11 +708,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 4,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-CV-TX",
+   "tags": [
+    "回歸工作",
+    "METs",
+    "工作模擬"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-ASSESS"
   },
   {
    "id": "106-2-CARDPED-022",
@@ -628,11 +742,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 5,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-CV-TX",
+   "tags": [
+    "心肌梗塞",
+    "運動強度",
+    "目標心率"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-ASSESS"
   },
   {
    "id": "106-2-CARDPED-023",
@@ -656,11 +776,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 5,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-CV-TX",
+   "tags": [
+    "PCI",
+    "心絞痛",
+    "運動中止"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-ASSESS"
   },
   {
    "id": "106-2-CARDPED-024",
@@ -684,11 +810,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 5,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "INTRO-SAFETY",
+   "tags": [
+    "洗手",
+    "感染控制"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-025",
@@ -712,11 +843,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 5,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-CV-TX",
+   "tags": [
+    "PCI",
+    "心肌耗氧"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-ASSESS"
   },
   {
    "id": "106-2-CARDPED-026",
@@ -738,13 +874,18 @@
    "group_id": null,
    "group_pos": null,
    "page": 5,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
+   "topic": "CARDPED-CV-ASSESS",
+   "tags": [
+    "運動禁忌",
+    "心律不整心電圖"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
    "review_flags": [
     "缺選項 ABCD"
-   ]
+   ],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-TX"
   },
   {
    "id": "106-2-CARDPED-027",
@@ -768,11 +909,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-CV-TX",
+   "tags": [
+    "心律不整",
+    "運動治療"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-ASSESS"
   },
   {
    "id": "106-2-CARDPED-028",
@@ -796,11 +942,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-HP",
+   "tags": [
+    "運動強度分級",
+    "Borg",
+    "無氧閾值"
+   ],
+   "topic_confidence": 0.5,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-EXPHYS"
   },
   {
    "id": "106-2-CARDPED-029",
@@ -824,11 +976,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-EXPHYS",
+   "tags": [
+    "規律運動益處",
+    "乳酸閾值"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-HP"
   },
   {
    "id": "106-2-CARDPED-030",
@@ -852,11 +1009,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-EXPHYS",
+   "tags": [
+    "DOMS",
+    "離心收縮"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "BASIC-PHY-MSK"
   },
   {
    "id": "106-2-CARDPED-031",
@@ -880,11 +1042,15 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-HP",
+   "tags": [
+    "體適能檢測順序"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-ASSESS"
   },
   {
    "id": "106-2-CARDPED-032",
@@ -908,11 +1074,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-HP",
+   "tags": [
+    "坐姿體前彎",
+    "柔軟度"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "TECH-ROM"
   },
   {
    "id": "106-2-CARDPED-033",
@@ -936,11 +1107,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 7,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-HP",
+   "tags": [
+    "ACSM",
+    "代謝症候群"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-034",
@@ -964,11 +1140,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 7,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-HP",
+   "tags": [
+    "肌肉適能",
+    "重量訓練"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "TECH-STRENGTH"
   },
   {
    "id": "106-2-CARDPED-035",
@@ -992,11 +1173,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 7,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-HP",
+   "tags": [
+    "高血壓",
+    "運動處方",
+    "乙型阻斷劑"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-TX"
   },
   {
    "id": "106-2-CARDPED-036",
@@ -1020,11 +1207,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 7,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-HP",
+   "tags": [
+    "糖尿病",
+    "運動處方",
+    "胰島素"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-037",
@@ -1048,11 +1241,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 7,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-CV-TX",
+   "tags": [
+    "HeartMate II",
+    "左心室輔助器"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-ASSESS"
   },
   {
    "id": "106-2-CARDPED-038",
@@ -1076,11 +1274,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 7,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-TX",
+   "tags": [
+    "全肺切除",
+    "哈氣咳嗽"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-039",
@@ -1104,11 +1307,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 7,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-RESP-FOUND",
+   "tags": [
+    "放射性肺炎",
+    "肺順應性",
+    "呼吸功"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-RESP-TX"
   },
   {
    "id": "106-2-CARDPED-040",
@@ -1132,11 +1341,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-EXPHYS",
+   "tags": [
+    "兒童運動反應",
+    "攝氧量"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-041",
@@ -1160,11 +1374,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-SYSTEM",
+   "tags": [
+    "早期介入",
+    "三段預防"
+   ],
+   "topic_confidence": 0.5,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-HP"
   },
   {
    "id": "106-2-CARDPED-042",
@@ -1188,11 +1407,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "INTRO-EBP",
+   "tags": [
+    "臨床決策",
+    "臨床問題"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-043",
@@ -1216,11 +1440,15 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-FOUND",
+   "tags": [
+    "以家庭為中心"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-SYSTEM"
   },
   {
    "id": "106-2-CARDPED-044",
@@ -1244,11 +1472,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-FOUND",
+   "tags": [
+    "訊息處理理論",
+    "記憶"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "NEURO-FOUND"
   },
   {
    "id": "106-2-CARDPED-045",
@@ -1272,11 +1505,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-FOUND",
+   "tags": [
+    "Bandura",
+    "社會學習理論",
+    "觀察學習"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "NEURO-FOUND"
   },
   {
    "id": "106-2-CARDPED-046",
@@ -1300,11 +1539,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "引導制約",
+    "行為改變"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-FOUND"
   },
   {
    "id": "106-2-CARDPED-047",
@@ -1328,11 +1572,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-DEV",
+   "tags": [
+    "精細動作發展",
+    "抓握反射"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-FOUND"
   },
   {
    "id": "106-2-CARDPED-048",
@@ -1357,11 +1606,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-DEV",
+   "tags": [
+    "保護性反應",
+    "姿勢反應"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-FOUND"
   },
   {
    "id": "106-2-CARDPED-049",
@@ -1385,11 +1639,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-DEV",
+   "tags": [
+    "校正年齡",
+    "發展年齡",
+    "早產"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-NEURO"
   },
   {
    "id": "106-2-CARDPED-050",
@@ -1413,11 +1673,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-DEV",
+   "tags": [
+    "篩檢",
+    "預測率",
+    "轉介率"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "INTRO-STATS"
   },
   {
    "id": "106-2-CARDPED-051",
@@ -1441,11 +1707,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-FOUND",
+   "tags": [
+    "Maslow",
+    "需求層次"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "INTRO-PRACTICE"
   },
   {
    "id": "106-2-CARDPED-052",
@@ -1469,11 +1740,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-DEV",
+   "tags": [
+    "站立姿勢控制",
+    "擺盪策略",
+    "壓力中心"
+   ],
+   "topic_confidence": 0.5,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "NEURO-BALANCE"
   },
   {
    "id": "106-2-CARDPED-053",
@@ -1497,11 +1774,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-OTHER",
+   "tags": [
+    "兒童肺疾",
+    "氣喘",
+    "see-saw"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-RESP-FOUND"
   },
   {
    "id": "106-2-CARDPED-054",
@@ -1526,11 +1809,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-OTHER",
+   "tags": [
+    "發紺型心臟病",
+    "法洛氏四重畸型"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-055",
@@ -1554,11 +1842,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-OTHER",
+   "tags": [
+    "Legg-Calve-Perthes",
+    "股骨頭缺血性壞死"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-056",
@@ -1582,11 +1875,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-FOUND",
+   "tags": [
+    "環境因素",
+    "HOME"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-NEURO"
   },
   {
    "id": "106-2-CARDPED-057",
@@ -1610,11 +1908,15 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-SYSTEM",
+   "tags": [
+    "特殊教育法"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-058",
@@ -1638,11 +1940,15 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-SYSTEM",
+   "tags": [
+    "最小限制環境"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-059",
@@ -1666,11 +1972,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-SYSTEM",
+   "tags": [
+    "以家庭為中心",
+    "早期介入"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-FOUND"
   },
   {
    "id": "106-2-CARDPED-060",
@@ -1694,11 +2005,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-FOUND",
+   "tags": [
+    "神經群選擇理論",
+    "Edelman"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-NEURO"
   },
   {
    "id": "106-2-CARDPED-061",
@@ -1722,11 +2038,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "NICU",
+    "早產兒",
+    "以家庭為中心"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-FOUND"
   },
   {
    "id": "106-2-CARDPED-062",
@@ -1750,11 +2072,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "腦室內出血",
+    "新生兒"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-DEV"
   },
   {
    "id": "106-2-CARDPED-063",
@@ -1778,11 +2105,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "NICU環境",
+    "擺位"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-FOUND"
   },
   {
    "id": "106-2-CARDPED-064",
@@ -1806,11 +2138,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "高危險新生兒",
+    "家長衛教"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-SYSTEM"
   },
   {
    "id": "106-2-CARDPED-065",
@@ -1834,11 +2171,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "智能障礙",
+    "觸覺防禦"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-DEV"
   },
   {
    "id": "106-2-CARDPED-066",
@@ -1862,11 +2204,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "發展遲緩",
+    "治療原則"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-FOUND"
   },
   {
    "id": "106-2-CARDPED-067",
@@ -1890,11 +2237,15 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "唐氏症"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-068",
@@ -1918,11 +2269,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-DEV",
+   "tags": [
+    "PEDI",
+    "適應性行為"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-NEURO"
   },
   {
    "id": "106-2-CARDPED-069",
@@ -1946,11 +2302,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "GMFCS-E&R",
+    "腦性麻痺"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-070",
@@ -1974,11 +2335,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "雙邊痙攣型",
+    "膝關節攣縮"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-071",
@@ -2002,11 +2368,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "腦性麻痺",
+    "參與",
+    "ICF-CY"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-FOUND"
   },
   {
    "id": "106-2-CARDPED-072",
@@ -2030,11 +2402,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "CIMT",
+    "半邊痙攣型"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-073",
@@ -2058,11 +2435,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "發展性協調障礙",
+    "由下而上取向"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-FOUND"
   },
   {
    "id": "106-2-CARDPED-074",
@@ -2086,11 +2468,15 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "自閉症"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-075",
@@ -2114,11 +2500,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "自閉症",
+    "療育原則"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "106-2-CARDPED-076",
@@ -2142,11 +2533,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-NEURO",
+   "tags": [
+    "發展性協調障礙",
+    "共病"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-OTHER"
   },
   {
    "id": "106-2-CARDPED-077",
@@ -2170,11 +2566,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-OTHER",
+   "tags": [
+    "新生兒臂神經叢損傷",
+    "Erb's palsy"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "NEURO-PNI"
   },
   {
    "id": "106-2-CARDPED-078",
@@ -2198,11 +2599,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-OTHER",
+   "tags": [
+    "兒童頭部外傷",
+    "注意力"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-PED-NEURO"
   },
   {
    "id": "106-2-CARDPED-079",
@@ -2226,11 +2632,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-OTHER",
+   "tags": [
+    "產傷臂神經叢損傷",
+    "肌腱轉移"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "NEURO-PNI"
   },
   {
    "id": "106-2-CARDPED-080",
@@ -2254,11 +2665,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 14,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-PED-OTHER",
+   "tags": [
+    "裘馨氏",
+    "離心收縮"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "NEURO-PNI"
   }
  ]
 }

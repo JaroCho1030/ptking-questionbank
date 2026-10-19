@@ -40,13 +40,18 @@
    "group_id": null,
    "group_pos": null,
    "page": 1,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
+   "topic": "ORTHO-THORACIC",
+   "tags": [
+    "scoliometer",
+    "轉介標準"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
    "review_flags": [
     "附圖：題幹提到圖表但本題範圍內找不到圖形"
-   ]
+   ],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-EXAM"
   },
   {
    "id": "115-2-ORTHO-002",
@@ -70,11 +75,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 1,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-TMJ-CERV",
+   "tags": [
+    "斜頸",
+    "Klippel-Feil",
+    "頭前伸"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-POSTURE"
   },
   {
    "id": "115-2-ORTHO-003",
@@ -98,11 +109,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 1,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-TMJ-CERV",
+   "tags": [
+    "深層頸屈肌",
+    "上頸椎"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-004",
@@ -126,11 +142,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 1,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "動作偏好",
+    "McKenzie"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-005",
@@ -154,11 +175,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-POSTURE",
+   "tags": [
+    "動力鏈",
+    "足弓扁平",
+    "膝外翻"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-ANKLE-FOOT"
   },
   {
    "id": "115-2-ORTHO-006",
@@ -182,11 +209,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-THORACIC",
+   "tags": [
+    "脊柱側彎",
+    "旋轉角度呼吸"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-007",
@@ -210,11 +242,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "內部夾擠",
+    "前向不穩定",
+    "late-cocking"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-008",
@@ -238,11 +276,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "肱二頭肌長頭",
+    "Popeye",
+    "Speed's test"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-009",
@@ -266,11 +310,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-ELBOW",
+   "tags": [
+    "肘外側肌腱病變",
+    "離心訓練"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-010",
@@ -294,11 +343,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 2,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-HIP",
+   "tags": [
+    "Sutlive",
+    "臨床預測規則"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-011",
@@ -322,11 +376,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 3,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-POSTURE",
+   "tags": [
+    "長短腳",
+    "皮尺測量"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-HIP"
   },
   {
    "id": "115-2-ORTHO-012",
@@ -350,11 +409,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 3,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-ANKLE-FOOT",
+   "tags": [
+    "外踝扭傷",
+    "APTA 2021",
+    "次級預防"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-SPORTS"
   },
   {
    "id": "115-2-ORTHO-013",
@@ -378,11 +443,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 3,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-WOMEN",
+   "tags": [
+    "腹直肌分離",
+    "產後"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-014",
@@ -406,11 +476,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 3,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-WOMEN",
+   "tags": [
+    "更年期",
+    "骨質流失",
+    "會陰體"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-015",
@@ -434,11 +510,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 3,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SPORTS",
+   "tags": [
+    "肌肉抽筋",
+    "馬拉松",
+    "現場處置"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-016",
@@ -462,11 +544,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 4,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-AMPUT",
+   "tags": [
+    "承筒",
+    "膝穩定",
+    "步態訓練"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "TECH-PROSTH"
   },
   {
    "id": "115-2-ORTHO-017",
@@ -490,11 +578,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 4,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-TMJ-CERV",
+   "tags": [
+    "頸部肌耐力",
+    "頭前伸"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-POSTURE"
   },
   {
    "id": "115-2-ORTHO-018",
@@ -518,11 +611,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 4,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-TMJ-CERV",
+   "tags": [
+    "胸廓出口症候群",
+    "前斜角肌"
+   ],
+   "topic_confidence": 0.5,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-SHOULDER"
   },
   {
    "id": "115-2-ORTHO-019",
@@ -546,11 +644,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 4,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-TMJ-CERV",
+   "tags": [
+    "C6神經根",
+    "Spurling",
+    "ULTT"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-020",
@@ -574,11 +678,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 4,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-THORACIC",
+   "tags": [
+    "上胸椎前凸",
+    "運動處方"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-021",
@@ -602,11 +711,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 4,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-TMJ-CERV",
+   "tags": [
+    "顱頸屈曲測試",
+    "頭長肌"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-022",
@@ -630,11 +744,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 5,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-TMJ-CERV",
+   "tags": [
+    "頸痛分類",
+    "CPG 2017",
+    "終末感覺"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-023",
@@ -658,11 +778,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 5,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-TMJ-CERV",
+   "tags": [
+    "顳頷關節放鬆",
+    "擺位"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-024",
@@ -686,11 +811,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 5,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-TMJ-CERV",
+   "tags": [
+    "頸脊髓病變",
+    "上運動神經元"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-025",
@@ -714,11 +844,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 5,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "肌肉能量技巧",
+    "髂骨後旋"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-026",
@@ -742,11 +877,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 5,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "薦骨扭轉",
+    "肌肉能量技巧",
+    "梨狀肌"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-027",
@@ -770,11 +911,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "深縱向懸帶",
+    "薦結節韌帶"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "BASIC-KIN-SPINE"
   },
   {
    "id": "115-2-ORTHO-028",
@@ -798,11 +944,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "薦髂關節激發測試",
+    "Laslett"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-029",
@@ -826,11 +977,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "L3神經根",
+    "膝跳反射"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-030",
@@ -854,11 +1010,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "核心穩定",
+    "腰椎中立位"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-031",
@@ -882,11 +1043,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 6,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "壓力生物回饋",
+    "腹橫肌",
+    "abdominal drawing-in"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "TECH-ESTIM"
   },
   {
    "id": "115-2-ORTHO-032",
@@ -910,11 +1077,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 7,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "側移矯正",
+    "椎間盤突出"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-033",
@@ -938,11 +1110,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 7,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "腰椎狹窄",
+    "屈曲偏向",
+    "有氧運動"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-034",
@@ -966,11 +1144,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-LUMBAR",
+   "tags": [
+    "薦髂關節評估",
+    "無名骨旋轉",
+    "薦骨屈曲"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-035",
@@ -994,11 +1178,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-THORACIC",
+   "tags": [
+    "結構性側彎",
+    "前彎測試"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-036",
@@ -1022,11 +1211,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 8,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "夾擠症候群",
+    "旋轉肌袖撕裂",
+    "Neer test"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-EXAM"
   },
   {
    "id": "115-2-ORTHO-037",
@@ -1050,11 +1245,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "肩峰下減壓術",
+    "術後復健"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-038",
@@ -1078,11 +1278,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "肩關節僵硬",
+    "沾黏性關節囊炎"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-039",
@@ -1106,11 +1311,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "肩關節不穩定",
+    "運動訓練"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-040",
@@ -1134,11 +1344,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "掃描檢查",
+    "overpressure"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-EXAM"
   },
   {
    "id": "115-2-ORTHO-041",
@@ -1162,11 +1377,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-EXAM",
+   "tags": [
+    "內臟轉移痛",
+    "膽囊"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-042",
@@ -1190,11 +1410,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 9,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "肩關節不穩定",
+    "sulcus sign"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-043",
@@ -1218,11 +1443,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "後下盂唇撕裂",
+    "Kim test"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-044",
@@ -1246,11 +1476,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "肱二頭肌肌腱固定術",
+    "術後限制"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-045",
@@ -1274,11 +1509,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SHOULDER",
+   "tags": [
+    "肩鎖關節",
+    "肩頂撞擊"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-046",
@@ -1302,11 +1542,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-WRIST-HAND",
+   "tags": [
+    "正中神經",
+    "腕隧道",
+    "感覺分布"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-ELBOW"
   },
   {
    "id": "115-2-ORTHO-047",
@@ -1330,11 +1576,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 10,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-ELBOW",
+   "tags": [
+    "carrying angle",
+    "肘外翻"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-048",
@@ -1358,11 +1609,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-ELBOW",
+   "tags": [
+    "valgus extension overload",
+    "投擲傷害"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-049",
@@ -1386,11 +1642,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-WRIST-HAND",
+   "tags": [
+    "狄魁文氏症",
+    "交叉症候群"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-050",
@@ -1414,11 +1675,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-WRIST-HAND",
+   "tags": [
+    "舟月韌帶",
+    "腕不穩"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-051",
@@ -1442,11 +1708,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-WRIST-HAND",
+   "tags": [
+    "尺神經深支",
+    "Froment",
+    "骨間肌萎縮"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-ELBOW"
   },
   {
    "id": "115-2-ORTHO-052",
@@ -1470,11 +1742,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 11,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-WRIST-HAND",
+   "tags": [
+    "拇指尺側副韌帶",
+    "滑雪手指"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-053",
@@ -1498,11 +1775,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-WRIST-HAND",
+   "tags": [
+    "屈肌腱分區",
+    "Zone III"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-054",
@@ -1526,11 +1808,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-HIP",
+   "tags": [
+    "髖部骨折",
+    "半髖關節置換"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-055",
@@ -1554,11 +1841,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-HIP",
+   "tags": [
+    "髖關節退化性關節炎",
+    "APTA 2025 CPG"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-056",
@@ -1582,11 +1874,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-HIP",
+   "tags": [
+    "Thomas test",
+    "Patrick test",
+    "髖前側攣縮"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-EXAM"
   },
   {
    "id": "115-2-ORTHO-057",
@@ -1610,11 +1908,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-HIP",
+   "tags": [
+    "Ober test",
+    "闊筋膜張肌"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-058",
@@ -1638,11 +1941,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 12,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-KNEE",
+   "tags": [
+    "終末感覺",
+    "膝被動活動"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "TECH-ROM"
   },
   {
    "id": "115-2-ORTHO-059",
@@ -1666,11 +1974,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-KNEE",
+   "tags": [
+    "半月板",
+    "McMurray",
+    "Antunes"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-060",
@@ -1694,11 +2008,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-KNEE",
+   "tags": [
+    "髕骨脫臼",
+    "apprehension test"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-061",
@@ -1722,11 +2041,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-KNEE",
+   "tags": [
+    "髕股疼痛",
+    "Clarke's sign",
+    "Noble compression"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-062",
@@ -1750,11 +2075,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-KNEE",
+   "tags": [
+    "全膝置換",
+    "術後復健"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-063",
@@ -1778,11 +2108,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 13,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-KNEE",
+   "tags": [
+    "股二頭肌拉傷",
+    "選擇性組織張力測試"
+   ],
+   "topic_confidence": 0.5,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-HIP"
   },
   {
    "id": "115-2-ORTHO-064",
@@ -1806,11 +2141,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 14,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-ANKLE-FOOT",
+   "tags": [
+    "高位踝扭傷",
+    "Squeeze test"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-065",
@@ -1834,11 +2174,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 14,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-ANKLE-FOOT",
+   "tags": [
+    "Foot Posture Index",
+    "扁平足"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-066",
@@ -1862,11 +2207,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 14,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-ANKLE-FOOT",
+   "tags": [
+    "阿基里斯腱修復",
+    "術後承重"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-067",
@@ -1890,11 +2240,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 14,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-GENERAL",
+   "tags": [
+    "類風濕性關節炎",
+    "爪狀趾"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-ANKLE-FOOT"
   },
   {
    "id": "115-2-ORTHO-068",
@@ -1918,11 +2273,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 14,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-ANKLE-FOOT",
+   "tags": [
+    "踝扭傷",
+    "前下脛腓韌帶",
+    "功能性不穩定"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-069",
@@ -1946,11 +2307,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 15,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-ANKLE-FOOT",
+   "tags": [
+    "內側縱弓",
+    "蹠側跟舟韌帶",
+    "脛後肌"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "BASIC-KIN-LE"
   },
   {
    "id": "115-2-ORTHO-070",
@@ -1974,11 +2341,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 15,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "CARDPED-HP",
+   "tags": [
+    "WCPT",
+    "健康促進",
+    "疾病預防"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "INTRO-PRACTICE"
   },
   {
    "id": "115-2-ORTHO-071",
@@ -2002,11 +2375,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 15,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-EXAM",
+   "tags": [
+    "心絞痛",
+    "內臟轉移痛",
+    "紅旗"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-ASSESS"
   },
   {
    "id": "115-2-ORTHO-072",
@@ -2030,11 +2409,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 15,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-EXAM",
+   "tags": [
+    "紅旗徵兆",
+    "類固醇",
+    "壓迫性骨折"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-073",
@@ -2058,11 +2443,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 15,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-WOMEN",
+   "tags": [
+    "骨質疏鬆",
+    "運動處方",
+    "T-score"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-074",
@@ -2086,11 +2477,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 15,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-WOMEN",
+   "tags": [
+    "懷孕",
+    "仰臥低血壓"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-075",
@@ -2114,11 +2510,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 16,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SPORTS",
+   "tags": [
+    "中暑",
+    "熱傷害",
+    "急救"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-076",
@@ -2143,11 +2545,17 @@
    "group_id": null,
    "group_pos": null,
    "page": 16,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "NEURO-ASSESS",
+   "tags": [
+    "Glasgow Coma Scale",
+    "腦震盪",
+    "運動場急救"
+   ],
+   "topic_confidence": 0.6,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "ORTHO-SPORTS"
   },
   {
    "id": "115-2-ORTHO-077",
@@ -2171,11 +2579,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 16,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SKIN-LYMPH",
+   "tags": [
+    "燒燙傷",
+    "出院皮膚照護"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-078",
@@ -2199,11 +2612,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 16,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-SKIN-LYMPH",
+   "tags": [
+    "減腫脹淋巴治療",
+    "壓力繃帶"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-079",
@@ -2227,11 +2645,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 16,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-AMPUT",
+   "tags": [
+    "幻肢痛",
+    "鏡像治療"
+   ],
+   "topic_confidence": 0.95,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": null
   },
   {
    "id": "115-2-ORTHO-080",
@@ -2255,11 +2678,16 @@
    "group_id": null,
    "group_pos": null,
    "page": 17,
-   "topic": null,
-   "tags": [],
-   "topic_confidence": null,
-   "topic_source": null,
-   "review_flags": []
+   "topic": "ORTHO-AMPUT",
+   "tags": [
+    "膝上義肢",
+    "上下樓梯訓練"
+   ],
+   "topic_confidence": 0.8,
+   "topic_source": "llm",
+   "review_flags": [],
+   "secondary_topics": [],
+   "alt_topic": "TECH-PROSTH"
   }
  ]
 }
