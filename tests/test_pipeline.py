@@ -560,6 +560,9 @@ def test_taxonomy_topics_have_definitions():
 def test_taxonomy_doc_in_sync():
     # docs/TAXONOMY.md 由 taxonomy.yaml 產生；改了 yaml 要重跑 python -m pipeline.taxonomy_doc
     from pipeline.taxonomy_doc import DOC_PATH, load, render
+    if not DOC_PATH.exists():
+        # docs/ 不在 questionbank repo 裡（GitHub Actions 的 checkout 沒有），只在本機檢查
+        pytest.skip("docs/TAXONOMY.md 不在這個 checkout")
     text = render(load())
     assert DOC_PATH.read_text("utf-8") == text
     assert "NEURO-ASSESS" in text and "**不含**" in text and "**關鍵字**" in text
