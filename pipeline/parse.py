@@ -501,7 +501,7 @@ def include_option_labels(fig: tuple[float, float, float, float], clip: tuple[fl
                           gap: float = 1.0) -> tuple[float, float, float, float]:
     """選項是圖片時，選項代號「A.」要整個框進來（純函式，測試用）。
 
-    2026-10-19 Jaro 抽查：9 題的「A.」左半被切掉（留白 8pt 只框到右半），114-2-ORTHO-028 的「B.」
+    2026-10-19 人工抽查：9 題的「A.」左半被切掉（留白 8pt 只框到右半），114-2-ORTHO-028 的「B.」
     印在頁底、圖在下一頁，被 trim_clip 當成圖下方的選項文字收掉。
     - 圖旁：以選項代號開頭、垂直方向一半以上落在圖範圍內、離裁切框 ≤ reach → 左右放寬。
     - 圖上下：只有代號沒有文字的行（「B.」）、離裁切框 ≤ reach → 上下放寬。

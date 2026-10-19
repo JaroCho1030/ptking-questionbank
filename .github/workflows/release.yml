@@ -23,8 +23,19 @@ jobs:
           VERSION="${BANK_VERSION#v}"
           python -m pipeline.build --version "$VERSION" \
             --release-base-url "https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}"
+      - name: release notes
+        # 這時 latest 還是上一版；抓不到（第一版）就當第一版
+        run: |
+          if curl -fsSL -o prev_manifest.json "https://github.com/${{ github.repository }}/releases/latest/download/manifest.json"; then
+            python -m pipeline.release_notes --previous-manifest prev_manifest.json
+          else
+            python -m pipeline.release_notes
+          fi
+          echo "BANK_VERSION=${GITHUB_REF_NAME#v}" >> "$GITHUB_ENV"
       - uses: softprops/action-gh-release@v2
         with:
+          name: 物理治療師國考題庫 ${{ env.BANK_VERSION }}
+          body_path: dist/RELEASE_NOTES.md
           files: |
             dist/questions.sqlite
             dist/manifest.json

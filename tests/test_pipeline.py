@@ -667,3 +667,18 @@ def test_apply_rejudge():
 def test_rejudge_prompt_has_rule():
     from pipeline.tag import REJUDGE_PROMPT
     assert "本科只有籠統或勉強相關的主題" in REJUDGE_PROMPT and "NEURO-VESTIB" in REJUDGE_PROMPT
+
+
+def test_release_notes_render():
+    from pipeline.release_notes import render
+    manifest = {"bank_version": "2026.10.19-1", "schema_version": 1, "sqlite": {"sha256": "abc"},
+                "exams": [{"id": "105-1-NEURO", "roc_year": 105, "round": 1, "question_count": 80},
+                          {"id": "116-1-NEURO", "roc_year": 116, "round": 1, "question_count": 80}]}
+    stats = {"question_count": 160, "paper_count": 2, "sessions": [(105, 1), (116, 1)],
+             "subjects": [("神經疾病物理治療學", 160)], "corrected": 3, "voided": 1, "figures": 2, "topics": 100}
+    first = render(manifest, stats)
+    assert "第一版發布" in first and "105 年第一次至 116 年第一次" in first and "160 題" in first
+    assert "| 神經疾病物理治療學 | 160 |" in first and "其中 1 題一律給分" in first
+    prev = {"bank_version": "2026.10.19-1", "question_count": 80, "exams": manifest["exams"][:1]}
+    second = render(manifest, stats, prev)
+    assert "新增 116 年第一次試題：1 科、80 題" in second and "第一版" not in second

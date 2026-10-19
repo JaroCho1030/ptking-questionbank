@@ -31,6 +31,7 @@
 git tag v2026.10.16-1 && git push --tags
 ```
 GitHub Actions 會跑測試、validate --strict、build，然後把 `questions.sqlite` 與 `manifest.json` 掛到 Release。
+Release 說明由 `python -m pipeline.release_notes` 從題庫自動產生（對外、給考生看；會和上一版 manifest 比對列出新增試卷），不用手寫。
 App 固定讀 `https://github.com/<owner>/ptking-questionbank/releases/latest/download/manifest.json`。
 
 ## 答案更正
