@@ -9,7 +9,8 @@
     - 答案：accepted_answers 非空或 is_voided；字母只在 A-D
     - 同一科內重複題幹（通常代表解析把兩題黏在一起）
     - 題目的 review_flags（缺選項、答案需確認、附圖問題）
-    - 主題：topic 必須在 taxonomy 內；topic_confidence 低於門檻列入審核；未標記的統計
+    - 主題：topic 必須在 taxonomy 內（可跨科）；topic_confidence 低於門檻列入審核；未標記的統計
+      次要主題 secondary_topics：最多 2 個、必須在 taxonomy 內（可跨科）、不可與主要主題相同或重複
 """
 from __future__ import annotations
 
@@ -83,15 +84,25 @@ def validate_file(path: Path, data: dict, topics: dict) -> tuple[list[dict], lis
         if q.get("topic"):
             if q["topic"] not in topics:
                 reasons.append(f"topic 不在分類表：{q['topic']}")
-            elif topics[q["topic"]]["subject"] != exam["subject_code"]:
-                reasons.append(f"topic 屬於別科：{q['topic']}")
             elif (q.get("topic_confidence") or 0) < C.TAG_LOW_CONFIDENCE and q.get("topic_source") == "llm":
                 reasons.append(f"主題信心低 {q['topic_confidence']:.2f}")
+        sec = q.get("secondary_topics") or []
+        if sec and not q.get("topic"):
+            reasons.append("有次要主題但沒有主要主題")
+        if len(sec) > 2:
+            reasons.append(f"次要主題超過 2 個：{sec}")
+        if len(set(sec)) != len(sec):
+            reasons.append(f"次要主題重複：{sec}")
+        for c in sec:
+            if c not in topics:
+                reasons.append(f"次要主題不在分類表：{c}")
+            elif c == q.get("topic"):
+                reasons.append(f"次要主題與主要主題相同：{c}")
         if reasons:
             rows.append({
                 "id": q["id"], "reasons": "；".join(dict.fromkeys(reasons)),
                 "stem": q["stem"][:60], "answer": "/".join(q["accepted_answers"]) or ("送分" if q["is_voided"] else ""),
-                "topic": q.get("topic") or "", "note": q.get("correction_note") or "",
+                "topic": q.get("topic") or "", "alt_topic": q.get("alt_topic") or "", "note": q.get("correction_note") or "",
                 "source_q": exam.get("source_q") or "",
             })
     return rows, errors
@@ -121,7 +132,7 @@ def main(argv=None):
     C.REVIEW_DIR.mkdir(parents=True, exist_ok=True)
     out = C.REVIEW_DIR / "review_queue.csv"
     with out.open("w", newline="", encoding="utf-8-sig") as f:
-        w = csv.DictWriter(f, fieldnames=["id", "reasons", "stem", "answer", "topic", "note", "source_q"])
+        w = csv.DictWriter(f, fieldnames=["id", "reasons", "stem", "answer", "topic", "alt_topic", "note", "source_q"])
         w.writeheader()
         w.writerows(all_rows)
 

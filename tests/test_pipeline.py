@@ -351,3 +351,225 @@ def test_clean_text_latin_apostrophe():
     assert clean_text("克隆氏病（Crohn’s Disease）") == "克隆氏病（Crohn's Disease）"
     assert clean_text("Colles’ fracture") == "Colles' fracture"
     assert clean_text("「中文’」") == "「中文’」"
+
+
+def test_tag_prompt_includes_group_context():
+    from pipeline.tag import format_batch
+    lead = {"id": "x-1", "stem": "王先生58歲，左腳突然無力", "options": {k: "a" for k in "ABCD"},
+            "accepted_answers": ["A"], "is_voided": False, "group_id": "x-1", "group_pos": 1}
+    follow = dict(lead, id="x-2", stem="承上題，最可能的診斷？", group_pos=2, figure="figures/x-2.webp")
+    text = format_batch([{"code": "T-1", "name": "腦中風"}], [follow], {"x-1": lead, "x-2": follow})
+    assert "題組前題 x-1" in text and "王先生58歲" in text and "附圖" in text
+
+
+# ---- 複數主題（ARCHITECTURE 3.8）----
+
+def _neuro_data():
+    from pipeline.parse import assemble
+    header, qs, warnings = parse_pages(load_pages("108-1-NEURO.Q.txt"))
+    amap, _ = build_answer_map((FIX / "108-1-NEURO.S.txt").read_text("utf-8"), (FIX / "108-1-NEURO.M.txt").read_text("utf-8"))
+    return assemble(header, qs, amap, warnings, 108, 1, "NEURO", {"class_code": "311", "s": "44"}, "108030")
+
+
+def _setup_dirs(tmp_path, monkeypatch, data):
+    import json
+    json_dir, dist_dir, review_dir = tmp_path / "json", tmp_path / "dist", tmp_path / "review"
+    (json_dir / "108-1").mkdir(parents=True)
+    (json_dir / "108-1" / "NEURO.json").write_text(json.dumps(data, ensure_ascii=False), "utf-8")
+    monkeypatch.setattr(C, "JSON_DIR", json_dir)
+    monkeypatch.setattr(C, "DIST_DIR", dist_dir)
+    monkeypatch.setattr(C, "REVIEW_DIR", review_dir)
+    monkeypatch.setattr(C, "DATA_DIR", tmp_path)
+    return dist_dir, review_dir
+
+
+def test_clean_secondary_topics():
+    from pipeline.tag import clean_secondary
+    valid = {"NEURO-STROKE", "NEURO-ASSESS", "BASIC-KIN-GAIT", "BASIC-ANA-NEU"}
+    r = {"secondary_topics": ["NEURO-STROKE", "BASIC-KIN-GAIT", "BASIC-KIN-GAIT", "NOPE", "BASIC-ANA-NEU"]}
+    # 與主要相同、重複、不在分類表的都去掉；最多 2 個；可跨科
+    assert clean_secondary(r, "NEURO-STROKE", valid) == ["BASIC-KIN-GAIT", "BASIC-ANA-NEU"]
+    assert clean_secondary({}, "NEURO-STROKE", valid) == []
+
+
+def test_tag_prompt_and_tool_allow_cross_subject_secondary():
+    from pipeline import tag as T
+    tax = T.load_taxonomy()
+    topics = T.subject_topics(tax, "NEURO")
+    other = T.other_subject_topics(tax, "NEURO")
+    assert other and all(not t["code"].startswith("NEURO-") for t in other)
+    tool = T.build_tool([t["code"] for t in topics], T.all_topic_codes(tax))
+    props = tool["input_schema"]["properties"]["results"]["items"]["properties"]
+    assert "NEURO-BALANCE" in props["topic"]["enum"]
+    assert "BASIC-KIN-GAIT" in props["topic"]["enum"]              # 本科放不下時主要主題可跨科（3.8）
+    assert "BASIC-KIN-GAIT" in props["secondary_topics"]["items"]["enum"]  # 次要主題不限科
+    assert props["secondary_topics"]["maxItems"] == 2
+    assert "secondary_topics" not in tool["input_schema"]["properties"]["results"]["items"]["required"]
+    q = {"id": "x-1", "stem": "題幹", "options": {k: "o" for k in C.OPTION_LETTERS},
+         "accepted_answers": ["A"], "is_voided": False}
+    text = T.format_batch(topics, [q], {"x-1": q}, other)
+    assert "BASIC-KIN-GAIT" in text and "本科放不下時也可當主要主題" in text
+    assert "本科分類表裡找不到能放的主題時" in T.SYSTEM_PROMPT and "不另掛本科次要主題" in T.SYSTEM_PROMPT
+
+
+def test_tag_prompt_secondary_rules():
+    # ARCHITECTURE 3.8（2026-10-18 問答）：低信心不拿次要主題當備案；看考點、情境不算；純支配加解剖
+    from pipeline.tag import SYSTEM_PROMPT
+    assert "不要用次要主題當備案" in SYSTEM_PROMPT and "alt_topic" in SYSTEM_PROMPT and "0.3：拿不準" in SYSTEM_PROMPT
+    assert "信心低於 0.6 且另有合理候選時才加" not in SYSTEM_PROMPT
+    assert "情境不算" in SYSTEM_PROMPT and "神經支配範圍" in SYSTEM_PROMPT
+
+
+def test_validate_secondary_topics(tmp_path, monkeypatch):
+    from pipeline import validate as V
+    data = _neuro_data()
+    qs = data["questions"]
+    qs[0].update(topic="NEURO-STROKE", secondary_topics=["BASIC-KIN-GAIT"])               # 合法（跨科）
+    qs[1].update(topic="NEURO-STROKE", secondary_topics=["NEURO-NOPE"])                    # 不在分類表
+    qs[2].update(topic="NEURO-STROKE", secondary_topics=["NEURO-STROKE"])                  # 與主要相同
+    qs[3].update(topic="NEURO-STROKE", secondary_topics=["BASIC-KIN-GAIT", "BASIC-KIN-GAIT"])  # 重複
+    qs[4].update(topic=None, secondary_topics=["BASIC-KIN-GAIT"])                          # 沒有主要
+    _, review_dir = _setup_dirs(tmp_path, monkeypatch, data)
+    V.main([])
+    text = (review_dir / "review_queue.csv").read_text("utf-8-sig")
+    assert text.count("次要主題不在分類表") == 1
+    assert text.count("次要主題與主要主題相同") == 1
+    assert text.count("次要主題重複") == 1
+    assert text.count("有次要主題但沒有主要主題") == 1
+    import csv, io
+    reasons = {r["id"]: r["reasons"] for r in csv.DictReader(io.StringIO(text))}
+    assert "次要主題" not in reasons.get(qs[0]["id"], "")  # 合法的跨科次要主題不會被擋
+
+
+def test_build_question_topics(tmp_path, monkeypatch):
+    from pipeline import build as B
+    data = _neuro_data()
+    qs = data["questions"]
+    qs[0].update(topic="NEURO-STROKE", secondary_topics=["BASIC-KIN-GAIT", "BASIC-ANA-NEU", "NEURO-FOUND"])  # 第 3 個超過上限
+    qs[1].update(topic="NEURO-FOUND", secondary_topics=["NEURO-FOUND", "NOPE"])  # 與主要相同、不存在 → 都不進表
+    qs[2].update(topic="NEURO-ASSESS", secondary_topics=[])
+    dist_dir, _ = _setup_dirs(tmp_path, monkeypatch, data)
+    B.build("2026.10.18-1", "https://example.com/dl")
+    con = sqlite3.connect(str(dist_dir / "questions.sqlite"))
+    rows = lambda qid: con.execute("SELECT topic_code, rank FROM question_topics WHERE question_id=? ORDER BY rank", (qid,)).fetchall()
+    assert rows(qs[0]["id"]) == [("NEURO-STROKE", 0), ("BASIC-KIN-GAIT", 1), ("BASIC-ANA-NEU", 2)]
+    assert rows(qs[1]["id"]) == [("NEURO-FOUND", 0)]
+    assert rows(qs[2]["id"]) == [("NEURO-ASSESS", 0)]
+    # 篩選用：某主題（含次要）會找到哪些題
+    ids = {r[0] for r in con.execute("SELECT question_id FROM question_topics WHERE topic_code='BASIC-KIN-GAIT'")}
+    assert ids == {qs[0]["id"]}
+    # 主要主題欄位維持不變
+    assert con.execute("SELECT topic_code FROM questions WHERE id=?", (qs[0]["id"],)).fetchone()[0] == "NEURO-STROKE"
+
+
+def test_overrides_secondary_column(tmp_path, monkeypatch):
+    import json
+    from pipeline import tag as T
+    data = _neuro_data()
+    data["questions"][0].update(topic="NEURO-STROKE", secondary_topics=["BASIC-KIN-GAIT"], topic_source="llm")
+    data["questions"][1].update(topic="NEURO-STROKE", secondary_topics=["BASIC-KIN-GAIT"], topic_source="llm")
+    data["questions"][2].update(topic="NEURO-STROKE", secondary_topics=["BASIC-KIN-GAIT"], topic_source="llm")
+    _, review_dir = _setup_dirs(tmp_path, monkeypatch, data)
+    review_dir.mkdir(parents=True, exist_ok=True)
+    a, b, c = (data["questions"][i]["id"] for i in range(3))
+    (review_dir / "topic_overrides.csv").write_text(
+        "id,topic,tags,secondary\n"
+        f"{a},NEURO-FOUND,,BASIC-ANA-NEU|NEURO-FOUND\n"   # 換次要；與主要相同的會被去掉
+        f"{b},NEURO-FOUND,,-\n"                            # 清空次要
+        f"{c},NEURO-FOUND,,\n", "utf-8")                   # 留空 = 不動
+    T.apply_overrides()
+    out = json.loads((C.JSON_DIR / "108-1" / "NEURO.json").read_text("utf-8"))["questions"]
+    assert out[0]["secondary_topics"] == ["BASIC-ANA-NEU"] and out[0]["topic_source"] == "human"
+    assert out[1]["secondary_topics"] == []
+    assert out[2]["secondary_topics"] == ["BASIC-KIN-GAIT"]
+
+
+def test_remap_updates_secondary(tmp_path, monkeypatch):
+    import json
+    from pipeline import tag as T
+    data = _neuro_data()
+    data["questions"][0].update(topic="NEURO-STROKE", secondary_topics=["BASIC-KIN-GAIT"])
+    _setup_dirs(tmp_path, monkeypatch, data)
+    T.remap("BASIC-KIN-GAIT=BASIC-KIN-GAIT2")
+    out = json.loads((C.JSON_DIR / "108-1" / "NEURO.json").read_text("utf-8"))["questions"]
+    assert out[0]["secondary_topics"] == ["BASIC-KIN-GAIT2"]
+
+
+# ---- 子代理分批（ARCHITECTURE 6，2026-10-19）----
+
+def test_export_then_import_results(tmp_path, monkeypatch):
+    import json
+    from types import SimpleNamespace
+    from pipeline import tag as T
+    data = _neuro_data()
+    data["questions"][1].update(topic="NEURO-FOUND", topic_source="human")   # 人工覆寫的不匯出、不覆蓋
+    _setup_dirs(tmp_path, monkeypatch, data)
+    batches, results = tmp_path / "batches", tmp_path / "results"
+    T.export_batches(SimpleNamespace(only="108-1/NEURO", subject=None, limit=4, force=True), batches)
+    manifest = json.loads((batches / "manifest.json").read_text("utf-8"))
+    ids = manifest["108-1_NEURO"]["ids"]
+    assert len(ids) == 4 and data["questions"][1]["id"] not in ids
+    md = (batches / "108-1_NEURO.md").read_text("utf-8")
+    assert "不要用次要主題當備案" in md and '"batch": "108-1_NEURO"' in md and ids[0] in md
+
+    results.mkdir()
+    rows = [
+        {"id": ids[0], "topic": "NEURO-STROKE", "confidence": 0.9, "tags": ["a", " ", "b"], "secondary_topics": ["BASIC-KIN-GAIT", "NEURO-STROKE"],
+         "alt_topic": "NEURO-ASSESS"},
+        {"id": ids[1], "topic": "INTRO-SAFETY", "confidence": 0.8, "tags": []},     # 跨科主要主題 → 可以寫入
+        {"id": ids[2], "topic": "NEURO-FOUND", "confidence": 1.7, "tags": [], "alt_topic": "NOPE"},  # 信心夾到 1；alt 不在分類表 → 丟掉
+        {"id": data["questions"][1]["id"], "topic": "NEURO-STROKE", "confidence": 0.9, "tags": []},  # 人工題 → 不動
+    ]                                                                                 # ids[3] 缺 → 列出
+    (results / "108-1_NEURO.json").write_text(json.dumps({"batch": "108-1_NEURO", "results": rows}), "utf-8")
+    T.import_results(results, batches)
+    out = {q["id"]: q for q in json.loads((C.JSON_DIR / "108-1" / "NEURO.json").read_text("utf-8"))["questions"]}
+    assert out[ids[0]]["topic"] == "NEURO-STROKE" and out[ids[0]]["secondary_topics"] == ["BASIC-KIN-GAIT"]
+    assert out[ids[0]]["tags"] == ["a", "b"] and out[ids[0]]["topic_source"] == "llm"
+    assert out[ids[1]]["topic"] == "INTRO-SAFETY" and out[ids[1]]["topic_source"] == "llm"
+    assert out[ids[2]]["topic_confidence"] == 1.0 and out[ids[2]]["alt_topic"] is None
+    assert out[ids[0]]["alt_topic"] == "NEURO-ASSESS"
+    assert out[data["questions"][1]["id"]]["topic"] == "NEURO-FOUND"
+    assert out[ids[3]].get("topic_source") != "llm"
+
+
+def test_parse_keeps_secondary_topics(tmp_path):
+    import json
+    from pipeline.parse import _load_existing_tags
+    p = tmp_path / "x.json"
+    p.write_text(json.dumps({"questions": [{"id": "q", "topic": "NEURO-FOUND", "secondary_topics": ["BASIC-KIN-GAIT"]}]}), "utf-8")
+    assert _load_existing_tags(p)["q"]["secondary_topics"] == ["BASIC-KIN-GAIT"]
+
+
+def test_taxonomy_topics_have_definitions():
+    # 每個主題都要有 definition；excludes 裡提到的 code 必須存在、且不能指回自己
+    from pipeline.taxonomy_doc import CODE_RE, load
+    tax = load()
+    topics = [t for s in tax["subjects"] for t in s["topics"]]
+    codes = {t["code"] for t in topics}
+    assert len(codes) == len(topics) == 100
+    for t in topics:
+        assert t.get("definition"), t["code"]
+        assert "歸" not in t["name"], t["code"]          # 歸屬說明放 excludes，不放 App 顯示的名稱
+        for e in t.get("excludes") or []:
+            assert "→" in e, (t["code"], e)
+            for c in CODE_RE.findall(e):
+                assert c in codes and c != t["code"], (t["code"], c)
+
+
+def test_taxonomy_doc_in_sync():
+    # docs/TAXONOMY.md 由 taxonomy.yaml 產生；改了 yaml 要重跑 python -m pipeline.taxonomy_doc
+    from pipeline.taxonomy_doc import DOC_PATH, load, render
+    text = render(load())
+    assert DOC_PATH.read_text("utf-8") == text
+    assert "NEURO-ASSESS" in text and "**不含**" in text and "**關鍵字**" in text
+
+
+def test_format_batch_includes_definitions():
+    from pipeline import tag as T
+    tax = T.load_taxonomy()
+    topics = T.subject_topics(tax, "NEURO")
+    q = {"id": "x-1", "stem": "題幹", "options": {k: "o" for k in C.OPTION_LETTERS},
+         "accepted_answers": ["A"], "is_voided": False}
+    text = T.format_batch(topics, [q], {"x-1": q}, T.other_subject_topics(tax, "NEURO"))
+    assert "包含：" in text and "不含：Brunnstrom 分期 → NEURO-ASSESS" in text and "關鍵字：" in text
+    assert "不含" in T.SYSTEM_PROMPT

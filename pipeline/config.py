@@ -54,9 +54,9 @@ QUESTIONS_PER_PAPER = 80
 OPTION_LETTERS = ("A", "B", "C", "D")
 
 # 標主題用的模型（可用環境變數覆蓋）
-TAG_MODEL = os.environ.get("TAG_MODEL", "claude-sonnet-4-5")
+TAG_MODEL = os.environ.get("TAG_MODEL", "claude-sonnet-5-5")  # 2026-10：Sonnet 4.5 已標 deprecated，5.5 較便宜
 TAG_BATCH_SIZE = int(os.environ.get("TAG_BATCH_SIZE", "20"))
-TAG_LOW_CONFIDENCE = 0.6
+TAG_LOW_CONFIDENCE = 0.45          # 2026-10-19：只審「可能標錯」的（< 0.45）；0.5 =「兩個主題都合理」自動接受，第二候選存 alt_topic
 
 
 def exam_dirname(roc_year: int, rnd: int) -> str:

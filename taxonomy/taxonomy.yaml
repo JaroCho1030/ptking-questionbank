@@ -1,13 +1,19 @@
-# 我要成為物治王 — 主題分類表（草稿 v0.1）
+# 我要成為物治王 — 主題分類表（v1，2026-10-18 定稿；2026-10-19 調整後共 100 個主題，並加上 definition / excludes）
+#
+# 給人看的版本：docs/TAXONOMY.md（由這個檔產生：python -m pipeline.taxonomy_doc，請勿手改 md）
 #
 # 骨架來源：考選部「專門職業及技術人員高等考試物理治療師考試命題大綱暨參考用書」
 #   115/03/13 公告（自 115 年第二次考試起實施；僅修正技術學大綱，科目名稱與 109 年版相同，
 #   因此同一套分類表可回溯套用到 105 年起的全部考題）。
 #
 # 規則：
-#   - 每題恰好一個 topic（主要主題），可另掛 0~n 個 tags（自由標籤，例如 "Berg", "ICF"）。
+#   - 每題恰好一個 topic（主要主題），另可掛 0~2 個 secondary_topics 與 0~3 個 tags（自由標籤，例如 "Berg", "ICF"）。
+#     歸類通則見 docs/ARCHITECTURE.md 3.8。
 #   - topic code 格式：{SUBJECT}-{TOPIC}，全大寫，App 與題庫以 code 為鍵，name 只用於顯示。
-#   - keywords 給 LLM 標記時參考，不會進 App。
+#   - 每個 topic 欄位：code、name（App 顯示）、group（選填，同科分組）、definition（包含什麼）、
+#     excludes（選填，容易混淆但要歸別處的內容，寫成「內容 → 該歸的 code」）、keywords。
+#   - definition、excludes、keywords 會放進 LLM 標記的提示詞，也會產生到 docs/TAXONOMY.md，不會進 App。
+#   - 改了 definition / excludes / keywords / name 之後要重跑 python -m pipeline.taxonomy_doc（測試會檢查是否同步）。
 #   - 修改 name 不影響資料；修改 code 要同步改 data/json 裡已標記的題目（pipeline/tag.py --remap）。
 #   - 新增 topic 直接加在該科 topics 底下；刪除前先確認沒有題目使用。
 #
@@ -20,7 +26,7 @@
 #   CARDPED 心肺疾病與小兒疾病物理治療學
 
 version: 1
-updated: 2026-10-16
+updated: 2026-10-19
 
 subjects:
   - code: BASIC
@@ -28,130 +34,552 @@ subjects:
     full_name: 物理治療基礎學（包括解剖學、生理學、肌動學與生物力學）
     short_name: 基礎學
     topics:
-      - {code: BASIC-ANA-MSK,   name: 肌肉骨骼系統解剖學,              group: 解剖學,       keywords: [骨骼, 肌肉起止點, 韌帶, 關節構造, 神經支配, 血液供應]}
-      - {code: BASIC-ANA-NEU,   name: 神經系統解剖學,                  group: 解剖學,       keywords: [腦, 脊髓, 腦神經, 周邊神經, 傳導路徑, 皮節, 肌節]}
-      - {code: BASIC-ANA-CP,    name: 呼吸循環系統解剖學,              group: 解剖學,       keywords: [心臟, 血管, 肺, 氣道, 縱膈, 冠狀動脈]}
-      - {code: BASIC-ANA-OTH,   name: 其他系統解剖學,                  group: 解剖學,       keywords: [消化, 泌尿, 生殖, 內分泌, 皮膚, 胚胎]}
-      - {code: BASIC-PHY-MSK,   name: 肌肉骨骼系統生理學（含能量代謝）, group: 生理學,       keywords: [肌肉收縮, 肌纖維型態, 能量系統, ATP, 乳酸, 骨代謝]}
-      - {code: BASIC-PHY-NEU,   name: 神經內分泌系統生理學,            group: 生理學,       keywords: [動作電位, 突觸, 反射, 感覺受器, 荷爾蒙, 自主神經]}
-      - {code: BASIC-PHY-CP,    name: 呼吸循環系統生理學,              group: 生理學,       keywords: [心輸出量, 血壓調控, 氣體交換, 肺容積, 血液]}
-      - {code: BASIC-PHY-OTH,   name: 其他系統生理學,                  group: 生理學,       keywords: [消化, 腎臟, 酸鹼平衡, 體溫, 免疫, 皮膚]}
-      - {code: BASIC-PHY-EX,    name: 運動生理學、發展與老化,          group: 生理學,       keywords: [最大攝氧量, 訓練適應, 疲勞, 發展, 老化生理]}
-      - {code: BASIC-KIN-THEORY, name: 肌動學與生物力學理論,           group: 肌動學與生物力學, keywords: [力矩, 槓桿, 牛頓定律, 關節運動學, 骨運動學, 凹凸法則]}
-      - {code: BASIC-KIN-UE,    name: 上肢肌動學,                      group: 肌動學與生物力學, keywords: [肩胛肱骨節律, 肘, 前臂, 腕, 手, 抓握]}
-      - {code: BASIC-KIN-LE,    name: 下肢肌動學,                      group: 肌動學與生物力學, keywords: [髖, 膝, 踝, 足弓, 螺旋回返, Q角]}
-      - {code: BASIC-KIN-SPINE, name: 頭頸軀幹肌動學,                  group: 肌動學與生物力學, keywords: [脊椎, 椎間盤, 顳頷關節, 骨盆, 呼吸肌, 耦合動作]}
-      - {code: BASIC-KIN-GAIT,  name: 步態與姿態,                      group: 肌動學與生物力學, keywords: [步態週期, 步態決定因子, 姿勢, 重心, 壓力中心]}
-      - {code: BASIC-KIN-ANALYSIS, name: 人體動作技巧與分析,           group: 肌動學與生物力學, keywords: [動作分析, 肌電圖, 動作捕捉, 跑, 跳, 投擲]}
-      - {code: BASIC-KIN-TISSUE, name: 組織生物力學,                   group: 肌動學與生物力學, keywords: [應力應變, 黏彈性, 潛變, 骨, 肌腱, 韌帶, 軟骨]}
+      - code: BASIC-ANA-MSK
+        name: 肌肉骨骼系統解剖學（構造、位置、起止點、神經支配）
+        group: 解剖學
+        definition: 骨骼、肌肉、韌帶、關節的構造與位置：起止點、神經支配、血液供應、關節組成與軟骨分類。
+        excludes:
+          - 肌肉在動作中的功能、關節穩定與力學（足弓基石、單腳站立誰在固定）→ 該部位的 KIN 主題
+        keywords: [骨骼, 肌肉起止點, 韌帶, 關節構造, 關節組成, 軟骨分類, 神經支配, 血液供應]
+      - code: BASIC-ANA-NEU
+        name: 神經系統解剖學
+        group: 解剖學
+        definition: 腦、脊髓、腦神經與周邊神經的構造、傳導路徑、皮節與肌節。
+        excludes:
+          - 神經訊號的產生與傳遞（動作電位、突觸）→ BASIC-PHY-NEU
+        keywords: [腦, 脊髓, 腦神經, 周邊神經, 傳導路徑, 皮節, 肌節]
+      - code: BASIC-ANA-CP
+        name: 呼吸循環系統解剖學
+        group: 解剖學
+        definition: 心臟、血管、肺、氣道、縱膈與冠狀動脈的構造與位置。
+        excludes:
+          - 心輸出量、血壓調控、氣體交換等功能 → BASIC-PHY-CP
+        keywords: [心臟, 血管, 肺, 氣道, 縱膈, 冠狀動脈]
+      - code: BASIC-ANA-OTH
+        name: 其他系統解剖學
+        group: 解剖學
+        definition: 消化、泌尿、生殖、內分泌、皮膚系統的構造，以及胚胎發育。
+        keywords: [消化, 泌尿, 生殖, 內分泌, 皮膚, 胚胎]
+      - code: BASIC-PHY-MSK
+        name: 肌肉骨骼系統生理學（含肌肉收縮機制、骨骼肌與運動時的能量代謝）
+        group: 生理學
+        definition: 肌肉收縮機制（橫橋、離心收縮的機制、長度－張力關係）、肌纖維型態、骨骼肌與運動時的能量系統（ATP、乳酸、脂肪氧化）、骨代謝。
+        excludes:
+          - 某個動作由哪條肌肉、哪種收縮型態完成 → BASIC-KIN-ANALYSIS 或該部位的 KIN 主題
+          - 心肌的能量代謝 → BASIC-PHY-CP
+          - 蛋白質、維生素等一般營養代謝 → BASIC-PHY-OTH
+        keywords: [肌肉收縮, 橫橋, 離心收縮機制, 長度張力關係, 肌纖維型態, 能量系統, ATP, 乳酸, 脂肪氧化, 骨代謝]
+      - code: BASIC-PHY-NEU
+        name: 神經內分泌系統生理學
+        group: 生理學
+        definition: 動作電位、突觸、反射、感覺受器、自主神經與荷爾蒙的作用。
+        keywords: [動作電位, 突觸, 反射, 感覺受器, 荷爾蒙, 自主神經]
+      - code: BASIC-PHY-CP
+        name: 呼吸循環系統生理學（含心肌能量代謝）
+        group: 生理學
+        definition: 心輸出量、血壓調控、氣體交換、肺容積、血液，以及心肌的能量代謝。
+        keywords: [心輸出量, 血壓調控, 氣體交換, 肺容積, 血液, 心肌代謝]
+      - code: BASIC-PHY-OTH
+        name: 其他系統生理學（含一般營養代謝）
+        group: 生理學
+        definition: 消化、腎臟、酸鹼平衡、體溫、免疫、皮膚生理，以及蛋白質、維生素等一般營養代謝。
+        excludes:
+          - 骨骼肌與運動時的能量來源 → BASIC-PHY-MSK
+        keywords: [消化, 腎臟, 酸鹼平衡, 體溫, 免疫, 皮膚, 蛋白質代謝, 維生素, 營養代謝]
+      - code: BASIC-PHY-EX
+        name: 運動生理學、發展與老化
+        group: 生理學
+        definition: 最大攝氧量、訓練適應、疲勞、臥床去適能，以及生長發育與老化的生理變化。
+        keywords: [最大攝氧量, 訓練適應, 疲勞, 發展, 老化生理]
+      - code: BASIC-KIN-THEORY
+        name: 肌動學與生物力學理論
+        group: 肌動學與生物力學
+        definition: 力矩、槓桿、牛頓定律、骨運動學與關節運動學（凹凸法則）等不限部位的力學原理，以及肌肉型態與力量的關係（羽狀肌、生理截面積）。
+        excludes:
+          - 特定部位的肌動學 → BASIC-KIN-UE／LE／SPINE
+        keywords: [力矩, 槓桿, 牛頓定律, 關節運動學, 骨運動學, 凹凸法則]
+      - code: BASIC-KIN-UE
+        name: 上肢肌動學
+        group: 肌動學與生物力學
+        definition: 肩胛肱骨節律、肘、前臂、腕、手與抓握的運動與上肢肌肉功能。
+        excludes:
+          - 只問構造、起止點、神經支配 → BASIC-ANA-MSK
+        keywords: [肩胛肱骨節律, 肘, 前臂, 腕, 手, 抓握, 上肢肌肉功能]
+      - code: BASIC-KIN-LE
+        name: 下肢肌動學
+        group: 肌動學與生物力學
+        definition: 髖、膝、踝、足的運動與穩定：足弓與足弓基石、單腳站立、螺旋回返、Q 角與下肢肌肉功能。
+        excludes:
+          - 只問構造、起止點、神經支配 → BASIC-ANA-MSK
+          - 步態週期 → BASIC-KIN-GAIT
+        keywords: [髖, 膝, 踝, 足弓, 足弓基石, 單腳站立, 螺旋回返, Q角, 下肢肌肉功能]
+      - code: BASIC-KIN-SPINE
+        name: 頭頸軀幹肌動學
+        group: 肌動學與生物力學
+        definition: 脊椎、椎間盤、顳頷關節、骨盆與呼吸肌的運動，包括耦合動作與小面關節的滑動方向。
+        keywords: [脊椎, 椎間盤, 顳頷關節, 骨盆, 呼吸肌, 耦合動作]
+      - code: BASIC-KIN-GAIT
+        name: 步態與姿態
+        group: 肌動學與生物力學
+        definition: 步態週期與各期肌肉活動、步態決定因子、跑步分期、站姿與姿勢、重心與壓力中心。
+        keywords: [步態週期, 步態決定因子, 姿勢, 重心, 壓力中心]
+      - code: BASIC-KIN-ANALYSIS
+        name: 人體動作技巧與分析（某個動作由哪條肌肉、哪種收縮型態完成）
+        group: 肌動學與生物力學
+        definition: 具體動作（伏地挺身、投擲、跳、游泳、懸吊訓練）由哪些肌肉、哪種收縮型態完成；肌電圖與動作捕捉分析。
+        excludes:
+          - 收縮本身的機制 → BASIC-PHY-MSK
+        keywords: [動作分析, 收縮型態, 肌電圖, 動作捕捉, 跑, 跳, 投擲, 伏地挺身]
+      - code: BASIC-KIN-TISSUE
+        name: 組織生物力學
+        group: 肌動學與生物力學
+        definition: 骨、肌腱、韌帶、軟骨的力學特性：應力應變、黏彈性、潛變、鬆弛。
+        keywords: [應力應變, 黏彈性, 潛變, 骨, 肌腱, 韌帶, 軟骨]
 
   - code: INTRO
     name: 物理治療學概論
     full_name: 物理治療學概論（包括物理治療史、物理治療倫理學與物理治療行政管理學）
     short_name: 概論
     topics:
-      - {code: INTRO-HISTORY, name: 物理治療導論與歷史、教育、專業組織, keywords: [歷史沿革, WCPT, APTA, 台灣物理治療學會, 教育制度, 專業發展]}
-      - {code: INTRO-PRACTICE, name: 執業內涵與專業角色,               keywords: [業務範圍, 物理治療師法第12條, 轉介, 直接就醫, 專業自主]}
-      - {code: INTRO-ETHICS,  name: 物理治療倫理學,                   keywords: [倫理原則, 自主, 行善, 不傷害, 正義, 隱私, 知情同意, 性別平等, 跨文化]}
-      - {code: INTRO-SAFETY,  name: 病人安全與案例分析,               keywords: [病人安全, 感染控制, 跌倒預防, 事件通報]}
-      - {code: INTRO-ADMIN,   name: 行政管理與管理學原理,             keywords: [管理功能, 領導, 品質管理, 人力資源, 財務, 行銷]}
-      - {code: INTRO-LAW,     name: 物理治療師法與相關法規,           keywords: [物理治療師法, 醫療法, 身心障礙者權益保障法, 長照法, 罰則]}
-      - {code: INTRO-INSURANCE, name: 健保與醫療政策、保險制度,       keywords: [全民健保, 支付制度, DRG, 總額, 長照2.0, 給付]}
-      - {code: INTRO-EBP,     name: 實證物理治療與臨床推理,           keywords: [實證五步驟, PICO, 證據等級, 系統性回顧, 臨床推理, 指引]}
-      - {code: INTRO-RESEARCH, name: 研究方法,                        keywords: [研究設計, 信度, 效度, 隨機分派, 偏差, 樣本]}
-      - {code: INTRO-STATS,   name: 統計原理,                         keywords: [敘述統計, 假設檢定, p值, 信賴區間, 相關, 迴歸, 效應量]}
-      - {code: INTRO-MED,     name: 內外科概論,                       keywords: [內科疾病, 外科, 藥理, 影像, 檢驗值]}
-      - {code: INTRO-PH,      name: 公共衛生概論,                     keywords: [流行病學, 三段五級預防, 健康促進, 衛生政策, 發生率, 盛行率]}
+      - code: INTRO-HISTORY
+        name: 物理治療導論與歷史、教育、專業組織
+        definition: 物理治療的歷史沿革、教育制度、專業發展，以及 WCPT、APTA、台灣物理治療學會等專業組織。
+        keywords: [歷史沿革, WCPT, APTA, 台灣物理治療學會, 教育制度, 專業發展]
+      - code: INTRO-PRACTICE
+        name: 執業內涵與專業角色
+        definition: 物理治療師的業務範圍、專業角色與自主、轉介與直接就醫、物理治療診斷的意義。
+        excludes:
+          - 法條本身、罰則 → INTRO-LAW
+        keywords: [業務範圍, 物理治療師法第12條, 轉介, 直接就醫, 專業自主]
+      - code: INTRO-ETHICS
+        name: 物理治療倫理學
+        definition: 倫理原則（自主、行善、不傷害、正義）、隱私、知情同意與代理決定、性別平等、跨文化照護。
+        excludes:
+          - 洩漏業務秘密的法律後果 → INTRO-LAW
+        keywords: [倫理原則, 自主, 行善, 不傷害, 正義, 隱私, 知情同意, 性別平等, 跨文化]
+      - code: INTRO-SAFETY
+        name: 病人安全與案例分析
+        definition: 病人安全、感染控制（含洗手時機）、跌倒預防、事件通報。
+        excludes:
+          - 醫療糾紛發生後怎麼處理、風險管理 → INTRO-ADMIN
+        keywords: [病人安全, 感染控制, 跌倒預防, 事件通報]
+      - code: INTRO-ADMIN
+        name: 行政管理與管理學原理（含風險管理、醫療糾紛處理、空間與設施管理）
+        definition: 管理功能、領導、品質管理、人力資源、財務、行銷；風險管理與醫療糾紛處理；治療空間規劃、設施與清潔消毒管理、無障礙就醫環境設計。
+        excludes:
+          - 物理治療所設置標準等有法規數字的規定 → INTRO-LAW
+        keywords: [管理功能, 領導, 品質管理, 人力資源, 財務, 行銷, 風險管理, 醫療糾紛處理, 空間規劃, 設施管理, 無障礙環境設計, 清潔消毒管理]
+      - code: INTRO-LAW
+        name: 物理治療師法與相關法規（含醫療法律責任、設置標準）
+        definition: 物理治療師法、醫療法、身心障礙者權益保障法、長照法與罰則；醫療法律責任（醫療過失、無過失責任、病歷的法律性質、業務秘密）；物理治療所設置標準。
+        keywords: [物理治療師法, 醫療法, 身心障礙者權益保障法, 長照法, 罰則, 醫療過失, 無過失責任, 病歷法律性質, 業務秘密, 物理治療所設置標準]
+      - code: INTRO-INSURANCE
+        name: 健保與醫療政策、保險制度
+        definition: 全民健保、支付制度（DRG、總額）、給付規定、長照 2.0。
+        keywords: [全民健保, 支付制度, DRG, 總額, 長照2.0, 給付]
+      - code: INTRO-EBP
+        name: 實證物理治療與臨床推理
+        definition: 實證五步驟、PICO、證據等級、系統性回顧與統合分析（meta-analysis）、臨床指引、臨床推理與目標設定。
+        excludes:
+          - 敏感度、特異度等診斷準確度的計算 → INTRO-STATS
+          - 研究設計本身（如 N-of-1 試驗）→ INTRO-RESEARCH
+        keywords: [實證五步驟, PICO, 證據等級, 系統性回顧, 統合分析, meta-analysis, 臨床推理, 指引]
+      - code: INTRO-RESEARCH
+        name: 研究方法
+        definition: 研究設計、信度、效度、隨機分派、偏差、抽樣。
+        keywords: [研究設計, 信度, 效度, 隨機分派, 偏差, 樣本]
+      - code: INTRO-STATS
+        name: 統計原理
+        definition: 敘述統計、假設檢定、p 值、信賴區間、相關、迴歸、效應量，以及敏感度、特異度、預測值等診斷準確度。
+        keywords: [敘述統計, 假設檢定, p值, 信賴區間, 相關, 迴歸, 效應量, 敏感度, 特異度, 預測值, 診斷準確度]
+      - code: INTRO-MED
+        name: 內外科概論（含生命徵象、傷口、功能評估等臨床基本知識）
+        definition: 內外科疾病、藥理、影像、檢驗值，以及生命徵象、傷口分級、功能評估（Barthel 等）、人工關節等臨床基本知識。
+        keywords: [內科疾病, 外科, 藥理, 影像, 檢驗值, 生命徵象, 傷口分級, 功能評估, Barthel, 人工關節]
+      - code: INTRO-PH
+        name: 公共衛生概論
+        definition: 流行病學、三段五級預防、健康促進、衛生政策、發生率與盛行率。
+        keywords: [流行病學, 三段五級預防, 健康促進, 衛生政策, 發生率, 盛行率]
 
   - code: TECH
     name: 物理治療技術學
     full_name: 物理治療技術學（包括電療學、熱療學、操作治療學與輔具學）
     short_name: 技術學
     topics:
-      - {code: TECH-ESTIM,    name: 電療因子（TENS、NMES、FES、干擾波、高壓直流、生物回饋、離子導入）, group: 物理因子治療學, keywords: [TENS, NMES, FES, 干擾波, 高壓間歇直流, 肌電生物回饋, 離子導入, 波形, 參數]}
-      - {code: TECH-EDX,      name: 電生理診斷,                       group: 物理因子治療學, keywords: [神經傳導, 肌電圖, 強度時間曲線, 反應變性]}
-      - {code: TECH-THERMAL,  name: 淺層熱療與冷療,                   group: 物理因子治療學, keywords: [熱敷, 石蠟, 紅外線, 冰敷, 冷噴, 禁忌症]}
-      - {code: TECH-US,       name: 超音波治療,                       group: 物理因子治療學, keywords: [超音波, 頻率, 強度, 空化, 音透, 相位]}
-      - {code: TECH-HYDRO,    name: 水療,                             group: 物理因子治療學, keywords: [水療, 浮力, 靜水壓, 渦流, 水中運動]}
-      - {code: TECH-EMLIGHT,  name: 電磁與光因子（雷射、紫外光、微波、短波）, group: 物理因子治療學, keywords: [低能量雷射, 紫外光, 微波, 短波透熱, 劑量]}
-      - {code: TECH-MECH,     name: 力學因子（牽引、循環機、CPM）,    group: 物理因子治療學, keywords: [牽引, 間歇性氣壓, CPM, 重量, 角度]}
-      - {code: TECH-SPECIAL,  name: 物理因子特殊應用（微電流、磁療、震波）, group: 物理因子治療學, keywords: [微電流, 磁刺激, 體外震波]}
-      - {code: TECH-ROM,      name: 關節活動度測試與運動,             group: 基礎物理治療學, keywords: [角度計, 關節活動度, 被動運動, 牽拉, 末端感覺]}
-      - {code: TECH-MMT,      name: 徒手肌力測試,                     group: 基礎物理治療學, keywords: [MMT, 肌力分級, 測試姿勢, 阻力]}
-      - {code: TECH-STRENGTH, name: 肌力與耐力訓練,                   group: 基礎物理治療學, keywords: [漸進式阻力, DeLorme, 等速, 等長, 開鏈閉鏈, 增強式]}
-      - {code: TECH-SUSPEND,  name: 懸吊系統與放鬆技術,               group: 基礎物理治療學, keywords: [懸吊, 放鬆, 漸進式肌肉放鬆, 呼吸放鬆]}
-      - {code: TECH-GAIT,     name: 行走評估與訓練,                   group: 基礎物理治療學, keywords: [步態訓練, 助行器, 枴杖, 步態型態, 平行桿]}
-      - {code: TECH-TRANSFER, name: 轉位技巧,                         group: 基礎物理治療學, keywords: [轉位, 床上活動, 滑板, 人體力學]}
-      - {code: TECH-JOINTMOB, name: 周邊關節鬆動術,                   group: 操作治療學, keywords: [Maitland, Kaltenborn, 分級, 滑動, 牽引, 囊內模式]}
-      - {code: TECH-SPINEMOB, name: 脊椎鬆動術,                       group: 操作治療學, keywords: [脊椎鬆動, 整脊, McKenzie, Mulligan, 禁忌症]}
-      - {code: TECH-NEURALMOB, name: 神經鬆動術,                      group: 操作治療學, keywords: [神經張力測試, 神經滑動, ULTT, slump]}
-      - {code: TECH-MASSAGE,  name: 按摩與軟組織技術,                 group: 操作治療學, keywords: [瑞典式按摩, 深層按摩, 淋巴引流, 肌筋膜放鬆, 運動按摩, 結締組織按摩]}
-      - {code: TECH-REEDU,    name: 機能再教育與跨團隊、長照、居家社區, group: 機能再教育, keywords: [長照, 居家物理治療, 社區, 跨團隊, 日常生活訓練]}
-      - {code: TECH-BLADDER,  name: 大小便功能與再教育,               group: 機能再教育, keywords: [骨盆底肌, 凱格爾, 尿失禁, 排便訓練]}
-      - {code: TECH-MOBAT,    name: 行動與擺位輔具、轉移位與生活照顧輔具, group: 輔具學, keywords: [輪椅, 擺位, 坐墊, 壓瘡, 移位機, 生活輔具]}
-      - {code: TECH-PROSTH,   name: 義肢學,                           group: 輔具學, keywords: [義肢, 承筒, 膝關節機構, 對線, 步態偏差]}
-      - {code: TECH-ORTH,     name: 矯具學,                           group: 輔具學, keywords: [AFO, KAFO, 脊椎矯具, 副木, 鞋墊]}
-      - {code: TECH-ACCESS,   name: 無障礙環境與智慧科技輔具,         group: 輔具學, keywords: [通用設計, 無障礙, 斜坡, 智慧輔具, 輔具補助]}
+      - code: TECH-ESTIM
+        name: 電療因子（TENS、NMES、FES、干擾波、高壓直流、生物回饋、離子導入）
+        group: 物理因子治療學
+        definition: TENS、NMES、FES、干擾波、高壓間歇直流、肌電生物回饋、離子導入的原理、波形與參數。
+        excludes:
+          - 神經傳導、肌電圖等診斷用途 → TECH-EDX
+        keywords: [TENS, NMES, FES, 干擾波, 高壓間歇直流, 肌電生物回饋, 離子導入, 波形, 參數]
+      - code: TECH-EDX
+        name: 電生理診斷
+        group: 物理因子治療學
+        definition: 神經傳導檢查、肌電圖、強度時間曲線、反應變性。
+        keywords: [神經傳導, 肌電圖, 強度時間曲線, 反應變性]
+      - code: TECH-THERMAL
+        name: 淺層熱療與冷療
+        group: 物理因子治療學
+        definition: 熱敷、石蠟、紅外線、冰敷、冷噴的生理效應、劑量與禁忌症。
+        excludes:
+          - 短波、微波等深層透熱 → TECH-EMLIGHT
+          - 超音波 → TECH-US
+        keywords: [熱敷, 石蠟, 紅外線, 冰敷, 冷噴, 禁忌症]
+      - code: TECH-US
+        name: 超音波治療
+        group: 物理因子治療學
+        definition: 治療性超音波的頻率、強度、熱與非熱效應（空化）、音透。
+        keywords: [超音波, 頻率, 強度, 空化, 音透, 相位]
+      - code: TECH-HYDRO
+        name: 水療
+        group: 物理因子治療學
+        definition: 浮力、靜水壓、渦流、水中運動與水療設備。
+        keywords: [水療, 浮力, 靜水壓, 渦流, 水中運動]
+      - code: TECH-EMLIGHT
+        name: 電磁與光因子（雷射、紫外光、微波、短波）
+        group: 物理因子治療學
+        definition: 低能量雷射、紫外光、微波、短波透熱的原理與劑量。
+        keywords: [低能量雷射, 紫外光, 微波, 短波透熱, 劑量]
+      - code: TECH-MECH
+        name: 力學因子（牽引、循環機、CPM）
+        group: 物理因子治療學
+        definition: 牽引、間歇性氣壓循環機、連續被動運動（CPM）的設定與適應症。
+        keywords: [牽引, 間歇性氣壓, CPM, 重量, 角度]
+      - code: TECH-SPECIAL
+        name: 物理因子特殊應用（微電流、磁療、震波）
+        group: 物理因子治療學
+        definition: 微電流、磁刺激、體外震波。
+        keywords: [微電流, 磁刺激, 體外震波]
+      - code: TECH-ROM
+        name: 關節活動度測試與運動
+        group: 基礎物理治療學
+        definition: 角度計量測、末端感覺、被動與主動關節運動、牽拉。
+        keywords: [角度計, 關節活動度, 被動運動, 牽拉, 末端感覺]
+      - code: TECH-MMT
+        name: 徒手肌力測試
+        group: 基礎物理治療學
+        definition: 肌力分級、測試姿勢、阻力位置與代償動作。
+        keywords: [MMT, 肌力分級, 測試姿勢, 阻力]
+      - code: TECH-STRENGTH
+        name: 肌力與耐力訓練
+        group: 基礎物理治療學
+        definition: 漸進式阻力訓練（DeLorme 等）、等長／等張／等速、開鏈與閉鏈、增強式訓練。
+        keywords: [漸進式阻力, DeLorme, 等速, 等長, 開鏈閉鏈, 增強式]
+      - code: TECH-SUSPEND
+        name: 懸吊系統與放鬆技術
+        group: 基礎物理治療學
+        definition: 懸吊系統的使用、漸進式肌肉放鬆與呼吸放鬆等放鬆技術。
+        keywords: [懸吊, 放鬆, 漸進式肌肉放鬆, 呼吸放鬆]
+      - code: TECH-GAIT
+        name: 行走評估與訓練
+        group: 基礎物理治療學
+        definition: 步態型態評估、步態訓練、助行器與枴杖的選用與調整、平行桿訓練。
+        keywords: [步態訓練, 助行器, 枴杖, 步態型態, 平行桿]
+      - code: TECH-TRANSFER
+        name: 轉位技巧
+        group: 基礎物理治療學
+        definition: 床上活動、轉位方法與工具（滑板等）、治療師的人體力學。
+        excludes:
+          - 移位機等輔具本身 → TECH-MOBAT
+        keywords: [轉位, 床上活動, 滑板, 人體力學]
+      - code: TECH-JOINTMOB
+        name: 周邊關節鬆動術
+        group: 操作治療學
+        definition: Maitland、Kaltenborn 分級、滑動與牽引、囊內模式。
+        keywords: [Maitland, Kaltenborn, 分級, 滑動, 牽引, 囊內模式]
+      - code: TECH-SPINEMOB
+        name: 脊椎鬆動術
+        group: 操作治療學
+        definition: 脊椎鬆動與整脊、McKenzie、Mulligan 與禁忌症。
+        keywords: [脊椎鬆動, 整脊, McKenzie, Mulligan, 禁忌症]
+      - code: TECH-NEURALMOB
+        name: 神經鬆動術
+        group: 操作治療學
+        definition: 神經張力測試（ULTT、slump）與神經滑動技術。
+        keywords: [神經張力測試, 神經滑動, ULTT, slump]
+      - code: TECH-MASSAGE
+        name: 按摩與軟組織技術
+        group: 操作治療學
+        definition: 瑞典式按摩、深層按摩、淋巴引流、肌筋膜放鬆、結締組織按摩、運動按摩。
+        keywords: [瑞典式按摩, 深層按摩, 淋巴引流, 肌筋膜放鬆, 運動按摩, 結締組織按摩]
+      - code: TECH-REEDU
+        name: 機能再教育與跨團隊、長照、居家社區
+        group: 機能再教育
+        definition: 日常生活功能訓練、跨團隊合作、長照、居家與社區物理治療。
+        keywords: [長照, 居家物理治療, 社區, 跨團隊, 日常生活訓練]
+      - code: TECH-BLADDER
+        name: 大小便功能與再教育
+        group: 機能再教育
+        definition: 骨盆底肌訓練（凱格爾）、尿失禁、排便訓練。
+        keywords: [骨盆底肌, 凱格爾, 尿失禁, 排便訓練]
+      - code: TECH-MOBAT
+        name: 行動與擺位輔具、轉移位與生活照顧輔具
+        group: 輔具學
+        definition: 輪椅、擺位與坐墊（壓瘡預防）、移位機、生活輔具。
+        keywords: [輪椅, 擺位, 坐墊, 壓瘡, 移位機, 生活輔具]
+      - code: TECH-PROSTH
+        name: 義肢學
+        group: 輔具學
+        definition: 義肢元件、承筒、膝關節機構、對線與義肢步態偏差。
+        keywords: [義肢, 承筒, 膝關節機構, 對線, 步態偏差]
+      - code: TECH-ORTH
+        name: 矯具學
+        group: 輔具學
+        definition: AFO、KAFO、脊椎矯具、副木、鞋墊。
+        keywords: [AFO, KAFO, 脊椎矯具, 副木, 鞋墊]
+      - code: TECH-ACCESS
+        name: 無障礙環境與智慧科技輔具
+        group: 輔具學
+        definition: 通用設計、無障礙設施規範、斜坡、智慧科技輔具、輔具補助。
+        keywords: [通用設計, 無障礙, 斜坡, 智慧輔具, 輔具補助]
 
   - code: NEURO
     name: 神經疾病物理治療學
     full_name: 神經疾病物理治療學
     short_name: 神經
     topics:
-      - {code: NEURO-FOUND,    name: 神經肌肉系統基礎與原理（動作控制、動作學習、神經可塑性）, keywords: [動作控制理論, 動作學習, 回饋, 練習排程, 神經可塑性, 肌梭, 反射]}
-      - {code: NEURO-ASSESS,   name: 神經評估與量表（張力、平衡、協調、認知、ICF）, keywords: [Berg, TUG, Ashworth, Fugl-Meyer, GCS, Rancho, ICF, 協調測試, 感覺檢查]}
-      - {code: NEURO-APPROACH, name: 治療學派與技術（NDT、PNF、Brunnstrom、任務導向、CIMT、Rood）, keywords: [NDT, PNF, Brunnstrom, 任務導向, 限制誘發, 肌肉再教育, 動作再學習]}
-      - {code: NEURO-STROKE,   name: 腦中風,                          keywords: [中風, 偏癱, 中大腦動脈, 失語, 忽略, 肩痛, 步態訓練]}
-      - {code: NEURO-TBI,      name: 創傷性腦傷,                      keywords: [TBI, GCS, Rancho, 失憶, 認知, 去皮質]}
-      - {code: NEURO-SCI,      name: 脊髓損傷,                        keywords: [SCI, ASIA, 完全性, 不完全性, 自主神經反射異常, 轉位, 輪椅]}
-      - {code: NEURO-PD,       name: 巴金森氏病,                      keywords: [巴金森, Hoehn & Yahr, 凍結步態, 左旋多巴, 線索策略]}
-      - {code: NEURO-MS,       name: 多發性硬化症,                    keywords: [MS, 疲勞, Uhthoff, Lhermitte, 復發]}
-      - {code: NEURO-MND,      name: 運動神經元疾病（ALS）,            keywords: [ALS, 運動神經元, 延髓, 呼吸]}
-      - {code: NEURO-BG-CB,    name: 基底核與小腦其他疾患（亨丁頓、威爾森、運動失調）, keywords: [亨丁頓, 威爾森, 小腦, 運動失調, 舞蹈症, 肌張力不全]}
-      - {code: NEURO-DEMENTIA, name: 失智症與認知功能,                keywords: [失智, 阿茲海默, MMSE, 認知, 行為]}
-      - {code: NEURO-TUMOR,    name: 腦瘤,                            keywords: [腦瘤, 膠質瘤, 放射治療, 影像]}
-      - {code: NEURO-PNI,      name: 周邊神經損傷與神經肌肉疾病（GBS、顏面神經、小兒麻痺、肌肉失養症）, keywords: [GBS, Sunderland, Bell, 小兒麻痺, 後小兒麻痺, 裘馨氏, 周邊神經病變]}
-      - {code: NEURO-VESTIB,   name: 前庭疾病與平衡復健,              keywords: [BPPV, 前庭, 眼震, Dix-Hallpike, Epley, 前庭眼反射, 梅尼爾]}
-      - {code: NEURO-GERI,     name: 老人物理治療與連續性照護,        keywords: [老化, 跌倒, 衰弱, 肌少症, 體適能, 長照, 運動動機]}
+      - code: NEURO-FOUND
+        name: 神經肌肉系統基礎與原理（含神經解剖生理基礎、動作控制、動作學習、神經可塑性）
+        definition: 神經解剖生理基礎（感覺傳導徑、外側抑制、感覺聯合區、皮節、腦神經、小腦分區）、動作控制理論、動作學習（回饋、練習排程）、神經可塑性、肌梭與反射。
+        excludes:
+          - 單純問周邊神經支配範圍 → NEURO-PNI，次要主題加 BASIC-ANA-NEU
+        keywords: [神經解剖, 感覺傳導徑, 外側抑制, 感覺聯合區, 皮節, 腦神經, 小腦分區, 動作控制理論, 動作學習, 回饋, 練習排程, 神經可塑性, 肌梭, 反射]
+      - code: NEURO-ASSESS
+        name: 神經評估與量表（張力、平衡、協調、認知、ICF）
+        definition: 所有量表的內容與計分（Berg、TUG、Ashworth、Fugl-Meyer、GCS、Rancho Los Amigos、Brunnstrom 分期、Kurtzke）、協調測試、感覺檢查、ICF。
+        keywords: [Berg, TUG, Ashworth, Fugl-Meyer, GCS, Rancho, ICF, 協調測試, 感覺檢查, Brunnstrom 分期, 恢復分期]
+      - code: NEURO-APPROACH
+        name: 治療學派與技術（NDT、PNF、Brunnstrom、任務導向、CIMT、Rood）
+        definition: NDT、PNF（含動作型態：雙側對稱／非對稱、交替）、Brunnstrom 治療技術、Rood 與動作控制階段（controlled mobility 等）、任務導向、CIMT、動作再學習、穿戴式機器人與虛擬實境訓練。
+        excludes:
+          - Brunnstrom 分期 → NEURO-ASSESS
+        keywords: [NDT, PNF, Brunnstrom 治療技術, 任務導向, 限制誘發, 肌肉再教育, 動作再學習, Rood, 動作控制階段, controlled mobility, PNF 動作型態, 雙側對稱, 雙側非對稱, 交替性]
+      - code: NEURO-BALANCE
+        name: 平衡與姿勢控制
+        definition: 平衡訓練、姿勢控制、支持底面積與質量中心、預期性與反應性平衡、雙項任務、感覺整合、沒有指定疾病的坐到站與重量轉移。
+        excludes:
+          - 平衡量表 → NEURO-ASSESS
+          - 題目指定疾病的功能訓練（如中風患者坐到站）→ 該疾病主題
+        keywords: [平衡訓練, 姿勢控制, 支持底面積, 質量中心, 預期性平衡, 反應性平衡, 雙項任務, 靜態平衡, 動態平衡, 坐站, 感覺整合]
+      - code: NEURO-STROKE
+        name: 腦中風
+        definition: 中風的病理、症狀（偏癱、失語、忽略、肩痛）與物理治療，包括中風患者的步態、轉位、坐到站訓練。
+        excludes:
+          - 量表 → NEURO-ASSESS
+        keywords: [中風, 偏癱, 中大腦動脈, 失語, 忽略, 肩痛, 步態訓練, 轉位訓練, 坐到站訓練]
+      - code: NEURO-TBI
+        name: 創傷性腦傷
+        definition: 創傷性腦傷的病理（腦脫垂、去大腦／去皮質僵直）、認知與行為問題、物理治療。
+        excludes:
+          - GCS、Rancho 等量表 → NEURO-ASSESS
+        keywords: [TBI, 腦脫垂, 去大腦僵直, 失憶, 認知, 去皮質]
+      - code: NEURO-SCI
+        name: 脊髓損傷
+        definition: ASIA 分類、完全與不完全損傷、自主神經反射異常、呼吸、轉位與輪椅訓練。
+        keywords: [SCI, ASIA, 完全性, 不完全性, 自主神經反射異常, 轉位, 輪椅]
+      - code: NEURO-PD
+        name: 巴金森氏病
+        definition: 巴金森氏病的症狀、Hoehn & Yahr 分期、凍結步態、藥物（左旋多巴）、線索策略。
+        keywords: [巴金森, Hoehn & Yahr, 凍結步態, 左旋多巴, 線索策略]
+      - code: NEURO-MS
+        name: 多發性硬化症
+        definition: 多發性硬化症的病程、疲勞、Uhthoff 與 Lhermitte 現象、復發。
+        excludes:
+          - Kurtzke 量表 → NEURO-ASSESS
+        keywords: [MS, 疲勞, Uhthoff, Lhermitte, 復發]
+      - code: NEURO-MND
+        name: 運動神經元疾病（ALS）
+        definition: 肌萎縮性脊髓側索硬化症等運動神經元疾病、延髓症狀與呼吸問題。
+        keywords: [ALS, 運動神經元, 延髓, 呼吸]
+      - code: NEURO-BG-CB
+        name: 基底核與小腦其他疾患（亨丁頓、威爾森、運動失調）
+        definition: 亨丁頓舞蹈症、威爾森氏症、小腦運動失調、肌張力不全，以及 Frenkel 運動等協調訓練。
+        excludes:
+          - 巴金森氏病 → NEURO-PD
+        keywords: [亨丁頓, 威爾森, 小腦, 運動失調, 舞蹈症, 肌張力不全]
+      - code: NEURO-DEMENTIA
+        name: 失智症與認知功能
+        definition: 失智症、阿茲海默症、認知功能與記憶分類、MMSE 等認知評估的應用。
+        keywords: [失智, 阿茲海默, MMSE, 認知, 行為]
+      - code: NEURO-TUMOR
+        name: 腦瘤
+        definition: 腦瘤種類（膠質瘤等）、放射治療、影像與物理治療。
+        keywords: [腦瘤, 膠質瘤, 放射治療, 影像]
+      - code: NEURO-INFECTION
+        name: 神經系統感染（腦膜炎、腦炎、HIV 等）
+        definition: 腦膜炎、腦炎、HIV、帶狀疱疹等中樞神經系統感染與物理治療。
+        keywords: [腦膜炎, 腦炎, HIV, 帶狀疱疹, 中樞神經感染]
+      - code: NEURO-PNI
+        name: 周邊神經損傷與神經肌肉疾病（GBS、顏面神經、小兒麻痺、肌肉失養症）
+        definition: 周邊神經損傷與分級（Sunderland）、周邊神經支配範圍、GBS、顏面神經麻痺、小兒麻痺與後小兒麻痺、肌肉失養症、周邊神經病變。
+        keywords: [GBS, Sunderland, Bell, 小兒麻痺, 後小兒麻痺, 裘馨氏, 周邊神經病變]
+      - code: NEURO-VESTIB
+        name: 前庭疾病與平衡復健
+        definition: BPPV、梅尼爾氏症、眼震、前庭眼反射、Dix-Hallpike 與 Epley 等前庭復健。
+        keywords: [BPPV, 前庭, 眼震, Dix-Hallpike, Epley, 前庭眼反射, 梅尼爾]
+      - code: NEURO-GERI
+        name: 老人物理治療與連續性照護
+        definition: 老化的動作控制改變、跌倒、衰弱、肌少症、老人體適能、運動動機、長照與連續性照護。
+        keywords: [老化, 跌倒, 衰弱, 肌少症, 體適能, 長照, 運動動機]
 
   - code: ORTHO
     name: 骨科疾病物理治療學
     full_name: 骨科疾病物理治療學
     short_name: 骨科
     topics:
-      - {code: ORTHO-EXAM,     name: 骨科評估、鑑別診斷與初級照護,    keywords: [特殊測試, 紅旗, 鑑別診斷, 轉介, 影像判讀, 疼痛機轉]}
-      - {code: ORTHO-TMJ-CERV, name: 顳頷關節與頸椎,                  keywords: [頸椎, 顳頷, 揮鞭, 神經根病變, 頸因性頭痛]}
-      - {code: ORTHO-THORACIC, name: 胸椎與肋骨,                      keywords: [胸椎, 肋骨, 駝背, 脊柱側彎]}
-      - {code: ORTHO-LUMBAR,   name: 腰椎與薦髂關節,                  keywords: [下背痛, 椎間盤突出, 椎管狹窄, 脊椎滑脫, 薦髂, 核心]}
-      - {code: ORTHO-POSTURE,  name: 姿勢,                            keywords: [姿勢評估, 不良姿勢, 骨盆傾斜, 肌肉失衡]}
-      - {code: ORTHO-SHOULDER, name: 肩關節,                          keywords: [旋轉肌袖, 夾擠, 沾黏性關節囊炎, 肩關節不穩, 肩鎖關節]}
-      - {code: ORTHO-ELBOW,    name: 肘與前臂,                        keywords: [網球肘, 高爾夫球肘, 肘脫位, 橈骨頭, 尺神經]}
-      - {code: ORTHO-WRIST-HAND, name: 腕與手,                        keywords: [腕隧道, 媽媽手, 扳機指, Colles, 舟狀骨, 肌腱修補]}
-      - {code: ORTHO-HIP,      name: 髖關節,                          keywords: [髖關節置換, 股骨頸骨折, 髖臼唇, 退化性關節炎, 髂脛束]}
-      - {code: ORTHO-KNEE,     name: 膝關節,                          keywords: [ACL, 半月板, 髕股疼痛, 全膝置換, 退化性關節炎]}
-      - {code: ORTHO-ANKLE-FOOT, name: 踝與足,                        keywords: [踝扭傷, 阿基里斯腱, 足底筋膜炎, 扁平足, 拇趾外翻]}
-      - {code: ORTHO-WOMEN,    name: 女性健康（骨質疏鬆、產前產後、更年期）, keywords: [骨質疏鬆, 懷孕, 產後, 更年期, 腹直肌分離]}
-      - {code: ORTHO-SPORTS,   name: 競技與運動防護（含急救）,        keywords: [運動傷害, 急救, PRICE, 貼紮, 回場標準, 熱傷害]}
-      - {code: ORTHO-SKIN-LYMPH, name: 皮膚與淋巴系統（燒燙傷、傷口、淋巴水腫）, keywords: [燒燙傷, 疤痕, 傷口, 淋巴水腫, 壓力衣]}
-      - {code: ORTHO-AMPUT,    name: 截肢,                            keywords: [截肢, 殘肢, 幻肢痛, 義肢前訓練]}
-      - {code: ORTHO-GENERAL,  name: 全身性與其他骨科疾患（關節炎、骨折癒合、術後原則）, keywords: [類風濕, 骨折癒合, 骨水泥, 術後注意事項, 纖維肌痛]}
+      - code: ORTHO-EXAM
+        name: 骨科評估、鑑別診斷與初級照護
+        definition: 跨部位的特殊測試配對、紅旗徵兆（如下背痛合併尿貯留）、鑑別診斷、轉介、影像判讀、疼痛機轉。
+        excludes:
+          - 單一部位的特殊測試（Ober、直膝抬腿、頸椎操作前安全測試）與該部位的神經損傷 → 該部位主題
+        keywords: [跨部位特殊測試, 紅旗, 鑑別診斷, 轉介, 影像判讀, 疼痛機轉]
+      - code: ORTHO-TMJ-CERV
+        name: 顳頷關節與頸椎
+        definition: 顳頷關節、頸椎疾患、揮鞭症、神經根病變、頸因性頭痛、頸椎操作前的安全測試（椎動脈、翼狀韌帶）。
+        keywords: [頸椎, 顳頷, 揮鞭, 神經根病變, 頸因性頭痛, 頸椎操作安全測試, 椎動脈測試]
+      - code: ORTHO-THORACIC
+        name: 胸椎與肋骨
+        definition: 胸椎與肋骨疾患、駝背、脊柱側彎與其量測。
+        keywords: [胸椎, 肋骨, 駝背, 脊柱側彎]
+      - code: ORTHO-LUMBAR
+        name: 腰椎與薦髂關節
+        definition: 下背痛、椎間盤突出、椎管狹窄、脊椎滑脫、薦髂關節、核心訓練、直膝抬腿測試、腰神經根壓迫。
+        keywords: [下背痛, 椎間盤突出, 椎管狹窄, 脊椎滑脫, 薦髂, 核心, 直膝抬腿]
+      - code: ORTHO-POSTURE
+        name: 姿勢與步態
+        definition: 姿勢評估與不良姿勢、骨盆傾斜、肌肉失衡、正常步態與步態偏差、步態所需關節角度。
+        keywords: [姿勢評估, 不良姿勢, 骨盆傾斜, 肌肉失衡, 正常步態, 步態偏差, 步態所需關節角度]
+      - code: ORTHO-SHOULDER
+        name: 肩關節
+        definition: 旋轉肌袖、夾擠、沾黏性關節囊炎、肩關節不穩、肩鎖關節，以及肩部周邊神經損傷（腋神經等）。
+        keywords: [旋轉肌袖, 夾擠, 沾黏性關節囊炎, 肩關節不穩, 肩鎖關節, 腋神經, 肩部周邊神經損傷]
+      - code: ORTHO-ELBOW
+        name: 肘與前臂
+        definition: 網球肘、高爾夫球肘、肘脫位、橈骨頭、尺神經問題。
+        keywords: [網球肘, 高爾夫球肘, 肘脫位, 橈骨頭, 尺神經]
+      - code: ORTHO-WRIST-HAND
+        name: 腕與手
+        definition: 腕隧道症候群、媽媽手、扳機指、Colles 骨折、舟狀骨骨折、肌腱修補。
+        keywords: [腕隧道, 媽媽手, 扳機指, Colles, 舟狀骨, 肌腱修補]
+      - code: ORTHO-HIP
+        name: 髖關節
+        definition: 髖關節置換、股骨頸骨折、髖臼唇、退化性關節炎、髂脛束與 Ober test、梨狀肌症候群。
+        keywords: [髖關節置換, 股骨頸骨折, 髖臼唇, 退化性關節炎, 髂脛束, Ober test, 梨狀肌症候群]
+      - code: ORTHO-KNEE
+        name: 膝關節
+        definition: ACL、半月板、髕股疼痛、全膝置換、退化性關節炎。
+        keywords: [ACL, 半月板, 髕股疼痛, 全膝置換, 退化性關節炎]
+      - code: ORTHO-ANKLE-FOOT
+        name: 踝與足
+        definition: 踝扭傷、阿基里斯腱、足底筋膜炎、扁平足、拇趾外翻、踝關節固定術。
+        keywords: [踝扭傷, 阿基里斯腱, 足底筋膜炎, 扁平足, 拇趾外翻]
+      - code: ORTHO-WOMEN
+        name: 女性健康（骨質疏鬆、產前產後、更年期）
+        definition: 骨質疏鬆、懷孕與產後（腹直肌分離等）、更年期。
+        keywords: [骨質疏鬆, 懷孕, 產後, 更年期, 腹直肌分離]
+      - code: ORTHO-SPORTS
+        name: 競技與運動防護（含急救）
+        definition: 運動傷害處置（PRICE）、急救、貼紮、回場標準、熱傷害、疲勞性骨折的運動處置。
+        keywords: [運動傷害, 急救, PRICE, 貼紮, 回場標準, 熱傷害]
+      - code: ORTHO-SKIN-LYMPH
+        name: 皮膚與淋巴系統（燒燙傷、傷口、淋巴水腫）
+        definition: 燒燙傷、疤痕、傷口照護、淋巴水腫與壓力衣。
+        keywords: [燒燙傷, 疤痕, 傷口, 淋巴水腫, 壓力衣]
+      - code: ORTHO-AMPUT
+        name: 截肢
+        definition: 截肢後照護、殘肢處理、幻肢痛、義肢前訓練。
+        keywords: [截肢, 殘肢, 幻肢痛, 義肢前訓練]
+      - code: ORTHO-GENERAL
+        name: 全身性與其他骨科疾患（關節炎、骨折癒合、術後原則）
+        definition: 類風濕性關節炎等全身性疾患、骨折癒合、骨水泥、術後注意事項、纖維肌痛。
+        keywords: [類風濕, 骨折癒合, 骨水泥, 術後注意事項, 纖維肌痛]
 
   - code: CARDPED
     name: 心肺疾病與小兒疾病物理治療學
     full_name: 心肺疾病與小兒疾病物理治療學
     short_name: 心肺小兒
     topics:
-      - {code: CARDPED-RESP-FOUND,  name: 呼吸系統物理治療原理與機轉, group: 心肺, keywords: [呼吸力學, 通氣, 氣體交換, 黏液清除, 呼吸肌]}
-      - {code: CARDPED-RESP-ASSESS, name: 呼吸系統評估,               group: 心肺, keywords: [肺功能, 血液氣體, 聽診, 胸部X光, 呼吸型態, 氧飽和]}
-      - {code: CARDPED-RESP-TX,     name: 肺部疾病物理治療與肺部復健, group: 心肺, keywords: [COPD, 氣喘, 肺炎, 胸腔手術, 姿位引流, 呼吸訓練, 肺部復健]}
-      - {code: CARDPED-CV-FOUND,    name: 循環系統物理治療原理與機轉, group: 心肺, keywords: [心臟生理, 血流動力學, 心肌氧耗, 自主神經]}
-      - {code: CARDPED-CV-ASSESS,   name: 循環系統評估（心電圖、運動測試）, group: 心肺, keywords: [心電圖, 心律不整, 運動測試, MET, RPE, 血壓反應]}
-      - {code: CARDPED-CV-TX,       name: 心血管疾病物理治療與心臟復健, group: 心肺, keywords: [心肌梗塞, 心衰竭, 心臟手術, 心臟復健分期, 周邊血管疾病]}
-      - {code: CARDPED-HP,          name: 健康促進與運動處方,         group: 心肺, keywords: [ACSM, FITT, 運動處方, 代謝症候群, 糖尿病, 肥胖, 體適能]}
-      - {code: CARDPED-ONC-ICU,     name: 癌症、重症與安寧照護,       group: 心肺, keywords: [癌症, 加護病房, 早期活動, 呼吸器, 安寧]}
-      - {code: CARDPED-PED-FOUND,   name: 小兒物理治療基礎與原理,     group: 小兒, keywords: [以家庭為中心, ICF-CY, 動作發展理論, 反射]}
-      - {code: CARDPED-PED-DEV,     name: 兒童發展與評估,             group: 小兒, keywords: [發展里程碑, 原始反射, 姿勢反應, AIMS, PDMS, GMFM, Bayley]}
-      - {code: CARDPED-PED-NEURO,   name: 小兒神經發展疾患（腦性麻痺、發展遲緩、脊柱裂等）, group: 小兒, keywords: [腦性麻痺, GMFCS, 脊柱裂, 發展遲緩, 自閉症, 唐氏症, 早產]}
-      - {code: CARDPED-PED-OTHER,   name: 小兒肌肉骨骼、呼吸循環與其他疾患, group: 小兒, keywords: [斜頸, 髖發育不良, 脊柱側彎, 先天性心臟病, 囊腫性纖維化, 裘馨氏]}
-      - {code: CARDPED-PED-HP,      name: 兒童健康促進與預防,         group: 小兒, keywords: [兒童體適能, 肥胖, 身體活動建議, 傷害預防]}
-      - {code: CARDPED-PED-SYSTEM,  name: 早期療育、學校系統、長照、轉銜與法規, group: 小兒, keywords: [早期療育, IEP, IFSP, 特殊教育, 轉銜, 法規]}
+      - code: CARDPED-RESP-FOUND
+        name: 呼吸系統物理治療原理與機轉
+        group: 心肺
+        definition: 呼吸力學、通氣、氣體交換、黏液清除、呼吸肌、肺容積（含脊髓損傷的呼吸功能）。
+        keywords: [呼吸力學, 通氣, 氣體交換, 黏液清除, 呼吸肌, 肺容積, 脊髓損傷呼吸功能]
+      - code: CARDPED-RESP-ASSESS
+        name: 呼吸系統評估
+        group: 心肺
+        definition: 肺功能、血液氣體、聽診、胸部 X 光、呼吸型態、血氧。
+        keywords: [肺功能, 血液氣體, 聽診, 胸部X光, 呼吸型態, 氧飽和]
+      - code: CARDPED-RESP-TX
+        name: 肺部疾病物理治療與肺部復健
+        group: 心肺
+        definition: COPD、氣喘、肺炎、氣胸、限制型肺疾、胸腔手術的物理治療；姿位引流與拍痰手法、呼吸訓練、機械通氣輔助（IPPB）、肺部復健。
+        keywords: [COPD, 氣喘, 肺炎, 氣胸, 限制型肺疾, 胸腔手術, 姿位引流, 呼吸訓練, 機械通氣輔助, IPPB, 肺部復健]
+      - code: CARDPED-CV-FOUND
+        name: 循環系統物理治療原理與機轉
+        group: 心肺
+        definition: 心臟生理、血流動力學、心肌氧耗、自主神經對循環的調控、姿勢改變的循環反應。
+        excludes:
+          - 訓練後的適應、臥床去適能 → CARDPED-EXPHYS
+        keywords: [心臟生理, 血流動力學, 心肌氧耗, 自主神經]
+      - code: CARDPED-CV-ASSESS
+        name: 循環系統評估（心電圖、運動測試）
+        group: 心肺
+        definition: 心電圖判讀、心律不整、運動測試的執行與終止條件、MET、RPE、血壓反應。
+        excludes:
+          - 無氧閾值等運動生理概念 → CARDPED-EXPHYS
+        keywords: [心電圖, 心律不整, 運動測試, MET, RPE, 血壓反應]
+      - code: CARDPED-CV-TX
+        name: 心血管疾病物理治療與心臟復健
+        group: 心肺
+        definition: 心肌梗塞、心衰竭、心臟手術、周邊血管疾病的物理治療，以及心臟復健分期。
+        keywords: [心肌梗塞, 心衰竭, 心臟手術, 心臟復健分期, 周邊血管疾病]
+      - code: CARDPED-EXPHYS
+        name: 運動生理（訓練適應、去適能、無氧閾值、運動時心肺反應，含兒童）
+        group: 心肺
+        definition: 訓練適應、臥床去適能、無氧閾值（乳酸閾、換氣閾）、最大攝氧量、動靜脈氧差、成人與兒童運動時的心肺反應。
+        keywords: [運動生理, 訓練適應, 耐力訓練, 臥床, 去適能, 無氧閾值, 乳酸閾, 換氣閾, 最大攝氧量, 動靜脈氧差, 兒童運動反應]
+      - code: CARDPED-HP
+        name: 健康促進與運動處方
+        group: 心肺
+        definition: ACSM 運動處方（FITT）、代謝症候群、糖尿病、肥胖、體適能。
+        keywords: [ACSM, FITT, 運動處方, 代謝症候群, 糖尿病, 肥胖, 體適能]
+      - code: CARDPED-ONC-ICU
+        name: 癌症、重症與安寧照護
+        group: 心肺
+        definition: 癌症物理治療、加護病房與早期活動、呼吸器病人、安寧照護。
+        keywords: [癌症, 加護病房, 早期活動, 呼吸器, 安寧]
+      - code: CARDPED-PED-FOUND
+        name: 小兒物理治療基礎與原理
+        group: 小兒
+        definition: 以家庭為中心、ICF-CY、動作與認知發展理論（皮亞傑）、反射理論。
+        keywords: [以家庭為中心, ICF-CY, 動作發展理論, 認知發展理論, 皮亞傑, 反射]
+      - code: CARDPED-PED-DEV
+        name: 兒童發展與評估（含測量學）
+        group: 小兒
+        definition: 發展里程碑、原始反射與姿勢反應、AIMS、PDMS、GMFM、Bayley 等評估工具，以及測量學（百分位、常模、ROC、信效度）。
+        excludes:
+          - 小兒理學檢查（Thomas test、膕角度）→ CARDPED-PED-OTHER
+        keywords: [發展里程碑, 原始反射, 姿勢反應, AIMS, PDMS, GMFM, Bayley, 測量學, 百分位等級, 常模, ROC, 信效度]
+      - code: CARDPED-PED-NEURO
+        name: 小兒神經發展疾患（腦性麻痺、發展遲緩、脊柱裂等）
+        group: 小兒
+        definition: 腦性麻痺（GMFCS）、脊柱裂、發展遲緩、自閉症、唐氏症、早產與 NICU 高危險嬰兒、智能障礙、發展性協調障礙、行為改變技術。
+        keywords: [腦性麻痺, GMFCS, 脊柱裂, 發展遲緩, 自閉症, 唐氏症, 早產, NICU, 高危險嬰兒, 智能障礙, 發展性協調障礙, 行為改變技術]
+      - code: CARDPED-PED-OTHER
+        name: 小兒肌肉骨骼、呼吸循環與其他疾患（含小兒理學檢查）
+        group: 小兒
+        definition: 斜頸、髖發育不良、脊柱側彎、先天性心臟病、囊腫性纖維化、裘馨氏肌肉失養症、兒童頭部外傷，以及小兒理學檢查（Thomas test、膕角度）。
+        keywords: [斜頸, 髖發育不良, 脊柱側彎, 先天性心臟病, 囊腫性纖維化, 裘馨氏, 理學檢查, Thomas test, 膕角度, 兒童頭部外傷]
+      - code: CARDPED-PED-HP
+        name: 兒童健康促進與預防
+        group: 小兒
+        definition: 兒童體適能、肥胖、身體活動建議、傷害預防。
+        excludes:
+          - 兒童運動時的心肺反應 → CARDPED-EXPHYS
+        keywords: [兒童體適能, 肥胖, 身體活動建議, 傷害預防]
+      - code: CARDPED-PED-SYSTEM
+        name: 早期療育、學校系統、長照、轉銜與法規
+        group: 小兒
+        definition: 早期療育、IEP、IFSP、特殊教育與學校系統、轉銜、相關法規。
+        keywords: [早期療育, IEP, IFSP, 特殊教育, 轉銜, 法規]

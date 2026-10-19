@@ -88,6 +88,15 @@ CREATE INDEX idx_questions_subject ON questions(subject_code);
 CREATE INDEX idx_questions_topic   ON questions(topic_code);
 CREATE INDEX idx_questions_group   ON questions(group_id, group_pos);
 
+-- 每題的全部主題：rank 0 = 主要主題（同 questions.topic_code），1–2 = 次要主題（可跨科，見 ARCHITECTURE 3.8）
+CREATE TABLE question_topics (
+    question_id TEXT NOT NULL REFERENCES questions(id),
+    topic_code  TEXT NOT NULL REFERENCES topics(code),
+    rank        INTEGER NOT NULL,
+    PRIMARY KEY (question_id, topic_code)
+);
+CREATE INDEX idx_question_topics_topic ON question_topics(topic_code);
+
 CREATE TABLE figures (
     question_id TEXT PRIMARY KEY REFERENCES questions(id),
     image       BLOB NOT NULL,   -- WebP
@@ -113,8 +122,10 @@ def _sha256_file(p: Path) -> str:
 def build(version: str, release_base_url: str | None) -> None:
     C.DIST_DIR.mkdir(parents=True, exist_ok=True)
     db_path = C.DIST_DIR / "questions.sqlite"
-    if db_path.exists():
-        db_path.unlink()
+    # 連同殘留的 -journal／-wal／-shm 一起刪，否則新檔開啟時會被當成 hot journal 回滾
+    for p in (db_path, *(db_path.with_name(db_path.name + suf) for suf in ("-journal", "-wal", "-shm"))):
+        if p.exists():
+            p.unlink()
     tax = yaml.safe_load(C.TAXONOMY_PATH.read_text("utf-8"))
 
     con = sqlite3.connect(str(db_path))
@@ -127,6 +138,7 @@ def build(version: str, release_base_url: str | None) -> None:
         for i, t in enumerate(tax_s["topics"], start=1):
             con.execute("INSERT INTO topics VALUES (?,?,?,?,?)", (t["code"], s["code"], t["name"], t.get("group"), i))
 
+    valid_topics = {t["code"] for sx in tax["subjects"] for t in sx["topics"]}
     exams_summary = []
     q_total = 0
     for p in sorted(C.JSON_DIR.glob("*/*.json")):
@@ -142,6 +154,13 @@ def build(version: str, release_base_url: str | None) -> None:
                  q["options"]["A"], q["options"]["B"], q["options"]["C"], q["options"]["D"],
                  ",".join(q["accepted_answers"]), q.get("official_answer"), int(q["is_voided"]),
                  q.get("correction_note"), int(bool(q.get("figure"))), q.get("group_id"), q.get("group_pos"), json.dumps(q.get("tags") or [], ensure_ascii=False)))
+            if q.get("topic"):
+                seen = {q["topic"]}
+                con.execute("INSERT INTO question_topics VALUES (?,?,0)", (q["id"], q["topic"]))
+                for c in (q.get("secondary_topics") or [])[:2]:
+                    if c in valid_topics and c not in seen:
+                        seen.add(c)
+                        con.execute("INSERT INTO question_topics VALUES (?,?,?)", (q["id"], c, len(seen) - 1))
             con.execute("INSERT INTO questions_fts VALUES (?,?,?,?,?,?)",
                         (q["id"], q["stem"], q["options"]["A"], q["options"]["B"], q["options"]["C"], q["options"]["D"]))
             if q.get("figure"):

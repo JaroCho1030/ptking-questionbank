@@ -568,7 +568,7 @@ def _load_existing_tags(json_path: Path) -> dict[str, dict]:
     if not json_path.exists():
         return {}
     data = json.loads(json_path.read_text("utf-8"))
-    return {q["id"]: {k: q.get(k) for k in ("topic", "tags", "topic_confidence", "topic_source")} for q in data.get("questions", [])}
+    return {q["id"]: {k: q.get(k) for k in ("topic", "tags", "topic_confidence", "topic_source", "secondary_topics", "alt_topic")} for q in data.get("questions", [])}
 
 
 def parse_one(key: str, subj: str, sub: dict, exam_code: str) -> dict:
@@ -626,6 +626,8 @@ def assemble(header: dict, questions: list[dict], answer_map: dict, warnings: li
             "tags": tags.get("tags") or [],
             "topic_confidence": tags.get("topic_confidence"),
             "topic_source": tags.get("topic_source"),
+            "secondary_topics": tags.get("secondary_topics") or [],
+            "alt_topic": tags.get("alt_topic"),
             "review_flags": q["review_flags"],
         })
 
