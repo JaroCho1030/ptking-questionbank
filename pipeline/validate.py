@@ -11,6 +11,10 @@
     - 題目的 review_flags（缺選項、答案需確認、附圖問題）
     - 主題：topic 必須在 taxonomy 內（可跨科）；topic_confidence 低於門檻列入審核；未標記的統計
       次要主題 secondary_topics：最多 2 個、必須在 taxonomy 內（可跨科）、不可與主要主題相同或重複
+    - 題幹／選項殘留部首區段的字（textnorm 沒對照到的 ⻑ 之類）
+
+已審紀錄 data/review/reviewed.csv（id,reasons,reviewed_at,note）：同一題、同樣原因審過就不再列入；
+原因變了（例如重新 parse 後多了新問題）會再出現。
 """
 from __future__ import annotations
 
@@ -24,6 +28,23 @@ from pathlib import Path
 import yaml
 
 from . import config as C
+from .textnorm import _is_radical
+
+REVIEWED_FIELDS = ["id", "reasons", "reviewed_at", "note"]
+
+
+def load_reviewed(path: Path | None = None) -> set[tuple[str, str]]:
+    path = path or C.REVIEW_DIR / "reviewed.csv"
+    if not path.exists():
+        return set()
+    with path.open(encoding="utf-8-sig") as f:
+        return {(r["id"].strip(), r["reasons"].strip()) for r in csv.DictReader(f) if r.get("id")}
+
+
+def drop_reviewed(rows: list[dict], reviewed: set[tuple[str, str]]) -> tuple[list[dict], int]:
+    """拿掉同 id、同原因已審過的列（純函式，測試用）。"""
+    kept = [r for r in rows if (r["id"], r["reasons"]) not in reviewed]
+    return kept, len(rows) - len(kept)
 
 
 def load_taxonomy() -> dict:
@@ -79,6 +100,10 @@ def validate_file(path: Path, data: dict, topics: dict) -> tuple[list[dict], lis
         bad = [a for a in q["accepted_answers"] if a not in C.OPTION_LETTERS]
         if bad:
             reasons.append(f"答案字母異常 {bad}")
+        text = q["stem"] + "".join(q["options"].values())
+        leftovers = sorted({ch for ch in text if _is_radical(ch)})
+        if leftovers:
+            reasons.append(f"部首字殘留 {''.join(leftovers)}")
         if q["has_figure"] and not q.get("figure"):
             reasons.append("疑似附圖但沒有裁到圖")
         if q.get("topic"):
@@ -129,6 +154,7 @@ def main(argv=None):
                 grouped += 1
                 group_ids.add(q["group_id"])
 
+    all_rows, n_reviewed = drop_reviewed(all_rows, load_reviewed())
     C.REVIEW_DIR.mkdir(parents=True, exist_ok=True)
     out = C.REVIEW_DIR / "review_queue.csv"
     with out.open("w", newline="", encoding="utf-8-sig") as f:
@@ -137,7 +163,7 @@ def main(argv=None):
         w.writerows(all_rows)
 
     print(f"題目總數 {total}，已標主題 {tagged}，送分 {voided}，附圖 {figures}，題組 {len(group_ids)} 組 {grouped} 題")
-    print(f"待審核 {len(all_rows)} 題 → {out}")
+    print(f"待審核 {len(all_rows)} 題 → {out}（已審略過 {n_reviewed} 題）")
     for e in all_errors:
         print("[error]", e)
     if args.strict and all_errors:

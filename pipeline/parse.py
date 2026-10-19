@@ -98,17 +98,27 @@ def is_inline_glyph(bbox) -> bool:
     return x1 - x0 < C.INLINE_GLYPH_MAX and 5 < y1 - y0 < C.INLINE_GLYPH_MAX
 
 
+def is_line_image(bbox) -> bool:
+    """一行字高度的小圖（行內公式，例：V̇E/V̇CO₂）。沒見過的要發 warning，否則字會默默消失。"""
+    x0, y0, x1, y1 = bbox
+    return 5 < x1 - x0 < C.LINE_IMAGE_MAX_W and 5 < y1 - y0 < C.LINE_IMAGE_MAX_H
+
+
+def _inside(box, outer, pad: float = 1.0) -> bool:
+    return (box[0] >= outer[0] - pad and box[1] >= outer[1] - pad
+            and box[2] <= outer[2] + pad and box[3] <= outer[3] + pad)
+
+
 def _image_glyphs(mpage, page_chars: list[dict], unknown: list[str]):
     """行內圖片字 → (字, bbox, 字級)。bbox 的上下緣對齊同一行的文字，排版時才會落在同一行。"""
     out = []
     for info in mpage.get_image_info(hashes=True):
         bbox = tuple(info["bbox"])
-        if not is_inline_glyph(bbox):
-            continue
         digest = info["digest"].hex()
         text = C.GLYPH_IMAGES.get(digest)
         if text is None:
-            unknown.append(digest)
+            if is_inline_glyph(bbox) or is_line_image(bbox):
+                unknown.append(digest)
             continue
         cy, cx = (bbox[1] + bbox[3]) / 2, (bbox[0] + bbox[2]) / 2
         near = [c for c in page_chars if abs((c["top"] + c["bottom"]) / 2 - cy) < 6]
@@ -459,6 +469,29 @@ def merge_strips(boxes: list[tuple[float, float, float, float]], gap: float = 1.
     return [tuple(m) for m in merged]
 
 
+def trim_clip(fig: tuple[float, float, float, float], clip: tuple[float, float, float, float],
+              lines: list[tuple[float, float, float, float]], gap: float = 1.0, tol: float = 3.0
+              ) -> tuple[float, float, float, float]:
+    """把裁切框的上下留白收回，不讓留白裁進圖外的文字行（純函式，測試用）。
+
+    fig 是圖形本身的範圍，clip 是外擴留白後的框。完全在圖下方（或上方）、但碰到留白的文字行
+    ——通常是選項 A 或題幹最後一行——會把 clip 的下緣（上緣）收到那行之外 gap 處。
+    圖片框本身可能壓到文字行幾點（例：106-2-CARDPED-019 心電圖下緣壓進選項 A 1.8pt），
+    所以重疊不超過 tol 的行也算在圖外，最多收進圖 tol。
+    跟圖垂直範圍重疊更多的字（圖旁標籤、選項是照片時的 A/B 代號）不動。
+    """
+    fx0, fy0, fx1, fy1 = fig
+    cx0, cy0, cx1, cy1 = clip
+    for x0, y0, x1, y1 in lines:
+        if x1 <= cx0 or x0 >= cx1 or y1 <= cy0 or y0 >= cy1:
+            continue  # 沒碰到裁切框
+        if y0 >= fy1 - tol:
+            cy1 = min(cy1, max(fy1 - tol, y0 - gap))
+        elif y1 <= fy0 + tol:
+            cy0 = max(cy0, min(fy0 + tol, y1 + gap))
+    return (cx0, cy0, cx1, cy1)
+
+
 def crop_figures(pdf_path: Path, questions: list[dict], out_dir: Path, id_for) -> None:
     """找出每題範圍內的圖形/圖片並裁成 WebP。
 
@@ -505,13 +538,22 @@ def crop_figures(pdf_path: Path, questions: list[dict], out_dir: Path, id_for) -
             if bottom <= top:
                 continue
             region = (page.rect.x0 + 24, top, page.rect.x1 - 24, bottom)
-            raw = [tuple(d["rect"]) for d in page.get_drawings()] + merge_strips([tuple(i["bbox"]) for i in page.get_image_info() if not is_inline_glyph(i["bbox"])])
+            infos = page.get_image_info(hashes=True)
+            glyphs = [tuple(i["bbox"]) for i in infos
+                      if is_inline_glyph(i["bbox"]) or i["digest"].hex() in C.GLYPH_IMAGES]
+            raw = [tuple(d["rect"]) for d in page.get_drawings()] + merge_strips(
+                [tuple(i["bbox"]) for i in infos if tuple(i["bbox"]) not in glyphs])
+            raw = [b for b in raw if not any(_inside(b, g) for g in glyphs)]  # 行內字圖片底下的白底框也不算圖
             boxes = figure_boxes(raw, region, page.rect.width * page.rect.height)
             if boxes:
                 u = fitz.Rect(boxes[0])
                 for bx in boxes[1:]:
                     u |= fitz.Rect(bx)
-                clips.append((pno, (u + (-8, -8, 8, 8)) & page.rect))
+                padded = (u + (-8, -8, 8, 8)) & page.rect
+                text_lines = [tuple(ln["bbox"]) for blk in page.get_text("dict")["blocks"]
+                              for ln in blk.get("lines", [])
+                              if "".join(sp["text"] for sp in ln["spans"]).strip()]
+                clips.append((pno, fitz.Rect(trim_clip(tuple(u), tuple(padded), text_lines))))
 
         if clips:
             _render_clips(fitz, doc, clips, out_path)

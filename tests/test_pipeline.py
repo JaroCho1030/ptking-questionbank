@@ -31,6 +31,7 @@ def load_pages(name: str) -> list[list[str]]:
 def test_fix_radicals():
     assert fix_radicals("使⽤⼀個⼈") == "使用一個人"
     assert fix_radicals("①②③") == "①②③"  # 不能動圈數字
+    assert fix_radicals("⻑柄梳、⺠國、⻄醫") == "長柄梳、民國、西醫"  # 部首補充區，NFKC 不處理
     assert clean_text("如下圖 所示 的 Berg 量表") == "如下圖所示的 Berg 量表"
 
 
@@ -573,3 +574,43 @@ def test_format_batch_includes_definitions():
     text = T.format_batch(topics, [q], {"x-1": q}, T.other_subject_topics(tax, "NEURO"))
     assert "包含：" in text and "不含：Brunnstrom 分期 → NEURO-ASSESS" in text and "關鍵字：" in text
     assert "不含" in T.SYSTEM_PROMPT
+
+
+def test_trim_clip_keeps_option_text_out():
+    """105-1-NEURO-030：圖下緣留白裁進選項 A 那一行 → 收回到那行之上；圖旁標籤不動。"""
+    from pipeline.parse import trim_clip
+    fig = (60, 100, 400, 300)
+    clip = (52, 92, 408, 308)
+    stem_line = (40, 88, 500, 98)       # 上方題幹最後一行
+    option_a = (40, 304, 300, 316)      # 下方選項 A
+    label = (380, 200, 420, 212)        # 圖旁標籤，跟圖垂直重疊
+    far = (40, 400, 300, 412)           # 沒碰到
+    assert trim_clip(fig, clip, [stem_line, option_a, label, far]) == (52, 99, 408, 303)
+
+
+def test_trim_clip_tolerance():
+    from pipeline.parse import trim_clip
+    fig = (60, 100, 400, 300)
+    # 文字行緊貼圖（間距 < gap）→ 收到那行之上 gap 處
+    assert trim_clip(fig, (52, 92, 408, 308), [(40, 300.5, 300, 312)]) == (52, 92, 408, 299.5)
+    # 圖片框壓進選項行 1.8pt（106-2-CARDPED-019）→ 收進圖，切掉那行
+    assert trim_clip(fig, (52, 92, 408, 308), [(40, 298.2, 300, 317)]) == (52, 92, 408, 297.2)
+    # 壓進超過 tol 的行當成圖的一部分，不動
+    assert trim_clip(fig, (52, 92, 408, 308), [(40, 290, 300, 310)]) == (52, 92, 408, 308)
+
+
+def test_line_image_and_known_formula_glyph():
+    from pipeline.parse import is_inline_glyph, is_line_image
+    assert is_line_image((0, 0, 45, 15.7))          # V̇E/V̇CO₂：比行內字寬
+    assert not is_inline_glyph((0, 0, 45, 15.7))
+    assert not is_line_image((0, 0, 186, 15.4))     # 被切成條的大圖
+    assert not is_line_image((0, 0, 3, 17.7))       # 細線
+    assert not is_line_image((0, 0, 59, 26.3))      # 選項是小圖（FDA 標章）
+
+
+def test_drop_reviewed():
+    from pipeline.validate import drop_reviewed
+    rows = [{"id": "a", "reasons": "選項 A 空白"}, {"id": "b", "reasons": "附圖：x"}, {"id": "a2", "reasons": "y"}]
+    reviewed = {("a", "選項 A 空白"), ("b", "附圖：舊原因")}
+    kept, n = drop_reviewed(rows, reviewed)
+    assert [r["id"] for r in kept] == ["b", "a2"] and n == 1   # 原因變了要再出現

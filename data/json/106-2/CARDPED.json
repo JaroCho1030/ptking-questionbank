@@ -14,7 +14,7 @@
   "source_m": "https://wwwq.moex.gov.tw/exam/wHandExamQandA_File.ashx?t=M&code=106100&c=311&s=66&q=1",
   "answer_sha256": "54e1135ea93a4b436b053f9fb354c1a5f718f37c260778ad1c8e3af8b48c9e51",
   "correction_sha256": "d487e0893d191e7ff6764c7a7cd3c67cbb8b26e34b7478b59ff1729c0b3f61d1",
-  "parsed_at": "2026-10-18T11:03:01+00:00",
+  "parsed_at": "2026-10-19T04:16:39+00:00",
   "warnings": []
  },
  "questions": [
@@ -48,18 +48,18 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [
     "BASIC-ANA-MSK"
    ],
-   "alt_topic": "BASIC-ANA-NEU"
+   "alt_topic": "BASIC-ANA-NEU",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-002",
    "number": 2,
    "stem": "有關通氣儲備量，下列敘述何者錯誤？",
    "options": {
-    "A": "最大運動時通氣（）所占的最大自主通氣量（maximal voluntary ventilation, MVV）的比值，即",
+    "A": "最大運動時通氣（V̇Emax）所占的最大自主通氣量（maximal voluntary ventilation, MVV）的比值，即\nV̇Emax/MVV",
     "B": "一般正常人約為50～85%",
     "C": "有肺部疾病者此值較低",
     "D": "此值越低表示通氣儲備越好"
@@ -70,9 +70,9 @@
    ],
    "is_voided": false,
    "correction_note": null,
-   "has_figure": true,
-   "figure": "figures/106-2-CARDPED-002.webp",
-   "figure_kind": "graphic",
+   "has_figure": false,
+   "figure": null,
+   "figure_kind": null,
    "group_id": null,
    "group_pos": null,
    "page": 1,
@@ -83,9 +83,9 @@
    ],
    "topic_confidence": 0.5,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-EXPHYS"
+   "alt_topic": "CARDPED-EXPHYS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-003",
@@ -117,9 +117,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-RESP-FOUND"
+   "alt_topic": "CARDPED-RESP-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-004",
@@ -151,9 +151,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-RESP-FOUND"
+   "alt_topic": "CARDPED-RESP-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-005",
@@ -185,9 +185,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-RESP-ASSESS"
+   "alt_topic": "CARDPED-RESP-ASSESS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-006",
@@ -218,9 +218,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-RESP-TX"
+   "alt_topic": "CARDPED-RESP-TX",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-007",
@@ -251,9 +251,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-RESP-TX"
+   "alt_topic": "CARDPED-RESP-TX",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-008",
@@ -283,9 +283,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-009",
@@ -317,9 +317,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-RESP-FOUND"
+   "alt_topic": "CARDPED-RESP-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-010",
@@ -351,9 +351,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "INTRO-MED"
+   "alt_topic": "INTRO-MED",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-011",
@@ -385,9 +385,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-ONC-ICU"
+   "alt_topic": "CARDPED-ONC-ICU",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-012",
@@ -418,9 +418,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-RESP-FOUND"
+   "alt_topic": "CARDPED-RESP-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-013",
@@ -451,9 +451,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-014",
@@ -484,9 +484,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-RESP-FOUND"
+   "alt_topic": "CARDPED-RESP-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-015",
@@ -517,9 +517,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-ASSESS"
+   "alt_topic": "CARDPED-CV-ASSESS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-016",
@@ -550,9 +550,9 @@
    ],
    "topic_confidence": 0.5,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "TECH-STRENGTH"
+   "alt_topic": "TECH-STRENGTH",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-017",
@@ -583,9 +583,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-018",
@@ -616,9 +616,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-019",
@@ -649,9 +649,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-020",
@@ -682,9 +682,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-EXPHYS"
+   "alt_topic": "CARDPED-EXPHYS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-021",
@@ -716,9 +716,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-ASSESS"
+   "alt_topic": "CARDPED-CV-ASSESS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-022",
@@ -750,9 +750,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-ASSESS"
+   "alt_topic": "CARDPED-CV-ASSESS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-023",
@@ -784,9 +784,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-ASSESS"
+   "alt_topic": "CARDPED-CV-ASSESS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-024",
@@ -817,9 +817,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-025",
@@ -850,9 +850,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-ASSESS"
+   "alt_topic": "CARDPED-CV-ASSESS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-026",
@@ -881,11 +881,11 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
+   "secondary_topics": [],
+   "alt_topic": "CARDPED-CV-TX",
    "review_flags": [
     "缺選項 ABCD"
-   ],
-   "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-TX"
+   ]
   },
   {
    "id": "106-2-CARDPED-027",
@@ -916,9 +916,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-ASSESS"
+   "alt_topic": "CARDPED-CV-ASSESS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-028",
@@ -950,9 +950,9 @@
    ],
    "topic_confidence": 0.5,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-EXPHYS"
+   "alt_topic": "CARDPED-EXPHYS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-029",
@@ -983,9 +983,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-HP"
+   "alt_topic": "CARDPED-HP",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-030",
@@ -1016,9 +1016,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "BASIC-PHY-MSK"
+   "alt_topic": "BASIC-PHY-MSK",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-031",
@@ -1048,9 +1048,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-ASSESS"
+   "alt_topic": "CARDPED-CV-ASSESS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-032",
@@ -1081,9 +1081,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "TECH-ROM"
+   "alt_topic": "TECH-ROM",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-033",
@@ -1114,9 +1114,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-034",
@@ -1147,9 +1147,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "TECH-STRENGTH"
+   "alt_topic": "TECH-STRENGTH",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-035",
@@ -1181,9 +1181,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-TX"
+   "alt_topic": "CARDPED-CV-TX",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-036",
@@ -1215,9 +1215,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-037",
@@ -1248,9 +1248,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-CV-ASSESS"
+   "alt_topic": "CARDPED-CV-ASSESS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-038",
@@ -1281,9 +1281,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-039",
@@ -1315,9 +1315,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-RESP-TX"
+   "alt_topic": "CARDPED-RESP-TX",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-040",
@@ -1348,9 +1348,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-041",
@@ -1381,9 +1381,9 @@
    ],
    "topic_confidence": 0.5,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-HP"
+   "alt_topic": "CARDPED-PED-HP",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-042",
@@ -1414,9 +1414,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-043",
@@ -1446,9 +1446,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-SYSTEM"
+   "alt_topic": "CARDPED-PED-SYSTEM",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-044",
@@ -1479,9 +1479,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "NEURO-FOUND"
+   "alt_topic": "NEURO-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-045",
@@ -1513,9 +1513,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "NEURO-FOUND"
+   "alt_topic": "NEURO-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-046",
@@ -1546,9 +1546,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-FOUND"
+   "alt_topic": "CARDPED-PED-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-047",
@@ -1579,9 +1579,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-FOUND"
+   "alt_topic": "CARDPED-PED-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-048",
@@ -1613,9 +1613,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-FOUND"
+   "alt_topic": "CARDPED-PED-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-049",
@@ -1647,9 +1647,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-NEURO"
+   "alt_topic": "CARDPED-PED-NEURO",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-050",
@@ -1681,9 +1681,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "INTRO-STATS"
+   "alt_topic": "INTRO-STATS",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-051",
@@ -1714,9 +1714,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "INTRO-PRACTICE"
+   "alt_topic": "INTRO-PRACTICE",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-052",
@@ -1748,9 +1748,9 @@
    ],
    "topic_confidence": 0.5,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "NEURO-BALANCE"
+   "alt_topic": "NEURO-BALANCE",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-053",
@@ -1782,9 +1782,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-RESP-FOUND"
+   "alt_topic": "CARDPED-RESP-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-054",
@@ -1816,9 +1816,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-055",
@@ -1849,9 +1849,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-056",
@@ -1882,9 +1882,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-NEURO"
+   "alt_topic": "CARDPED-PED-NEURO",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-057",
@@ -1914,9 +1914,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-058",
@@ -1946,9 +1946,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-059",
@@ -1979,9 +1979,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-FOUND"
+   "alt_topic": "CARDPED-PED-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-060",
@@ -2012,9 +2012,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-NEURO"
+   "alt_topic": "CARDPED-PED-NEURO",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-061",
@@ -2046,9 +2046,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-FOUND"
+   "alt_topic": "CARDPED-PED-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-062",
@@ -2079,9 +2079,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-DEV"
+   "alt_topic": "CARDPED-PED-DEV",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-063",
@@ -2112,9 +2112,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-FOUND"
+   "alt_topic": "CARDPED-PED-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-064",
@@ -2145,9 +2145,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-SYSTEM"
+   "alt_topic": "CARDPED-PED-SYSTEM",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-065",
@@ -2178,9 +2178,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-DEV"
+   "alt_topic": "CARDPED-PED-DEV",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-066",
@@ -2211,9 +2211,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-FOUND"
+   "alt_topic": "CARDPED-PED-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-067",
@@ -2243,9 +2243,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-068",
@@ -2276,9 +2276,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-NEURO"
+   "alt_topic": "CARDPED-PED-NEURO",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-069",
@@ -2309,9 +2309,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-070",
@@ -2342,9 +2342,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-071",
@@ -2376,9 +2376,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-FOUND"
+   "alt_topic": "CARDPED-PED-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-072",
@@ -2409,9 +2409,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-073",
@@ -2442,9 +2442,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-FOUND"
+   "alt_topic": "CARDPED-PED-FOUND",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-074",
@@ -2474,9 +2474,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-075",
@@ -2507,9 +2507,9 @@
    ],
    "topic_confidence": 0.95,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": null
+   "alt_topic": null,
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-076",
@@ -2540,9 +2540,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-OTHER"
+   "alt_topic": "CARDPED-PED-OTHER",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-077",
@@ -2573,9 +2573,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "NEURO-PNI"
+   "alt_topic": "NEURO-PNI",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-078",
@@ -2606,9 +2606,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "CARDPED-PED-NEURO"
+   "alt_topic": "CARDPED-PED-NEURO",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-079",
@@ -2639,9 +2639,9 @@
    ],
    "topic_confidence": 0.6,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "NEURO-PNI"
+   "alt_topic": "NEURO-PNI",
+   "review_flags": []
   },
   {
    "id": "106-2-CARDPED-080",
@@ -2672,9 +2672,9 @@
    ],
    "topic_confidence": 0.8,
    "topic_source": "llm",
-   "review_flags": [],
    "secondary_topics": [],
-   "alt_topic": "NEURO-PNI"
+   "alt_topic": "NEURO-PNI",
+   "review_flags": []
   }
  ]
 }

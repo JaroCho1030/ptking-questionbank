@@ -89,7 +89,17 @@ GLYPH_IMAGES = {
     "c000fada70a966dd3f1904f3b4ffe775": "V\u0307E",  # 106-1 CARDPED 分鐘換氣量 V̇E
     "88177a0f0fc29b6381656442b2652bd4": "V\u0307",   # 107-2 BASIC V̇
     "17fd3041e5ba186d5508086b57217559": "V\u0307/Q",  # 114-1 BASIC V̇/Q
+    # 2026-10-19 附圖檢查發現：比 INLINE_GLYPH_MAX 寬或高一點的行內公式圖片，原本既不當字、也不當圖（或被誤當附圖），字就不見了。
+    # 已知 digest 不論大小都當行內字；高度是一行字（LINE_IMAGE_MAX_H）但沒見過的會發 warning。
+    "17a37bd4e8ae6f95db1a4f19b1a02396": "V\u0307/Q\u0307",      # 105-1 CARDPED 第 1 題 V̇/Q̇ mismatch
+    "9b415a4e03665f7f2b6dea580c4fa0e7": "V\u0307E/V\u0307CO₂",  # 105-2 CARDPED 第 17 題 V̇E/V̇CO₂ slope
+    "c6ce6a9fff9db46787d06a3acc49e9aa": "V\u0307Emax",           # 106-2 CARDPED 第 2 題
+    "54eed71db0b2fba9358a07ccf9885c6b": "V\u0307Emax/MVV",       # 106-2 CARDPED 第 2 題
+    "01b0747d3858fca5c4f163040c68c77c": "PaCO₂",                  # 107-2 BASIC 第 38 題、108-2 BASIC 第 32 題
+    "a75bbe421001d25dc21741f7b618dc42": "PaO₂",                   # 108-2 BASIC 第 32 題
 }
+LINE_IMAGE_MAX_H = 19    # 高度在這以下、寬 5–120pt 的圖片視為「一行字」大小：沒見過就發 warning
+LINE_IMAGE_MAX_W = 120
 
 # 字型 cmap 壞掉、PyMuPDF 只讀得到 U+FFFD 的字（pdfplumber 直接丟掉）：以「字型:字形編號(gid)」對回原字。
 # 105–107 年少數字用 Gulim（韓文字型）排，例：105-1 INTRO 第 60 題「不是」的「不」消失 → 題意相反。2026-10 逐一目視確認。

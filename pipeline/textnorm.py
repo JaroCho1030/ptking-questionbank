@@ -24,10 +24,20 @@ def _is_radical(ch: str) -> bool:
     return any(lo <= cp <= hi for lo, hi in _RADICAL_RANGES)
 
 
+# CJK 部首補充區大多沒有 NFKC 對應（只有 ⺟ ⻳），常用字手動對照。2026-10 全題庫出現過：⻑ 76、⺠ 8、⻄ 5。
+# validate 會把殘留的部首字列進審核清單，遇到新的再加。
+_RADICAL_SUPPLEMENT = {
+    "⻑": "長", "⺠": "民", "⻄": "西", "⻝": "食", "⻘": "青", "⻆": "角", "⻣": "骨", "⻤": "鬼",
+    "⻨": "麥", "⻩": "黃", "⻬": "齊", "⻯": "龍", "⻲": "龜", "⺩": "王", "⺼": "肉", "⻊": "足",
+}
+
+
 def fix_radicals(text: str) -> str:
     out = []
     for ch in text:
-        if _is_radical(ch):
+        if ch in _RADICAL_SUPPLEMENT:
+            out.append(_RADICAL_SUPPLEMENT[ch])
+        elif _is_radical(ch):
             out.append(unicodedata.normalize("NFKC", ch))
         else:
             out.append(ch)
