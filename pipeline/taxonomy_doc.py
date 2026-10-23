@@ -1,7 +1,7 @@
 """由 taxonomy/taxonomy.yaml 產生給人看的分類表 docs/TAXONOMY.md。
 
 用法：
-    python -m pipeline.taxonomy_doc            重新產生 ../docs/TAXONOMY.md
+    python -m pipeline.taxonomy_doc            重新產生 docs/TAXONOMY.md
     python -m pipeline.taxonomy_doc --check    只檢查檔案是否與 yaml 同步（不同步 exit 1）
 
 改分類一律改 taxonomy.yaml（name / definition / excludes / keywords），再跑這支；不要手改 TAXONOMY.md。
@@ -16,7 +16,7 @@ import yaml
 
 from . import config as C
 
-DOC_PATH = C.ROOT.parent / "docs" / "TAXONOMY.md"
+DOC_PATH = C.ROOT / "docs" / "TAXONOMY.md"
 
 RULES = """\
 ## 怎麼歸類（通則）
@@ -27,7 +27,7 @@ RULES = """\
 - **本科只有籠統或勉強相關的主題、而別科有專門的主題時，選別科**，不另掛本科次要主題（例：概論試卷考良性陣發性姿勢性眩暈 → NEURO-VESTIB、骨科試卷考 Kaltenborn 肩關節鬆動 → TECH-JOINTMOB、技術學試卷考 Wernicke 失語症是哪一區受損 → BASIC-ANA-NEU）。
 - **本科試卷單純問解剖構造或神經支配範圍**（例：食指掌側感覺由哪條神經支配）：主要主題選本科最接近的主題，次要主題加基礎學的解剖主題（BASIC-ANA-*）；若問的是損傷後的表現或處置，就只標本科主題。
 - 「不含」列的是容易混淆、但要歸到別處的內容；箭頭後面是該歸的主題。
-- 篩選與統計規則見 [ARCHITECTURE.md 3.8](ARCHITECTURE.md)。
+- App 裡的篩選與統計：選了某個主題，主要或次要主題符合的題目都會出現；各主題正確率主要、次要各算 1 題，所以各主題題數加總會大於總題數。
 """
 
 CODE_RE = re.compile(r"\b((?:BASIC|INTRO|TECH|NEURO|ORTHO|CARDPED)-[A-Z0-9-]*[A-Z0-9])\b")

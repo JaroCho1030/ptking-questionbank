@@ -88,7 +88,7 @@ CREATE INDEX idx_questions_subject ON questions(subject_code);
 CREATE INDEX idx_questions_topic   ON questions(topic_code);
 CREATE INDEX idx_questions_group   ON questions(group_id, group_pos);
 
--- 每題的全部主題：rank 0 = 主要主題（同 questions.topic_code），1–2 = 次要主題（可跨科，見 ARCHITECTURE 3.8）
+-- 每題的全部主題：rank 0 = 主要主題（同 questions.topic_code），1–2 = 次要主題（可跨科，見 docs/PIPELINE.md）
 CREATE TABLE question_topics (
     question_id TEXT NOT NULL REFERENCES questions(id),
     topic_code  TEXT NOT NULL REFERENCES topics(code),

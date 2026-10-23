@@ -1,13 +1,13 @@
 """依 taxonomy.yaml 批次標記每題的主題（topic）、次要主題與標籤（tags）。
 
-子代理分批（2026-10-19 起全標用這個，不需要 API key；ARCHITECTURE 6）：
+子代理分批（2026-10-19 起全標用這個，不需要 API key；docs/PIPELINE.md「標記流程」）：
     python -m pipeline.tag --export-batches data/tagging/full/batches --only 105-1/NEURO --limit 40 --force
         → 每份試卷一個批次檔 <年-次>_<科目>.md ＋ manifest.json；子代理讀批次檔、把結果寫成
           <批次資料夾同層>/results/<同名>.json：{"batch": "...", "results": [{id, topic, confidence, tags, alt_topic, secondary_topics}]}
     python -m pipeline.tag --import-results data/tagging/full/results --batches-dir data/tagging/full/batches
         → 檢查（主題 code 必須在分類表、次要主題 clean_secondary、缺題列出）後寫回 data/json
 
-跨科重判（2026-10-19，跨科規則修訂後用；ARCHITECTURE 3.8）：
+跨科重判（2026-10-19，跨科規則修訂後用；docs/PIPELINE.md「複數主題的規則」）：
     python -m pipeline.tag --export-rejudge data/tagging/rejudge/batches --rejudge-conf 0.5,0.6
         → 主要主題與 alt_topic 一個本科一個別科的題目，子代理只選 A（維持）或 B（改用第二候選）
     python -m pipeline.tag --import-rejudge data/tagging/rejudge/results --batches-dir data/tagging/rejudge/batches
@@ -166,7 +166,7 @@ def clean_secondary(r: dict, primary: str, valid: set[str]) -> list[str]:
 
 def apply_result(q: dict, r: dict, valid_codes: set[str]) -> str | None:
     """把一筆模型結果寫進題目；API 與子代理共用。不合格回傳原因（題目不動），合格回傳 None。
-    主要主題可跨科（ARCHITECTURE 3.8），所以這裡只檢查 code 在分類表內。"""
+    主要主題可跨科（docs/PIPELINE.md「複數主題的規則」），所以這裡只檢查 code 在分類表內。"""
     topic = str(r.get("topic") or "").strip()
     if topic not in valid_codes:
         return f"主要主題 {topic or '（空）'} 不在分類表"

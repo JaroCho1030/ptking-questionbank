@@ -46,8 +46,9 @@ App 固定讀 `https://github.com/<owner>/ptking-questionbank/releases/latest/do
 ## 目錄
 
 ```
-pipeline/   config / textnorm / fetch / answers / parse / validate / tag / build
-taxonomy/   taxonomy.yaml  主題分類表（依考選部命題大綱；給人看的版本是 ../docs/TAXONOMY.md，用 python -m pipeline.taxonomy_doc 產生）
+pipeline/   config / textnorm / fetch / answers / parse / validate / tag / build / release_notes / taxonomy_doc
+taxonomy/   taxonomy.yaml  主題分類表（依考選部命題大綱；給人看的版本是 docs/TAXONOMY.md，用 python -m pipeline.taxonomy_doc 產生）
+docs/       PIPELINE.md（資料格式、主題標記規則、考選部網站與 PDF 的坑）、TAXONOMY.md（分類表）
 data/       raw（gitignore）json figures review
 tests/      fixtures 是真實 PDF 抽出的文字
 ```

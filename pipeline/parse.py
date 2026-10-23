@@ -6,7 +6,7 @@
     python -m pipeline.parse --only 108-1/NEURO
     python -m pipeline.parse --dump data/raw/108-1/NEURO.Q.pdf   # 印出抽出的文字行，調 regex 用
 
-輸出 data/json/{年}-{次}/{科目}.json，格式見 docs/ARCHITECTURE.md「題庫 JSON」。
+輸出 data/json/{年}-{次}/{科目}.json，格式見 docs/PIPELINE.md「題庫 JSON」。
 
 版面假設（105 年起的 PDF 皆符合）：
     N.題幹…            題號後面接半形句點，題幹可跨行

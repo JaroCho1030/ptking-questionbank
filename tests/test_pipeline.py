@@ -363,7 +363,7 @@ def test_tag_prompt_includes_group_context():
     assert "題組前題 x-1" in text and "王先生58歲" in text and "附圖" in text
 
 
-# ---- 複數主題（ARCHITECTURE 3.8）----
+# ---- 複數主題（docs/PIPELINE.md「複數主題的規則」）----
 
 def _neuro_data():
     from pipeline.parse import assemble
@@ -414,7 +414,7 @@ def test_tag_prompt_and_tool_allow_cross_subject_secondary():
 
 
 def test_tag_prompt_secondary_rules():
-    # ARCHITECTURE 3.8（2026-10-18 問答）：低信心不拿次要主題當備案；看考點、情境不算；純支配加解剖
+    # docs/PIPELINE.md「複數主題的規則」（2026-10-18 問答）：低信心不拿次要主題當備案；看考點、情境不算；純支配加解剖
     from pipeline.tag import SYSTEM_PROMPT
     assert "不要用次要主題當備案" in SYSTEM_PROMPT and "alt_topic" in SYSTEM_PROMPT and "0.3：拿不準" in SYSTEM_PROMPT
     assert "信心低於 0.6 且另有合理候選時才加" not in SYSTEM_PROMPT
@@ -496,7 +496,7 @@ def test_remap_updates_secondary(tmp_path, monkeypatch):
     assert out[0]["secondary_topics"] == ["BASIC-KIN-GAIT2"]
 
 
-# ---- 子代理分批（ARCHITECTURE 6，2026-10-19）----
+# ---- 子代理分批（docs/PIPELINE.md「標記流程」，2026-10-19）----
 
 def test_export_then_import_results(tmp_path, monkeypatch):
     import json
@@ -560,9 +560,6 @@ def test_taxonomy_topics_have_definitions():
 def test_taxonomy_doc_in_sync():
     # docs/TAXONOMY.md 由 taxonomy.yaml 產生；改了 yaml 要重跑 python -m pipeline.taxonomy_doc
     from pipeline.taxonomy_doc import DOC_PATH, load, render
-    if not DOC_PATH.exists():
-        # docs/ 不在 questionbank repo 裡（GitHub Actions 的 checkout 沒有），只在本機檢查
-        pytest.skip("docs/TAXONOMY.md 不在這個 checkout")
     text = render(load())
     assert DOC_PATH.read_text("utf-8") == text
     assert "NEURO-ASSESS" in text and "**不含**" in text and "**關鍵字**" in text

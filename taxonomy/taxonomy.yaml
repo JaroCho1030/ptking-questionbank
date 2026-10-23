@@ -8,7 +8,7 @@
 #
 # 規則：
 #   - 每題恰好一個 topic（主要主題），另可掛 0~2 個 secondary_topics 與 0~3 個 tags（自由標籤，例如 "Berg", "ICF"）。
-#     歸類通則見 docs/ARCHITECTURE.md 3.8。
+#     歸類通則見 docs/PIPELINE.md「複數主題的規則」。
 #   - topic code 格式：{SUBJECT}-{TOPIC}，全大寫，App 與題庫以 code 為鍵，name 只用於顯示。
 #   - 每個 topic 欄位：code、name（App 顯示）、group（選填，同科分組）、definition（包含什麼）、
 #     excludes（選填，容易混淆但要歸別處的內容，寫成「內容 → 該歸的 code」）、keywords。
