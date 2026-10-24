@@ -1,5 +1,6 @@
 # 打 tag（例如 v2026.10.16-1）就自動 build 題庫並發 GitHub Release。
 # App 固定抓 https://github.com/<owner>/<repo>/releases/latest/download/manifest.json
+# tag 以 -test 結尾（例如 v2026.10.24-1-test）發成 pre-release，latest 不會指到它（App 的 debug 測試通道用）。
 name: release-questionbank
 on:
   push:
@@ -36,6 +37,7 @@ jobs:
         with:
           name: 物理治療師國考題庫 ${{ env.BANK_VERSION }}
           body_path: dist/RELEASE_NOTES.md
+          prerelease: ${{ endsWith(github.ref_name, '-test') }}
           files: |
             dist/questions.sqlite
             dist/manifest.json
