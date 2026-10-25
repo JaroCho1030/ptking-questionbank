@@ -1,0 +1,53 @@
+/* 隱私政策、支援頁共用樣式：iOS 系統色，淺色／深色跟隨系統 */
+:root {
+  color-scheme: light dark;
+  --bg: #f2f2f7;
+  --card: #ffffff;
+  --text: #1c1c1e;
+  --muted: #6c6c70;
+  --line: #e5e5ea;
+  --accent: #007aff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --card: #1c1c1e;
+    --text: #f2f2f7;
+    --muted: #98989f;
+    --line: #38383a;
+    --accent: #0a84ff;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.7 -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+.app { margin: 0; font-size: 15px; font-weight: 600; color: var(--muted); }
+h1 { margin: 2px 0 6px; font-size: 32px; line-height: 1.25; }
+.meta { margin: 0 0 20px; font-size: 15px; color: var(--muted); }
+.lang { display: flex; gap: 8px; margin: 0 0 24px; font-size: 15px; }
+.lang a {
+  padding: 4px 12px; border-radius: 999px; background: var(--card);
+  text-decoration: none; color: var(--accent);
+}
+.card { background: var(--card); border-radius: 14px; padding: 20px; margin: 0 0 14px; }
+.card.summary { border-left: 4px solid var(--accent); }
+h2 { margin: 0 0 8px; font-size: 20px; line-height: 1.35; }
+h3 { margin: 18px 0 4px; font-size: 17px; }
+h3:first-of-type { margin-top: 0; }
+p { margin: 0 0 10px; }
+p:last-child, ul:last-child { margin-bottom: 0; }
+ul { margin: 0 0 10px; padding-left: 1.3em; }
+li { margin: 4px 0; }
+a { color: var(--accent); }
+.mail { font-size: 19px; font-weight: 600; }
+.sep {
+  margin: 48px 0 32px; border: 0; border-top: 1px solid var(--line);
+}
+footer { margin-top: 32px; font-size: 14px; color: var(--muted); text-align: center; }
+footer a { color: var(--muted); }

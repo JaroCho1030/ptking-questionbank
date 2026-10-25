@@ -12,3 +12,4 @@
 - 人工改過的主題寫 `data/review/topic_overrides.csv` → `tag --apply-overrides`；不要直接改 JSON 的主題（`parse --all` 只保留主題標記，其他欄位會被覆蓋）。
 - 發布：在 main 打 tag `vYYYY.MM.DD-N` 並 push，Actions 會 build 並發 Release；App 讀 latest Release 的 `manifest.json`。
 - commit 訊息：繁體中文，前綴 `feat:`／`fix:`／`data:`／`test:`／`docs:`／`chore:`。
+- `site/`：App 的隱私政策與支援頁（GitHub Pages，`pages.yml` 發布）。網址路徑不可改（App 與 App Store Connect 都連過來）；中英文兩段同步改；隱私政策改內容要改生效日期。

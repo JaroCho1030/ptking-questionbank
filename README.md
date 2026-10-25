@@ -50,8 +50,18 @@ pipeline/   config / textnorm / fetch / answers / parse / validate / tag / build
 taxonomy/   taxonomy.yaml  主題分類表（依考選部命題大綱；給人看的版本是 docs/TAXONOMY.md，用 python -m pipeline.taxonomy_doc 產生）
 docs/       PIPELINE.md（資料格式、主題標記規則、考選部網站與 PDF 的坑）、TAXONOMY.md（分類表）
 data/       raw（gitignore）json figures review
+site/       App 的隱私政策與支援頁（GitHub Pages，見下方「網站」）
 tests/      fixtures 是真實 PDF 抽出的文字
 ```
+
+## 網站
+
+`site/` 是 App 的隱私政策與支援頁，push 到 main 時由 `.github/workflows/pages.yml` 發布到 GitHub Pages：
+
+- 隱私政策：https://jarocho1030.github.io/ptking-questionbank/privacy/
+- 支援：https://jarocho1030.github.io/ptking-questionbank/support/
+
+App Store Connect 與 App 內的連結都指向這兩個網址，路徑不要改。中英文各一段，改內容兩段都要改；隱私政策改了要更新生效日期。
 
 ## 授權
 
