@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>隱私政策｜我要成為物治王</title>
-<meta name="description" content="「我要成為物治王」iOS App 的隱私政策：不收集任何個人資料。">
+<meta name="description" content="「我要成為物治王」iOS App 的隱私政策：不收集作答紀錄；題目留言板公開哪些資料、如何刪除。">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -12,12 +12,13 @@
   <!-- 內容改了要一起改「生效日期」，中英文兩段都要改 -->
   <p class="app">我要成為物治王</p>
   <h1>隱私政策</h1>
-  <p class="meta">生效日期：2026 年 10 月 25 日</p>
+  <p class="meta">生效日期：2026 年 10 月 27 日</p>
   <nav class="lang"><a href="#zh">中文</a><a href="#en">English</a></nav>
 
   <div id="zh">
     <section class="card summary">
-      <p><strong>「我要成為物治王」不收集、不儲存、也不分享你的任何個人資料。</strong>沒有帳號、沒有廣告，也沒有任何分析或追蹤工具。你的作答紀錄只存在你自己的裝置和你自己的 iCloud 帳號裡，開發者看不到。</p>
+      <p><strong>「我要成為物治王」不收集你的作答紀錄，也不分享或販售任何資料。</strong>沒有帳號、沒有廣告，也沒有任何分析或追蹤工具。你的作答紀錄只存在你自己的裝置和你自己的 iCloud 帳號裡，開發者看不到。</p>
+      <p>唯一的例外是你<strong>主動在題目留言板發表</strong>的內容：留言和你取的暱稱會公開給所有使用者看（見<a href="#zh-board">第 3 節</a>）。不留言，就沒有任何關於你的內容會公開。</p>
     </section>
 
     <section class="card">
@@ -31,45 +32,66 @@
 
     <section class="card">
       <h2>2. 網路連線</h2>
-      <p>App 唯一主動連上網路的時候，是向 GitHub 檢查與下載題庫更新（公開的題目檔案）。這個連線不會送出任何個人資料或作答紀錄；GitHub 和一般網站一樣可能記錄 IP 位址等連線資訊，適用 <a href="https://docs.github.com/zh/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隱私權聲明</a>。</p>
-      <p>不連網也能使用全部功能。</p>
+      <p>App 主動連上網路只有兩種情況：</p>
+      <ul>
+        <li><strong>題庫更新：</strong>向 GitHub 檢查與下載題庫更新（公開的題目檔案）。這個連線不會送出任何個人資料或作答紀錄；GitHub 和一般網站一樣可能記錄 IP 位址等連線資訊，適用 <a href="https://docs.github.com/zh/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隱私權聲明</a>。</li>
+        <li><strong>題目留言板：</strong>你打開某一題的留言時，透過 Apple 的 iCloud（CloudKit）讀取或送出留言（見第 3 節）。</li>
+      </ul>
+      <p>除了留言板，不連網也能使用全部功能。</p>
+    </section>
+
+    <section class="card" id="zh-board">
+      <h2>3. 題目留言板</h2>
+      <p>每一題都有公開的留言板。只看留言不會送出你的任何資料；你留言、回覆、按「有幫助」或檢舉時，才會送出下列資料：</p>
+      <ul>
+        <li><strong>公開顯示的內容：</strong>留言與回覆的內文、你取的暱稱，以及系統產生的 4 碼後綴（例如「小明 #4F2A」），所有使用者都看得到。請不要在留言或暱稱裡寫真實姓名、聯絡方式等個人資料。</li>
+        <li><strong>匿名使用者 ID：</strong>Apple 的 CloudKit 會給每位使用者一個本 App 專用的匿名 ID，用來認出「同一個人」（標示自己的留言、刪除、封鎖、停權）。這個 ID 不含你的 Apple 帳號、姓名或 email，開發者也無法由它查出你是誰。留言、「有幫助」與檢舉都以這個 ID 記錄；App 不會顯示誰按了有幫助或檢舉了誰。</li>
+        <li><strong>其他欄位：</strong>留言時間、題號、留言當時的題庫版本與正解（答案更正後用來標示「留言時正解為 B」）。</li>
+        <li><strong>存放位置：</strong>Apple 的 iCloud（CloudKit 公開資料庫），適用 <a href="https://www.apple.com/tw/legal/privacy/">Apple 隱私權政策</a>。開發者可以在 Apple 提供的管理後台看到這些資料，只用於處理檢舉與維護留言板秩序。</li>
+        <li><strong>保存期間：</strong>留言會保留到你自己刪除、開發者依<a href="../support/#comments">留言規範</a>移除，或留言板停止服務為止。</li>
+        <li><strong>檢舉：</strong>檢舉會記錄在 CloudKit；App 也會開啟郵件讓你寄出檢舉信，信裡附被檢舉留言的前 50 字、題號，以及你的暱稱後綴。</li>
+        <li><strong>封鎖名單與暱稱設定：</strong>你封鎖的使用者名單與暱稱設定存在你的裝置與你自己的 iCloud（私人資料庫），跟作答紀錄一樣只有你能存取。</li>
+      </ul>
+      <p>這些資料不用於廣告或追蹤，也不提供給任何第三方。</p>
     </section>
 
     <section class="card">
-      <h2>3. 打賞（App 內購買）</h2>
+      <h2>4. 打賞（App 內購買）</h2>
       <p>「請作者喝咖啡」的付款由 Apple 的 App Store 處理，開發者拿不到你的姓名、Apple 帳號或付款資訊。App 只在你的裝置上記錄請過幾杯咖啡，用來顯示感謝文字。打賞不會解鎖任何功能。</p>
     </section>
 
     <section class="card">
-      <h2>4. 第三方</h2>
+      <h2>5. 第三方</h2>
       <p>本 App 沒有使用任何廣告、分析、當機回報或追蹤 SDK，也不會和任何人分享或販售資料。</p>
       <p>如果你在 iPhone 的「設定 › 隱私權與安全性 › 分析與改進」開啟「與 App 開發者分享」，Apple 可能提供不含個人身分的當機報告給開發者；這由 Apple 處理，你可以隨時在同一處關閉。</p>
     </section>
 
     <section class="card">
-      <h2>5. 刪除你的資料</h2>
+      <h2>6. 刪除你的資料</h2>
       <ul>
         <li>刪除 App 會移除裝置上的資料（「檔案」App 裡的自動備份也會一起刪除）。</li>
         <li>存在 iCloud 的資料：到 iPhone「設定 ›［你的名字］› iCloud › 管理儲存空間」刪除本 App 的資料。</li>
         <li>你自選資料夾裡的備份檔或匯出的檔案，直接刪除該檔案即可。</li>
+        <li><strong>留言：</strong>刪除 App 或 iCloud 資料<strong>不會</strong>刪掉你在留言板發表的留言。在留言的「⋯ › 刪除」可以逐則刪除，內文與暱稱會一起清除（有人回覆的話，會留下「此留言已刪除」）。想一次刪除全部留言，請來信附上你的「暱稱 #後綴」與其中一則留言的題號，我們會刪除該 ID 的所有留言並回信告知。</li>
       </ul>
-      <p>開發者手上沒有你的任何資料，所以也沒有需要向開發者申請刪除或匯出的資料。</p>
+      <p>除了留言板上的資料，開發者手上沒有你的任何資料，所以也沒有其他需要向開發者申請刪除或匯出的資料。</p>
     </section>
 
     <section class="card">
-      <h2>6. 兒童隱私</h2>
-      <p>本 App 不收集任何人的個人資料，包括 13 歲以下的兒童。</p>
+      <h2>7. 兒童隱私</h2>
+      <p>本 App 不收集任何人的作答紀錄或個人資料。留言板是公開的，不適合 13 歲以下兒童使用；如果你發現 13 歲以下兒童在留言中留下個人資料，請來信，我們會刪除。</p>
     </section>
 
     <section class="card">
-      <h2>7. 政策變更</h2>
-      <p>本政策若有變更，會更新這一頁並修改上方的生效日期。如果未來 App 改為收集任何資料，會先更新本頁與 App Store 上的隱私權標示。</p>
+      <h2>8. 政策變更</h2>
+      <p>本政策若有變更，會更新這一頁並修改上方的生效日期。如果未來 App 要收集更多資料，會先更新本頁與 App Store 上的隱私權標示。</p>
     </section>
 
     <section class="card">
-      <h2>8. 聯絡我們</h2>
-      <p>對本政策有任何問題，請來信：</p>
+      <h2>9. 聯絡我們</h2>
+      <p>對本政策有任何問題，或要申請刪除留言，請來信：</p>
       <p class="mail"><a href="mailto:bunbitmail@gmail.com">bunbitmail@gmail.com</a></p>
+      <p>你寄來的信（包括回報問題、檢舉信）會讓開發者看到你的 email 地址與信件內容，只用來回覆與處理問題。</p>
     </section>
   </div>
 
@@ -77,10 +99,11 @@
 
   <div id="en" lang="en">
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: October 25, 2026</p>
+    <p class="meta">Effective date: October 27, 2026</p>
 
     <section class="card summary">
-      <p><strong>“我要成為物治王” (PT King) does not collect, store, or share any of your personal data.</strong> There are no accounts, no ads, and no analytics or tracking tools. Your study records stay on your own devices and in your own iCloud account; the developer cannot see them.</p>
+      <p><strong>“我要成為物治王” (PT King) does not collect your study records, and does not share or sell any data.</strong> There are no accounts, no ads, and no analytics or tracking tools. Your study records stay on your own devices and in your own iCloud account; the developer cannot see them.</p>
+      <p>The only exception is what you <strong>choose to post on the question comment board</strong>: your comments and the nickname you choose are visible to all users (see <a href="#en-board">section 3</a>). If you don’t post, nothing about you is made public.</p>
     </section>
 
     <section class="card">
@@ -94,45 +117,66 @@
 
     <section class="card">
       <h2>2. Network connections</h2>
-      <p>The only time the app connects to the internet on its own is to check for and download question bank updates (public files) from GitHub. No personal data or study records are sent. Like any website, GitHub may log connection information such as IP addresses, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
-      <p>All features work offline.</p>
+      <p>The app connects to the internet in only two cases:</p>
+      <ul>
+        <li><strong>Question bank updates:</strong> checking for and downloading updates (public files) from GitHub. No personal data or study records are sent. Like any website, GitHub may log connection information such as IP addresses, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</li>
+        <li><strong>Question comment board:</strong> when you open the comments for a question, the app reads or posts comments through Apple’s iCloud (CloudKit); see section 3.</li>
+      </ul>
+      <p>Apart from the comment board, all features work offline.</p>
+    </section>
+
+    <section class="card" id="en-board">
+      <h2>3. Question comment board</h2>
+      <p>Each question has a public comment board. Just reading comments sends none of your data. When you post, reply, mark a comment as “helpful”, or report one, the following is sent:</p>
+      <ul>
+        <li><strong>Publicly visible content:</strong> the text of your comments and replies, the nickname you choose, and a 4-character suffix generated by the system (e.g. “Ming #4F2A”). All users can see these. Please don’t put your real name, contact details, or other personal information in comments or nicknames.</li>
+        <li><strong>Anonymous user ID:</strong> Apple’s CloudKit gives each user an anonymous ID specific to this app, used to recognize the same person (marking your own comments, deleting, blocking, suspending). It does not contain your Apple Account, name, or email, and the developer cannot use it to find out who you are. Comments, “helpful” marks, and reports are recorded with this ID; the app never shows who marked or reported what.</li>
+        <li><strong>Other fields:</strong> time posted, question number, and the question bank version and official answer at the time of posting (used to show “the answer was B when this was posted” after a correction).</li>
+        <li><strong>Where it is stored:</strong> Apple’s iCloud (CloudKit public database), governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>. The developer can see this data in Apple’s management console and uses it only to handle reports and keep the board in order.</li>
+        <li><strong>How long it is kept:</strong> until you delete it, the developer removes it under the <a href="../support/#comments-en">comment rules</a>, or the comment board is discontinued.</li>
+        <li><strong>Reports:</strong> a report is recorded in CloudKit, and the app also opens an email for you to send to the developer, containing the first 50 characters of the reported comment, the question number, and your nickname suffix.</li>
+        <li><strong>Block list and nickname setting:</strong> the users you block and your nickname setting are stored on your device and in your own iCloud (private database); like your study records, only you can access them.</li>
+      </ul>
+      <p>This data is not used for advertising or tracking and is not provided to any third party.</p>
     </section>
 
     <section class="card">
-      <h2>3. Tips (in-app purchases)</h2>
+      <h2>4. Tips (in-app purchases)</h2>
       <p>“Buy the developer a coffee” payments are handled by Apple’s App Store. The developer does not receive your name, Apple Account, or payment information. The app only keeps a count of coffees on your device to show a thank-you message. Tips do not unlock any features.</p>
     </section>
 
     <section class="card">
-      <h2>4. Third parties</h2>
+      <h2>5. Third parties</h2>
       <p>The app contains no advertising, analytics, crash-reporting, or tracking SDKs, and no data is shared with or sold to anyone.</p>
       <p>If you turn on “Share With App Developers” in Settings › Privacy &amp; Security › Analytics &amp; Improvements, Apple may provide the developer with crash reports that do not identify you. This is handled by Apple, and you can turn it off there at any time.</p>
     </section>
 
     <section class="card">
-      <h2>5. Deleting your data</h2>
+      <h2>6. Deleting your data</h2>
       <ul>
         <li>Deleting the app removes its data from your device (including the automatic backups in the Files app).</li>
         <li>Data in iCloud: go to Settings › [your name] › iCloud › Manage Storage on your iPhone and delete this app’s data.</li>
         <li>Backups in a folder you chose, or files you exported, can be deleted like any other file.</li>
+        <li><strong>Comments:</strong> deleting the app or its iCloud data does <strong>not</strong> delete comments you posted on the board. You can delete them one by one via “⋯ › Delete”; the text and nickname are both removed (if there are replies, a “comment deleted” placeholder remains). To delete all your comments at once, email us your “nickname #suffix” and the question number of one of your comments; we will delete all comments from that ID and reply to confirm.</li>
       </ul>
-      <p>The developer holds none of your data, so there is nothing to request for deletion or export.</p>
+      <p>Apart from the comment board, the developer holds none of your data, so there is nothing else to request for deletion or export.</p>
     </section>
 
     <section class="card">
-      <h2>6. Children’s privacy</h2>
-      <p>The app does not collect personal data from anyone, including children under 13.</p>
+      <h2>7. Children’s privacy</h2>
+      <p>The app does not collect study records or personal data from anyone. The comment board is public and not intended for children under 13; if you find personal information posted by a child under 13, please email us and we will delete it.</p>
     </section>
 
     <section class="card">
-      <h2>7. Changes to this policy</h2>
-      <p>If this policy changes, this page will be updated along with the effective date above. If the app ever starts collecting any data, this page and the App Store privacy label will be updated first.</p>
+      <h2>8. Changes to this policy</h2>
+      <p>If this policy changes, this page will be updated along with the effective date above. If the app ever starts collecting more data, this page and the App Store privacy label will be updated first.</p>
     </section>
 
     <section class="card">
-      <h2>8. Contact</h2>
-      <p>Questions about this policy? Email:</p>
+      <h2>9. Contact</h2>
+      <p>Questions about this policy, or requests to delete your comments? Email:</p>
       <p class="mail"><a href="mailto:bunbitmail@gmail.com">bunbitmail@gmail.com</a></p>
+      <p>Emails you send (including problem reports and report emails) show the developer your email address and message, which are used only to reply and handle the issue.</p>
     </section>
   </div>
 
