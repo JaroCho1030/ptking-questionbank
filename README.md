@@ -1,68 +1,63 @@
-# ptking-questionbank — 物理治療師國考題庫
+# 物理治療師國考題庫
 
-「我要成為物治王」iOS App 的題庫資料與整理管線。資料來源是考選部
-[考畢試題查詢平臺](https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx)公開的試題與標準答案。
+這是 iOS App「**我要成為物治王**」使用的物理治療師國考考古題題庫。題目與標準答案整理自考選部公開的歷屆試題，App 會自動下載最新版，離線也能刷題、模擬考、看統計。
 
-## 管線
+> App 即將在 App Store 上架。上架前這裡的題庫已經可以瀏覽與下載。
 
-```
-考選部 PDF ──fetch──▶ data/raw/{年}-{次}/{科}.{Q|S|M}.pdf
-            ──parse──▶ data/json/{年}-{次}/{科}.json  (+ data/figures/*.webp)
-            ──validate▶ data/review/review_queue.csv   （人工看）
-            ──tag────▶ 回寫 topic / secondary_topics / tags / alt_topic 到 JSON（子代理分批或 API）
-            ──build──▶ dist/questions.sqlite + dist/manifest.json
-```
+## 收錄內容
 
-| 指令 | 做什麼 |
+- **範圍**：民國 105 年起的物理治療師專技高考，每年兩次（第一次約 1–2 月、第二次約 7 月），六科都收。
+- **答案**：每題附考選部公布的標準答案；考選部事後更正的答案已改成更正後的版本，「一律給分」的送分題會標出來、不計分。
+- **附圖**：題目有附圖的，從原試卷裁出圖片一起收錄。
+- **主題分類**：每題依考科內容歸到一個主題（少數橫跨兩個知識點的題目另有次要主題），可以按主題練習、看自己哪裡弱。分類表見 [docs/TAXONOMY.md](docs/TAXONOMY.md)。分類由 AI 輔助、再經人工抽查修正，僅供參考。
+
+確切的題數、各科分布與每一版的更新內容，請看 [最新 Release](https://github.com/JaroCho1030/ptking-questionbank/releases/latest)。
+
+| 科目 | 代碼 |
 |---|---|
-| `python -m pipeline.fetch --years 105-115` | 抓缺的試題；**最近 4 回合的答案與更正答案一律重抓比對**，有變動寫進 `data/raw/changes.log` |
-| `python -m pipeline.parse` | 解析 `needs_parse` 的科目成 JSON，附圖裁成 WebP。`--dump some.pdf` 看抽出的文字 |
-| `python -m pipeline.validate` | 結構檢查，產出審核清單 |
-| `python -m pipeline.tag --export-batches data/tagging/full/batches [--only 105-1/NEURO --limit 40 --force]` | 產生子代理批次檔（一份試卷一檔＋manifest.json）；子代理把結果寫到同層的 `results/` |
-| `python -m pipeline.tag --import-results data/tagging/full/results --batches-dir data/tagging/full/batches` | 檢查並匯入子代理結果（`--batches-dir` 預設 `data/tagging/batches`） |
-| `python -m pipeline.tag --subject NEURO --limit 40` | 用 Claude API 直接標（需 `ANTHROPIC_API_KEY`，備用） |
-| `python -m pipeline.tag --apply-overrides` | 把 `data/review/topic_overrides.csv` 的人工修正寫回 |
-| `python -m pipeline.build --version 2026.10.16-1` | 打包 SQLite 與 manifest |
-| `python -m pytest -q` | 離線測試（用 108-1 神經科真實文字當 fixture） |
+| 物理治療基礎學（解剖學、生理學、肌動學與生物力學） | `BASIC` |
+| 物理治療學概論（物理治療史、倫理學與行政管理學） | `INTRO` |
+| 物理治療技術學（電療學、熱療學、操作治療學與輔具學） | `TECH` |
+| 神經疾病物理治療學 | `NEURO` |
+| 骨科疾病物理治療學 | `ORTHO` |
+| 心肺疾病與小兒疾病物理治療學 | `CARDPED` |
 
-## 發布
+## 題目編號
 
-```
-git tag v2026.10.16-1 && git push --tags
-```
-GitHub Actions 會跑測試、validate --strict、build，然後把 `questions.sqlite` 與 `manifest.json` 掛到 Release。
-Release 說明由 `python -m pipeline.release_notes` 從題庫自動產生（對外、給考生看；會和上一版 manifest 比對列出新增試卷），不用手寫。
-App 固定讀 `https://github.com/<owner>/ptking-questionbank/releases/latest/download/manifest.json`。
+每題都有固定編號，格式是 `年-次-科目-題號`。例如 `108-1-NEURO-027` 代表民國 108 年第一次考試、神經疾病物理治療學第 27 題。編號一旦發布就不會改，回報錯誤時附上它最快。
 
-## 答案更正
+## 多久更新一次
 
-考選部公布答案後常再公告更正（PDF 的 `t=M`），有時更正不只一次。處理方式：
+- 每次國考公布試題後，加入新的一次考試。
+- 考選部公告更正答案時（有時同一次考試會更正不只一次），跟著更新。
 
-- `fetch` 預設重抓最近 4 回合的 S/M 檔並比對 sha256；想全部重抓用 `--refresh all`。
-- 更正備註的措辭不固定（「答Ａ、Ｃ給分」「一律給分」「答案更正為Ｂ」…），`answers.py` 的 regex 涵蓋目前看過的寫法；
-  解析不了的會標 `needs_review`，進審核清單。
-- 題目 JSON 同時保留 `official_answer`（原公布）與 `accepted_answers`（最終承認的答案，可能多個）；`is_voided` 代表送分題。
+App 開啟時會自動檢查並下載新版，不需要手動處理；已經作答過的題目，App 會依更正後的答案重新判定。
 
-## 目錄
+## 發現錯誤？
 
-```
-pipeline/   config / textnorm / fetch / answers / parse / validate / tag / build / release_notes / taxonomy_doc
-taxonomy/   taxonomy.yaml  主題分類表（依考選部命題大綱；給人看的版本是 docs/TAXONOMY.md，用 python -m pipeline.taxonomy_doc 產生）
-docs/       PIPELINE.md（資料格式、主題標記規則、考選部網站與 PDF 的坑）、TAXONOMY.md（分類表）
-data/       raw（gitignore）json figures review
-site/       App 的隱私政策與支援頁（GitHub Pages，見下方「網站」）
-tests/      fixtures 是真實 PDF 抽出的文字
-```
+題目文字、答案、附圖或主題分類有誤，歡迎：
 
-## 網站
+- [開 issue](https://github.com/JaroCho1030/ptking-questionbank/issues)，附上題目編號與哪裡不對；或
+- 在 App 裡從「我的 › 回報問題」寄信，會自動附上 App 與題庫版本。
 
-`site/` 是 App 的隱私政策與支援頁，push 到 main 時由 `.github/workflows/pages.yml` 發布到 GitHub Pages：
+## App 相關頁面
 
-- 隱私政策：https://jarocho1030.github.io/ptking-questionbank/privacy/
-- 支援：https://jarocho1030.github.io/ptking-questionbank/support/
+- [支援與常見問題](https://jarocho1030.github.io/ptking-questionbank/support/)
+- [隱私政策](https://jarocho1030.github.io/ptking-questionbank/privacy/)
 
-App Store Connect 與 App 內的連結都指向這兩個網址，路徑不要改。中英文各一段，改內容兩段都要改；隱私政策改了要更新生效日期。
+## 想自己使用這份資料
 
-## 授權
+每個 Release 附兩個檔案：
 
-考選部試題為政府公開資訊；本 repo 的整理程式以 MIT 授權。題目若有錯誤歡迎開 issue（附題目 ID，例如 `108-1-NEURO-027`）。
+- `questions.sqlite`：完整題庫（題目、選項、答案、附圖、主題分類）。
+- `manifest.json`：版本號、題數與檔案 sha256。
+
+最新版的固定網址是 `https://github.com/JaroCho1030/ptking-questionbank/releases/latest/download/manifest.json`。各試卷的整理結果也以 JSON 放在 [`data/json/`](data/json/)，格式說明在 [docs/PIPELINE.md](docs/PIPELINE.md)。
+
+想了解題庫怎麼從考選部的 PDF 整理出來、或想參與改進，請看 [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)。
+
+## 資料來源與聲明
+
+試題與答案取自考選部[考畢試題查詢平臺](https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx)公開資料，屬政府公開資訊。本專案為個人製作，與考選部或任何政府機關無關；內容如與考選部公告不一致，以考選部公告為準。
+
+整理程式以 MIT 授權。
