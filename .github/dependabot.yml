@@ -1,0 +1,9 @@
+# workflows 裡的 Actions 都 pin 到 commit SHA；Dependabot 依後面的「# v4」註解開 PR 升級到新版的 SHA。
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore"

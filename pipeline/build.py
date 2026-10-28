@@ -164,7 +164,10 @@ def build(version: str, release_base_url: str | None) -> None:
             con.execute("INSERT INTO questions_fts VALUES (?,?,?,?,?,?)",
                         (q["id"], q["stem"], q["options"]["A"], q["options"]["B"], q["options"]["C"], q["options"]["D"]))
             if q.get("figure"):
-                fig = C.DATA_DIR / q["figure"]
+                fig = (C.DATA_DIR / q["figure"]).resolve()
+                # 防呆：figure 路徑必須落在 data/figures/ 內，擋掉被污染的 ../ 路徑把任意檔案讀進 BLOB
+                if not fig.is_relative_to(C.FIGURE_DIR.resolve()):
+                    raise ValueError(f"{q['id']} 的 figure 路徑超出 data/figures/：{q['figure']!r}")
                 if fig.exists():
                     con.execute("INSERT INTO figures VALUES (?,?,?)", (q["id"], fig.read_bytes(), q.get("figure_kind")))
         exams_summary.append({"id": ex["id"], "roc_year": ex["roc_year"], "round": ex["round"],
