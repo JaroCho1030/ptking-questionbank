@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>隱私政策｜我要成為物治王</title>
-<meta name="description" content="「我要成為物治王」iOS App 的隱私政策：不收集作答紀錄；題目留言板公開哪些資料、如何刪除。">
+<meta name="description" content="「我要成為物治王」iOS App 的隱私政策：不收集作答紀錄；題目留言板公開哪些資料、讀書室的資料存在哪裡、如何刪除。">
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -19,6 +19,7 @@
     <section class="card summary">
       <p><strong>「我要成為物治王」不收集你的作答紀錄，也不分享或販售任何資料。</strong>沒有帳號、沒有廣告，也沒有任何分析或追蹤工具。你的作答紀錄只存在你自己的裝置和你自己的 iCloud 帳號裡，開發者看不到。</p>
       <p>唯一的例外是你<strong>主動在題目留言板發表</strong>的內容：留言和你取的暱稱會公開給所有使用者看（見<a href="#zh-board">第 3 節</a>）。不留言，就沒有任何關於你的內容會公開。</p>
+      <p>如果你使用<strong>讀書室</strong>，你的暱稱、頭像與狀態簽名只給同一間的房友看；房間資料存在房主的 iCloud，開發者讀不到（見<a href="#zh-room">第 4 節</a>）。</p>
     </section>
 
     <section class="card">
@@ -32,12 +33,13 @@
 
     <section class="card">
       <h2>2. 網路連線</h2>
-      <p>App 主動連上網路只有兩種情況：</p>
+      <p>App 主動連上網路只有三種情況：</p>
       <ul>
         <li><strong>題庫更新：</strong>向 GitHub 檢查與下載題庫更新（公開的題目檔案）。這個連線不會送出任何個人資料或作答紀錄；GitHub 和一般網站一樣可能記錄 IP 位址等連線資訊，適用 <a href="https://docs.github.com/zh/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隱私權聲明</a>。</li>
         <li><strong>題目留言板：</strong>你打開某一題的留言時，透過 Apple 的 iCloud（CloudKit）讀取或送出留言（見第 3 節）。</li>
+        <li><strong>讀書室：</strong>你打開讀書室、改狀態或「敲一下」時，透過 Apple 的 iCloud（CloudKit）讀寫房間資料與傳送推播（見第 4 節）。</li>
       </ul>
-      <p>除了留言板，不連網也能使用全部功能。</p>
+      <p>除了留言板與讀書室，不連網也能使用全部功能。</p>
     </section>
 
     <section class="card" id="zh-board">
@@ -56,40 +58,57 @@
       <p>這些資料不用於廣告或追蹤，也不提供給任何第三方。</p>
     </section>
 
+    <section class="card" id="zh-room">
+      <h2>4. 讀書室</h2>
+      <p>讀書室是幾個熟人共用的小房間（最多 8 人），只能用房主傳的邀請連結加入。房友看得到彼此的頭像、暱稱與狀態簽名，可以「敲一下」提醒對方刷題。讀書室<strong>不顯示任何讀書數據或上線狀態</strong>（題數、連續天數、是不是正在讀書都不會出現）。</p>
+      <ul>
+        <li><strong>房友看得到的內容：</strong>你的暱稱、頭像、4 碼後綴（同留言板），以及你寫的狀態簽名（最多 30 字），還有房名。只有同一間的成員看得到，不會公開給其他使用者。請不要在狀態簽名或房名寫真實姓名、聯絡方式等個人資料。</li>
+        <li><strong>存放位置：</strong>房間資料（房名、每位成員的暱稱、頭像與狀態簽名）存在<strong>房主自己的 iCloud</strong>，透過 Apple 的 CloudKit 共享給成員，適用 <a href="https://www.apple.com/tw/legal/privacy/">Apple 隱私權政策</a>。<strong>開發者讀不到房間內容</strong>，也看不到誰在哪一間。</li>
+        <li><strong>邀請連結：</strong>拿到連結的人都能加入，請只傳給認識的人。房主可以隨時關閉邀請連結，已加入的人不受影響。</li>
+        <li><strong>敲一下：</strong>敲一下時，App 會在 CloudKit 公開資料庫寫一筆紀錄：寄件人與收件人用<strong>匿名金鑰</strong>表示（由房間專屬的密碼算出，只有房友算得出來，外人與開發者都查不出是誰敲了誰），另外帶寄件人的「暱稱 #後綴」與所選的句子（三句固定句子之一），Apple 依這筆紀錄推播給收件人。寄件端 App 會在一天後刪除這筆紀錄。</li>
+        <li><strong>推播通知：</strong>要你允許通知才會收到敲一下。App 會在 CloudKit 存一個接收條件（你的匿名金鑰與房友的匿名金鑰），讓 Apple 把敲一下推播給你；在「我的 › 設定 › 讀書室」關掉「接收敲一下」就會刪除這個條件。</li>
+        <li><strong>靜音名單：</strong>你靜音的房友存在你的裝置與你自己的 iCloud（私人資料庫），跟作答紀錄一樣只有你能存取。</li>
+        <li><strong>檢舉：</strong>App 會開啟郵件讓你寄出檢舉信，信裡附被檢舉房友的「暱稱 #後綴」、狀態簽名全文、房名，以及你的暱稱後綴。</li>
+        <li><strong>停權：</strong>違反<a href="../support/#comments">留言規範</a>的使用者會被停止使用社群功能（留言板與讀書室一起）：不能建立、加入讀書室或敲一下，其他人也看不到他的狀態簽名。停權以第 3 節的匿名使用者 ID 記錄在 CloudKit 公開資料庫的設定裡。</li>
+        <li><strong>保存期間：</strong>你離開讀書室時，你的成員資料會一起刪除；房主解散讀書室時，整間的資料會刪除。</li>
+      </ul>
+    </section>
+
     <section class="card">
-      <h2>4. 打賞（App 內購買）</h2>
+      <h2>5. 打賞（App 內購買）</h2>
       <p>「請作者喝咖啡」的付款由 Apple 的 App Store 處理，開發者拿不到你的姓名、Apple 帳號或付款資訊。App 只在你的裝置上記錄請過幾杯咖啡，用來顯示感謝文字。打賞不會解鎖任何功能。</p>
     </section>
 
     <section class="card">
-      <h2>5. 第三方</h2>
+      <h2>6. 第三方</h2>
       <p>本 App 沒有使用任何廣告、分析、當機回報或追蹤 SDK，也不會和任何人分享或販售資料。</p>
       <p>如果你在 iPhone 的「設定 › 隱私權與安全性 › 分析與改進」開啟「與 App 開發者分享」，Apple 可能提供不含個人身分的當機報告給開發者；這由 Apple 處理，你可以隨時在同一處關閉。</p>
     </section>
 
     <section class="card">
-      <h2>6. 刪除你的資料</h2>
+      <h2>7. 刪除你的資料</h2>
       <ul>
         <li>刪除 App 會移除裝置上的資料（「檔案」App 裡的自動備份也會一起刪除）。</li>
         <li>存在 iCloud 的資料：到 iPhone「設定 ›［你的名字］› iCloud › 管理儲存空間」刪除本 App 的資料。</li>
         <li>你自選資料夾裡的備份檔或匯出的檔案，直接刪除該檔案即可。</li>
         <li><strong>留言：</strong>刪除 App 或 iCloud 資料<strong>不會</strong>刪掉你在留言板發表的留言。在留言的「⋯ › 刪除」可以逐則刪除，內文與暱稱會一起清除（有人回覆的話，會留下「此留言已刪除」）。想一次刪除全部留言，請來信附上你的「暱稱 #後綴」與其中一則留言的題號，我們會刪除該 ID 的所有留言與公開的暱稱，並回信告知。</li>
+        <li><strong>讀書室：</strong>刪除 App <strong>不會</strong>讓你離開讀書室，請先在讀書室按「離開」（房主是「解散」），你的成員資料就會刪除。房間存在房主的 iCloud，房主解散讀書室或刪除本 App 的 iCloud 資料時，整間一起刪除。</li>
       </ul>
-      <p>除了留言板上的資料，開發者手上沒有你的任何資料，所以也沒有其他需要向開發者申請刪除或匯出的資料。</p>
+      <p>除了留言板上的資料，開發者手上沒有你的任何資料（讀書室的內容開發者讀不到），所以也沒有其他需要向開發者申請刪除或匯出的資料。</p>
     </section>
 
     <section class="card">
-      <h2>7. 兒童隱私</h2>
-      <p>本 App 不收集任何人的作答紀錄或個人資料。留言板是公開的，不適合 13 歲以下兒童使用；如果你發現 13 歲以下兒童在留言中留下個人資料，請來信，我們會刪除。</p>
+      <h2>8. 兒童隱私</h2>
+      <p>本 App 不收集任何人的作答紀錄或個人資料。留言板是公開的，留言板與讀書室都不適合 13 歲以下兒童使用；如果你發現 13 歲以下兒童在留言中留下個人資料，請來信，我們會刪除。</p>
     </section>
 
     <section class="card">
-      <h2>8. 政策變更</h2>
+      <h2>9. 政策變更</h2>
       <p>本政策若有變更，會更新這一頁並修改上方的生效日期。如果未來 App 要收集更多資料，會先更新本頁與 App Store 上的隱私權標示。</p>
     </section>
 
     <section class="card">
-      <h2>9. 聯絡我們</h2>
+      <h2>10. 聯絡我們</h2>
       <p>對本政策有任何問題，或要申請刪除留言，請來信：</p>
       <p class="mail"><a href="mailto:bunbitmail@gmail.com">bunbitmail@gmail.com</a></p>
       <p>你寄來的信（包括回報問題、檢舉信）會讓開發者看到你的 email 地址與信件內容，只用來回覆與處理問題。</p>
@@ -105,6 +124,7 @@
     <section class="card summary">
       <p><strong>“我要成為物治王” (PT King) does not collect your study records, and does not share or sell any data.</strong> There are no accounts, no ads, and no analytics or tracking tools. Your study records stay on your own devices and in your own iCloud account; the developer cannot see them.</p>
       <p>The only exception is what you <strong>choose to post on the question comment board</strong>: your comments and the nickname you choose are visible to all users (see <a href="#en-board">section 3</a>). If you don’t post, nothing about you is made public.</p>
+      <p>If you use a <strong>study room</strong>, your nickname, avatar, and status line are visible only to the members of that room; room data is stored in the room owner’s iCloud, and the developer cannot read it (see <a href="#en-room">section 4</a>).</p>
     </section>
 
     <section class="card">
@@ -118,12 +138,13 @@
 
     <section class="card">
       <h2>2. Network connections</h2>
-      <p>The app connects to the internet in only two cases:</p>
+      <p>The app connects to the internet in only three cases:</p>
       <ul>
         <li><strong>Question bank updates:</strong> checking for and downloading updates (public files) from GitHub. No personal data or study records are sent. Like any website, GitHub may log connection information such as IP addresses, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</li>
         <li><strong>Question comment board:</strong> when you open the comments for a question, the app reads or posts comments through Apple’s iCloud (CloudKit); see section 3.</li>
+        <li><strong>Study rooms:</strong> when you open a study room, change your status, or send a nudge, the app reads and writes room data and sends push notifications through Apple’s iCloud (CloudKit); see section 4.</li>
       </ul>
-      <p>Apart from the comment board, all features work offline.</p>
+      <p>Apart from the comment board and study rooms, all features work offline.</p>
     </section>
 
     <section class="card" id="en-board">
@@ -142,40 +163,57 @@
       <p>This data is not used for advertising or tracking and is not provided to any third party.</p>
     </section>
 
+    <section class="card" id="en-room">
+      <h2>4. Study rooms</h2>
+      <p>A study room is a small shared room for people who know each other (up to 8), joined only through an invite link from the room owner. Members see each other’s avatar, nickname, and status line, and can “nudge” each other to study. Study rooms <strong>show no study statistics or online status</strong> (no question counts, streaks, or whether someone is studying).</p>
+      <ul>
+        <li><strong>What members can see:</strong> your nickname, avatar, and 4-character suffix (as on the comment board), the status line you write (max 30 characters), and the room name. Only members of the same room can see these; they are not public. Please don’t put your real name, contact details, or other personal information in your status line or the room name.</li>
+        <li><strong>Where it is stored:</strong> room data (the room name and each member’s nickname, avatar, and status line) is stored in <strong>the room owner’s own iCloud</strong> and shared with members through Apple’s CloudKit sharing, governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>. <strong>The developer cannot read room contents</strong> or see who is in which room.</li>
+        <li><strong>Invite link:</strong> anyone with the link can join, so share it only with people you know. The owner can turn the link off at any time; people who already joined are not affected.</li>
+        <li><strong>Nudges:</strong> when you nudge someone, the app writes a record to the CloudKit public database. Sender and recipient are identified by <strong>anonymous keys</strong> derived from a secret known only to room members, so outsiders and the developer cannot tell who nudged whom. The record also contains the sender’s “nickname #suffix” and the chosen phrase (one of three fixed phrases), and Apple uses it to send the recipient a push notification. The sender’s app deletes the record after one day.</li>
+        <li><strong>Push notifications:</strong> you receive nudges only if you allow notifications. The app stores a delivery condition in CloudKit (your anonymous key and your roommates’ anonymous keys) so Apple can push nudges to you; turning off “接收敲一下 (Receive nudges)” in 我的 (Me) › 設定 (Settings) › 讀書室 (Study Room) deletes it.</li>
+        <li><strong>Mute list:</strong> the members you mute are stored on your device and in your own iCloud (private database); like your study records, only you can access them.</li>
+        <li><strong>Reports:</strong> the app opens an email for you to send to the developer, containing the reported member’s “nickname #suffix”, their full status line, the room name, and your nickname suffix.</li>
+        <li><strong>Suspension:</strong> users who break the <a href="../support/#comments-en">comment rules</a> can be suspended from community features (the comment board and study rooms together): they cannot create or join rooms or send nudges, and others no longer see their status line. Suspensions are recorded by the anonymous user ID described in section 3, in a settings record in the CloudKit public database.</li>
+        <li><strong>How long it is kept:</strong> when you leave a room, your member data is deleted; when the owner dissolves the room, all of its data is deleted.</li>
+      </ul>
+    </section>
+
     <section class="card">
-      <h2>4. Tips (in-app purchases)</h2>
+      <h2>5. Tips (in-app purchases)</h2>
       <p>“Buy the developer a coffee” payments are handled by Apple’s App Store. The developer does not receive your name, Apple Account, or payment information. The app only keeps a count of coffees on your device to show a thank-you message. Tips do not unlock any features.</p>
     </section>
 
     <section class="card">
-      <h2>5. Third parties</h2>
+      <h2>6. Third parties</h2>
       <p>The app contains no advertising, analytics, crash-reporting, or tracking SDKs, and no data is shared with or sold to anyone.</p>
       <p>If you turn on “Share With App Developers” in Settings › Privacy &amp; Security › Analytics &amp; Improvements, Apple may provide the developer with crash reports that do not identify you. This is handled by Apple, and you can turn it off there at any time.</p>
     </section>
 
     <section class="card">
-      <h2>6. Deleting your data</h2>
+      <h2>7. Deleting your data</h2>
       <ul>
         <li>Deleting the app removes its data from your device (including the automatic backups in the Files app).</li>
         <li>Data in iCloud: go to Settings › [your name] › iCloud › Manage Storage on your iPhone and delete this app’s data.</li>
         <li>Backups in a folder you chose, or files you exported, can be deleted like any other file.</li>
         <li><strong>Comments:</strong> deleting the app or its iCloud data does <strong>not</strong> delete comments you posted on the board. You can delete them one by one via “⋯ › Delete”; the text and nickname are both removed (if there are replies, a “comment deleted” placeholder remains). To delete all your comments at once, email us your “nickname #suffix” and the question number of one of your comments; we will delete all comments and the public nickname for that ID and reply to confirm.</li>
+        <li><strong>Study rooms:</strong> deleting the app does <strong>not</strong> remove you from a study room. Tap “離開 (Leave)” in the room first (for the owner, “解散 (Dissolve)”), and your member data is deleted. The room is stored in the owner’s iCloud; it is deleted entirely when the owner dissolves it or deletes this app’s iCloud data.</li>
       </ul>
-      <p>Apart from the comment board, the developer holds none of your data, so there is nothing else to request for deletion or export.</p>
+      <p>Apart from the comment board, the developer holds none of your data (study room contents cannot be read by the developer), so there is nothing else to request for deletion or export.</p>
     </section>
 
     <section class="card">
-      <h2>7. Children’s privacy</h2>
-      <p>The app does not collect study records or personal data from anyone. The comment board is public and not intended for children under 13; if you find personal information posted by a child under 13, please email us and we will delete it.</p>
+      <h2>8. Children’s privacy</h2>
+      <p>The app does not collect study records or personal data from anyone. The comment board is public, and neither the comment board nor study rooms are intended for children under 13; if you find personal information posted by a child under 13, please email us and we will delete it.</p>
     </section>
 
     <section class="card">
-      <h2>8. Changes to this policy</h2>
+      <h2>9. Changes to this policy</h2>
       <p>If this policy changes, this page will be updated along with the effective date above. If the app ever starts collecting more data, this page and the App Store privacy label will be updated first.</p>
     </section>
 
     <section class="card">
-      <h2>9. Contact</h2>
+      <h2>10. Contact</h2>
       <p>Questions about this policy, or requests to delete your comments? Email:</p>
       <p class="mail"><a href="mailto:bunbitmail@gmail.com">bunbitmail@gmail.com</a></p>
       <p>Emails you send (including problem reports and report emails) show the developer your email address and message, which are used only to reply and handle the issue.</p>
