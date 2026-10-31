@@ -51,7 +51,7 @@
         <li><strong>匿名使用者 ID：</strong>Apple 的 CloudKit 會給每位使用者一個本 App 專用的匿名 ID，用來認出「同一個人」（標示自己的留言、刪除、封鎖、停權）。這個 ID 不含你的 Apple 帳號、姓名或 email，開發者也無法由它查出你是誰。留言、「有幫助」與檢舉都以這個 ID 記錄；App 不會顯示誰按了有幫助或檢舉了誰。</li>
         <li><strong>其他欄位：</strong>留言時間、題號、留言當時的題庫版本與正解（答案更正後用來標示「留言時正解為 B」）。</li>
         <li><strong>存放位置：</strong>Apple 的 iCloud（CloudKit 公開資料庫），適用 <a href="https://www.apple.com/tw/legal/privacy/">Apple 隱私權政策</a>。開發者可以在 Apple 提供的管理後台看到這些資料，只用於處理檢舉與維護留言板秩序。</li>
-        <li><strong>保存期間：</strong>留言會保留到你自己刪除、開發者依<a href="../support/#comments">留言規範</a>移除，或留言板停止服務為止。</li>
+        <li><strong>保存期間：</strong>留言會保留到你自己刪除、開發者依<a href="../support/#comments">社群規範</a>移除，或留言板停止服務為止。</li>
         <li><strong>檢舉：</strong>檢舉會記錄在 CloudKit；App 也會開啟郵件讓你寄出檢舉信，信裡附被檢舉留言的前 50 字、題號，以及你的暱稱後綴。</li>
         <li><strong>封鎖名單與暱稱設定：</strong>你封鎖的使用者名單與暱稱設定存在你的裝置與你自己的 iCloud（私人資料庫），跟作答紀錄一樣只有你能存取。</li>
       </ul>
@@ -69,7 +69,7 @@
         <li><strong>推播通知：</strong>要你允許通知才會收到敲一下。App 會在 CloudKit 存一個接收條件（你的匿名金鑰與房友的匿名金鑰），讓 Apple 把敲一下推播給你；在「我的 › 設定 › 讀書室」關掉「接收敲一下」就會刪除這個條件。</li>
         <li><strong>靜音名單：</strong>你靜音的房友存在你的裝置與你自己的 iCloud（私人資料庫），跟作答紀錄一樣只有你能存取。</li>
         <li><strong>檢舉：</strong>App 會開啟郵件讓你寄出檢舉信，信裡附被檢舉房友的「暱稱 #後綴」、狀態簽名全文、房名，以及你的暱稱後綴。</li>
-        <li><strong>停權：</strong>違反<a href="../support/#comments">留言規範</a>的使用者會被停止使用社群功能（留言板與讀書室一起）：不能建立、加入讀書室或敲一下，其他人也看不到他的狀態簽名。停權以第 3 節的匿名使用者 ID 記錄在 CloudKit 公開資料庫的設定裡。</li>
+        <li><strong>停權：</strong>違反<a href="../support/#comments">社群規範</a>的使用者會被停止使用社群功能（留言板與讀書室一起）：不能建立、加入讀書室或敲一下，其他人也看不到他的狀態簽名。停權以第 3 節的匿名使用者 ID 記錄在 CloudKit 公開資料庫的設定裡。</li>
         <li><strong>保存期間：</strong>你離開讀書室時，你的成員資料會一起刪除；房主解散讀書室時，整間的資料會刪除。</li>
       </ul>
     </section>
@@ -156,7 +156,7 @@
         <li><strong>Anonymous user ID:</strong> Apple’s CloudKit gives each user an anonymous ID specific to this app, used to recognize the same person (marking your own comments, deleting, blocking, suspending). It does not contain your Apple Account, name, or email, and the developer cannot use it to find out who you are. Comments, “helpful” marks, and reports are recorded with this ID; the app never shows who marked or reported what.</li>
         <li><strong>Other fields:</strong> time posted, question number, and the question bank version and official answer at the time of posting (used to show “the answer was B when this was posted” after a correction).</li>
         <li><strong>Where it is stored:</strong> Apple’s iCloud (CloudKit public database), governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>. The developer can see this data in Apple’s management console and uses it only to handle reports and keep the board in order.</li>
-        <li><strong>How long it is kept:</strong> until you delete it, the developer removes it under the <a href="../support/#comments-en">comment rules</a>, or the comment board is discontinued.</li>
+        <li><strong>How long it is kept:</strong> until you delete it, the developer removes it under the <a href="../support/#comments-en">community guidelines</a>, or the comment board is discontinued.</li>
         <li><strong>Reports:</strong> a report is recorded in CloudKit, and the app also opens an email for you to send to the developer, containing the first 50 characters of the reported comment, the question number, and your nickname suffix.</li>
         <li><strong>Block list and nickname setting:</strong> the users you block and your nickname setting are stored on your device and in your own iCloud (private database); like your study records, only you can access them.</li>
       </ul>
@@ -174,7 +174,7 @@
         <li><strong>Push notifications:</strong> you receive nudges only if you allow notifications. The app stores a delivery condition in CloudKit (your anonymous key and your roommates’ anonymous keys) so Apple can push nudges to you; turning off “接收敲一下 (Receive nudges)” in 我的 (Me) › 設定 (Settings) › 讀書室 (Study Room) deletes it.</li>
         <li><strong>Mute list:</strong> the members you mute are stored on your device and in your own iCloud (private database); like your study records, only you can access them.</li>
         <li><strong>Reports:</strong> the app opens an email for you to send to the developer, containing the reported member’s “nickname #suffix”, their full status line, the room name, and your nickname suffix.</li>
-        <li><strong>Suspension:</strong> users who break the <a href="../support/#comments-en">comment rules</a> can be suspended from community features (the comment board and study rooms together): they cannot create or join rooms or send nudges, and others no longer see their status line. Suspensions are recorded by the anonymous user ID described in section 3, in a settings record in the CloudKit public database.</li>
+        <li><strong>Suspension:</strong> users who break the <a href="../support/#comments-en">community guidelines</a> can be suspended from community features (the comment board and study rooms together): they cannot create or join rooms or send nudges, and others no longer see their status line. Suspensions are recorded by the anonymous user ID described in section 3, in a settings record in the CloudKit public database.</li>
         <li><strong>How long it is kept:</strong> when you leave a room, your member data is deleted; when the owner dissolves the room, all of its data is deleted.</li>
       </ul>
     </section>
