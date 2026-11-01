@@ -12,7 +12,7 @@
   <!-- 內容改了要一起改「生效日期」，中英文兩段都要改 -->
   <p class="app">我要成為物治王</p>
   <h1>隱私政策</h1>
-  <p class="meta">生效日期：2026 年 10 月 31 日</p>
+  <p class="meta">生效日期：2026 年 11 月 1 日</p>
   <nav class="lang"><a href="#zh">中文</a><a href="#en">English</a></nav>
 
   <div id="zh">
@@ -65,7 +65,7 @@
         <li><strong>房友看得到的內容：</strong>你的暱稱、頭像、4 碼後綴（同留言板），以及你寫的狀態簽名（最多 30 字），還有房名。只有同一間的成員看得到，不會公開給其他使用者。請不要在狀態簽名或房名寫真實姓名、聯絡方式等個人資料。</li>
         <li><strong>存放位置：</strong>房間資料（房名、每位成員的暱稱、頭像與狀態簽名）存在<strong>房主自己的 iCloud</strong>，透過 Apple 的 CloudKit 共享給成員，適用 <a href="https://www.apple.com/tw/legal/privacy/">Apple 隱私權政策</a>。<strong>開發者讀不到房間內容</strong>，也看不到誰在哪一間。</li>
         <li><strong>邀請連結：</strong>拿到連結的人都能加入，請只傳給認識的人。房主可以隨時關閉邀請連結，已加入的人不受影響。</li>
-        <li><strong>敲一下：</strong>敲一下時，App 會在 CloudKit 公開資料庫寫一筆紀錄：寄件人與收件人用<strong>匿名金鑰</strong>表示（由房間專屬的密碼算出，只有房友算得出來，外人與開發者都查不出是誰敲了誰），另外帶寄件人的「暱稱 #後綴」與所選的句子（三句固定句子之一），Apple 依這筆紀錄推播給收件人。寄件端 App 會在一天後刪除這筆紀錄。</li>
+        <li><strong>敲一下：</strong>敲一下時，App 會在 CloudKit 公開資料庫寫一筆紀錄：寄件人與收件人用<strong>匿名金鑰</strong>表示（由房間專屬的密碼算出，只有房友算得出來，外人與開發者都查不出是誰敲了誰），另外帶寄件人的「暱稱 #後綴」與寄件人輸入的句子（最多 30 字），Apple 依這筆紀錄推播給收件人。寄件端 App 會在一天後刪除這筆紀錄。</li>
         <li><strong>推播通知：</strong>要你允許通知才會收到敲一下。App 會在 CloudKit 存一個接收條件（你的匿名金鑰與房友的匿名金鑰），讓 Apple 把敲一下推播給你；在「我的 › 設定 › 讀書室」關掉「接收敲一下」就會刪除這個條件。</li>
         <li><strong>靜音名單：</strong>你靜音的房友存在你的裝置與你自己的 iCloud（私人資料庫），跟作答紀錄一樣只有你能存取。</li>
         <li><strong>檢舉：</strong>App 會開啟郵件讓你寄出檢舉信，信裡附被檢舉房友的「暱稱 #後綴」、狀態簽名全文、房名，以及你的暱稱後綴。</li>
@@ -119,7 +119,7 @@
 
   <div id="en" lang="en">
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: October 31, 2026</p>
+    <p class="meta">Effective date: November 1, 2026</p>
 
     <section class="card summary">
       <p><strong>“我要成為物治王” (PT King) does not collect your study records, and does not share or sell any data.</strong> There are no accounts, no ads, and no analytics or tracking tools. Your study records stay on your own devices and in your own iCloud account; the developer cannot see them.</p>
@@ -170,7 +170,7 @@
         <li><strong>What members can see:</strong> your nickname, avatar, and 4-character suffix (as on the comment board), the status line you write (max 30 characters), and the room name. Only members of the same room can see these; they are not public. Please don’t put your real name, contact details, or other personal information in your status line or the room name.</li>
         <li><strong>Where it is stored:</strong> room data (the room name and each member’s nickname, avatar, and status line) is stored in <strong>the room owner’s own iCloud</strong> and shared with members through Apple’s CloudKit sharing, governed by <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>. <strong>The developer cannot read room contents</strong> or see who is in which room.</li>
         <li><strong>Invite link:</strong> anyone with the link can join, so share it only with people you know. The owner can turn the link off at any time; people who already joined are not affected.</li>
-        <li><strong>Nudges:</strong> when you nudge someone, the app writes a record to the CloudKit public database. Sender and recipient are identified by <strong>anonymous keys</strong> derived from a secret known only to room members, so outsiders and the developer cannot tell who nudged whom. The record also contains the sender’s “nickname #suffix” and the chosen phrase (one of three fixed phrases), and Apple uses it to send the recipient a push notification. The sender’s app deletes the record after one day.</li>
+        <li><strong>Nudges:</strong> when you nudge someone, the app writes a record to the CloudKit public database. Sender and recipient are identified by <strong>anonymous keys</strong> derived from a secret known only to room members, so outsiders and the developer cannot tell who nudged whom. The record also contains the sender’s “nickname #suffix” and the message the sender typed (max 30 characters), and Apple uses it to send the recipient a push notification. The sender’s app deletes the record after one day.</li>
         <li><strong>Push notifications:</strong> you receive nudges only if you allow notifications. The app stores a delivery condition in CloudKit (your anonymous key and your roommates’ anonymous keys) so Apple can push nudges to you; turning off “接收敲一下 (Receive nudges)” in 我的 (Me) › 設定 (Settings) › 讀書室 (Study Room) deletes it.</li>
         <li><strong>Mute list:</strong> the members you mute are stored on your device and in your own iCloud (private database); like your study records, only you can access them.</li>
         <li><strong>Reports:</strong> the app opens an email for you to send to the developer, containing the reported member’s “nickname #suffix”, their full status line, the room name, and your nickname suffix.</li>
