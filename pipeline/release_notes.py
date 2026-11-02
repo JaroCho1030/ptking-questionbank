@@ -39,6 +39,8 @@ def collect_stats(db_path: Path) -> dict:
         "voided": one("SELECT COUNT(*) FROM questions WHERE is_voided = 1"),
         "figures": one("SELECT COUNT(*) FROM questions WHERE has_figure = 1"),
         "topics": one("SELECT COUNT(*) FROM topics"),
+        "explanations": one("SELECT COUNT(*) FROM sqlite_master WHERE name = 'explanations'")
+                        and one("SELECT COUNT(*) FROM explanations"),
     }
     con.close()
     return stats
@@ -67,6 +69,9 @@ def render(manifest: dict, stats: dict, previous: dict | None = None,
     first, last = stats["sessions"][0], stats["sessions"][-1]
     subj_rows = "\n".join(f"| {name} | {n:,} |" for name, n in stats["subjects"])
     changes = "\n".join(f"- {line}" for line in _changes(manifest, previous))
+    n_expl = stats.get("explanations") or 0
+    explanations = (f"- **AI 詳解**：{n_expl:,} 題附有 AI 產生的三段詳解（為什麼是這個答案、其他選項為什麼不對、考點），"
+                    "經 AI 審稿通過才收錄，仍可能有誤，僅供參考。\n") if n_expl else ""
     voided = f"；其中 {stats['voided']} 題一律給分，練習時不計分" if stats["voided"] else ""
     return f"""這是「我要成為物治王」App 使用的**物理治療師國考題庫**，版本 {manifest['bank_version']}。
 
@@ -83,7 +88,7 @@ def render(manifest: dict, stats: dict, previous: dict | None = None,
 ### 題目資料
 - **答案更正**：考選部事後更正答案的 {stats['corrected']} 題，已改用更正後的答案{voided}。
 - **附圖**：{stats['figures']} 題附有原試卷的圖片。
-- **主題分類**：每題依考科內容歸到 {stats['topics']} 個主題之一（少數題目另有次要主題），方便按主題練習。分類由 AI 輔助、再經人工抽查修正，僅供參考。
+{explanations}- **主題分類**：每題依考科內容歸到 {stats['topics']} 個主題之一（少數題目另有次要主題），方便按主題練習。分類由 AI 輔助、再經人工抽查修正，僅供參考。
 
 ### 怎麼使用
 這份題庫是給「我要成為物治王」iOS App 用的，App 即將在 App Store 上架。App 會自動下載最新版題庫，**不需要手動下載下面的檔案**。

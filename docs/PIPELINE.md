@@ -92,26 +92,31 @@ App 端怎麼使用題庫（篩選、統計、更新）不在這裡。
 
 - 範圍：110-1 起（`EXPLAIN_MIN_YEAR = 110`）；更早的之後再補。送分題、多正解、題組、附圖題都生成。
 - 三段（JSON 欄位）：`why_correct`（為什麼是這個答案，2–3 句、≤ 120 字）、`why_others`（其他每個選項各一句為什麼不對，`{"A": "…"}`，只含非正解選項、每項 ≤ 40 字）、`takeaway`（考點或記法一句，≤ 50 字）。
+  - 字數算法（`explain.text_len`）：中文字與標點各算 1，一個英文單字或一串數字算 1，空白不算。上限常數在 `config.py`（`EXPLAIN_MAX_*`）。
 - 繁體中文，專有名詞第一次出現附英文；不引用書名、頁碼、指引年份（模型會編造出處）；不出現「AI」「我」「考選部指出」。
 - 特殊題：送分題 `why_correct` 寫「考選部公告一律給分」＋爭議點、`why_others` 可空；多正解每個承認答案各說一遍、`why_others` 只含未承認的選項；答案被更正的以 `accepted_answers` 為準、可提一句原公布答案為何不對；題組整組題幹背景一起給、每題各一則；附圖題把圖一起給（寫手與審稿者都看）。
 
 ### 流程（`python -m pipeline.explain`，Claude API，需 `ANTHROPIC_API_KEY`）
 
-每題三個呼叫，走 Message Batches API（半價、不佔前景）：
+每題三個呼叫，走 Message Batches API（半價、不佔前景）。第一批送全部寫手與盲解（互不依賴），完成後第二批送比對。
+三個呼叫都用 tool use 固定輸出欄位（`strict: true`）；Opus 5.5 不接受強制 `tool_choice`，所以用 `auto`、提示詞指定工具，沒呼叫工具當該呼叫失敗。
 
 1. **寫手**：題目（＋題組背景、附圖）、`accepted_answers`、`correction_note`、主題名稱 → 照格式輸出 JSON（tool use 限制欄位）。
 2. **審稿者盲解**：只給題目（＋附圖），**不給答案與詳解** → 回 `answer`（可多個）與 `confidence`。
-3. **審稿者比對**：再給 `accepted_answers` 與寫手的詳解 → `verdict`：`pass`／`reasoning_error`（推理或事實有錯）／`answer_disputed`（認為官方答案本身有問題），附一句理由。
+3. **審稿者比對**：再給 `accepted_answers`、自己的盲解結果與寫手的詳解 → `verdict`：`pass`／`reasoning_error`（推理或事實有錯）／`answer_disputed`（認為官方答案本身有問題），附一句理由。寫手輸出格式不合格（缺選項、超過字數）的題不送比對，直接不通過。
 
-通過＝盲解答案 ⊆ `accepted_answers`（送分題不比答案）**且** `verdict = pass`。其餘 `status = rejected`，原因留在 JSON 給人工看。
+通過＝盲解答案 ⊆ `accepted_answers`（送分題不比答案）**且** `verdict = pass` **且**格式合格。其餘 `status = rejected`，原因（`review.fails`：`blind_mismatch`／`reasoning_error`／`answer_disputed`／`format`）留在 JSON 給人工看。
+某個呼叫在批次裡出錯（errored、沒呼叫工具）→ 寫手有產出就存成 `pending`，下次執行自動重跑三個呼叫。
 
-- 模型：`EXPLAIN_MODEL`（`config.py`）；寫手與審稿者同一個模型但各自獨立對話。
+- 模型：`EXPLAIN_MODEL`（`config.py`）；寫手與審稿者同一個模型但各自獨立對話。思考深度 `EXPLAIN_EFFORT`（預設 `medium`，可用環境變數覆蓋）。
+- `--dry-run` 只印會送出的題數與第一題的三個提示詞；`--limit N` 最多送 N 題。
+- 續跑：批次 id 與中間結果存 `data/explanations/.batches/state.json`（不進 git）；中途斷掉再執行一次就從斷掉的批次接續（不重送），跑完改名成 `run-<時間>.json` 留底。
 - 先用 `--only 114-2/NEURO` 跑一份試卷看品質與用量，再全跑。`--force` 重跑已通過的題；人工寫的（`source = human`）不會被動到。
-- 重生成條件：JSON 存的 `answers_hash`（`accepted_answers`＋`is_voided` 的 sha256 前 12 碼）和 `data/json` 現況不同（答案被更正）→ 下次執行自動重寫、重審。
+- 重生成條件：JSON 存的 `answers_hash`（`sha256("{排序後的 accepted_answers 以逗號連接}|{is_voided 0/1}")` 前 12 碼）和 `data/json` 現況不同（答案被更正）→ 下次執行自動重寫、重審。`rejected` 且 hash 一致的不會自動重跑（改了提示詞要重跑用 `--force`）。
 
 ### 資料
 
-- `data/explanations/{年}-{次}/{科目}.json`，進 git（build 要能重現）；`parse` 不碰這個目錄。一題一筆：
+- `data/explanations/{年}-{次}/{科目}.json`，進 git（build 要能重現）；`parse` 不碰這個目錄。檔案是 `{"exam_id": "114-2-NEURO", "explanations": [...]}`，依 id 排序、一題一筆：
 
 ```json
 {"id": "114-2-NEURO-027", "status": "pass", "source": "llm", "model": "…", "generated_at": "…",
@@ -120,9 +125,11 @@ App 端怎麼使用題庫（篩選、統計、更新）不在這裡。
  "review": {"blind_answer": ["C"], "blind_confidence": 0.9, "verdict": "pass", "reason": "…"}}
 ```
 
-- `status`：`pass`／`rejected`／`pending`（寫了還沒審完）。人工改寫：直接改三段、`source` 設 `human`、`status` 設 `pass`。
-- `build` 只把 `status = pass` 的題寫進 SQLite `explanations(question_id, why_correct, why_others, takeaway, model, generated_at)`；`why_others` 存 JSON 字串。`schema_version` 維持 1（舊 App 不讀這張表照常可用）。manifest 加 `explanation_count`。
-- `validate` 檢查：欄位齊、字數上限、`why_others` 的 key 都是該題存在且非正解的選項、`answers_hash` 與現況一致（不一致列進審核清單）。
+  不通過的 `review` 另有 `fails`（原因代碼）與 `problems`（格式問題、批次錯誤）。
+
+- `status`：`pass`／`rejected`／`pending`（寫了還沒審完）。人工改寫：直接改三段、`source` 設 `human`、`status` 設 `pass`（答案被更正後要人工改內容並更新 `answers_hash`）。
+- `build` 只把 `status = pass` 且 `answers_hash` 與現況一致（答案沒被更正過）的題寫進 SQLite `explanations(question_id, why_correct, why_others, takeaway, model, generated_at)`；`why_others` 存 JSON 字串。`schema_version` 維持 1（舊 App 不讀這張表照常可用）。manifest 加 `explanation_count`。
+- `validate` 檢查：status 合法、題目存在；`status = pass` 的欄位齊、字數上限、`why_others` 的 key 都是該題存在且非正解的選項、非送分題每個非正解選項都有（以上錯了算結構錯誤，`--strict` 會失敗）；`pass` 的 `answers_hash` 與現況不一致 → 審核清單（原因 `explanation_stale`）。
 
 ## 考選部網站與 PDF（2026-10 觀察）
 

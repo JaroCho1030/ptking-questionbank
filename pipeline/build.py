@@ -23,6 +23,7 @@ from pathlib import Path
 import yaml
 
 from . import config as C
+from .explain import answers_hash, iter_explanation_files
 
 SCHEMA_VERSION = 1
 
@@ -103,6 +104,16 @@ CREATE TABLE figures (
     kind        TEXT
 );
 
+-- AI 詳解：只放審稿通過（status = pass）且答案沒被更正過的題；App 以「有沒有這筆」決定有沒有詳解鈕（docs/PIPELINE.md「詳解生成」）
+CREATE TABLE explanations (
+    question_id  TEXT PRIMARY KEY REFERENCES questions(id),
+    why_correct  TEXT NOT NULL,
+    why_others   TEXT NOT NULL,      -- JSON 物件 {"A": "…"}，只含非正解選項；送分題可為 {}
+    takeaway     TEXT NOT NULL,
+    model        TEXT,
+    generated_at TEXT
+);
+
 -- 全文搜尋：trigram 讓中文子字串搜尋不用斷詞；iOS 17 內建 SQLite 支援 FTS5 + trigram
 CREATE VIRTUAL TABLE questions_fts USING fts5(
     id UNINDEXED, stem, option_a, option_b, option_c, option_d,
@@ -117,6 +128,24 @@ def _sha256_file(p: Path) -> str:
         for chunk in iter(lambda: f.read(1 << 20), b""):
             h.update(chunk)
     return h.hexdigest()
+
+
+def _insert_explanations(con: sqlite3.Connection, questions: dict[str, dict]) -> tuple[int, int]:
+    """只寫 status = pass、題目存在、answers_hash 與現況一致的詳解。回傳 (寫入數, 因答案更正略過數)。"""
+    n = stale = 0
+    for _, _, entries in iter_explanation_files():
+        for qid, e in sorted(entries.items()):
+            q = questions.get(qid)
+            if e.get("status") != "pass" or q is None:
+                continue
+            if e.get("answers_hash") != answers_hash(q):
+                stale += 1
+                continue
+            con.execute("INSERT INTO explanations VALUES (?,?,?,?,?,?)",
+                        (qid, e["why_correct"], json.dumps(e.get("why_others") or {}, ensure_ascii=False, sort_keys=True),
+                         e["takeaway"], e.get("model"), e.get("generated_at")))
+            n += 1
+    return n, stale
 
 
 def build(version: str, release_base_url: str | None) -> None:
@@ -141,6 +170,7 @@ def build(version: str, release_base_url: str | None) -> None:
     valid_topics = {t["code"] for sx in tax["subjects"] for t in sx["topics"]}
     exams_summary = []
     q_total = 0
+    all_questions: dict[str, dict] = {}
     for p in sorted(C.JSON_DIR.glob("*/*.json")):
         data = json.loads(p.read_text("utf-8"))
         ex, qs = data["exam"], data["questions"]
@@ -148,6 +178,7 @@ def build(version: str, release_base_url: str | None) -> None:
                     (ex["id"], ex["roc_year"], ex["round"], ex["subject_code"], ex.get("paper_code"),
                      len(qs), ex.get("source_q"), ex.get("source_s"), ex.get("source_m")))
         for q in qs:
+            all_questions[q["id"]] = q
             con.execute(
                 "INSERT INTO questions VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                 (q["id"], ex["id"], ex["subject_code"], q.get("topic"), q["number"], q["stem"],
@@ -174,10 +205,14 @@ def build(version: str, release_base_url: str | None) -> None:
                               "subject_code": ex["subject_code"], "question_count": len(qs)})
         q_total += len(qs)
 
+    n_expl, n_stale = _insert_explanations(con, all_questions)
+    if n_stale:
+        print(f"[warn] {n_stale} 則詳解的答案已被更正（answers_hash 不符），沒有收錄；重跑 explain")
+
     built_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     meta = {
         "schema_version": str(SCHEMA_VERSION), "bank_version": version, "built_at": built_at,
-        "question_count": str(q_total), "taxonomy_version": str(tax.get("version", 1)),
+        "question_count": str(q_total), "explanation_count": str(n_expl), "taxonomy_version": str(tax.get("version", 1)),
         "source": "考選部考畢試題查詢平臺 https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx",
     }
     con.executemany("INSERT INTO meta VALUES (?,?)", meta.items())
@@ -191,6 +226,7 @@ def build(version: str, release_base_url: str | None) -> None:
         "bank_version": version,
         "released_at": built_at,
         "question_count": q_total,
+        "explanation_count": n_expl,
         "latest_exam": f"{latest['roc_year']}-{latest['round']}" if latest else None,
         "min_app_version": "1.0.0",
         "sqlite": {
@@ -202,7 +238,7 @@ def build(version: str, release_base_url: str | None) -> None:
         "exams": exams_summary,
     }
     (C.DIST_DIR / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), "utf-8")
-    print(f"questions.sqlite {db_path.stat().st_size / 1e6:.1f} MB，{q_total} 題，版本 {version}")
+    print(f"questions.sqlite {db_path.stat().st_size / 1e6:.1f} MB，{q_total} 題（詳解 {n_expl} 題），版本 {version}")
     print(f"manifest → {C.DIST_DIR / 'manifest.json'}")
 
 

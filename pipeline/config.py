@@ -15,6 +15,7 @@ FIGURE_DIR = DATA_DIR / "figures"   # 附圖 WebP（進 git）
 FIGURE_ZOOM = 2.0                   # 裁圖解析度：PDF 1pt → 2px，全寬圖約 1100px（接近 iPhone @3x 全寬）
 FIGURE_WEBP_QUALITY = 85            # 2026-10 實測：113 年 29 張 6.6 MB(PNG) → 0.6 MB，表格字與 X 光細節目視無差
 REVIEW_DIR = DATA_DIR / "review"    # 待人工檢查清單（進 git）
+EXPLANATION_DIR = DATA_DIR / "explanations"  # AI 詳解（進 git；.batches/ 是 explain 的中間檔，不進 git）
 DIST_DIR = ROOT / "dist"            # build 產物（gitignore）
 TAXONOMY_PATH = ROOT / "taxonomy" / "taxonomy.yaml"
 
@@ -57,6 +58,16 @@ OPTION_LETTERS = ("A", "B", "C", "D")
 TAG_MODEL = os.environ.get("TAG_MODEL", "claude-sonnet-5-5")  # 2026-10：Sonnet 4.5 已標 deprecated，5.5 較便宜
 TAG_BATCH_SIZE = int(os.environ.get("TAG_BATCH_SIZE", "20"))
 TAG_LOW_CONFIDENCE = 0.45          # 2026-10-19：只審「可能標錯」的（< 0.45）；0.5 =「兩個主題都合理」自動接受，第二候選存 alt_topic
+
+# AI 詳解（docs/PIPELINE.md「詳解生成」）
+EXPLAIN_MODEL = os.environ.get("EXPLAIN_MODEL", "claude-opus-5-5")
+EXPLAIN_EFFORT = os.environ.get("EXPLAIN_EFFORT", "medium")   # low／medium／high／xhigh／max；試跑看品質與用量再調
+EXPLAIN_MIN_YEAR = 110              # 110-1 起；更早的之後再補
+EXPLAIN_MAX_CORRECT = 120           # why_correct 字數上限（字數算法見 explain.text_len）
+EXPLAIN_MAX_OTHER = 40              # why_others 每個選項的上限
+EXPLAIN_MAX_TAKEAWAY = 50           # takeaway 上限
+EXPLAIN_MAX_TOKENS = 16000          # 含思考的輸出上限
+EXPLAIN_POLL_SEC = 60               # 輪詢批次狀態的間隔
 
 
 def exam_dirname(roc_year: int, rnd: int) -> str:

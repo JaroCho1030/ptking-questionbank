@@ -8,3 +8,5 @@ __pycache__/
 .DS_Store
 # 子代理標記的批次與結果（中間檔，匯入後就寫進 data/json）
 data/tagging/
+# explain 的批次 id 與中間結果（續跑用）
+data/explanations/.batches/

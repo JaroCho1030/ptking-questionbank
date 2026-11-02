@@ -12,6 +12,8 @@
     - 主題：topic 必須在 taxonomy 內（可跨科）；topic_confidence 低於門檻列入審核；未標記的統計
       次要主題 secondary_topics：最多 2 個、必須在 taxonomy 內（可跨科）、不可與主要主題相同或重複
     - 題幹／選項殘留部首區段的字（textnorm 沒對照到的 ⻑ 之類）
+    - AI 詳解（data/explanations）：status 合法、題目存在；status = pass 的欄位齊、字數上限、why_others 只含存在且非正解的選項
+      （錯了算結構錯誤）；通過的 answers_hash 與現況不符（答案被更正）→ 審核清單，原因 explanation_stale
 
 已審紀錄 data/review/reviewed.csv（id,reasons,reviewed_at,note）：同一題、同樣原因審過就不再列入；
 原因變了（例如重新 parse 後多了新問題）會再出現。
@@ -28,6 +30,7 @@ from pathlib import Path
 import yaml
 
 from . import config as C
+from .explain import answers_hash, format_problems, iter_explanation_files, STATUSES
 from .textnorm import _is_radical
 
 REVIEWED_FIELDS = ["id", "reasons", "reviewed_at", "note"]
@@ -61,9 +64,25 @@ def iter_json_files():
         yield p, json.loads(p.read_text("utf-8"))
 
 
-def validate_file(path: Path, data: dict, topics: dict) -> tuple[list[dict], list[str]]:
-    """回傳 (review_rows, errors)。review_rows 是要人看的；errors 是結構性錯誤。"""
+def check_explanation(q: dict, e: dict) -> tuple[list[str], list[str]]:
+    """一則詳解 → (審核原因, 結構錯誤)。"""
+    reasons, errors = [], []
+    if e.get("status") not in STATUSES:
+        errors.append(f"{q['id']}: 詳解 status 不合法 {e.get('status')!r}")
+    if e.get("status") == "pass":
+        errors += [f"{q['id']}: 詳解{p}" for p in format_problems(q, e)]
+        # 通過的詳解答案被更正：build 不收錄，explain 下次會重寫（人工寫的要人工改）
+        if e.get("answers_hash") != answers_hash(q):
+            reasons.append("explanation_stale")
+    return reasons, errors
+
+
+def validate_file(path: Path, data: dict, topics: dict,
+                  explanations: dict[str, dict] | None = None) -> tuple[list[dict], list[str]]:
+    """回傳 (review_rows, errors)。review_rows 是要人看的；errors 是結構性錯誤。
+    explanations：這份試卷的詳解 {id: entry}（data/explanations 同名檔）。"""
     rows, errors = [], []
+    explanations = explanations or {}
     exam = data["exam"]
     qs = data["questions"]
     label = exam["id"]
@@ -123,6 +142,10 @@ def validate_file(path: Path, data: dict, topics: dict) -> tuple[list[dict], lis
                 reasons.append(f"次要主題不在分類表：{c}")
             elif c == q.get("topic"):
                 reasons.append(f"次要主題與主要主題相同：{c}")
+        if q["id"] in explanations:
+            r, e = check_explanation(q, explanations[q["id"]])
+            reasons += r
+            errors += e
         if reasons:
             rows.append({
                 "id": q["id"], "reasons": "；".join(dict.fromkeys(reasons)),
@@ -141,8 +164,15 @@ def main(argv=None):
     tax = load_taxonomy()
     all_rows, all_errors = [], []
     total, tagged, voided, figures, grouped, group_ids = 0, 0, 0, 0, 0, set()
+    expl = {(d, s): entries for d, s, entries in iter_explanation_files()}
+    seen_papers = set()
     for path, data in iter_json_files():
-        rows, errors = validate_file(path, data, tax["topics"])
+        key = (path.parent.name, path.stem)
+        seen_papers.add(key)
+        entries = expl.get(key, {})
+        known = {q["id"] for q in data["questions"]}
+        all_errors += [f"{qid}: 詳解對應的題目不存在" for qid in sorted(set(entries) - known)]
+        rows, errors = validate_file(path, data, tax["topics"], entries)
         all_rows += rows
         all_errors += errors
         for q in data["questions"]:
@@ -154,6 +184,11 @@ def main(argv=None):
                 grouped += 1
                 group_ids.add(q["group_id"])
 
+    for d, s in sorted(set(expl) - seen_papers):
+        all_errors.append(f"data/explanations/{d}/{s}.json: 沒有對應的試卷")
+    n_pass = sum(e.get("status") == "pass" for entries in expl.values() for e in entries.values())
+    n_expl = sum(len(entries) for entries in expl.values())
+
     all_rows, n_reviewed = drop_reviewed(all_rows, load_reviewed())
     C.REVIEW_DIR.mkdir(parents=True, exist_ok=True)
     out = C.REVIEW_DIR / "review_queue.csv"
@@ -162,7 +197,7 @@ def main(argv=None):
         w.writeheader()
         w.writerows(all_rows)
 
-    print(f"題目總數 {total}，已標主題 {tagged}，送分 {voided}，附圖 {figures}，題組 {len(group_ids)} 組 {grouped} 題")
+    print(f"題目總數 {total}，已標主題 {tagged}，送分 {voided}，附圖 {figures}，題組 {len(group_ids)} 組 {grouped} 題，詳解 {n_expl} 則（通過 {n_pass}）")
     print(f"待審核 {len(all_rows)} 題 → {out}（已審略過 {n_reviewed} 題）")
     for e in all_errors:
         print("[error]", e)

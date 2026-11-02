@@ -163,6 +163,7 @@ def test_assemble_validate_build_end_to_end(tmp_path, monkeypatch):
     monkeypatch.setattr(C, "DIST_DIR", dist_dir)
     monkeypatch.setattr(C, "REVIEW_DIR", review_dir)
     monkeypatch.setattr(C, "DATA_DIR", tmp_path)
+    monkeypatch.setattr(C, "EXPLANATION_DIR", tmp_path / "explanations")
 
     V.main([])
     rows = (review_dir / "review_queue.csv").read_text("utf-8-sig").splitlines()
@@ -178,6 +179,7 @@ def test_assemble_validate_build_end_to_end(tmp_path, monkeypatch):
     assert con.execute("SELECT id FROM questions_fts WHERE questions_fts MATCH '布朗斯壯'").fetchone()[0].startswith("108-1-NEURO")
     manifest = json.loads((dist_dir / "manifest.json").read_text("utf-8"))
     assert manifest["question_count"] == 80 and manifest["sqlite"]["url"].endswith("/questions.sqlite")
+    assert manifest["explanation_count"] == 0
 
 
 def test_user_agent_is_latin1():
@@ -381,6 +383,7 @@ def _setup_dirs(tmp_path, monkeypatch, data):
     monkeypatch.setattr(C, "DIST_DIR", dist_dir)
     monkeypatch.setattr(C, "REVIEW_DIR", review_dir)
     monkeypatch.setattr(C, "DATA_DIR", tmp_path)
+    monkeypatch.setattr(C, "EXPLANATION_DIR", tmp_path / "explanations")
     return dist_dir, review_dir
 
 
