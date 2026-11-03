@@ -110,7 +110,7 @@ App 端怎麼使用題庫（篩選、統計、更新）不在這裡。
 某個呼叫在批次裡出錯（errored、沒呼叫工具）→ 寫手有產出就存成 `pending`，下次執行自動重跑三個呼叫。
 
 - 模型：`EXPLAIN_MODEL`（`config.py`）；寫手與審稿者同一個模型但各自獨立對話。思考深度 `EXPLAIN_EFFORT`（預設 `medium`，可用環境變數覆蓋）。
-- `--dry-run` 只印會送出的題數與第一題的三個提示詞；`--limit N` 最多送 N 題。
+- `--dry-run` 只印會送出的題數與第一題的三個提示詞；`--limit N` 最多送 N 題；`--years 113-115` 只做這幾年。
 - 續跑：批次 id 與中間結果存 `data/explanations/.batches/state.json`（不進 git）；中途斷掉再執行一次就從斷掉的批次接續（不重送），跑完改名成 `run-<時間>.json` 留底。
 - 先用 `--only 114-2/NEURO` 跑一份試卷看品質與用量，再全跑。`--force` 重跑已通過的題；人工寫的（`source = human`）不會被動到。
 - 重生成條件：JSON 存的 `answers_hash`（`sha256("{排序後的 accepted_answers 以逗號連接}|{is_voided 0/1}")` 前 12 碼）和 `data/json` 現況不同（答案被更正）→ 下次執行自動重寫、重審。`rejected` 且 hash 一致的不會自動重跑（改了提示詞要重跑用 `--force`）。

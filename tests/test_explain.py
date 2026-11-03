@@ -83,6 +83,9 @@ def test_select_todo(dirs):
     assert ids(X.select_todo(limit=2)) == ["002", "004"]
     assert ids(X.select_todo(only="109-2/NEURO")) == []
     assert ids(X.select_todo(only="114-2/NEURO", limit=1)) == ["002"]
+    assert ids(X.select_todo(years=[113, 114])) == ["002", "004", "005", "007"]
+    assert ids(X.select_todo(years=[113])) == []
+    assert ids(X.select_todo(years=[109, 114], limit=1)) == ["002"]   # 109 低於門檻，給了也不做
 
 
 def test_judge():

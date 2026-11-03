@@ -4,6 +4,7 @@
     python -m pipeline.explain --only 114-2/NEURO --dry-run   # 只印題數與第一題的三個提示詞，不打 API
     python -m pipeline.explain --only 114-2/NEURO             # 一份試卷試跑
     python -m pipeline.explain --limit 200                     # 最多送 200 題
+    python -m pipeline.explain --years 113-115                 # 只做這幾年（格式同 fetch：113-115、110,112）
     python -m pipeline.explain --force --only 114-2/NEURO      # 已有詳解的也重跑（人工寫的除外）
 
 每題三個呼叫，都走 Message Batches API：
@@ -237,14 +238,16 @@ def needs_explain(q: dict, e: dict | None, force: bool) -> bool:
     return e is None or force or e.get("status") == "pending" or e.get("answers_hash") != answers_hash(q)
 
 
-def select_todo(only: str | None = None, limit: int | None = None, force: bool = False) -> list[tuple[str, str, dict]]:
-    """回傳 [(年-次, 科目, 題目)]；年 < EXPLAIN_MIN_YEAR 的不做。"""
+def select_todo(only: str | None = None, limit: int | None = None, force: bool = False,
+                years: list[int] | None = None) -> list[tuple[str, str, dict]]:
+    """回傳 [(年-次, 科目, 題目)]；年 < EXPLAIN_MIN_YEAR 的不做；years 給了就只做那幾年。"""
     out = []
     for p in sorted(C.JSON_DIR.glob("*/*.json")):
         exam_dir, subject = p.parent.name, p.stem
         if only and only != f"{exam_dir}/{subject}":
             continue
-        if int(exam_dir.split("-")[0]) < C.EXPLAIN_MIN_YEAR:
+        year = int(exam_dir.split("-")[0])
+        if year < C.EXPLAIN_MIN_YEAR or (years and year not in years):
             continue
         data = json.loads(p.read_text("utf-8"))
         existing = load_explanations(exam_dir, subject)
@@ -664,22 +667,25 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--only", help="只做某份試卷，例如 114-2/NEURO")
     ap.add_argument("--limit", type=int, help="最多送幾題")
+    ap.add_argument("--years", help="只做這幾年（民國年），例如 113-115 或 110,112")
     ap.add_argument("--force", action="store_true", help="已有詳解的也重跑（人工寫的除外）")
     ap.add_argument("--dry-run", action="store_true", help="只印題數與第一題的三個提示詞，不打 API")
     args = ap.parse_args(argv)
 
+    from .fetch import parse_years
+    years = parse_years(args.years) if args.years else None
     state = load_state()
     if args.dry_run:
         if state:
             print(f"注意：有一次沒跑完的執行（{state['run_id']}，{len(state['ids'])} 題），不加 --dry-run 會先把它跑完")
-        dry_run(select_todo(args.only, args.limit, args.force))
+        dry_run(select_todo(args.only, args.limit, args.force, years))
         return
     import anthropic
     client = anthropic.Anthropic()
     if state:
-        print(f"接續上次沒跑完的執行 {state['run_id']}（{len(state['ids'])} 題）；這次的 --only/--limit/--force 不套用")
+        print(f"接續上次沒跑完的執行 {state['run_id']}（{len(state['ids'])} 題）；這次的 --only/--years/--limit/--force 不套用")
     else:
-        todo = select_todo(args.only, args.limit, args.force)
+        todo = select_todo(args.only, args.limit, args.force, years)
         if not todo:
             print("沒有要生成的題目。")
             return
