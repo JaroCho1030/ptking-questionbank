@@ -10,6 +10,7 @@
 - **答案**：每題附考選部公布的標準答案；考選部事後更正的答案已改成更正後的版本，「一律給分」的送分題會標出來、不計分。
 - **附圖**：題目有附圖的，從原試卷裁出圖片一起收錄。
 - **主題分類**：每題依考科內容歸到一個主題（少數橫跨兩個知識點的題目另有次要主題），可以按主題練習、看自己哪裡弱。分類表見 [docs/TAXONOMY.md](docs/TAXONOMY.md)。分類由 AI 輔助、再經人工抽查修正，僅供參考。
+- **AI 詳解**：大部分題目附一則 AI 寫的詳解（為什麼是這個答案、其他選項為什麼不對、這題的考點），作答揭曉後在 App 裡把題目卡片翻面就能看。製作方式見下一節；約一成的題目因為沒通過審核而沒有詳解。
 
 確切的題數、各科分布與每一版的更新內容，請看 [最新 Release](https://github.com/JaroCho1030/ptking-questionbank/releases/latest)。
 
@@ -21,6 +22,18 @@
 | 神經疾病物理治療學 | `NEURO` |
 | 骨科疾病物理治療學 | `ORTHO` |
 | 心肺疾病與小兒疾病物理治療學 | `CARDPED` |
+
+## AI 詳解怎麼做的
+
+詳解不是考選部提供的，是用 AI 模型事先寫好、審過，再隨題庫一起發布；App 不會即時連線問 AI。每一題都經過三個獨立的角色：
+
+1. **寫手**：拿到題目、附圖和考選部公布的答案，照固定的三段格式寫詳解——為什麼是這個答案（2–3 句）、其他每個選項各一句為什麼不對、最後一句考點或記法。
+2. **審稿者盲解**：另一個模型**只看題目**（不給答案、也不給寫手的詳解），自己作答一次。
+3. **審稿者比對**：再把公布答案、自己盲解的結果和寫手的詳解一起給審稿者，逐句檢查推理與事實，判定「通過」、「推理或事實有錯」或「官方答案本身可能有問題」。
+
+只有**盲解答對、比對判通過、格式也合格**的詳解才會進題庫；任一關沒過，那題就乾脆不出詳解，不出帶警語的半成品。十年全部 10,560 題跑下來約九成通過。沒通過的題目連同原因都留在 [`data/explanations/`](data/explanations/) 裡，之後再逐題人工處理。
+
+即使如此，AI 仍可能寫錯，App 裡每則詳解都標示「AI 產生，可能有誤」。讀到有問題的詳解，請用下面的方式回報。
 
 ## 題目編號
 
@@ -35,7 +48,7 @@ App 開啟時會自動檢查並下載新版，不需要手動處理；已經作�
 
 ## 發現錯誤？
 
-題目文字、答案、附圖或主題分類有誤，歡迎：
+題目文字、答案、附圖、主題分類或 AI 詳解有誤，歡迎：
 
 - [開 issue](https://github.com/JaroCho1030/ptking-questionbank/issues)，附上題目編號與哪裡不對；或
 - 在 App 裡從「我的 › 回報問題」寄信，會自動附上 App 與題庫版本。
@@ -49,10 +62,10 @@ App 開啟時會自動檢查並下載新版，不需要手動處理；已經作�
 
 每個 Release 附兩個檔案：
 
-- `questions.sqlite`：完整題庫（題目、選項、答案、附圖、主題分類）。
-- `manifest.json`：版本號、題數與檔案 sha256。
+- `questions.sqlite`：完整題庫（題目、選項、答案、附圖、主題分類、通過審核的 AI 詳解）。
+- `manifest.json`：版本號、題數、詳解數與檔案 sha256。
 
-最新版的固定網址是 `https://github.com/JaroCho1030/ptking-questionbank/releases/latest/download/manifest.json`。各試卷的整理結果也以 JSON 放在 [`data/json/`](data/json/)，格式說明在 [docs/PIPELINE.md](docs/PIPELINE.md)。
+最新版的固定網址是 `https://github.com/JaroCho1030/ptking-questionbank/releases/latest/download/manifest.json`。各試卷的整理結果也以 JSON 放在 [`data/json/`](data/json/)，AI 詳解（含沒通過的與審核結果）在 [`data/explanations/`](data/explanations/)，格式說明在 [docs/PIPELINE.md](docs/PIPELINE.md)。
 
 想了解題庫怎麼從考選部的 PDF 整理出來、或想參與改進，請看 [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)。
 
