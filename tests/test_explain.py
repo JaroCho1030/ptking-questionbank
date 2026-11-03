@@ -69,7 +69,7 @@ def test_text_len_counts_english_word_as_one():
 def test_select_todo(dirs):
     qs = [_q(f"114-2-NEURO-{i:03d}") for i in range(1, 8)]
     _write_paper(dirs, "114-2", "NEURO", qs)
-    _write_paper(dirs, "109-2", "NEURO", [_q("109-2-NEURO-001")])   # 110 以前不做
+    _write_paper(dirs, "104-2", "NEURO", [_q("104-2-NEURO-001")])   # EXPLAIN_MIN_YEAR（105）以前不做
     X.save_explanations("114-2", "NEURO", {
         qs[0]["id"]: _entry(qs[0]),                                   # 通過、hash 一致 → 跳過
         qs[1]["id"]: _entry(qs[1], stale=True),                       # 答案被更正 → 重跑
@@ -81,7 +81,7 @@ def test_select_todo(dirs):
     assert ids(X.select_todo()) == ["002", "004", "005", "007"]
     assert ids(X.select_todo(force=True)) == ["001", "002", "004", "005", "006", "007"]
     assert ids(X.select_todo(limit=2)) == ["002", "004"]
-    assert ids(X.select_todo(only="109-2/NEURO")) == []
+    assert ids(X.select_todo(only="104-2/NEURO")) == []
     assert ids(X.select_todo(only="114-2/NEURO", limit=1)) == ["002"]
     assert ids(X.select_todo(years=[113, 114])) == ["002", "004", "005", "007"]
     assert ids(X.select_todo(years=[113])) == []

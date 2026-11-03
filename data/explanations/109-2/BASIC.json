@@ -1,0 +1,1876 @@
+{
+ "exam_id": "109-2-BASIC",
+ "explanations": [
+  {
+   "id": "109-2-BASIC-001",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "第八至第十對肋骨以肋軟骨連到上一條肋軟骨，屬假肋（false ribs）；浮肋指第十一、十二對，前端不接胸骨也不接其他肋軟骨。",
+   "why_others": {
+    "A": "人體有十二對肋骨，敘述正確。",
+    "B": "第一至第七對直接以肋軟骨連胸骨，稱真肋。",
+    "D": "肋溝位於肋骨下緣內側，容納肋間血管與神經。"
+   },
+   "takeaway": "真肋1–7、假肋8–10、浮肋11–12。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.97,
+    "verdict": "pass",
+    "reason": "真肋、假肋、浮肋分類與肋溝位置皆正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-002",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "蝶骨大翼的三個孔由前內往後外排列，依序為圓孔（上頜神經）、卵圓孔（下頜神經）、棘孔（腦膜中動脈）。",
+   "why_others": {
+    "A": "卵圓孔不在最前方，圓孔才是最前。",
+    "B": "棘孔在最後，不在卵圓孔之前。",
+    "C": "棘孔應在最後，圓孔應在最前，順序顛倒。"
+   },
+   "takeaway": "由前到後：圓孔、卵圓孔、棘孔。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.97,
+    "verdict": "pass",
+    "reason": "圓孔、卵圓孔、棘孔的排列順序與通過結構皆正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-003",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "環狀韌帶（anular ligament）環繞橈骨頭，將其固定於尺骨橈骨切跡，防止橈骨頭自橈尺近側關節脫位，小孩牽拉肘即可能造成脫位。",
+   "why_others": {
+    "A": "前十字韌帶防止脛骨過度向前位移。",
+    "B": "後十字韌帶防止脛骨向後位移，或股骨相對向前滑動。",
+    "D": "坐骨股韌帶主要限制髖關節內旋，而非外旋。"
+   },
+   "takeaway": "ACL擋脛骨前移，PCL擋後移；環狀韌帶固定橈骨頭。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "環狀韌帶功能正確，ACL、PCL與坐骨股韌帶限制內旋的說明皆無誤。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-004",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "心肌細胞通常為單核，少數可有雙核，並非每個都是多核；多核是骨骼肌細胞的特徵。",
+   "why_others": {
+    "A": "心肌細胞呈分岔狀，彼此相連成網。",
+    "C": "心肌細胞間由間盤上的間隙接合傳遞電訊號。",
+    "D": "心肌受交感與副交感神經調控心率與收縮力。"
+   },
+   "takeaway": "心肌單核（少數雙核）、分岔、有間盤與間隙接合。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "心肌單核或雙核、分岔、間隙接合與自主神經調控皆正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-005",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "顳肌（temporalis）起於顳窩，止於下頜骨冠突，收縮時上提下頜骨使嘴巴閉合，與咬肌、內翼肌同屬閉口肌。",
+   "why_others": {
+    "B": "頰肌壓緊臉頰，協助咀嚼與吹氣，不上提下頜骨。",
+    "C": "外翼肌使下頜前突並協助張口。",
+    "D": "頦肌牽動下唇與下巴皮膚，不作用於下頜骨。"
+   },
+   "takeaway": "閉口肌：顳肌、咬肌、內翼肌。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.97,
+    "verdict": "pass",
+    "reason": "顳肌為閉口肌，其他三肌的作用描述正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-006",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "內肋間肌作用是下壓肋骨、縮小胸腔，協助用力呼氣；上提肋骨協助吸氣的是外肋間肌。",
+   "why_others": {
+    "A": "外肋間肌上提肋骨，協助吸氣。",
+    "B": "內肋間肌纖維由後下往前上斜行，與外肋間肌垂直交叉。",
+    "D": "外肋間肌由肋間神經支配。"
+   },
+   "takeaway": "外肋間肌吸氣，內肋間肌用力呼氣。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "內肋間肌下壓肋骨協助用力呼氣，纖維走向與神經支配敘述正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-007",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "股二頭肌（biceps femoris）長頭跨髖與膝關節，收縮時伸髖並屈膝，屬膕旁肌群。",
+   "why_others": {
+    "A": "縫匠肌屈髖、屈膝，髖部是屈曲不是伸直。",
+    "C": "股中間肌只跨膝，作用是伸膝。",
+    "D": "股直肌屈髖並伸膝，與題意相反。"
+   },
+   "takeaway": "膕旁肌群伸髖、屈膝。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.97,
+    "verdict": "pass",
+    "reason": "股二頭肌伸髖屈膝，其他選項的作用說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-008",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "陰莖勃起由副交感神經（骨盆內臟神經，S2–S4）興奮，使海綿體動脈擴張、血液充盈。",
+   "why_others": {
+    "A": "交感神經主要負責射精，並抑制勃起。",
+    "C": "閉孔神經支配大腿內收肌群，與勃起無關。",
+    "D": "股神經支配大腿前側肌肉，與勃起無關。"
+   },
+   "takeaway": "副交感勃起，交感射精。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.97,
+    "verdict": "pass",
+    "reason": "副交感（S2–S4骨盆內臟神經）負責勃起、交感負責射精，敘述正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-009",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "齒狀韌帶（denticulate ligament）是軟膜（pia mater）向兩側延伸，固定於硬膜的構造，用來懸吊脊髓。",
+   "why_others": {
+    "A": "由外到內應是硬膜、蜘蛛膜、軟膜，順序寫反。",
+    "B": "三層並非緊密貼合，蜘蛛膜下腔有腦脊髓液緩衝。",
+    "D": "顱內硬膜緊貼頭蓋骨，緩衝空間在蜘蛛膜下腔。"
+   },
+   "takeaway": "由外至內：硬膜、蜘蛛膜、軟膜；齒狀韌帶屬軟膜。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "齒狀韌帶為軟膜延伸，腦脊膜層次與顱內硬膜貼骨說明皆正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-010",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "腦幹與小腦間有大量纖維聯繫，經上、中、下三對小腦腳（cerebellar peduncles）進出，因此並非無神經路徑連繫。",
+   "why_others": {
+    "A": "腦幹由吻端到尾端為中腦、橋腦、延腦。",
+    "B": "腦幹內含上行與下行路徑。",
+    "C": "大腦腳位於中腦腹側。"
+   },
+   "takeaway": "腦幹與小腦經三對小腦腳相連。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.97,
+    "verdict": "pass",
+    "reason": "腦幹經三對小腦腳與小腦相連，其他選項敘述正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-011",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "骨骼肌內有肌梭與高爾基肌腱器等感覺受器，可回饋肌肉長度與張力，調節收縮程度。",
+   "why_others": {
+    "A": "感覺神經元多為假單極，並非皆為多極。",
+    "B": "本體感覺由體感覺系統傳遞，不屬自主神經。",
+    "C": "感覺纖維有些無髓鞘，如傳痛覺的C纖維。"
+   },
+   "takeaway": "肌梭、肌腱器提供肌肉本體回饋。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "肌梭與高爾基肌腱器回饋肌肉長度與張力，其他選項的反駁正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-012",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "閉孔神經（obturator nerve）支配大腿內收肌群，受傷後大腿內側無力、無法併攏雙腿。",
+   "why_others": {
+    "A": "股神經支配髖屈與伸膝，受傷主要影響伸膝。",
+    "B": "脛神經支配小腿後側與足底肌肉。",
+    "D": "坐骨神經支配膕旁肌與小腿以下，不是內收肌群。"
+   },
+   "takeaway": "內收肌群歸閉孔神經。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.97,
+    "verdict": "pass",
+    "reason": "閉孔神經支配內收肌群，其他神經支配描述正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-013",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "主動脈瓣區的心音最清楚處在右側胸骨緣第二肋間。",
+   "why_others": {
+    "B": "左側胸骨緣第二肋間是肺動脈瓣區。",
+    "C": "左鎖骨中線第五肋間是二尖瓣（心尖）區。",
+    "D": "三尖瓣區在胸骨左下緣，右側第五肋間不是標準聽診位置。"
+   },
+   "takeaway": "主動脈瓣聽診區：右第二肋間。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "四個瓣膜聽診區的位置皆正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-014",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "小動脈（arteriole）管壁平滑肌豐富，且受交感神經密集支配，收縮或舒張可改變周邊阻力而調節血壓。",
+   "why_others": {
+    "A": "微血管無平滑肌，不受神經直接調控管徑。",
+    "C": "靜脈主要調節容量，非調血壓的主要阻力血管。",
+    "D": "主動脈為彈性動脈，不是主要的調控部位。"
+   },
+   "takeaway": "周邊阻力主要由小動脈調控。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "小動脈為主要阻力血管且受交感密集支配，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-015",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "大隱靜脈（great saphenous vein）長而口徑適當、容易取得，是繞道手術最常用的移植血管。",
+   "why_others": {
+    "A": "橈動脈也可使用，但不及大隱靜脈常用。",
+    "B": "頭靜脈較細且品質不佳，少用。",
+    "D": "奇靜脈位於胸腔深處，不作為移植血管。"
+   },
+   "takeaway": "CABG常用大隱靜脈與內乳動脈。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "大隱靜脈為最常用的繞道移植血管，其他選項說明合理。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-016",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "呼吸性細支氣管（respiratory bronchiole）管壁開始有肺泡，上皮為單層立方上皮，近肺泡處漸變扁平。",
+   "why_others": {
+    "A": "偽複層柱狀上皮見於氣管與較大的支氣管。",
+    "C": "移行上皮見於泌尿道。",
+    "D": "複層鱗狀上皮見於口腔、食道等處。"
+   },
+   "takeaway": "氣道愈往末端，上皮愈變薄成立方。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "呼吸性細支氣管為單層立方上皮，其他上皮的分布正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-017",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "胃的黏膜上皮為單層柱狀上皮，負責分泌黏液。",
+   "why_others": {
+    "B": "咽主要為複層鱗狀上皮（鼻咽部為呼吸上皮）。",
+    "C": "食道為未角化複層鱗狀上皮。",
+    "D": "口腔為複層鱗狀上皮。"
+   },
+   "takeaway": "胃與腸為單層柱狀，口咽食道為複層鱗狀。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.97,
+    "verdict": "pass",
+    "reason": "胃為單層柱狀上皮，咽、食道、口腔為複層鱗狀上皮，敘述正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-018",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "緻密斑（macula densa）位於遠曲小管，感應管腔內鈉氯濃度，屬化學受器，調節腎素分泌與腎絲球過濾。",
+   "why_others": {
+    "B": "腎絲球負責過濾血漿，濃縮尿液靠亨利氏環與集尿管。",
+    "C": "近腎絲球細胞分泌腎素；抗利尿激素由下視丘製造。",
+    "D": "足細胞構成過濾屏障，不是免疫功能。"
+   },
+   "takeaway": "緻密斑感應濾液鈉，近腎絲球細胞分泌腎素。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "緻密斑感應NaCl屬化學受器，其他配對錯誤的理由正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-019",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "甲狀腺分左右兩葉，以峽部相連；副甲狀腺通常有四顆，位於甲狀腺後側。",
+   "why_others": {
+    "A": "甲狀腺位於甲狀軟骨下方、氣管前方，並非被甲狀軟骨包覆。",
+    "C": "降鈣素由甲狀腺濾泡旁細胞分泌，副甲狀腺分泌副甲狀腺素。",
+    "D": "主要的內分泌細胞是主細胞，嗜酸細胞較少。"
+   },
+   "takeaway": "副甲狀腺四顆在甲狀腺後方，分泌PTH。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "甲狀腺兩葉、副甲狀腺四顆位於後方，降鈣素與主細胞的說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-020",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "毛髮、汗腺、皮脂腺與指甲等皮膚附屬構造，由表皮上皮細胞向下陷入真皮生長分化而成。",
+   "why_others": {
+    "A": "皮下組織的脂肪細胞不形成附屬構造。",
+    "B": "真皮纖維母細胞只生成結締組織。",
+    "D": "豎毛肌是平滑肌，附屬於毛囊而非衍生出附屬構造。"
+   },
+   "takeaway": "皮膚附屬構造源自表皮。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "皮膚附屬構造由表皮上皮下陷衍生，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-021",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "骨骼肌收縮的主要機制是粗細肌絲間橫橋循環，使細肌絲滑向肌節中央，即肌絲滑動理論。",
+   "why_others": {
+    "A": "肌凝蛋白是粗肌絲的主要蛋白，細肌絲主要是肌動蛋白。",
+    "C": "粗肌絲以M線居中，固定在Z線的是細肌絲。",
+    "D": "離心收縮是主動收縮，且不是被動，敘述不精確。"
+   },
+   "takeaway": "粗肌絲含肌凝蛋白，細肌絲錨定Z線。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "reasoning_error",
+    "reason": "D的反駁「離心收縮是主動收縮，且不是被動」語意含糊，未說明肌絲滑動理論無法完整解釋離心（被動拉長）時的力量特性（如titin等被動成分與殘餘力量增強），推理不成立。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-022",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "無髓鞘軸突的傳導速度隨半徑增加而變快，半徑大者阻力小，速度較快，因此題述說較慢是錯的。",
+   "why_others": {
+    "A": "膜電位須達閾值才會引發動作電位。",
+    "B": "動作電位遵守全或無定律。",
+    "C": "有髓鞘軸突以蘭氏結跳躍式傳導。"
+   },
+   "takeaway": "軸突愈粗、有髓鞘，傳導愈快。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.97,
+    "verdict": "pass",
+    "reason": "無髓鞘軸突半徑越大傳導越快，其他選項敘述正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-023",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "舉重屬極短時間的爆發性用力，主要靠肌肉內現成儲存的 ATP 與磷酸肌酸（ATP-PC system）快速供能。",
+   "why_others": {
+    "A": "脂肪代謝供能慢，用於長時間低強度運動。",
+    "B": "乳酸系統適合約數十秒至兩分鐘的高強度運動。",
+    "C": "有氧系統適合長時間運動，供能速率較慢。"
+   },
+   "takeaway": "10秒內爆發用力靠ATP-PC系統。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "舉重屬短時間爆發，主要靠ATP-PC系統，其他能量系統說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-024",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "進入青春期時生長激素分泌增加，使血中IGF-1快速上升，約在青少年期（13至17歲）達最高。",
+   "why_others": {
+    "A": "幼兒期IGF-1仍低且變化平緩。",
+    "B": "學齡期上升較緩，尚未進入青春期高峰。",
+    "D": "青春期後IGF-1已逐漸下降。"
+   },
+   "takeaway": "IGF-1隨青春期生長突增而飆升。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "IGF-1於青春期快速上升並達高峰，其他年齡段說明合理。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-025",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "阻力訓練最主要的效果是肌纖維橫截面積變大（肌肥大），使肌肉變粗、力量增加。",
+   "why_others": {
+    "A": "成人肌細胞數目幾乎不變，大量增生並非主要效果。",
+    "C": "粒線體密度增加是耐力訓練的特徵。",
+    "D": "阻力訓練傾向降低體脂比例。"
+   },
+   "takeaway": "阻力訓練：肌纖維變大，而非變多。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "阻力訓練主要造成肌纖維肥大，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-026",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "顆粒內質網製造的前原激素（preprohormone）分子比最後分泌的激素大，經切除訊息胜肽等修飾後才變小，題述相反。",
+   "why_others": {
+    "A": "蛋白質激素都由顆粒內質網合成。",
+    "C": "酪氨酸衍生的激素在胞質中經酶作用合成。",
+    "D": "類固醇細胞儲存大量前驅物，可快速轉化為激素。"
+   },
+   "takeaway": "前原激素比成熟激素大。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "前原激素比成熟激素大，其他敘述與Guyton內容一致。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-027",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "紅光波長長，不會漂白視紫質（rhodopsin）而影響桿細胞，戴紅色眼鏡可讓桿細胞維持暗適應。",
+   "why_others": {
+    "A": "藍光會漂白視紫質，延長暗適應時間。",
+    "B": "綠光對桿細胞敏感，會破壞暗適應。",
+    "D": "黃光同樣會刺激桿細胞，影響暗適應。"
+   },
+   "takeaway": "戴紅色眼鏡保護暗適應。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "紅光不易漂白視紫質，戴紅色眼鏡可保持暗適應，其他顏色說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-028",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "生長素不抑制肝醣形成，反而使細胞內肝醣儲存增加，並降低葡萄糖利用、升高血糖，因此該敘述錯誤。",
+   "why_others": {
+    "A": "生長素降低組織對葡萄糖的攝取與利用。",
+    "C": "高血糖會刺激胰島素分泌增加。",
+    "D": "生長素造成胰島素阻抗，敏感度降低。"
+   },
+   "takeaway": "生長素有致糖尿病效應。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "生長素增加細胞肝醣儲存、降低葡萄糖利用並造成胰島素阻抗，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-029",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "抗利尿激素主要調節水分排出，與動脈硬化、周邊血管疾病最無關係。",
+   "why_others": {
+    "A": "甲狀腺功能異常影響血脂與心血管風險。",
+    "C": "腎上腺素使血管收縮、升高血壓，與血管疾病有關。",
+    "D": "生長素異常會影響代謝與血管，與動脈硬化有關。"
+   },
+   "takeaway": "ADH主要與水分平衡有關。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "抗利尿激素主要調節水分，與動脈硬化最不相關，其他激素說明合理。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-030",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "右半側脊髓受損時，同側運動喪失；溫痛覺在對側（左側）喪失，因為溫痛纖維在入脊髓後即交叉，因此選②④。",
+   "why_others": {
+    "A": "輕觸覺與本體感覺是同側喪失，右側才受影響。",
+    "C": "輕觸覺與本體覺在受傷側（右側）而非左側喪失。",
+    "D": "①③喪失的位置在右側，不在左側。"
+   },
+   "takeaway": "布朗‑瑟卡：同側運動、本體覺；對側溫痛覺。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "右側半切：同側運動與本體覺、輕觸覺喪失，對側溫痛覺喪失，選②④正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-031",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "主要吸氣肌是橫膈肌與外肋間肌，前者收縮下降增加胸腔垂直徑，後者上提肋骨增加前後徑。",
+   "why_others": {
+    "A": "腹肌與內肋間肌為用力呼氣肌。",
+    "C": "內肋間肌下壓肋骨，屬呼氣肌。",
+    "D": "腹肌為呼氣肌。"
+   },
+   "takeaway": "吸氣：橫膈與外肋間肌。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.98,
+    "verdict": "pass",
+    "reason": "橫膈與外肋間肌為主要吸氣肌，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-032",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "圖中壓力以零為基準，吸氣時降為負值、呼氣時升為正值，這是肺泡壓（alveolar pressure）的特徵，使空氣流入或流出。",
+   "why_others": {
+    "A": "肋膜間壓全程為負值，吸氣時更負。",
+    "C": "跨肺壓為肺泡壓減肋膜間壓，呼吸中維持正值。",
+    "D": "呼吸系統壓並非此圖正常呼吸的壓力變化。"
+   },
+   "takeaway": "肺泡壓吸氣為負、呼氣為正。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "附圖以0為基準，吸氣降至-1、呼氣升至+1，符合肺泡壓，其他壓力說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-033",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "冠狀血管主要受局部代謝物質調控，交感神經影響最小，確保心臟血流供應。",
+   "why_others": {
+    "B": "腎臟血管受交感神經影響顯著，壓力大時收縮。",
+    "C": "皮膚血管受交感神經強力調控體溫與血壓。",
+    "D": "腦血管受影響較小，但仍較冠脈受交感神經影響大。"
+   },
+   "takeaway": "冠狀、腦血管以自我調節為主。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "answer_disputed",
+    "reason": "教科書（如Guyton）普遍以腦血管為交感神經影響最少的血管床，D至少與A同樣成立；詳解稱腦血管受交感影響大於冠脈缺乏依據。",
+    "fails": [
+     "blind_mismatch",
+     "answer_disputed"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-034",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "二氧化碳上升使局部血管擴張（腦血管尤其明顯），增加血流以帶走代謝產物。",
+   "why_others": {
+    "A": "高二氧化碳不會使血管收縮。",
+    "C": "二氧化碳對血管張力有明確影響。",
+    "D": "反應並非隨濃度而轉向，皆為擴張。"
+   },
+   "takeaway": "CO2上升使血管擴張。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "CO2上升使體循環（尤其腦）血管擴張，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-035",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "高海拔氧分壓低，攜氧減少，主要限制長時間有氧運動，因此馬拉松成績最容易下降。",
+   "why_others": {
+    "B": "短時間無氧運動主要靠無氧供能，受低氧影響小。",
+    "C": "超短時間爆發力靠ATP-PC系統，受低氧影響小。",
+    "D": "成績與海拔有關，有氧項目會受影響。"
+   },
+   "takeaway": "高海拔主要影響有氧耐力運動。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "高海拔低氧主要影響有氧耐力運動，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-036",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "蔗糖先被水解為葡萄糖與果糖，葡萄糖經次級主動運輸吸收，果糖經促進擴散吸收，因此兩者都有。",
+   "why_others": {
+    "A": "只有促進擴散不足，葡萄糖需次級主動運輸。",
+    "B": "只有次級主動運輸不足，果糖為促進擴散。",
+    "C": "未特別指出次級，且漏掉果糖的促進擴散。"
+   },
+   "takeaway": "葡萄糖：次級主動；果糖：促進擴散。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "蔗糖分解後葡萄糖經次級主動運輸、果糖經促進擴散吸收，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-037",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "初級卵母細胞停在第一次減數分裂前期，直到排卵前受黃體生成素高峰刺激才完成，並形成第一極體。",
+   "why_others": {
+    "A": "出生時卵母細胞仍停滯在減數分裂前期。",
+    "C": "青春期只是開始週期性成熟，並非完成時間。",
+    "D": "受精後完成的是第二次減數分裂。"
+   },
+   "takeaway": "第一次減數分裂排卵前完成，第二次受精後。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "第一次減數分裂於排卵前LH高峰後完成並形成第一極體，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-038",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "遠端小管後的濾液為等滲，經集尿管進入高滲髓質，在抗利尿激素作用下水被重吸收，管腔液由等滲變為高滲。",
+   "why_others": {
+    "A": "有ADH時濾液不會一直維持低滲。",
+    "C": "進入集尿管前的液體並非低滲性。",
+    "D": "ADH使水回收，濃度會上升而非維持等滲。"
+   },
+   "takeaway": "有ADH：集尿管液等滲變高滲。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "有ADH時遠端小管末段已達等滲，集尿管經高滲髓質變高滲，與Guyton一致。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-039",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "皮膚經陽光紫外線可合成維生素D，缺乏時鈣磷吸收不足、骨礦化不良，兒童會造成痀僂病（rickets）。",
+   "why_others": {
+    "A": "褪黑激素調節睡眠週期，與骨礦化無關。",
+    "B": "副甲狀腺素調節血鈣，並非陽光所調節。",
+    "D": "降鈣素降低血鈣，缺乏不會造成痀僂病。"
+   },
+   "takeaway": "缺維生素D：兒童痀僂病、成人軟骨症。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.98,
+    "verdict": "pass",
+    "reason": "陽光促進維生素D合成，缺乏致痀僂病，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-040",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "最先抵達感染部位的白血球是嗜中性球（neutrophil），而非T淋巴球；T細胞屬專一性免疫，較晚才作用。",
+   "why_others": {
+    "A": "發炎初期由吞噬作用與補體等非專一機制啟動。",
+    "C": "肥大細胞釋放組織胺，使微血管通透性增加。",
+    "D": "之後B細胞受刺激，產生專一性抗體。"
+   },
+   "takeaway": "發炎初期先到的是嗜中性球。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "最先抵達發炎部位的是嗜中性球而非T淋巴球，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-041",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "緊密排列與鬆弛排列描述的是關節面的相對位置，與肌肉拉緊或鬆弛無關，所以說它們指肌肉狀態是錯的。",
+   "why_others": {
+    "B": "緊密位置關節面貼合度最高，敘述正確。",
+    "C": "膝關節完全伸直時韌帶拉緊、關節面最貼合，為緊密位置。",
+    "D": "鬆弛位置關節囊鬆、關節面貼合度低，附屬動作增加。"
+   },
+   "takeaway": "緊密位置是關節面最貼合、韌帶最緊；鬆弛位置附屬動作最多。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "緊密/鬆弛排列指關節面位置而非肌肉狀態，各選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-042",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "b75c34545e8c",
+   "why_correct": "考選部公告一律給分。本題要找敘述錯誤的選項，但各選項對關節面動作特性的描述在不同教材中說法不一，造成爭議，故不論選哪個都給分。",
+   "why_others": {},
+   "takeaway": "關節面動作分為滑行、轉動（spin）、移行等，需分清各關節的主要形式。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "送分題，詳解說明各教材對關節面動作描述不一而一律給分，說法合理。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-043",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "快速糖酵解纖維對應 Type IIX 肌球蛋白三磷酸腺苷酶纖維，也對應肌球蛋白重鏈 IIX 型，三種分類方式彼此配對一致。",
+   "why_others": {
+    "A": "慢氧化纖維應對應 Type I，而非 Type IIA。",
+    "B": "快速氧化糖酵解纖維對應 Type IIA 與 MHC IIA，不是 Type I。",
+    "C": "人類骨骼肌沒有 MHC IIB，對應的是 IIX。"
+   },
+   "takeaway": "慢氧化＝Type I＝MHC I；快速氧化糖酵解＝IIA；快速糖酵解＝IIX。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "reasoning_error",
+    "reason": "C 的錯誤在快速氧化糖酵解纖維應對應 Type IIA／MHC IIA，詳解卻說應改成 IIX，改了 C 仍然是錯的，沒有指出真正的錯處。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-044",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "羽狀肌纖維的力量沿肌腱方向的分量與羽狀角的餘弦成正比，角度愈小，傳到肌腱的有效力量愈大，所以 10 度最大。",
+   "why_others": {
+    "B": "30 度時餘弦值較小，有效力量低於 10 度。",
+    "C": "60 度時只有約一半的力量傳到肌腱。",
+    "D": "90 度時餘弦為零，沿肌腱方向幾乎沒有力量。"
+   },
+   "takeaway": "有效力量與羽狀角餘弦成正比，角度小力量大。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "傳到肌腱的有效力量與羽狀角餘弦成正比，各角度說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-045",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "鎖骨前突時，肩胛骨隨之前突（protraction）而離開脊柱，並非縮回（retraction），所以說合併縮回是錯的。",
+   "why_others": {
+    "A": "手臂向前伸到最遠時，鎖骨前突達最大。",
+    "B": "此敘述為正確描述，前突時該束韌帶變緊。",
+    "C": "後縮肌群如菱形肌拉住肩胛，限制前突到極限。"
+   },
+   "takeaway": "鎖骨與肩胛骨前突同向：一起前突、一起後縮。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "鎖骨前突時肩胛骨隨之前突而非後縮，其他選項說明合理。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-046",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "肩鎖關節脫位時，肩鎖韌帶與喙鎖韌帶最易受傷；喙鎖韌帶包含錐狀韌帶（conoid ligament）與菱形韌帶（trapezoid ligament），故為②③④。",
+   "why_others": {
+    "A": "喙肱韌帶屬於盂肱關節，不是肩鎖關節的穩定結構，且漏掉菱形韌帶。",
+    "B": "喙肱韌帶不屬於肩鎖關節，且漏掉錐狀韌帶。",
+    "C": "喙肱韌帶不屬於肩鎖關節，且漏掉肩鎖韌帶。"
+   },
+   "takeaway": "肩鎖關節脫位傷肩鎖韌帶加喙鎖韌帶（錐狀＋菱形）。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "肩鎖脫位傷及肩鎖韌帶與喙鎖韌帶（錐狀、菱形），喙肱韌帶屬盂肱關節，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-047",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "肩膀外展時肩胛骨會後傾（posterior tilt）而非前傾，所以肩胛前傾不屬於正常外展的一部分。",
+   "why_others": {
+    "A": "外展過程鎖骨會後縮，屬於正常動作。",
+    "B": "外展時鎖骨沿長軸後轉，屬於正常動作。",
+    "D": "肩胛外轉（即向上旋轉）是外展必然包含的動作。"
+   },
+   "takeaway": "肩外展伴隨肩胛上旋、後傾與鎖骨後縮、後轉。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "reasoning_error",
+    "reason": "肩胛外轉（external rotation）是水平面上的旋轉，和向上旋轉（upward rotation）是兩回事，詳解把兩者畫上等號，重點整理也漏寫肩胛外轉。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-048",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "胸大肌止於肱骨，不附著於肩胛骨，無法使肩胛向下旋轉。",
+   "why_others": {
+    "A": "菱形肌拉肩胛下角向內上，可使肩胛向下旋轉。",
+    "C": "提肩胛肌拉肩胛上角，可使肩胛向下旋轉。",
+    "D": "胸小肌拉肩胛喙突向下，可使肩胛向下旋轉。"
+   },
+   "takeaway": "肩胛下旋肌群：菱形肌、提肩胛肌、胸小肌等。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "胸大肌不附著於肩胛骨，菱形肌、提肩胛肌、胸小肌為下旋肌，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-049",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "尺側伸腕肌（extensor carpi ulnaris）的作用是伸腕與尺偏，不產生前臂旋後，所以不是旋後肌。",
+   "why_others": {
+    "A": "伸食指肌在橈骨尺側深層，有輔助旋後作用。",
+    "B": "伸拇長肌斜跨前臂，有輔助旋後作用。",
+    "D": "橈側伸腕長肌附著於橈側，有輔助旋後的作用。"
+   },
+   "takeaway": "尺側伸腕肌不旋後；橈側及深層伸肌可輔助旋後。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "reasoning_error",
+    "reason": "伸食指肌起自尺骨後面遠端與骨間膜，不是詳解說的「橈骨尺側深層」，起點寫錯。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-050",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "肌腱固定作用靠伸腕時屈指肌被動拉緊，在手指掌側產生張力以抓握；伸指肌是在屈腕時被拉緊來張開手，並非用來維持抓握，所以敘述錯誤。",
+   "why_others": {
+    "A": "伸腕時指屈肌被動拉緊，可抓握輕物如紙杯。",
+    "B": "屈腕時伸指肌被拉緊使手張開，重力可輔助屈腕。",
+    "C": "伸腕肌群收縮使屈肌被動拉緊，產生掌側張力撐住紙杯。"
+   },
+   "takeaway": "伸腕→手指屈曲抓握；屈腕→手指伸展張開。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "肌腱固定抓握是靠伸腕時屈指肌被動拉緊，伸指肌並非用來維持抓握，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-051",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "掌短肌（palmaris brevis）只拉動手掌尺側皮膚形成皺褶，不作用於手指關節，不是手指伸直肌。",
+   "why_others": {
+    "A": "伸指肌是手指伸直的主要肌肉。",
+    "B": "掌面骨間肌經伸肌腱帽可伸直指間關節。",
+    "D": "蚓狀肌經伸肌腱帽可伸直指間關節。"
+   },
+   "takeaway": "掌短肌是皮肌，與手指伸屈無關。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "掌短肌是皮肌不作用於手指，骨間肌與蚓狀肌經伸肌腱帽伸直指間關節，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-052",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "蚓狀肌（lumbricals）起自屈指深肌腱，止於伸肌腱帽，位於手掌內，屬手的內在肌，所以說不包括蚓狀肌是錯的。",
+   "why_others": {
+    "B": "屈指短肌是足部肌肉，不在手部，不屬於手掌外部肌。",
+    "C": "內在肌屈曲掌指關節並伸直指間關節，為正確描述。",
+    "D": "外在肌單獨收縮造成爪形手，即掌指過度伸直與指間屈曲。"
+   },
+   "takeaway": "蚓狀肌是手內在肌；失去內在肌就成爪形手。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "蚓狀肌屬手內在肌，屈指短肌是足部肌肉，各選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-053",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "髖臼前傾角愈小，髖臼開口愈朝向外側，對股骨頭前方的覆蓋較大，所以較小的髖臼前傾角代表覆蓋較大。",
+   "why_others": {
+    "A": "股骨前傾是股骨端的角度，且使股骨頭前方暴露、覆蓋減少。",
+    "B": "股骨後傾也是股骨端的角度，不是髖臼覆蓋的指標。",
+    "D": "髖臼前傾角較大使股骨頭前方裸露，覆蓋較小。"
+   },
+   "takeaway": "髖臼前傾角大，前方覆蓋少，易前方不穩。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "reasoning_error",
+    "reason": "詳解前後標準不一：A 用股骨前傾會減少前方覆蓋來排除，B 卻說股骨後傾不是覆蓋指標；照同一套邏輯，後傾反而會增加前方覆蓋，詳解沒有說清楚為什麼不選 B。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-054",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "股骨頸後傾時，股骨頭朝向偏後，為了讓股骨頭對準髖臼，整條腿會朝外轉，行走時呈現髖外轉。",
+   "why_others": {
+    "A": "髖內轉見於股骨前傾，與後傾相反。",
+    "C": "扭轉角在水平面，影響的是內外轉，與外展無關。",
+    "D": "扭轉角在水平面，影響的是內外轉，與內收無關。"
+   },
+   "takeaway": "股骨前傾→內八；股骨後傾→外八。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "股骨後傾使下肢呈外轉（外八），扭轉角影響的是水平面，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-055",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "盂唇能和關節內液形成密封，使液體壓力分散，降低關節接觸的尖峰壓力，所以敘述正確。",
+   "why_others": {
+    "B": "盂唇與橫韌帶加深髖臼，但不是用來阻止股骨頭向上脫位的主要結構。",
+    "C": "盂唇主要由纖維軟骨構成，不是透明軟骨。",
+    "D": "盂唇的外圍有血液供應，內側才缺乏，敘述過度簡化。"
+   },
+   "takeaway": "盂唇是纖維軟骨，可加深髖臼並密封關節液。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "盂唇的密封作用可降低尖峰壓力；盂唇為纖維軟骨，只有外圍有血供，說明合理。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-056",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "股內側肌（vastus medialis）只作用於膝伸直，不產生脛骨對股骨的旋轉，所以沒有內轉的作用。",
+   "why_others": {
+    "A": "縫匠肌止於脛骨內側，可屈膝並協助脛骨內轉。",
+    "B": "膕肌使脛骨相對股骨內轉，用來解鎖膝關節。",
+    "D": "半膜肌止於脛骨內側，屈膝時可使脛骨內轉。"
+   },
+   "takeaway": "膝內轉肌：縫匠肌、膕肌、半膜、半腱、股薄肌。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "股內側肌主要作用是伸膝，不產生脛骨內轉，其餘三條肌肉為內轉肌，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-057",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "依承認答案，股外側肌（vastus lateralis）與股中間肌（vastus intermedius）的生理截面積最大，其次是股二頭肌長頭，最後是半腱肌（semitendinosus）。",
+   "why_others": {
+    "A": "股中間肌與股外側肌的順序不合。",
+    "C": "半腱肌的生理截面積小於股二頭肌長頭，順序不合。",
+    "D": "半腱肌與股二頭肌長頭順序不合。"
+   },
+   "takeaway": "股四頭肌生理截面積大於膕旁肌。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "生理截面積排序為股外側肌>股中間肌>股二頭肌長頭>半腱肌，選項比較正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-058",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "圖中髕骨關節面有上、中、下三對橫帶①②③與兩側緣④。膝屈曲 140 度時只有髕骨上緣和兩側緣接觸，隨伸直接觸依序下移。",
+   "why_others": {
+    "A": "此順序方向與接觸隨伸直下移不符，也漏了側緣④。",
+    "B": "此順序把下緣當作最先接觸，與實際相反。",
+    "C": "此順序由下往上，把側緣④放最後，不符實際。"
+   },
+   "takeaway": "膝愈伸直，髕股接觸面由髕骨上方逐漸往下移。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "reasoning_error",
+    "reason": "A（①②③④）其實有包含④，詳解說它「漏了側緣④」是錯的；B 的第一個是側緣④而非下緣，說它「把下緣當作最先接觸」也與選項不符。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-059",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "伸趾長肌與伸拇長肌肌腱位於踝橫軸前方，並走在距下關節軸的外側，所以兩者同時符合。",
+   "why_others": {
+    "A": "脛前肌在前方但在距下關節軸內側。",
+    "C": "腓骨長肌雖在軸外側，但行經外踝後方，不在踝橫軸前方。",
+    "D": "腓骨長肌在踝橫軸後方，不符合條件。"
+   },
+   "takeaway": "脛前肌過軸內側，腓骨肌群過軸外側。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "伸趾長肌與伸拇長肌位於踝軸前方、距下軸外側；脛前肌在距下軸內側，腓骨長肌在踝軸後方，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-060",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "踮腳尖時趾屈曲，拉緊足底腱膜，產生絞盤機轉（windlass mechanism）使縱弓增高，足內在肌也收縮來穩定足弓。",
+   "why_others": {
+    "B": "內在肌是收縮而非放鬆來穩定足弓。",
+    "C": "縱弓是增高而非降低。",
+    "D": "內在肌放鬆、弓降低都與實際相反。"
+   },
+   "takeaway": "踮腳尖時絞盤機轉使縱弓增高，內在肌收縮。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "踮腳尖時絞盤機轉使縱弓增高，內在肌收縮穩定足弓，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-061",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "枕骨位於顱後方，不參與顳顎關節；顳顎關節由顳骨與下頜骨構成，蝶骨、顴骨也有相關附著或構造，相關性相對較低的是枕骨。",
+   "why_others": {
+    "A": "顳骨有下頜窩與關節結節，是關節的一部分。",
+    "C": "蝶骨與翼肌附著及關節鄰近構造相關。",
+    "D": "顴骨與顴弓連接顳骨，並是嚼肌的附著處。"
+   },
+   "takeaway": "顳顎關節由顳骨與下頜骨構成。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "枕骨與顳顎關節無直接關係，顳骨、蝶骨、顴骨各有相關構造或肌肉附著，說明合理。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-062",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "張口初期下頜髁在下頜窩內以轉動為主，之後髁向前滑到關節結節下方，以位移為主，所以是先轉動再位移。",
+   "why_others": {
+    "A": "順序顛倒，張口是先轉動再位移。",
+    "C": "完全張口時髁突還有明顯向前位移。",
+    "D": "初期的轉動不可忽略。"
+   },
+   "takeaway": "張口：先轉動（rotation），後位移（translation）。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "張口時先轉動再向前位移，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-063",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "二腹肌（digastric）主要作用是降下頜、張口，咬緊臼齒時主要靠提下頜肌群，二腹肌較不參與。",
+   "why_others": {
+    "A": "內翼肌是提下頜肌，咬合時收縮。",
+    "C": "顳肌是提下頜肌，咬合時收縮。",
+    "D": "嚼肌是提下頜肌，咬合時收縮。"
+   },
+   "takeaway": "咬合用嚼肌、顳肌、內翼肌；張口用二腹肌等。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "二腹肌是降下頜（張口）肌，咬緊時由嚼肌、顳肌、內翼肌收縮，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-064",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "頭頸向左旋轉時，右側頸半棘肌（semispinalis cervicis）與多裂肌之類的深層後側肌群向心收縮，使棘突向右、椎體向左轉。",
+   "why_others": {
+    "A": "左側胸鎖乳突肌使頭轉向右側。",
+    "B": "題目的左側多裂肌作用使椎體轉向右側。",
+    "D": "右側夾肌使頭轉向右側。"
+   },
+   "takeaway": "頭轉向左：左夾肌、左胸鎖乳突肌之外，右半棘肌作用。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "reasoning_error",
+    "reason": "重點整理說頭轉向左時左胸鎖乳突肌作用，但左胸鎖乳突肌是使頭轉向右（A 的說明自己也這樣寫），前後矛盾，重點整理寫錯。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-065",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "下交叉症候群是髖屈肌與腰背伸肌緊縮，腹肌與臀部伸肌（臀大肌）無力並被拉長，所以髖伸肌變緊不屬於其表現。",
+   "why_others": {
+    "A": "腰大肌屬髖屈肌，變緊是典型表現。",
+    "B": "背部伸肌緊縮是典型表現。",
+    "D": "腹肌無力被拉長是典型表現。"
+   },
+   "takeaway": "下交叉：髖屈肌、背伸肌緊；腹肌、臀肌弱。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "下交叉症候群是髖屈肌與背伸肌緊、腹肌與臀肌無力拉長，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-066",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "右肩靠向左膝時是右腹外斜肌與左腹內斜肌收縮；躺回時這組肌肉在重力下放慢動作，屬於離心收縮。",
+   "why_others": {
+    "A": "豎脊肌與腰方肌不是主要的屈曲旋轉肌，且躺回為離心。",
+    "B": "肌群正確但向心收縮是坐起，不是躺回。",
+    "C": "肌群配對方向相反，右肩向左膝用的是右外斜、左內斜。"
+   },
+   "takeaway": "躺回＝離心；右肩往左膝用右外斜＋左內斜。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "右肩靠向左膝用右腹外斜肌與左腹內斜肌，躺回時為離心收縮，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-067",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "胸腰筋膜中層附著在腰椎橫突尖端，而非橫突內側，所以說附著在內側是錯誤的。",
+   "why_others": {
+    "A": "前層覆蓋腰方肌，敘述正確。",
+    "C": "上肢固定時闊背肌收縮會拉緊胸腰筋膜。",
+    "D": "胸腰筋膜後層形成鞘包裹豎脊肌和多裂肌。"
+   },
+   "takeaway": "胸腰筋膜：前層蓋腰方肌，中層附橫突尖，後層包豎脊肌。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "胸腰筋膜中層附著於橫突尖端，各層結構說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-068",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "理想坐姿需保有正常腰椎前凸，平的腰椎表示骨盆後傾而使腰椎失去弧度，不是理想坐姿。",
+   "why_others": {
+    "A": "骨盆輕微前傾有助維持腰椎前凸。",
+    "B": "胸椎挺直是理想坐姿的位置。",
+    "D": "上顱頸椎稍微屈曲使視線平視，屬理想位置。"
+   },
+   "takeaway": "理想坐姿：骨盆前傾、腰椎前凸、胸椎挺。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "理想坐姿應保有腰椎前凸，平的腰椎弧度不理想，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-069",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "安靜站立時大部分足內在肌是不活躍的，只有在負荷增加或需要時才會收縮，所以說大部分都活躍是錯的。",
+   "why_others": {
+    "A": "站姿時重力線在膝關節前方，需要膝屈曲力矩平衡，敘述正確。",
+    "B": "重力線在踝前，需踝產生足底屈力矩，敘述正確。",
+    "C": "成年期站姿穩定度高於幼年及老年。"
+   },
+   "takeaway": "安靜站立時，足內在肌大多不活躍。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "安靜站立時大部分足內在肌不活躍，其他選項的力矩說明合理。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-070",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "代償步態需要更多肌肉做更多功，收縮時間通常不是縮短，所以收縮時間較短並不會造成耗能增加。",
+   "why_others": {
+    "A": "質心位移過多使耗能增加。",
+    "B": "肌肉用力強度較高使耗能增加。",
+    "D": "徵召額外肌肉協助會增加耗能。"
+   },
+   "takeaway": "代償步態耗能增加：質心位移大、用力大、肌肉多。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "質心位移大、用力強度高、徵召額外肌肉都會增加耗能，收縮時間較短不是耗能增加的原因，說明合理。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-071",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "圖中下蹲階段手臂向後擺以蓄力，肩關節伸肌向心收縮使手臂向後伸，所以 B 正確。",
+   "why_others": {
+    "A": "下蹲時踝背屈是靠小腿三頭肌離心控制，不是背屈肌向心。",
+    "C": "上蹬時髖是伸展，靠髖伸肌向心收縮，不是屈肌。",
+    "D": "上蹬時手臂上擺，肩屈肌是向心收縮，不是離心。"
+   },
+   "takeaway": "垂直跳：下蹲手臂後擺，上蹬手臂前上擺。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "附圖顯示下蹲時手臂向後擺，為肩伸肌向心收縮；其餘選項的收縮型態說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-072",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "抬手後期肩外轉到最大，肩胛需穩定貼附胸廓，前鋸肌（serratus anterior）負責穩定肩胛骨，最為重要。",
+   "why_others": {
+    "B": "肩胛下肌作用於肱骨內轉，不是穩定肩胛。",
+    "C": "上斜方肌主要是聳肩，不是此期穩定的重點。",
+    "D": "棘下肌是肱骨外轉肌，不是穩定肩胛骨。"
+   },
+   "takeaway": "投球抬手後期，前鋸肌穩定肩胛。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "抬手後期由前鋸肌穩定肩胛骨，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-073",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "疾行腳趾離地時，脛骨前外側皮質骨承受高張應力，所以敘述正確。",
+   "why_others": {
+    "A": "走路全足著地時此處受力型態不是壓應力。",
+    "B": "足跟離地時剪應力並非相對減小。",
+    "D": "站立末期剪應力不是大幅增加到最大。"
+   },
+   "takeaway": "疾行腳趾離地時，脛骨前外側受高張應力。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "依承認答案，疾行腳趾離地時脛骨前外側受高張應力；排除其他選項的說法未見事實錯誤。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-074",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "骨是各向異性且黏彈性材料，平行縱軸方向最硬，應變速率愈高彈性模量愈大，所以平行縱軸高應變速率最大。",
+   "why_others": {
+    "B": "低應變速率下模量較低。",
+    "C": "垂直縱軸方向骨較弱，模量較小。",
+    "D": "垂直縱軸且低速率，模量最小。"
+   },
+   "takeaway": "骨：縱軸方向較硬，應變速率愈高愈硬。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "骨有各向異性與黏彈性，沿縱軸方向、應變速率愈高，彈性模量愈大，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-075",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "深層（deep zone）膠原纖維垂直於表面、呈輻射狀排列，深入鈣化軟骨層而錨定於軟骨下骨。",
+   "why_others": {
+    "A": "膠原在各層排列與含量不同，並非均勻。",
+    "B": "表層膠原是平行關節面緊密排列，不是鬆散隨機。",
+    "C": "膠原含量最高在表層，而非中間層。"
+   },
+   "takeaway": "軟骨膠原：表層平行，中間層斜隨機，深層垂直。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "深層膠原呈輻射狀深入鈣化層，表層膠原平行排列且含量最高，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-076",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "老化時肌腱與韌帶內膠原蛋白纖維直徑（半徑）變小，因此最正確的是纖維半徑減少。",
+   "why_others": {
+    "A": "此項敘述在老化的描述中不是本題最正確者。",
+    "B": "老化時組織材料特性的變化不是單純剛性增加。",
+    "D": "老化使細胞數減少而不是增加。"
+   },
+   "takeaway": "老化：肌腱韌帶的膠原纖維變細、細胞減少。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "answer_disputed",
+    "reason": "老化會使膠原分子間的非酶性交叉鍵接（AGEs）增加，這是廣為接受的說法，A 也站得住；詳解對 A 只說「不是最正確」而沒有實際反駁，承認答案 C 有爭議。",
+    "fails": [
+     "blind_mismatch",
+     "answer_disputed"
+    ]
+   }
+  },
+  {
+   "id": "109-2-BASIC-077",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "外八步態使足部朝外，踝的矢狀面動作範圍變小，而距下關節動作範圍增大來代償。",
+   "why_others": {
+    "A": "距下關節是增加而非減少。",
+    "B": "踝關節動作範圍不是增加。",
+    "C": "代償方向與實際相反。"
+   },
+   "takeaway": "外八步態：踝動作變小，距下關節動作變大。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "外八步態時踝的動作範圍變小、距下關節動作範圍變大以代償，與承認答案一致。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-078",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "股骨後傾使股骨頭朝後，行走時下肢會朝外轉，造成外八步態，所以後傾可導致外八。",
+   "why_others": {
+    "A": "髖內翻是頸幹角減小，影響冠狀面，不主要造成外八。",
+    "B": "髖外翻是頸幹角增大，影響冠狀面，不主要造成外八。",
+    "C": "過度前傾使腿內轉，造成內八。"
+   },
+   "takeaway": "股骨前傾→內八；後傾→外八。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "股骨後傾造成外八，過度前傾造成內八，髖內翻與髖外翻屬冠狀面變化，說明正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-079",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "力矩等於旋轉慣量乘以角加速度，即 0.3 乘 450，得 135 牛頓-米。",
+   "why_others": {
+    "B": "數值錯誤，並非 0.3 乘 450。",
+    "C": "數值錯誤，並非 0.3 乘 450。",
+    "D": "數值錯誤，並非 0.3 乘 450。"
+   },
+   "takeaway": "力矩 T＝I×α。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "T＝I×α＝0.3×450＝135 N·m，計算正確。"
+   }
+  },
+  {
+   "id": "109-2-BASIC-080",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "肌肉力量等於力矩除以力臂，力臂 5 公分要換算成 0.05 公尺，所以 F＝T/0.05＝100T/5。",
+   "why_others": {
+    "A": "把力臂當成乘數，且單位錯誤。",
+    "B": "除以 100 使結果變小，單位換算錯誤。",
+    "C": "力臂未換算成公尺，結果錯誤。"
+   },
+   "takeaway": "F＝T/力臂，注意公分換算為公尺。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "F＝T/0.05＝100T/5，各錯誤選項的單位換算說明正確。"
+   }
+  }
+ ]
+}

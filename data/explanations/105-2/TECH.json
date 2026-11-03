@@ -1,0 +1,1882 @@
+{
+ "exam_id": "105-2-TECH",
+ "explanations": [
+  {
+   "id": "105-2-TECH-001",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "佛魯格定律（Pfluger's Law）指出，直流電刺激時負極（陰極）興奮性較高，會使神經肌肉較易去極化而引起收縮，因此依治療目的決定主動電極的極性。",
+   "why_others": {
+    "B": "此非電刺激極性選擇所依據的定律。",
+    "C": "杜柏伊斯－雷蒙定律描述電流變化速率與神經興奮的關係，與選極性無關。",
+    "D": "歐姆定律描述電壓、電流與電阻的關係，不決定極性。"
+   },
+   "takeaway": "主動電極極性選擇依據佛魯格定律：負極興奮性較強。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "佛魯格定律描述極性與興奮性關係，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-002",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "組織含水與電解質越多，阻抗越低。肌肉含水量高、阻抗最低，骨骼次之，脂肪較高，乾燥角質化的皮膚阻抗最大，故為肌肉＜骨骼＜脂肪＜皮膚。",
+   "why_others": {
+    "A": "脂肪的阻抗應高於骨骼，且低於皮膚。",
+    "C": "骨骼的阻抗低於脂肪，順序顛倒。",
+    "D": "肌肉阻抗最低，不是最高，順序整個相反。"
+   },
+   "takeaway": "電阻抗由低到高：肌肉＜骨骼＜脂肪＜皮膚。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.35,
+    "verdict": "pass",
+    "reason": "依含水量說明阻抗順序，與承認答案一致，各選項比較正確。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-003",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "強度－時間曲線（strength-duration curve）顯示要引起相同強度的神經興奮，刺激時間越短，所需電流強度越大，兩者呈反比關係。",
+   "why_others": {
+    "B": "若為正比，時間越長所需強度越大，與曲線相反。",
+    "C": "兩者並非平方關係。",
+    "D": "兩者並非立方關係。"
+   },
+   "takeaway": "強度－時間曲線：同樣興奮效果，強度與時間成反比。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "強度－時間曲線呈反比關係，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-004",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "F 波是刺激運動神經後，衝動逆向傳到脊髓前角細胞，再順向回傳到肌肉，傳入與傳出都走 α 運動神經纖維，不經過感覺神經與突觸。",
+   "why_others": {
+    "B": "Ia 感覺傳入是 H 反射的路徑，不是 F 波。",
+    "C": "F 波不經 Ib 傳入，也不經 γ 運動纖維傳出。",
+    "D": "F 波不經 IIb 傳入，也不經 γ 運動纖維傳出。"
+   },
+   "takeaway": "F 波為運動神經來回路徑；H 反射才是 Ia 傳入。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "F 波為運動神經逆向至前角細胞再回傳，無感覺傳入與突觸，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-005",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "針極肌電圖在最大收縮時，正常應呈完全干擾型（full interference pattern），基線被密集的運動單位電位填滿，並非無干擾型；無干擾型代表運動單位明顯減少。",
+   "why_others": {
+    "A": "正常最大收縮的振幅約在此範圍，敘述正確。",
+    "B": "正常放電頻率約此範圍，敘述正確。",
+    "D": "肌肉病變時運動單位變小，會出現完全但小振幅的干擾型，敘述正確。"
+   },
+   "takeaway": "最大收縮正常為完全干擾型；小振幅提示肌病。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "正常最大收縮為完全干擾型，肌病為完全小振幅干擾型，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-006",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "神經肌肉電刺激（NMES）宜用對稱或不對稱的雙相電流，電荷平衡、皮膚刺激較小且較舒適；間歇性直流電有極化與灼傷風險，並不較優。",
+   "why_others": {
+    "A": "NMES 常用頻率約在此範圍，可產生強直收縮，敘述正確。",
+    "B": "需要周邊運動神經完整才能引起收縮，敘述正確。",
+    "C": "需能調整通斷比（刺激週期）以避免肌肉疲勞，敘述正確。"
+   },
+   "takeaway": "NMES 用雙相電流，不選間歇性直流電。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "NMES 宜用雙相電流，其餘敘述說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-007",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "脊髓損傷者肌肉易疲勞，功能性電刺激（FES）初期刺激時間短、休息時間長，通常用 1 : 5，之後隨耐力進步再逐漸縮短休息時間。",
+   "why_others": {
+    "A": "刺激比休息長，初期易造成疲勞。",
+    "B": "1 : 1 對初期的疲勞肌肉仍太吃重。",
+    "D": "休息過長並非初期常建議的比例。"
+   },
+   "takeaway": "FES 初期通斷比用 1 : 5，再逐步調整。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "FES 初期採長休息時間 1:5 以避免疲勞，說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-008",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "離子電泳（iontophoresis）的電流密度以避免皮膚灼傷為原則，通常在約 0.1 至 0.5 mA/cm² 的範圍。",
+   "why_others": {
+    "A": "此範圍過低，藥物導入效果不足。",
+    "C": "此範圍過高，易造成化學性灼傷。",
+    "D": "此範圍遠高於安全電流密度。"
+   },
+   "takeaway": "離子電泳電流密度約 0.1–0.5 mA/cm²。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "離子電泳電流密度約 0.1–0.5 mA/cm²，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-009",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "肉毒桿菌素注射後，電刺激可搭配用於痙攣處理，並非絕對禁止；用「絕不可」一詞過於絕對，因此是錯誤敘述。",
+   "why_others": {
+    "A": "直接刺激痙攣肌可引發疲勞而降低張力，可行。",
+    "B": "刺激拮抗肌可藉交互抑制減少痙攣，可行。",
+    "C": "電刺激效果短暫，需搭配運動治療鞏固，敘述合理。"
+   },
+   "takeaway": "電刺激降痙攣可刺激痙攣肌或拮抗肌，並需搭配運動。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "肉毒桿菌素後並非絕對禁用電刺激，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-010",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "神經肌肉電刺激強化肌力常用頻率約 25 至 100 Hz，能產生強直收縮；頻率過低則只有抽動，無法有效增加肌力。",
+   "why_others": {
+    "A": "20 至 100 ms 的脈衝寬度過長，波寬通常在數百微秒內。",
+    "C": "電流強度應調到患者可耐受的最大程度，而非最大自主收縮強度。",
+    "D": "大肌肉常採雙極擺位，將電流分散，使收縮更均勻。"
+   },
+   "takeaway": "NMES 強化肌力頻率約 25–100 Hz。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "強化肌力頻率約 25–100 Hz，波寬、強度與擺位說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-011",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "高壓脈衝電流（high-voltage pulsed current）的頻率範圍通常約 1 至 120 Hz，而非 100 至 500 Hz，因此此敘述錯誤。",
+   "why_others": {
+    "A": "高壓電流波寬極短，敘述正確。",
+    "C": "電壓高達數百伏特，敘述正確。",
+    "D": "因波寬短，總平均電流很小，敘述正確。"
+   },
+   "takeaway": "高壓直流特徵：波寬短、電壓高、平均電流小。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "高壓脈衝電流頻率約 1–120 Hz，其餘參數說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-012",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "TENS 用於已知原因的疼痛症狀控制；原因不明的疼痛可能掩蓋重要病況，延誤診斷，故不適合作為適應症。",
+   "why_others": {
+    "B": "術後急性疼痛是常見適應症。",
+    "C": "慢性下背痛是常見適應症。",
+    "D": "傷口周邊疼痛可使用 TENS，電極置於周圍，不視為禁忌。"
+   },
+   "takeaway": "TENS 先查明疼痛原因，不明疼痛不適用。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "原因不明疼痛不宜使用 TENS，其餘適應症說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-013",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "急性期扭傷水腫要避免肌肉強烈收縮增加血流與出血，宜用感覺閾值下的刺激；以 60 至 80 Hz 引起肌肉收縮並不適用。",
+   "why_others": {
+    "A": "負極置水腫處，可促使蛋白質與水分移開，適用。",
+    "C": "先冷水浴使血管收縮，再配合電刺激，適用。",
+    "D": "電極放在水腫兩端、負極在遠端，可引導液體回流，適用。"
+   },
+   "takeaway": "急性水腫用感覺閾值下電刺激，避免引起肌肉收縮。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "急性水腫避免引發肌肉收縮，宜用感覺閾值下負極刺激，說明與答案一致。"
+   }
+  },
+  {
+   "id": "105-2-TECH-014",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "傷口電刺激的極性依癒合階段而調整：感染、清創期常用負極，之後依組織反應換成正極，以促進上皮化與肉芽，因此電極極性應隨癒合情況交換。",
+   "why_others": {
+    "A": "負極不宜用到完全癒合，須隨癒合階段換極。",
+    "C": "並非整個癒合期都固定用負極。",
+    "D": "極性會影響細胞遷移與抗菌，並非無關。"
+   },
+   "takeaway": "傷口電刺激極性依癒合階段交替使用。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "傷口電刺激極性依癒合階段調整，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-015",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "脈叢式 TENS（burst）是將低頻的脈叢包絡與高頻脈衝組合，結合傳統式與針灸式兩種形式的特性。",
+   "why_others": {
+    "A": "針灸式是單獨的低頻高強度形式。",
+    "B": "傳統式是單獨的高頻低強度形式。",
+    "D": "短強式是高頻、高強度的單一形式。"
+   },
+   "takeaway": "脈叢式 TENS 為兩種形式的結合。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "脈叢式為低頻脈叢內含高頻脈衝，結合傳統式與針灸式，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-016",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "兩電極式干擾波是在儀器內預先調變（premodulated）電流，即兩組頻率先混合，提供 100% 調變；四電極式則在組織內交叉產生干擾。",
+   "why_others": {
+    "B": "四電極式在深部混合，不一定較無不適感。",
+    "C": "兩電極式範圍較小，四電極式的刺激區域較廣。",
+    "D": "預先調變與四電極式的肌肉力矩比較，並非四電極式較大。"
+   },
+   "takeaway": "兩電極為預先調變 100%，四電極在組織內交叉。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "二電極式為預先調變、全區 100% 調變，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-017",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "圖中兩組電流（A 與 B）交叉，中央區域兩者疊加，載波頻率為兩頻率平均，即 (4000 + 4100) / 2 = 4050 Hz。",
+   "why_others": {
+    "A": "圖為四電極交叉在組織內形成，非預先調變。",
+    "C": "差頻（beat frequency）為兩頻率相減，即 100 Hz，不是 50 Hz。",
+    "D": "中央區域受調變、振幅起伏，與周圍單純電流區不同。"
+   },
+   "takeaway": "干擾波中央載波頻率為平均，差頻為相減。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "附圖為四電極交叉，載波為平均 4050 Hz、差頻 100 Hz，說明與圖相符。"
+   }
+  },
+  {
+   "id": "105-2-TECH-018",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "干擾波消腫機制為輕微肌肉收縮的幫浦作用、降低組織內壓，並影響自主神經；而非增加血管張力，血管張力增加反而不利於回流。",
+   "why_others": {
+    "A": "輕微肌肉收縮有幫浦作用，促進回流。",
+    "B": "組織壓力降低，有助消腫。",
+    "C": "刺激自主神經，改變血管張力與循環，有助消腫。"
+   },
+   "takeaway": "干擾波消腫靠肌肉幫浦、降壓與自主神經。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "干擾波消腫不靠增加血管張力，其餘機制說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-019",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "放鬆訓練時，目標是讓肌電訊號低於閾值；若多次嘗試仍無法放鬆，代表閾值太嚴苛，需調高閾值，降低難度以使患者成功。",
+   "why_others": {
+    "A": "肌力不足時應調低閾值，讓患者較易達標。",
+    "C": "肌力訓練的閾值應高於基線，才有目標可達。",
+    "D": "放鬆訓練的閾值是要低於基線才有意義，不可高於。"
+   },
+   "takeaway": "放鬆訓練不成功就調高閾值，肌力訓練則調低。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "放鬆訓練無法達標時調高閾值、肌力訓練調低閾值，各選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-020",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "共模斥除比（CMRR）表示放大器抑制兩輸入端共同雜訊（如交流電干擾）的能力，比值越高，濾除雜訊的效果越好。",
+   "why_others": {
+    "A": "增益只決定訊號放大倍率，不代表濾雜訊能力。",
+    "B": "輸入阻抗影響訊號接收的衰減，不是濾雜訊的主要指標。",
+    "C": "頻率反應是放大器可處理的頻寬，不是雜訊抑制指標。"
+   },
+   "takeaway": "放大器濾除雜訊看共模斥除比（CMRR）。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "共模斥除比代表抑制共模雜訊能力，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-021",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "冰敷的立即效應是皮膚與表淺血管收縮，使血流減少，這是冷療最直接的血管反應。",
+   "why_others": {
+    "B": "血管放鬆是熱療的效應，冰敷則相反。",
+    "C": "冷刺激初期的立即效應主要是血管收縮，並非骨骼肌收縮。",
+    "D": "肌肉放鬆是較晚、持續冷敷後的效應，不是立即效應。"
+   },
+   "takeaway": "冰敷立即效應為血管收縮。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "冰敷立即效應為血管收縮，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-022",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "中等強度冷療會使神經傳導速度降低而止痛，這是冷療的預期效應，因此「較不會」導致的選項要選此題問法中的止痛以外的效應；其他三項則是冷刺激常見的立即反應。",
+   "why_others": {
+    "B": "血管收縮造成皮膚發白，是常見反應。",
+    "C": "冷刺激引起豎毛肌收縮，是常見反應。",
+    "D": "冷療初期對感覺受器有刺激作用，是常見反應。"
+   },
+   "takeaway": "冷療常見：血管收縮、豎毛、初期刺激。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "reasoning_error",
+    "reason": "正解說明先稱止痛是中等冷療的預期效應，又要選止痛為較不會發生者，前後矛盾，未說明為何止痛較不會出現。",
+    "fails": [
+     "blind_mismatch",
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-023",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "蒸氣室的濕熱含水蒸氣，傳熱效率高，較易使核心體溫上升而引發全身性反應；乾熱的皮膚散熱較容易。",
+   "why_others": {
+    "A": "乾熱與濕熱都屬於淺層熱，穿透皆有限。",
+    "B": "乾熱的溫度較高，皮膚溫度上升不一定較少。",
+    "D": "乾熱烤箱溫度通常高於濕熱蒸氣室。"
+   },
+   "takeaway": "濕熱較易引發全身反應，乾熱溫度較高。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "濕熱阻礙汗液蒸發散熱、較易引發全身反應，乾熱溫度較高，說明合理。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-024",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "蠟療的石蠟浸入後，熱是直接接觸傳遞，屬傳導方式；石蠟冷卻時會產生濕潤的皮膚效果，臨床上常歸類為濕熱，故為濕熱且傳導。",
+   "why_others": {
+    "A": "傳導方式為傳導，不是對流。",
+    "C": "蠟療歸類為濕熱，且不是對流。",
+    "D": "蠟療歸為濕熱，不是乾熱。"
+   },
+   "takeaway": "蠟療為濕熱，熱傳方式是傳導。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "蠟療依承認答案歸為濕熱且以傳導傳熱，各選項排除正確。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-025",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "紅外線的禁忌包含照射眼睛（可能傷害眼睛）與感覺神經異常（無法感知燙傷）；因此要避免照眼睛，並小心感覺異常的部位。",
+   "why_others": {
+    "A": "椎間盤突出與肌肉拉傷並非照射禁忌，兩者皆未列為禁忌。",
+    "C": "椎間盤突出並非禁忌，不能與眼睛、感覺異常並列。",
+    "D": "感覺神經異常也是禁忌，只選眼睛不完整。"
+   },
+   "takeaway": "紅外線禁忌：眼睛、感覺異常等。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "紅外線禁忌為眼睛與感覺異常，各組合排除正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-026",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "手部較不怕熱、末端面積小，上肢可用稍高的蠟溫；下肢承受較低溫度，因此相較下肢，上肢可使用稍高溫度。",
+   "why_others": {
+    "A": "石蠟熔點約 50 多度，並非 45 度。",
+    "B": "石蠟浴溫度約 52 度上下，並非 35 至 40 度。",
+    "C": "石蠟比熱低於水，所以熱容量較小，可耐受較高溫度。"
+   },
+   "takeaway": "蠟療上肢可比下肢稍高溫，比熱低於水。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "熔點約 50 餘度、比熱低於水、上肢可用稍高溫，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-027",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "熱療使體溫上升後，周邊血管擴張，為了維持心輸出量，心跳率會稍微增加；血壓則因血管阻力下降而變化不大或略降。",
+   "why_others": {
+    "B": "體溫上升時心跳是增加，不是降低。",
+    "C": "周邊血管擴張，血壓不會增加。",
+    "D": "血壓變化小，且題目的穩定後反應以心跳率增加為準。"
+   },
+   "takeaway": "熱療體溫上升，心跳率稍增。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "reasoning_error",
+    "reason": "詳解自承血壓可能略降，排除 D 卻只以「以心跳率增加為準」帶過，未提出 D 錯誤的實質理由。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-028",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "發光紅外線波長較短，又稱近紅外線，穿透力較深；不發光紅外線屬遠紅外線，波長範圍約 1500 至 15000 nm。",
+   "why_others": {
+    "A": "發光紅外線穿透較深而非較淺，②不對。",
+    "C": "不發光紅外線是遠紅外線，③不對，②亦不對。",
+    "D": "發光紅外線穿透較深，②不對。"
+   },
+   "takeaway": "發光紅外線為近紅外線，穿透較深。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "發光紅外線為近紅外線且穿透較深，不發光為遠紅外線 1500–15000 nm，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-029",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "超音波在含膠原多、含水少的組織（肌腱、韌帶、關節囊）吸收多，加熱效果好；肌肉含水量高，吸收較少，加熱效應最不佳。",
+   "why_others": {
+    "A": "關節囊膠原多，吸收多，加熱佳。",
+    "B": "韌帶膠原多，吸收多，加熱佳。",
+    "C": "肌腱膠原多，吸收多，加熱佳。"
+   },
+   "takeaway": "超音波偏加熱高膠原組織，肌肉最不佳。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "超音波以高膠原組織吸收多，肌肉加熱最差，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-030",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "超音波可用於急性肌肉扭傷（非熱效應）、慢性韌帶扭傷、肌腱與韌帶縫合後的修復，以及僵直性脊椎炎的症狀處理，五項皆屬適應症。",
+   "why_others": {
+    "B": "漏掉急性扭傷與僵直性脊椎炎。",
+    "C": "漏掉肌腱與韌帶縫合。",
+    "D": "只有兩項，漏掉其他適應症。"
+   },
+   "takeaway": "超音波適應症涵蓋急慢性軟組織傷與縫合修復。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "五項皆為適應症，各選項缺漏說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-031",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "連續性短波會產生熱，發燒時會加重體溫負擔；心臟節律器會受電磁場干擾而失靈，兩者為禁忌。",
+   "why_others": {
+    "A": "骨性關節炎與肌肉痙攣是適應症，不是禁忌。",
+    "B": "帶狀疱疹並非連續性短波禁忌。",
+    "C": "帶狀疱疹不是禁忌，不能納入。"
+   },
+   "takeaway": "短波禁忌：發燒、心臟節律器等。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "發燒與心臟節律器為禁忌，其餘排除合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-032",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "電容板與皮膚間要保持適當空氣間隙，常用約 2 至 4 公分，以使電場分布均勻，避免皮膚熱點。",
+   "why_others": {
+    "A": "距離太近，易形成熱點。",
+    "C": "距離過遠，電場分散，效率降低。",
+    "D": "距離過大，加熱效率更差。"
+   },
+   "takeaway": "短波電容板與皮膚間距約 2–4 公分。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "電容板與皮膚間距約 2–4 公分，說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-033",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "電感式短波（inductive）以線圈產生磁場，在組織內誘發渦電流（eddy current），渦電流遇到組織阻力產生熱。",
+   "why_others": {
+    "A": "電容式短波是電場使離子震動、偶極旋轉生熱。",
+    "C": "紅外線靠輻射傳熱，與渦電流無關。",
+    "D": "低能量雷射主要是光化學效應，非加熱。"
+   },
+   "takeaway": "電感式短波靠渦電流生熱。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "電感式短波以磁場誘發渦電流生熱，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-034",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "電容式短波的電場使組織依阻抗產生熱，在對向排列時，高阻抗的脂肪受熱最多，溫度升高最大。",
+   "why_others": {
+    "B": "肌肉含水多、阻抗低，產熱少於脂肪。",
+    "C": "骨骼阻抗高，但位置較深，升溫不如脂肪。",
+    "D": "神經含水較多，阻抗低，升溫較少。"
+   },
+   "takeaway": "電容式短波：高阻抗的脂肪升溫最多。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "電容式對向排列時高阻抗脂肪升溫最多，說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-035",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "UVA 波長約 315 至 400 nm，屬近紫外線，臭氧層對它的濾除很少，所以天然 UVA 多能到達地表。",
+   "why_others": {
+    "A": "UVA 屬近紫外線，且能到達地面。",
+    "B": "UVA 並非遠紫外線。",
+    "C": "UVA 不被臭氧層濾除，能到達地面。"
+   },
+   "takeaway": "UVA 為近紫外線，可穿過臭氧層到地表。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "UVA 屬近紫外線且大多能到達地表，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-036",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "能量（焦耳）等於功率（瓦特）乘以時間（秒）；300 mW 即 0.3 W，乘以 30 秒，得到 9 焦耳。",
+   "why_others": {
+    "A": "10 焦耳計算錯誤。",
+    "B": "瓦特是功率單位，不是能量單位。",
+    "D": "瓦特是功率單位，不是能量單位。"
+   },
+   "takeaway": "能量 J = 功率 W × 時間 s。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "0.3 W × 30 s = 9 J，單位辨析正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-037",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "連續式牽引的牽引力維持較久，常用較小重量、長時間，使腰椎得到固定與休息的效果，類似固定（immobilization）。",
+   "why_others": {
+    "B": "持續式是維持一定牽引力，偏重拉長組織，而非固定。",
+    "C": "間歇式有放鬆期，反覆動作，沒有固定效果。",
+    "D": "徒手牽引是短暫操作，不具固定效果。"
+   },
+   "takeaway": "連續式牽引力小而久，有固定效果。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "連續式牽引低力長時間具固定效果，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-038",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "退化性關節炎的頸痛，若無神經壓迫，輕牽引可擴大椎間孔而有益，不是牽引的禁忌。",
+   "why_others": {
+    "A": "類風濕性關節炎可能有寰樞椎不穩，牽引屬禁忌。",
+    "C": "骨質疏鬆使骨骼脆弱，牽引有風險。",
+    "D": "脊椎的感染或發炎，牽引屬禁忌。"
+   },
+   "takeaway": "類風濕、骨鬆、感染發炎禁忌牽引；退化可用。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "退化性關節炎非頸椎牽引禁忌，其餘禁忌說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-039",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "頸椎牽引時，頭頸前屈約 20 至 30 度，可使後側椎間隙與椎間孔張開最多，利於減輕神經壓迫。",
+   "why_others": {
+    "A": "屈曲過大，反而使牽引力集中在下頸椎且不舒服。",
+    "B": "屈曲角度偏大，並非增加後側椎間空間的最佳角度。",
+    "C": "角度偏大，不是常用的合適範圍。"
+   },
+   "takeaway": "頸牽引屈曲約 20–30 度，開後側椎間隙。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "屈曲約 20–30 度可增加後側椎間隙，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-040",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "間歇性充氣加壓會把肢體的液體推回心臟，使心臟負荷增加；充血性心衰竭者容易造成肺水腫，因此為禁忌。",
+   "why_others": {
+    "B": "動脈供血不足須謹慎使用，但在此題的選項中不是最典型的禁忌。",
+    "C": "燒燙傷疤痕可用加壓來控制，並非禁忌。",
+    "D": "肢體水腫可用此法處理，但需注意腎功能，不屬絕對禁忌。"
+   },
+   "takeaway": "充血性心衰竭禁用間歇性充氣加壓。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "充血性心衰竭因回流增加心臟負荷而禁用，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-041",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "下斜方肌測試採俯臥，上肢舉高過頭、約外展 145 度，使手臂順著下斜方肌纖維走向，再抗阻力抬高手臂，才能有效測出該肌肉。",
+   "why_others": {
+    "A": "下斜方肌收縮造成肩胛下壓與內收，不是外展。",
+    "B": "斜方肌由副神經（脊副神經）支配，肩胛背神經支配菱形肌。",
+    "D": "阻力應施於前臂遠端或肩胛骨，並非強調手腕處；且題意重點在姿勢。"
+   },
+   "takeaway": "下斜方肌測試：俯臥、上肢外展約 145 度、副神經支配。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "reasoning_error",
+    "reason": "D 的說明稱阻力應施於「前臂遠端」而非手腕，兩處幾乎同位置，未說清錯誤所在；標準作法是阻力施於肱骨遠端（肘上）或肩胛骨，以免力臂過長。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-042",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "頭部伸展測試時，指令應是頭向後上抬並抵抗下壓，而選項說眼睛看地板、向上頂，姿勢指令與頭伸展方向不符，因此敘述錯誤。",
+   "why_others": {
+    "A": "俯臥、頭垂出床緣是正確測試姿勢。",
+    "B": "一手於枕骨施阻力、一手在臉下隨時支持，是安全作法。",
+    "D": "等級 4 需完整關節活動並抵抗中度阻力，敘述正確。"
+   },
+   "takeaway": "頭部伸展 Good：完整 ROM 並抗中度阻力，注意指令與動作方向一致。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "頭部伸展測試指令應是抬頭往上看並抵抗下壓，C 說看地板不符，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-043",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "被動關節活動由他人移動肢體，可提供關節與軟組織的感覺輸入，有助維持動作覺（kinesthesia）與關節活動度。",
+   "why_others": {
+    "A": "被動活動無肌肉收縮，無法像肌肉幫浦般協助循環。",
+    "B": "沒有主動收縮，無法預防肌肉萎縮。",
+    "C": "被動活動不產生主動收縮，不能增加肌力。"
+   },
+   "takeaway": "被動關節活動：維持 ROM 與動作覺，不增肌力、不防萎縮。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "被動關節活動可維持動作覺，無法取代肌肉幫浦、預防萎縮或增加肌力，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-044",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "膝屈曲時腓腸肌（gastrocnemius）被放鬆而處於縮短狀態，無法有效出力，因此蹠屈主要由比目魚肌（soleus）負責。",
+   "why_others": {
+    "B": "膝屈曲時腓腸肌鬆弛，膝伸直時才是主要測試對象。",
+    "C": "脛前肌是背屈與內翻肌，不是蹠屈肌。",
+    "D": "脛後肌主要作用是內翻，並非本測試主要肌肉。"
+   },
+   "takeaway": "膝屈曲測比目魚肌，膝伸直測腓腸肌。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "膝屈曲使腓腸肌處於主動不足，蹠屈主要由比目魚肌負責，各選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-045",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "骨盆上提主要為腰方肌作用，標準測試採仰臥；只能做出部分骨盆上提動作時，評為差（Poor）。",
+   "why_others": {
+    "A": "標準測試姿勢為仰臥，不是站姿。",
+    "B": "能完成全範圍上提才可能達到可（Fair）以上，抬離腳跟不是依據。",
+    "D": "阻力應施於同側腿遠端（踝部）向下拉，不是骨盆上緣向下推。"
+   },
+   "takeaway": "骨盆上提（腰方肌）：仰臥、阻力施於踝，部分範圍為 Poor。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "骨盆上提只能做出部分範圍評為 Poor，阻力以牽拉踝上方施加，說明大致正確（標準姿勢仰臥或俯臥皆可，不影響判斷）。"
+   }
+  },
+  {
+   "id": "105-2-TECH-046",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "肌爆發力需要在高強度負荷下以快速度出力，重點是速度與功率；高重複會造成疲勞，無法維持爆發力，因此高強度高重複並不適當。",
+   "why_others": {
+    "A": "高強度低重複是增加肌力的原則。",
+    "B": "低強度高重複是增加肌耐力的原則。",
+    "D": "增強式訓練（plyometric）利用快速牽張縮短循環，可增加爆發力。"
+   },
+   "takeaway": "肌力＝高強度低重複；耐力＝低強度高重複；爆發力重速度。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "爆發力訓練重快速出力，非高強度高重複，其餘選項原則說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-047",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "加強阻力運動強度通常由短弧、局部範圍，進展到完整活動範圍；由完整範圍退到短弧並不是進階，反而是退階，因此最不恰當。",
+   "why_others": {
+    "A": "由次最大進展到接近最大收縮是合理的強度提升。",
+    "B": "速度由低到高是常見進階方式。",
+    "D": "由靜態（等長）進展到動態收縮是常見進階。"
+   },
+   "takeaway": "進階原則：短弧→全範圍、靜態→動態、低速→高速。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "進階應由短弧進到全範圍，C 方向相反，其他進程說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-048",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "阻力運動依負荷、重複次數與速度不同，可改善肌力、爆發力及耐力，各項面向都能受益，只是訓練處方的側重點不同。",
+   "why_others": {
+    "A": "阻力運動不只改善肌力，也影響爆發力與耐力。",
+    "B": "耐力也可因阻力運動而改善，不可漏掉。",
+    "D": "不只耐力，肌力與爆發力也會改善。"
+   },
+   "takeaway": "阻力運動可同時改善肌力、爆發力與耐力。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "阻力運動依處方不同可改善肌力、爆發力與耐力，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-049",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "循環式訓練（circuit training）在各站間交替訓練不同肌群，讓個別肌群有恢復時間，能減少局部肌肉疲勞，適合易疲勞的多發性硬化症（multiple sclerosis）患者。",
+   "why_others": {
+    "A": "等速訓練需持續最大出力，容易造成疲勞。",
+    "B": "增強式訓練屬高衝擊與高強度，不適合易疲勞患者。",
+    "C": "PNF 技術需大量用力，疲勞風險較高。"
+   },
+   "takeaway": "多發性硬化症易疲勞：用站間輪替的循環式訓練。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "循環式訓練以站間輪替與休息減少局部疲勞，適合多發性硬化症，說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-050",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "真皮乳頭層富含感覺神經末梢，傷及此層（淺層部分厚度）神經仍完整且被刺激，因此最痛；較深則神經受破壞，疼痛反而減少。",
+   "why_others": {
+    "A": "僅傷及表皮（第一度）雖痛，但程度較輕且刺激較淺。",
+    "C": "傷及網狀層時神經末梢已大量受損，痛覺較不明顯。",
+    "D": "傷及皮下脂肪（全層）神經多被破壞，幾乎無痛。"
+   },
+   "takeaway": "燒傷愈深痛覺愈差，淺層部分厚度（乳頭層）最痛。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "淺層部分厚度（乳頭層）燙傷神經末梢完整受刺激最痛，越深越不痛，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-051",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "協助程度以病患自行完成的比例分級，需 26–50% 的協助屬中等程度協助（moderate assistance），30% 即屬此級。",
+   "why_others": {
+    "A": "接觸性警戒僅需治療師在旁接觸保護，不給予實質協助。",
+    "B": "輕微協助通常是病患完成大部分（約 75% 以上）。",
+    "D": "極大協助是病患只能出力一小部分，需要協助更多。"
+   },
+   "takeaway": "需 30% 協助屬中等協助（moderate assistance）。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "需 25–50% 協助屬中等程度協助，30% 落在此級，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-052",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "訓練擺盪越柺步法初期，治療師站在病患後方，一手抓腰部安全帶、另一手放肩部，予以保護與引導協助。",
+   "why_others": {
+    "A": "治療師應站在病患後方或側後方，而非前方。",
+    "B": "初期應由治療師保護下進行，不宜讓病患自行嘗試，以免跌倒。",
+    "D": "初期需提供手部輔助與保護，才安全。"
+   },
+   "takeaway": "擺盪越柺訓練：治療師在後方，抓安全帶並扶肩。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "訓練擺盪越柺時治療師站後側方，一手抓安全帶一手扶肩，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-053",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "一側柺杖與對側腳同時前移、再換另一側，兩點著地輪替，為二點步法（two-point gait），類似正常步行手腳交替。",
+   "why_others": {
+    "B": "三點步法是兩柺杖加患肢同時前移，再健肢前進。",
+    "C": "四點步法是柺杖與腳依序各自移動，每次只動一個點。",
+    "D": "擺盪越柺是雙柺杖同時前移後，雙腳越過柺杖落地。"
+   },
+   "takeaway": "柺杖與對側腳同時前進＝二點步法。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "一側柺杖與對側腳同時前移為二點步法，其他步法描述正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-054",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "關節囊受限模式是關節囊整體受累（如纖維化、發炎）而出現的特定活動受限比例，不是骨化性肌炎（myositis ossificans）造成，後者屬於非關節囊型受限。",
+   "why_others": {
+    "A": "關節囊整體纖維化造成的受限程度，正是此模式。",
+    "C": "此模式與肌肉控制關節有關，敘述屬本題設定下的正確選項。",
+    "D": "急性傷害引起腫脹，也會呈現關節囊型受限。"
+   },
+   "takeaway": "關節囊模式來自關節囊病變；骨化性肌炎屬非關節囊型。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "骨化性肌炎屬非關節囊型受限，B 錯誤；A、C、D 依 Cyriax 觀點為正確敘述。"
+   }
+  },
+  {
+   "id": "105-2-TECH-055",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "俯臥時以兩拇指放在棘突側邊、朝對側水平方向施力，是橫向椎骨壓力（transverse vertebral pressure），用來鬆動脊椎旋轉與側向活動。",
+   "why_others": {
+    "A": "中央壓力是直接壓在棘突上，由後向前。",
+    "B": "單邊壓力是壓在棘突旁的橫突或關節突，方向是由後向前。",
+    "D": "彈壓測試（springing test）是對棘突或椎骨向前的快速彈壓。"
+   },
+   "takeaway": "拇指推棘突側邊水平方向＝橫向椎骨壓力。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "拇指置於棘突側面向對側水平推為橫向椎骨壓力，其他手法描述正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-056",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "髖外轉時股骨頭在髖臼內相對往前滑動（凸面在凹面上，滑動與骨移動方向相反），因此欲增加外轉活動度，需將股骨往前推（anterior glide）。",
+   "why_others": {
+    "A": "往上推用於增加外展或牽引類活動，不是外轉。",
+    "B": "往內側推主要是側向牽拉，不是外轉的對應方向。",
+    "D": "往後滑動用於增加內轉。"
+   },
+   "takeaway": "髖外轉鬆動：股骨向前滑；內轉：向後滑。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "reasoning_error",
+    "reason": "A 稱股骨往上推可增加外展有誤，依凹凸定律髖外展時股骨頭向下滑，應用向下（尾向）滑動；B 把往內推說成「側向牽拉」也不正確。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-057",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "髖關節最緊位置（close-packed position）為最大伸直、內轉與外展，此時關節面接觸最大、韌帶最緊。",
+   "why_others": {
+    "A": "屈曲、內轉、內收是髖脫位的易發姿勢，不是最緊位置。",
+    "C": "伸直、外轉、內收並非最緊位置。",
+    "D": "伸直、外轉、外展不是最緊位置，內轉才是。"
+   },
+   "takeaway": "髖最緊位置：伸直、內轉、外展。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "髖最緊位置為伸直、內轉、外展，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-058",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "深部摩擦按摩（deep friction massage）以橫向於纖維方向施力，可促使新生膠原纖維排列整齊，並避免沾黏，適用於慢性肌腱炎。",
+   "why_others": {
+    "A": "完全休息不動易讓纖維排列雜亂、沾黏。",
+    "C": "深撫法主要促進循環，不能針對纖維排列。",
+    "D": "增生療法（prolotherapy）是注射刺激增生，並非促進排列整齊的手法。"
+   },
+   "takeaway": "慢性肌腱炎：橫向摩擦按摩促進膠原排列。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "深部橫向摩擦按摩可促進新生膠原排列並減少沾黏，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-059",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "急性期冰凍肩（frozen shoulder）以疼痛與發炎為主，被動活動應在不產生疼痛的範圍內進行，避免加重發炎與疼痛。",
+   "why_others": {
+    "A": "急性期強迫達最大範圍會加重疼痛與發炎。",
+    "C": "強調外轉並非急性期原則，過度牽拉反而有害。",
+    "D": "強調外展同樣會增加疼痛，不是急性期重點。"
+   },
+   "takeaway": "急性冰凍肩：被動活動限於不痛範圍。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "急性期冰凍肩被動活動應在不痛範圍內，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-060",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "腕屈曲時，月狀骨在橈骨及頭狀骨之間向背側滑動；為增加屈曲，固定頭狀骨，將月狀骨往腹側推。此為本題承認的做法。",
+   "why_others": {
+    "A": "此手法針對的是近排與遠排骨間移動，並非增加屈曲的正確方向。",
+    "B": "三角骨往背側推不是屈曲鬆動的對應手法。",
+    "C": "固定橈骨將舟狀骨往腹側推，用於腕伸直而非屈曲。"
+   },
+   "takeaway": "增加腕屈曲：固定頭狀骨，月狀骨往腹側推。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "reasoning_error",
+    "reason": "why_correct 稱腕屈曲時月狀骨相對頭狀骨向背側滑動，卻又推月狀骨往腹側，推理自相矛盾；固定頭狀骨時，屈曲時月狀骨是相對往腹側移動。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-061",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "膝關節的關節囊受限模式為屈曲受限大於伸直受限，且旋轉不受限（旋轉角度沒限制），敘述正確。",
+   "why_others": {
+    "A": "髖關節模式為屈曲、外展、內轉受限，不是外轉大於內轉。",
+    "C": "踝關節（talocrural）模式是蹠屈受限大於背屈。",
+    "D": "距下關節模式是內翻受限，終至內翻固定，不是外翻較多。"
+   },
+   "takeaway": "膝關節模式：屈曲大於伸直，旋轉不受限。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "reasoning_error",
+    "reason": "D 說距下關節「終至內翻固定」有誤，Cyriax 的距下關節囊模式是內翻漸受限，最後固定在外翻位。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-062",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "近端橈尺關節的治療平面位於尺骨（ulna）上的橈骨切跡，而非橈骨，因此敘述錯誤。",
+   "why_others": {
+    "A": "肘伸直與屈曲需要一些內外翻的附屬動作，敘述正確。",
+    "C": "肱橈關節休息位置為伸直、旋後到底，敘述正確。",
+    "D": "肱尺關節背向滑動可增加肘伸直，敘述正確。"
+   },
+   "takeaway": "近端橈尺關節的治療平面在尺骨的橈骨切跡。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "近端橈尺關節凹面在尺骨橈骨切跡，治療平面在尺骨，B 錯誤；其他選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-063",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "揉捏法（petrissage）是以手掌或指腹抓提、擠壓組織，對較深層肌肉作用，也可用單指或少數手指於局部小範圍操作，因此「不能用單指」是錯誤的。",
+   "why_others": {
+    "A": "揉捏法比輕撫法（effleurage）更能影響深層組織，敘述正確。",
+    "C": "揉捏法擠壓與放鬆能促進組織液交換，敘述正確。",
+    "D": "揉捏法與 kneading 類似，敘述正確。"
+   },
+   "takeaway": "Petrissage 即揉捏類手法，可作用深層，也能局部用指。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "揉捏法可用單指或少數手指於局部操作，B 錯誤，其他敘述說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-064",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "慢速牽拉不易引發牽張反射，肌肉較能放鬆，也較少造成組織撕裂，因此最適合。",
+   "why_others": {
+    "B": "快速牽拉易引發牽張反射，並增加受傷風險。",
+    "C": "快慢交替並無必要，快速部分仍有風險。",
+    "D": "牽拉速度不當仍會引發保護性收縮與受傷。"
+   },
+   "takeaway": "牽拉宜慢速，避免牽張反射與受傷。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "慢速牽拉較不引發牽張反射與組織受傷，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-065",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "抑制壓力手法包括持續壓力、彈撥等，目的在降低肌肉張力；結締組織按摩（connective tissue massage）是對筋膜與皮膚施以牽扯，目的不是抑制肌張力，故不屬此類。",
+   "why_others": {
+    "A": "肌肉彈撥（strum）屬抑制手法。",
+    "B": "橫向彈撥屬抑制手法。",
+    "C": "持續壓力屬抑制手法。"
+   },
+   "takeaway": "結締組織按摩不屬抑制壓力類手法。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "結締組織按摩是牽扯筋膜皮膚的反射性手法，不屬抑制壓力類，說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-066",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "自主開張型（voluntary opening）手鈎是由使用者以肩部動作拉鋼索使手鈎張開，放鬆後靠基部橡皮圈（elastic band）的張力將手鈎夾緊，因此夾緊動作由橡皮圈控制。",
+   "why_others": {
+    "A": "鋼索負責手鈎打開，不是夾緊。",
+    "B": "手鈎內側橡膠只增加夾持的摩擦力。",
+    "C": "固定臂只是手鈎的不動端，並非提供夾緊力量。"
+   },
+   "takeaway": "自主開張：鋼索負責開，橡皮圈負責夾。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "自主開張型手鈎以鋼索張開、橡皮圈提供夾緊力，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-067",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "義肢太長、套筒過度外展、內側壁太高，都會使患側被迫向外繞行或撐開，造成外展步態；套筒前移太多則不屬於此原因。",
+   "why_others": {
+    "B": "④套筒前移太多不是外展步態的原因，且漏掉①。",
+    "C": "漏掉②，且含不相關的④。",
+    "D": "漏掉③，且含不相關的④。"
+   },
+   "takeaway": "外展步態：義肢過長、套筒外展、內側壁過高。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "義肢過長、套筒外展、內側壁過高皆致外展步態，各組合缺漏說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-068",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "硬式鉸鏈（rigid hinge）鎖定肘部，會限制前臂的旋前旋後（pronation-supination）等前臂相關動作；肩關節與肘屈伸可由其他方式補償。",
+   "why_others": {
+    "B": "本題承認硬式鉸鏈不是影響肘屈伸的項目，故此項不是答案。",
+    "C": "肩關節屈曲伸直由使用者自身肩部完成，不受鉸鏈限制。",
+    "D": "肩關節外展內收由使用者自身肩部完成，不受限制。"
+   },
+   "takeaway": "硬式鉸鏈使前臂旋前旋後無法產生。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "reasoning_error",
+    "reason": "why_correct 稱硬式鉸鏈「鎖定肘部」、肘屈伸靠其他方式補償，有誤；硬式鉸鏈允許肘屈伸、只阻止前臂旋前旋後，B 的說明也只引用承認答案而無實質理由。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-069",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "奈特（Knight）背架的骨盆帶應位於髂骨嵴下方、對準大轉子與臀部突起處，而非髂骨嵴上方半英吋，故此選項不適當。",
+   "why_others": {
+    "A": "胸帶位於肩胛骨下角下方約一英吋，適當。",
+    "C": "側豎桿對齊身體側面中線，適當。",
+    "D": "脊旁豎桿與脊柱平行，適當。"
+   },
+   "takeaway": "Knight 背架骨盆帶位在髂骨嵴下方，不是上方。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "reasoning_error",
+    "reason": "骨盆帶應位於髂骨嵴與大轉子之間（薦尾骨處、臀部最突處），詳解說「對準大轉子」不正確。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-070",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "要減少使用者能量消耗，應降低義肢與裝具的重量；材料密度（density）越低越輕，應優先考量。",
+   "why_others": {
+    "A": "韌度（stiffness）影響支撐與外型，不直接決定重量。",
+    "B": "耐用度影響使用壽命，與能量消耗無直接關係。",
+    "D": "抗腐蝕性影響維護與壽命，並非能量消耗。"
+   },
+   "takeaway": "降低能量消耗：選低密度、輕量材料。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "降低能量消耗應選低密度輕量材料，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-071",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "蹲伏步態（crouch gait）因髖膝過度屈曲，地板作用力式踝足部裝具（floor reaction AFO）能把地面反作用力推向膝前，促使膝伸直，改善蹲伏。",
+   "why_others": {
+    "A": "踝上裝具只控制足部與踝內外側穩定，無法控制膝。",
+    "C": "螺旋式 AFO 主要控制旋轉與軟性垂足，不處理膝屈曲。",
+    "D": "PTB 式 AFO 用於減輕下肢負重，不針對蹲伏。"
+   },
+   "takeaway": "蹲伏步態：用地板作用力式 AFO 促進膝伸直。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "地板作用力式 AFO 產生膝伸直力矩改善蹲伏步態，其他選項說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-072",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "後足外翻時，需以內側足跟墊（楔形）抬高足跟內側，使跟骨轉向中立，矯正外翻。",
+   "why_others": {
+    "A": "外側足跟墊用於後足內翻。",
+    "C": "外側前足楔形墊用於前足旋後等問題，不是後足外翻。",
+    "D": "內側前足楔形墊處理前足問題，不針對後足。"
+   },
+   "takeaway": "後足外翻用內側足跟墊，內翻用外側足跟墊。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "reasoning_error",
+    "reason": "C 稱外側前足楔形墊用於前足旋後有誤，外側前足墊用於前足外翻（旋前），前足旋後（內翻）是用內側前足墊。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "105-2-TECH-073",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "小兒麻痺大流行造成大量下肢肌肉麻痺的患者，對支架的需求急增，強力推動裝具學（orthotics）的發展與研究。",
+   "why_others": {
+    "A": "第一次世界大戰主要推動義肢與復健發展。",
+    "B": "第二次世界大戰推動復健與義肢，但影響不如小兒麻痺。",
+    "D": "韓戰與越戰主要影響義肢與創傷處置。"
+   },
+   "takeaway": "小兒麻痺大流行對裝具學影響最大。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "小兒麻痺大流行大量推動裝具需求與發展，說明合理。"
+   }
+  },
+  {
+   "id": "105-2-TECH-074",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "圖中是附有攝影機與螢幕的電子式擴視機，用來放大書本文字、協助視障者閱讀，屬於視覺輔具，不是用於表達溝通的擴大性溝通輔具（AAC）。",
+   "why_others": {
+    "A": "圖中為攝影機加螢幕的電子式擴視機，正確。",
+    "B": "此類擴視機設計可搬移，題目視為可攜式，敘述正確。",
+    "C": "加裝軟體後可結合文字辨識與語音合成，將文字唸出。"
+   },
+   "takeaway": "擴視機是視覺輔具，不屬擴大性溝通輔具。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "圖為攝影機加螢幕的電子擴視機（螢幕有提把），屬視覺閱讀輔具而非擴大性溝通輔具，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-075",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "傳統短腿支架的外側 T 字帶，從外側向內拉足跟，用來矯正足跟內翻（calcaneovarus）；內側 T 字帶才矯正外翻。",
+   "why_others": {
+    "A": "垂足由背屈輔助（如彈簧或止動）處理。",
+    "B": "足跟外翻需用內側 T 字帶。",
+    "D": "足內八主要與旋轉有關，不由 T 字帶處理。"
+   },
+   "takeaway": "外側 T 字帶矯正內翻；內側 T 字帶矯正外翻。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "外側 T 字帶從外側向內施力矯正足跟內翻，內側 T 字帶矯正外翻，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-076",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "脛骨骨折問題局限於小腿，通常以石膏、護木或小腿支架處理，不需要涵蓋髖與膝的 HKAFO，故最不常用。",
+   "why_others": {
+    "A": "小兒麻痺造成下肢廣泛麻痺，常需 HKAFO。",
+    "B": "脊髓損傷下肢功能廣泛喪失，常用 HKAFO。",
+    "C": "痙攣性腦性麻痺需控制髖膝踝排列，常用 HKAFO。"
+   },
+   "takeaway": "HKAFO 用於廣泛下肢麻痺，單純脛骨骨折不需要。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "脛骨骨折局限小腿，不需涵蓋髖膝的 HKAFO，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-077",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "輪椅座深過長時，膝窩被座墊前緣頂住，患者為了讓膝彎曲而往前滑，造成骨盆後傾（posterior tilt）與駝背坐姿。",
+   "why_others": {
+    "A": "座深過長不會導致骨盆前傾，反而是後傾。",
+    "C": "座深過長與側彎無直接關係，側彎多與兩側不對稱有關。",
+    "D": "同理，座深過長不會造成固定方向的側彎。"
+   },
+   "takeaway": "座深過長：骨盆後傾、前滑、駝背。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "座深過長頂住膝窩使病患前滑、骨盆後傾，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-078",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "高椅背可為軀幹提供更多支撐，改善姿勢穩定，適合軀幹控制較差者。",
+   "why_others": {
+    "A": "椅背高度需考慮椅墊厚度，兩者相關。",
+    "B": "椅背高度一般量到肩胛下角（低背）或肩胛骨上緣以上（高背）需視需求，並非固定量至脊上緣。",
+    "C": "高椅背會限制上肢與軀幹活動，不會增進活動能力。"
+   },
+   "takeaway": "高椅背提供姿勢支撐，但限制活動。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "高椅背提供較好軀幹支撐但限制活動，椅背高度需考慮椅墊厚度，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-079",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "運動型輪椅追求輕量、低椅背、小座位以貼合身體，且前輪通常小，利於靈活轉向；前輪大不屬其特點。",
+   "why_others": {
+    "A": "輕量是運動型輪椅特點。",
+    "B": "椅背低可讓軀幹與上肢自由活動，是其特點。",
+    "C": "座位小而貼身，是其特點。"
+   },
+   "takeaway": "運動型輪椅：輕、低背、座小、前輪小。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "運動型輪椅輕、低背、座小、前輪小，前輪大非其特點，說明正確。"
+   }
+  },
+  {
+   "id": "105-2-TECH-080",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T14:05:56+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "無障礙廁所依規範需設置緊急求助鈴，讓行動不便者遇狀況時可求救。",
+   "why_others": {
+    "A": "門應為外開或拉門，不得向內推開以免阻擋急救。",
+    "B": "L 型扶手為水平加垂直配置，並非規定向下延伸。",
+    "D": "沖水控制可用多種型式，非一定要紅外線自動沖水。"
+   },
+   "takeaway": "無障礙廁所需有緊急求助鈴，門不可內推。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "無障礙廁所須設緊急求助鈴，門不得內推、L 型扶手垂直段向上、沖水不限紅外線，說明合理。"
+   }
+  }
+ ]
+}

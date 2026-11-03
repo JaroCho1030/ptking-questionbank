@@ -62,7 +62,7 @@ TAG_LOW_CONFIDENCE = 0.45          # 2026-10-19：只審「可能標錯」的（
 # AI 詳解（docs/PIPELINE.md「詳解生成」）
 EXPLAIN_MODEL = os.environ.get("EXPLAIN_MODEL", "claude-opus-5-5")
 EXPLAIN_EFFORT = os.environ.get("EXPLAIN_EFFORT", "medium")   # low／medium／high／xhigh／max；試跑看品質與用量再調
-EXPLAIN_MIN_YEAR = 110              # 110-1 起；更早的之後再補
+EXPLAIN_MIN_YEAR = 105              # 105-1 起（2026-11-03 起全部年份都做）
 EXPLAIN_MAX_CORRECT = 120           # why_correct 字數上限（字數算法見 explain.text_len）
 EXPLAIN_MAX_CORRECT_MULTI = 160     # 多正解題的 why_correct（每個承認答案都要說）
 EXPLAIN_MAX_OTHER = 40              # why_others 每個選項的上限
