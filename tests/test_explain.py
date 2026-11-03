@@ -121,10 +121,19 @@ def test_format_problems():
     assert any("缺選項 D" in p for p in X.format_problems(q, dict(good, why_others={"A": "a", "B": "b"})))
     assert any("正解選項 C" in p for p in X.format_problems(q, dict(good, why_others={**good["why_others"], "C": "c"})))
     assert any("不存在的選項 E" in p for p in X.format_problems(q, dict(good, why_others={**good["why_others"], "E": "e"})))
-    assert any("why_correct" in p for p in X.format_problems(q, dict(good, why_correct="字" * 121)))
-    assert X.format_problems(q, dict(good, why_correct="字" * 120)) == []
+    # 字數容許超過上限 10%：120 → 132、40 → 44、50 → 55
+    assert X.format_problems(q, dict(good, why_correct="字" * 132)) == []
+    assert any("why_correct 133 字 > 132" in p for p in X.format_problems(q, dict(good, why_correct="字" * 133)))
     assert any("takeaway" in p for p in X.format_problems(q, dict(good, takeaway="")))
-    assert any("why_others A" in p for p in X.format_problems(q, dict(good, why_others={**good["why_others"], "A": "字" * 41})))
+    assert X.format_problems(q, dict(good, takeaway="字" * 55)) == []
+    assert any("takeaway" in p for p in X.format_problems(q, dict(good, takeaway="字" * 56)))
+    assert X.format_problems(q, dict(good, why_others={**good["why_others"], "A": "字" * 44})) == []
+    assert any("why_others A" in p for p in X.format_problems(q, dict(good, why_others={**good["why_others"], "A": "字" * 45})))
+    # 多正解：why_correct 上限 160（容許到 176）
+    multi = _q("114-2-NEURO-053", accepted=("A", "B"))
+    gm = {"why_correct": "字" * 176, "why_others": {"C": "c", "D": "d"}, "takeaway": "記。"}
+    assert X.format_problems(multi, gm) == []
+    assert any("why_correct 177 字 > 176" in p for p in X.format_problems(multi, dict(gm, why_correct="字" * 177)))
     voided = _q("114-2-NEURO-043", accepted=(), voided=True)
     assert X.format_problems(voided, dict(good, why_others={})) == []
 
@@ -138,6 +147,8 @@ def test_parse_tool_output():
     assert X.parse_tool_output("blind", {"answer": ["C", "A", "C"], "confidence": 1.7})[0] == {"answer": ["A", "C"], "confidence": 1.0}
     assert X.parse_tool_output("blind", {"answer": [], "confidence": 0.5})[1]
     assert X.parse_tool_output("check", {"verdict": "maybe", "reason": "?"})[1]
+    # 模型偶爾輸出 HTML 跳脫字元
+    assert X.parse_tool_output("check", {"verdict": "pass", "reason": "Kleim &amp; Jones"})[0]["reason"] == "Kleim & Jones"
 
 
 def test_prompts_group_figure_and_option_images(dirs):

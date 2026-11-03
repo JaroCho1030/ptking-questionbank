@@ -19,6 +19,7 @@ from __future__ import annotations
 import argparse
 import base64
 import hashlib
+import html
 import json
 import re
 import sys
@@ -40,7 +41,7 @@ WRITER_SYSTEM = f"""你是物理治療系的資深教師，替準備台灣物理
 你會拿到一道題目（可能附圖、可能是題組）、這題承認的正確答案與主題。依給定的答案寫詳解，不要質疑答案；答案本身有沒有問題由另外的審稿者判斷。
 
 格式（用 {WRITER_TOOL} 工具回傳）：
-- why_correct：為什麼是這個答案，2–3 句，最多 {C.EXPLAIN_MAX_CORRECT} 字。
+- why_correct：為什麼是這個答案，2–3 句，最多 {C.EXPLAIN_MAX_CORRECT} 字（多個承認答案的題最多 {C.EXPLAIN_MAX_CORRECT_MULTI} 字）。
 - why_others：每個「非正解」選項各一句為什麼不對，每項最多 {C.EXPLAIN_MAX_OTHER} 字。正解選項不要寫，非正解選項一個都不能漏。
 - takeaway：這題的考點或記法，一句，最多 {C.EXPLAIN_MAX_TAKEAWAY} 字。
 
@@ -48,6 +49,7 @@ WRITER_SYSTEM = f"""你是物理治療系的資深教師，替準備台灣物理
 - 繁體中文（台灣用語）。專有名詞第一次出現時附英文，例：小洞中風（lacunar stroke）。
 - 不引用書名、頁碼、指引、年份等出處；不寫「AI」「我」「考選部指出」這類字眼。直接講道理。
 - 字數的算法：中文字與標點各算 1 字，一個英文單字或一串數字算 1 字。寧可短，不要超過上限。
+- 只寫有把握的內容：量表第幾項、清單有幾項、天數或年齡範圍這類精確細節，沒把握就不寫，改用不帶數字的說法；考點不要列不完整的清單（例如寫「十原則」卻只列九項）。
 
 特殊題：
 - 送分題（題目標示「一律給分」）：why_correct 開頭寫「考選部公告一律給分。」，接著說明這題的爭議點（例如題意不清、不只一個選項說得通、沒有正確選項）；why_others 可以是空陣列。
@@ -85,7 +87,7 @@ WRITER_TOOL_DEF = {
     "input_schema": {
         "type": "object",
         "properties": {
-            "why_correct": {"type": "string", "description": f"為什麼是這個答案，2–3 句，≤ {C.EXPLAIN_MAX_CORRECT} 字"},
+            "why_correct": {"type": "string", "description": f"為什麼是這個答案，2–3 句，≤ {C.EXPLAIN_MAX_CORRECT} 字（多正解 ≤ {C.EXPLAIN_MAX_CORRECT_MULTI} 字）"},
             "why_others": {
                 "type": "array",
                 "description": f"每個非正解選項一筆，各一句為什麼不對，≤ {C.EXPLAIN_MAX_OTHER} 字",
@@ -159,18 +161,29 @@ def text_len(s: str) -> int:
     return len(re.sub(r"\s+", "", _ASCII_RUN.sub("W", s or "")))
 
 
+def hard_limit(limit: int) -> int:
+    """格式檢查真正擋的字數：上限再容許 EXPLAIN_LENGTH_TOLERANCE（120 → 132、40 → 44）。"""
+    return int(limit * (1 + C.EXPLAIN_LENGTH_TOLERANCE) + 1e-9)
+
+
+def correct_limit(q: dict) -> int:
+    return C.EXPLAIN_MAX_CORRECT_MULTI if len(q.get("accepted_answers") or []) > 1 else C.EXPLAIN_MAX_CORRECT
+
+
 def format_problems(q: dict, e: dict) -> list[str]:
-    """檢查一則詳解的欄位與字數（explain 的 apply 與 validate 共用）。回傳問題清單，空 = 合格。"""
+    """檢查一則詳解的欄位與字數（explain 的 apply 與 validate 共用）。回傳問題清單，空 = 合格。
+    字數超過上限但在容許範圍（10%）內算合格。"""
     probs = []
     wc, wo, tk = e.get("why_correct"), e.get("why_others"), e.get("takeaway")
+    max_wc, max_tk, max_wo = hard_limit(correct_limit(q)), hard_limit(C.EXPLAIN_MAX_TAKEAWAY), hard_limit(C.EXPLAIN_MAX_OTHER)
     if not isinstance(wc, str) or not wc.strip():
         probs.append("why_correct 空白")
-    elif text_len(wc) > C.EXPLAIN_MAX_CORRECT:
-        probs.append(f"why_correct {text_len(wc)} 字 > {C.EXPLAIN_MAX_CORRECT}")
+    elif text_len(wc) > max_wc:
+        probs.append(f"why_correct {text_len(wc)} 字 > {max_wc}")
     if not isinstance(tk, str) or not tk.strip():
         probs.append("takeaway 空白")
-    elif text_len(tk) > C.EXPLAIN_MAX_TAKEAWAY:
-        probs.append(f"takeaway {text_len(tk)} 字 > {C.EXPLAIN_MAX_TAKEAWAY}")
+    elif text_len(tk) > max_tk:
+        probs.append(f"takeaway {text_len(tk)} 字 > {max_tk}")
     if not isinstance(wo, dict):
         probs.append("why_others 不是物件")
         return probs
@@ -182,8 +195,8 @@ def format_problems(q: dict, e: dict) -> list[str]:
             probs.append(f"why_others 含正解選項 {k}")
         elif not isinstance(v, str) or not v.strip():
             probs.append(f"why_others {k} 空白")
-        elif text_len(v) > C.EXPLAIN_MAX_OTHER:
-            probs.append(f"why_others {k} {text_len(v)} 字 > {C.EXPLAIN_MAX_OTHER}")
+        elif text_len(v) > max_wo:
+            probs.append(f"why_others {k} {text_len(v)} 字 > {max_wo}")
     if not q.get("is_voided"):
         missing = [k for k in C.OPTION_LETTERS if k not in accepted and k not in wo]
         if missing:
@@ -342,6 +355,11 @@ def request_params(role: str, q: dict, text: str) -> dict:
 
 # ---------------------------------------------------------------- 結果處理（純函式）
 
+def _clean(s) -> str:
+    """去頭尾空白；模型偶爾把 & 寫成 &amp; 之類的 HTML 跳脫字元，轉回原字。"""
+    return html.unescape(str(s)).strip()
+
+
 def parse_tool_output(role: str, tool_input: dict) -> tuple[dict | None, str | None]:
     """把工具輸入整理成存檔格式；不合格回傳 (None, 原因)。"""
     try:
@@ -351,9 +369,9 @@ def parse_tool_output(role: str, tool_input: dict) -> tuple[dict | None, str | N
                 k = str(item["option"]).strip().upper()
                 if k in wo:
                     return None, f"why_others 重複選項 {k}"
-                wo[k] = str(item["reason"]).strip()
-            return {"why_correct": str(tool_input["why_correct"]).strip(), "why_others": wo,
-                    "takeaway": str(tool_input["takeaway"]).strip()}, None
+                wo[k] = _clean(item["reason"])
+            return {"why_correct": _clean(tool_input["why_correct"]), "why_others": wo,
+                    "takeaway": _clean(tool_input["takeaway"])}, None
         if role == "blind":
             ans = sorted({str(a).strip().upper() for a in tool_input["answer"]})
             if not ans or any(a not in C.OPTION_LETTERS for a in ans):
@@ -364,7 +382,7 @@ def parse_tool_output(role: str, tool_input: dict) -> tuple[dict | None, str | N
             verdict = str(tool_input["verdict"]).strip()
             if verdict not in VERDICTS:
                 return None, f"verdict 異常 {verdict!r}"
-            return {"verdict": verdict, "reason": str(tool_input["reason"]).strip()}, None
+            return {"verdict": verdict, "reason": _clean(tool_input["reason"])}, None
     except (KeyError, TypeError, ValueError) as e:
         return None, f"工具輸入格式錯誤（{e}）"
     raise KeyError(role)
