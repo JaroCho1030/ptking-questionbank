@@ -652,6 +652,27 @@ def test_include_labels_when_options_interleave_with_images():
     assert include_option_labels(fig, clip, [c]) == clip
 
 
+def test_option_labels_stop_at_next_question():
+    """107-2-TECH-076 第 13 頁：選項圖 D 和代號交錯，圖下方是第 77、78 題 → 不能一行接一行把別題的選項框進來。"""
+    from pipeline.parse import include_option_labels
+    fig = (50, 20, 275, 400)
+    clip = (42, 12, 283, 419)                         # trim_clip 收到第 77 題那行之上
+    lines = [((60, 200, 75, 215), "D."),              # 夾在圖中間的代號 → 交錯模式
+             ((30, 420, 400, 436), "77.一名平背（flat back）的病患"),
+             ((36, 440, 200, 456), "A.胸椎前凸（lordosis）減少"),
+             ((36, 460, 200, 476), "B.髖關節過度伸直"),
+             ((36, 480, 200, 496), "C.腰薦角增加"),
+             ((36, 500, 200, 516), "D.骨盆後傾"),
+             ((30, 520, 400, 536), "78.若由側面觀察站立時骨盆姿勢"),
+             ((36, 540, 200, 556), "A.骨盆前傾會減少腰椎前凸")]
+    assert include_option_labels(fig, clip, lines) == clip
+    # 沒有題號行時，也不越過這題的範圍（下一題題號的 y）
+    assert include_option_labels(fig, clip, [lines[0]] + lines[2:6], y_limits=(0, 418)) == clip
+    # 範圍內的代號照舊框進來（115-2-ORTHO-033 那種）
+    c = ((39.2, 405, 220.7, 416), "C.以搭配四肢動作之越野滑雪機訓練")
+    assert include_option_labels(fig, (42, 12, 283, 404), [lines[0], c], y_limits=(0, 418)) == (38.2, 12, 283, 417)
+
+
 def test_apply_rejudge():
     from pipeline.tag import apply_rejudge
     q = {"topic": "INTRO-MED", "alt_topic": "NEURO-VESTIB", "secondary_topics": ["NEURO-VESTIB", "BASIC-ANA-NEU"],

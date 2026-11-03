@@ -494,11 +494,13 @@ def trim_clip(fig: tuple[float, float, float, float], clip: tuple[float, float, 
 
 _OPTION_LABEL = re.compile(r"^\s*[A-DＡ-Ｄ][\.．]")
 _BARE_LABEL = re.compile(r"^\s*[A-DＡ-Ｄ][\.．]\s*$")
+_QUESTION_NO = re.compile(r"^\s*\d{1,2}[\.．](?!\d)")
 
 
 def include_option_labels(fig: tuple[float, float, float, float], clip: tuple[float, float, float, float],
                           lines: list[tuple[tuple[float, float, float, float], str]], reach: float = 24.0,
-                          gap: float = 1.0) -> tuple[float, float, float, float]:
+                          gap: float = 1.0, y_limits: tuple[float, float] | None = None
+                          ) -> tuple[float, float, float, float]:
     """選項是圖片時，選項代號「A.」要整個框進來（純函式，測試用）。
 
     2026-10-19 人工抽查：9 題的「A.」左半被切掉（留白 8pt 只框到右半），114-2-ORTHO-028 的「B.」
@@ -508,9 +510,18 @@ def include_option_labels(fig: tuple[float, float, float, float], clip: tuple[fl
       有文字的選項行（「A.雙側對稱性…」）是題目選項，仍由 trim_clip 排除；
       但圖範圍「中間」夾著選項行時（115-2-ORTHO-033：每個選項是「A.文字」接一張圖），
       選項和圖交錯排，圖上下緣的選項行也要框進來，否則 A、C 的代號會不見。
+    - 上下放寬不越過這題的範圍（y_limits：本題題號到下一題題號）與圖上下別題的題號行。
+      2026-11-03 實測：107-2-TECH-076 第 13 頁交錯模式把第 77、78 題的選項一行接一行框進來。
     """
     fx0, fy0, fx1, fy1 = fig
     cx0, cy0, cx1, cy1 = clip
+    lo, hi = y_limits if y_limits else (float("-inf"), float("inf"))
+    for (x0, y0, x1, y1), text in lines:
+        if _QUESTION_NO.match(text):
+            if y0 >= fy1:
+                hi = min(hi, y0)
+            elif y1 <= fy0:
+                lo = max(lo, y1)
     interleaved = any(_OPTION_LABEL.match(t) and y0 > fy0 and y1 < fy1 and x1 > cx0 and x0 < cx1
                       and not (min(y1, fy1) - max(y0, fy0) >= 0.5 * (y1 - y0) and (x1 <= fx0 or x0 >= fx1))
                       for (x0, y0, x1, y1), t in lines)
@@ -523,7 +534,8 @@ def include_option_labels(fig: tuple[float, float, float, float], clip: tuple[fl
                 cx0 = min(cx0, x0 - gap)
             if x1 > cx1 and x0 < cx1 + reach:
                 cx1 = max(cx1, x1 + gap)
-        elif (interleaved or _BARE_LABEL.match(text)) and x1 > cx0 - reach and x0 < cx1 + reach:
+        elif ((interleaved or _BARE_LABEL.match(text)) and x1 > cx0 - reach and x0 < cx1 + reach
+              and y0 >= lo and y1 <= hi):
             if y0 >= fy1 and y0 < cy1 + reach:
                 cy1 = max(cy1, y1 + gap)
                 cx0 = min(cx0, x0 - gap)
@@ -595,7 +607,7 @@ def crop_figures(pdf_path: Path, questions: list[dict], out_dir: Path, id_for) -
                               for blk in page.get_text("dict")["blocks"] for ln in blk.get("lines", [])]
                 text_lines = [(b, t) for b, t in text_lines if t.strip()]
                 clip = trim_clip(tuple(u), tuple(padded), [b for b, _ in text_lines])
-                clip = include_option_labels(tuple(u), clip, text_lines)
+                clip = include_option_labels(tuple(u), clip, text_lines, y_limits=(top, bottom))
                 clips.append((pno, fitz.Rect(clip) & page.rect))
 
         if clips:
