@@ -72,26 +72,25 @@
   },
   {
    "id": "115-2-ORTHO-004",
-   "status": "pending",
+   "status": "pass",
    "source": "llm",
    "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "generated_at": "2026-11-03T03:12:08+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "久坐、提重物會加重，站立行走時減輕，還有往下肢放射的麻痛，是典型屈曲誘發型、疑似椎間盤後外側突出的表現。依 McKenzie 的方向偏好（directional preference），站立時重複軀幹後仰（伸展）可以讓症狀減輕，甚至向中心化（centralization）。",
+   "why_correct": "久坐、提重物（屈曲負荷）加重且痛麻延伸到小腿，走路站立時減輕，是典型的屈曲加重型椎間盤病變（disc derangement）。依 McKenzie 力學診斷，重複伸展（後仰）通常能讓症狀減輕或向中心化（centralization）。",
    "why_others": {
-    "A": "重複屈曲會增加椎間盤後方壓力，症狀應該加重或往周邊延伸，不會減輕。",
-    "C": "趴臥讓腰椎處於伸展姿勢，對伸展偏好的人應該減輕疼痛，不會增加。",
-    "D": "仰躺抱膝是屈曲動作，比較適合狹窄症這類伸展誘發的病人，本例應該會加重。"
+    "A": "屈曲會加重椎間盤後方壓力，重複彎腰通常讓疼痛加劇或往周邊延伸。",
+    "C": "趴臥屬於伸展姿勢，伸展偏好的患者趴臥時症狀多半減輕，不會增加。",
+    "D": "抱膝是屈曲動作，適合伸展加重型（如椎管狹窄），這位患者做了反而會加重。"
    },
-   "takeaway": "坐著屈曲加重、站立伸展減輕，代表椎間盤問題、伸展方向偏好，重複後仰可以讓症狀減輕並中心化。",
+   "takeaway": "坐著痛、走路好轉代表屈曲加重的椎間盤問題，適合做伸展，症狀會向中心化。",
    "review": {
-    "blind_answer": null,
-    "blind_confidence": null,
-    "verdict": null,
-    "reason": null,
-    "problems": [
-     "blind: 沒有呼叫工具（stop_reason=max_tokens）"
-    ]
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.88,
+    "verdict": "pass",
+    "reason": "詳解正確判讀為屈曲加重、伸展減輕的椎間盤病變型態，重複後仰可使症狀減輕或向中心化；A、C、D 三個選項的排除理由也都正確，沒有事實錯誤。"
    }
   },
   {

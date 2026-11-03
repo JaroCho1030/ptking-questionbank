@@ -769,50 +769,48 @@
   },
   {
    "id": "115-2-TECH-034",
-   "status": "pending",
+   "status": "pass",
    "source": "llm",
    "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "generated_at": "2026-11-03T03:12:08+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "前臂旋後（supination）正常的終末感覺是緊實的（firm），限制來自掌側橈尺韌帶、骨間膜（interosseous membrane）與旋前肌群的張力，沒有骨頭互相碰觸。所以如果旋後出現硬的終末感覺，代表可能有骨性阻擋，例如骨折癒合不良或骨贅，是異常狀況。",
+   "why_correct": "前臂旋後的正常終末感覺是緊實（firm），來自旋前肌群、骨間膜（interosseous membrane）及遠端橈尺關節韌帶的張力。若旋後出現硬的（hard）骨頭撞擊感，代表可能有骨性阻擋，例如骨折癒合不良或骨贅，所以屬於異常。",
    "why_others": {
-    "A": "肘屈曲通常是軟的；較瘦的人冠狀突抵住冠狀窩，可以出現硬的終末感覺，屬正常。",
-    "B": "肘伸直時鷹嘴突卡進鷹嘴窩，正常就是硬的終末感覺。",
-    "C": "前臂旋前時橈骨跨過尺骨並接觸，正常可以是硬的終末感覺。"
+    "A": "屈曲通常是軟組織擠壓的軟終末感覺；體型瘦的人可能是硬的（冠狀突抵住窩），仍算正常。",
+    "B": "伸直時鷹嘴突卡進鷹嘴窩，正常終末感覺本來就是硬的。",
+    "C": "旋前時橈骨跨在尺骨上互相接觸，硬的終末感覺屬於正常。"
    },
-   "takeaway": "肘伸直、前臂旋前正常可以是硬的；前臂旋後正常是緊實的，出現硬的就是異常。",
+   "takeaway": "肘伸直、前臂旋前正常為硬；肘屈曲多為軟；前臂旋後正常為緊實，出現硬的即屬異常。",
    "review": {
-    "blind_answer": null,
-    "blind_confidence": null,
-    "verdict": null,
-    "reason": null,
-    "problems": [
-     "blind: 沒有呼叫工具（stop_reason=end_turn）"
-    ]
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "詳解跟 Norkin 的資料一致：前臂旋後正常是緊實的終末感覺，出現硬的才算異常；肘屈曲通常是軟的，也可能是硬的；肘伸直和前臂旋前出現硬的都正常。四個選項的說明都沒有錯。"
    }
   },
   {
    "id": "115-2-TECH-035",
-   "status": "pending",
+   "status": "pass",
    "source": "llm",
    "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "generated_at": "2026-11-03T03:12:08+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "膝關節屈曲時，腓腸肌（gastrocnemius）跨越膝、踝兩個關節，會處於縮短而鬆弛的狀態，出現主動不足（active insufficiency），產生的力量變少。這時蹠屈主要由單關節的比目魚肌（soleus）負責，所以屈膝測試的主要目的是測比目魚肌，不是腓腸肌。",
+   "why_correct": "腓腸肌（gastrocnemius）跨過膝關節與踝關節，膝關節屈曲時腓腸肌被縮短，處於主動不足（active insufficiency）狀態，貢獻變小。所以屈膝測蹠屈是為了減少腓腸肌的參與，主要測的是比目魚肌（soleus），不是腓腸肌，C敘述錯誤。",
    "why_others": {
-    "A": "腓腸肌與比目魚肌（合稱小腿三頭肌）是踝蹠屈的主作用肌，敘述正確。",
-    "B": "抗重力等級以單腳站立踮腳尖（heel raise）評估，敘述正確。",
-    "D": "非抗重力測試採俯臥，足踝伸出床外，讓踝能自由蹠屈，敘述正確。"
+    "A": "蹠屈的主要作用肌就是腓腸肌與比目魚肌，敘述正確。",
+    "B": "抗重力測試是單腳站立反覆踮腳尖，用次數評定等級，敘述正確。",
+    "D": "非抗重力測試時採俯臥，足部伸出床外，讓踝關節能自由活動，敘述正確。"
    },
-   "takeaway": "直膝踮腳測腓腸肌，屈膝讓腓腸肌主動不足，改以比目魚肌為主。",
+   "takeaway": "屈膝讓腓腸肌主動不足，可以分離測比目魚肌；伸膝則同時測兩條肌肉。",
    "review": {
-    "blind_answer": null,
-    "blind_confidence": null,
-    "verdict": null,
-    "reason": null,
-    "problems": [
-     "blind: 沒有呼叫工具（stop_reason=end_turn）"
-    ]
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "詳解正確：屈膝時腓腸肌主動不足，測的主要是比目魚肌，所以 C 錯；A、B、D 的說法也都符合 Daniels & Worthingham 的方法。"
    }
   },
   {

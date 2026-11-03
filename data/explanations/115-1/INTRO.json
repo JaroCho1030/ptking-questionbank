@@ -283,31 +283,25 @@
   },
   {
    "id": "115-1-INTRO-013",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
    "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "generated_at": "2026-11-03T03:12:08+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "憑臨床觀察推論療效，病人回想治療前的症狀可能不準，這是回憶偏差（recall bias）；病人期待治療有效，症狀就可能改善，這是安慰劑效應（placebo effect）；有禮貌的病人（polite patients）會為了討好治療師而說自己變好了。這三項都會讓「看起來有效」的印象失真。報告偏差（reporting bias）是研究發表時選擇性報告結果，跟個人臨床觀察無關。",
+   "why_correct": "單憑臨床觀察推論療效，容易被幾個因素誤導：病患對治療前症狀的記憶不準確，屬於回憶偏差（recall bias）；病患因為期待接受治療而覺得改善，屬於安慰劑效應（placebo effect）；病患出於客氣說自己有進步，就是有禮貌的病人（polite patients）。所以②③④都會影響推論。",
    "why_others": {
-    "B": "含報告偏差，這是發表層面的偏差；又漏掉有禮貌的病人。",
-    "C": "含報告偏差，跟臨床觀察無關；又漏掉回憶偏差。",
-    "D": "含報告偏差，跟臨床觀察無關；又漏掉安慰劑效應。"
+    "B": "含①；報告偏差指研究結果被選擇性發表，不是個人臨床觀察的誤差來源。",
+    "C": "含①報告偏差，而且漏了②回憶偏差。",
+    "D": "含①報告偏差，而且漏了③安慰劑效應。"
    },
-   "takeaway": "臨床觀察推論療效的陷阱：回憶偏差、安慰劑效應、病人客套；報告偏差出在研究發表階段。",
+   "takeaway": "臨床觀察常見的誤導來源有：自然恢復、回歸平均值、安慰劑效應、有禮貌的病人、回憶偏差。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.5,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "why_correct 142 字 > 132"
-    ]
+    "verdict": "pass",
+    "reason": "詳解跟實證物理治療教材的說法一致：臨床觀察會被自然恢復、回歸平均值、安慰劑效應、有禮貌的病人、回憶偏差誤導，所以②③④正確。報告偏差指研究結果被選擇性發表，不屬於個人臨床觀察的誤差來源，排除①的理由合理，各選項也都有說明。"
    }
   },
   {
@@ -1116,31 +1110,25 @@
   },
   {
    "id": "115-1-INTRO-048",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
    "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "generated_at": "2026-11-03T03:12:08+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "美國病歷發展協會（Medical Records Institute）把病歷電子化分成五階段：自動化病歷（AMR）、電腦化病歷（CMR）、電子病歷（EMR）、電子病人紀錄（EPR），最後是電子健康紀錄（EHR）。EHR 收錄個人一生的健康資料，除了醫療紀錄，也包含預防保健、生活型態等健康資訊，可以跨機構整合，所以是最終、最完整的階段。",
+   "why_correct": "美國病歷發展協會（Medical Records Institute）把病歷電子化分成五個階段，依序是自動化病歷（AMR）、電腦化病歷（CMR）、電子病歷（EMR）、電子病人紀錄（EPR）、電子健康紀錄（EHR）。EHR 涵蓋個人一生的健康資訊，包括疾病以外的保健資料，也能跨機構整合共享，所以是最終也最理想的階段。",
    "why_others": {
-    "A": "CMR 是第二階段，只把紙本病歷掃描或數位化，還沒有整合。",
-    "C": "EPR 是第四階段，以病人為中心跨院整合，但只限醫療資料。",
-    "D": "EMR 是第三階段，只在單一醫療機構內部電子化與整合。"
+    "A": "CMR是第二階段，只把紙本病歷掃描數位化，仍屬初期。",
+    "C": "EPR是第四階段，以病人為中心跨機構整合，但還不包含完整的健康資訊。",
+    "D": "EMR是第三階段，局限在單一醫療機構內的電子化病歷。"
    },
-   "takeaway": "五階段依序是 AMR→CMR→EMR→EPR→EHR，範圍愈來愈大，最後一階是 EHR。",
+   "takeaway": "五階段依序為AMR→CMR→EMR→EPR→EHR，範圍逐步擴大，最後是EHR。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.9,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "why_correct 133 字 > 132"
-    ]
+    "blind_confidence": 0.93,
+    "verdict": "pass",
+    "reason": "詳解寫的五階段順序 AMR→CMR→EMR→EPR→EHR，和 Medical Records Institute 的分法相符，每個選項的說明也都正確，所以答案 B（EHR）是最終也最理想的階段。"
    }
   },
   {

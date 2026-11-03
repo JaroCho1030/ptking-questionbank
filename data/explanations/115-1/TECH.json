@@ -1273,31 +1273,25 @@
   },
   {
    "id": "115-1-TECH-056",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
    "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "generated_at": "2026-11-03T03:12:08+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "動態關節鬆動術（mobilization with movement, MWM）是Mulligan概念的核心手法。治療師持續施加無痛的副動作滑動，同時由病人主動做生理性動作；到達動作末端時再加壓（overpressure），以增加關節活動度並減輕疼痛。",
+   "why_correct": "動態關節鬆動術（mobilization with movement, MWM）由 Mulligan 提出：治療師維持關節副動作滑動，病人同時主動做原本會痛或受限的生理性動作，到動作末端再加壓（overpressure）。條件是過程中不痛，正好符合題幹描述。",
    "why_others": {
-    "A": "促進式鬆動並不是描述「副動作滑動加上主動生理動作」的標準手法名稱。",
-    "B": "徒手推動術是在動作末端施加高速度、小幅度的推力，不需要病人主動配合動作。",
-    "C": "肌肉能量技術是由病人做等長收縮對抗治療師的阻力，再把關節帶到新的活動範圍，並不施加副動作滑動。"
+    "A": "這不是標準手法名稱，沒有「副動作加主動生理動作再末端加壓」的定義。",
+    "B": "推力手法是治療師做高速、小幅度的推動，病人不參與主動動作。",
+    "C": "肌肉能量技術是病人對抗治療師阻力做等長收縮，並不需要維持關節滑動。"
    },
-   "takeaway": "Mulligan MWM的組成：治療師持續施加副動作滑動，病人做主動生理動作，到末端加壓，全程必須無痛。",
+   "takeaway": "Mulligan MWM：治療師維持副動作滑動，加上病人主動的生理動作，末端再加壓，全程不痛。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.97,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "why_others C 47 字 > 44"
-    ]
+    "verdict": "pass",
+    "reason": "這份詳解可以放心參考。它正確指出 Mulligan 的 MWM 是治療師維持關節副動作滑動、病人同時做主動生理性動作、到末端再加壓，而且過程必須不痛，與題幹描述相符。其他三個選項也都有說明，排除理由合理。"
    }
   },
   {
