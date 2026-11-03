@@ -58,7 +58,13 @@ def _changes(manifest: dict, previous: dict | None) -> list[str]:
             by_session.setdefault((e["roc_year"], e["round"]), []).append(e)
         for (y, r), es in sorted(by_session.items()):
             lines.append(f"新增 {_exam_label(y, r)}試題：{len(es)} 科、{sum(e['question_count'] for e in es):,} 題。")
-    else:
+    # AI 詳解的增減（上一版 manifest 沒有這個欄位就當 0）
+    n_old, n_new = previous.get("explanation_count", 0) or 0, manifest.get("explanation_count", 0) or 0
+    if n_old == 0 and n_new > 0:
+        lines.append(f"新增 AI 詳解：{n_new:,} 題（App 1.1 起可在題目卡片翻面查看）。")
+    elif n_new > n_old:
+        lines.append(f"AI 詳解增加 {n_new - n_old:,} 題，共 {n_new:,} 題。")
+    if not new and not lines:
         lines.append("收錄的考試不變，修正題目內容、答案或主題分類。")
     lines.append(f"上一版：{previous.get('bank_version', '?')}（{previous.get('question_count', 0):,} 題）。")
     return lines

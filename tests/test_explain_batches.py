@@ -111,3 +111,16 @@ def test_iter_explanation_files_skips_batch_state(dirs):
     state.mkdir(parents=True)
     (state / "run-20261103T000000Z.json").write_text("{}", "utf-8")
     assert [(d, s) for d, s, _ in X.iter_explanation_files()] == [("110-1", "NEURO")]
+
+
+def test_release_notes_mention_new_explanations():
+    from pipeline import release_notes as R
+    prev = {"bank_version": "2026.10.19-1", "question_count": 10560, "exams": [{"id": "115-2-NEURO"}]}
+    cur = {"bank_version": "2026.11.03-1", "question_count": 10560, "explanation_count": 5197,
+           "exams": [{"id": "115-2-NEURO", "roc_year": 115, "round": 2, "question_count": 80}]}
+    lines = R._changes(cur, prev)
+    assert lines[0].startswith("新增 AI 詳解：5,197 題") and "收錄的考試不變" not in "".join(lines)
+    more = R._changes({**cur, "explanation_count": 5300}, {**prev, "explanation_count": 5197})
+    assert more[0] == "AI 詳解增加 103 題，共 5,300 題。"
+    same = R._changes({**cur, "explanation_count": 5197}, {**prev, "explanation_count": 5197})
+    assert same[0] == "收錄的考試不變，修正題目內容、答案或主題分類。"
