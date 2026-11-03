@@ -1,0 +1,1884 @@
+{
+ "exam_id": "110-1-CARDPED",
+ "explanations": [
+  {
+   "id": "110-1-CARDPED-001",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "pH 7.6 高於正常，屬鹼血症。PaCO₂ 20 mmHg 明顯偏低，是造成鹼化的原因，而 HCO₃⁻ 25 mEq/L 正常，沒有代謝性變化，故為呼吸性鹼中毒。",
+   "why_others": {
+    "A": "酸中毒時 pH 會偏低且 PaCO₂ 偏高，與本題相反。",
+    "C": "代謝性酸中毒的 HCO₃⁻ 會下降且 pH 偏低，本題都不符。",
+    "D": "代謝性鹼中毒的 HCO₃⁻ 會升高，本題 HCO₃⁻ 正常。"
+   },
+   "takeaway": "先看 pH 判酸鹼，再看 PaCO₂ 與 HCO₃⁻ 哪個與 pH 同向。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "reasoning_error",
+    "reason": "判讀本身正確，但 takeaway 說看 PaCO₂ 與 HCO₃⁻ 哪個「與 pH 同向」有誤：呼吸性異常時 PaCO₂ 與 pH 反向變化（本題 PaCO₂ 低、pH 高），依此口訣反而會誤判。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-002",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "過度換氣會使肺泡氧分壓上升、二氧化碳下降，通常 PaO₂ 正常或偏高，不會造成低血氧，因此是錯誤的敘述。",
+   "why_others": {
+    "A": "通氣灌流比例不均是低血氧的常見原因。",
+    "C": "分流使缺氧血未經氣體交換就進入動脈，會降低 PaO₂。",
+    "D": "肺水腫使肺泡與微血管間氣體擴散受阻，PaO₂ 下降。"
+   },
+   "takeaway": "低血氧的機轉：通氣不足、V/Q 不均、分流、擴散障礙；過度換氣不在其中。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "過度換氣不造成低血氧，其餘選項機轉說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-003",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "健康人在常氧下，休息時血氧飽和度約 95% 以上，運動時因氧合與攜氧能力良好，血氧飽和度大致維持穩定，若明顯下降才需懷疑異常。",
+   "why_others": {
+    "A": "健康人休息時血氧飽和度接近 100%，不會只有 60～80%。",
+    "B": "原本已接近飽和，運動時不會再增加 10%。",
+    "D": "健康人運動時不會下降 10%，下降超過數個百分點即屬異常。"
+   },
+   "takeaway": "健康人運動時血氧飽和度應維持穩定，明顯下降代表異常。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "健康人休息 SpO₂ 約 95% 以上、運動時維持穩定，各選項說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-004",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "氣喘是可逆性氣流阻塞，尖峰呼氣流速（peak expiratory flow rate）可簡便反映氣道阻塞程度，並可居家每日監測，用來評估嚴重度與控制情形。",
+   "why_others": {
+    "A": "肺活量主要反映肺容積，不是氣喘嚴重度的常用指標。",
+    "B": "功能性殘餘容積多用於評估肺過度充氣，不用於日常嚴重度監測。",
+    "D": "吸氣儲備容積與氣道阻塞程度關係不直接。"
+   },
+   "takeaway": "氣喘居家監測嚴重度用尖峰呼氣流速。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "尖峰呼氣流速常用於氣喘嚴重度與居家監測，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-005",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "正中胸骨切開術不切斷胸壁主要呼吸肌群，術後疼痛與胸壁功能受損相對較輕，肺部併發症較其他開胸術式少。",
+   "why_others": {
+    "B": "前外側開胸需切開胸壁肌肉，疼痛與肺部併發症較多。",
+    "C": "側後開胸切斷較多背闊肌、前鋸肌，術後疼痛重、肺併發症高。",
+    "D": "腋下開胸仍需切開胸壁並牽開肋骨，併發症不比胸骨切開低。"
+   },
+   "takeaway": "胸骨正中切開的肺部併發症相對最低。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "正中胸骨切開不切斷主要呼吸肌、疼痛較輕，肺部併發症較開胸術少，說明合理。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-006",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "最大自主通氣量（MVV）是在短時間內盡力快速深呼吸所得的通氣量，反映呼吸肌的耐力與整體通氣能力。",
+   "why_others": {
+    "A": "心肺適能通常以最大攝氧量評估。",
+    "B": "吸氣肌肌力以最大吸氣壓（MIP）評估。",
+    "C": "肺纖維化程度主要看肺活量與擴散功能，不是 MVV。"
+   },
+   "takeaway": "MVV 代表呼吸肌耐力；MIP 代表吸氣肌肌力。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "MVV 反映呼吸肌耐力，其餘指標對應說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-007",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "新生兒肺的彈性回縮力與肺順應性較差，需要較大力氣呼吸，加上胸壁軟、容易凹陷，呼吸做功多而效率較差。",
+   "why_others": {
+    "B": "新生兒胸壁順應性高而非彈性低，且此敘述因果不正確。",
+    "C": "新生兒主要靠橫膈呼吸，副肌協助多是呼吸窘迫的表現，非常態原因。",
+    "D": "出生後肺循環阻力會下降，並非氣體交換困難的主因。"
+   },
+   "takeaway": "新生兒胸壁軟、肺彈性差，呼吸做功多、效率差。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "reasoning_error",
+    "reason": "B 的解釋說「胸壁順應性高而非彈性低」自相矛盾：順應性高即彈性回縮低，兩者是同一件事，未正確說明 B 錯在哪裡。",
+    "fails": [
+     "blind_mismatch",
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-008",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "圖中器材為管狀本體，附可更換不同孔徑的阻力片與吹嘴，是可調整阻力的吸氣阻力訓練器，能漸進增加負荷訓練吸氣肌肌力。",
+   "why_others": {
+    "B": "使呼氣氣流高於吸氣氣流以改變痰液黏滯，是振動式正壓裝置的概念，與此器材不符。",
+    "C": "呼氣時金屬球上升是呼氣正壓或振動裝置的特徵，圖中器材不是。",
+    "D": "吹嘴搭配吸鼻動作並非此器材用途。"
+   },
+   "takeaway": "可換阻力片的吸氣肌訓練器，用來漸進訓練吸氣肌。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "附圖為附多種孔徑阻力片的吸氣阻力訓練器，用於漸進吸氣肌肌力訓練，其餘選項分屬振動正壓或其他裝置，說明合理。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-009",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "氣道重塑使氣道壁增厚、管徑變窄、阻力增加並造成氣體滯留，患者會在較高而非較低的肺容量下呼吸，以撐開氣道，因此 D 不是其變化。",
+   "why_others": {
+    "A": "氣道壁增厚與狹窄使氣道阻力增加。",
+    "B": "管壁增厚是重塑的主要特徵。",
+    "C": "氣體滯留使肺殘餘量上升。"
+   },
+   "takeaway": "氣道重塑：壁增厚、阻力增加、過度充氣，呼吸在較高肺容量。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "氣道重塑造成阻力增加、管壁增厚、氣體滯留，呼吸發生在較高肺容量，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-010",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "肺容積縮減術後輕微漏氣屬常見現象，只要生命徵象穩定，物理治療可照常進行，包括呼吸運動、動機型呼吸儀與早期活動，不需特殊限制。",
+   "why_others": {
+    "A": "不需完全臥床，鼓勵早期下床活動。",
+    "B": "仍可深呼吸及使用動機型呼吸儀，有助肺擴張。",
+    "C": "沒有必須避開手術部位的一般規定，應依醫囑與耐受度進行。"
+   },
+   "takeaway": "LVRS 術後輕微漏氣仍可照常進行胸腔物理治療。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "LVRS 術後輕微漏氣常見，可照常進行胸腔物理治療與早期活動，各選項說明與承認答案一致。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-011",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "休息時動脈血氧分壓低於 55 mmHg 或血氧飽和度低於 88%，屬長期氧療的適應症，此時需供氧。",
+   "why_others": {
+    "A": "室內與睡眠使用的是濃縮氧機，濃縮氧瓶較適合外出攜帶。",
+    "B": "最常見的供氧方式是鼻導管，不是面罩。",
+    "C": "Venturi mask 氧濃度精準但最高約 50% 左右，不如非再吸入面罩（non-rebreathing mask）能提供更高濃度。"
+   },
+   "takeaway": "長期氧療門檻：PaO₂ 低於 55 mmHg 或 SpO₂ 低於 88%。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "PaO₂<55 mmHg 或 SaO₂<88% 為長期氧療適應症；鼻導管最常見、Venturi 濃度不如非再吸入面罩，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-012",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "β2 受器刺激劑（β2 receptor agonists）能使支氣管平滑肌放鬆，是氣喘急性發作時最常用的短效支氣管擴張劑。",
+   "why_others": {
+    "A": "環孢靈是免疫抑制劑，不是支氣管擴張劑。",
+    "B": "鈣離子拮抗劑用於降血壓或心律，不用於氣喘發作。",
+    "C": "血管舒張劑作用在血管，不是支氣管擴張。"
+   },
+   "takeaway": "氣喘發作的急救藥是短效 β2 受器刺激劑。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "β2 刺激劑為氣喘急性發作的支氣管擴張劑，其餘藥物說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-013",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "右側肋骨骨折且右下肺葉浸潤，左側臥使右肺在上有利引流與擴張，在骨折處避免叩擊，改以呼吸運動促進肺擴張與痰液清除最安全。",
+   "why_others": {
+    "A": "叩擊於右下肋骨外側正是骨折附近，會加重傷害。",
+    "B": "叩擊下段後側對病灶可行，但骨折患者疼痛且風險高，不如呼吸運動安全。",
+    "C": "鎖骨上方是上肺葉位置，與右下肺葉病灶不符。"
+   },
+   "takeaway": "肋骨骨折處避免叩擊，用體位加呼吸運動處理肺部浸潤。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "肋骨骨折處避免叩擊、以體位配合呼吸運動處理右下葉浸潤，說明合理。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-014",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "連枷胸有反常呼吸且疼痛，局部呼吸法（segmental breathing）可針對塌陷區域促進擴張，圓唇式呼吸（pursed-lip breathing）可減輕費力、維持氣道開放，兩者較為恰當。",
+   "why_others": {
+    "A": "姿位引流需變換姿勢並可能叩擊，對不穩定胸壁不適合，且動機型呼吸容量儀易引起疼痛。",
+    "B": "姿位引流對連枷胸不適合。",
+    "C": "動機型呼吸容量儀的深吸氣在連枷胸不易執行，且不優先。"
+   },
+   "takeaway": "連枷胸避免叩擊與用力深吸，用局部呼吸與圓唇呼吸。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.35,
+    "verdict": "pass",
+    "reason": "連枷胸不宜姿位引流與叩擊，局部呼吸與圓唇呼吸較恰當，說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-015",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "冠狀動脈需阻塞到相當高的程度（約七成以上）才會在休息時出現心絞痛，阻塞僅 25% 時休息幾乎沒有症狀，因此 C 錯誤。",
+   "why_others": {
+    "A": "心肌供氧取決於冠狀動脈血流與動靜脈氧差，正確。",
+    "B": "心率、收縮力與心壁張力決定心肌耗氧量，正確。",
+    "D": "心肌缺血可表現為心絞痛、心電圖變化或心室功能不全，正確。"
+   },
+   "takeaway": "冠狀動脈要明顯狹窄才在休息時出現症狀。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "reasoning_error",
+    "reason": "答案正確，但說冠狀動脈阻塞約七成以上就會在休息時心絞痛不正確：約 70% 狹窄通常只在用力時出現症狀，休息時心絞痛多見於約 90% 以上的嚴重狹窄。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-016",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "健康成人以 3 mph 的自選速度平地行走，屬中等強度活動，能量消耗約 3 METs 多一些，選項中最接近 3。",
+   "why_others": {
+    "A": "1.5 METs 約相當於坐著或很輕的活動。",
+    "C": "5 METs 約相當於快走或爬坡等較高強度活動。",
+    "D": "6 METs 是更高強度活動，不是 3 mph 平地步行。"
+   },
+   "takeaway": "3 mph 平地走路約 3 METs。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "3 mph 平地步行約 3.3 METs，選項中最接近 3，其餘說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-017",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "心肺移植後心臟去神經，失去迷走神經控制，休息心率反應較正常人偏高。",
+   "why_others": {
+    "A": "移植後肺血管壓力與阻力應比術前下降。",
+    "B": "移植後肺功能改善，動脈血氧分壓應較術前上升。",
+    "C": "去神經後心輸出量與周邊血管阻力反應較正常人遲鈍，不是較多。"
+   },
+   "takeaway": "心移植後去神經：休息心率偏高、運動反應遲緩。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "移植後心臟去神經、休息心率偏高，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-018",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "第二型糖尿病的盛行率隨年齡增加，老年族群盛行率較高而非較低，因此 B 錯誤。",
+   "why_others": {
+    "A": "高三酸甘油脂、低 HDL 是其常見血脂特徵。",
+    "C": "盛行率逐年攀升，正確。",
+    "D": "常與高血壓等代謝症候群成分群聚，正確。"
+   },
+   "takeaway": "第二型糖尿病盛行率隨年齡上升，且與代謝症候群群聚。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "第二型糖尿病盛行率隨年齡上升，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-019",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "ABI 為腳踝收縮壓除以手臂收縮壓，120/140 約為 0.86，低於正常但未達重度，屬輕中度阻塞。",
+   "why_others": {
+    "A": "血管鈣化時 ABI 常會異常偏高（大於 1.3），不是 0.86。",
+    "B": "正常 ABI 約接近或高於 1.0，0.86 已偏低。",
+    "D": "重度阻塞的 ABI 會非常低，遠低於此值。"
+   },
+   "takeaway": "ABI＝踝收縮壓÷臂收縮壓，越低阻塞越重。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "ABI＝120/140≈0.86，屬輕中度阻塞，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-020",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "病歷記錄為使用大隱靜脈（GSV）與左內乳動脈（LIMA）的冠狀動脈繞道手術，傷口除胸骨與胸管外，還包括取血管的下肢傷口，因此「僅包含」錯誤。",
+   "why_others": {
+    "B": "術後需強調深呼吸以預防肺部併發症，正確。",
+    "C": "胸管與傷口限制姿勢，無法採標準姿位引流，正確。",
+    "D": "無併發症時術後第一天即可開始主動關節活動，正確。"
+   },
+   "takeaway": "CABG 傷口包含胸骨、胸管與取血管的下肢處。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "CABG 使用 GSV 有下肢取血管傷口，「僅包含」錯誤，其餘說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-021",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "QT 間隔代表心室去極化到再極化的總時間，不是「過極化」，因此 A 錯誤。",
+   "why_others": {
+    "B": "aVR 導極的波形方向與其他導極相反，T 波倒置屬正常。",
+    "C": "LBBB 可來自傳導組織老化、纖維化、缺氧與心室重塑或肥厚，正確。",
+    "D": "健康成人的竇性心率約為每分鐘 60～100 次，正確。"
+   },
+   "takeaway": "QT 間隔＝心室去極化加再極化，不是過極化。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "QT 為心室去極化至再極化，不是過極化，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-022",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "圖中 V1、V2 的 R 波高且大於 S 波，同時 V5、V6 出現較深的 S 波，是右心室肥厚（right ventricular hypertrophy）的表現。",
+   "why_others": {
+    "B": "左心室肥厚是 V1 深 S、V5/V6 高 R，與圖相反。",
+    "C": "右心房擴大主要表現為 P 波增高，不是 R 波變化。",
+    "D": "左心房擴大主要表現為 P 波增寬或雙峰，與圖不符。"
+   },
+   "takeaway": "V1 的 R 大於 S 要想到右心室肥厚。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "附圖 V1、V2 R>S，V5、V6 S 波深，符合右心室肥厚，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-023",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "圖為胸部 X 光，左上胸可見心律調節器本體與導線，裝置側的肩關節若做舉重物或後伸動作可能牽動導線，因此應避免提重物與左肩向後伸展。",
+   "why_others": {
+    "A": "運動目標心率並非設定心率加 20 下的固定做法。",
+    "C": "此圖不是胸骨切開術，且胸骨癒合期約數週至數月，敘述不適用。",
+    "D": "裝置者經醫師許可後多可開車與從事一般活動，並非一律禁止。"
+   },
+   "takeaway": "心律調節器植入側：避免重物與肩關節極端後伸。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "附圖為左胸心律調節器及導線，裝置側避免提重物與肩後伸，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-024",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "β 交感神經阻斷劑會降低心率及運動時心率反應；非二氫吡啶類鈣離子通道阻斷劑也會降低心率，因此兩者可能影響運動時心率。",
+   "why_others": {
+    "A": "ACE 抑制劑主要影響血壓，對心率影響小。",
+    "B": "ACE 抑制劑不明顯影響心率。",
+    "D": "利尿劑主要影響血容積與電解質，不直接降低心率。"
+   },
+   "takeaway": "影響運動心率：β 阻斷劑與部分鈣離子通道阻斷劑。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "β 阻斷劑與非二氫吡啶類鈣離子通道阻斷劑會影響心率，ACE 抑制劑與利尿劑影響小，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-025",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "有氧訓練後，肌肉攝取與利用氧的能力提升，最大運動時動靜脈氧差（a-vO₂ difference）增加，也使最大攝氧量上升。",
+   "why_others": {
+    "A": "訓練後同樣低限運動時血壓通常降低或不變，不會增加。",
+    "B": "訓練後最大攝氧量應上升。",
+    "D": "訓練後最大運動時每搏輸出量增加，心輸出量上升而非下降。"
+   },
+   "takeaway": "有氧訓練：最大攝氧量、每搏量與動靜脈氧差都增加。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "有氧訓練後最大動靜脈氧差、最大攝氧量與心輸出量增加，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-026",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "運動強度超過無氧閾值後，肌肉無氧代謝增加，乳酸堆積，易造成代謝性酸血症。",
+   "why_others": {
+    "A": "無氧閾值相對較不受動機影響，這是其優點之一。",
+    "B": "靜態生活健康人的無氧閾值通常約在較低百分比，不是 70～80%。",
+    "C": "上肢運動的無氧閾值通常低於下肢。"
+   },
+   "takeaway": "超過無氧閾值，乳酸堆積導致代謝性酸血症。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "超過無氧閾值乳酸堆積致代謝性酸血症；無氧閾值不受動機影響、靜態者約 50～60%、上肢較低，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-027",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "血栓靜脈炎急性期有血栓脫落、造成肺栓塞的風險，患肢應休息制動，不宜給予被動關節運動，因此 A 錯誤。",
+   "why_others": {
+    "B": "急性期將患肢抬高有助靜脈回流，正確。",
+    "C": "後期穩定後可給予阻力運動，正確。",
+    "D": "後期可以對健側肢體給予反射性熱療，正確。"
+   },
+   "takeaway": "血栓靜脈炎急性期患肢制動，避免被動活動。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "急性期患肢不宜被動運動以免血栓脫落，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-028",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "服用乙型阻斷劑會壓抑心率，因此運動強度應以正常服藥下的症狀極限運動測試結果為基礎設定，確保劑量下的心率反應與實際測試一致。",
+   "why_others": {
+    "A": "心率受藥物壓抑，不宜作為主要監測指標，可改用自覺費力度。",
+    "B": "休息收縮壓增加 30 mmHg 不是常用的強度目標。",
+    "D": "心率與舒張壓乘積不是常用監測指標；常用的是心率血壓乘積（收縮壓），且心率仍受藥物壓抑。"
+   },
+   "takeaway": "服用 β 阻斷劑：以服藥下的運動測試設強度，輔以自覺費力度。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "服 β 阻斷劑者應以服藥下的症狀極限測試設定強度，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-029",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "熱中暑（heat stroke）體溫調節失效，核心體溫過高並可能伴隨意識改變與多重器官損傷，致死率高，是熱病中威脅生命最大者。",
+   "why_others": {
+    "B": "熱痙攣是肌肉痙攣，通常不危及生命。",
+    "C": "熱衰竭較輕，經降溫補水多可恢復。",
+    "D": "熱昏厥是姿勢性低血壓造成，危險性較低。"
+   },
+   "takeaway": "熱中暑核心體溫失控，屬醫療急症。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "熱中暑體溫調節失效、致死率最高，其餘熱病說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-030",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "最大運動測試與次大運動測試都可評估心肺適能，最大測試直接測最大攝氧量，次大測試則由次大強度的反應推估。",
+   "why_others": {
+    "A": "各肢體圍徑可用來反映體脂與肌肉分布，能量化脂肪分布。",
+    "C": "握力的測量次數與平均方式敘述不精確，且不是以此直接估算存活率。",
+    "D": "坐姿體前彎主要評估下背與腿後側肌群柔軟度，不是肩與髖關節。"
+   },
+   "takeaway": "心肺適能可用最大或次大運動測試評估。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "最大與次大運動測試皆可評估心肺適能，其餘選項錯誤點說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-031",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "BMI 等於體重（公斤）除以身高（公尺）的平方，95 除以 1.65 的平方約為 34.9。",
+   "why_others": {
+    "A": "28.5 計算結果不符。",
+    "B": "41.6 計算結果不符。",
+    "D": "30.2 計算結果不符。"
+   },
+   "takeaway": "BMI＝體重÷身高²，記得身高用公尺。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "95÷1.65²≈34.9，計算正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-032",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "要達到明顯的減重效果，運動量需逐漸增加到每週中等強度 300 分鐘以上，才能產生足夠能量消耗。",
+   "why_others": {
+    "B": "減重需要的是負向能量平衡，而不是正向。",
+    "C": "阻力運動有助維持與增加肌力，對減重期很重要。",
+    "D": "有氧運動建議每週多天進行，2～3 天不足。"
+   },
+   "takeaway": "減重運動量需逐漸增加到每週中等強度 300 分鐘以上。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "減重需漸進至每週中等強度 300 分鐘以上、負向能量平衡、阻力運動有助益、有氧需每週多天，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-033",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "最大攝氧量 2 L/min 換算為 2000÷70 約 28.6 ml/kg/min，VO₂R＝(28.6−3.5)×0.6＋3.5，約為 18.6 ml/kg/min。",
+   "why_others": {
+    "A": "12.2 未正確換算或漏加安靜攝氧量。",
+    "B": "15.1 漏加安靜攝氧量 3.5。",
+    "C": "17.1 計算結果不符。"
+   },
+   "takeaway": "目標 VO₂＝(VO₂max−3.5)×強度＋3.5。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "VO₂max≈28.6 ml/kg/min，(28.6−3.5)×0.6+3.5≈18.6，計算與錯誤選項說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-034",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "ACSM 建議健康成人為獲得健康益處，每週累積中等強度有氧運動的熱量消耗至少約 1000 kcal。",
+   "why_others": {
+    "A": "500 kcal 低於建議的最低量。",
+    "C": "3500 kcal 高於建議的最低量。",
+    "D": "5000 kcal 高於建議的最低量。"
+   },
+   "takeaway": "每週運動熱量消耗至少約 1000 kcal。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "ACSM 建議每週運動熱量消耗至少約 1000 kcal，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-035",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "孕婦在沒有禁忌症下可運動，但此題在選項中，以輕度運動最安全，並隨孕期調整，故建議輕度運動即可。",
+   "why_others": {
+    "B": "孕婦在無禁忌下可進行阻力運動，不需避免。",
+    "C": "運動時間不需一律限制在半小時內，且沒有影響胎兒的證據。",
+    "D": "懷孕中期之後應避免長時間仰躺，以免壓迫下腔靜脈。"
+   },
+   "takeaway": "孕期運動避免長時間仰躺，強度循序漸進。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.35,
+    "verdict": "answer_disputed",
+    "reason": "ACSM 建議無禁忌症孕婦每週進行中等強度有氧運動，「輕度運動即可」與指引不符，四個選項都沒有明確正確者；詳解只說輕度最安全，沒有引用依據。",
+    "fails": [
+     "answer_disputed"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-036",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "腦性麻痺患者並非不能使用手搖車，只要調整設定，上肢有氧運動仍可作為訓練方式，不是禁忌，因此 C 錯誤。",
+   "why_others": {
+    "A": "固定式腳踏車穩定度高，受傷風險低，正確。",
+    "B": "輕中度患者可依一般健康人的有氧訓練原則進行，正確。",
+    "D": "嚴重者可用短時間、多次累計的方式開始，正確。"
+   },
+   "takeaway": "腦性麻痺可用上肢手搖車有氧訓練，並非禁忌。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "上肢手搖車對腦性麻痺並非禁忌，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-037",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "血小板僅 5000 /mm³ 屬極低，運動易有自發性出血風險，不建議運動。",
+   "why_others": {
+    "A": "白血球 5000 /mm³ 在正常範圍。",
+    "B": "血色素 10.2 g/dL 屬輕度貧血，可在調整下運動。",
+    "D": "白蛋白 3.8 g/dL 接近正常，不是運動禁忌。"
+   },
+   "takeaway": "癌症患者血小板極低時應避免運動。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "血小板 5000/mm³ 極低有出血風險不宜運動，其餘數值說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-038",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "重症患者的肌肉無力與氧化壓力增加、自由基上升有關，而不是下降，因此 D 錯誤。",
+   "why_others": {
+    "A": "臥床過久造成廢用性肌肉萎縮。",
+    "B": "發炎性細胞激素上升促進肌肉蛋白分解。",
+    "C": "營養不良使肌肉流失。"
+   },
+   "takeaway": "重症肌無力：臥床、發炎、營養不良與氧化壓力上升。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "reasoning_error",
+    "reason": "內容正確，但 takeaway 用「重症肌無力」一詞，此為 myasthenia gravis 的專有名稱，與重症患者肌無力（ICU-acquired weakness）不同，會誤導考生。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-039",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "食道中段癌的傳統術式常採右側開胸與腹部切口，再於頸部吻合，不需切開胸骨，因此胸骨不會有傷口。",
+   "why_others": {
+    "A": "食道與胃吻合常在下頸部做切口。",
+    "B": "傳統術式經胸部側後方開胸以切除食道。",
+    "D": "胃部分切除與空腸造口需要腹部切口。"
+   },
+   "takeaway": "傳統食道切除術為胸、腹與頸三處切口，不切胸骨。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "傳統食道切除為右胸側後開胸、腹部及頸部切口，不切胸骨，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-040",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "食道術後吻合處需保護，鼻胃管的主要功能是引流胃部內容物，使胃減壓，避免脹氣與逆流，減輕吻合處壓力。",
+   "why_others": {
+    "A": "術後初期禁食，不從鼻胃管灌食牛奶，營養多由空腸造口提供。",
+    "C": "鼻胃管不是用來壓迫食道。",
+    "D": "初期不經鼻胃管補水或給口服藥。"
+   },
+   "takeaway": "食道術後鼻胃管用來胃減壓、保護吻合處。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "術後鼻胃管主要用於胃減壓引流、保護吻合處，營養由空腸造口提供，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-041",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "剛學步的幼兒步態尚不成熟，步寬相對較寬，骨盆寬度與兩腳間寬度的比值（pelvic span/ankle spread ratio）約為1.5，隨經驗增加才逐漸接近成人。",
+   "why_others": {
+    "A": "剛學步多為全足或前足著地，不是腳跟先著地。",
+    "B": "學步初期單腳站立期較短，低於成人的約40%。",
+    "C": "剛學步時手臂多高舉防衛，尚無成人式擺盪。"
+   },
+   "takeaway": "剛學步：寬基底、手高舉、全足著地、站立期短。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "初學步寬基底、手高舉、全足著地、單腳站立期較短，各選項說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-042",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "新生兒視力發展未成熟，最清楚的視距約在二、三十公分，8公分太近，無法看清楚。",
+   "why_others": {
+    "B": "新生兒已能分辨聲音頻率高低。",
+    "C": "新生兒可憑氣味分辨母親與他人。",
+    "D": "懸空倒立（vertical suspension）出現伸直張力屬正常反應。"
+   },
+   "takeaway": "新生兒視力最佳焦距約二、三十公分，太近反而模糊。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "新生兒最佳視距約20–30公分，其餘感覺能力敘述正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-043",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "特別喜歡旋轉、尋求前庭刺激，是前庭感覺反應不足（hyporesponsive）的表現；反應過度者反而害怕動作與姿勢改變。",
+   "why_others": {
+    "A": "雙側肢體協調困難歸為運用能力障礙，敘述成立。",
+    "B": "害怕姿勢改變屬重力不安全感，敘述成立。",
+    "C": "逃避碰觸屬觸覺防禦（tactile defensiveness），敘述成立。"
+   },
+   "takeaway": "愛旋轉是前庭反應不足；害怕動才是反應過度。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "尋求旋轉屬前庭反應不足，其餘分類說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-044",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "活動與參與成分談的是兒童實際執行任務與投入生活情境的困難；動作不協調使其在體育課球類競技活動受限，正屬此成分。",
+   "why_others": {
+    "A": "肌肉張力與動作控制屬身體功能與構造層次。",
+    "B": "體適能隨年齡變差屬身體功能層次，且說法過於絕對。",
+    "D": "家人態度與理解屬環境因素。"
+   },
+   "takeaway": "ICF：先分清功能構造、活動參與、環境因素。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "ICF各成分歸類正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-045",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "家庭為中心的早期療育強調依家庭需求與生活情境彈性安排，不限於居家，也可在機構、托育或社區等地點進行。",
+   "why_others": {
+    "B": "尊重選擇權之餘，治療師仍應提供專業建議供家長決定。",
+    "C": "家庭互動是了解家庭需求的重要資訊，應納入評估。",
+    "D": "應依各家庭的文化、信仰與需求個別化。"
+   },
+   "takeaway": "家庭中心：合作、個別化、地點彈性。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "家庭中心療育地點彈性、仍給建議、重視家庭互動、個別化，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-046",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "轉頭向下尋找掉落不見的玩具需具備物體永久性（object permanence）概念，6個月嬰兒尚未成熟，屬相對困難項目。",
+   "why_others": {
+    "A": "6個月俯臥時伸臂撐起、頭部自由轉動是常見能力。",
+    "B": "6個月已能單手伸出碰觸眼前玩具。",
+    "D": "維持目光對視、被逗笑屬較早出現的社會互動。"
+   },
+   "takeaway": "物體永久性約在6個月之後才逐步建立。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "尋找掉落玩具涉及物體恆存概念，6個月相對困難，其餘為6個月內常見能力。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-047",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "嬰兒期先出現規律刻板動作，如晃動與擺腳；幼兒期出現攀爬追跑等運動類遊戲；較大兒童才有同儕間的狂野嬉鬧遊戲。",
+   "why_others": {
+    "A": "把運動類遊戲放最前面，順序錯誤。",
+    "C": "把狂野嬉鬧放在規律刻板動作之前，順序錯誤。",
+    "D": "狂野嬉鬧遊戲晚於運動類遊戲，順序錯誤。"
+   },
+   "takeaway": "身體遊戲：規律刻板 → 運動類 → 狂野嬉鬧。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "規律刻板→運動類→狂野嬉鬧的發展順序正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-048",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "認知年齡約3歲的兒童正進入象徵性遊戲階段，扮家家酒（pretend play）最符合其認知程度，也適合居家融入日常活動。",
+   "why_others": {
+    "A": "反覆搖鈴鐺屬嬰兒期感覺動作遊戲，層次過低。",
+    "C": "抓丟玩具入盒屬較早期的操弄遊戲，層次偏低。",
+    "D": "下棋需規則與策略，超過3歲認知程度。"
+   },
+   "takeaway": "遊戲活動要配合認知年齡，3歲為象徵遊戲。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "3歲進入象徵遊戲，扮家家酒最適合，其餘層次說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-049",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "貝萊氏嬰幼兒發展量表第三版（Bayley-III）含認知量表，適用於嬰幼兒及發展遲緩者，可評估3歲智能障礙兒童的認知發展。",
+   "why_others": {
+    "A": "皮巴迪量表（PDMS-2）主要評估動作發展。",
+    "B": "BOT-2 評估動作精練度，且適用年齡較大。",
+    "D": "簡易兒童發展量表是篩檢工具，無法詳細評估認知。"
+   },
+   "takeaway": "評估幼兒認知發展：選Bayley，不選動作量表。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "Bayley-III含認知量表適用至42個月，其餘量表性質說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-050",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "動作發展順序：先能自行由坐到站，再拖著玩具倒走，接著跑步，最晚才是雙腳連續向前跳。",
+   "why_others": {
+    "A": "把跳與跑排前面，順序顛倒。",
+    "B": "雙腳連跳不可能最早出現。",
+    "D": "倒走早於跑，但坐到站更早，順序不符。"
+   },
+   "takeaway": "坐到站 → 倒走 → 跑 → 雙腳連跳。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "坐到站→拖玩具倒走→跑→雙腳連跳的順序正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-051",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "費茲（Fitts）的動作學習三階段為認知階段、聯結階段與自動化階段，沒有「新手階段」。",
+   "why_others": {
+    "A": "聯結階段是三階段之一。",
+    "B": "認知階段是三階段之一。",
+    "D": "自動化階段是三階段之一。"
+   },
+   "takeaway": "Fitts：認知、聯結、自動化。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "Fitts三階段為認知、聯結、自動化，無新手階段。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-052",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "兒童教導量表（NCATS）是由施測者觀察親子互動教導情境來評分的工具，可用於臨床或居家環境中評估親子互動。",
+   "why_others": {
+    "B": "家長面向的分量表不只2個。",
+    "C": "嬰幼兒面向分量表不是3個。",
+    "D": "須由受訓人員觀察計分，非家長自填。"
+   },
+   "takeaway": "NCATS：觀察式親子互動評估，非自填。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "NCATS為觀察式評估，家長分量表4個、兒童2個，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-053",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "口腔周圍誘發性觸摸可能增加高張力嬰兒的整體張力與反射反應，多用於低張力或口腔反應不足的嬰兒，所以此敘述錯誤。",
+   "why_others": {
+    "A": "吸吮評估包含這些項目，敘述正確。",
+    "B": "嘔吐反射由舌後方、喉部或軟顎刺激引發，敘述正確。",
+    "D": "吸吮力弱者用奶瓶較省力，敘述正確。"
+   },
+   "takeaway": "口腔觸摸刺激不適合高張力嬰兒。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "口周誘發性觸摸用於低張力或反應不足者，其餘敘述正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-054",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "BPD 嚴重度依用氧時間與濃度分級，評估介入都要依呼吸功能調整；表面張力素不足造成肺膨脹不全，與 BPD 病程相關。",
+   "why_others": {
+    "A": "①錯，出生體重越低發生率越高。",
+    "B": "含①，且漏掉②。",
+    "C": "含①，且漏掉③。"
+   },
+   "takeaway": "BPD：體重越輕越常見，以用氧定嚴重度。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "BPD與出生體重相關，②③④成立，各選項分析正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-055",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "核磁共振對瀰漫性腦室周圍白質軟化（PVL）的白質損傷最敏感，可確認診斷。",
+   "why_others": {
+    "A": "腦部超音波較易看到囊腫型，對瀰漫性病灶不敏感。",
+    "B": "腦波反映腦電活動，不能顯示白質結構。",
+    "D": "聽覺電位用於評估聽力與腦幹傳導。"
+   },
+   "takeaway": "瀰漫性 PVL 確認靠 MRI，超音波僅初篩。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "MRI對瀰漫性PVL最敏感，超音波主要偵測囊腫型。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-056",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "痙攣型腦性麻痺兒童接受適當的肌力訓練，不會使痙攣增加，這是肌力訓練的常見疑慮，並無證據支持。",
+   "why_others": {
+    "A": "肌力不足的肌群正是肌力訓練的對象。",
+    "B": "足夠頻率的阻力訓練較能提升肌力。",
+    "C": "跑步機可作為肌力訓練方式。"
+   },
+   "takeaway": "CP 肌力訓練不會加重痙攣。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "證據顯示肌力訓練不增加痙攣，其餘敘述正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-057",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "飲食能力分類（EDACS）階級二指可安全飲食但效率降低，只需協助舀食物或穩定水杯。",
+   "why_others": {
+    "B": "階級三安全性已有受限。",
+    "C": "階級四安全性明顯受限，不屬此程度。",
+    "D": "階級五無法安全飲食，並非獨立。"
+   },
+   "takeaway": "EDACS II：安全但效率降低。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "EDACS第二級為安全但效率受限，各級說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-058",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "3歲後才能獨坐的腦性麻痺兒童，日後行走功能預後較差，即使會走多半需輔具協助。",
+   "why_others": {
+    "A": "半邊麻痺獨立行走比例通常高於雙邊麻痺。",
+    "B": "3歲前能獨坐者行走預後佳，但並非不受任何限制。",
+    "C": "徐動型多數3歲時尚不能獨立行走。"
+   },
+   "takeaway": "獨坐時間可預測 CP 日後行走功能。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "3歲後才獨坐者行走預後差多需輔具，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-059",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "自閉症診斷條件包含侷限、重複的行為與興趣，如堅持同樣事物、固著與儀式化行為。",
+   "why_others": {
+    "A": "低張力與扁平足屬肌肉骨骼表現，不是診斷條件。",
+    "B": "自閉症興趣通常狹隘侷限，而非廣泛。",
+    "C": "會對視與指物互動屬正常社交，不符診斷條件。"
+   },
+   "takeaway": "ASD 核心：社交溝通缺損 + 侷限重複行為。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "侷限重複行為屬ASD診斷條件，其餘說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-060",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "ASD 的核心問題是社交溝通，使兒童難以與同儕建立合作互動關係，在團體中孤立，是學校參與的限制因素。",
+   "why_others": {
+    "A": "下肢動作控制異常並非 ASD 核心問題。",
+    "B": "助行器相關限制不是 ASD 的典型問題。",
+    "D": "衝突與衝動並非其核心特徵，不是最主要因素。"
+   },
+   "takeaway": "ASD 參與限制多源於社交溝通。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "社交溝通困難為ASD學校參與的核心限制，其餘說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-061",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "ASD 兒童的選擇性動作控制通常並無明顯缺損；其動作問題多在姿勢控制、模仿、運用能力與體適能。",
+   "why_others": {
+    "A": "預期性姿勢調整不佳在 ASD 常見。",
+    "C": "模仿新手勢困難是 ASD 常見表現。",
+    "D": "活動量低，心肺耐力常不佳。"
+   },
+   "takeaway": "ASD 動作問題：運用、模仿、姿勢，非選擇性控制。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "選擇性動作控制缺損屬CP等上運動神經元問題，非ASD典型，其餘說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-062",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "動作結合知覺學習能提高智能障礙兒童的學習動機，也能增進動作控制能力，是促進動作發展的重要原則。",
+   "why_others": {
+    "B": "動作發展並非只由神經成熟驅動，也受環境與任務影響。",
+    "C": "心肺功能差且低張力者俯臥姿呼吸費力，不宜先從俯臥開始。",
+    "D": "限速因素與嬰兒體型、身體比例有關。"
+   },
+   "takeaway": "動作與知覺結合學習較有效。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "動作結合知覺學習原則正確，B、C、D錯誤原因說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-063",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "生產過程異常（abnormal delivery）發生在分娩時，屬於週產期（perinatal）病因。",
+   "why_others": {
+    "B": "唐氏症為染色體異常，屬產前病因。",
+    "C": "普瑞德威利症候群為基因疾患，屬產前病因。",
+    "D": "腦炎多發生於出生後，屬產後病因。"
+   },
+   "takeaway": "智障病因依時間分產前、週產期、產後。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "生產異常屬週產期，其餘分屬產前與產後病因。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-064",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "唐氏症兒童智能障礙程度不一，大多為輕度至中度，並非大多數為重度。",
+   "why_others": {
+    "A": "韌帶鬆弛是常見表現，敘述正確。",
+    "B": "部分合併先天性心臟病，敘述正確。",
+    "C": "唐氏症是第21對染色體異常，敘述正確。"
+   },
+   "takeaway": "唐氏症：21號染色體、韌帶鬆弛、智障多輕中度。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "唐氏症智障多為輕至中度，其餘敘述正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-065",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "DSM-5 以適應功能判定智能障礙嚴重度，文蘭適應性行為量表（Vineland）評估日常生活、社會責任與獨立能力。",
+   "why_others": {
+    "A": "比西量表測智力，不是適應功能。",
+    "B": "嬰幼兒綜合發展測驗評估發展，不是適應功能。",
+    "C": "魏氏兒童智力測驗測智力，不是適應功能。"
+   },
+   "takeaway": "智障嚴重度看適應功能：Vineland。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "DSM-5以適應功能判定嚴重度，Vineland評估適應行為。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-066",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "腦部出血的外傷後，可能因疤痕或損傷造成腦部放電異常，數個月後突然失去意識、抽搐合併腦波異常，最常見的就是癲癇（epilepsy）。",
+   "why_others": {
+    "A": "自主神經功能異常不會出現此典型表現。",
+    "B": "水腦主要表現為頭圍增大與顱內壓上升。",
+    "C": "感染會伴隨發燒等症狀，並非最常見原因。"
+   },
+   "takeaway": "腦傷後抽搐加腦波異常：想到外傷後癲癇。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "腦傷後數月抽搐合併腦波異常最常見為外傷後癲癇。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-067",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "預後的重要指標是患側肘屈曲（二頭肌）能否在早期恢復，而非能否主動伸直肘關節。",
+   "why_others": {
+    "A": "合併 Horner 症候群代表下臂叢損傷嚴重，預後較差。",
+    "B": "歐勃氏麻痺是最常見類型。",
+    "C": "肌腱轉移多用來協助肩外轉，敘述正確。"
+   },
+   "takeaway": "臂叢損傷預後看肘屈曲恢復。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "預後指標為早期二頭肌（肘屈曲）恢復，其餘敘述正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-068",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "開刀前即可評估四肢關節活動度，提早掌握肢體狀況，且不接觸背部囊腫。",
+   "why_others": {
+    "B": "術後須避免壓迫傷口，多採俯臥或側臥。",
+    "C": "水腦術後應待狀況穩定，並非立即加強肌力。",
+    "D": "不宜用尖銳物，可能傷害無感覺處皮膚。"
+   },
+   "takeaway": "脊柱裂術前可先做 ROM 評估。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "術前可評估ROM，術後俯臥或側臥、水腦術後不立即加強肌力、不用尖銳物，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-069",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "Vignos 分類第3級仍可扶欄杆爬樓梯，只是較慢，需到更高級別才無法爬樓梯。",
+   "why_others": {
+    "A": "DMD 常合併心肺功能問題，評估應納入。",
+    "C": "上肢分類第3級以上手無法抬高過頭，敘述成立。",
+    "D": "高爾氏症狀反映近端髖伸直肌無力，敘述成立。"
+   },
+   "takeaway": "Vignos 3級仍可扶欄爬樓梯。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "Vignos第3級仍可扶欄緩慢爬樓梯，第4級才不能，其餘敘述正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-070",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "肢體拉長手術與治療過程對肌肉牽拉較大，較容易使肌力下降；縮短手術則較不易。",
+   "why_others": {
+    "A": "差距達此程度以上才考慮手術，敘述成立。",
+    "B": "骨骼成熟度影響治療選擇，敘述成立。",
+    "D": "拉長術後復健可長達一年，敘述成立。"
+   },
+   "takeaway": "肢體拉長術較易影響肌力。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "拉長術較易造成肌力下降，其餘敘述正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-071",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "姿勢性跟骨外翻（calcaneovalgus）表現為後足外翻合併踝關節過度背曲，足背可貼近小腿前側。",
+   "why_others": {
+    "A": "後足外翻才是特徵，且踝為背曲而非蹠曲。",
+    "B": "外翻部位為後足，不是前足掌。",
+    "C": "踝關節是過度背曲，不是蹠曲。"
+   },
+   "takeaway": "跟骨外翻：後足外翻 + 踝背曲。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "跟骨外翻為後足外翻合併踝過度背屈，說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-072",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "先天性肌性斜頸多與子宮內擁擠姿勢壓迫有關，屬於產前變形（prenatal deformation）。",
+   "why_others": {
+    "A": "變形多由外在機械力引起，內因性則多屬原發性。",
+    "C": "蹠骨內收多與子宮內姿勢有關，非肌張力異常。",
+    "D": "杵狀足是踝背屈受限，而非蹠屈受限。"
+   },
+   "takeaway": "子宮內擁擠造成的是變形，如斜頸。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "reasoning_error",
+    "reason": "A的說明稱內因性變形多屬原發性有誤，內因性變形（如神經肌肉疾病所致）通常是次發於其他原發問題，詳解對A錯在何處的推理不正確。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-073",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "青少年期隨年齡增加，呼吸肌力增強，最大呼氣壓力是逐漸上升而非下降。",
+   "why_others": {
+    "A": "此呼吸速率範圍與青少年相符。",
+    "B": "咳嗽尖峰流量達此值以上屬正常。",
+    "D": "吸氣時胸廓向上提升並向兩側擴展，敘述正確。"
+   },
+   "takeaway": "青少年呼吸肌力隨年齡增加。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "青少年呼吸肌力與最大呼氣壓隨年齡增加，其餘敘述合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-074",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "新生兒肺張不全（atelectasis）可因肺結構不成熟而肺泡易塌陷、氣道阻塞，或局部肺葉氣腫壓迫鄰近肺組織而造成。",
+   "why_others": {
+    "A": "③肺動脈血氧不足並非病因，且漏掉④。",
+    "C": "③並非病因，且漏掉②。",
+    "D": "③並非病因，且漏掉①。"
+   },
+   "takeaway": "肺張不全：肺不成熟、氣道阻塞、氣腫壓迫。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "肺不成熟、氣道阻塞、局部肺葉氣腫壓迫可致肺張不全，各組合分析正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-075",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "父母的養育態度會影響兒童日常活動量，而活動量與健康體適能有關，所以此敘述正確。",
+   "why_others": {
+    "A": "動作敏捷度屬技能體適能，不是健康體適能核心項目。",
+    "B": "此測驗反映下背與膕旁肌柔軟度，敘述不精確。",
+    "C": "評估心肺耐力的最佳指標是最大攝氧量，不是心跳數。"
+   },
+   "takeaway": "健康體適能：心肺、肌力耐力、柔軟度、身體組成。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "父母態度影響活動量與體適能，其餘選項錯誤原因說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-076",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "建議是每週至少三天從事激烈活動，不必連續三天，所以「連續」這個敘述錯誤。",
+   "why_others": {
+    "A": "每日至少60分鐘中度到激烈活動，敘述正確。",
+    "C": "身體活動應涵蓋這些類型，敘述正確。",
+    "D": "減少靜態活動時間是建議，敘述正確。"
+   },
+   "takeaway": "兒童每日60分鐘活動，激烈每週至少三天。",
+   "review": {
+    "blind_answer": [
+     "B",
+     "C"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "answer_disputed",
+    "reason": "美國HHS兒少活動指引只含有氧、肌力強化與骨骼強化活動，未列柔軟度運動，C亦為錯誤敘述，本題有兩個答案，詳解稱C正確亦有誤。",
+    "fails": [
+     "blind_mismatch",
+     "answer_disputed"
+    ]
+   }
+  },
+  {
+   "id": "110-1-CARDPED-077",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "能獨立由教室座位使用助行器走到廁所，具體描述日常生活情境中的功能表現，屬日常生活相關的功能性目標。",
+   "why_others": {
+    "A": "行走速度是功能測驗數據，未連結日常活動。",
+    "B": "量表分數是評估結果，不是日常功能目標。",
+    "D": "步態接近正常屬動作品質，未必連結日常功能。"
+   },
+   "takeaway": "功能性目標：具體情境、可達成、與日常相關。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "具體日常情境的功能表現才是功能性目標，其餘說明正確。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-078",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "發展商數反映與一般發展常模的比較，對重度肢體障礙兒童難以反映進步，不適合做個別化成效指標。",
+   "why_others": {
+    "A": "日常作息參與程度能反映實際生活成效，適合。",
+    "B": "照護困難程度反映功能性成效，適合。",
+    "D": "有環境支持與輔具時的功能表現更貼近實際，適合。"
+   },
+   "takeaway": "重度障礙兒童成效重參與與照護，不重發展商數。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "常模比較的發展商數難以反映重度障礙兒童的個別進步，其餘說明合理。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-079",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "以行走緩慢為由不讓學童參加活動，是因障礙而被排除，違反兒童權利公約中的禁止歧視原則。",
+   "why_others": {
+    "A": "此情況與生命權無關。",
+    "C": "維護身分權指姓名與國籍等身分，與本題無關。",
+    "D": "此情況與隱私權無關。"
+   },
+   "takeaway": "因障礙被排除參與，違反禁止歧視。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "因障礙被排除參與屬違反禁止歧視原則。"
+   }
+  },
+  {
+   "id": "110-1-CARDPED-080",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "融合教育中以諮詢／間接服務方式，由專業人員提供教師與家長建議，並將介入融入課堂日常，最被推薦。",
+   "why_others": {
+    "B": "小組教學方式不如諮詢間接服務被推薦。",
+    "C": "助理服務方式不如諮詢間接服務被推薦。",
+    "D": "部分隔離較不符合融合精神。"
+   },
+   "takeaway": "融合教育最推薦諮詢／間接服務。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "融合教育最推薦諮詢／間接服務，說明合理。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  }
+ ]
+}

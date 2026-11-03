@@ -1,0 +1,1867 @@
+{
+ "exam_id": "112-2-NEURO",
+ "explanations": [
+  {
+   "id": "112-2-NEURO-001",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "前庭脊髓徑起自腦幹的前庭核，神經元本體在腦幹，軸突下行到脊髓，是由腦幹發出的下行路徑，屬於上運動神經元（upper motor neuron）。",
+   "why_others": {
+    "A": "上運動神經元也可起自腦幹，不是全在大腦皮質。",
+    "B": "下運動神經元還包括腦幹的顱神經運動核，不是全在脊髓腹側角。",
+    "D": "腦幹顱神經運動核的神經元直接支配肌肉，屬於下運動神經元。"
+   },
+   "takeaway": "上運動神經元可在皮質或腦幹；顱神經運動核屬下運動神經元。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "前庭脊髓徑起自腦幹屬上運動神經元、顱神經運動核屬下運動神經元，各選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-002",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "決策與動作規劃主要由前額葉、頂葉、基底核等高階區域參與；主要動作皮質區（primary motor cortex）負責把規劃好的指令送往下行路徑，偏向執行，與規劃最無關。",
+   "why_others": {
+    "A": "基底核參與動作選擇與啟動，與決策規劃有關。",
+    "B": "前額葉負責決策、計畫與執行功能，與規劃密切相關。",
+    "C": "頂葉整合感覺與空間資訊，參與動作規劃。"
+   },
+   "takeaway": "規劃在高階區，主要動作皮質區偏執行輸出。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "主要動作皮質偏執行輸出，基底核、前額葉、頂葉皆參與決策規劃，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-003",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "比較動作意圖與實際結果、幫助動作修正的比較器功能，主要是小腦的角色；基底核主要負責動作的選擇、啟動與調節，因此敘述錯誤。",
+   "why_others": {
+    "B": "基底核屬於高階動作控制區，敘述正確。",
+    "C": "多巴胺經 D1 受器興奮直接路徑，使動作容易啟動，敘述正確。",
+    "D": "基底核輸出（蒼白球內側部）對視丘是抑制性（GABA），敘述正確。"
+   },
+   "takeaway": "比較器與錯誤修正是小腦；基底核管動作選擇與啟動。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "比較器功能屬小腦，多巴胺經D1興奮直接路徑、基底核輸出對視丘為抑制，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-004",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "動作已達自動化期（autonomous stage）時，所需注意力資源很少，才有餘力同時處理另一項任務，因此雙重任務訓練最適合在此階段使用。",
+   "why_others": {
+    "A": "進階期不是此理論的標準三階段，也不是雙重任務的適用階段。",
+    "B": "認知期需大量注意力理解動作，加上第二任務會干擾學習。",
+    "C": "連結期動作仍需注意力調整，尚不適合加入雙重任務。"
+   },
+   "takeaway": "雙重任務要在動作自動化之後才加。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "自動化期注意力需求低，適合加入雙重任務，其他階段說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-005",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "段落練習（blocked practice）是把一項任務連續練完，再換下一項。此安排依序各做 10 分鐘，每項任務自成一段，故屬段落練習。",
+   "why_others": {
+    "A": "隨機練習是不同任務順序隨機穿插，此題並非如此。",
+    "C": "固定練習是在不變的環境下重複同一動作，此題任務不同。",
+    "D": "變異練習是同一類動作的參數有變化，此題是不同任務依序進行。"
+   },
+   "takeaway": "一項練完再換下一項是段落練習，穿插則為隨機練習。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "各任務連續練完再換下一項為段落練習，其他練習型態說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-006",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "基模理論中，再認基模（recognition schema）儲存預期的感覺後果，用來評估動作結果是否正確，進而偵測錯誤並調整。",
+   "why_others": {
+    "A": "召還基模負責產生動作的參數與選擇動作，不是評估感覺後果。",
+    "C": "動作基模不是此理論中特定用來評估感覺後果的記憶結構。",
+    "D": "記憶痕跡用於啟動動作與選擇方向，屬開放迴路，不評估感覺後果。"
+   },
+   "takeaway": "召還基模產生動作，再認基模評估結果。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "再認基模評估感覺後果、召還基模產生動作參數，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-007",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "動作由有意識的學習轉為自動化後，主要依賴基底核與小腦等程序性記憶網絡，因此基底核的活化會明顯增加。",
+   "why_others": {
+    "A": "海馬迴與外顯記憶有關，自動化後依賴降低。",
+    "C": "前額葉在早期認知階段較活躍，自動化後活化通常減少。",
+    "D": "杏仁核主要處理情緒與恐懼，與動作自動化無關。"
+   },
+   "takeaway": "動作自動化對應基底核與小腦；前額葉活化減少。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "動作自動化後依賴基底核等程序性記憶網絡，前額葉活化下降，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-008",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "截肢後失去輸入的食指皮質區會被鄰近區域侵入，體感皮質上食指區的鄰近是拇指，碰觸同側拇指時會誘發食指的幻覺感。",
+   "why_others": {
+    "B": "右手拇指由對側（左）半球皮質代表，不會侵入右半球的左食指區。",
+    "C": "大腿在體感皮質的位置離手指區很遠，不易侵入。",
+    "D": "軀幹在皮質代表區與手指區不相鄰。"
+   },
+   "takeaway": "截肢後皮質重組由鄰近代表區侵入，食指鄰近拇指。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "左食指區位於右半球，鄰近同側拇指代表區，各選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-009",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "失能評估量表（disability rating scale）涵蓋意識、功能、就業等面向，其中包含社會參與層面的評估，因此屬於社會參與面向。",
+   "why_others": {
+    "A": "瑞秋洛斯阿米哥斯量表評估認知與行為功能，屬身體功能層面。",
+    "B": "動態步態指標評估步行與平衡，屬活動層面。",
+    "D": "葛拉斯哥昏迷量表評估意識程度，屬身體功能層面。"
+   },
+   "takeaway": "DRS 含就業與社會功能，涵蓋參與面向。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "DRS含就業能力等參與面向，其他量表屬身體功能或活動層面，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-010",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "第 5、7 對腦神經檢查是評估神經的感覺與運動功能，屬於身體構造與功能（body structures and functions）層面的損傷評估。",
+   "why_others": {
+    "B": "個人因素是年齡、性別、生活經歷等背景，不是神經檢查。",
+    "C": "活動與參與是評估執行任務或社會角色，腦神經檢查不屬此類。",
+    "D": "環境因素是輔具、居家與社會環境等，與檢查無關。"
+   },
+   "takeaway": "神經功能檢查屬身體功能；執行任務屬活動。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "腦神經檢查屬身體構造與功能層面，其他ICF層面說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-011",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "67b39cc7f906",
+   "why_correct": "由易到難應先做小幅度的骨盆前後傾，再逐步加大重心位移或雙上肢動作，最後做需整合上肢與軀幹的上舉與下砍。選項 B 與 C 的中間兩項次序都可接受，皆承認。",
+   "why_others": {
+    "A": "上舉下砍最難，不應排在最前面。",
+    "D": "先做左右重心位移再做骨盆前後傾，起始難度偏高。"
+   },
+   "takeaway": "由小幅度軀幹動作，漸進到上肢與軀幹整合動作。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "更正為B、C皆給分，詳解說明兩者中間次序皆可接受、A與D起始難度不當，合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-012",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "推者症候群（pusher syndrome）病人會向患側推，對垂直感知錯誤。往健側外側懸吊點方向推，可讓病人在非患側練習動態重心位移，並漸進修正姿勢，是適當的活動設計。",
+   "why_others": {
+    "B": "由患側躺坐起容易加重推向患側，且病人缺乏正中概念。",
+    "C": "僅在兩側肩關節給節律穩定，未處理推的行為與重心位移。",
+    "D": "健側靠牆會強化推向患側的錯誤感知，鏡子也不足以矯正。"
+   },
+   "takeaway": "推者症候群要引導重心往健側位移，修正垂直感。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "reasoning_error",
+    "reason": "B錯在只是起身與靜態正中擺位、非動態坐姿平衡訓練，詳解稱由患側起身會加重推向患側缺乏依據；D說鏡子不足以矯正也與視覺回饋為推者症候群重要策略的觀點不符。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-NEURO-013",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "修正式侯葉氏分期 3.0 者已有姿勢不穩，但仍能活動，採反覆坐站等任務導向的下肢伸肌閉鏈阻力訓練，既增加肌力又貼近功能，合適。",
+   "why_others": {
+    "A": "分期 1.0 雖單側受影響，肌力訓練仍應涵蓋雙側與軀幹。",
+    "B": "此期要強調抗重力的伸肌群，而非只強調屈肌。",
+    "D": "此期已需較多協助，不宜以雙重或多重任務訓練為重點。"
+   },
+   "takeaway": "巴金森氏病肌力訓練重抗重力伸肌與功能性任務。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "3.0期以坐站閉鏈訓練下肢伸肌合理，其他分期選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-014",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "以紅繩與平板支撐前臂，讓病人維持正中坐姿、做雙手前推，可在減少代償的情況下訓練上肢近端動作控制，符合改善動作控制的原則。",
+   "why_others": {
+    "A": "加重阻力會誘發協同動作與屈肘，加重異常動作型態。",
+    "C": "股四頭肌張力強時，單純強化後側肌群無法處理協同動作，且趴姿不是步行的功能性位置。",
+    "D": "在患側綁沙包增加負荷，可能誘發代償與張力，且不能針對擺盪控制。"
+   },
+   "takeaway": "動作控制訓練要避免誘發協同，重視正確動作型態。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "紅繩平板支撐下雙手前推可減少代償訓練近端控制，其他選項會誘發協同或不具針對性，說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-015",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "肌少症患者阻力訓練應由簡入繁，先在穩定的固定角度下訓練，再進行動態訓練。先動態再靜態的順序與此原則相反，最不適當。",
+   "why_others": {
+    "B": "先單一方向再結合多方向，是由易到難的合理進展。",
+    "C": "先近端髖關節肌力、再訓練遠端踝關節，是合理的進展。",
+    "D": "從輕重量開始再逐漸增加，符合漸進式阻力原則。"
+   },
+   "takeaway": "阻力訓練要漸進：先固定角度，再動態。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "阻力訓練應先固定角度再動態，A順序相反，其他選項漸進原則說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-016",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "D2 屈曲模組含髖屈曲、外展與外旋，不同於協同動作的型態；節律啟動（rhythmic initiation）可讓病人從被動、輔助到主動逐步學習動作，較不易誘發協同。",
+   "why_others": {
+    "A": "D1 屈曲含內收，且收縮放鬆多用於增加活動度，不適合選擇性控制。",
+    "B": "D1 屈曲加節律穩定屬於等長穩定訓練，不是啟動運動。",
+    "C": "節律穩定偏向穩定度訓練，不是新動作的學習。"
+   },
+   "takeaway": "要誘發選擇性動作用節律啟動與非協同模組。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "reasoning_error",
+    "reason": "下肢D2屈曲模組為髖屈曲、外展、內旋，詳解誤寫為外旋，而內旋正是它有別於屈曲協同（屈曲外展外旋）的關鍵。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-NEURO-017",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "治療師輪流施予相反方向阻力並要求病人用力推（動態反轉），屬於動態收縮，常用於訓練平衡與動態控制，說法正確。",
+   "why_others": {
+    "A": "阻力大小應依病人能力調整，不是固定的最大阻力百分比。",
+    "B": "施阻力時可以有旋轉，須注意的是不可產生不必要的切力，但說法不完整。",
+    "D": "憋氣是需要避免的，可透過呼吸指導與口令來預防，並非無法避免。"
+   },
+   "takeaway": "動態反轉屬動態收縮，可訓練動態控制與平衡。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "reasoning_error",
+    "reason": "B的說明前後矛盾（先說須注意不可產生切力，又只說說法不完整），沒有講清B錯在哪；且C描述的輪流反向施阻較接近穩定反轉，詳解稱為動態反轉不精確。",
+    "fails": [
+     "blind_mismatch",
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-NEURO-018",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "對肌梭輕敲牽張，可引發牽張反射使肌肉收縮，是在肌肉緊繃或無力時啟動肌肉的方法，說法正確。",
+   "why_others": {
+    "B": "牽張時協同肌群可一併被拉長，以加強整個動作型態。",
+    "C": "口令與牽張搭配可以加強效果。",
+    "D": "反射與反應間的遲滯並非絕對禁忌，不應就此停止治療。"
+   },
+   "takeaway": "牽張反射可用於誘發收縮，並可搭配口令加強。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "輕敲引發牽張反射、協同肌可一併拉長、口令可加強，各選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-019",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "布朗斯壯下肢第五期要求髖伸直時膝能屈曲，這需脫離協同動作，在站姿下測試較能看出髖伸直而膝屈曲的分離動作，說法正確。",
+   "why_others": {
+    "A": "上肢屈曲協同是整體上抬，口令不會是摸對側膝蓋，描述不符。",
+    "B": "下肢屈曲協同在坐姿或躺姿皆可施測，此敘述並非固定要求。",
+    "C": "第四期膝伸直不是標準的躺姿施測動作。"
+   },
+   "takeaway": "Brunnstrom 第五期要看脫離協同的分離動作。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "第五期站姿測髖伸直下屈膝為正確施測，其他選項說明大致合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-020",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "路得理論動作控制分四階段，橋式運動撐住是維持姿勢的等長收縮，屬於穩定階段（stability）。",
+   "why_others": {
+    "A": "踢球是技巧階段，需要肢體遠端自由活動，不是移動階段。",
+    "C": "床上翻身屬於移動階段，不是穩定中移動。",
+    "D": "站姿重心轉移是穩定中移動階段，不是技巧階段。"
+   },
+   "takeaway": "路得四階段：活動、穩定、穩定中移動、技巧。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "橋式維持屬穩定階段，踢球屬技巧、翻身屬活動、站姿重心轉移屬穩定中移動，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-021",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "NDT 坐到站強調由骨盆後方誘發前傾並使重心前移，同時給予股四頭肌收縮的方向感覺刺激，以引導正確的動作型態，故正確。",
+   "why_others": {
+    "A": "控制頭部並固定下肢，會限制病人自己啟動動作。",
+    "C": "雙手撐扶手易以健側代償，強化不對稱。",
+    "D": "坐到站重點是前傾，並非肩關節帶動前後擺盪。"
+   },
+   "takeaway": "坐到站要骨盆前傾加重心前移，不靠上肢代償。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "NDT坐到站由骨盆後方誘發前傾與重心前移並給股四頭肌刺激，其他選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-022",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "從腳底往上以彈力帶來回交叉繞過小腿前與大腿後並固定於腰帶，可把軸向壓力傳到下肢關節，產生關節擠壓，增加承重穩定。",
+   "why_others": {
+    "A": "彈性繃帶主要提供壓力與包覆，不是持續的軸向擠壓。",
+    "B": "沙包增加重量，但不提供穩定的關節軸向擠壓。",
+    "D": "綁腿或長腿支架是機械固定，不是靠擠壓刺激關節。"
+   },
+   "takeaway": "關節擠壓要有穩定的軸向壓力，如彈力帶下拉。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "彈力帶交叉繞腿拉向腰帶可產生軸向關節擠壓，其他選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-023",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "滑輪助行器（rolling walker）不需抬起，步態較連續、用起來自然，對注意力與認知不足的老人，使用負擔最小。",
+   "why_others": {
+    "A": "腋枴需要掌握步態與平衡，協調要求高。",
+    "B": "前臂枴同樣需要協調與步態順序，認知需求高。",
+    "C": "標準助行器每步需抬起，步驟多且不連續，需較多注意力。"
+   },
+   "takeaway": "認知差者宜選操作簡單的滑輪助行器。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "滑輪助行器不需抬起、步態連續、認知負擔最小，其他輔具說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-024",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "限制誘發動作治療（CIMT）需病人有一定的腕與手指主動伸直能力，腕伸直小於 20 度者通常不符合條件，此敘述錯誤。",
+   "why_others": {
+    "A": "副木設計應固定必要部位並讓未受損部位自由活動，敘述正確。",
+    "C": "腕過度屈曲者用副木維持位置，可促進手功能使用，說法正確。",
+    "D": "軟癱患者以副木維持關節位置，可減少攣縮，敘述正確。"
+   },
+   "takeaway": "CIMT 需具備最低的腕與手指主動伸直能力。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "CIMT需約20度主動腕伸直，B敘述錯誤，其他選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-025",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "任務導向訓練需病人有基本的認知、理解指令與主動動作能力。LOCF 第六級已能執行有目標的指令，且手腕手指有自主控制，適合練習梳頭。",
+   "why_others": {
+    "A": "MMSE 15 分且單側忽略，認知與注意力不足，難以配合任務訓練。",
+    "B": "LOCF 第四級為混亂激動，無法穩定配合練習。",
+    "C": "手腕手指無自主動作，缺少完成梳頭的基本動作條件。"
+   },
+   "takeaway": "任務導向訓練需有基本認知配合與主動動作。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "LOCF第六級可配合指令且有主動動作，其他選項認知或動作條件不足，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-026",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "圖中病人看著一般電腦螢幕，用方向盤和排檔桿操作模擬駕駛，沒有頭戴顯示器或包覆式環境，屬非沉浸式（non-immersive）虛擬實境。",
+   "why_others": {
+    "A": "沉浸式需頭戴顯示器或洞穴式環境，圖中沒有。",
+    "C": "半沉浸式使用大型投影或多螢幕環繞視覺，圖中僅單一螢幕。",
+    "D": "混合式為虛擬與真實物件結合，圖中不是此類。"
+   },
+   "takeaway": "桌上螢幕搭配控制器是非沉浸式虛擬實境。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "附圖為一般螢幕搭配方向盤與排檔桿的模擬駕駛，屬非沉浸式，說明與圖相符。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-027",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "判斷與抽象思考屬於高階認知，是執行功能（executive function）的核心，缺損時與執行功能最直接相關。",
+   "why_others": {
+    "A": "長期記憶的缺損會表現在記憶項目，而不是判斷與抽象思考。",
+    "C": "注意力缺損主要表現在專注、持續力，不是判斷力。",
+    "D": "定向感是對人時地的知覺，與判斷、抽象思考不同。"
+   },
+   "takeaway": "判斷、抽象思考與計畫屬於執行功能。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "判斷與抽象思考屬執行功能，其他認知功能說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-028",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "NIHSS 檢查項目包含意識、視野、顏面麻痺、肢體動作、感覺、語言等神經功能，不含吞嚥困難；吞嚥需另外專門評估。",
+   "why_others": {
+    "A": "意識程度是 NIHSS 的項目。",
+    "B": "顏面神經麻痺是 NIHSS 的項目。",
+    "C": "視野是 NIHSS 的項目。"
+   },
+   "takeaway": "NIHSS 評估神經缺損，不含吞嚥功能。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "NIHSS不含吞嚥評估，意識、顏面麻痺、視野皆為其項目，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-029",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "圖中黑色部位位於額葉下外側，相當於布洛卡區（Broca's area）。受損產生表達性失語症，說話緩慢費力、詞彙有限，但理解大致保留。",
+   "why_others": {
+    "A": "能流利說話但聽不懂，是韋尼克失語症的表現。",
+    "C": "流利說話但無法正確回應理解內容，較像傳導或其他流暢型失語症。",
+    "D": "表達與理解都不好，是廣泛性失語症，需大範圍受損。"
+   },
+   "takeaway": "布洛卡區受損：表達不流利，理解大致保留。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "附圖黑點位於額葉下外側近外側溝，相當於布洛卡區，表達性失語症說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-030",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "及早鼓勵患側肢體動作與良好預後有關，目前沒有證據顯示會導致不良動作型態，說法最不適當。",
+   "why_others": {
+    "A": "早期復健與日常生活功能復原有正相關，敘述合理。",
+    "C": "部分早期介入者確實可能出現醫療不穩定，需要監測。",
+    "D": "早期介入有助於降低憂鬱與情緒問題，敘述合理。"
+   },
+   "takeaway": "中風早期介入有益，但需注意醫療穩定度。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "早期鼓勵患側活動無證據導致不良動作型態，其他敘述合理，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-031",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "站到坐跌坐是離心收縮不足。站姿背靠牆壁蹲下，可在支撐下訓練下肢伸肌離心控制，與站到坐動作特異性最高。",
+   "why_others": {
+    "B": "橋式運動主要訓練髖伸肌向心及等長收縮，與站到坐離心不同。",
+    "C": "坐姿彎腰觸地沒有下肢離心控制下坐的任務。",
+    "D": "跪姿靜態姿勢不含離心下降，也不是站到坐動作。"
+   },
+   "takeaway": "訓練離心控制要用近似動作，如靠牆蹲下。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "靠牆蹲下可訓練下肢伸肌離心控制且具任務特異性，其他選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-032",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "小提琴手感覺不到壓到哪條弦，是手指精細的空間辨別力下降，應以兩點區辨測試（two-point discrimination）找出最小可辨距離。",
+   "why_others": {
+    "A": "夾紙測的是手指內收的肌力，不是感覺。",
+    "B": "針尖測定位與痛覺，無法測量精細的空間辨別力。",
+    "D": "辨識質地測的是質地辨識，不是兩點空間辨別。"
+   },
+   "takeaway": "手指精細空間辨別力用兩點區辨測試。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "感覺不到按到哪條弦屬精細空間辨別，用兩點區辨測試，其他選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-033",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "三項活動都涉及髖屈曲與膝關節的分離控制：由下肢啟動翻身、坐姿跨腳、站姿向前踩高，皆需要髖與膝分別控制，可改善協同造成的環形步態。",
+   "why_others": {
+    "A": "漏掉站姿向前踩高，此動作也能訓練分離控制。",
+    "B": "漏掉由下肢啟動翻身，此動作也屬適當。",
+    "C": "漏掉坐姿跨腳，此動作也屬適當。"
+   },
+   "takeaway": "針對協同動作，訓練髖與膝的分離控制。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "三項活動皆訓練髖膝分離控制與髖屈曲，說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-034",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "患側上肢在靜止時就劇痛，且被動移動與穿衣等輕度刺激也加劇，符合複雜性區域疼痛症候群（反射性交感神經失養症）的表現。",
+   "why_others": {
+    "A": "視丘疼痛是中樞性自發痛，通常不是因移動而加劇。",
+    "B": "夾擠症候群疼痛多與特定肩關節活動角度有關，靜止時不會整隻手疼痛。",
+    "D": "靜脈血栓炎多見於下肢，且常有局部紅腫熱痛，不符。"
+   },
+   "takeaway": "靜止痛加輕觸痛是 CRPS 的特徵。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "靜止痛且輕度刺激加劇符合CRPS，其他選項鑑別說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-035",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "若懷疑是 CRPS，應優先檢查皮膚是否有變化（如光滑發亮、溫度、顏色）與遠端腫脹，這些是 CRPS 的自主神經與營養徵象。",
+   "why_others": {
+    "A": "關節活動度和終感覺較適合評估關節機械性問題，不是 CRPS 的優先項目。",
+    "B": "張力與協同反應與疼痛原因無直接關聯。",
+    "C": "感覺檢查無法確認 CRPS，且疼痛劇烈時不易配合。"
+   },
+   "takeaway": "CRPS 先看皮膚、腫脹等營養與血管運動徵象。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "懷疑CRPS應優先檢查皮膚營養變化與遠端腫脹，其他選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-036",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "觸覺定位（tactile localization）需將觸覺資訊在聯合皮質整合，並判斷位置，屬於皮質性感覺。",
+   "why_others": {
+    "A": "本體覺屬於一般的深層感覺，不是專門的皮質聯合功能。",
+    "C": "溫度覺屬於基本感覺，經脊髓視丘徑傳導。",
+    "D": "震動覺屬於基本感覺，經後柱傳導。"
+   },
+   "takeaway": "皮質感覺含定位、立體覺、兩點區辨、書寫覺。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "觸覺定位屬皮質性感覺，溫度覺、震動覺、本體覺屬基本感覺，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-037",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "功能獨立自主量表（FIM）包含運動與認知兩大面向，同時評估日常生活活動與溝通、社會認知等，敘述正確。",
+   "why_others": {
+    "A": "FIM 與巴氏量表高度相關，同時效度良好。",
+    "C": "FIM 評分分數愈高代表愈獨立，不是愈低。",
+    "D": "大小便控制在 FIM 屬於括約肌控制，不是自我照顧。"
+   },
+   "takeaway": "FIM 含運動與認知，分數愈高愈獨立。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "FIM含運動與認知、分數高較獨立、括約肌控制獨立分類、與巴氏量表效度高，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-038",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "運動失調來自小腦與腦幹相關路徑受損。後大腦動脈、基底動脈與椎動脈的供血範圍包含小腦、腦幹，故應評估運動失調。",
+   "why_others": {
+    "A": "中大腦動脈主要供應大腦外側，但不包含小腦，不是主要的失調來源。",
+    "C": "只選基底動脈，漏掉後大腦動脈與椎動脈。",
+    "D": "只選椎動脈，漏掉另外兩條。"
+   },
+   "takeaway": "後循環（椎、基底、後大腦動脈）中風要評估失調。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "後循環血管供應小腦與腦幹相關結構，應評估失調，各選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-039",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "部分載重懸吊式跑步機（body weight supported treadmill training）可提供安全支持，讓病人早期在直立姿勢下練習步態，是主要好處。",
+   "why_others": {
+    "A": "速度增加並不會降低平衡需求，且不是主要好處。",
+    "B": "不能保證誘發更大的髖屈曲角度。",
+    "D": "無法完全取代平地練習，也需要較大空間與設備。"
+   },
+   "takeaway": "懸吊跑步機的好處是早期直立步態練習。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "reasoning_error",
+    "reason": "D的說明稱懸吊跑步機需要較大空間，與跑步機訓練所需空間比平地步行小的一般認知相反，D錯在無法完全取代平地練習。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-NEURO-040",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "上肢肌力差、下肢肌力較好，且感覺在 T1 以下受損，是上肢比下肢更差的特徵，符合中髓損傷症候群（central cord syndrome）。",
+   "why_others": {
+    "A": "前髓損傷以運動與痛溫覺喪失為主，下肢較差，不符。",
+    "B": "後髓損傷以本體覺與震動覺喪失為主，運動相對保留，不符。",
+    "D": "布朗－斯夸是半側損傷，同側運動與對側痛溫覺受損，不符。"
+   },
+   "takeaway": "中髓損傷：上肢比下肢嚴重。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "上肢比下肢無力且薦髓保留，符合中髓症候群，其他症候群鑑別說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-041",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "C6完全損傷者仍保有肩部前屈肌群與肘屈肌，但肱三頭肌（C7）已失去神經支配。甩手扣床欄翻身靠前三角肌把手臂甩向前，再以肱二頭肌屈肘勾住床欄拉動身體。",
+   "why_others": {
+    "B": "肱三頭肌為C7支配，C6損傷後無法訓練。",
+    "C": "肩胛下壓肌群與肱三頭肌多屬C7以下功能，C6已缺。",
+    "D": "屈指肌為C8支配，C6損傷後無功能。"
+   },
+   "takeaway": "C6四肢麻痺翻身靠前三角肌甩手加肱二頭肌勾拉。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "C6完全損傷保留前三角肌與肱二頭肌，甩手勾床欄翻身的推理與各選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-042",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "T9完全損傷上肢與軀幹上部功能正常，可獨立床椅轉位，也能借助KAFO與助行器短距離行走，並在無障礙環境獨立使用輪椅。故②③⑤正確。",
+   "why_others": {
+    "A": "①翻身起床可獨立完成；④跌倒後可自行由地板回輪椅。",
+    "C": "①翻身起床不需他人協助，說法錯誤。",
+    "D": "④跌倒後可獨立由地板轉位回輪椅，不需協助。"
+   },
+   "takeaway": "T9以下上肢正常，床椅轉位與輪椅社區活動皆可獨立。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "T9完全損傷可獨立床椅轉位、KAFO加助行器短距離行走與社區輪椅活動，①④的排除理由合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-043",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "神經機能部位取兩側感覺與運動功能仍正常的最低節段。雙側感覺到C5皆正常，C6以下出現異常；左側C6以下關鍵肌僅1–2分，運動功能到C5（肱二頭肌）。故整體為C5。",
+   "why_others": {
+    "A": "L2以下遠低於實際異常起點，不符合。",
+    "C": "C6以下已有感覺或運動異常，C6並非正常。",
+    "D": "T7更低，兩側C6起即有異常，不符合。"
+   },
+   "takeaway": "神經機能部位是兩側正常功能的最低節段，此題為C5。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "雙側感覺正常到C5，左側運動正常到C5，神經機能部位取最高者C5，推理正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-044",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "薦髓感覺與自主肛門收縮存在，屬不完全損傷，排除A、B。損傷平面以下仍有運動功能，且依題意平面以下關鍵肌至少半數肌力達3分以上（右側4–5分），符合AIS D。",
+   "why_others": {
+    "A": "A為薦髓無任何感覺運動功能，本題有保留。",
+    "B": "B為僅有感覺保留、運動完全喪失，本題仍有運動。",
+    "C": "C為平面以下過半關鍵肌小於3分，本題不符。"
+   },
+   "takeaway": "有薦髓保留且多數關鍵肌達3分以上為AIS D。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "有薦髓保留屬不完全損傷，平面以下18條關鍵肌中右側9條達3分以上剛好半數，符合AIS D，各級定義敘述正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-045",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "運動與輕觸、本體感覺（同側脊髓背柱與皮質脊髓徑）受損在左側，痛溫覺（脊髓視丘徑，對側）缺損在右側，呈現半側脊髓損傷的分離型表現，即布朗－斯夸症候群（Brown-Séquard syndrome）。",
+   "why_others": {
+    "A": "中髓症候群上肢比下肢無力更嚴重，無左右分離感覺。",
+    "B": "後髓症候群主要為本體感覺與觸覺喪失，運動多保留。",
+    "D": "前髓症候群運動與痛溫覺喪失、本體感覺保留，不符。"
+   },
+   "takeaway": "同側運動與本體感覺喪失、對側痛溫覺喪失即Brown-Séquard。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "左側運動與背柱感覺喪失、右側痛覺喪失，是典型的布朗－斯夸症候群，其他症候群的說明也正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-046",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "脊髓損傷後的恢復可來自受傷脊神經根的復原，也可來自脊髓本身水腫消退與神經可塑性。因此兩種機轉都可能出現功能回復。",
+   "why_others": {
+    "A": "頸髓損傷比率最高，不是腰髓。",
+    "B": "胸髓損傷多為屈曲、壓迫或骨折脫位，非主要為過度伸直。",
+    "C": "胸椎雖有肋骨支撐，但一旦受傷仍常是完全損傷。"
+   },
+   "takeaway": "脊髓損傷恢復來自神經根復原與脊髓本身恢復。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "恢復可來自神經根與脊髓本身；頸髓最常見、胸髓多屈曲或骨折脫位、胸髓損傷常為完全性，說明皆正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-047",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "T2完全損傷者胸廓肋間肌與腹肌失去功能，坐姿時呼吸與肺活量受影響，腹部束帶可支托腹內容物、改善橫膈位置，減少喘與呼吸急促。",
+   "why_others": {
+    "A": "應先在床上漸進抬高並配合束腹帶與彈性襪，不是等不暈才練坐。",
+    "B": "骨質流失在傷後最初數個月最快，非一年後才快。",
+    "C": "長期留置導尿管反而增加感染，應考慮間歇導尿。"
+   },
+   "takeaway": "高位胸髓損傷坐姿呼吸費力時可用腹部束帶輔助。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "高位胸髓損傷使用腹部束帶輔助呼吸合理；骨質流失以傷後最初數月最快、長期留置導尿管增加感染，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-048",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "脊髓圓錐位於脊髓末端，損傷時圓錐本身為上運動神經元，同時波及其旁的腰薦神經根（下運動神經元），因此上下運動神經元徵象並存。",
+   "why_others": {
+    "B": "馬尾由神經根構成，屬下運動神經元損傷。",
+    "C": "中髓症候群多為過度伸直，且上肢比下肢嚴重。",
+    "D": "後髓症候群是本體感覺與觸覺受損，痛溫覺多保留。"
+   },
+   "takeaway": "圓錐症候群為上下運動神經元混合，馬尾為下運動神經元。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "以脊髓本身受損（上運動神經元）合併腰薦神經根受損（下運動神經元）解釋圓錐症候群的混合表徵，是標準說法，其他選項說明也正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-049",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "格拉斯哥昏迷量表（Glasgow coma scale）總分3至15，輕度腦傷為13至15分，中度9至12分，重度3至8分。",
+   "why_others": {
+    "A": "此範圍不在量表常用分級，最低分為3。",
+    "B": "3至8分屬重度腦傷。",
+    "C": "9至12分屬中度腦傷。"
+   },
+   "takeaway": "GCS輕度13–15、中度9–12、重度3–8。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "GCS輕度13–15、中度9–12、重度3–8分，正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-050",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "顱內壓持續高於約20至25 mmHg時，腦組織被擠壓，可能向壓力較低處移位而發生腦疝脫（herniation），危及生命，需緊急處理。",
+   "why_others": {
+    "A": "顱內出血以硬腦膜下出血最常見。",
+    "B": "搖晃嬰兒症候群的硬腦膜下出血多屬局部出血，並非典型瀰漫性軸突損傷。",
+    "C": "腦水腫是受傷後的續發性腦傷。"
+   },
+   "takeaway": "顱內壓超過20–25 mmHg要警覺腦疝脫。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "顱內壓超過20–25 mmHg易導致腦疝脫；硬腦膜下出血較常見且屬局部性腦傷、腦水腫屬續發性腦傷，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-051",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "LOCF第四級為混亂且躁動，注意力短暫、易受環境刺激而更躁動。應減少刺激、維持規律，並讓訓練項目簡單且變化，而非長時間重複同一項，否則易引起焦躁與疲勞。",
+   "why_others": {
+    "A": "固定時間與地點可建立規律，減少混亂。",
+    "B": "平穩的聲音可降低刺激，有助安撫。",
+    "C": "以病人為中心可提升配合度與參與。"
+   },
+   "takeaway": "LOCF四級要低刺激、規律，短時間多變化的簡單活動。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "LOCF第四級注意力短暫、容易躁動，應安排短時間且多變化的活動，長時間做同一項最不合適，推理正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-052",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "腦震盪後先短暫休息，之後在症狀不惡化的前提下漸進進行認知與體能活動，再逐步增加強度，最終回到球場。休息約兩天後開始不增加症狀的活動符合此原則。",
+   "why_others": {
+    "A": "不必依症狀天數硬性規定完全休息3天，再恢復任何活動。",
+    "B": "長時間完全休息並非建議，反而延緩恢復。",
+    "C": "需通過逐步體能活動階段，不能返校後即參加球類練習。"
+   },
+   "takeaway": "腦震盪回場採分階段漸進，且不可使症狀加重。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "腦震盪先短暫休息，再漸進進行不加重症狀的活動，各選項的排除理由合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-053",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "LOCF第七級為自動且適當，但仍有判斷與洞察力不足。此時指令可較複雜，應讓患者練習問題解決與自主決定，而不是一直提供過度簡化的指令而減少挑戰。",
+   "why_others": {
+    "B": "嚴重損傷者可訓練代償動作以提升功能。",
+    "C": "PNF可促進多關節控制，適合此階段。",
+    "D": "環境改造有助回歸家庭與社區。"
+   },
+   "takeaway": "LOCF七級要增加挑戰與問題解決，不再過度簡化。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "LOCF第七級已能自動且適當地反應，應增加問題解決的挑戰，不必再刻意簡化指令，推理正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-054",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "左多巴（levodopa）服藥後約1至2小時達藥效高峰，症狀控制最佳，此時動作較靈活，運動與治療效果最好。",
+   "why_others": {
+    "A": "服藥前太久藥效已退，症狀明顯。",
+    "B": "服藥前1至2小時藥效接近消退，易有僵硬。",
+    "D": "服藥後3至4小時藥效已逐漸下降。"
+   },
+   "takeaway": "巴金森氏病治療排在服藥後1–2小時藥效高峰。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "左多巴服藥後1–2小時達藥效高峰，適合安排治療，正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-055",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "巴金森氏病出現明顯臨床症狀時，黑質多巴胺神經元通常已喪失約一半以上，而非最多20%。說「最多已喪失20%」並不正確。",
+   "why_others": {
+    "A": "黑質紋狀體多巴胺路徑受損為主要病因。",
+    "B": "路易氏體堆積是典型病理發現。",
+    "D": "嗅球與嗅覺系統早期即可受影響。"
+   },
+   "takeaway": "巴金森氏病症狀出現時多巴胺神經元已大量流失。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "出現明顯症狀時多巴胺神經元已喪失過半，不是最多20%；其他選項的病理敘述正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-056",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "與失智症個案溝通應保持適當目光接觸，讓個案感到被尊重與關注。刻意避免目光接觸反而造成疏離，不是適當原則。",
+   "why_others": {
+    "A": "輕度期以運動與刺激腦部的活動為主，合理。",
+    "B": "直接以需求為考量，不過度揣測，合理。",
+    "C": "程序性記憶保留較佳，適合以程序學習訓練。"
+   },
+   "takeaway": "失智症溝通要保持目光接觸並用簡單直接的語句。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "與失智症個案溝通應保持目光接觸，其他原則的說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-057",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "證據顯示複合式多元運動對認知改善的效果通常不亞於、甚至優於單一低強度有氧運動。說低強度有氧比複合式運動更有效並不正確。",
+   "why_others": {
+    "A": "有氧運動改善血管與代謝因子，合理。",
+    "B": "運動促進神經新生與突觸可塑性，合理。",
+    "C": "運動可能減少類澱粉蛋白堆積，合理。"
+   },
+   "takeaway": "認知改善以有氧加多元複合運動為佳，不是單純低強度有氧。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "複合式多元運動對認知的改善不亞於低強度有氧運動，D錯誤；其他機轉說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-058",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "小腦萎縮患者因動作不協調與失衡，步態通常緩慢、不穩，步頻與速度不會明顯增加，反而多下降。",
+   "why_others": {
+    "A": "步幅不一致是典型運動失調步態。",
+    "B": "寬基底步態用來增加穩定度。",
+    "D": "走路易偏移、方向不穩定。"
+   },
+   "takeaway": "小腦失調步態為寬基底、步幅不一、不穩且慢。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "小腦失調步態速度慢、基底寬、步幅不一且方向不穩，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-059",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "後葉與外側小腦（新小腦）主要參與動作計畫與精細協調，對姿勢穩定與平衡的直接影響最小。",
+   "why_others": {
+    "A": "絨球小結葉（前庭小腦）掌管平衡與眼動，影響大。",
+    "B": "蚓狀體控制軀幹與姿勢，損傷時影響明顯。",
+    "D": "中間區控制肢體遠端與步態，也影響姿勢。"
+   },
+   "takeaway": "外側小腦管動作計畫，前庭與蚓狀體才管姿勢平衡。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "外側小腦主管動作計畫，對姿勢穩定的影響最小；前庭小腦、蚓狀體與中間區的功能敘述正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-060",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "此題問不適合的訓練策略。單純坐姿下快速重心前後轉移，缺乏針對坐到站控制的循序漸進，且速度加快會增加失控風險，不如先慢慢練習，因此不適合。",
+   "why_others": {
+    "A": "推拉治療球可訓練前傾與拉回的控制。",
+    "B": "從高處逐漸降低是合理的漸進難度。",
+    "C": "雙手支撐再逐漸減少，是循序漸進的做法。"
+   },
+   "takeaway": "小腦失調訓練宜循序漸進，不要一開始就加快速度。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.3,
+    "verdict": "reasoning_error",
+    "reason": "D本身就是由慢而快，詳解卻用「速度加快會失控，不如先慢慢練習」當不適合的理由，與選項內容矛盾；說它「缺乏坐到站的循序漸進」也不成立，因為A同樣是坐姿訓練。D不適合的真正原因是小腦失調患者的速度進階應由快到慢（慢速控制較難），詳解沒有點出。",
+    "fails": [
+     "blind_mismatch",
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-NEURO-061",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "多發性硬化症為中樞神經脫髓鞘疾病，不是神經肌肉交界乙醯膽鹼受體減少；後者為重症肌無力的機轉。",
+   "why_others": {
+    "A": "女性罹患率較高。",
+    "B": "疲勞、感覺運動異常與認知缺損都常見。",
+    "C": "查克特氏三合症（眼球震顫、斷續語言、意向性顫抖）為典型表現。"
+   },
+   "takeaway": "MS是中樞脫髓鞘，肌肉交界受體問題是重症肌無力。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "MS是中樞神經脫髓鞘疾病，乙醯膽鹼受體減少是重症肌無力的機轉；Charcot三合症內容正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-062",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "後小兒麻痺症候群患者運動神經元已過度負荷，過量運動易造成更多疲勞與無力。應適度運動與能量節省，而非增加運動量。",
+   "why_others": {
+    "A": "能量保留技巧可減少疲勞。",
+    "C": "矯正姿勢與步態可降低疼痛。",
+    "D": "輔具與支架可減少關節肌肉過度使用。"
+   },
+   "takeaway": "後小兒麻痺要避免過度運動，重視能量保留。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "後小兒麻痺症候群應避免過度使用肌肉並重視能量保留，增加運動量錯誤，正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-063",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "感覺再教育時可善用視覺代償，讓患者看著觸碰的物品與部位，協助對應與辨識。因此不建議使用視覺代償並不正確。",
+   "why_others": {
+    "A": "冷敷可緩解燒灼感，並保持皮膚乾燥。",
+    "B": "感覺異常者要預防皮膚破損，並加保護墊。",
+    "C": "多種材質觸碰有助建立不同觸覺。"
+   },
+   "takeaway": "感覺再教育可用視覺回饋代償。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "感覺再教育可用視覺代償，D不適當；其他處置說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-064",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "中樞神經腫瘤患者的認知復健需同時考量情緒與社會心理因素，這些因素會影響參與度與成效，並非只著重認知訓練而與情緒無關。",
+   "why_others": {
+    "A": "恢復與代償策略並重，合理。",
+    "C": "目標是達到最佳功能獨立，合理。",
+    "D": "在真實環境練習有助訓練轉移，合理。"
+   },
+   "takeaway": "腦瘤認知復健要兼顧情緒與心理社會因素。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "腦瘤認知復健須兼顧情緒與心理社會因素，其他原則的說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-065",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "威爾森氏症（Wilson disease）是銅代謝異常，銅在肝、腦（尤其基底核）堆積，造成基底核退化與肝損傷。",
+   "why_others": {
+    "A": "鋅常用於治療，不是病因。",
+    "C": "鐵堆積見於其他基底核疾病，並非本病。",
+    "D": "砷與本病無關。"
+   },
+   "takeaway": "威爾森氏症是銅代謝異常。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.98,
+    "verdict": "pass",
+    "reason": "威爾森氏症是銅代謝異常，其他選項的說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-066",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "慢性酒精中毒的周邊神經病變與小腦退化，主要影響下肢與步態、平衡，通常下肢比上肢嚴重，而非上肢更嚴重。",
+   "why_others": {
+    "A": "酒精與營養不足損害神經系統，合理。",
+    "C": "可出現心智損害與癡呆，合理。",
+    "D": "注意力與記憶差，指令需簡單。"
+   },
+   "takeaway": "酒精性神經病變與小腦退化以下肢較重。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "酒精性周邊神經病變與小腦退化以下肢較嚴重，B錯誤，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-067",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "後小兒麻痺症候群患者畏寒但並非不能接受局部冷療，需視個人耐受性調整，並非一律避免使用。說應避免冷療並不妥當。",
+   "why_others": {
+    "A": "維持穩定溫暖的環境合理。",
+    "B": "注意保暖合理。",
+    "C": "熱療接受度高，但需留意水腫。"
+   },
+   "takeaway": "後小兒麻痺畏寒要保暖，但冷療可視耐受度使用。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.35,
+    "verdict": "pass",
+    "reason": "畏寒患者的冷療可依耐受度使用，不必一律避免，與承認答案的邏輯一致；其他選項的說明合理。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "112-2-NEURO-068",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "神經修補術後初期須保護吻合處、避免過度牽拉，以免縫合處受損。初期進行肌肉牽拉並不適當。",
+   "why_others": {
+    "A": "神經失用多可自行恢復，給予保護與等待即可。",
+    "B": "軸突斷傷可用功能性副木並鼓勵未受影響肌肉活動。",
+    "C": "神經斷傷初期可用按摩促進循環、減水腫。"
+   },
+   "takeaway": "神經修補術後初期要保護，不可牽拉。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "神經修補術後初期應保護吻合處、避免牽拉，其他各型神經損傷的處置說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-069",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "本體感覺由Aα或Aβ粗大有髓鞘纖維傳導，直徑大、髓鞘厚，傳導速度最快。",
+   "why_others": {
+    "A": "壓覺由Aβ纖維傳導，但速度比本體感覺慢。",
+    "C": "溫度覺由細小纖維傳導，速度較慢。",
+    "D": "痛覺由Aδ與C纖維傳導，速度較慢。"
+   },
+   "takeaway": "本體感覺纖維最粗最快，痛溫覺最慢。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "本體感覺由粗大有髓鞘的Aα/Aβ纖維傳導，速度最快；痛覺與溫度覺由Aδ與C纖維傳導，較慢。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-070",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "圖中頭部呈側傾的靜止姿勢。頭部在重力下的靜態位置（傾斜）由耳石器官（橢圓囊與球囊）偵測，半規管只偵測頭部旋轉的角加速度。",
+   "why_others": {
+    "A": "半規管偵測旋轉，不偵測靜態頭位。",
+    "B": "同樣屬半規管，偵測旋轉而非靜態姿勢。",
+    "C": "水平半規管偵測水平旋轉，並非靜態頭位。"
+   },
+   "takeaway": "耳石器官測靜態頭位與線性加速，半規管測旋轉。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "附圖是頭部側傾的靜態姿勢，靜態頭位由耳石器官偵測，半規管偵測旋轉，說明與附圖相符。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-071",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "前庭眼球反射（VOR）的測試包括頭部甩動測試、頭部快速晃動測試與動態視力準確度測試，三者都藉由頭動時眼動的補償來評估。追視與掃視屬眼動控制。",
+   "why_others": {
+    "A": "漏了動態視力準確度測試。",
+    "C": "追視與掃視不是評估VOR。",
+    "D": "追視與掃視不是評估VOR。"
+   },
+   "takeaway": "VOR測試有甩頭、晃頭與動態視力；追視掃視不是。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "甩頭、晃頭與動態視力測試評估VOR，追視與掃視屬眼動控制，正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-072",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "動態步態指數量表（dynamic gait index）包含行走中轉頭、上下看等頭部轉動項目，會挑戰前庭系統，因此常用來評估前庭病變患者。",
+   "why_others": {
+    "A": "柏格平衡量表主要評估靜態與動態平衡，不以轉頭為特色。",
+    "B": "福田踏步測試是原地踏步的偏移測試，並非此題所指。",
+    "D": "簡短身體功能量表含平衡、步行與起坐，不含轉頭。"
+   },
+   "takeaway": "動態步態指數含轉頭項目，適合前庭病變評估。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "動態步態指數含行走中轉頭項目，適合評估前庭病變，其他量表的說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-073",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "梅尼爾氏症的眩暈通常持續約20分鐘至數小時，且會造成波動性聽力喪失、耳鳴與耳脹感。說只有30秒至1分鐘且不影響聽覺並不正確。",
+   "why_others": {
+    "A": "Hallpike-Dix測試可協助診斷BPPV。",
+    "B": "外淋巴漏常因卵圓窗或圓窗破裂引起。",
+    "D": "前庭許旺細胞瘤常伴耳鳴與聽力喪失。"
+   },
+   "takeaway": "梅尼爾氏症眩暈持續較久，並伴聽力喪失與耳鳴。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "梅尼爾氏症眩暈持續20分鐘至數小時，並伴隨波動性聽力喪失，C錯誤；其他選項敘述正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-074",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "重症肌無力為自體免疫攻擊神經肌肉交界處突觸後膜的乙醯膽鹼受體，造成肌肉易疲勞與無力。",
+   "why_others": {
+    "A": "麩胺酸是中樞興奮性傳導物質，與本病無關。",
+    "C": "多巴胺不足與巴金森氏病有關。",
+    "D": "GABA是中樞抑制性傳導物質，與本病無關。"
+   },
+   "takeaway": "重症肌無力是乙醯膽鹼受體的自體免疫病變。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.98,
+    "verdict": "pass",
+    "reason": "重症肌無力是乙醯膽鹼受體的自體免疫病變，正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-075",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "基蘭－巴瑞氏症候群若出現眼球控制與吞嚥困難等腦神經症狀，代表病情較重且範圍廣，預後相對較差。",
+   "why_others": {
+    "A": "快速惡化到高峰者預後較差。",
+    "B": "需要呼吸器代表病情嚴重，預後較差。",
+    "D": "前驅腸胃道感染（如曲狀桿菌）者預後較差。"
+   },
+   "takeaway": "GBS有腦神經症狀、用呼吸器或快速惡化者預後較差。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "腦神經症狀、快速惡化、需用呼吸器、前驅腸胃道感染都是GBS預後差的因子，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-076",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "公車緩慢煞車時身體被往前帶，重心前移，使身體相對向前傾，此時以踝策略由後側肌群先活化對抗，腓腸肌（小腿後側）先收縮拉回身體。",
+   "why_others": {
+    "B": "脛前肌在身體向後晃時才先活化。",
+    "C": "股四頭肌是踝策略後才在較遠端出現。",
+    "D": "大腿後肌群同樣在之後才出現，不是先活化。"
+   },
+   "takeaway": "身體前傾時踝策略先啟動小腿後側肌群與肌肉鏈由下而上。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "reasoning_error",
+    "reason": "股四頭肌位於近端而非「較遠端」，而且它屬於向後晃時的前側肌群，不在身體前傾時的後側肌群活化序列中，C的說明有事實錯誤。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-NEURO-077",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "失去平衡後屈膝讓重心快速下降，是為降低重心、增加穩定性，稱為懸吊策略（suspension strategy）。",
+   "why_others": {
+    "A": "髖策略是以髖關節大幅動作來調整重心。",
+    "B": "膝關節策略不是常見的平衡策略分類。",
+    "C": "踝策略是以踝關節小幅擺動調整。"
+   },
+   "takeaway": "屈膝降低重心的是懸吊策略。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "屈膝快速降低重心是懸吊策略，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-078",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "四方格跨步測試（four-square step test）要求跨越障礙並改變方向，可評估跨越障礙物與絆倒的跌倒風險，符合忘記門檻易被絆倒的情境。",
+   "why_others": {
+    "A": "腳跟腳尖走評估動態平衡，不含跨越障礙。",
+    "B": "功能性前伸評估站姿穩定極限。",
+    "C": "計時起走評估整體行動力，不含跨越障礙。"
+   },
+   "takeaway": "跨越障礙與絆倒風險用四方格跨步測試。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "四方格跨步測試需跨越障礙並改變方向，符合被門檻絆倒的情境，其他測試的說明合理。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-079",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "申請外籍看護工是依專業評估與失能程度等規定，並非所有65歲以上老人只要巴氏量表不超過35分即符合。此敘述過度簡化，因此錯誤。",
+   "why_others": {
+    "B": "工具性日常生活活動評估社區獨立生活能力。",
+    "C": "勞頓量表是常用的工具性日常生活活動評估。",
+    "D": "巴氏量表滿分不代表可自行獨立居住。"
+   },
+   "takeaway": "巴氏量表滿分不等於可獨居；IADL用勞頓量表。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "外籍看護資格依年齡有不同的巴氏量表門檻，並非所有65歲以上一律以35分為準，A錯誤；其他敘述正確。"
+   }
+  },
+  {
+   "id": "112-2-NEURO-080",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "交替助行器、附輪助行器與北歐健走杖可讓行走時身體與四肢呈交替前進，較接近正常步態；標準助行器需抬起往前放，會破壞步態節律。",
+   "why_others": {
+    "A": "標準助行器需抬起前移，無法維持正常步態。",
+    "C": "漏掉北歐健走杖。",
+    "D": "含標準助行器，且漏掉附輪助行器。"
+   },
+   "takeaway": "標準助行器要抬起，其餘交替或附輪類較近正常步態。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "標準助行器需抬起前移，會破壞步態節律；其餘三者可維持交替步態，各選項說明正確。"
+   }
+  }
+ ]
+}

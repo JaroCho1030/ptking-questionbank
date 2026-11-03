@@ -227,6 +227,8 @@ def save_explanations(exam_dir: str, subject: str, entries: dict[str, dict]) -> 
 def iter_explanation_files():
     """data/explanations/{年}-{次}/{科目}.json → (年-次, 科目, {id: entry})。"""
     for p in sorted(C.EXPLANATION_DIR.glob("*/*.json")):
+        if p.parent.name.startswith("."):      # .batches/ 的中間檔（run-*.json）不是詳解
+            continue
         yield p.parent.name, p.stem, {e["id"]: e for e in json.loads(p.read_text("utf-8"))["explanations"]}
 
 

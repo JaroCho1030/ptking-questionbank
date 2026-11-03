@@ -1,0 +1,1857 @@
+{
+ "exam_id": "112-2-ORTHO",
+ "explanations": [
+  {
+   "id": "112-2-ORTHO-001",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "胸椎前彎（屈曲）時，上位椎體的下關節突相對於下位椎體的上關節突往上滑動，所以①正確。此時肋骨隨胸椎屈曲向前轉動，所以③正確，答案為①③。",
+   "why_others": {
+    "B": "②④方向恰與屈曲時的小面關節與肋骨動作相反。",
+    "C": "④肋骨應往前轉而非往後。",
+    "D": "②小面關節屈曲時是往上滑，不是往下。"
+   },
+   "takeaway": "胸椎屈曲：小面關節上滑、肋骨前轉；伸直則相反。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "胸椎屈曲時小面關節上滑、肋骨前轉，詳解正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-002",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "頭暈噁心是椎動脈（vertebral artery）受壓的表現，而非頸動脈。最大頸椎壓迫測試的姿勢主要是縮小同側椎間孔，用來檢查神經根，D 把原因說成左側頸動脈，所以錯誤。",
+   "why_others": {
+    "A": "側彎加旋轉使左側椎間孔變窄，左臂放射痛提示神經根受壓，敘述正確。",
+    "B": "對側（右側）肌肉被拉長，疼痛可能是肌肉拉傷，敘述正確。",
+    "C": "後伸加軸向下壓使椎間孔更窄，症狀可能加重，敘述正確。"
+   },
+   "takeaway": "頸暈噁心想椎動脈；最大壓迫測試主要測神經根。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "頭暈噁心屬椎動脈而非頸動脈，各選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-003",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "頸因性頭痛（cervicogenic headache）典型為單側、不會換邊、疼痛不劇烈且非搏動性，源自頸椎結構。C 完整描述這些特徵，最符合。",
+   "why_others": {
+    "A": "頸因性頭痛多與上頸椎有關，不是 C5～C6。",
+    "B": "這只描述部位，不足以代表頭痛的特徵。",
+    "D": "描述的是叢發性、偏頭痛或雷擊性等其他型頭痛。"
+   },
+   "takeaway": "頸因性頭痛：單側不換邊、非劇烈、非搏動，來自上頸椎。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "頸因性頭痛單側不換邊、非劇烈非搏動的特徵與各選項分析正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-004",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "低頭時頭暈無力、扶額頭可緩解，加上上頸椎後側出現腫塊，提示可能有上頸椎不穩或結構性病變，屬於危險徵象（red flag）。應先轉介醫師確認，再決定治療。",
+   "why_others": {
+    "A": "在未排除不穩或病變前就訓練，有風險。",
+    "B": "放鬆肌肉無法處理結構問題，也可能加重不穩。",
+    "C": "視動訓練針對頸因性暈眩，不適用於此危險徵象。"
+   },
+   "takeaway": "頸部出現腫塊加神經症狀，先轉介，不急著治療。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "疑上頸椎不穩屬危險徵象應轉介，推理合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-005",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "頭後直大肌與下頭斜肌都附著在樞椎（C2）的棘突，所以①④正確。",
+   "why_others": {
+    "A": "上頭斜肌起於寰椎（C1）橫突，不附著 C2 棘突。",
+    "B": "頭後直小肌起於寰椎後結節，上頭斜肌起於寰椎橫突，皆不在 C2 棘突。",
+    "D": "兩者都附著在寰椎（C1），而不是 C2 棘突。"
+   },
+   "takeaway": "附著 C2 棘突的是頭後直大肌與下頭斜肌。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "頭後直大肌與下頭斜肌起於C2棘突，其餘附著點描述正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-006",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "頸椎前凸增加時，後方的小面關節與後側結構受壓縮，被拉長的反而是前縱韌帶等前側結構，後側韌帶張力並非增加，所以 D 錯誤。",
+   "why_others": {
+    "A": "正常頸椎為前凸，約 30～40 度，敘述可接受。",
+    "B": "正常弧度下重力線通過下頸椎椎體，敘述正確。",
+    "C": "前凸變小，椎間盤承受的壓力較大，敘述正確。"
+   },
+   "takeaway": "前凸增加壓在後方關節，前凸減少則增加椎間盤負荷。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "前凸增加時後側結構受壓、前側被拉長，D錯誤的說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-007",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "閉口閉鎖是關節盤前脫位且無法復位，髁突卡在盤後方，嘴巴張不開。張口閉鎖則是關節盤後脫位，髁突卡在盤前方，嘴巴合不起來，所以 B 正確。",
+   "why_others": {
+    "A": "兩種脫位方向說反了。",
+    "C": "張口閉鎖不是前脫位造成。",
+    "D": "閉口閉鎖不是後脫位造成。"
+   },
+   "takeaway": "閉口閉鎖多為盤前脫位，張口閉鎖多為盤後脫位。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "閉口閉鎖為盤前脫位不可復位、張口閉鎖對應盤後脫位，說明與承認答案一致。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-008",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "張口初期下頜過早前突，是舌骨上肌群與外翼肌（lateral pterygoid）的協調不佳，使髁突過早前滑。所以治療重點在重新訓練兩者協調。",
+   "why_others": {
+    "B": "應讓舌頭頂住上顎再張嘴，而非頂下排門牙後方。",
+    "C": "訓練時可視情況給予輕阻力或回饋，並非不應給。",
+    "D": "舌頂硬顎是靠舌肌與舌骨上肌控制動作，不是外翼肌限制前滑。"
+   },
+   "takeaway": "張口早期前突是舌骨上肌與外翼肌協調不良。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "早期前突為舌骨上肌與外翼肌不協調、應舌頂上顎張口，說明合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-009",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "對側（左）側彎使症狀加重，是因為拉長了臂神經叢；同側（右）側彎減輕，是因為放鬆神經。手放頭上可降低神經張力而緩解，因此較像臂神經叢病變。",
+   "why_others": {
+    "A": "神經根壓迫多在同側側彎、椎間孔變窄時加重，與此相反。",
+    "C": "腋網症候群（axillary web syndrome）多見於乳房或腋下手術後，與病史不符。",
+    "D": "脊髓病變多為雙側症狀與動作笨拙，並非單側分佈。"
+   },
+   "takeaway": "對側側彎加重、手放頭上緩解，想神經叢受牽拉。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "answer_disputed",
+    "reason": "拇食中指皮節分布加上手放頭上緩解（Bakody／肩外展緩解徵象）是頸神經根壓迫的典型表現，選A較站得住，詳解把肩外展緩解解釋成臂神經叢病變也不正確。",
+    "fails": [
+     "blind_mismatch",
+     "answer_disputed"
+    ]
+   }
+  },
+  {
+   "id": "112-2-ORTHO-010",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "最大頸椎壓擠測試是頸椎後伸、側彎並旋轉後再加壓，可使椎間孔縮小，並可能壓迫椎動脈，因此可用來測試椎動脈是否受壓。",
+   "why_others": {
+    "A": "拉離測試是減輕神經根壓迫來確認神經根症狀。",
+    "B": "上肢張力測試是檢查神經的張力與敏感度。",
+    "D": "Sharp-Purser 測試檢查寰樞椎前向不穩。"
+   },
+   "takeaway": "壓擠測試可兼測椎動脈；Sharp-Purser 測寰樞椎不穩。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "最大壓擠姿勢可同時壓迫椎動脈，其餘測試用途描述正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-011",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "e9bcfef5477b",
+   "why_correct": "A 向前滑動與 D 向後滑動兩者都可由口外施力，手不必伸進病人嘴裡，所以兩者都承認。原公布答案只有 D，後來更正為 A 或 D 均給分。",
+   "why_others": {
+    "B": "尾向牽拉常以拇指放在下排臼齒上施力，要戴手套伸入口內。",
+    "C": "此方向的操作需口內接觸牙齒施力，不符本題要求。"
+   },
+   "takeaway": "顳頜關節鬆動術是否入口，要看施力接觸點在口內還是口外。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "已說明更正為A或D均給分，B、C需口內接觸的說明合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-012",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "圖中治療師手托住病人上抬的一側腳跟，檢查另一腳是否往下壓。正常想抬腿時對側腳會自動下壓，若完全沒有下壓，表示病人沒有真正用力，可能是裝病，這是 Hoover test。",
+   "why_others": {
+    "A": "禮貌患者現象不是這個測試所指的現象。",
+    "B": "沒有下壓並不代表有足夠力量，反而提示沒有出力。",
+    "D": "此測試是 Hoover test，Burns test 是另一種檢查。"
+   },
+   "takeaway": "Hoover test：抬腿時對側沒下壓，提示非器質性無力。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "圖示為Hoover test，對側腳跟未下壓提示未真正用力，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-013",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "此病人彎腰、咳嗽與久坐會加重症狀，直膝抬腿陽性，提示椎間盤突出，急性期應減少腰椎屈曲負荷。馬桶座增高墊可減少坐下與起身時的髖腰屈曲，緩解症狀。",
+   "why_others": {
+    "A": "不建議完全臥床 1～2 週，且中心化是反應而非休息的目標。",
+    "B": "持續牽引並非此情境的合適建議，這種時間處方也沒有依據。",
+    "C": "腳墊會增加髖屈曲與腰椎屈曲，加重椎間盤壓力。"
+   },
+   "takeaway": "盤突急性期避免腰椎屈曲，如坐時用增高墊。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "椎間盤突出急性期避免腰椎屈曲、增高墊減少屈曲，各選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-014",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "仰臥時以股直肌收縮，可使髂骨向前旋轉，用來矯正髂骨後旋轉失能（posterior rotation dysfunction）。",
+   "why_others": {
+    "A": "恥骨向下切變是用髖屈或伸的方式處理，並非靠股直肌。",
+    "C": "前旋轉失能需要用相反方向的肌肉收縮與擺位。",
+    "D": "髂骨內展失能的處理是針對骨盆的橫向位置，不是股直肌的旋轉。"
+   },
+   "takeaway": "股直肌收縮使髂骨前旋，用於矯正後旋失能。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "股直肌收縮使髂骨前旋以矯正後旋失能，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-015",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "慢性下背痛的臨床指引中，間歇性機械式腰椎牽引並未得到強等級的證據支持，其餘各項都有較強的建議。",
+   "why_others": {
+    "A": "運動或徒手治療搭配疼痛神經科學衛教，有強證據。",
+    "B": "皮拉提斯與肌力訓練等主動治療有強證據。",
+    "D": "腰椎關節鬆動術有強等級支持。"
+   },
+   "takeaway": "慢性下背痛：牽引的證據較弱，主動治療與衛教較強。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "2021 CPG中機械式牽引無強等級支持，其餘有較強建議，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-016",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "Wells 準則中，6 個月內惡性腫瘤治療、12 週內全身麻醉大手術、以及整條腿腫脹，都會提高深層靜脈栓塞的可能性，所以①②③全選。",
+   "why_others": {
+    "A": "漏掉①惡性腫瘤治療。",
+    "B": "漏掉②近期全身麻醉手術。",
+    "C": "漏掉③整條腿腫脹。"
+   },
+   "takeaway": "Wells：癌症、近期大手術、全腿腫脹都加分。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "三項皆為Wells criteria的加分項目，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-017",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "硬膜（dura）疼痛常是非局部性的大面積疼痛，且可往下傳到大腿以下，B 說不會到大腿以下是錯的。",
+   "why_others": {
+    "A": "胰臟病變可牽連到下背部，敘述正確。",
+    "C": "小面關節的骨性關節炎常有早晨僵硬，敘述正確。",
+    "D": "仰躺使背痛增加，要懷疑神經或占位性病變，敘述正確。"
+   },
+   "takeaway": "硬膜疼痛的範圍大，可能傳到腿部遠端。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "硬膜疼痛為非節段性大範圍疼痛，B敘述錯誤，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-018",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "骨盆交叉症候群（pelvic crossed syndrome）是髂腰肌與豎棘肌緊縮，腹肌與臀肌無力，所以髂腰肌比臀肌短縮的敘述正確。",
+   "why_others": {
+    "B": "骨盆前傾時 ASIS 反而比 PSIS 低。",
+    "C": "腹肌是無力而被拉長，豎棘肌才是緊縮。",
+    "D": "此症候群的重點是臀肌與腹肌無力，膕旁肌並非主要無力的肌肉。"
+   },
+   "takeaway": "骨盆交叉：髂腰肌與豎棘肌緊，腹肌與臀肌弱。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "骨盆交叉症候群髂腰肌與豎棘肌緊、腹肌與臀肌弱，骨盆前傾ASIS較低，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-019",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "脊椎狹窄是椎管或椎間孔結構變窄。肌肉痙攣是暫時的功能性反應，不是造成結構性狹窄的原因，所以 D 錯誤。",
+   "why_others": {
+    "A": "椎間盤突出會佔據椎管空間。",
+    "B": "骨刺增生會使椎管或椎間孔變窄。",
+    "C": "脊椎滑脫會使椎管變窄。"
+   },
+   "takeaway": "狹窄的原因是結構性的，肌肉痙攣不算。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "肌肉痙攣非結構性狹窄成因，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-020",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "伸直導向的病人脫離急性期後，應逐步恢復正常動作與運動，不會要求絕對避免彎腰。A 的說法過於絕對，所以錯誤。",
+   "why_others": {
+    "B": "屈曲導向病人急性期可穿護腰支持，敘述合理。",
+    "C": "彎腰就痛、站直較舒服屬伸直導向，走路與拐杖輔助是合理的處置。",
+    "D": "無承重導向用牽引減輕症狀，敘述合理。"
+   },
+   "takeaway": "Delitto 分類：導向決定處置，不用絕對避免某方向動作。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "伸直導向脫離急性期無須絕對避免彎腰，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-021",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "環狀纖維（annulus fibrosus）撕裂後可以部分癒合，只是強度不如原本，A 說不可能再癒合是錯的。",
+   "why_others": {
+    "B": "青壯年的盤突風險較高，敘述正確。",
+    "C": "有側向偏移時應先矯正，敘述正確。",
+    "D": "節間不穩定時，核心肌群訓練很重要，敘述正確。"
+   },
+   "takeaway": "環狀纖維撕裂可部分修復，不是完全不癒合。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "環狀纖維外層有血供可部分癒合，A錯誤，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-022",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "左凸的胸椎側彎，凹側在右。跪坐前趴雙手前伸後再主動側彎向左，會使右側凹側的軟組織被拉長，達到牽張目的。",
+   "why_others": {
+    "A": "向右側彎會使凹側縮短。",
+    "C": "向右旋轉無法有效牽張右側的凹側。",
+    "D": "軀幹旋轉並非此牽張運動針對凹側的設計。"
+   },
+   "takeaway": "牽張要拉長凹側：左凸側彎就向左側彎。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "左凸側彎凹側在右，向左側彎可牽張凹側，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-023",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "脊柱側彎是三維的變形，主要表現為額狀面側彎與水平面旋轉的姿勢異常，所以 B 正確。",
+   "why_others": {
+    "A": "結構性側彎多為特發性，結構性長短腳是造成功能性側彎的常見原因。",
+    "C": "椎體向凸側旋轉，凸側的肋骨會向後隆起，而非向前凸。",
+    "D": "凸側症狀多與肌肉疲勞有關，不一定損傷脊神經根。"
+   },
+   "takeaway": "側彎是額狀面加水平面的三維異常。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "側彎為額狀面加水平面異常，凸側肋骨後隆起，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-024",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "左髂骨較高時，骨盆姿勢與腰椎旋轉方向沒有必然的對應，腰椎向左旋轉與其他三項表現的關係最小，所以最不吻合。",
+   "why_others": {
+    "A": "髂骨較高側髖關節常呈現些微內收，吻合。",
+    "C": "胸椎代償向右側彎，與左髂骨高的情況吻合。",
+    "D": "右側薦髂關節面較水平，可與骨盆高低差相符。"
+   },
+   "takeaway": "骨盆高低差看側彎與髖內收的代償方向。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "reasoning_error",
+    "reason": "詳解以「骨盆與腰椎旋轉沒有必然對應」作理由不正確，應說明左髂骨高時腰椎向左側彎、依耦合動作會向右旋轉，故向左旋轉不吻合。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-ORTHO-025",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "SLAP 修復後，肱二頭肌長頭附著處需要保護，術後一個月內應避免對肘屈曲施加負重，否則會拉扯修復處，所以 A 最不恰當。",
+   "why_others": {
+    "B": "溫和的外展等長收縮可早期進行。",
+    "C": "肩胛平面 0～90 度的被動屈曲是常見的早期活動。",
+    "D": "術後前幾週以吊帶保護，是合理的處置。"
+   },
+   "takeaway": "SLAP 術後早期避免二頭肌負重與主動用力。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "SLAP術後早期應避免二頭肌負重，其餘處置合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-026",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "吹號手徵象（Hornblower's sign）是檢查小圓肌：病人把手帶到嘴前時，若外轉無力，手臂會代償性過度外展，所以 B 正確。",
+   "why_others": {
+    "A": "這是抵抗內轉的肌力檢查，並非吹號手徵象。",
+    "C": "這是另一種肩部測試，非吹號手徵象。",
+    "D": "這是在檢查外轉的維持能力，是另一類測試。"
+   },
+   "takeaway": "吹號手徵象：手到嘴時手臂代償外展，測小圓肌。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "吹號手徵象為手到嘴時代償外展，測小圓肌，說明正確。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "112-2-ORTHO-027",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "外展 0 度時被動外轉最先受限且 X 光正常，符合黏連性肩關節囊炎（adhesive capsulitis）的關節囊型態。",
+   "why_others": {
+    "B": "嚴重關節炎在 X 光上通常會看到關節間隙變窄或骨贅。",
+    "C": "急性鈣化性肌腱炎 X 光可見鈣化，且急性劇痛。",
+    "D": "閉鎖性後脫位的 X 光常有異常，不是正常。"
+   },
+   "takeaway": "被動外轉最受限且 X 光正常，想黏連性肩關節囊炎。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "外轉受限且X光正常符合沾黏性關節囊炎，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-028",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "肩外展約 75 度時抗阻外轉，是用來測試小圓肌（teres minor）的等長收縮能力，因為此姿勢下棘下肌的貢獻較小。",
+   "why_others": {
+    "B": "大圓肌是內轉與伸肌，不負責外轉。",
+    "C": "棘上肌的測試是在肩胛平面抗阻外展。",
+    "D": "棘下肌多在手臂貼身旁外轉的姿勢下測試。"
+   },
+   "takeaway": "外展位抗阻外轉測小圓肌，貼身測棘下肌。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "外展位抗阻外轉測小圓肌，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-029",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "胸小肌過緊會使肩胛前傾、內轉，也可能壓迫胸廓出口處的神經血管，所以①與③需確認胸小肌。",
+   "why_others": {
+    "A": "②的肩胛上抬與後縮與胸小肌緊縮不符。",
+    "B": "④盂肱關節內轉缺損主要與後關節囊緊繃有關。",
+    "D": "②與④都和胸小肌緊縮的關係較小。"
+   },
+   "takeaway": "胸小肌緊：肩胛前傾內轉與胸廓出口症候群。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "胸小肌緊使肩胛前傾內轉並可壓迫胸廓出口，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-030",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "後關節囊緊縮會使肱骨頭向前上位移，與肩夾擠及 SLAP 傷害有關；胸廓出口症候群是神經血管在頸胸之間被壓迫，與後關節囊無關。",
+   "why_others": {
+    "B": "後關節囊緊縮使肱骨頭上移，會導致夾擠。",
+    "C": "它與投擲者的 SLAP 傷害有關。",
+    "D": "後關節囊緊縮的結果就是肱骨頭過度向前上位移。"
+   },
+   "takeaway": "後關節囊緊縮：夾擠、SLAP、肱骨頭前上移。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "後關節囊緊縮與夾擠、SLAP、肱骨頭前上移相關，與TOS無關，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-031",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "運動時沒有疼痛並不足以代表可以回場，還需要確認肌力、活動度、肩胛控制與功能表現恢復，所以 A 最不適當。",
+   "why_others": {
+    "B": "手術的療效不一定優於保守治療，敘述合理。",
+    "C": "胸椎活動度降低可用鬆動術，有助減輕肩痛。",
+    "D": "肩胛穩定運動適用於各類肩夾擠運動員，敘述合理。"
+   },
+   "takeaway": "回場看功能恢復，不能只看無痛。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "回場不能只看無痛，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-032",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "Neer 測試是在肩內轉的姿勢下，被動讓肩沿肩胛平面屈曲到最大角度，用來檢查肩峰下夾擠。",
+   "why_others": {
+    "B": "Hawkins-Kennedy 是肩屈曲 90 度後被動內轉。",
+    "C": "喙突夾擠徵象是屈曲加水平內收的姿勢。",
+    "D": "仰臥夾擠測試是在仰臥位進行，擺位不同。"
+   },
+   "takeaway": "Neer：內轉下被動屈曲到底；Hawkins：屈曲90度後內轉。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "Neer測試為內轉下沿肩胛平面被動屈曲至最大，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-033",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "背太重的書包會壓迫鎖骨上方與下方的神經血管，是胸廓出口症候群的成因之一。",
+   "why_others": {
+    "A": "最常見的是前斜角肌與中斜角肌緊，而不是後斜角肌。",
+    "B": "主要壓迫的是臂神經叢與鎖骨下血管，不是腋神經。",
+    "D": "測試結果並不是這個症候群的必要敘述，題意不符。"
+   },
+   "takeaway": "胸廓出口症候群：重背包與斜角肌、肋鎖間隙壓迫。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "reasoning_error",
+    "reason": "D的說明含糊且誤導，Rockwood測試是檢查肩前向不穩，並非胸廓出口症候群的測試，詳解未指出此點。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-ORTHO-034",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "舉手末段 10～20 度才痛且位於肩峰前方，提示肩鎖關節夾擠。水平內收測試會壓縮肩鎖關節，可用來確認。",
+   "why_others": {
+    "B": "Neer 測試主要檢查肩峰下夾擠。",
+    "C": "跳動測試（jerk test）檢查肩後向不穩。",
+    "D": "驚恐測試（apprehension test）檢查肩前向不穩。"
+   },
+   "takeaway": "肩鎖關節問題用水平內收測試。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "水平內收測試壓縮肩鎖關節，其餘測試用途描述正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-035",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "GIRD 常與後關節囊緊繃使肱骨頭向前上位移有關，並不是過度向後移動，所以 C 錯誤。",
+   "why_others": {
+    "A": "常見於過肩運動的運動員，敘述正確。",
+    "B": "與肱骨頭後旋增加有關，是 GIRD 的成因之一，敘述可接受。",
+    "D": "後關節囊緊繃是主要原因之一，敘述正確。"
+   },
+   "takeaway": "GIRD：後關節囊緊，肱骨頭前上移而非後移。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "GIRD與後關節囊緊使肱骨頭前上移有關，C錯誤，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-036",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "手指逃離現象（finger escape sign）是小指無法內收，與尺神經支配的骨間肌無力或頸髓病變有關，而不是正中神經病變，所以 C 錯誤。",
+   "why_others": {
+    "A": "此現象可稱為手指逃離現象，敘述正確。",
+    "B": "頸髓病變可出現此現象，敘述正確。",
+    "D": "小指外展的表現又稱 Wartenberg sign，敘述可接受。"
+   },
+   "takeaway": "小指無法內收：尺神經或頸髓問題，不是正中神經。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "小指無法內收與尺神經或頸髓病變有關，非正中神經，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-037",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "後外側旋轉不穩定的常見原因是外側尺側副韌帶（LUCL）受損，橈骨頭向後外側半脫位，而不是橈側副韌帶斷裂及橈骨頭向前脫位。",
+   "why_others": {
+    "A": "動作時可有關節內雜音，敘述正確。",
+    "B": "屈曲約 30～40 度且旋後時最不穩，敘述正確。",
+    "D": "椅子上撐起測試可協助判斷，敘述正確。"
+   },
+   "takeaway": "肘後外側旋轉不穩：LUCL 受損，橈骨頭後外側移位。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "後外側旋轉不穩源於LUCL損傷、橈骨頭後外側半脫位，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-038",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "鬆脫小體會造成肘伸直與屈曲的卡住或閉鎖，主要影響屈伸，不是前臂旋前旋後受限最明顯，所以 C 錯誤。",
+   "why_others": {
+    "A": "鬆脫小體是肘內部障礙的原因之一，敘述正確。",
+    "B": "活動受限呈現非關節囊型態，敘述正確。",
+    "D": "分離性骨軟骨炎是主要原因，敘述正確。"
+   },
+   "takeaway": "肘鬆脫小體：屈伸卡住，非關節囊型態。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "鬆脫小體主要影響屈伸，非旋前旋後，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-039",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "內上髁炎（medial epicondylitis）影響屈腕與旋前肌群的共同肌腱，肘伸直時被動伸腕會拉長這些肌肉而誘發疼痛，所以 A 正確。",
+   "why_others": {
+    "B": "重複伸腕會引起疼痛，是外上髁炎的表現。",
+    "C": "常合併的是尺神經問題，而非橈神經。",
+    "D": "抗阻肘伸直與內上髁炎的關係不大，主要是抗阻屈腕或旋前。"
+   },
+   "takeaway": "內上髁炎：被動伸腕與抗阻屈腕、旋前誘發疼痛。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "內上髁炎肘伸直下被動伸腕誘發疼痛，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-040",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "手部功能性姿勢（functional position）是讓內在肌與外在肌維持在休息長度，既不過度縮短也不過度拉長，所以選休息長度。",
+   "why_others": {
+    "A": "延展位置是過度拉長，不是功能姿勢。",
+    "C": "最短位置易造成攣縮。",
+    "D": "外展位置並非描述肌群長度的擺位重點。"
+   },
+   "takeaway": "手的功能性姿勢：內外在肌維持在休息長度。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "功能性姿勢使內外在肌維持休息長度，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-041",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "尺側副韌帶術後需保護修復處，避免橈側偏移的外翻應力。鉸鏈式副木（hinge splint）限制側向應力，又允許掌指關節在屈伸平面活動，適合術後復健階段使用。",
+   "why_others": {
+    "A": "手術與否需和對側比較、看有無明確終點，不能只憑單一角度決定。",
+    "B": "術後通常保護掌指關節，不必全面限制指間關節。",
+    "D": "側邊指握會對修復中的韌帶施加外翻應力，初期應避免。"
+   },
+   "takeaway": "拇指尺側副韌帶術後：保護外翻應力，用鉸鏈副木，晚期才練側捏。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "鉸鏈式副木限制側向應力、A需與對側比較及終點感、B僅需保護MCP、D早期避免側捏，皆正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-042",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "側邊指握（lateral pinch）主要靠拇指內收與屈曲肌群，由尺神經與正中神經支配的肌肉完成。橈神經損傷主要影響腕與手指伸直，不會直接讓側捏力量下降，故本敘述錯誤。",
+   "why_others": {
+    "A": "腕隧道症候群為正中神經壓迫，感覺與精細動作受影響，持針線困難。",
+    "B": "蓋恩氏通道為尺神經壓迫，手內在肌無力，強力抓握受限。",
+    "D": "橈神經損傷使手指伸直無力，難以張開手放開物品。"
+   },
+   "takeaway": "側捏看尺神經與正中神經，橈神經傷主要是伸腕伸指。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "側捏主要由尺神經與正中神經支配肌完成，詳解以此說明C為錯誤敘述，其餘選項解釋合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-043",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "大拇指根部背側、用力捏握時疼痛，考慮拇指腕掌關節退化或第一背側間室腱鞘炎（de Quervain）。Phalen's測試是檢查腕隧道症候群（正中神經），與此症狀無關。",
+   "why_others": {
+    "A": "可檢查拇指腕掌關節活動度與疼痛，與關節退化相關。",
+    "B": "牽拉伸拇短肌可誘發第一背側間室肌腱疼痛，與腱鞘炎相關。",
+    "C": "拇指外展肌群（含拇長外展肌）等長收縮可誘發同一間室疼痛。"
+   },
+   "takeaway": "拇指根部背側痛看第一背側間室與腕掌關節，Phalen's屬腕隧道。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "拇指根部背側痛考慮CMC退化或de Quervain，Phalen's屬腕隧道檢查，各選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-044",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "鈕扣孔變形（Boutonnière deformity）是中央腱束（central slip）在中節指骨底的止點斷裂，近端指間關節無法伸直而屈曲。圖中C位於近端指間關節上方、止於中節指骨的中央束。",
+   "why_others": {
+    "A": "A是遠端終末腱，斷裂造成槌狀指（mallet finger）。",
+    "B": "B是側腱束，不是鈕扣孔變形的主要斷裂處。",
+    "D": "D在近端側方，屬骨間肌與蚓狀肌來源的結構，非中央束。"
+   },
+   "takeaway": "中央束斷裂是鈕扣孔變形，終末腱斷裂是槌狀指。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "附圖C為中央束、A為終末腱、B為側腱束、D為近端骨間肌/蚓狀肌區，鈕扣孔變形對應中央束斷裂，與圖相符。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-045",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "Ely's測試陽性是屈膝時同側髖關節屈曲（臀部抬起），表示同側股直肌緊縮；並非對側髖屈曲。因此此敘述錯誤。",
+   "why_others": {
+    "B": "此測試檢查股直肌與髂腰肌的緊縮。",
+    "C": "趴臥時髖維持屈曲姿勢，代表髂腰肌緊縮。",
+    "D": "屈膝時同側髖屈曲增加，代表股直肌緊縮。"
+   },
+   "takeaway": "Ely's測試看同側髖是否隨屈膝而屈曲，陽性即股直肌緊。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "Ely's測試陽性為同側髖屈曲而非對側，詳解與承認答案一致且其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-046",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "退化性髖關節炎的典型疼痛在鼠蹊部或大腿前內側，常放射到膝。大轉子附近的外側疼痛較像大轉子疼痛症候群（滑液囊或臀肌肌腱病變），所以此敘述錯誤。",
+   "why_others": {
+    "B": "進入發炎階段常有晨僵。",
+    "C": "蹲下站起需大範圍髖屈曲與負重，常受影響。",
+    "D": "保守治療要處理症狀，並預防或改善關節囊緊縮以維持活動度。"
+   },
+   "takeaway": "髖關節炎痛在鼠蹊，外側大轉子痛要想到肌腱或滑液囊問題。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "髖關節炎典型痛在鼠蹊部，大轉子外側痛較像大轉子疼痛症候群，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-047",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "站立時左ASIS較高而真實腳長相同，屬功能性長短腳。右臀中肌無力的特徵是單腳站立時對側骨盆下降，雙腳靜態站立並不會使左側ASIS抬高，因此最不相關。",
+   "why_others": {
+    "B": "腳長相同而骨盆不對稱，符合功能性長短腳。",
+    "C": "左髖內收肌群短縮可使左側骨盆相對抬高。",
+    "D": "右髖外展肌群短縮可使右側骨盆相對下降，左側顯得較高。"
+   },
+   "takeaway": "骨盆不對稱但腳長相等是功能性，臀中肌無力看單腳站立。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "腳長相等屬功能性，左內收肌或右外展肌短縮皆可使左ASIS較高，右臀中肌無力不會造成此靜態表現，推理正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-048",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "髖關節外夾擠中，subspine（髂前下棘）夾擠常見於年輕男性運動員，主訴前髖部或鼠蹊疼痛，與選項B描述相符。",
+   "why_others": {
+    "A": "髂腰肌夾擠的疼痛多在前髖或鼠蹊，不是非特定部位。",
+    "C": "坐骨股骨夾擠較常見於中年女性，不是年輕男性。",
+    "D": "坐骨股骨夾擠是坐骨與股骨之間的空間狹窄所造成的夾擠，並非牽拉傷害。"
+   },
+   "takeaway": "subspine夾擠多見年輕男性，痛在前髖或鼠蹊。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "subspine夾擠多見年輕男性、前髖鼠蹊痛；坐骨股骨夾擠多見中年女性且屬空間狹窄，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-049",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "此測試為Patrick（FABER）測試。陽性是受測腳膝部無法壓到與對側等高，或誘發疼痛。膝部能放到與對側等高代表活動正常，屬陰性，所以B錯誤。",
+   "why_others": {
+    "A": "腳放在對側膝上、屈曲外展外轉，正是Patrick測試。",
+    "C": "髖病變、髂腰肌痙攣或薦髂關節病變皆可造成陽性。",
+    "D": "figure-of-four即相同姿勢的牽拉，可協助判斷。"
+   },
+   "takeaway": "Patrick陽性是膝無法下壓到對側水平或誘發疼痛。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "Patrick測試陽性為膝無法降至對側高度或誘發疼痛，B把陰性說成陽性，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-050",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "髕股關節疼痛常見的緊縮包括髕骨外側支持帶，會把髕骨向外拉。髕骨肌腱與膕肌不是典型緊縮，股內斜肌常是無力而非緊縮，因此只有②正確。",
+   "why_others": {
+    "A": "髕骨肌腱不是髕股疼痛的典型緊縮結構。",
+    "C": "膕肌不是常見緊縮結構。",
+    "D": "股內斜肌常見的是無力或延遲啟動，而非緊縮。"
+   },
+   "takeaway": "髕股疼痛：外側支持帶緊，股內斜肌弱。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "髕股疼痛典型緊縮為外側支持帶，股內斜肌多為無力，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-051",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "前大腿挫傷時患者會避免股四頭肌用力。站立期骨盆前傾可使重心線落在膝前，靠被動伸直力矩穩定膝關節，減少股四頭肌負擔，是最易見的代償。",
+   "why_others": {
+    "B": "髖內轉與減少股四頭肌用力無直接關係。",
+    "C": "擺盪期膝屈曲會牽拉受傷的股直肌，患者較會減少屈曲。",
+    "D": "站立期膝內翻與股四頭肌用力無直接關係。"
+   },
+   "takeaway": "股四頭肌挫傷：站立期以骨盆前傾代償減少股四頭肌用力。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.35,
+    "verdict": "pass",
+    "reason": "以站立期骨盆前傾使重心落於膝前減少股四頭肌用力的代償說明合理，其餘選項解釋正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-052",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "股骨外側髁發育不足使髕骨缺乏外側限制，股骨前傾與脛骨外轉都使Q角變大，使髕骨容易外移，是結構性原因。低位髕骨不是，易造成軌跡問題的是高位髕骨。",
+   "why_others": {
+    "B": "④低位髕骨不是軌跡不良的原因，高位髕骨才是。",
+    "C": "漏掉③脛骨外轉過大造成Q角變大。",
+    "D": "③雖是，但④不是，且漏了①②。"
+   },
+   "takeaway": "髕骨軌跡不良：外側髁不足、Q角變大、高位髕骨。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "外側髁不足、股骨前傾與脛骨外轉增加Q角皆為結構性原因，低位髕骨不是，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-053",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "髂脛束摩擦症候群較常見於O型腿（genu varum）使髂脛束張力增加者，而非X型腿，所以C錯誤。",
+   "why_others": {
+    "A": "疼痛多在膝屈曲約30度承重時，即髂脛束摩擦股骨外上髁處。",
+    "B": "爬樓梯或斜坡跑步會增加摩擦而加劇疼痛。",
+    "D": "Noble compression test在屈膝90度逐漸伸直至約30度時，於股骨外髁誘發疼痛，為陽性。"
+   },
+   "takeaway": "髂脛束症候群：屈膝約30度痛，與O型腿較相關。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "髂脛束摩擦症候群與O型腿較相關，屈膝約30度疼痛與Noble測試描述正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-054",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "前十字韌帶受傷後的不穩定，需把肌力訓練與神經肌肉再教育結合；膝後外側隱痛可能與外側腓腸肌損傷有關，①②正確。",
+   "why_others": {
+    "B": "單腳跳躍測試常用於評估回場，③錯誤；④也錯，踝部肌力仍需評估。",
+    "C": "③說不建議使用單腳跳躍測試是錯的。",
+    "D": "④不需評估踝肌力是錯的，下肢整體需評估。"
+   },
+   "takeaway": "ACL後：神經肌肉訓練，跳躍測試作回場參考，全下肢都要評估。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "神經肌肉訓練與外側腓腸肌相關膝後痛正確，單腳跳躍測試可作回場參考、踝肌力仍需評估，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-055",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "外樞軸旋轉位移測試（lateral pivot shift test）檢查前十字韌帶缺損所造成的前外向旋轉不穩定，膝由伸直往屈曲時脛骨外側平台會復位。",
+   "why_others": {
+    "A": "Hughston's drawer test是前後抽屜與旋轉位置的抽屜測試，不是此項典型測試。",
+    "C": "反向樞軸位移測試檢查後外側不穩定。",
+    "D": "外轉反屈測試檢查後外側角結構。"
+   },
+   "takeaway": "前外向旋轉不穩定看lateral pivot shift，後外側用reverse與反屈。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "lateral pivot shift測ACL缺損的前外向旋轉不穩定，reverse pivot shift與外轉反屈測後外側，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-056",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "圖中膝微屈，一手固定股骨、另一手向前拉脛骨，是Lachman測試，主要檢查前十字韌帶。過度伸直傷害是前十字韌帶的常見受傷機轉。",
+   "why_others": {
+    "B": "後十字韌帶用後抽屜測試，方向為向後推。",
+    "C": "內側半月板用McMurray或Apley等測試。",
+    "D": "髂脛束用Ober或Noble測試。"
+   },
+   "takeaway": "Lachman：膝微屈，向前拉脛骨，測前十字韌帶。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "附圖為膝微屈、一手固定股骨一手向前拉脛骨的Lachman測試，檢查前十字韌帶，說明與圖相符。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-057",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "渥太華踝準則（含Buffalo修正）在外踝或內踝後緣或尖端上方6公分內壓痛、第五蹠骨基部壓痛、舟狀骨壓痛，都需考慮拍X光。四項皆符合。",
+   "why_others": {
+    "A": "漏掉內踝上方6公分內壓痛。",
+    "B": "漏掉第五蹠骨基部與舟狀骨。",
+    "C": "漏掉外踝與內踝部位的壓痛。"
+   },
+   "takeaway": "渥太華踝：內外踝6公分、第五蹠骨基部、舟狀骨。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "渥太華踝準則含內外踝6公分內、第五蹠骨基部與舟狀骨壓痛，四項皆符合，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-058",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "非承重時蹠趾關節背屈70度，承重時只剩15度，表示結構本身可動，問題出在承重時足部排列，如扁平足造成絞盤機制（windlass）失效。下一步應檢查後足與前足排列。",
+   "why_others": {
+    "B": "大腳趾僵硬（hallux rigidus）非承重時活動度也會減少，且Morton's test用於神經瘤。",
+    "C": "小腿前腔室壓迫症候群與蹠趾背屈角度差異無關。",
+    "D": "前側夾擠不會造成承重才減少的蹠趾背屈。"
+   },
+   "takeaway": "非承重正常、承重受限：先查足部排列與絞盤機制。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "非承重正常、承重受限指向功能性拇趾受限與足部排列問題，Morton's test屬神經瘤檢查，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-059",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "屈膝時腓腸肌放鬆，背屈20度；伸膝時腓腸肌被拉長，背屈剩10度，代表腓腸肌過緊（Silfverskiöld test）。",
+   "why_others": {
+    "A": "關節囊攣縮，屈膝與伸膝時背屈都會受限。",
+    "B": "股四頭肌無力與踝背屈角度無關。",
+    "C": "脛前肌無力影響主動背屈，不影響被動背屈角度。"
+   },
+   "takeaway": "屈膝背屈變大、伸膝變小：腓腸肌緊。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "伸膝背屈較屈膝受限代表腓腸肌過緊，關節囊攣縮兩者都受限，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-060",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "反覆扭傷的優先評估是神經肌肉控制與本體感覺、韌帶鬆弛及肌力失衡。功能性扁平足不是扭傷後常見的優先問題，所以不是首要考量。",
+   "why_others": {
+    "A": "慢性踝不穩常因本體感覺與神經肌肉控制不良。",
+    "B": "病理性關節鬆弛是反覆扭傷的重要原因。",
+    "D": "肌力不平衡，如腓骨肌無力，會導致反覆扭傷。"
+   },
+   "takeaway": "反覆踝扭傷：先查本體感覺、鬆弛、肌力失衡。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "反覆扭傷優先評估本體感覺、病理性鬆弛與肌力失衡，功能性扁平足非優先，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-061",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "錘狀趾的皮膚結繭多在近端趾間關節背側與趾尖，蹠趾關節則在蹠側承重處；選項把蹠側與背側位置說反，故錯誤。",
+   "why_others": {
+    "A": "典型為蹠趾關節伸直、近端趾間關節屈曲。",
+    "C": "最常出現在第二趾。",
+    "D": "常與鞋子不合或拇趾外翻相關。"
+   },
+   "takeaway": "錘狀趾：MTP伸、PIP屈，繭在PIP背側。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "錘狀趾繭位於PIP背側與蹠骨頭蹠側，B把位置說反，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-062",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "穩定型跑鞋提供內側支撐，以控制過度旋前，適合輕中度後足旋前的跑者。",
+   "why_others": {
+    "A": "旋後足需要緩衝型鞋，而非內側支撐。",
+    "B": "第一蹠趾關節背屈不足需處理活動度或搭配鞋底設計，不是穩定鞋的主要對象。",
+    "D": "馬蹄足的主要問題是背屈受限，需要處理踝活動度，不是穩定鞋。"
+   },
+   "takeaway": "穩定型跑鞋適合過度旋前的後足。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "穩定型跑鞋以內側支撐控制過度旋前，適合輕中度後足旋前，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-063",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "阿基里斯腱發炎的疼痛通常在被動背屈（牽拉）與主動施力時出現；被動蹠屈時肌腱不被牽拉，通常不痛，所以B錯誤。",
+   "why_others": {
+    "A": "過度使用型疼痛常活動後加劇，休息後減緩。",
+    "C": "後足跟或踝後疼痛可能與滑液囊發炎有關。",
+    "D": "三角骨症候群疼痛位置在踝後，與阿基里斯腱位置相近。"
+   },
+   "takeaway": "阿基里斯腱痛：背屈牽拉痛，被動蹠屈不痛。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "阿基里斯腱炎疼痛在被動背屈牽拉與主動施力時，被動蹠屈通常不痛，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-064",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "蹠骨痛的疼痛在蹠骨頭下方；若在蹠骨之間觸診疼痛，較像Morton神經瘤。所以B錯誤。",
+   "why_others": {
+    "A": "踮腳尖使蹠骨頭承重增加，會誘發疼痛。",
+    "C": "橫弓塌陷使蹠骨頭承重改變，可造成蹠骨痛。",
+    "D": "阿基里斯腱過緊使前足負荷增加，可導致蹠骨痛。"
+   },
+   "takeaway": "蹠骨痛在蹠骨頭下，蹠骨間疼痛想Morton神經瘤。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "蹠骨痛壓痛在蹠骨頭下，蹠骨間痛較像Morton神經瘤，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-065",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "呼吸暫停（apnea）可能與橋腦受傷有關，Cheyne-Stokes呼吸常因腦部損傷或雙側大腦、間腦受損造成，所以①②正確。呼吸急促不能直接指向延腦受傷。",
+   "why_others": {
+    "B": "③的說法不成立，延腦受傷不是以呼吸急促為典型表現。",
+    "C": "③錯誤，且漏了②。",
+    "D": "③錯誤。"
+   },
+   "takeaway": "異常呼吸型態對應腦部不同受傷位置，橋腦與腦部損傷要記。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.35,
+    "verdict": "pass",
+    "reason": "Cheyne-Stokes與大腦/間腦損傷相關，呼吸急促不對應延腦受傷，說明與承認答案一致。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-066",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "老化時胃酸分泌通常減少，而非提升，所以D錯誤。",
+   "why_others": {
+    "A": "老化使胰島素敏感度下降，葡萄糖耐受力降低。",
+    "B": "老化使維生素D吸收與皮膚合成減少。",
+    "C": "老化時β腎上腺素受體反應度下降，最大心率與心輸出反應減弱。"
+   },
+   "takeaway": "老化：胃酸減少、葡萄糖耐受差、β受體反應下降。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "老化胃酸分泌減少，葡萄糖耐受、維生素D吸收與β受體反應皆下降，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-067",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "脾臟問題的傳導痛在左肩（Kehr's sign），不是右肩，所以C錯誤。",
+   "why_others": {
+    "A": "腎臟問題可引起同側肩部傳導痛。",
+    "B": "膽囊問題可引起右肩傳導痛。",
+    "D": "心臟問題常引起左肩（或左臂）傳導痛。"
+   },
+   "takeaway": "脾臟傳導痛在左肩，膽囊在右肩。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "脾臟傳導痛在左肩（Kehr's sign），其餘配對正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-068",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "預防骨質疏鬆需要負重運動與阻力訓練，刺激骨質生成；只選擇非負重運動對骨密度刺激不足，所以不是正確方法。",
+   "why_others": {
+    "A": "足夠鈣與維生素D有助骨骼健康。",
+    "B": "戒菸與適量飲酒可降低骨質流失風險。",
+    "D": "阻力訓練可增加骨密度與肌力。"
+   },
+   "takeaway": "預防骨質疏鬆要負重與阻力運動，非負重不足。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "預防骨質疏鬆需負重與阻力運動，非負重運動刺激不足，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-069",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "停經後纖細且吸菸的女性、長期使用類固醇、身高減少並有駝背（Dowager's hump）者，都是骨質疏鬆高風險，應建議檢查。每天一罐啤酒屬適量，過重也非危險因子，不足以單獨建議。",
+   "why_others": {
+    "A": "漏掉③身高減少與駝背。",
+    "B": "④不足以單獨建議，且漏了①②。",
+    "D": "④不是明確的高風險條件。"
+   },
+   "takeaway": "骨密度檢查對象：停經瘦小吸菸、長期類固醇、身高減少駝背。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "①②③為骨質疏鬆高風險，每日一罐啤酒與過重男性不足以建議檢查，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-070",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "背痛、下肢水腫、呼吸短促與便祕，是子宮變大、重心前移並壓迫腹腔與血管所造成，最常見於第三孕期。",
+   "why_others": {
+    "A": "第一孕期子宮尚小，多為孕吐與疲倦。",
+    "B": "第二孕期症狀通常較輕。",
+    "D": "第四孕期指產後階段，不是懷孕過程。"
+   },
+   "takeaway": "子宮增大的壓迫症狀在第三孕期最明顯。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "子宮增大造成的背痛、水腫、喘與便祕在第三孕期最明顯，第四孕期為產後，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-071",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "腹直肌分離（diastasis recti）常以肚臍位置兩側腹直肌分開超過2公分或2指幅寬為判斷標準。",
+   "why_others": {
+    "B": "腹直肌分離可造成腹壁與核心的功能下降，不只是外觀。",
+    "C": "腹直肌分離與腹壁對子宮的保護有關。",
+    "D": "腹直肌張力較佳者較不易出現。"
+   },
+   "takeaway": "腹直肌分離：肚臍處超過2公分或2指寬。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "腹直肌分離以肚臍處超過2公分或2指寬判定，會影響功能與子宮保護，腹肌張力佳者較不易發生，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-072",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "前十字韌帶的主要功能是限制脛骨前移，所以前十字韌帶鬆弛時，貼紮須限制脛骨上端向前位移。",
+   "why_others": {
+    "A": "限制內翻是外側副韌帶的功能。",
+    "B": "限制外翻是內側副韌帶的功能。",
+    "D": "限制脛骨後移是後十字韌帶的功能。"
+   },
+   "takeaway": "前十字韌帶限制脛骨前移，後十字韌帶限制後移。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "ACL限制脛骨前移，其餘選項分別對應LCL、MCL、PCL，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-073",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "阿基里斯腱拉傷後回場評估著重疼痛、承重功能與踝肌力。髖與膝活動度正常不是此傷的監控重點，所以不屬必要項目。",
+   "why_others": {
+    "A": "跑步無痛是回場的基本條件。",
+    "B": "載重弓箭步測試陰性代表踝背屈與腱功能足夠。",
+    "D": "踝肌力正常是回場的重要條件。"
+   },
+   "takeaway": "阿基里斯腱回場看無痛、載重測試與踝肌力。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "阿基里斯腱回場重點為跑步無痛、載重弓箭步測試與踝肌力，髖膝活動度非監控重點，說明合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-074",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "冰敷或冰按摩可降低本體感覺與肌肉反應、減少肌力表現，上場前使用會增加再受傷風險，故較不宜。",
+   "why_others": {
+    "B": "動態伸展可提高暖身效果，適合上場前。",
+    "C": "淋巴引流按摩可協助消腫，上場前使用相對較無不利。",
+    "D": "核心肌力訓練有助穩定與預防再傷害。"
+   },
+   "takeaway": "競技前避免冰敷，以免降低本體感覺與表現。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "上場前冰敷會降低本體感覺與肌肉表現，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-075",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "可在2週內自行癒合的傷口，新生皮膚脆弱，需要保濕保護，並避免曬太陽，故B正確。",
+   "why_others": {
+    "A": "新生皮膚應避免日曬，易色素沉澱與受傷。",
+    "C": "超過3週才癒合的傷口易有增生性疤痕，更需要按摩與壓力治療。",
+    "D": "按摩有助疤痕軟化與成熟，不宜因時間有限而省略。"
+   },
+   "takeaway": "燒燙傷新生皮膚：保濕、防曬，延遲癒合者更需疤痕處理。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "兩週內癒合之新生皮膚需保濕並避免日曬，延遲癒合者更需按摩與壓力治療，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-076",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "傷口仍有滲血時，不必等完全癒合才加壓，可先用彈性繃帶搭配敷料；等待過久會增加水腫與疤痕風險，所以C錯誤。",
+   "why_others": {
+    "A": "彈性繃帶可支撐植皮處血管，控制水腫與疤痕增生。",
+    "B": "傷口可承受摩擦後即整天穿戴壓力衣，通常需穿戴一年以上。",
+    "D": "壓力治療能使疤痕柔軟並減輕敏感與搔癢。"
+   },
+   "takeaway": "燒燙傷加壓不必等完全癒合，早期彈性繃帶即可使用。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "加壓不必等傷口完全癒合，可先以彈性繃帶搭配敷料，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-077",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "完整減腫脹治療（complete decongestive therapy）包含手法淋巴引流、壓縮治療、皮膚照護與減腫運動。肢體抬高不屬核心項目。",
+   "why_others": {
+    "B": "皮膚照護屬核心項目。",
+    "C": "壓縮治療屬核心項目。",
+    "D": "減腫運動屬核心項目。"
+   },
+   "takeaway": "CDT：手法引流、壓縮、運動、皮膚照護。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "CDT核心為手法淋巴引流、壓縮、運動與皮膚照護，肢體抬高非核心項目，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-078",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "幻肢痛盛行率很高，可達八成左右，常見的性質為灼熱痛、疼痛與抽筋感，所以①②正確。",
+   "why_others": {
+    "B": "③錯誤，幻肢痛可被外在刺激誘發。",
+    "C": "③錯誤。",
+    "D": "④錯誤，幻肢痛可能隨時間減輕或消失。"
+   },
+   "takeaway": "幻肢痛很常見，可被刺激誘發，也可能隨時間減輕。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "幻肢痛盛行率高、常見灼熱/疼痛/抽筋感，可被外在刺激誘發且可能隨時間減輕，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-079",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "殘肢彈性繃帶宜用8字型包紮，並可加強拍打殘肢以降低敏感度，所以②④正確。包紮需遠端加壓、近端漸減，且皮膚保養並非完全禁止乳液。",
+   "why_others": {
+    "A": "①壓力方向錯誤，應遠端較大、近端漸減；③過於絕對。",
+    "B": "③過於絕對，不是必須禁用乳液。",
+    "D": "①壓力方向錯誤。"
+   },
+   "takeaway": "殘肢包紮：8字型、遠端加壓近端漸減，並做脫敏。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "殘肢以8字型包紮、遠端壓力較大，並以拍打脫敏，①③錯誤，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-ORTHO-080",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "義足在足跟著地時旋轉，多與足跟緩衝過硬或阻力過高有關；踝蹠屈緩衝擋阻力太低，常表現為足底拍地（foot slap），所以D錯誤。",
+   "why_others": {
+    "A": "繞行步態主要出現在擺盪期。",
+    "B": "義肢過長時，患者需要繞行才能讓腳通過。",
+    "C": "足跟向內或向外旋轉（whip）主要與義肢對線或懸吊問題有關。"
+   },
+   "takeaway": "緩衝擋太軟是足拍地，足跟著地旋轉想阻力過硬。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "足跟著地義足旋轉多因足跟緩衝過硬，緩衝擋太軟表現為足拍地，說明正確。"
+   }
+  }
+ ]
+}

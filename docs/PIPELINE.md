@@ -115,6 +115,18 @@ App 端怎麼使用題庫（篩選、統計、更新）不在這裡。
 - 先用 `--only 114-2/NEURO` 跑一份試卷看品質與用量，再全跑。`--force` 重跑已通過的題；人工寫的（`source = human`）不會被動到。
 - 重生成條件：JSON 存的 `answers_hash`（`sha256("{排序後的 accepted_answers 以逗號連接}|{is_voided 0/1}")` 前 12 碼）和 `data/json` 現況不同（答案被更正）→ 下次執行自動重寫、重審。`rejected` 且 hash 一致的不會自動重跑（改了提示詞要重跑用 `--force`）。
 
+### 子代理分批（不需要 API key；`python -m pipeline.explain_batches`）
+
+規則、提示詞、通過條件都和 API 版相同，只是三個角色各自是一個子代理批次，結果寫成 JSON 檔再匯入：
+
+1. `--export DIR --years 110-112 [--only 110-1/NEURO] [--limit N] [--force] [--batch-size 40]`：每份試卷切成 40 題一批（`<年-次>_<科目>_<序號>`），產生 `DIR/writer/*.md`（題目＋答案＋主題）與 `DIR/blind/*.md`（**只有題目**），附圖轉成 `DIR/figures/<id>.png` 讓子代理用 Read 看；`DIR/manifest.json` 記每批的題目 id 與 `answers_hash`。
+2. 一批一個子代理（寫手與盲解互不依賴，可同時開）：只讀那份批次檔與附圖，結果寫到 `DIR/results/<角色>/<批次>.json`（`{"batch": …, "results": [{id, …}]}`；寫手的 `why_others` 是 `{"A": "…"}` 物件）。盲解的批次檔沒有答案，子代理也被要求不讀題庫與其他檔案。
+3. `--export-check DIR`：寫手格式合格、盲解有結果的題才產生 `DIR/check/*.md`（含承認答案、盲解結果與待審詳解）；格式不合格的直接不通過。再開一批子代理審。
+4. `--import DIR [--model 標示]`：三種結果合併、照同一套 `judge` 判定後寫進 `data/explanations`；缺題、多題、格式不對只列警告、那題不寫（重跑那份批次再匯入即可）。寫手有、審稿還沒有的題先存成 `pending`。
+   `model` 欄位預設 `subagent writer=sonnet review=opus`（2026-11 跑 110–112 用的組合：寫手 Sonnet、盲解與比對 Opus）。
+
+110–112 年（2,880 題）用這個方式跑的結果：通過 2,581（90%）、不通過 299（推理有錯 167、盲解答錯 153、官方答案有疑 32，一題可能多個原因）；113–115 年用 API 版（Opus 5.5）通過率約 91%。
+
 ### 資料
 
 - `data/explanations/{年}-{次}/{科目}.json`，進 git（build 要能重現）；`parse` 不碰這個目錄。檔案是 `{"exam_id": "114-2-NEURO", "explanations": [...]}`，依 id 排序、一題一筆：

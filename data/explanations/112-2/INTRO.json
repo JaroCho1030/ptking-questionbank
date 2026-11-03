@@ -1,0 +1,1874 @@
+{
+ "exam_id": "112-2-INTRO",
+ "explanations": [
+  {
+   "id": "112-2-INTRO-001",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "小兒麻痺大流行造成大量肢體功能障礙者，急需復健與物理治療人力，是美國與臺灣物理治療發展的共同起源。",
+   "why_others": {
+    "A": "第一次世界大戰主要影響美國早期發展，並非臺灣的起源。",
+    "C": "工業社會需要勞力不是兩地共同的起源因素。",
+    "D": "動作科學與生活品質促進屬後期的專業發展方向，不是起源。"
+   },
+   "takeaway": "美臺物理治療共同起源：小兒麻痺大流行。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "小兒麻痺大流行是美臺共同起源，各選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-002",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "敘述以「直到民國56年才開始」過於絕對，在臺大招收物理治療組學生之前，臺灣已有物理治療人員的訓練，所以此敘述錯誤。",
+   "why_others": {
+    "B": "學會成立與發展專業的敘述屬正確。",
+    "C": "物理治療師法通過後各地成立公會，敘述正確。",
+    "D": "陽光物理治療所為第一家合法物理治療所，敘述正確。"
+   },
+   "takeaway": "留意含「直到…才」的絕對性敘述，歷史題要記年代順序。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "臺大招生前已有物理治療人員訓練，A 為錯誤敘述，其餘選項說明無誤。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-003",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "第一屆亞洲物理治療學生會在臺北召開，這是物理治療學生國際交流的歷史事實。",
+   "why_others": {
+    "A": "東京不是第一屆的召開地點。",
+    "B": "首爾不是第一屆的召開地點。",
+    "C": "香港不是第一屆的召開地點。"
+   },
+   "takeaway": "第一屆亞洲物理治療學生會：臺北。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.3,
+    "verdict": "pass",
+    "reason": "與承認答案一致，未見事實或推理錯誤。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-004",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "ICF 由上而下的取向，先找出病人活動與參與的限制，因為這最貼近病人的生活目標，再往下分析造成限制的身體構造與功能問題，並考量環境與個人因素。",
+   "why_others": {
+    "A": "疾病診斷屬醫學模式，不是 ICF 評估的起點。",
+    "C": "身體構造與功能是往下探究原因的層次，不是優先考量。",
+    "D": "環境與個人因素用來解釋與調整介入，不是先評估的項目。"
+   },
+   "takeaway": "ICF top-down：先看活動與參與，再追溯構造功能。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "ICF top-down 先看活動與參與限制，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-005",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "教育生活、反射完整性、工作生活、生活自理與居家生活及心智功能，都是物理治療測試與測量的類別，因此五項皆屬之。",
+   "why_others": {
+    "B": "漏掉教育生活與工作生活。",
+    "C": "漏掉心智功能。",
+    "D": "漏掉反射完整性與生活自理與居家生活。"
+   },
+   "takeaway": "測試類別涵蓋功能、生活與社會參與各層面。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "五項皆屬 APTA Guide 的測試與測量類別，各選項漏項分析正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-006",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "機構內的物理治療介入給付仍以健保為主；社區、居家與關懷據點則主要由長照服務給付。",
+   "why_others": {
+    "B": "社區服務多走長照給付。",
+    "C": "居家服務多走長照給付。",
+    "D": "關懷據點屬社區式服務，主要由長照給付。"
+   },
+   "takeaway": "機構以健保為主，社區居家據點偏長照給付。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "與承認答案一致，社區、居家、據點偏長照給付的說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-007",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "居家治療時治療師獨自面對病人，無法立即取得醫療支援，必須依靠自己的臨床判斷與經驗，因此此敘述錯誤。",
+   "why_others": {
+    "A": "居家治療需與病人及家屬建立治療性關係，敘述正確。",
+    "B": "運用居家隨手可得的器具是居家治療常見做法，敘述正確。",
+    "D": "居家治療著重平衡、活動、參與等功能結果，敘述正確。"
+   },
+   "takeaway": "居家治療特點：資源有限、須靠自己判斷，著重功能。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "居家治療無法立即取得醫療支援，C 錯誤，其餘說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-008",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "保障身心障礙者參與社會機會，著重弱勢者的公平對待與資源分配，符合情境公義主義的概念。",
+   "why_others": {
+    "A": "實用論重視結果能帶來最大多數人的福祉。",
+    "B": "義務論重視行為本身的義務與規則，不強調弱勢的公平分配。",
+    "C": "責任實用論兼顧責任與結果，不以弱勢保障公平為核心。"
+   },
+   "takeaway": "保障弱勢、公平分配資源：情境公義主義。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "保障弱勢公平參與對應情境公義主義，各學派說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-009",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "「己所不欲，勿施於人」是不論後果、以普遍道德義務作為行為準則，屬義務論（deontology）的主張。",
+   "why_others": {
+    "A": "實用論以結果與整體福祉判斷，會權衡跌倒風險。",
+    "C": "目的論以結果為判準，與以義務為判準的說法不同。",
+    "D": "決疑論依個案類比判斷，不是以普遍規則。"
+   },
+   "takeaway": "義務論重行為本身的義務，目的論與實用論重結果。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "己所不欲勿施於人屬以義務為準則的義務論，其他學派說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-010",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "預立遺囑決定是否接受維生治療，是病人對自己醫療處置自行決定，符合病人自主（autonomy）原則。",
+   "why_others": {
+    "A": "切勿傷害是避免對病人造成傷害。",
+    "B": "行善利人是為病人謀取利益。",
+    "D": "秉持公義是資源與對待的公平分配。"
+   },
+   "takeaway": "病人自己決定醫療處置：病人自主。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "預立醫療決定屬病人自主，四原則定義正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-011",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "安寧緩和醫療條例的最近親屬順序中，成年孫子女排在父母之前，故敘述正確。",
+   "why_others": {
+    "A": "意願書簽署應有二人以上見證，不是一人。",
+    "B": "意願書簽立後可隨時以書面撤回。",
+    "C": "末期病人須由二位醫師診斷，其中一位為相關專科醫師。"
+   },
+   "takeaway": "安寧條例：意願書可撤回，需二位醫師及二人見證。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "二人見證、可書面撤回、二位醫師診斷、成年孫子女先於父母，皆符合條例。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-012",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "依給付與收益多寡而非病人實際需要來決定治療量，是資源分配不公平，違背秉持公義（justice）原則。",
+   "why_others": {
+    "A": "病人自主是病人自行決定，與此情境無關。",
+    "C": "行善利人是為病人謀福祉，此題重點在分配不公。",
+    "D": "告知同意是說明並取得同意，與題意無關。"
+   },
+   "takeaway": "依收益而非需要分配治療：違反公義。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "依給付收益而非需要分配治療屬違反公義，說明與承認答案一致。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "112-2-INTRO-013",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "在長照團隊中不願分享技術，違反團隊合作與共同照顧病人的責任，屬未善盡團隊責任。",
+   "why_others": {
+    "B": "提升專業能力指持續學習，與不分享技術無關。",
+    "C": "實證物理治療指依證據執業，與不分享無關。",
+    "D": "合理報酬是權益，與團隊分享無關。"
+   },
+   "takeaway": "不分享技術、保護地位：違反團隊責任。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "不分享技術違反團隊責任，各選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-014",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "選擇醫療機構、醫師與治療方式是病人自己做決定的權利，屬自主權的基本表現。",
+   "why_others": {
+    "A": "同意權是對特定處置表示同意與否。",
+    "C": "平等權是不受歧視、被公平對待。",
+    "D": "知悉權是獲得病情與醫療資訊。"
+   },
+   "takeaway": "選醫院、醫師、治療方式：自主權。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "選擇醫療機構、醫師與治療方式屬自主權，各權利定義正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-015",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "治療應依病人實際需要提供最專業有效的處置，不應因同情而增加項目，否則可能造成過度治療。",
+   "why_others": {
+    "A": "能否自費不是增加治療的正當理由。",
+    "B": "有保險給付也不代表需要增加治療。",
+    "C": "弱勢身分不是增加治療項目的依據。"
+   },
+   "takeaway": "治療依專業需要，不依同情或付費能力。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "治療應依專業需要而非同情或付費能力，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-016",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "臨床老師在實習生治療病人時隨時指導，是帶領實習生的合理做法，也能顧及病人安全。",
+   "why_others": {
+    "A": "在其他病人面前討論病情會侵犯隱私。",
+    "C": "請實習生辦私人事務屬濫用權力。",
+    "D": "應告知病人並取得同意後才讓實習生觀察。"
+   },
+   "takeaway": "指導實習生須保護病人隱私並告知身分。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "臨床老師應於實習生治療時指導，其餘選項錯誤原因說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-017",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "論文由學生撰寫、教授指導，雙方皆有貢獻，應以兩人名義共同發表，才符合學術倫理。",
+   "why_others": {
+    "A": "忽略教授的指導貢獻，且教授單獨發表仍不當。",
+    "B": "教授單獨具名，忽略學生的實際創作。",
+    "D": "著作財產權不當然歸學校，教授單獨發表的理由不成立。"
+   },
+   "takeaway": "學生論文改寫發表，應共同署名。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "answer_disputed",
+    "reason": "依著作權法與智慧局見解，教授僅提供指導而未參與表達時，學生才是著作人、著作財產權歸學生，A 在法律上較站得住，C 的「兩人共有」有爭議。",
+    "fails": [
+     "blind_mismatch",
+     "answer_disputed"
+    ]
+   }
+  },
+  {
+   "id": "112-2-INTRO-018",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "醫療事故是指醫療從事人員的過失行為所造成的事件，屬可歸責於人員的情形。",
+   "why_others": {
+    "A": "醫療厄運才是適當處置卻產生罕見負面結果。",
+    "C": "強調可預防的不幸，未點出人員過失，非本題所要的定義。",
+    "D": "適當措施卻產生嚴重罕見後果是醫療厄運。"
+   },
+   "takeaway": "醫療事故有人員過失；醫療厄運無過失。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "醫療事故為人員過失、醫療厄運為適當處置卻有罕見負面結果，說明與承認答案一致。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "112-2-INTRO-019",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "無資格而執行物理治療業務屬非法執業，應由檢察官偵查並起訴，並非由法院進行偵查，所以此敘述錯誤。",
+   "why_others": {
+    "B": "共同加害人須負連帶損害賠償責任，敘述正確。",
+    "C": "醫療院所有選任與監督責任，常有連帶責任，敘述正確。",
+    "D": "涉訴時可先諮詢單位與公會法律人士，敘述正確。"
+   },
+   "takeaway": "偵查屬檢察官；牽涉訴訟先找單位與公會協助。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "偵查由檢察官而非法院進行，A 錯誤，其餘說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-020",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "實習生在醫院受病人性騷擾，可依性別工作平等法向醫院申訴，也可依性騷擾防治法向警察機關報案。",
+   "why_others": {
+    "A": "性別平等教育法處理的是校園人員間的事件，病人不屬之。",
+    "B": "同樣包含①，而①不適用。",
+    "D": "包含①，而①不適用。"
+   },
+   "takeaway": "院內性騷擾：性別工作平等法加性騷擾防治法。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "病人非校園人員不適用性平教育法，實習生適用性工法與性騷擾防治法，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-021",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "支出目標制下，超過目標的部分仍會支付，只是之後依規定調整，不是不予支付；因此敘述錯誤。",
+   "why_others": {
+    "A": "總額預算可有效控制醫療費用，敘述正確。",
+    "B": "支出上限制每點支付金額事後結算，屬回溯性，敘述正確。",
+    "D": "點值不固定使醫師收入不穩定，敘述正確。"
+   },
+   "takeaway": "支出上限制超過不付；支出目標制超過仍付。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "reasoning_error",
+    "reason": "takeaway 稱「支出上限制超過不付」不正確，支出上限制是以點值回溯下調方式全部給付，並非超過部分不付。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-INTRO-022",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "直線加幕僚式組織保留直線指揮系統，並由專家幕僚提供督導與建議，適合在診所增設品質管理組。",
+   "why_others": {
+    "A": "直線式沒有專業幕僚單位。",
+    "B": "功能性結構依功能分部門，指揮易重疊。",
+    "D": "矩陣式有雙重指揮，適合專案，對小診所過於複雜。"
+   },
+   "takeaway": "專家提供建議、不直接指揮：直線加幕僚。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "品質管理專家屬幕僚單位，直線加幕僚式最合適，各結構說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-023",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "目標管理強調員工參與設定目標與自我管理，而不是由外聘專家訂定獎懲辦法。",
+   "why_others": {
+    "A": "向員工說明經營理念是準備工作。",
+    "B": "提出行動規畫的書面說明是步驟之一。",
+    "C": "由員工參與設定長短程目標，符合目標管理。"
+   },
+   "takeaway": "目標管理重員工參與設定目標。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "目標管理重員工參與，外聘專家訂獎懲不符，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-024",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "會議管理、產能分析、醫療品質與病安、滿意度及繼續教育記錄，都屬部門運作與管理，歸為組織運作智能。",
+   "why_others": {
+    "A": "資訊管理著重資料與系統。",
+    "B": "人力資源管理著重招募、考核與培訓。",
+    "D": "規劃與預測著重策略與未來需求。"
+   },
+   "takeaway": "部門日常運作與品質事項：組織運作。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "與承認答案一致，各智能範疇說明合理。",
+    "fails": [
+     "blind_mismatch"
+    ]
+   }
+  },
+  {
+   "id": "112-2-INTRO-025",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "現代管理學強調彈性與情境，並不以具體準則與指引作為解決方法；提出具體準則是古典管理學的特點。",
+   "why_others": {
+    "A": "現代管理學注重科際整合與系統分析，敘述正確。",
+    "C": "現代管理理論主要分為系統與權變理論，敘述正確。",
+    "D": "強調經驗、社會體系、決策者與管理程序，敘述正確。"
+   },
+   "takeaway": "現代管理學重系統與權變，不設固定準則。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "以具體準則指引解決問題屬古典管理學，其餘現代管理特點說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-026",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "PDCA 循環由戴明（William Edwards Deming）推廣，用於持續改善品質。",
+   "why_others": {
+    "A": "麥克葛羅格提出 X 理論與 Y 理論。",
+    "B": "波特提出競爭策略與五力分析。",
+    "C": "柯特勒是行銷學學者。"
+   },
+   "takeaway": "PDCA：戴明。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "PDCA 由戴明推廣，其他學者代表理論正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-027",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "C 所述的最低點數與繼續教育規定不符，因此錯誤；其他選項描述的類別、期限與要求皆符合規定。",
+   "why_others": {
+    "A": "課程類別分類符合規定。",
+    "B": "每六年應完成的積分符合規定。",
+    "D": "須包含感染管制及性別議題課程，符合規定。"
+   },
+   "takeaway": "繼續教育：分類、期限、積分與必修議題要熟記。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "reasoning_error",
+    "reason": "C 的錯誤在類別（應為專業品質、專業倫理、專業相關法規合計至少12點，不含專業課程），點數12點本身正確，詳解說成最低點數不符是錯的。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-INTRO-028",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "離職後在原診所已無登記執業，須先辦變更執業處所登記才能執業，僅持舊執照回診所並不合法，所以此敘述錯誤。",
+   "why_others": {
+    "B": "登錄資料會顯示停業與變更日期，敘述正確。",
+    "C": "變更執業地點除了主管機關，也須向公會辦理，敘述正確。",
+    "D": "未登記執業，健保不予支付，敘述正確。"
+   },
+   "takeaway": "執業須登記於執業處所，換地點先辦變更。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "離職後未辦執業登記即執業不合法，A 錯誤，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-029",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "醫療機構的損害賠償責任也有限定條件，並非所有損害都須負責，因此敘述錯誤。",
+   "why_others": {
+    "A": "醫療業務應善盡必要注意，敘述正確。",
+    "B": "醫事人員民事責任以故意或違反注意義務為限，敘述正確。",
+    "C": "刑事責任限於違反注意義務且逾越合理裁量，敘述正確。"
+   },
+   "takeaway": "醫療責任須有故意或違反注意義務，不是結果責任。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "醫療法第82條醫療機構以故意或過失為限負賠償責任，D 錯誤，其餘正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-030",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "醫療廣告不得以摘錄醫學刊物內容的方式刊登，故 D 違法。",
+   "why_others": {
+    "A": "機構名稱、地址與電話等屬可刊登事項。",
+    "B": "醫師姓名、學經歷與證書字號屬可刊登事項。",
+    "C": "非商業性保險特約字樣屬可刊登事項。"
+   },
+   "takeaway": "醫療廣告可登基本資訊，不可摘錄刊物內容。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "摘錄醫學刊物內容為醫療法禁止的廣告方式，其餘為第85條可刊登事項。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-031",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "軟組織鬆動、懸吊運動與義肢使用訓練及指導，都屬物理治療師的業務範圍。",
+   "why_others": {
+    "A": "漏掉④義肢之使用訓練及指導。",
+    "C": "③運動營養品建議不屬於物理治療師法所列業務。",
+    "D": "③運動營養品建議不屬於物理治療師法所列業務。"
+   },
+   "takeaway": "營養品建議不屬物理治療師業務範圍。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "運動營養品建議不屬物理治療師業務，其餘選項分析正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-032",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "室外通路淨寬規定比室內走廊更寬，並不是 120 公分，所以 B 錯誤。",
+   "why_others": {
+    "A": "室內走廊寬度規定符合規範。",
+    "C": "出入口淨寬與門框距離規定符合規範。",
+    "D": "通路地面應平整、防滑，符合規範。"
+   },
+   "takeaway": "無障礙通路：地面平整防滑，室外通路比室內更寬。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "室外通路淨寬應不小於130公分而非120，B 錯誤，其餘符合規範。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-033",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "電線不需全部捲起，只要妥善固定、避開走道即可，治療時仍須接電使用，因此敘述錯誤。",
+   "why_others": {
+    "A": "依消防法規出入口至少要有兩個，敘述正確。",
+    "B": "醫療區域安全優先於動線便利，敘述正確。",
+    "D": "充電式設備可減少電線並增加空間彈性，敘述正確。"
+   },
+   "takeaway": "空間設計：安全優先，電線固定避開走道。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "電線不必全部捲起、妥善固定即可，C 錯誤，其餘說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-034",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "改善工作環境屬工作條件與保健因素，與訓練及發展人員能力無直接關係。",
+   "why_others": {
+    "B": "鼓勵參加研討會屬訓練與發展。",
+    "C": "加強工作豐富性可促進成長，屬發展。",
+    "D": "獎勵醫學研究可促進專業成長，屬發展。"
+   },
+   "takeaway": "訓練發展指提升能力，環境改善不屬之。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "改善工作環境屬工作條件而非訓練發展，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-035",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "新機構以低於市場的價格薄利多銷，目的在快速打入市場、搶占病患，屬市場滲透定價。",
+   "why_others": {
+    "A": "成本加成是在成本上加固定利潤。",
+    "B": "認知價值依顧客認為的價值定價。",
+    "D": "目標利潤依預期報酬率定價。"
+   },
+   "takeaway": "低價搶市場：市場滲透定價。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "低價薄利多銷搶市場屬市場滲透定價，其他定價法定義正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-036",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "C 的收費做法與部分負擔規定不符，需要後續修正，故為本題錯誤選項。",
+   "why_others": {
+    "A": "榮民免收部分負擔，簡單治療處理無誤。",
+    "B": "尚未取得重大傷病證明，視為一般民眾而收費，處理無誤。",
+    "D": "此情況不收部分負擔，處理無誤。"
+   },
+   "takeaway": "部分負擔看身分、證明與申報項目。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "reasoning_error",
+    "reason": "詳解未說明 C 違反哪項部分負擔規定，D 只稱「此情況不收」而未給依據（一般車禍骨折並非免部分負擔身分），推理不足以支持結論。",
+    "fails": [
+     "blind_mismatch",
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-INTRO-037",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "最後離開者應確認風扇與空調關閉，以免空氣流動助長火勢蔓延，這是正確做法。",
+   "why_others": {
+    "A": "應先依院內程序通報，由院內統一處理。",
+    "B": "廣播應使用代碼，避免引起恐慌。",
+    "C": "門窗可關閉以阻隔火煙，但不可上鎖，以免妨礙逃生與救援。"
+   },
+   "takeaway": "火警撤離：關空調、關門不上鎖、代碼廣播。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "撤離前關閉空調風扇正確，院內通報、代碼廣播、關門不上鎖說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-038",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "價值鏈流程依序為掛號取得轉介單、評估與介入、紀錄與簽核，最後批價請款，順序為②①③④。",
+   "why_others": {
+    "A": "順序錯誤。",
+    "C": "批價請款應在紀錄簽核之後。",
+    "D": "評估不能在掛號與轉介之前。"
+   },
+   "takeaway": "流程：掛號轉介、治療、紀錄簽核、批價。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "掛號轉介、評估介入、紀錄簽核、批價的順序與說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-039",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "品質保證的目的是確保並提升服務品質，不是單純偵測錯誤。",
+   "why_others": {
+    "A": "提供病患最佳服務是品質保證的目的。",
+    "C": "保證病患得到標準照顧是品質保證的目的。",
+    "D": "增加病患滿意度是品質保證的目的。"
+   },
+   "takeaway": "品質保證重在確保品質，不是找錯。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.35,
+    "verdict": "pass",
+    "reason": "與承認答案一致，品質保證重在確保提升品質的說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-040",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "挑選實證資源看重證據品質與易用，不需要涵蓋各種語言的文獻，所以 C 不適合當篩選準則。",
+   "why_others": {
+    "A": "涵蓋範圍與特異度是合適的篩選準則。",
+    "B": "能區分證據品質高低是合適的篩選準則。",
+    "D": "可得性與取得途徑是合適的篩選準則。"
+   },
+   "takeaway": "挑資源看證據品質與易取得，不看語言多寡。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "涵蓋各種語言文獻不是挑選實證資源的必要準則，其餘說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-041",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "實證醫學強調整合最佳研究證據、臨床專業與病人價值偏好，並不是以醫療人員自身的價值觀與偏好為主要決定因素，所以此敘述錯誤。",
+   "why_others": {
+    "B": "同一證據在不同資源與情境下，決策可能不同，敘述正確。",
+    "C": "決策必須權衡利益與傷害，敘述正確。",
+    "D": "只有研究證據不夠，還需考量專業判斷與病人偏好，敘述正確。"
+   },
+   "takeaway": "實證決策＝研究證據＋臨床專業＋病人價值，三者缺一不可。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "實證醫學三要素與各選項判斷皆正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-042",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "前景問題（foreground question）須包含病人族群、介入、成效，C 指明慢性腦中風、物理治療介入與行走速度，最能據以搜尋文獻回答。",
+   "why_others": {
+    "A": "屬背景問題，過於籠統。",
+    "B": "問評估方法，不是介入成效。",
+    "D": "問如何設計，未指定介入與成效，不夠具體。"
+   },
+   "takeaway": "前景問題要含 PICO：族群、介入、對照、成效。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "前景問題需具 PICO 要素，C 最符合，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-043",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "實證第五步驟是評估前四步的表現與成效。依以前所學訓練只是憑經驗，並未檢討實證流程，因此最不適合；其餘選項都在回頭檢視各步驟或結果。",
+   "why_others": {
+    "A": "檢視評析步驟是否適當，屬自我評估。",
+    "C": "檢視提問步驟是否恰當，屬自我評估。",
+    "D": "測量行走速度看成效，屬評估結果。"
+   },
+   "takeaway": "實證第五步是自我評估整個流程與介入成效。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "第五步驟為評估流程與成效，B 憑過去所學不屬評估，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-044",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "有效搜尋文獻的問題應包含 PICO：病人或疾病（P）、治療方法（I）、對照措施（C）與成效（O），故選 A。",
+   "why_others": {
+    "B": "缺對照與成效，病因並非必要要素。",
+    "C": "缺對照措施，年齡也非核心要素。",
+    "D": "缺成效，病因並非必要要素。"
+   },
+   "takeaway": "PICO：族群、介入、對照、成效。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "PICO 要素對應 A，其餘選項缺漏要素說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-045",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "陰性概似比 LR– ＝（1－敏感度）÷ 特異度＝（1－0.9）÷ 0.8＝0.125。",
+   "why_others": {
+    "A": "誤用其他算法，非 LR–。",
+    "B": "約為 LR+ 計算錯誤的結果。",
+    "D": "無對應的正確公式。"
+   },
+   "takeaway": "LR–＝（1－敏感度）÷特異度；LR+＝敏感度÷（1－特異度）。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "reasoning_error",
+    "reason": "B 的 4.5 正好是正確的 LR+（0.9÷0.2），詳解卻說是「LR+ 計算錯誤的結果」，與事實不符。",
+    "fails": [
+     "reasoning_error"
+    ]
+   }
+  },
+  {
+   "id": "112-2-INTRO-046",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "概似比用來評估診斷測試的準確度，不是衡量重測或評分者間一致性的信度指標，所以不適合檢測信度。",
+   "why_others": {
+    "A": "ICC 是常用的信度指標。",
+    "B": "變異係數可反映重複測量的變異程度。",
+    "D": "測量標準誤反映信度下的測量誤差大小。"
+   },
+   "takeaway": "概似比屬診斷效度；ICC、SEM 屬信度。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "概似比屬診斷準確度指標，ICC、CV、SEM 皆可用於信度，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-047",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "AMSTAR 2 用來評估系統性回顧的方法學品質，不是評析單一隨機對照試驗的工具。",
+   "why_others": {
+    "A": "CASP 有針對 RCT 的評析清單。",
+    "B": "RoB 2 專門評估隨機試驗的偏誤風險。",
+    "C": "PEDro 量表用來評估物理治療 RCT 品質。"
+   },
+   "takeaway": "AMSTAR 2 評系統性回顧；RoB 2、PEDro 評 RCT。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "AMSTAR 2 用於系統性回顧，其餘為 RCT 評析工具，正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-048",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "應用證據需考量資源可行性、效益符合期待、病人願意承擔風險，即②③④。個案不必與研究族群完全相同，只要相似到可合理套用即可。",
+   "why_others": {
+    "A": "①不必完全符合，且漏了②③。",
+    "B": "含不必要的①，漏了④。",
+    "D": "含不必要的①。"
+   },
+   "takeaway": "應用證據看資源、效益與病人意願，不要求族群完全相同。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "個案不需完全符合研究族群，②③④為應用條件，各選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-049",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "探討父母的經驗與感受屬主觀經驗問題，適合用質性研究（qualitative research），以訪談等方式深入了解。",
+   "why_others": {
+    "B": "世代研究用於探討暴露與結果的關聯。",
+    "C": "隨機對照研究用於檢驗介入成效。",
+    "D": "前瞻性世代研究同樣探討暴露與結果的關聯。"
+   },
+   "takeaway": "經驗、感受類問題選質性研究。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "經驗類問題適合質性研究，其餘設計用途說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-050",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "臨床指引通常涵蓋某疾病或照護的多個面向與多個臨床問題，並非只聚焦單一問題的單一面向，所以此敘述錯誤。",
+   "why_others": {
+    "B": "指引由多方利益相關者共同組成團隊發展，正確。",
+    "C": "建議還需考量利弊、資源與病人價值，正確。",
+    "D": "指引涵蓋範圍廣，耗時通常比系統性回顧長，正確。"
+   },
+   "takeaway": "臨床指引範圍廣，涵蓋多個臨床問題。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "臨床指引涵蓋多個臨床問題，其餘敘述說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-051",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "CINAHL 是需付費訂閱的資料庫，並非免費，所以「可免費使用」不是它的優點。",
+   "why_others": {
+    "B": "資料庫可提示相關的限制條件，屬其優點。",
+    "C": "收錄物理治療相關期刊，屬其優點。",
+    "D": "可用來搜尋質性研究等經驗問題，屬其優點。"
+   },
+   "takeaway": "CINAHL 需付費；PubMed 免費。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "CINAHL 需付費訂閱，不是免費，其餘優點說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-052",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "控制組接受已有證據的傳統療法，受試者都有接受治療，倫理上最站得住腳，也不會剝奪既有有效治療。",
+   "why_others": {
+    "A": "控制組完全不治療，剝奪受試者治療機會。",
+    "B": "被動關節活動對上肢動作功能療效有限，易被質疑。",
+    "D": "多階段停止治療，受試者長時間未獲治療。"
+   },
+   "takeaway": "對照組應給予標準療法，避免不給任何治療。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "控制組給予傳統有效療法最符合倫理，其餘選項說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-053",
+   "status": "rejected",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "臨床詢問（clinical queries）功能是 PubMed 提供的，不是 CINAHL 的功能，所以 C 錯誤。",
+   "why_others": {
+    "A": "PEDro 收錄物理治療的隨機試驗、系統性回顧與臨床指引，正確。",
+    "B": "系統性回顧資料庫是考科藍圖書館的重要資料庫，正確。",
+    "D": "PubMed 可免費使用，正確。"
+   },
+   "takeaway": "Clinical queries 是 PubMed 的功能。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.5,
+    "verdict": "answer_disputed",
+    "reason": "CINAHL（EBSCOhost）確實提供 Clinical Queries 限制功能，C 並非錯誤敘述，四個選項似皆正確，詳解稱此功能僅 PubMed 有也不正確。",
+    "fails": [
+     "answer_disputed"
+    ]
+   }
+  },
+  {
+   "id": "112-2-INTRO-054",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "依中央極限定理與大數法則，n 越大，樣本平均數越接近母群體平均數 μ，各次抽樣平均數的變異（標準誤）越小，故①③正確。",
+   "why_others": {
+    "A": "②④與定理相反。",
+    "C": "④說法錯誤，變異會變小。",
+    "D": "②說法錯誤，會更接近而非遠離。"
+   },
+   "takeaway": "樣本數越大，標準誤越小，平均越接近 μ。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "樣本數越大平均數越接近 μ 且標準誤越小，①③正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-055",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "無母數分析法對資料分布假設較少，但在符合母數假設時檢定力通常較低，並非判錯機率比較小，所以 A 不是優點。",
+   "why_others": {
+    "B": "不需常態假設，是其優點。",
+    "C": "可處理類別資料，是其優點。",
+    "D": "小樣本難以確認分布時可使用，是其優點。"
+   },
+   "takeaway": "無母數法假設少，但檢定力通常不及母數法。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "無母數法檢定力通常較低，判錯機率並非較小，其餘優點正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-056",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "①的信賴區間完全位於 0 的右側且整段越過臨床顯著意義虛線，表示有統計顯著差異，且效果達臨床意義，支持實驗組有效。",
+   "why_others": {
+    "B": "區間下限雖大於 0，但跨過臨床意義線，不能確定達臨床意義。",
+    "C": "區間跨過 0，未達統計顯著。",
+    "D": "區間跨過 0 且偏向控制組，不支持實驗組。"
+   },
+   "takeaway": "信賴區間需不含 0 且全在臨床意義線之外才算有效。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "依附圖①整段位於臨床意義線右側，②③④描述與圖相符。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-057",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "比值（相對風險）的信賴區間不包含 1 才表示有顯著差異。①（0，0.4）與④（1.2，3）皆不含 1，故①④有顯著差異。",
+   "why_others": {
+    "A": "③區間含 1，不顯著。",
+    "B": "②區間含 1，不顯著。",
+    "D": "②③區間含 1，不顯著。"
+   },
+   "takeaway": "比值型指標的 95% 信賴區間不含 1 才顯著。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "比值信賴區間不含 1 才顯著，①④符合，判讀正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-058",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "運動組進步率 10/40＝25%，控制組 2/40＝5%，絕對風險差為 20%。NNT＝1÷0.2＝5。",
+   "why_others": {
+    "A": "約為 1÷25%，漏減控制組。",
+    "C": "計算錯誤。",
+    "D": "計算錯誤。"
+   },
+   "takeaway": "NNT＝1÷絕對風險差。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "ARR＝25%−5%＝20%，NNT＝5，計算正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-059",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "胃潰瘍病人的胃酸分泌可能正常或偏低，主要與黏膜防禦功能受損有關；十二指腸潰瘍才較常有胃酸過度分泌。",
+   "why_others": {
+    "A": "最常發生於胃與十二指腸，不是食道。",
+    "B": "十二指腸潰瘍典型為空腹或夜間上腹痛，進食後緩解。",
+    "C": "幽門螺旋桿菌相關比例很高但非幾乎 100%，其他原因如非類固醇消炎藥。"
+   },
+   "takeaway": "胃潰瘍胃酸可正常或低；十二指腸潰瘍常偏高。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "胃潰瘍胃酸可正常或偏低，其餘選項錯誤原因說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-060",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "三陰型乳癌指 ER（雌激素受體）、PR（黃體素受體）與 HER2 三者皆為陰性，故選②③④。",
+   "why_others": {
+    "A": "BRCA1 是基因突變，不是三陰型的受體。",
+    "C": "P53 不是三陰型定義的受體。",
+    "D": "含 BRCA1 與 P53，皆不屬三陰型定義。"
+   },
+   "takeaway": "三陰：ER、PR、HER2 皆陰性。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "三陰型為 ER、PR、HER2 陰性，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-061",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "DeBakey Type I 剝離從升主動脈起，延伸至主動脈弓與降主動脈，即升、降主動脈皆受影響。",
+   "why_others": {
+    "B": "Type II 僅限於升主動脈。",
+    "C": "Type III 起自降主動脈，不含升主動脈。",
+    "D": "DeBakey 分類只有 I 至 III 型。"
+   },
+   "takeaway": "DeBakey I 涵蓋升至降主動脈；II 僅升；III 僅降。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "DeBakey I 型涵蓋升至降主動脈，各型說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-062",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "脊髓損傷會破壞自律神經對腸道與括約肌的控制，造成神經性腸道功能障礙，常見便秘，因此是神經性便秘的常見原因。",
+   "why_others": {
+    "A": "失智症便秘多與活動量、飲食等有關，不是典型神經性便秘。",
+    "B": "帶狀疱疹是皮膚神經痛，不典型造成便秘。",
+    "C": "腰椎關節炎主要影響疼痛與活動，不是典型神經性便秘。"
+   },
+   "takeaway": "脊髓損傷常見神經性腸道功能障礙與便秘。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "脊髓損傷造成神經性腸道功能障礙與便秘，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-063",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "腦外傷多為廣泛性或額顳葉損傷，較常併有注意、記憶、執行等認知功能障礙；出血性中風多為局部病灶，以肢體癱瘓為主。",
+   "why_others": {
+    "A": "癱瘓嚴重度通常是出血性中風較明顯。",
+    "B": "腦部出血量並非腦外傷的主要特徵。",
+    "D": "腦外傷也可能有語言障礙。"
+   },
+   "takeaway": "腦外傷常見廣泛認知功能障礙。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "腦外傷多為瀰漫性損傷，較常有認知障礙，說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-064",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "病史符合類風濕性關節炎（rheumatoid arthritis），此病與 HLA-DR4 相關，故最可能 HLA-DR4 陽性。",
+   "why_others": {
+    "B": "類風濕性關節炎的抗 CCP 抗體多為陽性。",
+    "C": "RF 多為陽性。",
+    "D": "關節液出現結晶物質是痛風或假性痛風的特徵。"
+   },
+   "takeaway": "類風濕性關節炎：HLA-DR4、RF 與抗 CCP 陽性。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "臨床表現符合類風濕性關節炎，與 HLA-DR4 相關，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-065",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "評估甲狀腺功能首選 TSH 與游離 T4（free T4），可判斷功能狀態與異常原因；游離 T4 才是有生理活性者。",
+   "why_others": {
+    "A": "總 T4 易受結合蛋白影響，不如游離 T4。",
+    "C": "TRH 非首選檢測，且用總 T4。",
+    "D": "TRH 非首選檢測項目。"
+   },
+   "takeaway": "甲狀腺功能首選 TSH 加 free T4。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "甲狀腺功能首選 TSH 與 free T4，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-066",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "傷口癒合依序為止血期、發炎期、增生期、改造期，即②①③④。",
+   "why_others": {
+    "B": "發炎期之前先有止血期。",
+    "C": "順序錯誤，改造期是最後階段。",
+    "D": "改造期應在增生期之後。"
+   },
+   "takeaway": "癒合順序：止血、發炎、增生、改造。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "止血、發炎、增生、改造順序正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-067",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "腰椎麻醉使交感神經被阻斷，下肢血管擴張，血流增加，下肢溫度比上肢略高，是麻醉成功的徵象之一。",
+   "why_others": {
+    "A": "腰椎麻醉藥量遠少於硬膜外麻醉。",
+    "B": "琥珀膽鹼是誘發惡性高熱的藥物，解藥是 dantrolene。",
+    "D": "無痛分娩多採硬膜外麻醉，非腰椎麻醉。"
+   },
+   "takeaway": "腰麻劑量小；阻斷交感使下肢較暖。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "腰麻阻斷交感致下肢較暖，其餘選項錯誤原因說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-068",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "蜘蛛膜下出血（subarachnoid hemorrhage）最常見原因是顱內動脈瘤破裂。",
+   "why_others": {
+    "A": "硬膜外出血常因腦膜中動脈受創。",
+    "B": "硬膜下出血常因橋靜脈撕裂。",
+    "C": "顱內出血是廣義名稱，不特指動脈瘤破裂。"
+   },
+   "takeaway": "蜘蛛膜下出血：動脈瘤破裂。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "蜘蛛膜下出血多因動脈瘤破裂，其餘出血成因說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-069",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "有無性經驗的自述不可靠，育齡女性腹痛仍須考慮懷孕包括子宮外孕，不能僅憑自述排除。",
+   "why_others": {
+    "A": "右下腹壓痛是檢查闌尾炎的常規。",
+    "B": "有潰瘍病史加上橫膈下有氣體，應懷疑潰瘍穿孔。",
+    "D": "大量糞便可能是便秘造成腹痛。"
+   },
+   "takeaway": "育齡女性腹痛先排除懷孕，不能只憑自述。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "育齡女性不能僅憑自述排除懷孕，其餘選項說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-070",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "甲醛與鼻咽癌、白血病較有關，並非與大腸癌，所以敘述錯誤。",
+   "why_others": {
+    "A": "雌激素類荷爾蒙治療會增加子宮內膜癌風險。",
+    "B": "石綿與肺癌及間皮瘤有關。",
+    "C": "抽菸會增加膀胱癌風險。"
+   },
+   "takeaway": "甲醛屬致癌物，但不是大腸癌的主要危險因子。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "甲醛與鼻咽癌、白血病相關而非大腸癌，其餘危險因子正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-071",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "關節軟骨（articular cartilage）主要膠原質是第二型（Type II），而非第一型，所以 A 錯誤。",
+   "why_others": {
+    "B": "軟骨細胞的大小、形狀與排列隨層次而異，正確。",
+    "C": "表層膠原纖維平行關節面，正確。",
+    "D": "深層水分含量最少，正確。"
+   },
+   "takeaway": "關節軟骨主要為 Type II 膠原；骨與肌腱多為 Type I。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "關節軟骨以第二型膠原為主，其餘分層特性說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-072",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "後骨間神經是橈神經的分支，其壓迫（如旋後肌處）屬橈神經病變，不是正中神經壓迫。",
+   "why_others": {
+    "A": "腕隧道症候群為正中神經在腕部被壓迫。",
+    "B": "前骨間神經是正中神經分支。",
+    "D": "旋前肌症候群是正中神經在前臂近端被壓迫。"
+   },
+   "takeaway": "前骨間屬正中神經；後骨間屬橈神經。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "後骨間神經屬橈神經分支，其餘皆為正中神經壓迫，正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-073",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "9941b1ab3b19",
+   "why_correct": "分析架構中，生活環境、工作狀況、社會心理因子等個人面對的社會環境屬中介因素；結構性因素則是社會階層與政策等上游成因。",
+   "why_others": {
+    "A": "結構性因素指社會階層、制度與政策等上游因素。",
+    "C": "干擾因素不是此架構中的分類。",
+    "D": "協同因素不是此架構中的分類。"
+   },
+   "takeaway": "結構性因素在上游，中介因素是日常生活與工作環境。",
+   "review": {
+    "blind_answer": [
+     "B"
+    ],
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "WHO 健康社會決定因素架構中，生活與工作環境、社會心理因子屬中介因素。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-074",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "職業病診斷須有暴露證據、時序性與一致性，不能只憑病人主訴症狀判定，所以 A 不是必要條件。",
+   "why_others": {
+    "B": "必須有暴露證據。",
+    "C": "須符合時序與誘導期。",
+    "D": "須符合一致性並有文獻佐證。"
+   },
+   "takeaway": "職業病診斷重暴露證據、時序性與一致性。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "職業病診斷重暴露證據、時序性與一致性，不能只憑主訴，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-075",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "美國環保署分類中 D 類是尚無法分類的物質，證據不足，並非對動物有足夠實驗資料；對動物證據足夠者在 B2 類。",
+   "why_others": {
+    "A": "A 類是人類致癌物，具因果關係。",
+    "B": "B 類為相當可能的人類致癌物。",
+    "C": "C 類為可能的人類致癌物。"
+   },
+   "takeaway": "A 人類致癌、B 相當可能、C 可能、D 無法分類。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "EPA D 類為無法分類，動物證據足夠屬 B2，說明正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-076",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "1d1e75d81c49",
+   "why_correct": "全球環境變遷的主要根源是人口、個人消費與化學物質使用的增加，生產及消費模式的差異性並非主要根源。",
+   "why_others": {
+    "A": "人口急遽增加是主要根源。",
+    "B": "個人消費增加是主要根源。",
+    "C": "化學物質種類與用量增加是主要根源。"
+   },
+   "takeaway": "環境變遷根源：人口、消費與化學物質增加。",
+   "review": {
+    "blind_answer": [
+     "D"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "人口、消費與化學物質增加為主要根源，說明與承認答案一致且合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-077",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "評估嚼食檳榔對口腔癌的風險屬分析性流行病學，檢驗暴露與疾病的關聯，不是單純描述分布。",
+   "why_others": {
+    "A": "盛行率調查描述疾病分布。",
+    "B": "季節變動描述時間分布。",
+    "D": "國際比較發生率描述地區分布。"
+   },
+   "takeaway": "描述性看人、時、地分布；分析性檢驗暴露與疾病關聯。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "檳榔與口腔癌風險評估屬分析性流行病學，其餘為描述性，正確。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-078",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "基因印記是以多個基因的表現型態預測復發，屬基因表現與基因調控的研究。",
+   "why_others": {
+    "A": "基因頻率與檢測研究的是變異分布與檢驗。",
+    "B": "基因環境交互作用需納入環境暴露。",
+    "D": "基因型與表現型對應研究的是特定基因型與性狀的關係。"
+   },
+   "takeaway": "基因印記屬基因表現與調控研究。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "基因印記以多基因表現預測預後，屬基因表現研究，說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-079",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "f64048da0d30",
+   "why_correct": "二手菸直接影響空氣品質，進而傷害他人健康，空氣品質是菸害議題最直接衝擊的公共利益。",
+   "why_others": {
+    "B": "較安全產品可能降低戒菸動機，仍會影響戒菸機會。",
+    "C": "成癮後的吸菸行為並非完全自主。",
+    "D": "非吸菸者不一定能避開二手菸，吸菸者仍有道德責任。"
+   },
+   "takeaway": "菸害倫理：二手菸損及他人，影響公共利益。",
+   "review": {
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "二手菸衝擊空氣品質此公共利益，其餘選項錯誤原因說明合理。"
+   }
+  },
+  {
+   "id": "112-2-INTRO-080",
+   "status": "pass",
+   "source": "llm",
+   "model": "subagent writer=sonnet review=opus",
+   "generated_at": "2026-11-03T04:05:46+00:00",
+   "answers_hash": "31c9bf9e281c",
+   "why_correct": "二氧化硫、二氧化氮、一氧化碳與臭氧是氣態污染物，不是粒狀污染物，所以敘述錯誤。",
+   "why_others": {
+    "A": "我國訂有室內空氣品質管制標準。",
+    "B": "懸浮微粒、PM2.5、PM10 與鉛為粒狀污染物，正確。",
+    "D": "空氣污染物訂有污染指標，正確。"
+   },
+   "takeaway": "SO2、NO2、CO、O3 是氣狀污染物。",
+   "review": {
+    "blind_answer": [
+     "C"
+    ],
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "SO2、NO2、CO、O3 為氣狀污染物而非粒狀，其餘敘述正確。"
+   }
+  }
+ ]
+}
