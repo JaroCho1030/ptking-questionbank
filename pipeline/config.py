@@ -67,7 +67,7 @@ EXPLAIN_MAX_CORRECT = 120           # why_correct 字數上限（字數算法見
 EXPLAIN_MAX_CORRECT_MULTI = 160     # 多正解題的 why_correct（每個承認答案都要說）
 EXPLAIN_MAX_OTHER = 40              # why_others 每個選項的上限
 EXPLAIN_MAX_TAKEAWAY = 50           # takeaway 上限
-EXPLAIN_LENGTH_TOLERANCE = 0.10     # 格式檢查容許超過上限 10%（給寫手的提示仍是上面的上限）
+EXPLAIN_LENGTH_TOLERANCE = 0.20     # 格式檢查容許超過上限 20%（給寫手的提示仍是上面的上限）
 EXPLAIN_MAX_TOKENS = 16000          # 含思考的輸出上限
 EXPLAIN_POLL_SEC = 60               # 輪詢批次狀態的間隔
 

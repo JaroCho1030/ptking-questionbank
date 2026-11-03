@@ -22,6 +22,7 @@ import base64
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 import time
@@ -163,7 +164,7 @@ def text_len(s: str) -> int:
 
 
 def hard_limit(limit: int) -> int:
-    """格式檢查真正擋的字數：上限再容許 EXPLAIN_LENGTH_TOLERANCE（120 → 132、40 → 44）。"""
+    """格式檢查真正擋的字數：上限再容許 EXPLAIN_LENGTH_TOLERANCE（120 → 144、40 → 48）。"""
     return int(limit * (1 + C.EXPLAIN_LENGTH_TOLERANCE) + 1e-9)
 
 
@@ -173,7 +174,7 @@ def correct_limit(q: dict) -> int:
 
 def format_problems(q: dict, e: dict) -> list[str]:
     """檢查一則詳解的欄位與字數（explain 的 apply 與 validate 共用）。回傳問題清單，空 = 合格。
-    字數超過上限但在容許範圍（10%）內算合格。"""
+    字數超過上限但在容許範圍（EXPLAIN_LENGTH_TOLERANCE）內算合格。"""
     probs = []
     wc, wo, tk = e.get("why_correct"), e.get("why_others"), e.get("takeaway")
     max_wc, max_tk, max_wo = hard_limit(correct_limit(q)), hard_limit(C.EXPLAIN_MAX_TAKEAWAY), hard_limit(C.EXPLAIN_MAX_OTHER)
@@ -232,9 +233,12 @@ def iter_explanation_files():
 # ---------------------------------------------------------------- 挑題
 
 def needs_explain(q: dict, e: dict | None, force: bool) -> bool:
-    """人工寫的一律不動；其他：沒有詳解、pending、答案被更正（hash 不符）、或 --force。"""
+    """人工寫的一律不動；其他：沒有詳解、pending、答案被更正（hash 不符）、--force，
+    或只因格式不通過、但照現在的字數規則已合格（規則放寬後沒審過，要重跑）。"""
     if e and e.get("source") == "human":
         return False
+    if e and e.get("status") == "rejected" and e.get("review", {}).get("fails") == ["format"] and not format_problems(q, e):
+        return True
     return e is None or force or e.get("status") == "pending" or e.get("answers_hash") != answers_hash(q)
 
 
@@ -678,7 +682,10 @@ def main(argv=None):
     if args.dry_run:
         if state:
             print(f"注意：有一次沒跑完的執行（{state['run_id']}，{len(state['ids'])} 題），不加 --dry-run 會先把它跑完")
-        dry_run(select_todo(args.only, args.limit, args.force, years))
+        try:
+            dry_run(select_todo(args.only, args.limit, args.force, years))
+        except BrokenPipeError:      # 接 | head 時後面的輸出被丟掉，不算錯
+            sys.stdout = open(os.devnull, "w")
         return
     import anthropic
     client = anthropic.Anthropic()

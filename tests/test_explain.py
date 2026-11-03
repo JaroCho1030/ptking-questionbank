@@ -88,6 +88,19 @@ def test_select_todo(dirs):
     assert ids(X.select_todo(years=[109, 114], limit=1)) == ["002"]   # 109 低於門檻，給了也不做
 
 
+def test_select_format_rejects_after_rule_change(dirs):
+    qs = [_q(f"114-2-NEURO-{i:03d}") for i in range(1, 4)]
+    _write_paper(dirs, "114-2", "NEURO", qs)
+    fmt = lambda q, n, fails: _entry(q, status="rejected", review={"fails": fails},
+                                      why_others={"A": "字" * n, "B": "b", "D": "d"})
+    X.save_explanations("114-2", "NEURO", {
+        qs[0]["id"]: fmt(qs[0], 46, ["format"]),                      # 現在規則下合格、沒審過 → 重跑
+        qs[1]["id"]: fmt(qs[1], 60, ["format"]),                      # 還是超過 → 不重跑
+        qs[2]["id"]: fmt(qs[2], 46, ["format", "blind_mismatch"]),    # 盲解也錯 → 不重跑
+    })
+    assert [q["id"][-3:] for _, _, q in X.select_todo()] == ["001"]
+
+
 def test_judge():
     q = _q("114-2-NEURO-001", accepted=("C",))
     w = {"why_correct": "因為。", "why_others": {"A": "a", "B": "b", "D": "d"}, "takeaway": "記。"}
@@ -124,19 +137,19 @@ def test_format_problems():
     assert any("缺選項 D" in p for p in X.format_problems(q, dict(good, why_others={"A": "a", "B": "b"})))
     assert any("正解選項 C" in p for p in X.format_problems(q, dict(good, why_others={**good["why_others"], "C": "c"})))
     assert any("不存在的選項 E" in p for p in X.format_problems(q, dict(good, why_others={**good["why_others"], "E": "e"})))
-    # 字數容許超過上限 10%：120 → 132、40 → 44、50 → 55
-    assert X.format_problems(q, dict(good, why_correct="字" * 132)) == []
-    assert any("why_correct 133 字 > 132" in p for p in X.format_problems(q, dict(good, why_correct="字" * 133)))
+    # 字數容許超過上限 20%：120 → 144、40 → 48、50 → 60
+    assert X.format_problems(q, dict(good, why_correct="字" * 144)) == []
+    assert any("why_correct 145 字 > 144" in p for p in X.format_problems(q, dict(good, why_correct="字" * 145)))
     assert any("takeaway" in p for p in X.format_problems(q, dict(good, takeaway="")))
-    assert X.format_problems(q, dict(good, takeaway="字" * 55)) == []
-    assert any("takeaway" in p for p in X.format_problems(q, dict(good, takeaway="字" * 56)))
-    assert X.format_problems(q, dict(good, why_others={**good["why_others"], "A": "字" * 44})) == []
-    assert any("why_others A" in p for p in X.format_problems(q, dict(good, why_others={**good["why_others"], "A": "字" * 45})))
-    # 多正解：why_correct 上限 160（容許到 176）
+    assert X.format_problems(q, dict(good, takeaway="字" * 60)) == []
+    assert any("takeaway" in p for p in X.format_problems(q, dict(good, takeaway="字" * 61)))
+    assert X.format_problems(q, dict(good, why_others={**good["why_others"], "A": "字" * 48})) == []
+    assert any("why_others A" in p for p in X.format_problems(q, dict(good, why_others={**good["why_others"], "A": "字" * 49})))
+    # 多正解：why_correct 上限 160（容許到 192）
     multi = _q("114-2-NEURO-053", accepted=("A", "B"))
-    gm = {"why_correct": "字" * 176, "why_others": {"C": "c", "D": "d"}, "takeaway": "記。"}
+    gm = {"why_correct": "字" * 192, "why_others": {"C": "c", "D": "d"}, "takeaway": "記。"}
     assert X.format_problems(multi, gm) == []
-    assert any("why_correct 177 字 > 176" in p for p in X.format_problems(multi, dict(gm, why_correct="字" * 177)))
+    assert any("why_correct 193 字 > 192" in p for p in X.format_problems(multi, dict(gm, why_correct="字" * 193)))
     voided = _q("114-2-NEURO-043", accepted=(), voided=True)
     assert X.format_problems(voided, dict(good, why_others={})) == []
 
