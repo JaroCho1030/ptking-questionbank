@@ -178,3 +178,20 @@ def test_import_retry_keeps_previous_review_when_rejected_again(dirs, capsys):
     assert saved[qs[1]["id"]]["review"]["reason"] == "新的理由"
     assert saved[qs[1]["id"]]["review"]["previous"] == {"verdict": "reasoning_error", "reason": "舊的理由", "fails": ["reasoning_error"]}
     assert not X.select_retry() or [r[2]["id"] for r in X.select_retry()] == [qs[1]["id"]]
+
+
+def test_export_lists_group_figure_png(dirs):
+    from PIL import Image
+    (dirs / "figures").mkdir()
+    Image.new("RGB", (4, 4)).save(dirs / "figures" / "110-1-NEURO-001.webp", "WEBP")
+    first = _q("110-1-NEURO-001", group_id="110-1-NEURO-001", group_pos=1, stem="下圖……回答下列 2 題。",
+               figure="figures/110-1-NEURO-001.webp", has_figure=True)
+    second = _q("110-1-NEURO-002", group_id="110-1-NEURO-001", group_pos=2, stem="承上題？")
+    _write_paper(dirs, "110-1", "NEURO", [first, second])
+    out = dirs / "batches"
+    B.export(out, X.select_todo(), batch_size=10)
+    blind = (out / "blind" / "110-1_NEURO_1.md").read_text("utf-8")
+    png = (out / "figures" / "110-1-NEURO-001.png").resolve()
+    assert png.exists()
+    assert blind.count(str(png)) == 2                       # 第一題「本題附圖」、第二題「同組第 1 題的附圖」各一次
+    assert "同組第 1 題的附圖：" in blind and "本題附圖：" in blind

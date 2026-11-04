@@ -1846,22 +1846,22 @@
    "id": "110-2-BASIC-080",
    "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus",
+   "generated_at": "2026-11-04T09:15:43+00:00",
    "answers_hash": "e9bcfef5477b",
-   "why_correct": "本題A、D都承認。踩踏最低點到恢復期，髖伸與膝屈同時進行，膕旁肌可作髖伸與膝屈；腓腸肌是膝屈與蹠屈的雙關節肌，也參與此轉換，故皆給分。",
+   "why_correct": "A：踩踏最低點附近膝開始屈曲、髖持續伸直，膕旁肌（hamstrings）同時伸髖屈膝，把踏板向後帶入恢復期。D：腓腸肌（gastrocnemius）在下踩末期蹠屈推踏板，並跨膝協助屈膝，亦為此期主要雙關節肌，故兩者皆給分。",
    "why_others": {
-    "B": "膕肌是單關節肌，不是雙關節肌。",
-    "C": "股直肌主要在膝伸與髖屈，不是此時主要作用肌。"
+    "B": "膕肌只跨膝關節，屬單關節肌。",
+    "C": "股直肌主要在恢復期末到下踩初期屈髖伸膝。"
    },
-   "takeaway": "踩踏轉換期：膝屈雙關節肌為膕旁肌、腓腸肌。",
+   "takeaway": "踩踏最低點附近以膕旁肌與腓腸肌為主，股直肌作用於最高點附近。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.5,
+    "blind_confidence": 0.6,
     "verdict": "pass",
-    "reason": "送分題，詳解說明膕旁肌與腓腸肌都是此時作用的雙關節屈膝肌，合理。"
+    "reason": "踩踏最低點附近膕旁肌與腓腸肌為主要雙關節作用肌，膕肌為單關節、股直肌作用於最高點附近，說明合理。"
    }
   }
  ]

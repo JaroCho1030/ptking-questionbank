@@ -1544,23 +1544,23 @@
    "id": "111-2-BASIC-068",
    "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus",
+   "generated_at": "2026-11-04T09:15:43+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "以腰椎為支點，力矩平衡：豎脊肌力乘 5 等於各力矩總和。嬰兒 600、頭 140、軀幹 450、兩手 10 公斤乘 30 為 300，合計 1490，除以 5 得 298 公斤。",
+   "why_correct": "以腰椎為支點：頭7kg×20＝140、軀幹45kg×10＝450、雙手10kg×30＝300、嬰兒10kg×60＝600，合計1490 kg·cm。豎脊肌力臂5公分，所需力量＝1490÷5＝298公斤。",
    "why_others": {
-    "A": "328 公斤高估，與力矩總和不符。",
-    "C": "268 公斤低估，漏算部分力矩（例如只算單手）。",
-    "D": "238 公斤低估，與力矩總和不符。"
+    "A": "多算了重量或力臂，總力矩高估。",
+    "C": "只算單手5kg，漏了另一手的150 kg·cm。",
+    "D": "漏算手部力矩，總力矩低估。"
    },
-   "takeaway": "力矩平衡：肌力乘短力臂等於外力矩總和。",
+   "takeaway": "平衡時肌肉力矩＝各負荷力矩總和，雙手要兩隻都算。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.7,
+    "blind_confidence": 0.9,
     "verdict": "pass",
-    "reason": "600+140+450+300=1490 除以 5 得 298 公斤，計算與誤選分析正確。"
+    "reason": "140＋450＋300＋600＝1490 kg·cm，÷5＝298公斤，C與D的錯誤來源推算正確。"
    }
   },
   {
@@ -1682,23 +1682,23 @@
    "id": "111-2-BASIC-074",
    "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus",
+   "generated_at": "2026-11-04T09:15:43+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "衝量等於力對時間的積分，也就是曲線下面積，等於動量變化量（impulse–momentum theorem），所以看曲線下所涵蓋面積。",
+   "why_correct": "衝量（impulse）等於力對時間的積分，也就是力-時間曲線下的面積。依衝量-動量定理，衝量等於動量變化量，因此由曲線下面積可得知動量變化。",
    "why_others": {
-    "A": "資訊足夠，用曲線下面積即可求得。",
-    "B": "上升段斜率代表負荷率，不是動量變化。",
-    "C": "最大值除以時間不是衝量或動量變化。"
+    "A": "力-時間曲線已足以求出衝量與動量變化。",
+    "B": "上升段斜率是負荷率（loading rate），非動量變化。",
+    "C": "最大力除以時間不具動量的物理意義。"
    },
-   "takeaway": "力—時間曲線下面積等於衝量等於動量變化。",
+   "takeaway": "力-時間曲線下面積＝衝量＝動量變化量。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
+    "blind_confidence": 0.85,
     "verdict": "pass",
-    "reason": "力－時間曲線下面積為衝量即動量變化，其他選項說明正確。"
+    "reason": "力-時間曲線下面積為衝量，對應動量變化，負荷率等其他選項說明正確。"
    }
   },
   {

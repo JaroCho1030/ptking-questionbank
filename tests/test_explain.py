@@ -182,9 +182,10 @@ def test_prompts_group_figure_and_option_images(dirs):
     assert "承認答案：C" in text and "主題：腦中風" in text
     blind = X.blind_prompt(second, prev)
     assert "承認答案" not in blind and "答案" not in blind.replace("你的答案", "")
-    params = X.request_params("blind", second, blind)
-    assert params["messages"][0]["content"][0]["type"] == "image"
-    assert params["messages"][0]["content"][0]["source"]["media_type"] == "image/webp"
+    params = X.request_params("blind", second, blind, prev)
+    content = params["messages"][0]["content"]
+    assert [c["type"] for c in content] == ["text", "image", "text"] and content[0]["text"] == "（本題附圖）"
+    assert content[1]["source"]["media_type"] == "image/webp"
     assert params["tool_choice"] == {"type": "auto"}               # Opus 5.5 不接受強制 tool_choice
     assert params["tools"][0]["strict"] is True and params["model"] == C.EXPLAIN_MODEL
     # 更正過與送分的答案說明
@@ -392,3 +393,30 @@ def test_build_only_pass_explanations(tmp_path, monkeypatch):
     text = render(dict(manifest, bank_version="2026.11.03-1"), stats)
     assert "**AI 詳解**：2 題" in text
     assert "AI 詳解" not in render(dict(manifest, bank_version="x"), dict(stats, explanations=0))
+
+
+def test_group_figure_on_earlier_question_is_passed_along(dirs):
+    """題組的圖掛在第一題，「承上題」的題沒有自己的圖 → 三個角色都要看得到第一題的圖。"""
+    (dirs / "figures").mkdir()
+    (dirs / "figures" / "108-2-NEURO-079.webp").write_bytes(b"RIFF....WEBP")
+    first = _q("108-2-NEURO-079", group_id="108-2-NEURO-079", group_pos=1, number=79,
+               stem="下圖為 MRI……請回答下列 2 題。病灶在？", figure="figures/108-2-NEURO-079.webp", has_figure=True)
+    second = _q("108-2-NEURO-080", group_id="108-2-NEURO-079", group_pos=2, number=80, stem="承上題，最可能出現？")
+    _write_paper(dirs, "108-2", "NEURO", [first, second])
+    idx = X.QuestionIndex()
+    prev = idx.group_prev(idx.by_id[second["id"]])
+    assert [(x["id"], label) for x, label in X.figure_sources(second, prev)] == [(first["id"], "同組第 79 題的附圖")]
+    text = X.blind_prompt(second, prev)
+    assert "（同組第 79 題的附圖如上）" in text and "本題附圖" not in text
+    content = X.request_params("blind", second, text, prev)["messages"][0]["content"]
+    assert [c["type"] for c in content] == ["text", "image", "text"] and content[0]["text"] == "（同組第 79 題的附圖）"
+    # 本題自己也有圖（inherited 同一張）就不重複；不同張才兩張都給
+    same = dict(second, figure="figures/108-2-NEURO-079.webp")
+    assert [label for _, label in X.figure_sources(same, prev)] == ["本題附圖"]
+    (dirs / "figures" / "108-2-NEURO-080.webp").write_bytes(b"RIFF....WEBP")
+    own = dict(second, figure="figures/108-2-NEURO-080.webp")
+    assert [label for _, label in X.figure_sources(own, prev)] == ["同組第 79 題的附圖", "本題附圖"]
+    # --ids：只做指定的題、而且重做
+    X.save_explanations("108-2", "NEURO", {second["id"]: _entry(second)})
+    assert [q["id"] for _, _, q in X.select_todo(ids={second["id"]})] == [second["id"]]
+    assert [q["id"] for _, _, q in X.select_todo()] == [first["id"]]

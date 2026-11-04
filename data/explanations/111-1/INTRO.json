@@ -1102,23 +1102,23 @@
    "id": "111-1-INTRO-048",
    "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus",
+   "generated_at": "2026-11-04T09:15:43+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "統合分析的權重主要與精確度有關，樣本數愈大，變異愈小，權重愈大。圖中 Kiper, 2011 方塊最大、信賴區間最窄，代表個案數最多。",
+   "why_correct": "森林圖中方塊大小代表權重，Kiper, 2011方塊最大、信賴區間最窄。權重與變異數成反比，個案數越多、估計越精確，權重越大。",
    "why_others": {
-    "A": "信賴區間愈寬權重愈小，且原因敘述相反。",
-    "B": "權重與效益值大小無關，In 的區間還很寬。",
-    "D": "變異數愈大權重愈小，而非愈大。"
+    "A": "信賴區間越寬代表越不精確，權重反而越小。",
+    "B": "權重取決於精確度，與效益值大小無關。",
+    "D": "變異數越大權重越小，兩者成反比。"
    },
-   "takeaway": "森林圖方塊愈大、區間愈窄，權重愈大。",
+   "takeaway": "統合分析權重＝變異數倒數，看方塊最大、區間最窄者。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
+    "blind_confidence": 0.9,
     "verdict": "pass",
-    "reason": "圖中 Kiper 2011 方塊最大、信賴區間最窄（-0.28～0.59），權重說明正確。"
+    "reason": "Kiper, 2011方塊最大、信賴區間最窄，權重與變異數成反比，與森林圖相符。"
    }
   },
   {

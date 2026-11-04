@@ -1837,23 +1837,23 @@
    "id": "108-2-BASIC-080",
    "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus",
+   "generated_at": "2026-11-04T09:15:43+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "到最高點時垂直速度為0，由v＝v0＋gt得0＝v0－10×0.5，所以離地時垂直速度v0為5米／秒。",
+   "why_correct": "騰空最高點時垂直速度為0。離地（第2秒）到最高點（第2.5秒）歷時0.5秒，只受重力減速：0 = v + (−10)×0.5，得離地垂直速度v = 5米／秒。",
    "why_others": {
-    "B": "10米／秒忘了乘上0.5秒的時間。",
-    "C": "20米／秒與題目時間不符。",
-    "D": "25米／秒與題目時間不符。"
+    "B": "10米／秒需上升1秒才減速到0，與0.5秒不符。",
+    "C": "20米／秒需上升2秒，與圖中時間不符。",
+    "D": "25米／秒需上升2.5秒，誤把時間點當成歷時。"
    },
-   "takeaway": "最高點速度為0，v0＝g×t。",
+   "takeaway": "最高點垂直速度為0，離地垂直速度＝g×上升時間。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.9,
     "verdict": "pass",
-    "reason": "最高點速度為0，v0＝10×0.5＝5 m/s，說明正確。"
+    "reason": "上升0.5秒至最高點速度為0，v＝10×0.5＝5 m/s，計算與各選項說明正確。"
    }
   }
  ]

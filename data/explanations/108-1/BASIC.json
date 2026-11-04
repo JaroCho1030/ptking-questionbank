@@ -1842,23 +1842,23 @@
    "id": "108-1-BASIC-080",
    "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus",
+   "generated_at": "2026-11-04T09:15:43+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "遲滯迴圈與速率相關的行為是黏彈性（viscoelasticity）組織的特性，兼具彈性與黏性，使加載與卸載路徑不同。",
+   "why_correct": "圖中加載與卸載的扭矩-旋轉曲線不重疊，形成遲滯迴圈（hysteresis loop），代表加載時有部分能量以熱散失。這是兼具彈性回復與黏滯性的黏彈性（viscoelasticity）組織的典型特徵。",
    "why_others": {
-    "A": "純彈性材料加載與卸載路徑重疊，無迴圈。",
-    "B": "塑性指永久變形，不是此迴圈代表的特性。",
-    "D": "單純黏稠性不會表現出此種可回復的曲線。"
+    "A": "純彈性材料加載與卸載走同一條線，不會形成迴圈。",
+    "B": "塑性指永久變形，圖中曲線卸載後仍回到原處。",
+    "D": "純黏稠性材料無彈性回復，不會呈現來回的封閉迴圈。"
    },
-   "takeaway": "遲滯迴圈代表組織具黏彈性。",
+   "takeaway": "負荷-變形曲線出現遲滯迴圈，就是黏彈性組織的表現。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.9,
     "verdict": "pass",
-    "reason": "遲滯迴圈代表組織具黏彈性，其餘選項說明合理。"
+    "reason": "加載與卸載曲線不重疊形成遲滯迴圈，代表黏彈性，各選項說明正確。"
    }
   }
  ]

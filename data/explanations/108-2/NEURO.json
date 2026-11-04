@@ -1823,35 +1823,25 @@
   },
   {
    "id": "108-2-NEURO-080",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=opus review=opus (retry)",
-   "generated_at": "2026-11-04T08:58:24+00:00",
+   "model": "subagent writer=opus review=opus",
+   "generated_at": "2026-11-04T09:15:43+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "MRI指環狀病灶位於標示R的右側額葉，病灶及周圍水腫可波及運動區或其下行路徑，造成對側（左側）偏癱。",
+   "why_correct": "影像中環狀強化病灶（膿瘍）位於標示R的右側額葉、靠近運動皮質區域。右腦運動區或下行路徑受損會造成對側，也就是左側偏癱。",
    "why_others": {
-    "B": "病灶在右腦，對側應為左側，而非右側偏癱。",
-    "C": "單一側大腦病灶不會造成四肢癱瘓。",
-    "D": "下半身癱瘓多見於脊髓病變，並非此病灶表現。"
+    "B": "病灶在右腦，偏癱應出現在對側左側。",
+    "C": "四肢癱瘓多見於頸髓或腦幹病灶，非單側大腦病灶。",
+    "D": "下半身癱瘓多為胸腰髓損傷，與單側腦病灶不符。"
    },
-   "takeaway": "單側大腦病灶影響運動路徑，造成對側偏癱。",
+   "takeaway": "大腦單側病灶造成對側偏癱，看影像先認清左右標示。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.25,
-    "verdict": "reasoning_error",
-    "reason": "批次未提供MRI附圖，無法確認詳解所述病灶位於右側額葉，判為無法確認。",
-    "fails": [
-     "reasoning_error"
-    ],
-    "previous": {
-     "verdict": "reasoning_error",
-     "reason": "附圖病灶位於標 R 側的額葉前中段，並非詳解所稱的額頂區、直接位於運動皮質；左側偏癱應以右額葉病灶及周圍水腫波及運動區或其下行路徑來解釋。",
-     "fails": [
-      "reasoning_error"
-     ]
-    }
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "影像標示R側額葉環狀強化病灶，對側左側偏癱，推理與其他選項說明正確。"
    }
   }
  ]

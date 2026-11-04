@@ -245,9 +245,12 @@ def needs_explain(q: dict, e: dict | None, force: bool) -> bool:
 
 
 def select_todo(only: str | None = None, limit: int | None = None, force: bool = False,
-                years: list[int] | None = None) -> list[tuple[str, str, dict]]:
-    """回傳 [(年-次, 科目, 題目)]；年 < EXPLAIN_MIN_YEAR 的不做；years 給了就只做那幾年。"""
+                years: list[int] | None = None, ids: set[str] | None = None) -> list[tuple[str, str, dict]]:
+    """回傳 [(年-次, 科目, 題目)]；年 < EXPLAIN_MIN_YEAR 的不做；years 給了就只做那幾年；
+    ids 給了就只做這些題、而且一律重做（人工寫的仍不動）。"""
     out = []
+    if ids:
+        force = True
     for p in sorted(C.JSON_DIR.glob("*/*.json")):
         exam_dir, subject = p.parent.name, p.stem
         if only and only != f"{exam_dir}/{subject}":
@@ -258,6 +261,8 @@ def select_todo(only: str | None = None, limit: int | None = None, force: bool =
         data = json.loads(p.read_text("utf-8"))
         existing = load_explanations(exam_dir, subject)
         for q in data["questions"]:
+            if ids and q["id"] not in ids:
+                continue
             if needs_explain(q, existing.get(q["id"]), force):
                 out.append((exam_dir, subject, q))
                 if limit is not None and len(out) >= limit:
@@ -307,6 +312,19 @@ def option_images(q: dict) -> bool:
     return bool(q.get("figure")) and not any((q["options"].get(k) or "").strip() for k in C.OPTION_LETTERS)
 
 
+def figure_sources(q: dict, group_prev: list[dict]) -> list[tuple[dict, str]]:
+    """這題要給模型看的圖：同組前面題目的附圖（和本題的不是同一張）＋本題自己的附圖，各附標籤。
+    題組的圖常掛在第一題，後面「承上題」的題沒有自己的圖，不給就看不到。"""
+    out, seen = [], set()
+    for x in group_prev:
+        if x.get("figure") and x["figure"] != q.get("figure") and x["figure"] not in seen:
+            seen.add(x["figure"])
+            out.append((x, f"同組第 {x['number']} 題的附圖"))
+    if q.get("figure"):
+        out.append((q, "本題附圖"))
+    return out
+
+
 def question_text(q: dict, group_prev: list[dict]) -> str:
     lines = [f"## 題目 {q['id']}"]
     if group_prev:
@@ -314,8 +332,8 @@ def question_text(q: dict, group_prev: list[dict]) -> str:
         for x in group_prev:
             lines.append(f"- 第 {x['number']} 題：{x['stem']}")
         lines.append("")
-    if q.get("figure"):
-        lines.append("（本題附圖如上）")
+    for _, label in figure_sources(q, group_prev):
+        lines.append(f"（{label}如上）")
     lines.append(q["stem"])
     for k in C.OPTION_LETTERS:
         lines.append(f"{k}. {q['options'][k]}")
@@ -394,12 +412,13 @@ def image_block(q: dict) -> dict | None:
                                         "data": base64.standard_b64encode(fig.read_bytes()).decode("ascii")}}
 
 
-def request_params(role: str, q: dict, text: str) -> dict:
+def request_params(role: str, q: dict, text: str, group_prev: list[dict] | None = None) -> dict:
     system, tool = ROLES[role]
     content = []
-    img = image_block(q)
-    if img:
-        content.append(img)
+    for src, label in figure_sources(q, group_prev or []):
+        img = image_block(src)
+        if img:
+            content += [{"type": "text", "text": f"（{label}）"}, img]
     content.append({"type": "text", "text": text})
     # Opus 5.5 不接受強制 tool_choice（any／tool 會 400）：用 auto＋strict，提示詞指定工具；沒呼叫工具當失敗
     return {
@@ -554,7 +573,7 @@ def build_requests(role: str, qids: list[str], idx: QuestionIndex, state: dict) 
             text = blind_prompt(q, prev)
         else:
             text = check_prompt(q, prev, state["results"]["writer"][qid], state["results"]["blind"][qid])
-        reqs.append({"custom_id": custom_id(role, qid), "params": request_params(role, q, text)})
+        reqs.append({"custom_id": custom_id(role, qid), "params": request_params(role, q, text, prev)})
     return reqs
 
 

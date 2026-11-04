@@ -1820,46 +1820,46 @@
    "id": "108-2-INTRO-079",
    "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus",
+   "generated_at": "2026-11-04T09:15:43+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "年齡的係數為負（-7.7）且P值0.0002，顯著，表示年齡越大，社會參與分數越低。",
+   "why_correct": "年齡的迴歸係數（parameter）為−7.7，p值為0.0002，達統計顯著。係數為負代表年齡越大，社會參與分數越低。",
    "why_others": {
-    "B": "係數為負，方向是降低而非升高。",
-    "C": "P值0.0002，差異顯著。",
-    "D": "3.78是t值，不是每歲減少的分數。"
+    "B": "係數為負值，表示呈反向關係而非越高。",
+    "C": "p＝0.0002＜0.05，年齡效果達顯著。",
+    "D": "−3.78是t統計量，不是每單位年齡的分數變化。"
    },
-   "takeaway": "看係數正負判斷方向，P值判斷是否顯著。",
+   "takeaway": "看β的正負判方向、看p值判顯著，t值不是斜率。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.9,
+    "blind_confidence": 0.85,
     "verdict": "pass",
-    "reason": "依附圖年齡係數-7.7且P=0.0002，3.78為t值，說明正確。"
+    "reason": "表中年齡β＝−7.7、p＝0.0002，−3.78為t值，說明與附表相符。"
    }
   },
   {
    "id": "108-2-INTRO-080",
    "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus",
+   "generated_at": "2026-11-04T09:15:43+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "VA組以HMO組為參照，其係數為-7.0，表示在控制其他因素後，榮民醫院體系患者平均社會參與分數比HMO組低7分。",
+   "why_correct": "組別以HMO為參考組（reference group），VA的係數為−7.0，代表控制其他因子後，VA患者的社會參與平均分數比HMO低7分，且p＝0.0385達顯著。",
    "why_others": {
-    "B": "3.37是標準誤，不是分數差。",
-    "C": "2.08是t值，且為絕對值，不是分數差。",
-    "D": "0.0385是P值，不是分數差。"
+    "B": "3.37是VA係數的標準誤（SE），不是分數差。",
+    "C": "−2.08是t統計量，不是組間分數差。",
+    "D": "0.0385是p值，不代表分數差距。"
    },
-   "takeaway": "與參照組的差異看係數（parameter），不是SE、t或P。",
+   "takeaway": "類別變項的β＝該組與參考組的平均差，SE、t、p各有其意。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.9,
     "verdict": "pass",
-    "reason": "依附圖VA係數-7.0，3.37為SE、-2.08為t值、0.0385為P值，說明正確。"
+    "reason": "VA相對參考組HMO的β＝−7.0，3.37為SE、−2.08為t、0.0385為p，與附表相符。"
    }
   }
  ]

@@ -54,9 +54,14 @@ def figure_png(q: dict, out_dir: Path) -> Path | None:
     return dest
 
 
-def figure_line(q: dict, out_dir: Path) -> str:
-    p = figure_png(q, out_dir)
-    return f"（本題附圖：{p.resolve()} ——先用 Read 工具看這張圖再作答）\n" if p else ""
+def figure_lines(q: dict, group_prev: list[dict], out_dir: Path) -> str:
+    """本題與同組前題的附圖各一行（PNG 路徑），讓子代理先 Read 再作答。"""
+    lines = []
+    for src, label in X.figure_sources(q, group_prev):
+        p = figure_png(src, out_dir)
+        if p:
+            lines.append(f"（{label}：{p.resolve()} ——先用 Read 工具看這張圖再作答）")
+    return "".join(line + "\n" for line in lines)
 
 
 def result_path(out_dir: Path, role: str, name: str) -> Path:
@@ -99,11 +104,11 @@ def strip_tool_line(text: str) -> str:
     return "\n".join(lines).rstrip("\n")
 
 
-def write_batch(out_dir: Path, role: str, name: str, items: list[tuple[dict, str]]) -> Path:
-    """items = [(題目, 題目這段的提示文字)]。"""
+def write_batch(out_dir: Path, role: str, name: str, items: list[tuple[dict, list[dict], str]]) -> Path:
+    """items = [(題目, 同組前題, 題目這段的提示文字)]。"""
     body = [role_header(role, name), "## 題目\n"]
-    for q, text in items:
-        body.append(figure_line(q, out_dir) + strip_tool_line(text) + "\n")
+    for q, group_prev, text in items:
+        body.append(figure_lines(q, group_prev, out_dir) + strip_tool_line(text) + "\n")
     body.append(closing(role, name, len(items), result_path(out_dir, role, name)))
     p = out_dir / role / f"{name}.md"
     p.parent.mkdir(parents=True, exist_ok=True)
@@ -123,23 +128,26 @@ def save_manifest(out_dir: Path, manifest: dict) -> None:
 
 
 def export(out_dir: Path, todo: list[tuple[str, str, dict]], batch_size: int,
-           previous: dict[str, dict] | None = None) -> None:
+           previous: dict[str, dict] | None = None, prefix: str | None = None) -> None:
     """寫手與盲解兩種批次檔；同一題在兩種批次裡同名同序。
-    previous = {id: 上一版詳解}（改寫輪）：寫手批次附上一版與審稿意見，批次跨試卷、名叫 retry_<序號>。"""
+    previous = {id: 上一版詳解}（改寫輪）：寫手批次附上一版與審稿意見，批次跨試卷、名叫 retry_<序號>。
+    prefix 給了也是跨試卷，名叫 <prefix>_<序號>（零星重做幾題時用，免得一份試卷一批）。"""
     out_dir.mkdir(parents=True, exist_ok=True)
     idx = X.QuestionIndex()
     manifest = load_manifest(out_dir)
+    if previous is not None:
+        prefix = prefix or "retry"
     groups: dict[tuple[str, str] | None, list[dict]] = {}
     for exam_dir, subject, q in todo:
-        groups.setdefault(None if previous is not None else (exam_dir, subject), []).append(q)
+        groups.setdefault(None if prefix else (exam_dir, subject), []).append(q)
     total = 0
     for key, qs in groups.items():
         for k, start in enumerate(range(0, len(qs), batch_size), 1):
             chunk = qs[start:start + batch_size]
-            name = chunk_name(*key, k) if key else f"retry_{k}"
-            writer_items = [(q, X.writer_prompt(q, idx.group_prev(q), idx.topic_name(q),
-                                                (previous or {}).get(q["id"]))) for q in chunk]
-            blind_items = [(q, X.blind_prompt(q, idx.group_prev(q))) for q in chunk]
+            name = chunk_name(*key, k) if key else f"{prefix}_{k}"
+            writer_items = [(q, idx.group_prev(q), X.writer_prompt(q, idx.group_prev(q), idx.topic_name(q),
+                                                                   (previous or {}).get(q["id"]))) for q in chunk]
+            blind_items = [(q, idx.group_prev(q), X.blind_prompt(q, idx.group_prev(q))) for q in chunk]
             write_batch(out_dir, "writer", name, writer_items)
             write_batch(out_dir, "blind", name, blind_items)
             m = {"ids": [q["id"] for q in chunk]}
@@ -225,7 +233,7 @@ def export_check(out_dir: Path) -> None:
             if X.format_problems(q, w):
                 skipped += 1
                 continue
-            items.append((q, X.check_prompt(q, idx.group_prev(q), w, b)))
+            items.append((q, idx.group_prev(q), X.check_prompt(q, idx.group_prev(q), w, b)))
         if items:
             write_batch(out_dir, "check", name, items)
             n_batches += 1
@@ -280,6 +288,8 @@ def main(argv=None):
     ap.add_argument("--only", help="只做某份試卷，例如 110-1/NEURO")
     ap.add_argument("--limit", type=int, help="最多幾題")
     ap.add_argument("--years", help="只做這幾年（民國年），例如 110-112 或 110,112")
+    ap.add_argument("--ids", help="只做這些題目 id（逗號分隔），一律重做；只對 --export 有效")
+    ap.add_argument("--batch-name", help="批次跨試卷、用這個名字當前綴（零星重做幾題時用）；只對 --export 有效")
     ap.add_argument("--force", action="store_true", help="已有詳解的也重做（人工寫的除外）")
     ap.add_argument("--batch-size", type=int, default=40, help="每批最多幾題（預設 40）")
     ap.add_argument("--model", default=DEFAULT_MODEL, help="寫進詳解的 model 標示")
@@ -289,14 +299,15 @@ def main(argv=None):
         from .fetch import parse_years
         years = parse_years(args.years) if args.years else None
         if args.export:
-            todo, previous = X.select_todo(args.only, args.limit, args.force, years), None
+            ids = {s.strip() for s in args.ids.split(",") if s.strip()} if args.ids else None
+            todo, previous = X.select_todo(args.only, args.limit, args.force, years, ids), None
         else:
             rows = X.select_retry(args.only, args.limit, years)
             todo, previous = [r[:3] for r in rows], {r[2]["id"]: r[3] for r in rows}
         if not todo:
             print("沒有要生成的題目。")
             return
-        export(Path(args.export or args.export_retry), todo, args.batch_size, previous)
+        export(Path(args.export or args.export_retry), todo, args.batch_size, previous, args.batch_name)
     elif args.export_check:
         export_check(Path(args.export_check))
     else:

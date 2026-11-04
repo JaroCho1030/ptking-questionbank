@@ -33,6 +33,7 @@ python3 -m venv .venv && source .venv/bin/activate && pip install -r requirement
 | `python -m pipeline.explain [--only 114-2/NEURO] [--years 113-115] [--limit N] [--force] [--dry-run]` | 生成並審稿 AI 詳解（需 `ANTHROPIC_API_KEY`，Batch API，中斷後再執行會續跑；`--dry-run` 只印題數與提示詞；規則見 PIPELINE「詳解生成」） |
 | `python -m pipeline.explain_batches --export DIR --years 105-109` → 子代理跑 → `--export-check DIR` → 子代理跑 → `--import DIR` | 子代理分批生成詳解（不需 API key；批次檔與結果都在 DIR，建議放 `data/explanations/.batches/`，不進 git；流程見 PIPELINE「子代理分批」） |
 | `python -m pipeline.explain_batches --export-retry DIR` → 同上三步 | 改寫輪：只重做格式或推理有錯而不通過的題，寫手批次附上一版與審稿意見（PIPELINE「改寫輪」） |
+| `python -m pipeline.explain_batches --export DIR --ids 108-2-NEURO-080,… --batch-name fix` → 同上三步 | 零星重做幾題（跨試卷合成一批 `fix_1`） |
 | `python -m pipeline.taxonomy_doc` | 由 `taxonomy/taxonomy.yaml` 產生 `docs/TAXONOMY.md` |
 | `python -m pipeline.build --version 2026.10.16-1` | 打包 SQLite 與 manifest |
 | `python -m pytest -q` | 離線測試（用 108-1 神經科真實文字當 fixture） |

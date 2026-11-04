@@ -1304,23 +1304,23 @@
    "id": "111-2-INTRO-057",
    "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus",
+   "generated_at": "2026-11-04T09:15:43+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "右偏分布的極大值會拉動平均值，使其大於中位數，中位數又大於眾數，故平均值＞中位數＞眾數。",
+   "why_correct": "家庭所得分布集中在低所得、往高所得拖出長尾，屬正偏（右偏）分布。極端高值會把平均值往右拉，因此平均值＞中位數＞眾數。",
    "why_others": {
-    "B": "此順序不符右偏分布的排列。",
-    "C": "偏態時平均值受極端值影響，中位數較能代表。",
-    "D": "右偏的偏態係數應大於 0。"
+    "B": "右偏分布中平均值受極端值影響最大，應大於中位數。",
+    "C": "偏態分布下平均值易偏差，中位數較適合描述。",
+    "D": "右偏分布偏態係數＞0，不是＜0。"
    },
-   "takeaway": "右偏：平均值＞中位數＞眾數，偏態係數為正。",
+   "takeaway": "右偏：平均＞中位＞眾數；偏態資料宜用中位數描述。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.85,
+    "blind_confidence": 0.9,
     "verdict": "pass",
-    "reason": "右偏時平均值＞中位數＞眾數、偏態係數為正，解析正確。"
+    "reason": "家庭所得集中低值、右側長尾為正偏，平均＞中位＞眾數，各選項說明正確。"
    }
   },
   {
