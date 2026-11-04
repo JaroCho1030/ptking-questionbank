@@ -164,28 +164,25 @@
   },
   {
    "id": "113-1-CARDPED-008",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "美國醫學會（AMA）的呼吸障礙分級依據FVC、FEV₁、DLCO佔預測值的百分比。李先生三項都落在約60%～79%之間，屬於輕度障礙，也就是Class 2。",
+   "why_correct": "美國醫學會（AMA）呼吸障礙分級依FVC、FEV₁、DLCO佔預測值的百分比判定。李先生三項都低於正常範圍，但都落在輕度障礙的範圍內，屬Class 2。",
    "why_others": {
-    "A": "Class 1的各項指標都要大於等於80%，屬於無障礙，李先生的數值都低於這個標準。",
-    "C": "Class 3是中度障礙，數值大約落在40～59%，李先生的三項都高於60%。",
-    "D": "Class 4是重度障礙，FEV₁或DLCO大約在40%以下，與本題不符。"
+    "A": "Class 1為各項在正常範圍、無障礙，李先生三項都偏低。",
+    "C": "Class 3為中度障礙，數值須更低，李先生未達。",
+    "D": "Class 4為重度障礙，數值遠低於本題。"
    },
-   "takeaway": "AMA分級：每項≥80%為Class 1，60～79%為Class 2，40～59%為Class 3，更低則為Class 4。",
+   "takeaway": "AMA呼吸障礙分級看FVC、FEV₁、DLCO三項佔預測值的程度。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.88,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒錯，但詳解的分級切點不正確：AMA 標準中 DLCO 的 Class 1 門檻是 ≥75%（不是 ≥80%），Class 2 是 60～74%；Class 3 的 FVC 是 51～59%；詳解和 takeaway 說「每一項都是 ≥80% 及 60～79%」，與原始標準不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "三項落在60–79%屬AMA Class 2輕度障礙，正確。"
    }
   },
   {
@@ -581,28 +578,25 @@
   },
   {
    "id": "113-1-CARDPED-026",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "症狀限制最大運動測試的絕對禁忌症包括持續不穩定型心絞痛（unstable angina）與活動性心內膜炎（active endocarditis），這兩種狀況做最大運動時，發生急性心肌梗塞、栓塞或猝死的風險很高。中度主動脈瓣狹窄與安靜時血壓偏高，都只算相對禁忌症。所以①④正確。",
+   "why_correct": "持續不穩定型心絞痛（unstable angina）與活動性心內膜炎（active endocarditis）做最大運動時，急性心肌梗塞、栓塞或猝死風險高，屬絕對禁忌症。中度主動脈瓣狹窄是相對禁忌症；安靜收縮壓180mmHg尚未達相對禁忌的高血壓標準。",
    "why_others": {
-    "B": "中度主動脈瓣狹窄與收縮壓180mmHg都屬相對禁忌症，不是絕對。",
-    "C": "②③是相對禁忌症，而且漏了絕對禁忌症④活動性心內膜炎。",
-    "D": "②③是相對禁忌症，而且漏了絕對禁忌症①不穩定型心絞痛。"
+    "B": "中度主動脈瓣狹窄屬相對禁忌，收縮壓180mmHg亦非絕對禁忌。",
+    "C": "②③都不是絕對禁忌症，且漏了活動性心內膜炎。",
+    "D": "②③都不是絕對禁忌症，且漏了不穩定型心絞痛。"
    },
-   "takeaway": "絕對禁忌看「不穩定、急性、活動性、有症狀的重度」；中度瓣膜狹窄和安靜時高血壓屬相對禁忌。",
+   "takeaway": "絕對禁忌看「不穩定、急性、活動性」；中度瓣膜狹窄屬相對禁忌。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.92,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 是對的，但詳解說收縮壓 180 mmHg 屬相對禁忌症，這點有誤：ACSM／AHA 把安靜時血壓 >200/110 mmHg 列為相對禁忌症，180 mmHg 還不到這個門檻。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "不穩定型心絞痛與活動性心內膜炎為絕對禁忌，中度主動脈瓣狹窄為相對禁忌，正確。"
    }
   },
   {

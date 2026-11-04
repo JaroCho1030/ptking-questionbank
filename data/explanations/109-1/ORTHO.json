@@ -440,28 +440,25 @@
   },
   {
    "id": "109-1-ORTHO-020",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "腰薦椎角（lumbosacral angle）增大代表骨盆前傾與腰椎前凸增加，常因腹肌無力無法抵抗骨盆前傾所致。",
+   "why_correct": "腰薦椎角（lumbosacral angle）增大代表骨盆前傾與腰椎前凸增加；腹肌是骨盆後傾的主要力量，無力時無法抵抗骨盆前傾，最可能造成此情況。",
    "why_others": {
-    "A": "髖屈肌無力不會造成骨盆前傾，反而可能使其減小。",
-    "C": "背伸肌無力傾向使腰前凸減少。",
-    "D": "膕旁肌無力或緊繃影響骨盆後傾，與前傾增加相反。"
+    "A": "髖屈肌使骨盆前傾，無力反而會減少前傾。",
+    "C": "背伸肌無力傾向使腰椎前凸減少。",
+    "D": "膕旁肌無力雖可能使骨盆易前傾，但影響不如腹肌直接。"
    },
-   "takeaway": "腰薦角增大、骨盆前傾：腹肌無力。",
+   "takeaway": "腰薦角增大、骨盆前傾：最常想到腹肌無力。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "D的說明錯誤：膕旁肌是骨盆後傾肌，其無力會使骨盆易前傾，並非與前傾增加相反；說它緊繃與無力的效果相同也不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "腰薦角增大代表骨盆前傾，腹肌無力最可能造成，其他選項說明正確。"
    }
   },
   {
@@ -537,14 +534,14 @@
    "id": "109-1-ORTHO-024",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "胸椎關節問題常與骨質疏鬆及姿勢不良有關，如圓背與壓迫性骨折。",
+   "why_correct": "胸椎關節問題常與骨質疏鬆及姿勢不良有關，例如骨鬆造成的壓迫性骨折與長期圓背姿勢。",
    "why_others": {
-    "A": "退化與椎間盤問題最常見於頸椎與腰椎。",
-    "B": "胸椎退化常見於上段與下段，不是 T8～9。",
-    "C": "胸部肌肉傷害並不少見，尤其與姿勢有關。"
+    "A": "退化與椎間盤問題最常見於頸椎與腰椎，不是胸椎。",
+    "B": "胸椎退化好發節段說法不一，此敘述不如D確立。",
+    "C": "胸部肌肉傷害並不少見，常與姿勢不良有關。"
    },
    "takeaway": "胸椎問題常與骨質疏鬆和姿勢不良相關。",
    "review": {
@@ -553,10 +550,17 @@
     ],
     "blind_confidence": 0.45,
     "verdict": "reasoning_error",
-    "reason": "B稱胸椎退化常見於上段與下段而非T8～9缺乏依據，胸椎退化與椎間盤問題實多見於中下胸段，排除理由不正確。",
+    "reason": "B只說「不如D確立」未說明錯在哪，C稱胸部肌肉傷害並不少見與一般教科書胸椎區傷害較頸腰少見的說法相左。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "B稱胸椎退化常見於上段與下段而非T8～9缺乏依據，胸椎退化與椎間盤問題實多見於中下胸段，排除理由不正確。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -699,28 +703,25 @@
   },
   {
    "id": "109-1-ORTHO-031",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "前向脫臼術後增加外轉，應在休息位置先外轉至受限處，再做第三級牽拉（distraction），可安全增加活動且不增加前方壓力。",
+   "why_correct": "肩前向脫臼非手術復位後要增加外轉，應在休息位置先外轉至受限處，再做第三級牽拉（distraction），可增加活動度而不對前方關節囊施加向前的壓力。",
    "why_others": {
-    "A": "休息位前滑動未外轉，且前滑會增加前方壓力。",
-    "C": "外展 90 度合併外轉是脫臼風險位置，不適合開始。",
-    "D": "外轉受限位置做前向滑動，會增加前脫位風險。"
+    "A": "未先外轉至受限位置，且前滑會增加前方壓力。",
+    "C": "外展 90 度合併外轉是易脫臼姿勢，不適合開始。",
+    "D": "外轉受限位置做前向滑動，會增加再脫臼風險。"
    },
-   "takeaway": "前脫臼術後避免前滑，用休息位牽拉增加外轉。",
+   "takeaway": "肩前脫臼復位後避免前滑，先用休息位牽拉增加外轉。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "題目為非手術式復位，詳解卻寫成「前向脫臼術後」，與題目情境不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "前脫臼復位後於休息位外轉至受限處做牽拉、避免前滑與外展外轉姿勢，說明正確。"
    }
   },
   {

@@ -302,28 +302,25 @@
   },
   {
    "id": "109-1-NEURO-014",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "肩胛向後下垂屬於 PNF 的肩胛模式（scapular pattern），不是上肢對角線的組成。其餘三者屬於上肢對角線的屈曲型態。",
+   "why_correct": "肩關節屈曲、外轉與前臂旋後都屬上肢 D1 屈曲型態，此型態的肩胛動作是向前上提；肩胛向後下壓屬 D1 伸直型態，與其他三者不同組。",
    "why_others": {
-    "A": "肩關節屈曲屬上肢對角線屈曲模式的組成。",
-    "B": "肩關節外轉屬上肢對角線屈曲模式的組成。",
-    "C": "前臂旋後屬上肢對角線屈曲模式的組成。"
+    "A": "肩關節屈曲屬上肢 D1 屈曲型態的組成。",
+    "B": "肩關節外轉屬上肢 D1 屈曲型態的組成。",
+    "C": "前臂旋後屬上肢 D1 屈曲型態的組成。"
    },
-   "takeaway": "肩胛模式與上肢對角線模式要分開記。",
+   "takeaway": "D1 屈曲：肩胛前上提、肩屈曲外轉、前臂旋後；肩胛後下壓屬 D1 伸直。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "肩胛動作本是 PNF 上肢對角線的組成之一，肩胛向後下壓屬 D1 伸直型態而與 A/B/C 的 D1 屈曲（肩胛向前上提）不同組，詳解說它不屬上肢對角線組成的理由錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "肩屈曲、外轉、前臂旋後屬屈曲型態，肩胛後下壓屬D1伸直型態，說明正確。"
    }
   },
   {
@@ -423,28 +420,25 @@
   },
   {
    "id": "109-1-NEURO-019",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "手無法抓握時，可由治療師在皮膚上畫字或圖形，測皮膚繪畫感（graphesthesia），它與立體覺同屬結合皮質感覺，且不需抓握。",
+   "why_correct": "手無法抓握時，可由治療師在皮膚上畫字或圖形，測皮膚繪畫感（graphesthesia）；它與立體覺同樣要辨識形狀，屬結合皮質感覺，且不需抓握。",
    "why_others": {
-    "A": "觸覺定位是測感覺的定位，屬較基本的感覺檢查。",
-    "B": "兩點區辨偏向周邊感覺的空間分辨。",
-    "C": "重量覺需要手持物品才能測。"
+    "A": "觸覺定位雖屬結合皮質感覺，只測位置，不涉及辨識形狀。",
+    "B": "兩點區辨雖屬結合皮質感覺，只測空間分辨，不涉及辨識形狀。",
+    "C": "重量覺需要手持物品才能測，手麻痺時無法執行。"
    },
    "takeaway": "手不能抓握時，用皮膚繪畫感替代立體覺。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "觸覺定位與兩點區辨在教科書（O'Sullivan）同屬結合皮質感覺，詳解說它們是基本或周邊感覺有誤，且未說明兩者為何不能替代。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "皮膚繪畫感不需抓握且同屬結合皮質感覺，其他選項說明正確。"
    }
   },
   {
@@ -847,28 +841,25 @@
   },
   {
    "id": "109-1-NEURO-037",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "中風偏癱患者下肢血液回流較差且活動減少，深層靜脈栓塞多見於下肢，機率下肢大於上肢。",
+   "why_correct": "中風偏癱患者下肢活動減少、肌肉幫浦作用下降，血液回流較差，深層靜脈栓塞多見於下肢，機率下肢大於上肢。",
    "why_others": {
     "A": "偏癱側因廢用，骨質疏鬆較嚴重，故患側高於健側。",
-    "B": "患側較易跌倒骨折，並非相等。",
-    "C": "癲癇出現時間的描述不正確。"
+    "B": "跌倒多傾向患側著地，患側骨折機率較高，並非相等。",
+    "C": "出血型雖較常早發癲癇，但兩型皆可早發或晚發，無固定先後。"
    },
    "takeaway": "中風後深層靜脈栓塞好發在癱瘓側下肢。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "C 只寫「描述不正確」未說明理由，且出血型中風早發性癲癇確較常見，詳解未正確解釋 C 為何錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "深層靜脈栓塞以下肢為多，骨鬆與跌倒骨折以患側為多，說明合理。"
    }
   },
   {

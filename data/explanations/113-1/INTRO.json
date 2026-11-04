@@ -354,28 +354,25 @@
   },
   {
    "id": "113-1-INTRO-016",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "依著作權法，受雇人在職務上完成的著作，如果沒有另外約定，受雇人就是著作人，享有著作人格權（moral rights）；著作財產權（economic rights）則歸雇用人。所以單張的著作財產權屬於醫院，治療師離職後醫院仍可以繼續印製、發放。",
+   "why_correct": "依著作權法，受雇人在職務上完成的著作，如果沒有另外約定，受雇人就是著作人，享有著作人格權（moral rights）；著作財產權（economic rights）則歸雇用人。所以醫院擁有財產權，治療師離職後仍可繼續印製。",
    "why_others": {
     "A": "沒有約定時，職務著作的財產權歸雇用人，不歸治療師。",
     "B": "沒有約定時，受雇人才是著作人，著作人格權屬於治療師。",
     "D": "權利歸屬剛好顛倒，人格權歸治療師、財產權歸醫院。"
    },
-   "takeaway": "受雇的職務著作沒有約定時，人格權歸受雇人，財產權歸雇用人；出資聘人完成的著作則相反。",
+   "takeaway": "職務著作無約定：人格權歸受雇人，財產權歸雇用人。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.93,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 和各選項的分析都沒問題，錯在 takeaway 說出資聘人完成的著作「則相反」，這句會誤導考生：依著作權法第12條，沒有約定時，受聘人是著作人，著作財產權也歸受聘人，出資人只能利用該著作；並不是人格權和財產權的歸屬對調。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "著作權法第11條職務著作無約定時人格權歸受雇人、財產權歸雇用人，正確。"
    }
   },
   {
@@ -428,26 +425,34 @@
    "id": "113-1-INTRO-019",
    "status": "rejected",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "物理治療師法經立法院通過、總統公布，屬「法律」，位階最高。物理治療所設置標準由物理治療師法直接授權中央主管機關訂定，屬法規命令。訓練機構認定標準是更細部的執行性規範，位階最低，所以順序為①③②。",
+   "why_correct": "物理治療師法經立法院通過、總統公布，屬法律，位階最高。兩項標準都是中央主管機關依授權訂定的命令，位階低於法律；本題承認的順序把設置標準列在訓練機構認定標準之前，即①③②。",
    "why_others": {
-    "A": "訓練機構認定標準是更細部的規範，位階不會高於設置標準。",
-    "C": "認定標準屬行政命令，不可能高於法律位階的物理治療師法。",
-    "D": "設置標準由母法授權訂定，位階低於物理治療師法。"
+    "A": "兩標準的先後與本題承認的順序（設置標準在前）不同。",
+    "C": "認定標準屬命令，不可能高於法律位階的物理治療師法。",
+    "D": "設置標準屬命令，位階低於物理治療師法。"
    },
-   "takeaway": "法規位階：憲法＞法律（○○法）＞命令（標準、辦法、細則）；母法授權的命令高於細部執行規範。",
+   "takeaway": "法規位階：憲法＞法律（○○法）＞命令（標準、辦法、細則）。",
    "review": {
     "blind_answer": [
-     "B"
+     "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "兩項標準都是依物理治療師法授權、由中央主管機關訂定的法規命令，屬同一位階；詳解卻斷言訓練機構認定標準是「更細部的執行性規範」、位階低於設置標準，這個說法沒有依據，A 選項的排除理由也就跟著站不住。",
+    "blind_confidence": 0.35,
+    "verdict": "answer_disputed",
+    "reason": "兩項標準皆為中央主管機關依物理治療師法授權訂定的法規命令，位階相同，無法區分②③高低，詳解亦未給出專業依據，A與B無從區分。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch",
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "兩項標準都是依物理治療師法授權、由中央主管機關訂定的法規命令，屬同一位階；詳解卻斷言訓練機構認定標準是「更細部的執行性規範」、位階低於設置標準，這個說法沒有依據，A 選項的排除理由也就跟著站不住。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -616,28 +621,25 @@
   },
   {
    "id": "113-1-INTRO-027",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "依物理治療師法，必須通過國家考試、取得物理治療師證書，並向所在地主管機關申請執業登記，才能加入公會成為會員。光是從相關科系畢業、沒有證照，不能入會，所以C錯。",
+   "why_correct": "公會會員須為領有物理治療師證書者；物理治療師要先取得證書、加入所在地公會，才能完成執業登記。只從相關科系畢業、沒有證書，不能入會，所以C錯。",
    "why_others": {
-    "A": "物理治療師法對公會的設立有明文規定，具有法源依據。",
-    "B": "協助政府擬定、修改、推行相關制度與法令，本來就是公會的任務之一。",
-    "D": "舉辦學術、繼續教育和聯誼活動、聯絡會員感情，也是公會的功能。"
+    "A": "物理治療師法對公會的設立有明文規定，具法源依據。",
+    "B": "協助政府擬定、修改、推行相關制度與法令是公會任務之一。",
+    "D": "舉辦學術、繼續教育與聯誼活動，也是公會的功能。"
    },
-   "takeaway": "加入公會的條件是有物理治療師證書並執業，只有學歷不夠；公會有法源依據，也會協助政府制定法規。",
+   "takeaway": "入會要有物理治療師證書，只有學歷不夠；入會後才能執業登記。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.93,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒問題，但詳解說「先向主管機關申請執業登記，才能加入公會」把順序講反了：依《醫事人員執業登記及繼續教育辦法》，申請執業登記時要附上執業所在地公會的會員證明，所以是先有證書、入會，才能完成執業登記。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "入會須領有物理治療師證書，其他公會功能敘述正確。"
    }
   },
   {
@@ -1388,28 +1390,25 @@
   },
   {
    "id": "113-1-INTRO-060",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "類風濕性關節炎（rheumatoid arthritis, RA）的類風濕因子（rheumatoid factor, RF）陽性率只有約七到八成，所以有血清陰性RA。反過來，RF陽性也可見於其他疾病與老年人，因此RF沒有增高不能排除RA，要搭配anti-CCP抗體與臨床表現一起判斷。",
+   "why_correct": "類風濕性關節炎（rheumatoid arthritis, RA）病人並非都有類風濕因子（rheumatoid factor, RF）陽性，存在血清陰性RA。因此RF沒有增高不能排除RA，要搭配anti-CCP抗體與臨床表現判斷。",
    "why_others": {
-    "A": "RA以對稱性多關節滑膜炎為主，心臟侵犯只是關節外表現之一，影響不比關節大。",
-    "B": "RA主要侵犯近端指間關節與掌指關節，遠端指間關節較少受累，DIP受累是骨關節炎的特徵。",
-    "D": "RA的肺部表現以間質性肺病、胸膜炎、類風濕結節為主，並非常合併細菌感染。"
+    "A": "RA以對稱性多關節滑膜炎為主，心臟侵犯只是關節外表現之一。",
+    "B": "RA主要侵犯近端指間與掌指關節，DIP受累是骨關節炎特徵。",
+    "D": "RA肺部表現以間質性肺病、胸膜炎、類風濕結節為主。"
    },
-   "takeaway": "RA侵犯PIP、MCP，不侵犯DIP；RF陰性不能排除RA（有血清陰性RA）。",
+   "takeaway": "RA侵犯PIP、MCP，不侵犯DIP；RF陰性不能排除RA。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.93,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒問題，但 why_correct 用「RF 陽性也見於其他疾病與老年人」（這是特異性不足）來推出「因此 RF 沒有增高不能排除 RA」，前提推不出結論；能支持這個結論的是敏感度只有約七到八成、存在血清陰性 RA。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "存在血清陰性RA，RA侵犯PIP與MCP而非DIP，說明正確。"
    }
   },
   {

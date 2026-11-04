@@ -394,28 +394,25 @@
   },
   {
    "id": "115-2-CARDPED-018",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "阻塞性肺病的核心是氣流受阻，要靠肺量計（spirometry）測FEV1/FVC比值下降才能確診並分級嚴重度。胸部X光只能看到過度充氣等結構變化，早期或輕度病人常常看起來正常，所以大多數阻塞性肺病的診斷以肺量計為主。",
+   "why_correct": "阻塞性肺病的核心是氣流受阻，要靠肺量計（spirometry）測得FEV1/FVC比值下降來確認並分級。胸部X光只能看到過度充氣等結構變化，早期或輕度病人常常看起來正常，所以大多數阻塞性肺病的診斷以肺量計為主。",
    "why_others": {
     "A": "X光主要用來排除其他病因，不是診斷氣流阻塞的首選檢查。",
     "C": "輕度COPD或氣喘發作的間歇期，X光常常是正常的。",
     "D": "HRCT多用於支氣管擴張症等特定情況，不是所有阻塞性肺病的首選。"
    },
-   "takeaway": "阻塞性肺病靠肺量計確診：吸支氣管擴張劑後FEV1/FVC仍<0.7；影像檢查只是輔助。",
+   "takeaway": "阻塞性肺病以肺量計確認氣流阻塞（FEV1/FVC下降）；影像檢查多為輔助或排除他病。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒有問題，但 takeaway 把 COPD 專用的診斷標準（吸支氣管擴張劑後 FEV1/FVC 仍 <0.7）寫成所有阻塞性肺病的確診標準，這不正確；氣喘的氣流阻塞是可逆的，吸藥後比值常會恢復正常，所以這樣寫會誤導考生。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "阻塞性肺病以肺量計確診，各選項說明正確。"
    }
   },
   {
@@ -1109,31 +1106,25 @@
   },
   {
    "id": "115-2-CARDPED-049",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "百分位等級（percentile rank）75，代表他的分數高於或等於常模中 75% 的同齡者，等於優於 75% 的同儕，只有約 25% 的人比他好。C 說「優於 25% 的同儕」把方向弄反了，所以是錯誤的敘述。",
+   "why_correct": "百分位等級（percentile rank）75，代表他的分數高於或等於常模中75%的同齡者，等於優於75%的同儕，只有約25%的人比他好。C說「優於25%的同儕」把方向弄反了，所以是錯誤的敘述。",
    "why_others": {
     "A": "百分位等級只表示排序位置，各等級之間的間距不相等，屬於次序變項。",
     "B": "這是百分位等級的定義：把常模排序後分成一百等分，看他落在哪個相對位置。",
-    "D": "年齡分數既然是以各年齡層的第75百分位數來定，他正好落在10歲常模的第75百分位，所以同分者的發展年齡是10歲。"
+    "D": "年齡分數以各年齡層第75百分位數訂定，他正落在10歲的P75，發展年齡即10歲。"
    },
-   "takeaway": "百分位等級 P 代表優於 P% 的同儕；它屬於次序變項，間距不相等。",
+   "takeaway": "百分位等級P代表優於P%的同儕；它屬於次序變項，間距不相等。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.9,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "why_others D 52 字 > 44"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "P75是優於75%的同儕，C方向寫反，其他說明正確。"
    }
   },
   {

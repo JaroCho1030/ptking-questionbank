@@ -265,6 +265,41 @@ def select_todo(only: str | None = None, limit: int | None = None, force: bool =
     return out
 
 
+RETRY_FAILS = {"format", "reasoning_error"}
+
+
+def retryable(q: dict, e: dict | None) -> bool:
+    """改寫輪的對象：人工寫的不動；pending，或不通過原因只有格式／推理有錯（盲解答對、答案沒疑慮）的題。
+    答案被更正（hash 不符）的交給一般流程重跑，這裡不收。"""
+    if not e or e.get("source") == "human" or e.get("answers_hash") != answers_hash(q):
+        return False
+    if e.get("status") == "pending":
+        return True
+    fails = set(e.get("review", {}).get("fails") or [])
+    return e.get("status") == "rejected" and bool(fails) and fails <= RETRY_FAILS
+
+
+def select_retry(only: str | None = None, limit: int | None = None,
+                 years: list[int] | None = None) -> list[tuple[str, str, dict, dict]]:
+    """回傳 [(年-次, 科目, 題目, 上一版詳解)]，條件見 retryable。"""
+    out = []
+    for p in sorted(C.JSON_DIR.glob("*/*.json")):
+        exam_dir, subject = p.parent.name, p.stem
+        if only and only != f"{exam_dir}/{subject}":
+            continue
+        year = int(exam_dir.split("-")[0])
+        if year < C.EXPLAIN_MIN_YEAR or (years and year not in years):
+            continue
+        existing = load_explanations(exam_dir, subject)
+        for q in json.loads(p.read_text("utf-8"))["questions"]:
+            e = existing.get(q["id"])
+            if retryable(q, e):
+                out.append((exam_dir, subject, q, e))
+                if limit is not None and len(out) >= limit:
+                    return out
+    return out
+
+
 # ---------------------------------------------------------------- 提示詞
 
 def option_images(q: dict) -> bool:
@@ -305,10 +340,26 @@ def answer_text(q: dict) -> str:
     return s
 
 
-def writer_prompt(q: dict, group_prev: list[dict], topic_name: str | None) -> str:
+def revise_hint(q: dict, prev: dict) -> str:
+    """改寫輪：把上一版詳解與審稿意見附給寫手。"""
+    review = prev.get("review") or {}
+    lines = ["## 上一版詳解（審稿沒通過，請改寫）", format_explanation(prev)]
+    if review.get("verdict") == "reasoning_error" and review.get("reason"):
+        lines.append(f"審稿意見：{review['reason']}")
+    probs = format_problems(q, prev)
+    if probs:
+        lines.append("格式問題：" + "；".join(probs))
+    lines.append("改寫要求：針對審稿意見逐句修正，被點名的事實要重新確認再寫；沒把握的數字、項數、清單直接刪掉，改用不帶數字的說法；"
+                 "沒問題的句子可以保留。字數上限是硬上限，寧可短。")
+    return "\n".join(lines)
+
+
+def writer_prompt(q: dict, group_prev: list[dict], topic_name: str | None, prev: dict | None = None) -> str:
     parts = [question_text(q, group_prev), "", answer_text(q)]
     if topic_name:
         parts.append(f"主題：{topic_name}")
+    if prev:
+        parts += ["", revise_hint(q, prev)]
     parts += ["", f"請用 {WRITER_TOOL} 工具回傳這一題的詳解。"]
     return "\n".join(parts)
 

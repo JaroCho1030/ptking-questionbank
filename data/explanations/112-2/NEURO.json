@@ -255,28 +255,25 @@
   },
   {
    "id": "112-2-NEURO-012",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "推者症候群（pusher syndrome）病人會向患側推，對垂直感知錯誤。往健側外側懸吊點方向推，可讓病人在非患側練習動態重心位移，並漸進修正姿勢，是適當的活動設計。",
+   "why_correct": "推者症候群（pusher syndrome）病人會用健側推向患側。讓健側手往健側外側懸吊點推，是動態的重心轉移練習，可學習把重心移向健側並維持直立。",
    "why_others": {
-    "B": "由患側躺坐起容易加重推向患側，且病人缺乏正中概念。",
-    "C": "僅在兩側肩關節給節律穩定，未處理推的行為與重心位移。",
-    "D": "健側靠牆會強化推向患側的錯誤感知，鏡子也不足以矯正。"
+    "B": "只是起身與靜態正中擺位，不屬於動態坐姿平衡訓練。",
+    "C": "兩側肩節律穩定偏靜態穩定，未練重心轉向健側。",
+    "D": "健側靠牆屬靜態支撐，沒有往健側的動態重心轉移練習。"
    },
-   "takeaway": "推者症候群要引導重心往健側位移，修正垂直感。",
+   "takeaway": "推者症候群動態平衡：引導病人主動把重心移向健側。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "B錯在只是起身與靜態正中擺位、非動態坐姿平衡訓練，詳解稱由患側起身會加重推向患側缺乏依據；D說鏡子不足以矯正也與視覺回饋為推者症候群重要策略的觀點不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "推者往健側懸吊點推為動態重心轉向健側練習，其他選項偏靜態，說明合理。"
    }
   },
   {
@@ -350,28 +347,25 @@
   },
   {
    "id": "112-2-NEURO-016",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "D2 屈曲模組含髖屈曲、外展與外旋，不同於協同動作的型態；節律啟動（rhythmic initiation）可讓病人從被動、輔助到主動逐步學習動作，較不易誘發協同。",
+   "why_correct": "下肢D2屈曲模組為髖屈曲、外展、內旋，內旋正是它有別於屈曲協同（屈曲、外展、外旋）之處；節律啟動（rhythmic initiation）由被動、輔助到主動逐步學習，較不易誘發協同。",
    "why_others": {
-    "A": "D1 屈曲含內收，且收縮放鬆多用於增加活動度，不適合選擇性控制。",
-    "B": "D1 屈曲加節律穩定屬於等長穩定訓練，不是啟動運動。",
+    "A": "收縮－放鬆主要用於增加活動度，不是訓練選擇性控制。",
+    "B": "節律穩定是等長穩定訓練，不是啟動新動作。",
     "C": "節律穩定偏向穩定度訓練，不是新動作的學習。"
    },
-   "takeaway": "要誘發選擇性動作用節律啟動與非協同模組。",
+   "takeaway": "下肢D2屈曲含內旋，有別於屈曲協同；搭配節律啟動。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "下肢D2屈曲模組為髖屈曲、外展、內旋，詳解誤寫為外旋，而內旋正是它有別於屈曲協同（屈曲外展外旋）的關鍵。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "下肢D2屈曲含內旋有別於屈曲協同，節律啟動利於學新動作，正確。"
    }
   },
   {
@@ -886,28 +880,25 @@
   },
   {
    "id": "112-2-NEURO-039",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "部分載重懸吊式跑步機（body weight supported treadmill training）可提供安全支持，讓病人早期在直立姿勢下練習步態，是主要好處。",
+   "why_correct": "部分載重懸吊式跑步機（body weight supported treadmill training）可提供安全支持，讓肢體尚無法完全承重的病人早期在直立姿勢下練習步態，是主要好處。",
    "why_others": {
     "A": "速度增加並不會降低平衡需求，且不是主要好處。",
     "B": "不能保證誘發更大的髖屈曲角度。",
-    "D": "無法完全取代平地練習，也需要較大空間與設備。"
+    "D": "無法完全取代平地練習，仍需轉移到地面步行。"
    },
-   "takeaway": "懸吊跑步機的好處是早期直立步態練習。",
+   "takeaway": "懸吊跑步機的好處是早期直立步態練習，但不能取代平地。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "D的說明稱懸吊跑步機需要較大空間，與跑步機訓練所需空間比平地步行小的一般認知相反，D錯在無法完全取代平地練習。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "部分載重跑步機主要好處為早期直立步態練習，其他選項說明正確。"
    }
   },
   {
@@ -1747,28 +1738,25 @@
   },
   {
    "id": "112-2-NEURO-076",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "公車緩慢煞車時身體被往前帶，重心前移，使身體相對向前傾，此時以踝策略由後側肌群先活化對抗，腓腸肌（小腿後側）先收縮拉回身體。",
+   "why_correct": "公車緩慢煞車時身體因慣性往前，相對於雙腳向前傾，此時以踝策略由後側肌群先活化，腓腸肌（小腿後側）最先收縮把身體拉回。",
    "why_others": {
     "B": "脛前肌在身體向後晃時才先活化。",
-    "C": "股四頭肌是踝策略後才在較遠端出現。",
-    "D": "大腿後肌群同樣在之後才出現，不是先活化。"
+    "C": "股四頭肌屬前側肌群，在身體向後晃時才參與。",
+    "D": "大腿後肌屬後側肌群，但在腓腸肌之後才活化。"
    },
-   "takeaway": "身體前傾時踝策略先啟動小腿後側肌群與肌肉鏈由下而上。",
+   "takeaway": "身體前傾：後側肌群由遠端到近端活化，腓腸肌最先。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "股四頭肌位於近端而非「較遠端」，而且它屬於向後晃時的前側肌群，不在身體前傾時的後側肌群活化序列中，C的說明有事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "煞車時身體前傾，踝策略由腓腸肌先活化，遠端到近端，正確。"
    }
   },
   {

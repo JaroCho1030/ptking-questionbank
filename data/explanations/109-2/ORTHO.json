@@ -3,24 +3,21 @@
  "explanations": [
   {
    "id": "109-2-ORTHO-001",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "b75c34545e8c",
-   "why_correct": "考選部公告一律給分。後仰合併右側彎與左旋轉時，右側頸部疼痛可能來自右側關節壓縮，也可能來自右側夾肌被拉長，題意無法唯一指向某一條肌肉，頸夾肌與頭夾肌皆說得通，故爭議。",
+   "why_correct": "考選部公告一律給分。後仰、右側彎合併左旋正是右側胸鎖乳突肌的動作，但它不在選項中；右側夾肌雖參與後仰與右側彎，卻是同側旋轉，與左旋不符，沒有選項完全吻合，故有爭議。",
    "why_others": {},
-   "takeaway": "頸部複合動作的疼痛來源需分辨壓縮或牽拉，再選阻力測試。",
+   "takeaway": "主動動作誘發疼痛時，找出能完成整組動作的肌肉再做阻力測試。",
    "review": {
     "blind_answer": [
-     "B"
+     "D"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "後仰合併右側彎會使右側夾肌縮短而非拉長（僅左旋略拉長），詳解稱右側夾肌被拉長不正確；且同時執行後仰、右側彎、左旋三動作的是右側胸鎖乳突肌（不在選項中），這才是爭議所在，詳解未說明。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.3,
+    "verdict": "pass",
+    "reason": "送分說明合理：整組動作符合右側胸鎖乳突肌，但它不在選項裡；右夾肌是同側旋轉，與左旋不符。"
    }
   },
   {
@@ -278,28 +275,25 @@
   },
   {
    "id": "109-2-ORTHO-013",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "L4-5 融合術的目的是讓該節穩定癒合，中度到最小保護期不應對融合節段做鬆動術增加活動度，否則可能破壞癒合。",
    "why_others": {
-    "B": "疤痕處理可在傷口癒合後進行。",
-    "C": "鄰近的 L1-2 並非融合節段，可處理疼痛。",
+    "B": "疤痕處理可在傷口癒合後進行，減少沾黏。",
+    "C": "L1-2 不是融合節段，對其鬆動以緩解疼痛可接受。",
     "D": "腰椎穩定度訓練是此時期的重要項目。"
    },
-   "takeaway": "融合節段禁止鬆動，只可鬆動相鄰未融合節段。",
+   "takeaway": "融合節段不可做增加活動度的鬆動術。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "C選項稱L1-2為L4-5的「鄰近」節段有誤，L1-2距融合節段甚遠；takeaway「只可鬆動相鄰未融合節段」亦與選項內容不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "融合節段不可做增加活動度的鬆動術，其餘選項的說明也正確。"
    }
   },
   {
@@ -442,28 +436,25 @@
   },
   {
    "id": "109-2-ORTHO-020",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "雙側直膝抬腿約 60 度即產生背痛，較可能代表腰椎或薦髂關節受到牽扯，而不是直接指向髖關節問題。髖關節問題通常在髖活動時出現髖或鼠蹊疼痛。",
+   "why_correct": "雙側直膝抬腿時骨盆會跟著動，在 70 度以前出現背痛較指向薦髂關節，超過 70 度才較指向腰椎。C 把約 60 度的背痛歸因於髖關節，故錯誤。",
    "why_others": {
-    "A": "患側 60 度左右出現坐骨神經痛，可能是椎間盤問題。",
-    "B": "雙側抬超過 70 度才背痛，可能是腰椎關節問題。",
+    "A": "患側約 60 度出現坐骨神經痛，可能是椎間盤突出。",
+    "B": "雙側抬超過 70 度才背痛，較指向腰椎關節問題。",
     "D": "對側抬腿誘發患側坐骨神經痛（交叉徵象），與椎間盤突出相關。"
    },
-   "takeaway": "雙側抬腿背痛不能直接推論髖關節問題。",
+   "takeaway": "雙側直膝抬腿背痛：70 度前想薦髂關節，之後想腰椎。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "依Magee，雙側直膝抬腿在70度以前產生背痛指向薦髂關節，超過70度才指向腰椎，詳解稱60度背痛「較可能代表腰椎或薦髂關節」與B選項的區分矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "雙側直膝抬腿 70 度前背痛指向薦髂關節、之後指向腰椎，說明正確。"
    }
   },
   {
@@ -679,28 +670,25 @@
   },
   {
    "id": "109-2-ORTHO-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "舉手時肩胛下角翹起、肩峰前傾，表示肩胛後傾與前傾增加，常因胸小肌過緊拉住喙突，以及前鋸肌無力使肩胛無法貼附胸廓，所以是③④。",
+   "why_correct": "下角翹起、肩峰前傾即肩胛前傾（anterior tilt）增加。胸小肌過緊會把喙突往前下拉，前鋸肌無力則無法讓肩胛後傾並貼附胸廓，所以是③④。",
    "why_others": {
-    "A": "下斜方肌過緊與胸大肌無力不會造成此現象。",
-    "C": "下斜方肌過緊不會讓下角翹起。",
-    "D": "胸大肌無力不是主因。"
+    "A": "下斜方肌過緊傾向使肩胛後傾，胸大肌無力也不致前傾。",
+    "C": "下斜方肌過緊傾向使肩胛後傾，與前傾相反。",
+    "D": "胸大肌不附著肩胛，其無力不會造成肩胛前傾。"
    },
-   "takeaway": "下角翹起、肩峰前傾：胸小肌緊加前鋸肌弱。",
+   "takeaway": "肩胛前傾增加：胸小肌過緊加前鋸肌無力。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "下角翹起、肩峰前傾是肩胛前傾（anterior tilt）增加，詳解寫「肩胛後傾與前傾增加」自相矛盾且事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "胸小肌過緊與前鋸肌無力造成肩胛前傾，各選項說明正確。"
    }
   },
   {

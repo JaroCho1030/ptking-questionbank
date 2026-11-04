@@ -302,15 +302,15 @@
   },
   {
    "id": "112-1-BASIC-014",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "微血管依內皮結構可分為連續型、窗孔型與竇狀型三類，分別分布於肌肉、腎絲球與肝脾等處。",
+   "why_correct": "微血管依內皮結構可分為連續型、窗孔型與竇狀型三類，分別常見於肌肉、腎絲球與肝脾等處。",
    "why_others": {
-    "B": "物質也可藉由囊泡運輸（transcytosis）與整體流動（bulk flow）通過。",
-    "C": "孔洞是窗孔型的特徵，連續型靠緊密接合與細胞間隙連接。",
+    "B": "物質也可藉囊泡運輸（transcytosis）與整體流動（bulk flow）通過。",
+    "C": "細胞間裂隙是物質通道而非連結，內皮間主要靠緊密接合相連。",
     "D": "內皮細胞間主要以緊密接合連結，窗孔是細胞上的小孔。"
    },
    "takeaway": "微血管三型：連續、窗孔、竇狀。",
@@ -318,12 +318,9 @@
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "C 的說明稱連續型靠緊密接合與細胞間隙連接，幾乎等同選項原文，未說明 C 錯在把細胞間孔當作連結方式，且把孔洞與窗孔混為一談，推理自相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "微血管分三型正確，囊泡運輸與緊密接合等其餘選項說明無誤。"
    }
   },
   {
@@ -929,28 +926,25 @@
   },
   {
    "id": "112-1-BASIC-041",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "韌帶的應力－應變曲線起始處有趾部區（toe region），膠原纖維由捲曲逐漸拉直，此段為非線性；之後才進入線性的彈性區。因此彈性區並非全部呈線性。",
+   "why_correct": "韌帶彈性區的起始段是趾部區（toe region），膠原纖維由捲曲逐漸拉直，應力與應變呈非線性，之後才轉為線性段，故彈性區並非全為線性。",
    "why_others": {
     "A": "膠原纖維未受力時呈波浪狀（crimp），拉緊後才變直。",
-    "B": "硬度為曲線線性段斜率，即應力差除以應變差。",
-    "C": "曲線可分為彈性區與塑性區，塑性區變形不可完全恢復。"
+    "B": "硬度以曲線斜率表示，即應力差除以應變差。",
+    "C": "曲線可分為彈性區與塑性區，塑性區變形無法完全恢復。"
    },
-   "takeaway": "韌帶曲線先有非線性趾部區，再有線性彈性區，最後塑性區。",
+   "takeaway": "韌帶彈性區含非線性趾部區與線性區，不是全為線性。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "詳解一面說趾部區之後「才進入線性的彈性區」、takeaway 也把趾部區與線性彈性區分開，等於承認彈性區是線性，與「D 錯在彈性區含非線性趾部區」的結論自相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "彈性區含非線性趾部區，硬度為應力差除以應變差，說明正確。"
    }
   },
   {
@@ -1195,15 +1189,15 @@
   },
   {
    "id": "112-1-BASIC-052",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "鼻咽壺（anatomical snuffbox）底部近端為舟狀骨（scaphoid），腕橈側偏移時更容易觸及；舟狀骨骨折時此處壓痛。",
+   "why_correct": "鼻咽壺（anatomical snuffbox）底部近端可觸及舟狀骨（scaphoid），腕尺側偏移時舟狀骨從橈骨莖突下滑出，更易觸及；舟狀骨骨折時此處壓痛。",
    "why_others": {
     "A": "伸拇指長肌肌腱構成鼻咽壺的尺側邊界。",
-    "B": "伸拇指短肌肌腱構成橈側邊界。",
+    "B": "伸拇指短肌肌腱構成鼻咽壺的橈側邊界。",
     "D": "大多角骨位於鼻咽壺底部遠端。"
    },
    "takeaway": "鼻咽壺底近端是舟狀骨，遠端是大多角骨。",
@@ -1211,12 +1205,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "舟狀骨要在腕尺側偏移時才會從橈骨莖突下滑出、比較容易摸到，詳解寫成「橈側偏移時更容易觸及」是錯的。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "鼻咽壺底近端為舟狀骨、遠端為大多角骨，邊界肌腱說明正確。"
    }
   },
   {
@@ -1313,28 +1304,25 @@
   },
   {
    "id": "112-1-BASIC-057",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "圖中曲線1段為低力量範圍，對應日常生理活動；曲線2段力量較大，對應臨床測試膝穩定度時前十字韌帶承受的力量。",
+   "why_correct": "圖中1為起始的趾部區，膠原纖維由捲曲漸拉直、力量低，臨床膝穩定度測試的力量落在此區；2為線性區，日常生理活動的力量落在此區，故依序為2與1。",
    "why_others": {
-    "A": "兩者順序顛倒。",
-    "C": "日常活動不會落在2區，臨床測試也不會到3區。",
-    "D": "3區接近破壞，不是日常或臨床測試範圍。"
+    "A": "順序顛倒，日常活動在2區、臨床測試在1區。",
+    "C": "臨床測試力量小，落在1區而非3區。",
+    "D": "3區已開始出現纖維破壞，不屬日常活動範圍。"
    },
-   "takeaway": "日常活動在曲線前段，臨床測試在中段，破壞在高點3。",
+   "takeaway": "前十字韌帶：臨床測試在趾部區，日常活動在線性區。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "詳解把 1 區寫成日常活動、2 區寫成臨床測試，這是 A 的順序；承認答案 B 是日常活動在 2 區（線性區）、臨床穩定度測試在 1 區（趾部區），解釋正好顛倒。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "依附圖1為趾部區、2為線性區、3為微破壞點，臨床測試在1、日常活動在2，說明與圖相符。"
    }
   },
   {
@@ -1550,28 +1538,25 @@
   },
   {
    "id": "112-1-BASIC-067",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "第十到第十二節胸椎的肋骨為浮肋，肋骨與橫突不形成肋橫關節，因此缺乏肋橫關節。",
+   "why_correct": "下位肋骨（第十至第十二肋）通常缺乏與橫突相接的肋結節關節面，因此這幾節胸椎缺少肋橫關節。",
    "why_others": {
     "A": "胸椎小面關節接近冠狀面排列。",
     "B": "肋橫關節由肋骨結節與橫突連接，不是肋骨頭。",
     "C": "肋椎關節由肋骨頭與椎體連接，不是關節結節。"
    },
-   "takeaway": "T10到T12無肋橫關節；肋橫關節是肋結節對橫突。",
+   "takeaway": "T10到T12缺肋橫關節；肋橫關節是肋結節對橫突。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "浮肋只有第 11、12 肋，第 10 肋不是浮肋，詳解說「第十到第十二節胸椎的肋骨為浮肋」是事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "下位胸椎缺肋橫關節、肋橫關節為肋結節對橫突、肋椎關節為肋骨頭對椎體，說明正確。"
    }
   },
   {
@@ -1668,28 +1653,25 @@
   },
   {
    "id": "112-1-BASIC-072",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "站立期各分期中，初期接觸約占很小比例，接觸反應期稍長，站立中期較長，所以初期接觸<接觸反應<站立中期。",
+   "why_correct": "初期接觸只是足部觸地的瞬間，接觸反應期較長，站立中期又更長，故初期接觸<接觸反應期<站立中期。",
    "why_others": {
-    "A": "擺盪前期比站立末期短，且比例關係不符。",
-    "C": "擺盪前期與接觸反應期的比例順序不正確。",
-    "D": "站立末期與站立中期的關係被顛倒。"
+    "A": "站立中期不比後兩期短，且擺盪前期比站立末期短。",
+    "C": "擺盪前期比站立中期短，「站立中期<擺盪前期」不成立。",
+    "D": "擺盪前期比站立末期短，「站立末期<擺盪前期」不成立。"
    },
    "takeaway": "站立期分期以初期接觸最短，站立中期較長。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "接觸反應期約占 8%、擺盪前期約 10%，兩者順序其實沒錯，C 錯在擺盪前期比站立中期短；詳解指出的錯誤點不對。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "依各期時間比率，初期接觸<接觸反應期<站立中期成立，其餘選項排除正確。"
    }
   },
   {

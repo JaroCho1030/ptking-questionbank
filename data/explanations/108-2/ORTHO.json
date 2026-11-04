@@ -137,28 +137,25 @@
   },
   {
    "id": "108-2-ORTHO-007",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "肩外展測試是將患側手放在頭頂，使神經根張力下降而減輕症狀，可由治療師或患者主動執行，患者可仰躺或坐姿，故②正確。①所述節段不正確，③陽性徵象名稱也不是 Bikele's sign，均有誤。",
+   "why_correct": "肩外展測試將患側手放在頭頂，降低神經根張力而減輕症狀，可由治療師或患者主動執行，仰躺或坐姿皆可，故②正確。①所述節段不正確；③陽性稱為Bakody's sign，不是Bikele's sign。",
    "why_others": {
     "B": "①③敘述有誤，不能全選。",
-    "C": "③陽性徵象名稱不正確，且漏列正確的②。",
+    "C": "雖含正確的②，但③陽性名稱錯誤，應為Bakody's sign。",
     "D": "①所述神經根節段不正確。"
    },
-   "takeaway": "肩外展測試是手放頭頂減輕神經根症狀，不是誘發。",
+   "takeaway": "肩外展測試是手放頭頂減輕神經根症狀，陽性為Bakody's sign。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "選項 C（僅②③）本身就有②，詳解卻說 C「漏列正確的②」，與選項內容不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "肩外展測試主要針對C4–C5／C5神經根，陽性為Bakody's sign，說明正確。"
    }
   },
   {
@@ -255,28 +252,25 @@
   },
   {
    "id": "108-2-ORTHO-012",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "腹直肌（rectus abdominis）屬於大範圍的整體肌（global muscle），主要產生軀幹屈曲動作，對腰椎椎節間的節段穩定貢獻最少；多裂肌與腹內、外斜肌則參與穩定。",
+   "why_correct": "腹直肌（rectus abdominis）屬於大範圍的整體肌（global muscle），主要產生軀幹屈曲動作，對腰椎椎節間的節段穩定貢獻最少。",
    "why_others": {
     "B": "多裂肌跨少數節段，是節段穩定的重要肌肉。",
-    "C": "腹外斜肌透過胸腰筋膜與腹內壓參與穩定。",
-    "D": "腹內斜肌與腹橫肌共同提高腹內壓，穩定腰椎。"
+    "C": "腹外斜肌可協助提高腹內壓穩定軀幹，貢獻大於腹直肌。",
+    "D": "腹內斜肌附著胸腰筋膜，與腹橫肌共同穩定腰椎。"
    },
    "takeaway": "腹直肌是整體動作肌，節段穩定貢獻最小。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "腹外斜肌基本上不附著於胸腰筋膜（附著的是腹內斜肌與腹橫肌），選項 C 的說明有事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "腹直肌為整體動作肌，節段穩定貢獻最少，說明正確。"
    }
   },
   {
@@ -419,28 +413,25 @@
   },
   {
    "id": "108-2-ORTHO-019",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "腰多裂肌（multifidus）是跨少數節段的深層穩定肌，主要功能是控制節段穩定，不是產生脊椎後伸的主要肌肉；脊椎後伸的主要動力是豎脊肌，因此 B 敘述錯誤。",
+   "why_correct": "B錯在「深層」：淺層多裂肌才具有最佳的後伸力臂，是重要的腰椎後伸肌；深層多裂肌纖維短、跨節段少，主要負責節段穩定與控制。",
    "why_others": {
     "A": "多裂肌確實有較高比例的第一型肌纖維。",
-    "C": "多裂肌是控制中立區最重要的肌肉之一，敘述通行。",
+    "C": "多裂肌是控制中立區最重要的肌肉之一。",
     "D": "觸摸與口令引導有助於選擇性收縮，敘述合理。"
    },
-   "takeaway": "多裂肌重在節段穩定，非主要後伸肌。",
+   "takeaway": "淺層多裂肌負責後伸，深層多裂肌負責節段穩定。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "B 錯在「深層」：淺層多裂肌才有最佳伸展力臂，也是重要的腰椎後伸肌；詳解卻說多裂肌整體不是主要後伸肌，與文獻（如 Bogduk）不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "淺層多裂肌後伸力臂較佳、深層負責節段穩定，說明正確。"
    }
   },
   {
@@ -836,28 +827,25 @@
   },
   {
    "id": "108-2-ORTHO-037",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "肩關節後側關節囊緊縮會限制肱骨頭向前滑動，因此限制盂肱關節的內轉與水平內收，與內轉受限最相關。",
+   "why_correct": "依凹凸定律，盂肱關節內轉時凸的肱骨頭向後滑動；後側關節囊緊縮會限制肱骨頭向後滑，因此與內轉受限最相關。",
    "why_others": {
     "A": "後伸主要受前側結構限制。",
-    "B": "外展主要受下方關節囊與肌肉限制。",
+    "B": "外展主要受下方關節囊限制。",
     "C": "外轉主要受前側關節囊限制。"
    },
-   "takeaway": "後側關節囊緊：內轉與水平內收受限。",
+   "takeaway": "後側關節囊緊：限制肱骨頭後滑，內轉受限。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "依凹凸定律，內轉時肱骨頭向後滑，後側關節囊緊縮限制的是向後滑動；詳解說限制「向前滑動」，機轉錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "後側關節囊限制肱骨頭後滑而限制內轉，說明正確。"
    }
   },
   {
@@ -954,28 +942,25 @@
   },
   {
    "id": "108-2-ORTHO-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "內轉肌力測試（IRRST）比較肩內外轉等長肌力：外轉肌力正常而內轉肌力弱，代表為肩內部夾擠（internal impingement）；外轉較弱則偏向其他類型夾擠。",
+   "why_correct": "內轉肌力測試（IRRST）在夾擠測試陽性後進行，將內外轉等長肌力與正常相比：外轉肌力正常而內轉肌力弱，提示肩內部夾擠（internal impingement）。",
    "why_others": {
-    "A": "此測試是在夾擠測試陽性後，用來分辨夾擠類型。",
-    "B": "外轉弱於內轉的判讀不是本題採用的結論，內部夾擠才是內轉弱。",
-    "D": "外轉弱仍可能有夾擠，不能據此排除夾擠症候群。"
+    "A": "此測試是在尼爾氏測試陽性後，用來分辨夾擠類型。",
+    "B": "外轉本就弱於內轉，直接比大小無法判讀夾擠。",
+    "D": "外轉肌力弱提示肩峰下夾擠，不是陰性。"
    },
    "takeaway": "IRRST：外轉正常、內轉弱，提示肩內部夾擠。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 寫外轉較弱偏向其他類型夾擠，反而支持 B，而 B 的駁斥只說「不是本題採用的結論」，沒有說明 B 為何錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "IRRST於Neer陽性後執行，外轉正常內轉弱提示內部夾擠，說明合理。"
    }
   },
   {
@@ -1582,16 +1567,16 @@
   },
   {
    "id": "108-2-ORTHO-069",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "摩頓氏神經瘤造成前足蹠骨間疼痛，臨床表現與蹠骨應力性骨折相似，容易混淆。",
+   "why_correct": "摩頓氏神經瘤造成前足蹠骨頭之間疼痛，位置與表現和蹠骨應力性骨折相似，臨床上容易混淆。",
    "why_others": {
-    "B": "拇趾滑液囊腫外觀與位置不同，較易區別。",
+    "B": "小趾滑液囊腫在第五蹠骨頭外側突起，外觀易區別。",
     "C": "足底筋膜炎疼痛在足跟內側。",
-    "D": "跗骨隧道症候群疼痛在內踝及足底後側。"
+    "D": "跗骨隧道症候群症狀在內踝及足底，非前足蹠骨間。"
    },
    "takeaway": "摩頓氏神經瘤要與蹠骨應力性骨折鑑別。",
    "review": {
@@ -1599,11 +1584,8 @@
      "A"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "選項 B 寫的是「小趾滑液囊腫」，詳解卻寫成「拇趾滑液囊腫」，與題目不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "摩頓氏神經瘤與蹠骨應力性骨折位置相近易混淆，說明正確。"
    }
   },
   {

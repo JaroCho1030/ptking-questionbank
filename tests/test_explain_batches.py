@@ -124,3 +124,57 @@ def test_release_notes_mention_new_explanations():
     assert more[0] == "AI 詳解增加 103 題，共 5,300 題。"
     same = R._changes({**cur, "explanation_count": 5197}, {**prev, "explanation_count": 5197})
     assert same[0] == "收錄的考試不變，修正題目內容、答案或主題分類。"
+
+
+def test_select_retry_and_export_retry(dirs, capsys):
+    from tests.test_explain import _entry
+    qs = [_q(f"110-1-NEURO-{i:03d}", accepted=("C",)) for i in range(1, 7)]
+    _write_paper(dirs, "110-1", "NEURO", qs)
+    bad = {"why_correct": "因為如此。", "why_others": {"A": "不對", "B": "不對", "D": "不對"}, "takeaway": "記" * 61}
+    X.save_explanations("110-1", "NEURO", {
+        qs[0]["id"]: _entry(qs[0]),                                                                   # 通過 → 不收
+        qs[1]["id"]: _entry(qs[1], status="rejected", review={"verdict": "reasoning_error", "reason": "B 的說明錯",
+                                                             "fails": ["reasoning_error"]}),       # 收
+        qs[2]["id"]: _entry(qs[2], status="rejected", review={"verdict": "pass", "fails": ["blind_mismatch"]}),  # 盲解錯 → 不收
+        qs[3]["id"]: _entry(qs[3], status="rejected", review={"fails": ["format"]}, **bad),           # 格式 → 收
+        qs[4]["id"]: _entry(qs[4], status="pending"),                                                 # 收
+        qs[5]["id"]: _entry(qs[5], status="rejected", source="human",
+                            review={"verdict": "reasoning_error", "fails": ["reasoning_error"]}),    # 人工 → 不收
+    })
+    rows = X.select_retry()
+    assert [r[2]["id"][-3:] for r in rows] == ["002", "004", "005"]
+    assert rows[0][3]["review"]["reason"] == "B 的說明錯"
+    out = dirs / "retry"
+    B.export(out, [r[:3] for r in rows], batch_size=2, previous={r[2]["id"]: r[3] for r in rows})
+    manifest = B.load_manifest(out)
+    assert list(manifest["batches"]) == ["retry_1", "retry_2"]
+    assert manifest["batches"]["retry_1"]["ids"] == [qs[1]["id"], qs[3]["id"]]
+    assert manifest["previous"][qs[1]["id"]]["reason"] == "B 的說明錯"
+    writer = (out / "writer" / "retry_1.md").read_text("utf-8")
+    assert "上一版詳解" in writer and "審稿意見：B 的說明錯" in writer and "takeaway 61 字 > 60" in writer
+    blind = (out / "blind" / "retry_1.md").read_text("utf-8")
+    assert "上一版詳解" not in blind and "承認答案" not in blind
+
+
+def test_import_retry_keeps_previous_review_when_rejected_again(dirs, capsys):
+    from tests.test_explain import _entry
+    qs = [_q(f"110-1-NEURO-{i:03d}", accepted=("C",)) for i in range(1, 3)]
+    _write_paper(dirs, "110-1", "NEURO", qs)
+    X.save_explanations("110-1", "NEURO", {
+        q["id"]: _entry(q, status="rejected", review={"verdict": "reasoning_error", "reason": "舊的理由", "fails": ["reasoning_error"]})
+        for q in qs})
+    rows = X.select_retry()
+    out = dirs / "retry"
+    B.export(out, [r[:3] for r in rows], batch_size=10, previous={r[2]["id"]: r[3] for r in rows})
+    good = {"why_correct": "改好了。", "why_others": {"A": "不對", "B": "不對", "D": "不對"}, "takeaway": "記住。"}
+    _write_result(out, "writer", "retry_1", [{"id": q["id"], **good} for q in qs])
+    _write_result(out, "blind", "retry_1", [{"id": q["id"], "answer": ["C"], "confidence": 0.9} for q in qs])
+    _write_result(out, "check", "retry_1", [{"id": qs[0]["id"], "verdict": "pass", "reason": "都對"},
+                                            {"id": qs[1]["id"], "verdict": "reasoning_error", "reason": "新的理由"}])
+    written = B.import_results(out, "subagent retry")
+    saved = X.load_explanations("110-1", "NEURO")
+    assert saved[qs[0]["id"]]["status"] == "pass" and "previous" not in saved[qs[0]["id"]]["review"]
+    assert saved[qs[1]["id"]]["status"] == "rejected"
+    assert saved[qs[1]["id"]]["review"]["reason"] == "新的理由"
+    assert saved[qs[1]["id"]]["review"]["previous"] == {"verdict": "reasoning_error", "reason": "舊的理由", "fails": ["reasoning_error"]}
+    assert not X.select_retry() or [r[2]["id"] for r in X.select_retry()] == [qs[1]["id"]]

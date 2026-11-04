@@ -578,28 +578,25 @@
   },
   {
    "id": "106-1-BASIC-026",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "圖中a曲線最高且電位有超極化的下降，為動作電位；b曲線最早升起且快速回落，為鈉離子傳導度；c曲線較低且延遲、持續較久，為鉀離子傳導度。",
+   "why_correct": "a曲線最高，且回落時低於基線出現過極化下衝，為動作電位；b曲線與a幾乎同時快速上升又快速回落，為鈉離子傳導度；c曲線較低、延遲升起且持續較久，為鉀離子傳導度。",
    "why_others": {
-    "A": "a是動作電位而非鈉傳導度，b與c也對調。",
-    "B": "c是鉀離子傳導度，圖中未呈現鈣離子。",
-    "C": "a不是鈉傳導度，且c不是鈣離子傳導度。"
+    "A": "a、b對調：a有過極化下衝是動作電位，b才是鈉傳導度。",
+    "B": "c延遲升起且持續較久，是鉀離子而非鈣離子傳導度。",
+    "C": "a有低於基線的下衝是動作電位，c是鉀而非鈣傳導度。"
    },
-   "takeaway": "鈉傳導度先升快降，鉀傳導度延遲、較慢。",
+   "takeaway": "鈉傳導度快升快降，鉀傳導度延遲、持續較久。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "選項A為b動作電位、c鉀傳導度，與正解只差a、b對調，c並未對調，詳解稱b與c也對調有誤；且圖中b並非明顯最早升起。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "附圖a最高且有過極化下衝為動作電位，b快升快降為鈉傳導度，c延遲持久為鉀傳導度，與圖相符。"
    }
   },
   {
@@ -1270,28 +1267,25 @@
   },
   {
    "id": "106-1-BASIC-056",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "髕骨軟化症是髕骨後方關節軟骨退化，使用髕股關節時（如上下樓梯）出現廣泛的前膝痛，故敘述正確。",
+   "why_correct": "髕骨軟化症是髕骨後方關節軟骨退化，使用髕股關節時（如上下樓梯、蹲）出現廣泛的前膝痛，故敘述正確。",
    "why_others": {
-    "A": "股二頭肌多拉傷在肌腱與肌腹交界處，不是遠端附著點。",
-    "C": "阿基里斯腱多在近跟骨附著處上方一小段受傷，不是中段。",
+    "A": "股二頭肌拉傷多在近端肌肉肌腱交界處，不是遠端附著點。",
+    "C": "拉傷多在肌肉肌腱交界處；肌腱中段較常見的是肌腱病變與斷裂。",
     "D": "最常扭傷的是前距腓韌帶，而不是後距腓韌帶。"
    },
-   "takeaway": "髕骨軟化症：髕股關節使用時廣泛前膝痛。",
+   "takeaway": "髕骨軟化症：使用髕股關節時廣泛前膝痛。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "C 的駁斥有誤：阿基里斯腱最常受傷處為跟骨附著點上方約 2–6 公分，正是肌腱中段（mid-portion），詳解稱「不是中段」與事實矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "髕骨軟化症使用髕股關節時前膝痛；股二頭肌近端、前距腓韌帶等說明合理。"
    }
   },
   {

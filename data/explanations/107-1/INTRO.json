@@ -790,26 +790,33 @@
    "id": "107-1-INTRO-035",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "繼續教育積分是執業期間更新執照的要求。王先生是首次執業登記，無須檢附繼續教育積分證明。",
+   "why_correct": "依規定，領得物理治療師證書未逾五年即申請執業登記者，免附繼續教育積分證明。王先生領證才2年，因此不需要檢附。",
    "why_others": {
-    "A": "此積分數是更新執照規定，此情況不適用。",
-    "B": "此積分數是更新執照規定，此情況不適用。",
-    "C": "此積分數是更新執照規定，此情況不適用。"
+    "A": "領證未逾五年者免附積分，此點數不適用。",
+    "B": "此點數用於領證逾五年者，本案不適用。",
+    "C": "王先生領證未逾五年，不需檢附任何積分。"
    },
-   "takeaway": "繼續教育積分用於執業更新，首次登記不需。",
+   "takeaway": "領證未逾五年申請執業登記，免附繼續教育積分。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.6,
     "verdict": "reasoning_error",
-    "reason": "免附繼續教育積分的理由是領證未逾五年即申請執業登記，而非「首次登記一律不需」；領證逾五年者首次登記仍須檢附積分證明，詳解理由錯誤。",
+    "reason": "B 說明稱 120 點「用於領證逾五年者」缺乏依據，逾五年者應檢具申請前一年內的積分比例，此說法疑為編造。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "免附繼續教育積分的理由是領證未逾五年即申請執業登記，而非「首次登記一律不需」；領證逾五年者首次登記仍須檢附積分證明，詳解理由錯誤。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

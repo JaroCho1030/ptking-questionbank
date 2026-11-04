@@ -26,12 +26,12 @@
   },
   {
    "id": "110-2-ORTHO-002",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "長時間低頭或仰頭使用電腦，會讓上頸椎持續後伸、枕下肌群緊縮，加重緊縮型頭痛（tension-type headache）。螢幕應與視線平行或略低，不宜仰視。",
+   "why_correct": "螢幕高於視線需長時間仰視，使上頸椎持續後伸、枕下肌群緊縮，加重肩頸僵硬與緊縮型頭痛（tension-type headache）。螢幕應與視線平行或略低。",
    "why_others": {
     "A": "視力不清會讓人探頭前伸，矯正視力有助於改善姿勢。",
     "C": "手臂靠近身體可減少肩頸負荷，建議恰當。",
@@ -42,12 +42,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "詳解說「低頭或仰頭」都會讓上頸椎持續後伸，低頭屬屈曲，這句寫錯；說明 B 時應只講仰視。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "螢幕高於視線需仰視使上頸椎持續後伸，加重肩頸僵硬與緊縮型頭痛，其餘建議皆恰當，說明正確。"
    }
   },
   {
@@ -497,28 +494,25 @@
   },
   {
    "id": "110-2-ORTHO-022",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "斜向（oblique）X光可看到椎弓的蘇格蘭狗形象，峽部（pars interarticularis）缺損時狗頸出現缺口，如同斷頭。",
+   "why_correct": "斜向（oblique）X光可見蘇格蘭狗影像；峽部（pars interarticularis）缺損時狗頸出現項圈狀缺口，為椎弓斷裂；椎體再向前滑脫，狗頭與身體分離，即斷頭狀。",
    "why_others": {
     "A": "後前向看不到蘇格蘭狗影像。",
-    "B": "側向主要看滑脫程度，不顯示斷頭狗。",
+    "B": "側向主要評估滑脫程度，看不到蘇格蘭狗影像。",
     "C": "前後向同樣無法呈現此影像。"
    },
-   "takeaway": "斷頭蘇格蘭狗：斜向 X 光看峽部缺損。",
+   "takeaway": "斜向X光：狗戴項圈是椎弓斷裂，斷頭是已滑脫。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "斜向 X 光看蘇格蘭狗正確，但只有峽部缺損時是狗頸出現項圈（spondylolysis）；「斷頭」代表已滑脫，詳解把兩者混為一談。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "斜位片可見蘇格蘭狗，戴項圈為椎弓斷裂、斷頭為滑脫，其他投照角度看不到，說明正確。"
    }
   },
   {
@@ -753,12 +747,12 @@
   },
   {
    "id": "110-2-ORTHO-033",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "後側關節囊緊繃會限制肱骨頭往前滑動，使水平內收與內轉的活動度減少。",
+   "why_correct": "水平內收與內轉時肱骨頭需往後滑動，後側關節囊緊繃會限制此滑動，使這兩個方向的活動度減少。",
    "why_others": {
     "B": "外展與外轉主要受前下方結構限制。",
     "C": "後伸與水平外展不是後側囊緊繃的主要限制。",
@@ -770,11 +764,8 @@
      "A"
     ],
     "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "答案正確，但後側關節囊緊繃限制的是肱骨頭往後滑動；詳解寫成「限制往前滑動」，機轉寫錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "內轉與水平內收需肱骨頭後滑，後側關節囊緊繃限制此二方向，說明正確。"
    }
   },
   {

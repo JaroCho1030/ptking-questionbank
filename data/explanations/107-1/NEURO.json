@@ -790,28 +790,25 @@
   },
   {
    "id": "107-1-NEURO-035",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "壓瘡主因是壓力、剪力使局部組織缺血，題項把血流受阻當作先天因素，並說成使皮膚更脆弱，因果敘述不正確，因此錯誤。",
+   "why_correct": "血流受阻時，組織供氧與養分都會不足，且代謝廢物滯留，題項寫成「養分滯留」與機轉不符，因此錯誤。",
    "why_others": {
     "B": "短時間高壓力也可傷害組織，需定時減壓，敘述正確。",
     "C": "肌肉萎縮使骨突處軟組織變薄、壓力升高，敘述正確。",
     "D": "潮濕是壓瘡的危險因子，保持乾爽可預防，敘述正確。"
    },
-   "takeaway": "壓瘡成因：壓力、剪力、潮濕與軟組織減少。",
+   "takeaway": "缺血使氧與養分不足、廢物滯留，不是養分滯留。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "選項A錯在「養分滯留」（應為養分不足、代謝廢物滯留），詳解卻稱其把血流受阻當先天因素，題項並無此敘述，錯誤原因解釋不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "缺血使氧與養分不足、廢物滯留，「養分滯留」錯誤，其餘選項說明正確。"
    }
   },
   {
@@ -839,41 +836,38 @@
   },
   {
    "id": "107-1-NEURO-037",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "上肢近端復原最好，表示可脫離協同動作做分離動作。手臂向側平舉到肩高，是離開屈肌協同模式的動作，代表近端恢復較好。",
+   "why_correct": "手臂向側平舉到肩高是布朗斯壯第 V 期脫離協同的動作，比其他選項代表的期別更後面，因此代表上肢近端恢復最好。",
    "why_others": {
-    "A": "聯合反應屬較早期、反射性的現象。",
-    "C": "手向後伸到薦部是協同動作中的動作，屬較早期。",
-    "D": "完全受協同動作支配代表近端恢復差。"
+    "A": "聯合反應屬早期、反射性的現象。",
+    "C": "手向後伸到薦部是第 IV 期動作，恢復程度低於 B。",
+    "D": "完全受協同動作支配代表恢復仍在早期。"
    },
-   "takeaway": "能做出脫離協同的分離動作，代表恢復較好。",
+   "takeaway": "手伸到薦部屬 IV 期，側平舉到肩高屬 V 期。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "手向後伸到薦部是布朗斯壯第四期脫離協同的動作，詳解稱其為協同動作中的動作，事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "側平舉至肩高為 V 期、手伸到薦部為 IV 期，說明正確。"
    }
   },
   {
    "id": "107-1-NEURO-038",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "布朗斯壯手部恢復順序是先多指抓握，再側捏，接著指腹捏，最後才是手指主動完全伸直，順序為④②③①。",
    "why_others": {
     "B": "把側捏放在多指抓握之前，順序不對。",
-    "C": "指腹捏與完全伸直順序放錯，多指抓握應最先。",
+    "C": "多指抓握應最先，卻被放到最後。",
     "D": "完全伸直放在指腹捏之前，順序不對。"
    },
    "takeaway": "手部恢復：多指抓握、側捏、指腹捏、完全伸直。",
@@ -881,12 +875,9 @@
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "選項C（②③①④）中指腹捏在完全伸直之前其實是對的，錯在多指抓握放最後，詳解稱指腹捏與完全伸直順序放錯有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "手部恢復依序為多指抓握、側捏、指腹捏、完全伸直，說明正確。"
    }
   },
   {

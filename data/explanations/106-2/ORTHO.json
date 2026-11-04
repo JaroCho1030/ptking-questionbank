@@ -26,28 +26,25 @@
   },
   {
    "id": "106-2-ORTHO-002",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "頸因性頭痛（cervicogenic headache）通常固定在單側，不會換邊，並與頸部動作或姿勢有關。單側頭痛且會換邊較像偏頭痛或緊縮型頭痛，不是頸因性頭痛的主要癥候。",
+   "why_correct": "頸因性頭痛（cervicogenic headache）通常固定在單側、不換邊，並與頸部動作或姿勢有關。單側且會換邊的頭痛是偏頭痛的特徵，不是頸因性頭痛的主要癥候。",
    "why_others": {
-    "A": "枕骨下感覺異常可見於頸源性頭痛。",
-    "B": "不正常頭頸姿勢是常見的頸部異常表現。",
+    "A": "枕骨下感覺異常可見於頸因性頭痛。",
+    "B": "不正常頭頸姿勢是頸因性頭痛常見表現。",
     "D": "頸部動作誘發或改變頭痛，是頸因性頭痛的典型特徵。"
    },
-   "takeaway": "頸因性頭痛：單側、不換邊，與頸部動作姿勢相關。",
+   "takeaway": "頸因性頭痛單側不換邊；單側會換邊多為偏頭痛。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "詳解說單側且換邊的頭痛較像緊縮型頭痛有誤，緊縮型頭痛多為雙側，會換邊的單側頭痛是偏頭痛的特徵。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "頸因性頭痛為單側不換邊，換邊為偏頭痛特徵，說明正確。"
    }
   },
   {
@@ -846,27 +843,24 @@
   },
   {
    "id": "106-2-ORTHO-037",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "56f207dd47a9",
-   "why_correct": "選項 A 錯在梯狀變形不一定是關節不穩，也可由神經損傷或肩鎖問題造成。選項 B 錯在多方向不穩較常見凹槽變形，梯狀變形則較常見於肩鎖關節脫位。",
+   "why_correct": "A 被視為錯誤：凹槽變形也可因神經損傷使三角肌麻痺、肱骨頭下垂造成，不全然是關節本身不穩。B 錯誤：多方向不穩或神經損傷常見的是凹槽變形，梯狀變形則見於肩鎖關節脫位。",
    "why_others": {
     "C": "凹槽變形常伴三角肌平坦，敘述正確。",
-    "D": "水平內收會使肩鎖關節變形加劇，敘述正確。"
+    "D": "水平內收會使肩鎖關節的梯狀變形加劇，敘述正確。"
    },
-   "takeaway": "凹槽變形看下方不穩，梯狀變形看肩鎖。",
+   "takeaway": "梯狀變形看肩鎖關節；凹槽變形看下方不穩或三角肌麻痺。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "詳解說神經損傷會造成梯狀變形有誤，神經損傷（三角肌麻痺）造成的是凹槽變形；而且肩鎖關節脫位本身就是關節不穩，不能拿來說明 A 為何錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "梯狀變形屬肩鎖關節分離、凹槽變形見於下方不穩或三角肌麻痺，對 A、B 給分的說明合理。"
    }
   },
   {
@@ -943,28 +937,25 @@
   },
   {
    "id": "106-2-ORTHO-041",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "急性胸廓出口症候群要放鬆肋鎖間隙與斜角肌間隙。肩胛骨外展並上提、手放對側肩上，可讓臂神經叢（brachial plexus）鬆弛，減少壓迫與牽張。",
+   "why_correct": "急性胸廓出口症候群要放鬆肋鎖間隙與斜角肌間隙。肩胛骨外展並上提，再把手搭在對側肩上讓上肢內收並有支撐，可使臂神經叢（brachial plexus）鬆弛，減少壓迫與牽張。",
    "why_others": {
-    "B": "手放同側腰上，肩帶容易下壓後縮，神經叢仍受牽張。",
+    "B": "肩胛擺位同 A，但手叉同側腰使上臂外展、無支撐，減壓不如搭對側肩。",
     "C": "肩胛下降會使鎖骨壓向第一肋，手臂外展再增加牽張。",
     "D": "下降加手臂外展伸腕，神經叢張力最大，會加重症狀。"
    },
-   "takeaway": "急性胸廓出口症候群：肩胛上提、手放對側肩，讓神經叢放鬆。",
+   "takeaway": "急性胸廓出口症候群：肩胛上提、手搭對側肩，讓神經叢放鬆。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "B 選項已明定肩胛骨外展及提高，詳解卻以「肩帶容易下壓後縮」排除，與題目敘述矛盾，沒有說出真正差異。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "肩胛上提外展、手搭對側肩可減少臂神經叢壓迫與牽張，其餘選項說明合理。"
    }
   },
   {
@@ -1383,15 +1374,14 @@
   },
   {
    "id": "106-2-ORTHO-060",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "髕股關節疼痛症候群的疼痛通常在髕骨後方或周圍，並非單純在外側，所以「疼痛經常在膝外側」的說法錯誤。",
    "why_others": {
     "A": "多為漸進發生，描述正確。",
-    "B": "此項為錯誤敘述，故為答案。",
     "C": "久坐屈膝使髕股壓力持續，常比走跑更不適。",
     "D": "下樓梯使關節壓力增加，會使疼痛更明顯。"
    },
@@ -1400,16 +1390,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "why_others 含正解選項 B",
-     "check: 結果檔 106-2_ORTHO_2 缺這題"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "PFPS 疼痛多在髕骨後方或周圍、非外側，其餘敘述說明正確。"
    }
   },
   {
@@ -1759,28 +1742,25 @@
   },
   {
    "id": "106-2-ORTHO-076",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "未癒合傷口做關節運動時，配合止痛藥作用時間可提高耐受度（③）；已癒合傷口先做蠟療或超音波可增加組織延展性，利於關節運動（④）。",
    "why_others": {
-    "A": "①未癒合傷口也需主動運動，不能只做被動牽張。",
-    "C": "②植皮早期須依醫囑制動後才逐步活動，不成立。",
+    "A": "①未癒合傷口也應做主動運動；②植皮後不應從被動運動開始。",
+    "C": "②植皮固定期後宜先做主動運動，被動運動易對植皮產生剪力。",
     "D": "①與②都不成立。"
    },
-   "takeaway": "燒燙傷運動：配合止痛藥時機，癒合後先熱療再運動。",
+   "takeaway": "植皮後先主動運動避免剪力；癒合後可先熱療再運動。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "②錯在植皮制動後應先做主動運動、避免被動運動對植皮的剪力，詳解只說「須依醫囑制動」，沒有解釋為何從被動運動開始是錯的。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "未癒合傷口仍應主動運動、植皮後先主動運動避免剪力，③④正確，說明合理。"
    }
   },
   {

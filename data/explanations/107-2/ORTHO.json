@@ -795,28 +795,25 @@
   },
   {
    "id": "107-2-ORTHO-035",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "肩峰鎖骨關節炎最直接的表現是在該關節線上觸診有壓痛。",
+   "why_correct": "肩峰鎖骨關節炎最直接的表現，是在該關節線上觸診有壓痛。",
    "why_others": {
-    "B": "此描述不是本題正解依據。",
-    "C": "外展 100～120 度疼痛弧較像肩峰下夾擠，AC 關節痛多在接近末端。",
-    "D": "此比較不是正確說法。"
+    "B": "以患側手摸對側肩（水平內收）擠壓AC關節才誘發痛，摸同側肩不典型。",
+    "C": "外展100～120度疼痛弧較像肩峰下夾擠，AC關節痛多在接近末端。",
+    "D": "AC關節炎其實比盂肱關節炎常見。"
    },
-   "takeaway": "AC 關節炎：關節線觸痛、高舉或水平內收痛。",
+   "takeaway": "AC關節炎：關節線觸痛、高舉末端或水平內收時痛。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "B、D 只寫「不是正解依據」「不是正確說法」未說明錯因（B 應為摸對側肩的水平內收才誘發痛，D 實際 AC 關節炎較盂肱關節炎常見）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "AC關節炎關節線壓痛、水平內收與高舉末端痛、較盂肱關節炎常見，說明正確。"
    }
   },
   {
@@ -1235,10 +1232,10 @@
   },
   {
    "id": "107-2-ORTHO-054",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "髖關節退化性關節炎的病變在關節，肌肉本身並未受損，阻力等長測試肌力多正常，也不一定疼痛，不會典型呈現無力且疼痛。",
    "why_others": {
@@ -1246,17 +1243,14 @@
     "B": "此敘述適當，疼痛典型在腹股溝，加重後可往大腿與膝延伸。",
     "C": "此敘述適當，慢性發炎後會有晨僵。"
    },
-   "takeaway": "關節病變：阻力等長測試多為有力，無力痛多指向肌腱或神經。",
+   "takeaway": "關節病變阻力等長測試多有力；無力且痛提示骨折等嚴重病變。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "takeaway 稱無力且疼痛多指向肌腱或神經有誤，依 Cyriax 無力且痛提示嚴重病變（如骨折、部分斷裂），神經損傷多為無力不痛。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "關節病變阻力等長測試多有力無痛，無力且痛提示嚴重病變，符合Cyriax原則。"
    }
   },
   {
@@ -1632,28 +1626,25 @@
   },
   {
    "id": "107-2-ORTHO-071",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "推進期第一蹠趾關節需要的背屈角度明顯大於題述的 30 到 40 度，所以這項數值敘述不正確。",
+   "why_correct": "第一趾節由第一蹠骨與內側楔狀骨組成，是活動度小的功能單位，正常不會有30～40度的背向滑動；推進期它反而需向蹠側屈曲，以利大拇趾背屈。",
    "why_others": {
     "A": "此敘述視為正確，第一趾節是第一蹠骨與楔狀骨組成的功能單位。",
     "B": "此敘述視為正確，屬於內縱足弓的一部分。",
     "C": "此敘述視為正確，在推進期協助重心轉移。"
    },
-   "takeaway": "第一趾節在推進期需要足夠的第一蹠趾關節背屈。",
+   "takeaway": "第一趾節（第一蹠楔單位）活動度小，不會有數十度的背向滑動。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "D 談的是第一趾節（第一蹠楔單位）的背向滑動，詳解卻改以第一蹠趾關節背屈角度解釋，混淆兩個不同關節。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "第一趾節為第一蹠骨與內側楔狀骨組成，推進期需蹠屈而非30～40度背向滑動，說明正確。"
    }
   },
   {

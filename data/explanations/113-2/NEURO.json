@@ -334,28 +334,25 @@
   },
   {
    "id": "113-2-NEURO-015",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "中風後肩關節半脫位（shoulder subluxation）多出現在弛緩期，主因是旋轉肌袖與三角肌張力低下、肩胛骨向下旋轉、軀幹張力低而側彎，使關節盂失去對肱骨頭的支撐。肩關節屈曲肌張力較強反而會把肱骨頭往上拉、穩住關節，因此不是半脫位的成因。",
+   "why_correct": "中風後下方半脫位（shoulder subluxation）多出現在弛緩期，主因是棘上肌與三角肌張力低、肩胛骨向下旋轉、軀幹張力低而側彎，使關節盂失去對肱骨頭的支撐。肩屈曲肌張力較強會把肱骨頭往上提，不是此型半脫位的成因。",
    "why_others": {
     "A": "軀幹張力低使患側軀幹塌陷，肩胛骨下沉、向下旋轉，容易造成半脫位。",
     "C": "棘上肌負責把肱骨頭維持在關節盂內，張力低就失去支撐，是主要成因。",
     "D": "肩胛骨向下旋轉使關節盂朝下，失去鎖住肱骨頭的機制，容易半脫位。"
    },
-   "takeaway": "中風肩半脫位成因：棘上肌與三角肌無力、肩胛骨向下旋轉、軀幹張力低；肌張力高不是成因。",
+   "takeaway": "弛緩期肩半脫位主因：棘上肌與三角肌張力低、肩胛骨向下旋轉、軀幹張力低。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒有問題，但重點整理寫「肌張力高不是成因」說得太絕對：菱形肌、闊背肌等痙攣會讓肩胛骨向下旋轉，臨床上也有痙攣造成的前側或上側半脫位，所以這句概括有事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "弛緩期下方半脫位來自棘上肌張力低、肩胛骨向下旋轉與軀幹張力低，屈曲張力強並非成因，推理正確。"
    }
   },
   {
@@ -678,28 +675,25 @@
   },
   {
    "id": "113-2-NEURO-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "布朗斯壯第一期（Brunnstrom stage I）是弛緩期，患側幾乎沒有隨意動作，抬臀要靠健側出力。膝關節彎曲越多，雙腳越靠近臀部，抬臀時的力臂越短，所需的髖伸肌力矩和髖伸展角度也越小，所以屈膝120度最容易完成。",
+   "why_correct": "布朗斯壯第一期（Brunnstrom stage I）為弛緩期，患側幾乎沒有隨意動作，抬臀主要靠健側出力。膝彎曲越多、腳越靠近臀部，腳底支撐點離髖越近，抬臀所需的髖伸肌力矩越小，所以屈膝120度最容易。",
    "why_others": {
-    "A": "右側為患側且仍在弛緩期，無法單靠患腳抬臀，難度最高。",
-    "B": "屈膝30度時腳離臀部遠，力臂長，髖伸肌負荷大，最難抬起。",
-    "C": "屈膝60度時力臂仍比120度長，難度介於兩者之間。"
+    "A": "右側為患側且在弛緩期，無法靠患腳單腳抬臀，四者中最難。",
+    "B": "屈膝30度時腳離臀部遠，髖伸肌負荷大，比屈膝較多的姿勢難。",
+    "C": "屈膝60度時腳仍離臀部較遠，難度介於30度與120度之間。"
    },
-   "takeaway": "橋式運動：屈膝越多、腳越靠近臀部越容易；單腳橋式或伸直膝較難，可用來進階。",
+   "takeaway": "橋式運動：屈膝越多、腳越靠近臀部越容易；單腳橋式或屈膝角度小較難，可用來進階。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒有問題，但詳解有兩處錯誤。第一，詳解說「屈膝越多，所需的髖伸展角度也越小」，這是錯的：屈膝 120 度時雙腳靠近臀部，起始的髖屈曲角度反而較大，要抬到橋式的中立位，髖伸展的活動範圍其實較大，不是較小。第二，B 選項說「最難抬起」，和 A 選項的「難度最高」互相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "屈膝越多、腳越靠近臀部，髖伸肌力矩需求越小，患側單腳橋式最難，說明正確。"
    }
   },
   {
@@ -865,28 +859,25 @@
   },
   {
    "id": "113-2-NEURO-038",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "推者症候群（pusher syndrome）患者的視覺垂直感（visual vertical）多半正常，異常的是身體姿勢垂直感（postural vertical）。患者會覺得身體往患側傾斜才算直立，所以用健側手腳把自己推向患側。A說視覺垂直感異常，因此錯誤。",
+   "why_correct": "推者症候群（pusher syndrome）患者的視覺垂直感（visual vertical）多半正常，異常的是姿勢垂直感（postural vertical），會偏向健側（病灶同側）。患者覺得身體已正直，便用健側手腳把自己推向患側。A說視覺垂直感異常，因此錯誤。",
    "why_others": {
     "B": "後外側丘腦是處理身體重力方向的重要部位，受損常引起推者症候群。",
     "C": "較常見於右腦損傷，也就是左側偏癱，而且常合併忽略症。",
     "D": "預後通常不錯，多數患者在中風後半年內明顯改善，之後就少見。"
    },
-   "takeaway": "推者症候群：姿勢垂直感往患側偏，視覺垂直感正常；與後外側丘腦有關，多數會恢復。",
+   "takeaway": "推者症候群：姿勢垂直感偏向健側、視覺垂直感正常，故推向患側；與後外側丘腦有關。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒錯，但詳解把機轉寫反了。根據 Karnath 的研究，推者症候群患者的姿勢垂直感是往健側（病灶同側）偏約 18 度，所以他們才會把身體推向患側來「矯正」。詳解說患者覺得身體往患側傾斜才算直立，takeaway 也寫姿勢垂直感往患側偏，這兩處都錯，而且跟同一句「推向患側」自相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "推者症候群是姿勢垂直感偏向病灶側而視覺垂直感正常，丘腦、好發側與預後的說明正確。"
    }
   },
   {
@@ -1786,28 +1777,25 @@
   },
   {
    "id": "113-2-NEURO-078",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "社區行走者（community ambulator）的步行速度一般要超過0.8 m/s，還要能連續走約300公尺，而且不會太累。0.9 m/s、走305公尺、覺得很輕鬆，三個條件都達到，所以是「至少要訓練到」的最低標準。",
    "why_others": {
-    "A": "0.4 m/s只算居家行走者（household ambulator），速度不夠在社區內走。",
+    "A": "0.4 m/s只達有限社區行走的下限，速度不足以安全在社區內行走。",
     "B": "0.6 m/s屬於有限社區行走，距離不到300公尺，而且走完會喘。",
     "D": "雖然達標，但遠高於最低需求，不符合題目問的「至少」。"
    },
-   "takeaway": "步速低於0.4 m/s為居家行走，0.4–0.8 m/s為有限社區行走，超過0.8 m/s才是社區行走；另外還要能輕鬆走約300公尺。",
+   "takeaway": "步速低於0.4 m/s為居家行走，0.4–0.8為有限社區行走，0.8以上為社區行走，並需能輕鬆走約300公尺。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒有問題，但 A 選項的說明有誤：依 Perry 分類，步速 0.4 m/s 剛好落在有限社區行走（0.4–0.8 m/s）的下限，不是居家行走者；詳解自己的 takeaway 也寫低於 0.4 m/s 才是居家行走，前後矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "社區行走需步速0.8 m/s以上、能輕鬆走約300公尺，C是達標的最低選項，說明正確。"
    }
   },
   {

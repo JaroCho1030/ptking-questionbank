@@ -463,28 +463,25 @@
   },
   {
    "id": "109-2-BASIC-021",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "骨骼肌收縮的主要機制是粗細肌絲間橫橋循環，使細肌絲滑向肌節中央，即肌絲滑動理論。",
+   "why_correct": "骨骼肌收縮的主要機制是粗細肌絲間的橫橋循環，使細肌絲滑向肌節中央，即肌絲滑動理論。",
    "why_others": {
     "A": "肌凝蛋白是粗肌絲的主要蛋白，細肌絲主要是肌動蛋白。",
     "C": "粗肌絲以M線居中，固定在Z線的是細肌絲。",
-    "D": "離心收縮是主動收縮，且不是被動，敘述不精確。"
+    "D": "被動拉長時的張力多來自肌聯蛋白（titin）等被動成分，滑動理論無法完整解釋。"
    },
-   "takeaway": "粗肌絲含肌凝蛋白，細肌絲錨定Z線。",
+   "takeaway": "粗肌絲含肌凝蛋白，細肌絲錨定Z線；收縮靠肌絲滑動。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "D的反駁「離心收縮是主動收縮，且不是被動」語意含糊，未說明肌絲滑動理論無法完整解釋離心（被動拉長）時的力量特性（如titin等被動成分與殘餘力量增強），推理不成立。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "肌絲滑動為收縮主要機制，肌凝蛋白屬粗肌絲、M線居中、被動張力來自titin，說明正確。"
    }
   },
   {
@@ -975,28 +972,25 @@
   },
   {
    "id": "109-2-BASIC-043",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "快速糖酵解纖維對應 Type IIX 肌球蛋白三磷酸腺苷酶纖維，也對應肌球蛋白重鏈 IIX 型，三種分類方式彼此配對一致。",
    "why_others": {
-    "A": "慢氧化纖維應對應 Type I，而非 Type IIA。",
+    "A": "慢氧化纖維應對應 Type I 與 MHC I，而非 Type IIA。",
     "B": "快速氧化糖酵解纖維對應 Type IIA 與 MHC IIA，不是 Type I。",
-    "C": "人類骨骼肌沒有 MHC IIB，對應的是 IIX。"
+    "C": "快速氧化糖酵解纖維應對應 Type IIA 與 MHC IIA，不是 IIB。"
    },
    "takeaway": "慢氧化＝Type I＝MHC I；快速氧化糖酵解＝IIA；快速糖酵解＝IIX。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "C 的錯誤在快速氧化糖酵解纖維應對應 Type IIA／MHC IIA，詳解卻說應改成 IIX，改了 C 仍然是錯的，沒有指出真正的錯處。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "三種分類的對應關係（I、IIA、IIX）說明正確。"
    }
   },
   {
@@ -1070,28 +1064,25 @@
   },
   {
    "id": "109-2-BASIC-047",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "肩膀外展時肩胛骨會後傾（posterior tilt）而非前傾，所以肩胛前傾不屬於正常外展的一部分。",
    "why_others": {
     "A": "外展過程鎖骨會後縮，屬於正常動作。",
     "B": "外展時鎖骨沿長軸後轉，屬於正常動作。",
-    "D": "肩胛外轉（即向上旋轉）是外展必然包含的動作。"
+    "D": "肩胛外轉是水平面的旋轉，抬舉時會伴隨出現，屬正常動作。"
    },
-   "takeaway": "肩外展伴隨肩胛上旋、後傾與鎖骨後縮、後轉。",
+   "takeaway": "肩外展伴隨肩胛上旋、後傾、外轉，與鎖骨後縮、後轉。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "肩胛外轉（external rotation）是水平面上的旋轉，和向上旋轉（upward rotation）是兩回事，詳解把兩者畫上等號，重點整理也漏寫肩胛外轉。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "肩外展時肩胛後傾而非前傾，鎖骨後縮、後轉與肩胛外轉說明正確。"
    }
   },
   {
@@ -1119,28 +1110,25 @@
   },
   {
    "id": "109-2-BASIC-049",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "尺側伸腕肌（extensor carpi ulnaris）的作用是伸腕與尺偏，不產生前臂旋後，所以不是旋後肌。",
    "why_others": {
-    "A": "伸食指肌在橈骨尺側深層，有輔助旋後作用。",
-    "B": "伸拇長肌斜跨前臂，有輔助旋後作用。",
-    "D": "橈側伸腕長肌附著於橈側，有輔助旋後的作用。"
+    "A": "伸食指肌起自尺骨後面遠端與骨間膜，斜向橈側，可輔助旋後。",
+    "B": "伸拇長肌斜跨前臂背側，有輔助旋後作用。",
+    "D": "橈側伸腕長肌經過肘部橈側，有輔助旋後的作用。"
    },
    "takeaway": "尺側伸腕肌不旋後；橈側及深層伸肌可輔助旋後。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "伸食指肌起自尺骨後面遠端與骨間膜，不是詳解說的「橈骨尺側深層」，起點寫錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "尺側伸腕肌不旋後，伸食指肌、伸拇長肌、橈側伸腕長肌為輔助旋後肌，說明正確。"
    }
   },
   {
@@ -1214,15 +1202,15 @@
   },
   {
    "id": "109-2-BASIC-053",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "髖臼前傾角愈小，髖臼開口愈朝向外側，對股骨頭前方的覆蓋較大，所以較小的髖臼前傾角代表覆蓋較大。",
+   "why_correct": "髖臼前傾角愈小，髖臼開口愈朝向外側，對股骨頭前方的覆蓋較大，所以較小的髖臼前傾角代表髖臼對股骨頭的覆蓋較大。",
    "why_others": {
-    "A": "股骨前傾是股骨端的角度，且使股骨頭前方暴露、覆蓋減少。",
-    "B": "股骨後傾也是股骨端的角度，不是髖臼覆蓋的指標。",
+    "A": "股骨前傾是股骨頸的扭轉角度，屬股骨端，不是髖臼覆蓋的描述。",
+    "B": "股骨後傾同屬股骨端的角度，題目問的是髖臼本身的覆蓋程度。",
     "D": "髖臼前傾角較大使股骨頭前方裸露，覆蓋較小。"
    },
    "takeaway": "髖臼前傾角大，前方覆蓋少，易前方不穩。",
@@ -1230,12 +1218,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "詳解前後標準不一：A 用股骨前傾會減少前方覆蓋來排除，B 卻說股骨後傾不是覆蓋指標；照同一套邏輯，後傾反而會增加前方覆蓋，詳解沒有說清楚為什麼不選 B。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "髖臼前傾角小則前方覆蓋大，股骨前後傾屬股骨端，說明正確。"
    }
   },
   {
@@ -1332,28 +1317,25 @@
   },
   {
    "id": "109-2-BASIC-058",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "圖中髕骨關節面有上、中、下三對橫帶①②③與兩側緣④。膝屈曲 140 度時只有髕骨上緣和兩側緣接觸，隨伸直接觸依序下移。",
+   "why_correct": "圖中髕骨關節面有上、中、下三條橫帶①②③與兩側緣④。膝屈曲 140 度時接觸在兩側緣④，之後隨膝伸直，接觸由上①往中②、下③依序下移，故為④①②③。",
    "why_others": {
-    "A": "此順序方向與接觸隨伸直下移不符，也漏了側緣④。",
-    "B": "此順序把下緣當作最先接觸，與實際相反。",
-    "C": "此順序由下往上，把側緣④放最後，不符實際。"
+    "A": "把兩側緣④放在最後，但深屈曲時最先接觸的是④。",
+    "B": "④之後由下往上，與伸直時接觸下移的方向相反。",
+    "C": "由下往上且把④放最後，與實際順序不符。"
    },
-   "takeaway": "膝愈伸直，髕股接觸面由髕骨上方逐漸往下移。",
+   "takeaway": "深屈曲接觸髕骨兩側緣；膝愈伸直，接觸面由上往下移。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "A（①②③④）其實有包含④，詳解說它「漏了側緣④」是錯的；B 的第一個是側緣④而非下緣，說它「把下緣當作最先接觸」也與選項不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "與附圖相符：深屈曲接觸兩側緣（含odd facet），伸直過程由上而下①②③。"
    }
   },
   {
@@ -1473,28 +1455,25 @@
   },
   {
    "id": "109-2-BASIC-064",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "頭頸向左旋轉時，右側頸半棘肌（semispinalis cervicis）與多裂肌之類的深層後側肌群向心收縮，使棘突向右、椎體向左轉。",
+   "why_correct": "頸半棘肌（semispinalis cervicis）屬橫突棘肌群，單側收縮使頸椎轉向對側；頭頸向左旋轉時，右側頸半棘肌向心收縮。",
    "why_others": {
     "A": "左側胸鎖乳突肌使頭轉向右側。",
-    "B": "題目的左側多裂肌作用使椎體轉向右側。",
+    "B": "左側多裂肌屬橫突棘肌群，使頸椎轉向右側。",
     "D": "右側夾肌使頭轉向右側。"
    },
-   "takeaway": "頭轉向左：左夾肌、左胸鎖乳突肌之外，右半棘肌作用。",
+   "takeaway": "轉向對側：胸鎖乳突肌、橫突棘肌；轉向同側：夾肌。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "重點整理說頭轉向左時左胸鎖乳突肌作用，但左胸鎖乳突肌是使頭轉向右（A 的說明自己也這樣寫），前後矛盾，重點整理寫錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "各肌肉單側收縮的旋轉方向說明皆正確。"
    }
   },
   {

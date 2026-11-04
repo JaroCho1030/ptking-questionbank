@@ -302,12 +302,12 @@
   },
   {
    "id": "105-1-BASIC-014",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "咽（pharynx）的管壁肌肉為骨骼肌（咽縮肌等），沒有平滑肌，吞嚥的咽相受隨意與反射控制。",
+   "why_correct": "咽（pharynx）的管壁肌層由骨骼肌構成（如咽縮肌），沒有平滑肌。吞嚥的咽期是不隨意的反射動作，但執行的仍是骨骼肌。",
    "why_others": {
     "B": "食道上段為骨骼肌，下段為平滑肌，管壁有平滑肌。",
     "C": "胃壁有斜、環、縱三層平滑肌。",
@@ -318,12 +318,9 @@
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "吞嚥的咽相是不隨意的反射期，詳解寫「受隨意與反射控制」有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "咽壁為骨骼肌、其餘選項皆含平滑肌，說明正確。"
    }
   },
   {
@@ -954,26 +951,33 @@
    "id": "105-1-BASIC-042",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "手肘平衡時，以肘關節（M1處）為轉動中心，力矩須相等。只有垂直於前臂的分力才產生力矩：肌力分力M2的力臂是c，阻力分力R1的力臂是d，所以M2 × c = R1 × d。",
+   "why_correct": "以肘關節軸心為轉動中心，平衡時兩側力矩相等。M1是沿前臂、通過軸心的分力，不產生力矩；垂直前臂的肌力分力M2力臂為c，阻力分力R1力臂為d，所以M2 × c = R1 × d。",
    "why_others": {
-    "B": "MF與R並非垂直於前臂，a、d也不是它們各自的力臂，不能直接相乘。",
-    "C": "M1通過肘關節軸心，力臂為零，不產生力矩。",
-    "D": "M1、M2、R是不同方向的力，不能直接相加等於R。"
+    "B": "a是MF對肘的垂直力臂，但d不是R的垂直力臂。",
+    "C": "M1沿前臂通過肘軸心，力臂為零，不產生力矩。",
+    "D": "M1、M2、R方向不同，不能直接純量相加。"
    },
-   "takeaway": "力矩平衡只算垂直於槓桿的分力乘以各自力臂。",
+   "takeaway": "力矩平衡：垂直於槓桿的分力乘以各自的垂直力臂。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.55,
+    "blind_confidence": 0.5,
     "verdict": "reasoning_error",
-    "reason": "M1是沿前臂的分力而非轉動中心位置，且依圖a應為MF對肘的垂直力臂，詳解稱a不是MF力臂有誤，B錯的原因應是d並非R的力臂。",
+    "reason": "附圖中標有直角記號的 b 才是 MF 對肘軸的垂直力臂，a 是肌肉起點到肘軸的距離，B 選項說 a 是 MF 的垂直力臂與圖不符。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "M1是沿前臂的分力而非轉動中心位置，且依圖a應為MF對肘的垂直力臂，詳解稱a不是MF力臂有誤，B錯的原因應是d並非R的力臂。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1118,26 +1122,33 @@
    "id": "105-1-BASIC-049",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "腕關節屈伸由橈腕關節與中腕關節（midcarpal joint）共同完成，中腕關節約貢獻35度。",
+   "why_correct": "腕屈伸由橈腕關節與中腕關節（midcarpal joint）共同完成。常見數據為屈曲時橈腕關節約50度、中腕關節約35度，故D正確。",
    "why_others": {
-    "A": "橈腕關節的貢獻較大，不是35度。",
-    "B": "尺腕關節的角度分配不符此數值。",
-    "C": "尺腕關節的角度分配不符此數值。"
+    "A": "屈曲時橈腕關節貢獻較大，約50度，不是35度。",
+    "B": "尺腕關節隔有關節盤，不是腕屈伸的主要動作部位。",
+    "C": "尺腕關節不是腕屈伸的主要動作部位，無此角度分配。"
    },
-   "takeaway": "腕屈伸為橈腕與中腕共同貢獻，中腕約35度。",
+   "takeaway": "腕屈曲：橈腕約50度、中腕約35度。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "常見數據為屈曲時橈腕約50度、中腕約35度，伸直時橈腕約35度，詳解未區分屈伸而籠統說橈腕不是35度，B、C也未說明尺腕並非主要動作部位。",
+    "blind_confidence": 0.35,
+    "verdict": "answer_disputed",
+    "reason": "題幹未限定屈曲或伸直；依 Kapandji 伸直時橈腕關節約 35 度、中腕約 50 度，A 在伸直情境下同樣成立，答案不唯一，詳解也未說明此歧義。",
     "fails": [
-     "reasoning_error"
-    ]
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "常見數據為屈曲時橈腕約50度、中腕約35度，伸直時橈腕約35度，詳解未區分屈伸而籠統說橈腕不是35度，B、C也未說明尺腕並非主要動作部位。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1261,28 +1272,25 @@
   },
   {
    "id": "105-1-BASIC-055",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "脛後肌（tibialis posterior）支持的是內側縱弓，不是橫向足弓；維持橫弓主要靠腓長肌等，所以此敘述錯誤。",
+   "why_correct": "脛後肌（tibialis posterior）最主要的足弓功能是支持內側縱弓；止點雖延伸至多塊跗骨與蹠骨基部而可輔助橫弓，但維持橫弓的重點通常歸於腓長肌等，故D為錯誤敘述。",
    "why_others": {
-    "A": "脛後肌經內踝後方，可輔助蹠屈，正確。",
+    "A": "脛後肌經內踝後方，可輔助踝蹠屈，正確。",
     "B": "脛後肌是主要的足內翻肌，正確。",
     "C": "脛後肌屬羽狀肌，正確。"
    },
-   "takeaway": "脛後肌支持內側縱弓；橫弓靠腓長肌。",
+   "takeaway": "脛後肌主撐內側縱弓，是主要足內翻肌。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "脛後肌止點延伸至楔骨、骰骨與蹠骨基部，與腓長肌共同參與橫弓支持，詳解斷言其不支持橫弓過於絕對。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "脛後肌為蹠屈、內翻、羽狀肌，主撐內側縱弓，說明合理。"
    }
   },
   {
@@ -1682,26 +1690,33 @@
    "id": "105-1-BASIC-073",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "伏地挺身下放時，肘關節逐漸屈曲，肱三頭肌（triceps）被拉長並收縮來控制下降速度，屬離心收縮；短頭只跨過肘關節，是單純的肘伸肌。",
+   "why_correct": "伏地挺身下放時肘關節逐漸屈曲，肘伸肌肱三頭肌（triceps）被拉長並控制下降速度，屬離心收縮。肱三頭肌實際分長頭、外側頭、內側頭，此選項指的就是肱三頭肌。",
    "why_others": {
-    "B": "肱二頭肌短頭不是肘伸展時控制下放的主力。",
-    "C": "下放時肩胛內收，中斜方肌為向心或穩定作用，不是離心。",
+    "B": "肱二頭肌是肘屈肌，不負責控制肘屈曲的下放。",
+    "C": "下放時肩胛內收，中斜方肌為向心或穩定作用。",
     "D": "下放時大菱形肌為向心或穩定作用，不是離心。"
    },
    "takeaway": "伏地挺身下放：肘伸肌肱三頭肌離心收縮。",
    "review": {
     "blind_answer": [
-     "A"
+     "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "肱三頭肌只有長頭、外側頭、內側頭，並無短頭，詳解直接稱「短頭只跨過肘關節」屬編造解剖。",
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "下放時肘屈曲由肱三頭肌離心控制，並指出肱三頭肌無短頭，說明正確。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "肱三頭肌只有長頭、外側頭、內側頭，並無短頭，詳解直接稱「短頭只跨過肘關節」屬編造解剖。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

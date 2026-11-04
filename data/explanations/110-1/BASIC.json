@@ -463,15 +463,15 @@
   },
   {
    "id": "110-1-BASIC-021",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "運動神經末梢先釋出乙醯膽鹼，使肌膜去極化並沿 T 小管內傳，引起肌漿網釋出鈣離子，最後肌動蛋白與肌凝蛋白結合，順序為④③②①。",
    "why_others": {
     "B": "把鈣離子釋出放在去極化之前，次序顛倒。",
-    "C": "未從乙醯膽鹼釋出開始，且把橫橋結合放在最後的位置錯誤。",
+    "C": "從去極化開始且把乙醯膽鹼釋出放在最後，次序錯誤。",
     "D": "橫橋結合是最後一步，不是第一步。"
    },
    "takeaway": "興奮收縮耦合：ACh→去極化→鈣釋出→橫橋結合。",
@@ -479,12 +479,9 @@
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "選項C（③②①④）放在最後的是乙醯膽鹼釋出而非橫橋結合，詳解對C的錯誤描述不符題目。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "興奮收縮耦合的順序說明正確。"
    }
   },
   {
@@ -677,54 +674,48 @@
   },
   {
    "id": "110-1-BASIC-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "纖毛上皮與杯狀細胞並非遍布各代氣道，末端的細支氣管與肺泡表面沒有杯狀細胞與纖毛，所以敘述錯誤。",
+   "why_correct": "杯狀細胞與纖毛並非遍布各代氣道：杯狀細胞到細支氣管就逐漸消失，纖毛上皮可延伸到呼吸性細支氣管，肺泡則沒有纖毛，故「各代氣道」敘述錯誤。",
    "why_others": {
-    "B": "纖毛高頻擺動，把黏液往咽部方向推送，敘述正確。",
+    "B": "纖毛高頻拍動，把黏液往咽部方向推送，敘述正確。",
     "C": "纖毛清除加上咳嗽，協助排出痰液，敘述正確。",
     "D": "抽菸會損傷纖毛，使黏液纖毛清除能力下降，敘述正確。"
    },
-   "takeaway": "黏液纖毛清除僅在傳導氣道，不到肺泡。",
+   "takeaway": "肺泡沒有纖毛；杯狀細胞到細支氣管就消失。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱末端細支氣管沒有纖毛有誤，纖毛上皮可延伸至終末與呼吸性細支氣管，只是缺杯狀細胞，肺泡才無纖毛。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "肺泡沒有纖毛，杯狀細胞到細支氣管就消失，說明正確。"
    }
   },
   {
    "id": "110-1-BASIC-031",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "依波耳方程式，VD/VT＝(PaCO2－PECO2)/PaCO2＝(40－30)/40＝0.25。",
    "why_others": {
-    "A": "0.15 無法由 (40－30)/40 算出。",
-    "C": "0.30 是誤用分母（如以 PECO2 或其他值）的結果。",
-    "D": "0.35 無法由給定數值算出。"
+    "A": "0.15 與 (40－30)/40 的計算結果不符。",
+    "C": "0.30 不符；誤以 PECO2 為分母約得 0.33，也非 0.30。",
+    "D": "0.35 與給定數值的計算結果不符。"
    },
-   "takeaway": "死腔比例＝(PaCO2－PECO2)/PaCO2。",
+   "takeaway": "死腔比例＝(PaCO2－PECO2)/PaCO2，分母是 PaCO2。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱0.30是以PECO2為分母的結果，但(40−30)/30≈0.33而非0.30，對C的推理不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "波耳方程式計算正確。"
    }
   },
   {
@@ -821,12 +812,12 @@
   },
   {
    "id": "110-1-BASIC-036",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "胃蛋白酶原分泌過多並非公認的胃潰瘍成因，所以與胃潰瘍的發生無關。",
+   "why_correct": "胃蛋白酶原活化成的胃蛋白酶雖是潰瘍的攻擊因子之一，但其分泌量增加本身不是主要致病原因；與其他選項相比，它與胃潰瘍發生最不直接相關。",
    "why_others": {
     "A": "胃泌素過多會使胃酸分泌增加，可致潰瘍。",
     "B": "黏膜保護屏障被破壞，是胃潰瘍主要機轉。",
@@ -837,12 +828,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "胃蛋白酶（由胃蛋白酶原活化）是公認的潰瘍攻擊因子，詳解稱其分泌過多「並非公認成因、與潰瘍無關」屬事實錯誤，應說明它是相對最不直接相關的選項。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "說明符合承認答案，其他選項的機轉描述正確。"
    }
   },
   {
@@ -1031,28 +1019,25 @@
   },
   {
    "id": "110-1-BASIC-045",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "胸大肌附著於肱骨，主要作用在肩關節，並未直接附著肩胛骨，因此不參與肩胛胸廓關節的下沉。",
+   "why_correct": "肩胛下沉的主要肌群為下斜方肌、闊背肌、胸小肌與鎖骨下肌。胸大肌主要作用於肩關節的內收與內轉，一般不列為肩胛胸廓關節的下沉肌。",
    "why_others": {
     "A": "下斜方肌下部纖維可使肩胛骨下壓。",
-    "B": "闊背肌經肱骨間接把肩胛骨往下拉，參與下沉。",
-    "C": "鎖骨下肌把鎖骨往下拉，使肩鎖帶下壓，參與下沉。"
+    "B": "闊背肌下拉肱骨並有纖維經過肩胛下角，可帶動肩胛下沉。",
+    "C": "鎖骨下肌把鎖骨往下拉，使肩帶下壓，參與下沉。"
    },
-   "takeaway": "肩胛下沉的肌肉要能直接或間接把肩胛骨往下帶。",
+   "takeaway": "肩胛下沉：下斜方肌、闊背肌、胸小肌、鎖骨下肌。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "詳解以「胸大肌附著肱骨、未直接附著肩胛骨」排除胸大肌，卻又說闊背肌可經肱骨間接下沉肩胛，推理前後矛盾，未說明兩者為何不同。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "肩胛下沉肌群列舉正確，胸大肌一般不列入。"
    }
   },
   {
@@ -1708,28 +1693,25 @@
   },
   {
    "id": "110-1-BASIC-074",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "液膜潤滑（fluid-film lubrication）靠兩軟骨面間液膜支撐荷重，摩擦係數遠低於介面潤滑（boundary lubrication），所以C正確。",
+   "why_correct": "液膜潤滑（fluid-film lubrication）靠兩軟骨面間液膜支撐荷重，摩擦係數遠低於介面潤滑（boundary lubrication），所以 C 正確。",
    "why_others": {
     "A": "關節軟骨的主要膠原是第二型，不是第一型。",
     "B": "深層區膠原纖維垂直於關節面，不是平行。",
-    "D": "此敘述不成立，不是本題的正確描述。"
+    "D": "介面潤滑靠吸附於表面的 lubricin，與底下軟骨材料性質無關。"
    },
    "takeaway": "軟骨主要是第二型膠原；液膜潤滑摩擦係數最低。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "D 選項僅寫「此敘述不成立」而無任何理由（應說明介面潤滑靠吸附於表面的 lubricin，與底下軟骨材料性質無關），等同未解釋非正解選項。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "液膜潤滑的摩擦係數較低、第二型膠原、深層纖維垂直於關節面，說明皆正確。"
    }
   },
   {

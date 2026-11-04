@@ -371,15 +371,15 @@
   },
   {
    "id": "111-1-NEURO-017",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "戴眼鏡是手由前下方朝對側臉部上舉的動作，需肩屈曲、內收，這類動作接近D1屈曲模式（D1F），前臂旋後、手指閉合，終點在對側的臉部附近。",
+   "why_correct": "戴眼鏡是手由前下方朝臉部中線上舉的動作，需肩屈曲、內收、外轉，前臂旋後，接近D1屈曲模式（D1F），終點在對側臉部附近。",
    "why_others": {
     "A": "D1伸直是向下往身體外側的動作，方向相反。",
-    "B": "D2伸直是由對側上方向同側下方的動作，不符合題意。",
+    "B": "D2伸直是由同側上方往對側下方，不符題意。",
     "D": "D2屈曲是往同側上方外展的動作，與取物戴眼鏡不同。"
    },
    "takeaway": "手往對側臉部上舉的動作＝D1屈曲。",
@@ -387,12 +387,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "D2伸直是由同側上方往對側下方，詳解寫成由對側上方向同側下方，方向描述錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "由同側前下方取物舉向臉部屬屈曲、內收、外轉的D1F，其他模式方向說明正確。"
    }
   },
   {
@@ -466,15 +463,15 @@
   },
   {
    "id": "111-1-NEURO-021",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "任務取向（task-oriented）強調病人主動參與，在實際任務與環境中學習找出解決動作問題的方法，逐步形成動作策略。",
    "why_others": {
     "A": "強調協同動作與伸直張力支撐，屬Brunnstrom的觀點。",
-    "B": "由站、坐、躺逐漸減難的說法是錯的，且與任務取向不符。",
+    "B": "依姿勢發展順序安排訓練屬傳統取向，不符任務取向以實際任務練習。",
     "D": "隨進展應逐漸減少外在回饋，促進自主學習。"
    },
    "takeaway": "任務取向：主動參與、問題解決、發展動作策略。",
@@ -482,12 +479,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "選項B「由站、坐至躺」確實是逐漸降低難度，詳解卻說這一點是錯的；B的問題其實在於依發展順序訓練、不符任務取向。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "任務取向強調主動參與與問題解決、逐步減少外在回饋，協同動作屬Brunnstrom，說明正確。"
    }
   },
   {
@@ -515,14 +509,14 @@
   },
   {
    "id": "111-1-NEURO-023",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "有研究證據顯示機器人輔助的部分載重跑步機訓練，可改善不完全性脊髓損傷（incomplete SCI）患者的行走功能，這是最恰當的敘述。",
    "why_others": {
-    "A": "反射理論描述的是脊髓中樞步態產生器的刺激，並非此設備的主要治療基礎。",
+    "A": "此設備依據中樞步態產生器與任務特定重複練習，並非反射理論。",
     "B": "神經誘發模式屬徒手治療，不是此設備的功能。",
     "C": "機器人設備價格通常比功能性電刺激（FES）貴很多。"
    },
@@ -531,38 +525,32 @@
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "A的說明把中樞步態產生器說成反射理論的內容，概念混淆；此設備依據的是CPG與任務特定重複訓練，不是反射理論。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "有證據顯示機器人輔助減重跑步機可改善不完全脊髓損傷行走，其非反射理論且價格較高，說明正確。"
    }
   },
   {
    "id": "111-1-NEURO-024",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "Rood學派認為動作發展依序為活動度、穩定、活動中穩定、技巧，技巧期是遠端自由、近端固定的功能性動作。站著擦黑板是在目標導向下的技巧動作。",
+   "why_correct": "Rood學派認為動作發展依序為活動度、穩定、活動中穩定、技巧，技巧期是近端穩定下遠端自由的功能性動作。站著擦黑板是在目標導向下的技巧動作。",
    "why_others": {
-    "A": "以軀幹近端帶動是較早期的活動度階段。",
+    "A": "遠端固定在桌上、近端晃動，屬活動中穩定期。",
     "B": "手肘趴姿是負重穩定的階段，並非技巧動作。",
-    "C": "手撐牆轉動軀幹屬於活動中穩定的階段。"
+    "C": "手撐牆負重下轉動軀幹，屬活動中穩定期。"
    },
-   "takeaway": "Rood四階段中，技巧期是功能性目標動作。",
+   "takeaway": "Rood技巧期：近端穩定下，遠端做功能性動作。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "A是遠端固定在桌上、近端晃動，屬Rood的活動中穩定（controlled mobility）期，詳解誤說成活動度期。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "Rood依活動度、穩定、活動中穩定、技巧發展，擦黑板屬技巧期，其餘屬穩定或活動中穩定期，說明正確。"
    }
   },
   {
@@ -590,28 +578,25 @@
   },
   {
    "id": "111-1-NEURO-026",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "圖中足部呈蹠屈、內翻的垂足狀。這是小腿三頭肌痙攣加上脛前肌無力所致，脛前肌是背屈肌，並非痙攣，所以「右脛前肌痙攣」是錯誤敘述。",
+   "why_correct": "中風患者踝背屈不足，多因小腿三頭肌痙攣合併脛前肌無力；脛前肌是背屈肌，若它痙攣應拉向背屈，不會造成背屈不足，故C前後矛盾而錯誤。",
    "why_others": {
-    "A": "擺盪時髖屈肌收縮抬腿，髖角度大致正常，敘述可成立。",
-    "B": "站立側膝伸肌收縮支撐，膝角度正常，敘述可成立。",
-    "D": "腓腸肌與比目魚肌痙攣導致背屈不足，敘述成立。"
+    "A": "髖屈肌收縮帶動下肢、髖角度正常，圖中無可反駁之處。",
+    "B": "膝伸肌收縮支撐、膝角度正常，圖中無可反駁之處。",
+    "D": "小腿三頭肌痙攣把踝拉向蹠屈，造成背屈不足，敘述成立。"
    },
-   "takeaway": "中風垂足是小腿後側痙攣，前側脛前肌無力。",
+   "takeaway": "中風背屈不足：小腿後側痙攣、脛前肌無力。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "附圖為雙足著地的靜態姿勢，看不出擺盪期抬腿或足內翻，詳解對A、B與足部姿勢的描述無法由圖確認。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "脛前肌為背屈肌，其痙攣不會造成背屈不足，C敘述自相矛盾，小腿三頭肌痙攣造成背屈不足成立，說明合理。"
    }
   },
   {
@@ -1149,28 +1134,25 @@
   },
   {
    "id": "111-1-NEURO-050",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "巴金森氏病患者常有行走啟動困難與凍結，附輪助行器容易滑動往前衝，使小碎步加劇、增加跌倒風險。較適合使用外在提示與固定式輔具。",
+   "why_correct": "行走啟動困難需靠外在提示（視覺、聽覺）或重心轉移訓練改善；助行器本身無法促進啟動，附輪型若無煞車還可能向前滑走而加劇慌張步態，故最不適當。",
    "why_others": {
     "A": "足跟著地、足尖推進可矯正拖曳步態，適當。",
     "C": "增加髖膝關節活動度有助於加大步幅，適當。",
     "D": "口頭節拍是外在提示，可促進節律性與啟動，適當。"
    },
-   "takeaway": "巴金森氏病：避免附輪助行器，宜用外在提示與步幅訓練。",
+   "takeaway": "巴金森啟動困難：用外在提示改善，助行器不能解決啟動。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "「較適合使用固定式輔具」與「避免附輪助行器」過度概括且與實證相反，標準助行器需抬起反而打斷步態易後傾，巴金森患者常建議使用有煞車的輪式助行器。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "巴金森氏病啟動困難靠外在提示改善，助行器無法促進啟動，其餘訓練皆適當，說明正確。"
    }
   },
   {
@@ -1681,14 +1663,14 @@
   },
   {
    "id": "111-1-NEURO-073",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "感冒後對稱性由遠端往近端快速蔓延的無力與麻木，腦脊液蛋白增加但細胞數正常（蛋白細胞分離），是基蘭－巴瑞氏症候群的典型表現。",
    "why_others": {
-    "A": "多發性硬化症是中樞脫髓鞘，多為不對稱且腦脊液常有異常細胞。",
+    "A": "多發性硬化症是中樞脫髓鞘，病灶散在多不對稱，腦脊液典型見寡株帶。",
     "C": "後小兒麻痺症候群發生在小兒麻痺數十年後，慢性進行。",
     "D": "ALS 多不侵犯感覺，且進展較慢，腦脊液通常正常。"
    },
@@ -1698,11 +1680,8 @@
      "B"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "稱多發性硬化症「腦脊液常有異常細胞」不準確，MS 腦脊液典型為寡株帶與 IgG 指數上升，細胞數多正常或僅輕度增加。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "感染後上行對稱無力合併蛋白細胞分離為GBS典型表現，其他疾病鑑別正確。"
    }
   },
   {

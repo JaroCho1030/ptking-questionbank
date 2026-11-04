@@ -738,14 +738,14 @@
   },
   {
    "id": "115-1-ORTHO-033",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "最長肌（longissimus）下段的激痛點，轉移痛常沿脊椎旁往下延伸，可以傳得相當遠，一路到臀部。這種下背痛延伸到臀部的型態，是最長肌的典型轉移痛分布。",
    "why_others": {
-    "A": "腰髂肋肌的轉移痛主要往下到臀部中段，也可能傳到腹部，不會到小腿後側。",
+    "A": "腰髂肋肌的轉移痛主要往下集中在臀部中段，不會到小腿後側。",
     "B": "多裂肌的轉移痛集中在棘突旁附近，也可能到薦椎、尾椎，不是肋骨後側。",
     "D": "腹直肌的轉移痛是橫向橫越背部，不是從T10沿脊椎外側往下到尾椎。"
    },
@@ -754,12 +754,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.72,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒有問題，但 A 的說明說腰髂肋肌「也可能傳到腹部」是張冠李戴：依 Travell & Simons，轉移痛傳到腹部的是下胸段的胸髂肋肌（iliocostalis thoracis）；腰髂肋肌的轉移痛是往下集中在臀部中段。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "各腰椎旁肌轉移痛分布說明符合Travell & Simons。"
    }
   },
   {
@@ -1090,25 +1087,32 @@
    "id": "115-1-ORTHO-048",
    "status": "rejected",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "26578b20e635",
-   "why_correct": "班卡氏病變（Bankart lesion）是前下盂唇撕裂，修復後要保護前方結構。B成立：棘下肌是外轉肌，收縮時把肱骨頭往後拉，可抵抗肱骨頭往前滑；過度牽張會讓它變長、變弱，削弱這種動態穩定。D成立：胸大肌是內轉肌，牽張它要做外展加外轉與水平外展，會直接拉扯修復好的前方關節囊與盂唇。",
+   "why_correct": "班卡氏病變（Bankart lesion）是前下盂唇撕裂，修復後要保護前方結構。D成立：牽張胸大肌需外展、外轉加水平外展，正是會直接拉扯前方關節囊與盂唇的姿勢。B成立：棘下肌屬後方旋轉肌，協助把肱骨頭穩在關節盂、對抗前移，術後早期以保護穩定為先，不宜過度牽張。",
    "why_others": {
     "A": "牽張棘上肌的姿勢是內收加伸直，前下方修復處受力小，不是首要限制。",
-    "C": "大圓肌不是前方穩定的關鍵肌，在保護範圍內漸進牽張即可。"
+    "C": "大圓肌牽張以上舉為主，不像胸大肌需外展外轉加水平外展、直接拉扯前方修復處。"
    },
-   "takeaway": "Bankart修復後要避免過度外展加外轉，以免牽拉前方關節囊；也要保留後方旋轉肌把肱骨頭往後拉的穩定作用。",
+   "takeaway": "Bankart修復後避免外展加外轉、水平外展等會拉扯前方關節囊的牽張姿勢。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.6,
+    "blind_confidence": 0.55,
     "verdict": "reasoning_error",
-    "reason": "詳解說 D 對，理由是胸大肌屬內轉肌，牽張它要外展加外轉，會拉到前方修復處。但大圓肌同樣是內轉、內收肌，牽張時也要上舉加外轉，同一套理由一樣適用在 C，詳解卻說 C 只要漸進牽張就好，前後邏輯不一致；B 說過度牽張會讓棘下肌「變長、變弱」而削弱動態穩定，這也只是推測，沒有可靠依據。",
+    "reason": "牽張棘下肌是內轉/水平內收，對前方Bankart修復處沒有壓力，詳解說它因穩定肱骨頭所以不宜牽張，這個理由站不住。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "詳解說 D 對，理由是胸大肌屬內轉肌，牽張它要外展加外轉，會拉到前方修復處。但大圓肌同樣是內轉、內收肌，牽張時也要上舉加外轉，同一套理由一樣適用在 C，詳解卻說 C 只要漸進牽張就好，前後邏輯不一致；B 說過度牽張會讓棘下肌「變長、變弱」而削弱動態穩定，這也只是推測，沒有可靠依據。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

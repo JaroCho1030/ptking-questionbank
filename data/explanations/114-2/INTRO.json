@@ -3,28 +3,25 @@
  "explanations": [
   {
    "id": "114-2-INTRO-001",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "臺灣物理治療學會的願景重點是讓物理治療師成為促進各年齡層動作最佳化的專家，並投入健康促進與自我管理。願景並沒有「2030年全面提升到碩士學位」這個目標，所以B的敘述錯誤。",
+   "why_correct": "臺灣物理治療學會的願景中，學位提升的目標是博士層級，不是碩士。B把學位層級寫成碩士，所以敘述錯誤；其餘選項都符合願景中健康促進與專業發展的方向。",
    "why_others": {
     "A": "面對高齡化，成為促進動作模式最佳化的專家，符合願景。",
     "C": "專業往預防醫學、健康促進與社區醫學發展，是正確方向。",
     "D": "持續推動教育、改革法規制度與提升研究，是專業發展的重要策略。"
    },
-   "takeaway": "物理治療願景：成為動作最佳化專家，並推動預防、健康促進與社區醫療。",
+   "takeaway": "物理治療願景：學位提升至博士層級，成為動作最佳化專家並推動健康促進。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 是對的，但詳解給錯了理由：B 錯在學位層級，應為「博士」而不是「碩士」；詳解卻寫成願景裡完全沒有提升學位的目標。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "學會願景為提升至博士層級，B寫碩士為錯，其餘選項說明合理。"
    }
   },
   {
@@ -52,15 +49,15 @@
   },
   {
    "id": "114-2-INTRO-003",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "世界物理治療聯盟（World Confederation for Physical Therapy, WCPT，現稱 World Physiotherapy）是各國物理治療學會組成的國際組織。臺灣以中華民國物理治療學會名義，在1982年加入成為會員，所以選D。",
+   "why_correct": "世界物理治療聯盟（World Confederation for Physical Therapy, WCPT，現稱World Physiotherapy）是各國物理治療學會組成的國際組織。臺灣以中華民國物理治療學會名義，在1982年加入成為會員，所以選D。",
    "why_others": {
     "A": "世界物理治療日是每年9月8日，不是9月18日。",
-    "B": "國際大會以前每4年辦一次，近年改成每2年一次，從來不是每3年。",
+    "B": "國際大會早期每3年辦，後改每4年、近年每2年，現行不是每3年。",
     "C": "WCPT在1951年成立於丹麥哥本哈根，不是1960年。"
    },
    "takeaway": "WCPT：1951年成立，9月8日是世界物理治療日，臺灣1982年加入。",
@@ -68,12 +65,9 @@
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒有問題，但 B 選項的說明「從來不是每3年」講得太絕對，與史實不符：WCPT 早期的國際大會（1953 倫敦、1956 紐約、1959 巴黎）就是每 3 年辦一次，之後才大致改成每 4 年，近年再改成每 2 年；B 錯在它不是現行的規定。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "WCPT 1951年成立、9月8日世界物理治療日、大會週期演變與臺灣1982年加入敘述正確。"
    }
   },
   {
@@ -429,28 +423,25 @@
   },
   {
    "id": "114-2-INTRO-019",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "違法販售病人資料會同時觸及四種責任：個人資料保護法（Personal Data Protection Act）規範個資不法利用，並有刑責與賠償規定；物理治療師法規定不得無故洩漏業務上知悉的秘密，違者會受行政處分；民法有侵權行為損害賠償；刑法有洩漏業務上知悉他人秘密罪。所以四部法規都適用。",
+   "why_correct": "販售病人資料會同時涉及多種責任：個人資料保護法規範個資不法利用，並有刑罰與賠償規定；物理治療師法規定不得無故洩漏業務上知悉的秘密，違者受行政處分；民法有侵權損害賠償；刑法也有妨害秘密相關罪責。所以四部法規都適用。",
    "why_others": {
-    "A": "漏了物理治療師法的保密義務，也漏了民事賠償與刑法洩密罪。",
+    "A": "漏了物理治療師法的保密義務，以及民事與刑事責任。",
     "B": "只有行政責任，漏了個資法、民事賠償與刑事責任。",
-    "C": "漏了刑法的洩漏業務上知悉他人秘密罪。"
+    "C": "漏了刑法，販售病人資料也可能構成刑事犯罪。"
    },
-   "takeaway": "洩漏或販售病人資料會同時負起個資法、專業法規的行政責任，以及民事和刑事責任。",
+   "takeaway": "販售病人資料會同時負個資法、專業法規的行政責任，以及民事和刑事責任。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒有問題，但詳解把刑法責任直接寫成「洩漏業務上知悉他人秘密罪」並不精確：刑法第316條列舉的身分不包括物理治療師，不能直接套用到物理治療師身上。刑事責任比較適合從個資法的刑罰規定，或刑法第318條之1等條文來說明，詳解對 C 選項的駁斥也用了同樣有問題的理由。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "個資法、物理治療師法保密義務、民法侵權與刑法妨害秘密皆適用，分析正確。"
    }
   },
   {
@@ -740,26 +731,34 @@
    "id": "114-2-INTRO-032",
    "status": "rejected",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "病患口鼻碰觸的布品可能沾有呼吸道分泌物，屬於高感染風險物品。滅菌（sterilization）能殺滅所有微生物，連細菌芽孢也包括在內，是清潔等級最高的處理方式，可以徹底消除病毒傳播的風險。",
+   "why_correct": "題目要的是能「有效避免感染風險」的最徹底處理。滅菌（sterilization）能殺滅包括細菌芽孢在內的所有微生物，是幾個選項中唯一能確保病原完全清除的方式，所以選滅菌。",
    "why_others": {
-    "A": "洗滌只能去除污垢、減少部分微生物，不能確保病原完全消失。",
-    "B": "抗菌只是抑制微生物生長，沒有殺滅病原，也不一定對病毒有效。",
-    "D": "除菌只能減少微生物數量，達不到全部殺滅的程度。"
+    "A": "洗滌主要去除污垢，不能確保病原完全清除。",
+    "B": "抗菌多指抑制微生物生長，不保證殺滅病原。",
+    "D": "除菌只是減少微生物數量，達不到完全殺滅。"
    },
-   "takeaway": "清潔等級由低到高為洗滌、抗菌、除菌、滅菌；高感染風險物品要做滅菌。",
+   "takeaway": "選項中只有滅菌能殺滅所有微生物（含芽孢），要徹底避免感染時選滅菌。",
    "review": {
     "blind_answer": [
-     "C"
+     "A"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "詳解把「接觸口鼻、屬高感染風險就要滅菌」講成一般原則，這與 Spaulding 分類不符：接觸黏膜的物品屬半重要物品，只需高層次消毒；必須滅菌的是進入無菌組織的重要物品。另外，「洗滌＜抗菌＜除菌＜滅菌」這個排序沒有可靠出處，推理依據不正確。",
+    "blind_confidence": 0.35,
+    "verdict": "answer_disputed",
+    "reason": "依感控實務，疫情期間病患使用的布品以感染性布單標準洗滌（熱水與清潔劑）處理即可，不需滅菌；以「最徹底」選滅菌在專業上站不住，洗滌較合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch",
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "詳解把「接觸口鼻、屬高感染風險就要滅菌」講成一般原則，這與 Spaulding 分類不符：接觸黏膜的物品屬半重要物品，只需高層次消毒；必須滅菌的是進入無菌組織的重要物品。另外，「洗滌＜抗菌＜除菌＜滅菌」這個排序沒有可靠出處，推理依據不正確。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1480,28 +1479,25 @@
   },
   {
    "id": "114-2-INTRO-064",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "圖中看不到規則的P波，基線是細碎不規則的顫動波，QRS窄，R-R間隔長達約兩秒多，心室速率很慢（約每分鐘30下），符合竇房結與傳導系統退化的病竇症候群（sick sinus syndrome）。高齡病人有心悸、頭暈等症狀的心搏過緩，根本的治療是置放永久性心臟節律器。",
+   "why_correct": "圖中看不到規則P波，基線為細碎顫動波，QRS窄、心室速率緩慢。高齡病人出現有症狀的慢心律，符合竇房結與傳導系統退化的病竇症候群（sick sinus syndrome），根本治療是置放永久性心臟節律器。",
    "why_others": {
-    "A": "2:1心房撲動心室率約每分鐘150下且有鋸齒波；此圖心跳極慢，用乙型阻斷劑會更慢。",
-    "C": "圖中沒有WPW特有的短PR與delta波；而且WPW合併心房顫動時禁用鈣離子阻斷劑。",
-    "D": "三度阻滯要看到規則P波與QRS各跳各的，此圖無規則P波；乙型興奮劑只能暫時用。"
+    "A": "2:1心房撲動心室率快且有鋸齒波；此圖心跳慢，乙型阻斷劑會更慢。",
+    "C": "圖中無WPW特有的短PR與delta波，且WPW併心房顫動禁用鈣離子阻斷劑。",
+    "D": "三度阻滯要見規則P波與QRS各跳各的，此圖無規則P波；乙型興奮劑僅能暫用。"
    },
-   "takeaway": "高齡、有症狀的極慢心律（病竇症候群）→ 永久性心臟節律器",
+   "takeaway": "高齡、有症狀的慢心律（病竇症候群）→ 置放永久性心臟節律器。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒有問題，但詳解判讀附圖心率有誤：以定標波 10 mm 的高度換算，R-R 間隔約 31 mm（約 1.2–1.3 秒），心室率約每分鐘 45–50 下，並不是「兩秒多、每分鐘約 30 下」；而且「兩秒多」換算起來低於每分鐘 30 下，前後說法也不一致。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "附圖無規則P波、基線細顫、窄QRS且心室率慢，判為病竇症候群並置放節律器，其餘排除合理。"
    }
   },
   {

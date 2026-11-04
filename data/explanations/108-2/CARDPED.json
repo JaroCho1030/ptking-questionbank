@@ -258,26 +258,33 @@
    "id": "108-2-CARDPED-012",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "左下肺葉外側基支引流要讓左肺在上，所以採右側臥並向前傾 45°。食道癌術後不宜頭低，因此床尾不抬高，避免胃內容物逆流。",
+   "why_correct": "左下肺葉外側基支引流要讓左肺在上，所以採右側臥並向前傾45°。食道癌術後不宜頭低腳高，因此床尾不抬高，以免胃內容物逆流。",
    "why_others": {
-    "A": "雖體位方向正確，但術後床尾抬高易造成逆流與誤吸。",
+    "A": "側臥方向正確，但術後床尾抬高易造成逆流與誤吸。",
     "B": "左側臥使患側在下，無法引流左下肺葉外側基支。",
-    "D": "仰臥平躺是引流後基底支，不是外側基支。"
+    "D": "仰臥平躺無法讓左下葉外側基支位於上方引流。"
    },
-   "takeaway": "引流側肺在上；食道術後避免頭低。",
+   "takeaway": "引流肺節朝上；食道術後避免頭低。",
    "review": {
     "blind_answer": [
-     "C"
+     "A"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "D 的說明錯誤：後基底支引流為俯臥頭低位，不是仰臥平躺。",
+    "verdict": "pass",
+    "reason": "右側臥前傾引流左下葉外側基支，食道術後避免頭低，說明正確。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "D 的說明錯誤：後基底支引流為俯臥頭低位，不是仰臥平躺。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -535,28 +542,25 @@
   },
   {
    "id": "108-2-CARDPED-024",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "呼吸器連接管與氣管內管脫落會立刻影響呼吸，胸管與動脈導管脫落則可能造成氣胸或出血，這幾項脫落有立即危險。",
+   "why_correct": "胸管脫離可造成氣胸或出血，動脈導管脫離會快速大量出血，氣管內管滑脫則失去人工氣道且需重新插管，都有立即危險。呼吸器接管脫開可立即接回，心電圖脫落只失去監測。",
    "why_others": {
-    "A": "①雖是呼吸器的連接管，但若與②③⑤相較，選項缺少氣管內管而不完整。",
-    "C": "④心電圖電極脫落只是失去監測，不會立即危及生命，且遺漏胸管與動脈導管。",
-    "D": "心電圖脫落不立即危險，且遺漏動脈導管。"
+    "A": "含可立即接回的①，且漏掉⑤氣管內管。",
+    "C": "①④非立即危險，且漏掉②胸管與③動脈導管。",
+    "D": "④心電圖脫落不立即危險，且漏掉③動脈導管。"
    },
-   "takeaway": "胸管、動脈導管、氣管內管脫落最危險；心電圖電極不然。",
+   "takeaway": "胸管、動脈導管、氣管內管脫離最危險。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 稱呼吸器連接管脫落有立即危險，卻選不含①的 B，自相矛盾，A 的說明也不通順。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "胸管、動脈導管、氣管內管脫離有立即危險，各選項分析正確。"
    }
   },
   {
@@ -882,54 +886,48 @@
   },
   {
    "id": "108-2-CARDPED-039",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "嚴重過度充氣的肺氣腫患者橫膈已被壓平，軀幹前彎的坐姿可使腹內壓抬高橫膈、改善其長度張力關係，有助於橫膈呼吸。",
+   "why_correct": "嚴重過度充氣的肺氣腫患者橫膈已被壓平，坐姿軀幹前彎可讓腹腔內容物上推橫膈、改善其長度張力關係，上肢支撐也可固定肩帶，有助於橫膈呼吸。",
    "why_others": {
-    "A": "仰躺時過度充氣的肺使橫膈更難活動，不利。",
-    "B": "側躺對橫膈的幫助有限。",
-    "C": "有支持的直立姿勢雖可減輕呼吸做功，但不如前彎坐姿助於橫膈。"
+    "A": "仰躺雖可讓腹腔內容物上推橫膈，但重度患者常較難耐受。",
+    "B": "側躺對過度充氣患者橫膈的幫助有限。",
+    "C": "直立姿勢雖可減輕呼吸做功，但不如前彎坐姿助於橫膈。"
    },
    "takeaway": "過度充氣患者：坐姿前彎利於橫膈呼吸。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "A 的說明有誤：仰躺時腹腔內容物會把橫膈往上推，反而改善橫膈長度，不是讓橫膈更難活動。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "坐姿前彎改善扁平橫膈長度張力關係，說明正確。"
    }
   },
   {
    "id": "108-2-CARDPED-040",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "橫膈呼吸對過度充氣患者可能反而增加呼吸負擔，若出現呼吸困難加劇、矛盾呼吸及血氧下降，都表示此訓練不適合，所以三項皆成立。",
-   "why_others": {},
+   "why_correct": "橫膈呼吸對過度充氣患者可能反而增加呼吸負擔，若出現呼吸困難加劇、矛盾呼吸或血氧飽和濃度下降，都表示此訓練不適合，三項皆成立。",
+   "why_others": {
+    "A": "漏掉③，血氧下降也是不適合的指標。",
+    "B": "漏掉②，矛盾呼吸也是不適合的指標。",
+    "C": "漏掉①，呼吸困難加劇也是不適合的指標。"
+   },
    "takeaway": "呼吸困難、矛盾呼吸、血氧下降，都代表訓練不合適。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "why_others 缺選項 ABC",
-     "check: 結果檔 108-2_CARDPED_1 缺這題"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "三項皆為橫膈呼吸不適合的指標，說明正確。"
    }
   },
   {
@@ -1256,28 +1254,25 @@
   },
   {
    "id": "108-2-CARDPED-055",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "運動誘發氣喘的重點是放鬆、熱身與較深慢的呼吸；運動時刻意用腹肌吸氣會增加呼吸做功與氣道刺激，不是適當策略。",
+   "why_correct": "腹肌屬於呼氣肌，收縮時是協助用力呼氣，無法用來吸氣；吸氣應以橫膈為主，所以「運動時使用腹肌吸氣」是錯誤策略。",
    "why_others": {
     "A": "放鬆技巧可降低呼吸急促與焦慮。",
-    "B": "充足熱身可降低支氣管收縮的機會。",
-    "D": "較深且慢的呼吸可減少過度換氣與氣道刺激。"
+    "B": "充足熱身可降低運動誘發支氣管收縮的機會。",
+    "D": "較深且慢的呼吸可減少過度換氣。"
    },
-   "takeaway": "運動誘發氣喘要熱身、放鬆、深慢呼吸。",
+   "takeaway": "腹肌是呼氣肌，不能用來吸氣。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "C錯的關鍵是腹肌屬呼氣肌、無法用來吸氣，詳解改稱會增加氣道刺激，屬無根據的推論，未說明真正錯誤所在。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "腹肌為呼氣肌，以腹肌吸氣為錯誤策略，說明正確。"
    }
   },
   {
@@ -1443,28 +1438,25 @@
   },
   {
    "id": "108-2-CARDPED-063",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "氣質特性屬於個人因素（personal factors），不是身體構造；ICF 身體構造指器官與肢體等解剖部分。",
+   "why_correct": "ICF中氣質與人格屬於心智功能，歸在身體功能，不是身體構造；身體構造指器官、肢體等解剖部分。",
    "why_others": {
     "A": "被抱互動頻率少屬於參與面向，敘述正確。",
     "B": "進食困難屬於活動面向，敘述正確。",
     "D": "加護病房燈光屬於環境因素，敘述正確。"
    },
-   "takeaway": "氣質屬個人因素，非身體構造。",
+   "takeaway": "ICF氣質屬身體功能（心智功能），非身體構造。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "ICF中氣質與人格功能（b126）列於身體功能，詳解斷言氣質屬個人因素並不精確，應說明其屬身體功能而非身體構造。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "ICF中氣質屬身體功能（心智功能），非身體構造，說明正確。"
    }
   },
   {

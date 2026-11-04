@@ -256,28 +256,25 @@
   },
   {
    "id": "111-2-CARDPED-012",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "呼吸肌肌力訓練的阻力設定與耐力訓練不同，題目認定以最大吸氣阻力的 60% 作為肌力訓練阻力的敘述不正確，因此 C 為錯誤。",
+   "why_correct": "呼吸肌肌力訓練依超負荷原則，應採接近最大吸氣壓的高阻力、少反覆次數；60%屬中等強度，較偏向耐力訓練的設定，作為肌力訓練阻力不恰當，因此C錯誤。",
    "why_others": {
     "A": "最大吸氣壓是臨床代表吸氣肌肌力的常用指標。",
     "B": "最大自主通氣量常用來反映呼吸肌耐力。",
-    "D": "耐力訓練可採 60% 最大自主通氣量的強度。"
+    "D": "耐力訓練可採60%最大自主通氣量的強度。"
    },
-   "takeaway": "肌力看 PImax，耐力看 MVV，訓練強度設定不同。",
+   "takeaway": "肌力看PImax、高阻力少次數；耐力看MVV、中強度持續。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 只以「題目認定」循環論證，未說明肌力訓練的正確阻力強度及 60% 為何不對，考生無從得知判斷依據。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "PImax代表肌力、MVV代表耐力，60%作為肌力訓練阻力偏低的說明合理。"
    }
   },
   {
@@ -1159,28 +1156,25 @@
   },
   {
    "id": "111-2-CARDPED-051",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "兒童生活品質問卷（PedsQL）是針對兒童與青少年設計的量表，不適用於 20 歲的成年個案，所以此敘述錯誤。",
+   "why_correct": "題目所指的兒童生活品質問卷（PedsQL）通用核心量表適用於兒童與青少年（約2至18歲），20歲已超出範圍，故敘述錯誤；成人早期另有專用版本。",
    "why_others": {
-    "B": "量表可區分慢性病兒童與健康兒童的分數。",
+    "B": "量表可區分氣喘等慢性病兒童與健康兒童的分數。",
     "C": "內容含情緒功能，敘述正確。",
-    "D": "量表涵蓋健康相關生活品質與學校、社交等參與面向，敘述正確。"
+    "D": "量表涵蓋健康相關生活品質與學校、社交等參與面向。"
    },
-   "takeaway": "PedsQL 適用兒童青少年，不適用成年人。",
+   "takeaway": "PedsQL通用核心量表用於兒童青少年，20歲超出範圍。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "PedsQL 另有適用 18 到 25 歲的 Young Adult 版本，說它是兒童量表、不適用 20 歲過於絕對；應說明題目指的是 2 到 18 歲的通用核心量表。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "PedsQL通用核心量表適用2至18歲，20歲超出範圍，其餘說明正確。"
    }
   },
   {
@@ -1553,28 +1547,25 @@
   },
   {
    "id": "111-2-CARDPED-068",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "低認知階段的兒童適合簡單語言或肢體示範，昏迷期的治療也可使用嗅覺等多種感覺刺激，所以①②正確。",
+   "why_correct": "兒童瑞秋量表（Pediatric Rancho Scale）階段II是對環境有反應、可遵循簡單指令的較高層級，適合用簡單語言或肢體示範（①）；昏迷或低反應期可用嗅覺等多感官刺激（②）。",
    "why_others": {
-    "B": "④錯，異位骨化時不應完全固定，要維持適度關節活動。",
-    "C": "含④，異位骨化不應完全固定關節。",
-    "D": "含④而錯，且③的時間限制說法不成立。"
+    "B": "④錯，異位骨化不應完全固定，需維持溫和關節活動。",
+    "C": "含④，異位骨化時完全固定會使關節更僵硬。",
+    "D": "含③④；刺激時間應依兒童反應調整，無5分鐘上限，且④錯。"
    },
-   "takeaway": "異位骨化要維持適度活動，不能完全固定。",
+   "takeaway": "兒童瑞秋量表V級最低、I級最高；異位骨化不可完全固定。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "兒童瑞秋量表階段 II 是對環境有反應的較高層級（V 級才是無反應），詳解把它說成低認知階段是錯的，③為何錯也沒有說明。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "兒童瑞秋量表V最低、I最高，II級可遵循簡單指令；異位骨化不應完全固定，說明合理。"
    }
   },
   {
@@ -1717,28 +1708,25 @@
   },
   {
    "id": "111-2-CARDPED-075",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "血紅素 6 g/dl 屬嚴重貧血，運動耐受性很差且有風險，不適合進行有氧或阻力運動，所以此敘述錯誤。",
+   "why_correct": "血紅素6 g/dl屬嚴重貧血，攜氧能力差，運動耐受性低且有風險，不適合進行有氧或阻力運動，所以此敘述錯誤。",
    "why_others": {
     "A": "血小板偏低時出血風險高，應避免阻力運動。",
-    "B": "此血小板數可進行輕度有氧運動，敘述正確。",
-    "D": "白血球偏低時感染風險上升，運動需謹慎，此項不是要找的錯誤。"
+    "B": "血小板在此範圍仍可做輕度有氧運動，敘述正確。",
+    "D": "白血球4000已在正常下限，免疫力較差，依此標準應避免有氧運動。"
    },
-   "takeaway": "嚴重貧血的癌症兒童要避免運動。",
+   "takeaway": "嚴重貧血的癌症兒童不宜進行有氧或阻力運動。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "D 只寫運動需謹慎、不是要找的錯誤，沒有說明白血球 4000 為何應避免有氧運動，與「應避免」的敘述也接不上。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "血紅素6 g/dl屬嚴重貧血不宜運動，其餘選項依常用癌症兒童運動指引說明，大致合理。"
    }
   },
   {

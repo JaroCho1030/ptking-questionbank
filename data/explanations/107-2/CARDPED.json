@@ -670,28 +670,25 @@
   },
   {
    "id": "107-2-CARDPED-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "老化後，運動訓練仍能改善心肺功能，成效與年輕人相近，只是幅度可能不同。「無顯著不同」的說法過於絕對，所以判為錯誤。",
+   "why_correct": "老化後運動訓練仍能改善心肺功能，但改善幅度與適應速度通常不如年輕人，老化確實會影響訓練成效。說老化對訓練成效「無顯著不同」與事實不符，故D錯誤。",
    "why_others": {
-    "A": "老化使傳導與感壓反射下降，易姿勢性低血壓。",
-    "B": "老化使肌肉量下降，第二型肌纖維減少較多。",
-    "C": "老化肺彈性下降，易出現空氣滯留。"
+    "A": "老化使傳導系統與感壓反射敏感性下降，易姿勢性低血壓、心率反應遲鈍。",
+    "B": "老化使肌肉量下降，第二型肌纖維減少較明顯。",
+    "C": "老化肺彈性回縮力下降，易空氣滯留，類似慢性阻塞性肺病。"
    },
-   "takeaway": "老化後訓練仍有效，但反應與年輕人不同。",
+   "takeaway": "老化後訓練仍有效，但效果幅度與速度不如年輕人。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 先說老化後訓練成效與年輕人相近，又據此判「無顯著不同」為錯，推理自相矛盾，未說明 D 錯在哪裡。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "老化後訓練仍有效但幅度較小，各選項老化變化敘述正確。"
    }
   },
   {
@@ -882,26 +879,33 @@
    "id": "107-2-CARDPED-039",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "大量肋膜積水造成呼吸困難，高坐姿勢（high Fowler's position）能讓橫膈下移、胸腔擴張空間增加，最能減輕呼吸困難。",
+   "why_correct": "大量肋膜積水造成呼吸困難，高坐姿勢（high Fowler's position）讓橫膈下移、胸腔擴張空間增加，也較易讓末期患者放鬆，最能減輕呼吸困難。",
    "why_others": {
-    "A": "左側臥壓迫健側，使通氣下降。",
-    "B": "患側在下會壓迫積水側，加重呼吸困難。",
-    "C": "俯臥會限制胸廓與橫膈活動，晚期患者難以耐受。"
+    "A": "左側（健側）在下，積液會壓迫縱膈與健側肺，加重呼吸困難。",
+    "B": "患側在下雖較能保留健側通氣，但減輕呼吸困難的效果不如高坐姿。",
+    "C": "俯臥限制胸廓與橫膈活動，末期患者也難以耐受。"
    },
-   "takeaway": "肋膜積水的呼吸困難：高坐姿較舒適。",
+   "takeaway": "肋膜積水的呼吸困難，首選高坐姿；若側躺則患側在下。",
    "review": {
     "blind_answer": [
-     "D"
+     "B"
     ],
     "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "B 的說明稱患側（積水側）在下會加重呼吸困難不正確，大量單側肋膜積水患者臨床上通常較能耐受患側在下，健側在下反而使積液壓迫縱膈與健側肺。",
+    "verdict": "pass",
+    "reason": "大量肋膜積水以高坐姿減輕呼吸困難，側躺與俯臥的比較合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "B 的說明稱患側（積水側）在下會加重呼吸困難不正確，大量單側肋膜積水患者臨床上通常較能耐受患側在下，健側在下反而使積液壓迫縱膈與健側肺。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1188,28 +1192,25 @@
   },
   {
    "id": "107-2-CARDPED-052",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "敏感性是在確診有遲緩者中，篩檢也呈陽性的比例。由表可知確診有遲緩者共 12 人，其中篩檢有遲緩者 10 人，10 除以 12 約為 83.3%。",
+   "why_correct": "敏感性是確診有遲緩者中篩檢也呈陽性的比例。表中確診有遲緩者共12人，其中篩檢陽性10人，10除以12約為83.3%。",
    "why_others": {
-    "B": "71.4% 是把篩檢陽性者中的真陽性算錯，不是敏感性的算法。",
-    "C": "7.0% 與表中數字對不上，不是敏感性。",
-    "D": "7.5% 與表中數字對不上，不是敏感性。"
+    "B": "71.4%是陽性預測值，即篩檢陽性14人中確診者10人。",
+    "C": "7.0%是篩檢陽性率，即14除以200，不是敏感性。",
+    "D": "7.5%不是以確診遲緩者為分母計算，不是敏感性。"
    },
-   "takeaway": "敏感性等於真陽性除以全部確診有病者。",
+   "takeaway": "敏感性＝真陽性÷全部確診有病者；陽性預測值分母是篩檢陽性者。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "71.4% 是陽性預測值 10/14，不是「算錯」；7.0% 是篩檢陽性率 14/200，詳解說與表中數字對不上是錯的。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "依附表敏感性10/12=83.3%、PPV 10/14=71.4%、陽性率14/200=7.0%，計算正確。"
    }
   },
   {
@@ -1788,28 +1789,25 @@
   },
   {
    "id": "107-2-CARDPED-078",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "L4 損傷的脊柱裂孩子，踝背屈與蹠屈控制不足，常見跟骨腳變形（calcaneal foot）。穿踝足支架可協助站立與行走。",
+   "why_correct": "L4損傷的脊柱裂孩子，脛前肌等背屈肌仍有功能，蹠屈肌卻無力，肌力不平衡造成跟骨腳（calcaneal foot）變形。膝伸肌有力，穿踝足支架即可協助站立與行走。",
    "why_others": {
-    "A": "多見腰椎或胸腰椎側彎，且背架並不能取代坐姿平衡訓練。",
-    "B": "髖脫臼不一定要儘早開刀，需視是否影響功能而定。",
-    "C": "常見的是膝外翻或屈曲，而非內翻，且 L4 不一定需要膝踝足支架。"
+    "A": "側彎在較高位損傷較常見，L4並不以胸椎側彎為典型變形。",
+    "B": "髖脫臼處理以功能為考量，不主張為減痛而儘早開刀。",
+    "C": "L4膝伸肌有力，不以膝內翻為典型變形，多不需膝踝足支架。"
    },
-   "takeaway": "L4 脊柱裂常見跟骨腳，用 AFO 行走。",
+   "takeaway": "L4脊柱裂：背屈有、蹠屈無，形成跟骨腳，用踝足支架行走。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "L4 脊柱裂脛前肌（L4）背屈尚存、蹠屈肌無力，肌力不平衡造成跟骨腳；詳解說背屈控制不足是機轉錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "L4脊柱裂背屈肌有力、蹠屈肌無力致跟骨腳，使用踝足支架行走，其餘選項駁斥合理。"
    }
   },
   {

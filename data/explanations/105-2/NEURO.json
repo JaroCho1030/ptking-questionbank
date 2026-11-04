@@ -417,14 +417,14 @@
   },
   {
    "id": "105-2-NEURO-019",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "Hoehn 與 Yahr 分期中，第 IV 級症狀明顯、嚴重失能，雖仍能行走，但站立需要協助，與題意相符。",
+   "why_correct": "題幹描述症狀明顯、嚴重失能但仍能行走，對應 Hoehn 與 Yahr 第 IV 級。原始定義的 IV 級是仍可不靠協助行走與站立但明顯失能，題幹說法與原定義略有落差，但選項中最符合 IV 級。",
    "why_others": {
-    "A": "II 級為雙側症狀，但姿勢反射正常，平衡尚可。",
+    "A": "II 級為雙側症狀，但平衡尚可，未嚴重失能。",
     "B": "III 級有姿勢不穩，但仍能獨立生活。",
     "D": "V 級臥床或需坐輪椅，無法行走。"
    },
@@ -433,12 +433,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "Hoehn與Yahr（1967）原始定義第IV級是仍能在無協助下行走與站立但明顯失能，詳解稱第IV級「站立需要協助」與原始定義不符，未說明題幹與原定義的落差。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "詳解指出題幹與原定義落差，並說明 IV 級為最符合選項，合理。"
    }
   },
   {
@@ -928,38 +925,35 @@
   },
   {
    "id": "105-2-NEURO-041",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "坐到站時，先將腳往後收使踝關節移到膝關節後方，再上半身前傾使重心前移至雙腳上，最後臀部離開椅面往上往前。順序為③①②。",
    "why_others": {
-    "A": "臀部不可在軀幹前傾前先抬起，且踝也要先後移。",
+    "A": "踝關節後移應最先做，不能放到最後。",
     "B": "臀部抬起應在軀幹前傾之後，不是之前。",
-    "C": "臀部先離座會使重心落在後方，無法順利站起。"
+    "C": "臀部先離座且踝最後才後移，重心落在後方難以站起。"
    },
    "takeaway": "坐到站：腳後收、軀幹前傾、臀部離座。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "A 選項為①②③，軀幹前傾本就在臀部抬起之前，詳解說「臀部不可在軀幹前傾前先抬起」與 A 的順序不符，A 錯只在踝關節後移被放到最後。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "坐到站依序腳後收、軀幹前傾、臀部離座，說明正確。"
    }
   },
   {
    "id": "105-2-NEURO-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "中風患者坐姿轉位訓練早期，為了安全與促進患側負重，通常先朝健側轉位，讓健側肢體帶動並保護；若一開始就移向患側，患者難以控制，風險較高。故A錯誤。",
+   "why_correct": "中風患者坐姿轉位訓練早期，通常先朝健側轉位，由健側肢體主導，較安全也容易執行；之後再進展到移向患側。故A錯誤。",
    "why_others": {
     "B": "身體前傾使重心移到腳上，才能順利離開座面，正確。",
     "C": "兩側都練習才能增加患側參與並符合功能需求，正確。",
@@ -970,12 +964,9 @@
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "朝健側轉位由健側肢體主導，是為了安全與容易執行，並不能「促進患側負重」，詳解的理由與事實相反。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "早期轉位以移向健側為原則，A 錯，其他敘述正確。"
    }
   },
   {
@@ -1449,14 +1440,14 @@
   },
   {
    "id": "105-2-NEURO-063",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "小腦皮質由外而內分為三層：分子層、普金耶細胞層與顆粒層，不是六層（大腦新皮質才是六層），因此A錯誤。",
    "why_others": {
-    "B": "小腦有頂核、球狀核、栓狀核與齒狀核，說法依常見分類為三對深核。",
+    "B": "球狀核與栓狀核合稱中間核，加上頂核、齒狀核為三對。",
     "C": "上、中、下三對小腦腳連接小腦與其他腦構造，正確。",
     "D": "小腦主要影響同側肢體動作控制，正確。"
    },
@@ -1465,12 +1456,9 @@
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "B 列出頂核、球狀核、栓狀核、齒狀核四種，卻直接稱為「常見分類的三對」，沒有說明是把球狀核與栓狀核合併成中間核，前後矛盾、容易誤導。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "小腦皮質三層、三對核（中間核合併）、三對腳、同側控制，說明正確。"
    }
   },
   {

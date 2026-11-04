@@ -306,28 +306,25 @@
   },
   {
    "id": "106-1-NEURO-014",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "能不靠協助維持站立、僅有些微晃動，能完成中度困難的工作並撿起地上物品，符合功能性平衡等級的 Good。",
+   "why_correct": "能不靠協助維持站立、僅有些微晃動，能完成中度困難的工作並撿起地上物品，符合功能性平衡等級的Good。",
    "why_others": {
-    "A": "Normal 能無晃動地完成困難工作，此患者仍有晃動。",
-    "C": "Fair 的平衡能力較差，常需支持或只能完成較簡單工作。",
-    "D": "Poor 需要協助才能站立，不符合此患者。"
+    "A": "Normal能無晃動地承受最大挑戰，此患者仍有晃動。",
+    "C": "Fair雖不需扶持可維持平衡，但無法承受挑戰或重心轉移。",
+    "D": "Poor需要扶持或協助才能維持平衡，不符合此患者。"
    },
-   "takeaway": "站得穩有些微晃、能撿物＝Good。",
+   "takeaway": "站得穩、些微晃、能撿地上物＝Good。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "Fair 等級定義為不需扶持可維持平衡但無法承受挑戰或重心轉移，詳解說 Fair「常需支持」與定義不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "符合功能性平衡等級Good的定義，各等級說明正確。"
    }
   },
   {
@@ -976,28 +973,25 @@
   },
   {
    "id": "106-1-NEURO-043",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "肩痛、僵硬、手背水腫、活動度受限且腕伸直疼痛，是急性期的表現，屬於反射性交感神經失養症的第一期（急性期）。",
+   "why_correct": "肩痛、僵硬、手背水腫、活動度受限且腕伸直疼痛加劇，是早期表現，屬於反射性交感神經失養症的第一期。",
    "why_others": {
     "B": "第二期已出現明顯的營養性變化，如皮膚與肌肉萎縮。",
-    "C": "第三期為攣縮、萎縮等晚期變化，疼痛反而減輕。",
-    "D": "屬更晚期，已非以疼痛水腫為主的表現。"
+    "C": "第三期以萎縮、攣縮等不可逆變化為主。",
+    "D": "反射性交感神經失養症傳統只分三期，沒有第四期。"
    },
-   "takeaway": "RSD（肩手症候群）早期：疼痛、水腫、活動受限。",
+   "takeaway": "RSD（肩手症候群）第一期：疼痛、水腫、活動受限。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "反射性交感神經失養症傳統分期只有三期，詳解稱 D 第四期「屬更晚期」是虛構了不存在的分期，未指出選項 D 不存在。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "疼痛、水腫、活動受限、腕伸痛加劇為肩手症候群第一期，分期說明正確。"
    }
   },
   {
@@ -1025,28 +1019,25 @@
   },
   {
    "id": "106-1-NEURO-045",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "急性期仰躺時頭頸略彎曲、置於枕上，可避免過度後仰誘發伸肌張力，並維持舒適與呼吸道安全。",
    "why_others": {
-    "A": "軀幹宜維持中線或略朝患側，不宜偏向健側。",
+    "A": "軀幹應維持在中線、拉長患側，不宜側彎。",
     "C": "肩關節應避免內轉，宜維持前伸並略外轉。",
     "D": "握拳會增加屈肌張力，手應維持打開。"
    },
-   "takeaway": "中風擺位：避免誘發痙攣，肩外轉、手打開、頭頸略屈。",
+   "takeaway": "中風仰躺擺位：頭頸略屈、軀幹中線、肩外轉、手打開。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "選項 A 說明軀幹「略朝患側」彎曲有誤，患側軀幹側屈縮短正是應避免的姿勢，擺位應維持軀幹在中線、拉長患側。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "急性期仰躺頭頸略屈，軀幹中線、肩前伸外轉、手打開，說明正確。"
    }
   },
   {

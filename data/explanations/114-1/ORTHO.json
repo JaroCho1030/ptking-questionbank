@@ -187,26 +187,25 @@
   },
   {
    "id": "114-1-ORTHO-009",
-   "status": "pending",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "症狀分布在拇指與食指，屬 C6 神經根病變（cervical radiculopathy）。Spurling 測試縮小椎間孔時症狀加重，distraction 測試打開椎間孔時症狀緩解，表示症狀來自神經根受壓迫。頸部牽引（cervical traction）能重現拉離的效果，增加椎間孔空間、減少壓迫，最可能減輕症狀。",
+   "why_correct": "拇指與食指麻，加上Spurling測試加重、distraction測試緩解，符合頸神經根病變（cervical radiculopathy），症狀來自椎間孔處神經根受壓。頸椎牽引（cervical traction）可重現拉離效果、打開椎間孔，最可能減輕症狀。",
    "why_others": {
-    "B": "主動後仰與右轉本身就會誘發症狀，一般關節活動運動不能直接解除神經根壓迫。",
-    "C": "神經張力檢查陰性；張力式手法會拉緊神經，急性受壓時可能加重症狀。",
-    "D": "TENS 只能暫時調節疼痛，不能解除神經根壓迫，也改善不了麻感。"
+    "B": "主動後仰與右轉本身會誘發症狀，一般活動運動無法解除神經根壓迫。",
+    "C": "神經張力檢查陰性；張力式手法拉緊神經，可能加重受壓症狀。",
+    "D": "TENS只能暫時調節疼痛，無法解除神經根壓迫。"
    },
-   "takeaway": "Spurling 陽性加上 distraction 能緩解，代表神經根受壓，首選頸椎牽引治療。",
+   "takeaway": "Spurling陽性、distraction緩解，代表神經根受壓，首選頸椎牽引。",
    "review": {
-    "blind_answer": null,
-    "blind_confidence": null,
-    "verdict": null,
-    "reason": null,
-    "problems": [
-     "blind: 沒有呼叫工具（stop_reason=end_turn）"
-    ]
+    "blind_answer": [
+     "A"
+    ],
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "C6神經根病變、Spurling陽性distraction緩解，選牽引的推理與排除皆正確。"
    }
   },
   {
@@ -555,28 +554,25 @@
   },
   {
    "id": "114-1-ORTHO-025",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "肩關節前向不穩定（anterior instability）的患者，常見姿勢是肱骨頭前移、肩胛前傾，前側結構變緊，後側肌群則被拉長而變得無力。後三角肌（posterior deltoid）負責肩伸展與水平外展，也能從後方限制肱骨頭前移，因此最容易無力，是復健時要加強的肌群。",
+   "why_correct": "肩關節前向不穩定（anterior instability）時，前側關節囊與韌帶鬆弛，後側關節囊常偏緊；肌肉方面胸小肌等前側肌肉易變短，後側肌群則常被拉長而無力。後三角肌（posterior deltoid）屬後側肌群，因此較容易無力。",
    "why_others": {
-    "B": "胸小肌在圓肩、肩胛前傾姿勢下通常是緊縮，不是無力。",
-    "C": "提肩胛肌在聳肩代償、頭前傾姿勢下多半緊繃，屬於過度使用。",
-    "D": "斜角肌是頸部肌肉，頭前傾時常緊繃，與肩前向不穩定較無關。"
+    "B": "胸小肌在圓肩、肩胛前傾姿勢下通常偏短緊，不是無力。",
+    "C": "提肩胛肌常因聳肩代償而緊繃，屬過度使用。",
+    "D": "斜角肌是頸部肌肉，常見緊繃，與肩前向不穩定較無關。"
    },
-   "takeaway": "肩前向不穩定的肌肉失衡模式是前緊後弱：胸小肌等前側肌群變緊，後三角肌等後側肌群變弱。",
+   "takeaway": "肩前向不穩定：前側關節囊鬆弛、後側關節囊偏緊，後三角肌等後側肌群易無力。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒有問題，但詳解說前向不穩定時「前側結構變緊」，並在 takeaway 歸納為「前緊後弱」，這與病理不符：前向不穩定的前側關節囊與韌帶是鬆弛的，常見緊繃的反而是後側關節囊，只有胸小肌等前側肌肉可能變短，所以這種籠統說法會誤導考生。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "前向不穩定時後側肌群易被拉長無力、前側肌群偏短緊的說明合理。"
    }
   },
   {
@@ -791,28 +787,25 @@
   },
   {
    "id": "114-1-ORTHO-035",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "外轉滯後表徵（lateral rotation lag sign）是被動把肩關節擺到外轉，看病人能不能自己維持；維持不住表示棘下肌或小圓肌（旋轉肌袖後上方）有撕裂，跟上盂唇（superior labrum）無關。其他三項都會對肱二頭肌長頭腱或上盂唇加壓，所以上盂唇前後撕裂（SLAP lesion）患者常會陽性。",
+   "why_correct": "外轉滯後表徵（lateral rotation lag sign）是把肩擺到外轉，看病人能否自行維持；維持不住提示棘上肌與棘下肌撕裂，屬旋轉肌袖測試，與上盂唇無關。其他三項都對肱二頭肌長頭腱或上盂唇加壓，SLAP撕裂常會陽性。",
    "why_others": {
-    "A": "肩前屈時抗阻力，會拉扯肱二頭肌長頭腱和它在上盂唇的附著處，SLAP 撕裂常會陽性。",
-    "B": "肩前屈90度、內收並內轉時抗阻力，引起深層疼痛、外轉後減輕，就提示 SLAP 撕裂。",
-    "D": "肩外展外轉、手肘伸直時，肱二頭肌抗阻力收縮會牽拉上盂唇，引起疼痛就提示 SLAP 撕裂。"
+    "A": "肩前屈抗阻會拉扯肱二頭肌長頭腱及其上盂唇附著處，SLAP常陽性。",
+    "B": "肩前屈內收內轉時抗阻引起深層痛、外轉時減輕，提示SLAP撕裂。",
+    "D": "外展外轉、伸肘下屈肘抗阻會牽拉上盂唇，疼痛提示SLAP撕裂。"
    },
-   "takeaway": "SLAP 測試都是對肱二頭肌長頭和上盂唇加壓；滯後表徵（lag sign）測的是旋轉肌袖撕裂。",
+   "takeaway": "SLAP測試多對肱二頭肌長頭與上盂唇加壓；外轉滯後表徵測的是旋轉肌袖撕裂。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒問題，但詳解對外轉滯後表徵的說明有誤：依 Hertel 與 Magee，這項測試看的是棘上肌和棘下肌是否撕裂，詳解卻寫成棘下肌或小圓肌，漏了棘上肌，還把小圓肌歸為後上方旋轉肌袖。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "外轉滯後表徵為旋轉肌袖測試，其餘三項SLAP測試描述正確。"
    }
   },
   {
@@ -1050,31 +1043,25 @@
   },
   {
    "id": "114-1-ORTHO-046",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "膕旁肌拉傷（hamstring strain）最常發生在近端的肌肉肌腱交界處（musculotendinous junction），尤其是股二頭肌長頭，而不是膝關節附近的遠端肌腱附著處。所以C的敘述錯誤。",
    "why_others": {
     "A": "股二頭肌（biceps femoris）長頭是最常拉傷的膕旁肌，敘述正確。",
-    "B": "直膝抬腿會被動拉長受傷肌肉，阻力屈膝會讓它收縮，兩者都會誘發疼痛，敘述正確。",
-    "D": "屈膝時加上脛骨外旋抗阻偏測股二頭肌，加上內旋抗阻偏測半腱肌與半膜肌，可用來鑑別內、外側，敘述正確。"
+    "B": "直膝抬腿拉長受傷肌肉，阻力屈膝使它收縮，都會誘發疼痛，敘述正確。",
+    "D": "屈膝抗阻加脛骨外旋偏測股二頭肌，加內旋偏測內側膕旁肌，敘述正確。"
    },
    "takeaway": "膕旁肌拉傷好發於股二頭肌長頭近端的肌肉肌腱交界處，不在膝關節附近。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "why_others D 49 字 > 48"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "膕旁肌拉傷好發近端肌肉肌腱交界處，其餘選項敘述與鑑別方式正確。"
    }
   },
   {
@@ -1450,28 +1437,25 @@
   },
   {
    "id": "114-1-ORTHO-063",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "足部姿勢指標（FPI-6）共六項：距骨頭觸診、外踝上下緣曲度、跟骨額狀面位置、距舟關節區突出程度、內縱足弓一致性、前足相對後足外展或內收。舟狀骨偏移（navicular drop/drift）是另一種獨立測量，不屬於 FPI 子項目。",
+   "why_correct": "足部姿勢指標（FPI-6）共六項：距骨頭觸診、外踝上下緣曲度、跟骨額狀面位置、距舟關節區突出程度、內縱足弓一致性、前足相對後足外展或內收。舟狀骨偏移（navicular drop/drift）是另一種獨立測量，不屬於FPI子項目。",
    "why_others": {
-    "A": "距骨頭觸診是 FPI 後足評估項目之一。",
-    "B": "外踝上下緣曲度是 FPI 後足評估項目之一。",
-    "C": "內縱足弓一致性是 FPI 中足評估項目之一。"
+    "A": "距骨頭觸診是FPI-6後足評估項目之一。",
+    "B": "外踝上下緣曲度是FPI-6後足評估項目之一。",
+    "C": "內縱足弓一致性是FPI-6前足評估項目之一。"
    },
-   "takeaway": "FPI-6 看的是距舟關節區突出，不是舟狀骨偏移；舟骨下沉是另一項獨立測量。",
+   "takeaway": "FPI-6看的是距舟關節區突出，不是舟狀骨偏移；舟骨下沉是另一項獨立測量。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒有問題，但詳解有一處分類錯誤：FPI-6 只分成後足與前足兩組，內縱足弓一致性屬於前足評估項目，FPI 裡沒有「中足評估項目」這一類，C 選項的說明寫錯了。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "FPI-6六項列舉正確，舟狀骨偏移非其子項目。"
    }
   },
   {

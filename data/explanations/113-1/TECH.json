@@ -469,28 +469,25 @@
   },
   {
    "id": "113-1-TECH-021",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "在光療的波段中，波長越短越容易被表皮吸收與散射，穿透就越淺。紫外線（ultraviolet, UV）波長最短，幾乎都被表皮與真皮淺層吸收，穿透深度大約只有一毫米以內，在四個選項中最淺。",
+   "why_correct": "紫外線（ultraviolet, UV）波長短，幾乎全被表皮與真皮淺層吸收，穿透極淺，在四個選項中最淺。氦氖、鎵砷雷射與紅外線屬紅光到紅外光的範圍，穿透都比紫外線深。",
    "why_others": {
-    "A": "氦氖雷射（He-Ne）是632.8nm紅光，穿透可達數毫米，比紫外線深。",
-    "B": "鎵砷雷射（GaAs）是904nm近紅外光，穿透最深，可達一公分以上。",
-    "C": "紅外線波長比紫外線長，可穿透到真皮與皮下淺層，比紫外線深。"
+    "A": "氦氖雷射（He-Ne）為紅光，穿透可達數毫米，比紫外線深。",
+    "B": "鎵砷雷射（GaAs）為近紅外光，是四者中穿透較深的。",
+    "C": "紅外線穿透比紫外線深；遠紅外線易被水吸收，主要作用在淺層組織。"
    },
-   "takeaway": "在光療範圍內，波長越長穿透越深：紫外線＜紅光He-Ne＜近紅外GaAs。",
+   "takeaway": "紫外線穿透最淺；紅光到近紅外光穿透較深，遠紅外線因易被水吸收反而較淺。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.93,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒錯，但詳解把規則講得太籠統：「在光療範圍內，波長越長穿透越深」並不成立。遠紅外線波長比 904nm 的 GaAs 長，卻因為容易被水吸收而穿透較淺。詳解在 B 選項又說 GaAs 比紅外線穿透得深，前後矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "紫外線幾乎都被表皮吸收、穿透最淺，各雷射與紅外線的比較正確。"
    }
   },
   {
@@ -1674,28 +1671,25 @@
   },
   {
    "id": "113-1-TECH-073",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "輪子制動器（wheel lock）用來在轉位、靜止或停在斜坡時固定輪椅，避免輪椅滑動造成跌倒，是安全上一定要有的組件。其他選項則依輪椅種類與使用者需求不同，可以省略。",
    "why_others": {
     "A": "只有可折疊式輪椅才需要岔桿，固定框架式輪椅沒有這個組件。",
     "B": "推把是給照顧者推行用的，獨立自推的主動式輪椅常常把它省略。",
-    "C": "由他人推行的看護型輪椅或用單側驅動的輪椅，不一定需要手推圈。"
+    "C": "由他人推行的看護型輪椅不需要手推圈，自推型才需要。"
    },
    "takeaway": "手動輪椅一定要有的安全組件是制動器；岔桿、推把、手推圈都看機型與需求而定。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒問題，但 C 選項的說明有誤：單側驅動輪椅（單手驅動或偏癱用一手一腳驅動）仍要靠手推圈推進，單手驅動型甚至在同一側裝兩個手推圈，所以拿它當作「不一定需要手推圈」的例子是錯的；只有看護推行型輪椅的例子成立。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "制動器是安全上必要的組件，其他三者依機型與使用者而定，說明正確。"
    }
   },
   {
@@ -1746,10 +1740,10 @@
   },
   {
    "id": "113-1-TECH-076",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "踩地（腳跟著地到足平放）時，膝關節過度屈曲多半是因為地面反作用力落在膝關節後方太遠，屈膝力矩變大。義足後跟過軟時，後跟一受壓就變形，地面反作用力很快往前移，屈膝力矩反而變小，容易出現膝過度伸直，所以可能性最低。",
    "why_others": {
@@ -1757,17 +1751,14 @@
     "C": "股四頭肌無力，無法離心收縮控制屈膝力矩，膝會過度屈曲。",
     "D": "後跟槓桿臂過長，反作用力落在膝後方更遠，屈膝力矩變大。"
    },
-   "takeaway": "膝下截肢踩地時：後跟過硬、背屈過多或義足太前移會過度屈膝；後跟過軟則過度伸膝。",
+   "takeaway": "膝下截肢踩地時：後跟過硬、背屈過多或承筒相對義足太前移會過度屈膝；後跟過軟則過度伸膝。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.92,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 和各選項的分析都對，但 takeaway 說「義足太前移會過度屈膝」是錯的：義足太前移會讓後跟槓桿臂變短、容易膝過度伸直；會造成過度屈膝的是承筒相對義足太前移（也就是義足太後移）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "後跟過軟會減少屈膝力矩、傾向過度伸膝，其他選項會增加屈膝力矩，說明正確。"
    }
   },
   {

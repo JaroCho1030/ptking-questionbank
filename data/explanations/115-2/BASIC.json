@@ -26,10 +26,10 @@
   },
   {
    "id": "115-2-BASIC-002",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "肩帶（pectoral girdle）由肩胛骨與鎖骨組成，負責把上肢接到軀幹的中軸骨骼。鎖骨內側端以胸鎖關節接胸骨，外側端以肩鎖關節接肩胛骨的肩峰；胸鎖關節是上肢和中軸骨骼之間唯一的真關節。",
    "why_others": {
@@ -37,17 +37,14 @@
     "C": "第一肋骨屬於中軸骨骼，只和鎖骨之間有肋鎖韌帶相連。",
     "D": "胸骨屬於中軸骨骼，和鎖骨構成胸鎖關節，不屬於肩帶。"
    },
-   "takeaway": "肩帶等於鎖骨加肩胛骨；骨盆帶是兩塊髖骨，前方和薦骨（屬中軸骨骼）相接。",
+   "takeaway": "肩帶＝鎖骨加肩胛骨；肱骨、胸骨、肋骨都不屬於肩帶。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.98,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 和各選項的分析都沒問題，但 takeaway 說兩塊髖骨「前方和薦骨相接」是錯的：髖骨是在後方以薦髂關節接薦骨，前方則是兩塊髖骨以恥骨聯合互相連接。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "肩帶由鎖骨與肩胛骨組成，各選項說明正確。"
    }
   },
   {
@@ -144,38 +141,35 @@
   },
   {
    "id": "115-2-BASIC-007",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "腹直肌（rectus abdominis）起始於恥骨嵴與恥骨聯合，向上止於第5–7肋軟骨及劍突。它是唯一由恥骨往上縱走的前腹壁肌，主要功能是讓軀幹屈曲。",
+   "why_correct": "腹直肌（rectus abdominis）起於恥骨嵴與恥骨聯合，向上止於第5–7肋軟骨及劍突，縱走於前腹壁，主要功能是讓軀幹屈曲。三層扁平腹肌的起點都不在恥骨嵴。",
    "why_others": {
     "B": "腹內斜肌起於胸腰筋膜、髂嵴與腹股溝韌帶外側，不是恥骨嵴。",
     "C": "腹外斜肌起於第5–12肋骨外面，向下止於髂嵴與腹白線。",
     "D": "腹橫肌起於下位肋軟骨內面、胸腰筋膜、髂嵴及腹股溝韌帶。"
    },
-   "takeaway": "腹直肌起於恥骨嵴與恥骨聯合，止於第5–7肋軟骨與劍突；三層扁平肌都不是起於恥骨。",
+   "takeaway": "腹直肌起於恥骨嵴與恥骨聯合，止於第5–7肋軟骨與劍突；三層扁平肌起點都不在恥骨。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.97,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 正確，各選項的起止點描述也大致無誤；但詳解說腹直肌是「唯一由恥骨往上縱走的前腹壁肌」並不正確，因為錐狀肌（pyramidalis）同樣起於恥骨（恥骨嵴／恥骨聯合前方），再往上止於腹白線。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "腹直肌起於恥骨嵴與恥骨聯合，各扁平腹肌起點描述正確。"
    }
   },
   {
    "id": "115-2-BASIC-008",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "梨狀肌（piriformis）起自薦骨前（骨盆）面，大約在第2至第4薦椎前孔之間，穿過坐骨大孔出骨盆，止於股骨大轉子上緣。它是臀部唯一從骨盆內面起始的肌肉。",
+   "why_correct": "梨狀肌（piriformis）起自薦骨前（骨盆）面，穿過坐骨大孔出骨盆，止於股骨大轉子上緣。三塊臀肌則起自髂骨外側面或薦骨後面，都不在薦骨前方。",
    "why_others": {
     "B": "臀小肌起自髂骨外側面的前、下臀線之間，沒有附著在薦骨。",
     "C": "臀中肌起自髂骨外側面的前、後臀線之間，沒有附著在薦骨前面。",
@@ -186,12 +180,9 @@
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.97,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 正確，但詳解說梨狀肌「是臀部唯一從骨盆內面起始的肌肉」是錯的：閉孔內肌也是臀部深層的外旋肌，它起自閉孔膜內面與周圍骨盆內面。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "梨狀肌起於薦骨前面，三塊臀肌附著描述正確。"
    }
   },
   {

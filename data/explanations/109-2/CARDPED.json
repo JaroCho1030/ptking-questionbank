@@ -544,26 +544,33 @@
    "id": "109-2-CARDPED-024",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "第二階段在監測下進行，主要目標是增加運動耐受力與減少不活動的弊害；第三階段則是維持規律運動並建立良好生活型態。③④ 符合。",
+   "why_correct": "第二階段在監測下進行運動訓練，主要目標是增加運動耐受力；第三階段則是維持規律適度運動並建立良好生活型態，故③④正確。",
    "why_others": {
-    "A": "①②組合包含錯誤的①，第一階段重點不是減少危險因子。",
-    "C": "①不正確，故不能選。",
-    "D": "②雖屬復健目標，但此選項含①類型的錯誤分配，不如 ③④ 完整。"
+    "A": "減少不活動弊害屬第一階段目標，②與①皆不正確。",
+    "C": "第一階段重點在減少臥床弊害、穩定病情，①不正確。",
+    "D": "②把第一階段的減少不活動弊害錯置於第二階段。"
    },
-   "takeaway": "第二階段增耐力，第三階段維持與生活型態。",
+   "takeaway": "一期減少不活動弊害，二期增耐力，三期維持運動與生活型態。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.7,
+    "blind_confidence": 0.75,
     "verdict": "reasoning_error",
-    "reason": "減少不活動弊害屬第一階段目標，詳解卻把它列為第二階段目標，與選②錯誤相矛盾，D選項分析亦語意不通。",
+    "reason": "C的說明稱第一階段重點在穩定病情，與①前半相同卻判①不正確，未指出①錯在何處，推理自相矛盾。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "減少不活動弊害屬第一階段目標，詳解卻把它列為第二階段目標，與選②錯誤相矛盾，D選項分析亦語意不通。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -683,28 +690,25 @@
   },
   {
    "id": "109-2-CARDPED-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "偶發、單一、低頻率的心室早期收縮（每分鐘 2 到 3 次）通常不須立即停止運動，需持續觀察是否增多或成串。",
+   "why_correct": "偶發、單一、低頻率的心室早期收縮（每分鐘 2 到 3 次）通常不須立即停止運動，但需持續觀察是否增多或成串出現。",
    "why_others": {
     "A": "穩定運動中收縮壓下降，應立即停止。",
     "B": "血壓過高超出安全範圍，應停止運動。",
-    "D": "PSVT 為持續性心律不整，應停止運動。"
+    "D": "運動中發作陣發性上心室心搏過速，屬停止運動的指標。"
    },
-   "takeaway": "偶發單一 PVC 可續運動，頻繁成串才停止。",
+   "takeaway": "偶發單一 PVC 可續運動，頻繁或成串才停止。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "D選項說明稱PSVT為「持續性」心律不整，但PSVT本為陣發性，敘述與事實不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "偶發單一PVC可續運動，血壓下降、過高與PSVT屬停止指標，說明正確。"
    }
   },
   {

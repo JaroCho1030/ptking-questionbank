@@ -578,15 +578,15 @@
   },
   {
    "id": "105-2-BASIC-026",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "脊髓背角的抑制性中間神經元釋放腦啡（enkephalin），抑制初級痛覺神經元的傳遞，是下行疼痛調控的關鍵作用位置。",
+   "why_correct": "脊髓背角的抑制性中間神經元釋放腦啡（enkephalin），抑制痛覺訊號往上傳遞，是內源性疼痛調控最直接的作用位置與物質。",
    "why_others": {
-    "A": "大縫核下行抑制主要使用血清素。",
-    "B": "嗎啡是外源藥物，不是內源傳導物質。",
+    "A": "大縫核下行抑制主要使用血清素，不是正腎上腺素。",
+    "B": "嗎啡作用於導水管周圍灰質可止痛，但背角腦啡是更直接的內源調控。",
     "D": "背根神經節是感覺神經元胞體所在，並非主要調控位置。"
    },
    "takeaway": "背角的腦啡中間神經元是疼痛閘門調控處。",
@@ -594,12 +594,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "題目明言配對可為「神經傳導物質（或化學物質）」，B 以嗎啡是外源藥物而非內源傳導物質排除，與題意不符；嗎啡作用於導水管周圍灰質產生止痛本是經典機轉，應改從「最相關」或內源調控角度說明。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "脊髓背角腦啡中間神經元調控疼痛，大縫核主用血清素，說明正確。"
    }
   },
   {
@@ -815,14 +812,14 @@
   },
   {
    "id": "105-2-BASIC-036",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "無氧醣解（anaerobic glycolysis）時葡萄糖分解為丙酮酸，在缺氧時被還原為乳酸，並再生 NAD+ 讓糖解繼續進行。",
    "why_others": {
-    "A": "果酸（果糖相關酸）不是無氧醣解的終產物。",
+    "A": "果酸指甘醇酸等α-羥基酸，不是無氧醣解產物。",
     "C": "碳酸由二氧化碳與水形成，與無氧醣解無關。",
     "D": "檸檬酸是檸檬酸循環中間產物，屬有氧代謝。"
    },
@@ -832,11 +829,8 @@
      "B"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "A 將果酸解釋為「果糖相關酸」有誤，果酸指甘醇酸、蘋果酸等 α-羥基酸，與果糖無關。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "無氧醣解產物為乳酸，其他選項排除正確。"
    }
   },
   {
@@ -1439,28 +1433,25 @@
   },
   {
    "id": "105-2-BASIC-063",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "軀幹向左轉由同側腹內斜肌與對側腹外斜肌合作，加上同側豎脊肌與對側深後脊肌（旋轉肌、多裂肌）參與，故選此組合。",
+   "why_correct": "軀幹向左轉由左側腹內斜肌與右側腹外斜肌合作，加上左側胸腰背直肌與右側深後脊肌（如旋轉肌、多裂肌）參與，故選此組合。",
    "why_others": {
-    "B": "組合左右顛倒，會造成向右轉。",
-    "C": "豎脊肌與深後脊肌的側別錯誤。",
-    "D": "整組側別錯誤，等於向右轉的組合。"
+    "B": "四條肌肉側別全部相反，是向右轉的組合。",
+    "C": "胸腰背直肌與深後脊肌的側別相反。",
+    "D": "背肌側別與正解相同，但腹內、外斜肌側別相反。"
    },
-   "takeaway": "同側腹內斜肌加對側腹外斜肌，一起把軀幹轉向腹內斜肌那側。",
+   "takeaway": "同側腹內斜肌加對側腹外斜肌，把軀幹轉向腹內斜肌那側。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "D 選項的左側胸腰背直肌與右側深後脊肌其實與正解相同，只有腹斜肌側別錯，詳解說 D 整組側別錯誤、等於向右轉的組合並不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "左轉由左腹內斜、右腹外斜、左豎脊、右深後脊肌合作，各選項側別分析正確。"
    }
   },
   {
@@ -1580,54 +1571,48 @@
   },
   {
    "id": "105-2-BASIC-069",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "平背姿勢的特徵是骨盆後傾、腰椎前凸減少，使腰椎曲線變平。",
    "why_others": {
     "B": "胸椎後凸增加是駝背或後凸前凸姿勢的特徵。",
-    "C": "頭部前傾常見於上交叉症候群，不是平背的特徵。",
-    "D": "對髂股韌帶造成壓力較常見於骨盆前傾。"
+    "C": "頭部前傾不是平背姿勢的主要特徵。",
+    "D": "髂股韌帶限制髖伸直，受拉主要見於髖過度伸直的搖擺背姿勢。"
    },
    "takeaway": "平背姿勢：腰椎前凸減少、骨盆後傾。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "D 的解釋錯誤：髂股韌帶限制髖伸直，骨盆前傾時髖屈曲使其放鬆，受壓力的是骨盆後傾、髖過度伸直的姿勢，不是骨盆前傾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "平背以腰椎前凸減少、骨盆後傾為特徵，其他選項說明合理。"
    }
   },
   {
    "id": "105-2-BASIC-070",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "擺盪初期小腿因髖屈曲帶動及膝伸展而加速向前，股四頭肌是此時主要的作用肌。",
+   "why_correct": "擺盪初期髖屈曲帶動大腿前擺、膝屈曲，小腿隨之加速向前；股四頭肌（如股直肌）在此期參與，是此題所指的主要作用肌。",
    "why_others": {
     "B": "小腿減速發生在擺盪末期，並非初期。",
-    "C": "擺盪初期是加速，膕旁肌不是主要作用肌。",
-    "D": "減速與股四頭肌的搭配不符；擺盪末期減速才由膕旁肌負責。"
+    "C": "擺盪初期是加速，膕旁肌不是此期主要作用肌。",
+    "D": "減速發生在擺盪末期，且主要由膕旁肌負責。"
    },
-   "takeaway": "擺盪初期小腿加速靠股四頭肌，末期減速靠膕旁肌。",
+   "takeaway": "擺盪初期小腿加速，末期減速靠膕旁肌。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "擺盪初期膝關節是屈曲（約至60度），不是膝伸展，詳解以膝伸展說明小腿加速與事實不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "依題目所據教材擺盪初期小腿加速、末期減速靠膕旁肌，說明與承認答案一致。"
    }
   },
   {

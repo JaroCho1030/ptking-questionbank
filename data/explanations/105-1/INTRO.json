@@ -975,28 +975,25 @@
   },
   {
    "id": "105-1-INTRO-043",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "縣市政府中負責衛生行政的單位是衛生局，為地方衛生主管機關。衛生所設於鄉鎮區，是基層執行單位，不是主管機關。",
+   "why_correct": "縣市政府中負責衛生行政的單位是衛生局，為地方衛生主管機關。衛生所設於鄉鎮市區，是基層執行單位，不是主管機關。",
    "why_others": {
-    "A": "衛生處是直轄市以外的非通用名稱，縣市層級的主管機關稱衛生局。",
+    "A": "衛生處過去是省級機關名稱，直轄市與縣市主管機關都稱衛生局。",
     "C": "衛生所設在鄉鎮市區，屬基層醫療保健單位。",
     "D": "衛生室是村里層級的基層保健據點。"
    },
-   "takeaway": "縣市衛生主管機關是衛生局，鄉鎮是衛生所。",
+   "takeaway": "直轄市與縣市衛生主管機關是衛生局，鄉鎮是衛生所。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "A選項說「衛生處是直轄市以外的非通用名稱」語意不清且不符事實；衛生處過去是省級機關名稱（臺灣省政府衛生處），直轄市與縣市的主管機關都叫衛生局。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "縣市衛生主管機關為衛生局，其他單位說明正確。"
    }
   },
   {
@@ -1580,28 +1577,25 @@
   },
   {
    "id": "105-1-INTRO-069",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "粒徑越小的微粒越能深入呼吸道到達肺泡。PM2.5 可進入肺泡沉積，是本題各選項中最易附著於肺泡的分類。",
+   "why_correct": "粒徑越小越能深入呼吸道，但不是越小就越容易沉積。PM2.5 能到達肺泡並有效沉積，是選項中最易附著於肺泡的類別。",
    "why_others": {
     "A": "落塵粒徑大，多被上呼吸道攔截。",
     "B": "PM10 多沉積在上呼吸道與支氣管。",
-    "D": "此選項不是本題採用的標準微粒分類。"
+    "D": "粒徑過小時沉降與慣性作用弱，部分隨呼氣排出，附著不一定較多。"
    },
-   "takeaway": "PM2.5 可深入肺泡。",
+   "takeaway": "PM2.5 可深入肺泡沉積。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "詳解先說粒徑越小越能深入肺泡，卻沒說明粒徑更小的D為何不對，只用「不是本題採用的標準分類」帶過，推理自相矛盾，D的錯誤原因也沒交代。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "PM2.5 易沉積於肺泡，約 0.1–1 微米粒子沉積效率最低的說明正確。"
    }
   },
   {
@@ -1835,16 +1829,16 @@
   },
   {
    "id": "105-1-INTRO-080",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "特異性（specificity）等於真陰性除以真陰性加偽陽性，即 70 除以 78，約為 0.897。",
    "why_others": {
-    "A": "0.972 約為70除以72，錯把偽陰性當分母。",
-    "B": "0.909 不是正確的真陰性比例。",
-    "C": "0.900 為近似值，不符合計算結果。"
+    "A": "0.972 為 70/72，是陰性預測值，不是特異性。",
+    "B": "0.909 為 20/22，是敏感度。",
+    "C": "0.900 為 (20+70)/100，是正確率。"
    },
    "takeaway": "特異性等於 TN 除以 TN 加 FP。",
    "review": {
@@ -1852,11 +1846,8 @@
      "D"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "C的0.900是正確率(20+70)/100，詳解卻說成「近似值」；B的0.909是敏感度20/22，也沒說明，C的解釋不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "特異性 70/78≈0.897，其他選項分別為 NPV、敏感度、正確率，計算正確。"
    }
   }
  ]

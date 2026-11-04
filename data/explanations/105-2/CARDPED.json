@@ -508,28 +508,25 @@
   },
   {
    "id": "105-2-CARDPED-023",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "肥胖患者直立時，腹部內容物對橫膈壓力減少，呼吸功降低；仍需加強呼吸運動，預防肺葉塌陷（atelectasis）。",
+   "why_correct": "肥胖患者直立時，腹部內容物不再推擠橫膈，橫膈活動較好，呼吸功降低；術後仍需加強呼吸運動，預防肺葉塌陷（atelectasis）。",
    "why_others": {
-    "A": "②直立會降低而非增加腹部壓力，④直立不會降低心率。",
-    "B": "②錯誤，直立會減少腹部壓力，且漏掉③。",
-    "D": "④直立不會降低心率。"
+    "A": "②錯，直立的好處是腹部內容物不推擠橫膈；④直立不會降低心率。",
+    "B": "②錯，直立的好處是腹部內容物不推擠橫膈，且漏掉③。",
+    "D": "④錯，直立不會降低心率。"
    },
    "takeaway": "肥胖術後直立：呼吸功下降，仍要呼吸運動。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "直立時腹內壓實際上不低於平躺，②錯在腹部內容物不再推擠橫膈，詳解寫成「直立會降低腹部壓力」與生理事實不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "直立減少腹部推擠橫膈、降低呼吸功並需呼吸運動，②④錯，說明正確。"
    }
   },
   {
@@ -1296,28 +1293,25 @@
   },
   {
    "id": "105-2-CARDPED-057",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "股骨前傾等髖旋轉變形主要造成內八步態，並非小於兩歲外八步態最常見的原因，故 B 錯誤。",
+   "why_correct": "兩歲以下外八最常見原因是髖外旋攣縮，股骨前傾（anteversion）則是兩歲以上內八常見原因。B 把年齡與步態方向套錯，故為錯誤敘述。",
    "why_others": {
     "A": "股骨頭前傾可造成髖旋轉變形，敘述正確。",
     "C": "此類兒童常有全身性韌帶鬆弛，敘述正確。",
     "D": "女孩發生率高於男孩，敘述正確。"
    },
-   "takeaway": "股骨前傾主要造成內八步態，女多於男。",
+   "takeaway": "股骨前傾致內八見於較大兒童，女多於男。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱髖旋轉變形主要造成內八，忽略髖外旋攣縮正是兩歲以下外八最常見原因，應說明原文是股骨前傾為兩歲以上內八最常見原因、B 改寫了年齡與方向。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "股骨前傾致較大兒童內八、女多於男、韌帶鬆弛，B 敘述錯誤，說明合理。"
    }
   },
   {

@@ -509,28 +509,25 @@
   },
   {
    "id": "105-1-TECH-023",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "熱療可增加膠原蛋白延展性，適合組織短縮的處理；疼痛、痙攣與出血等較適合用冷療或不宜熱療。",
+   "why_correct": "熱療可增加膠原蛋白延展性，配合牽拉適合處理組織短縮，冷療則會降低組織延展性，因此組織短縮適合熱療而非冷療。",
    "why_others": {
-    "A": "急性疼痛多用冷療，熱療並非首選。",
-    "B": "痙攣多以冷療降低牽張反射活性。",
-    "C": "出血時用熱療會增加出血，不適合。"
+    "A": "疼痛是冷熱療共同的適應症，不是一定要用熱療。",
+    "B": "痙攣常以冷療降低牽張反射活性。",
+    "C": "出血時用熱療會增加血流與出血，不適合。"
    },
-   "takeaway": "組織短縮用熱療，痙攣與出血用冷療。",
+   "takeaway": "組織短縮用熱療增加延展性；出血不宜熱療。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "疼痛是冷熱療共同的適應症，詳解說疼痛較適合冷療，並把選項改講成急性疼痛，與題目不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "熱療增加膠原延展性適合組織短縮，其他選項說明正確。"
    }
   },
   {
@@ -673,16 +670,16 @@
   },
   {
    "id": "105-1-TECH-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "電磁波頻率由高到低為紫外線、可見光與紅外線、短波，因此頻率大小為紫外線大於紅外線大於短波。",
+   "why_correct": "電磁波頻率由高到低為紫外線、可見光、紅外線、微波、短波，因此頻率大小為紫外線大於紅外線大於短波。",
    "why_others": {
-    "A": "紅外線頻率低於紫外線，且高於短波。",
-    "B": "紅外線頻率高於短波，不是低於。",
-    "C": "短波頻率遠低於紅外線。"
+    "A": "紫外線頻率最高，不應排在最後。",
+    "B": "紅外線高於短波正確，但紅外線頻率低於紫外線。",
+    "C": "短波頻率最低，不應排第一。"
    },
    "takeaway": "頻率：紫外線大於紅外線大於短波。",
    "review": {
@@ -690,11 +687,8 @@
      "D"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "選項 B 寫的是紅外線高於短波（這部分對），錯在紅外線高於紫外線，詳解卻說「紅外線頻率高於短波，不是低於」，沒點出真正的錯處。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "頻率紫外線＞紅外線＞短波，說明正確。"
    }
   },
   {
@@ -956,28 +950,25 @@
   },
   {
    "id": "105-1-TECH-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "肩伸直時肩胛骨需能向後傾斜、胸廓不受阻擋，側躺且肘屈曲可放鬆肱三頭肌長頭，使肩伸直角度不受雙關節肌張力限制，因此能做到最大範圍。",
+   "why_correct": "肱二頭肌長頭跨過肩前方與肘，肩伸直時被拉長；肘屈曲可放鬆肱二頭肌，側躺讓手臂後方不受床面阻擋，因此能做到最大角度。",
    "why_others": {
-    "A": "肘伸直會使肱二頭肌長頭被牽拉，限制肩伸直。",
-    "B": "俯臥時肩伸直可能被床面與軀幹限制，且不易固定肩胛。",
+    "A": "仰臥時床面擋住手臂後伸，且肘伸直拉緊肱二頭肌。",
+    "B": "肘伸直使肱二頭肌長頭緊繃，限制肩伸直角度。",
     "C": "肘伸直時肱二頭肌長頭被拉緊，限制角度。"
    },
-   "takeaway": "肩伸直被動測試：側躺、肘屈曲以放鬆雙關節肌。",
+   "takeaway": "肩伸直被動活動：側躺、肘屈曲以放鬆肱二頭肌。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱肘屈曲可放鬆肱三頭肌長頭使肩伸直不受限，錯誤；肩伸直時受牽拉而限制角度的是肱二頭肌長頭，肘屈曲是為了放鬆肱二頭肌。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "側躺不受床面阻擋、肘屈曲放鬆肱二頭肌長頭，說明合理。"
    }
   },
   {
@@ -1051,28 +1042,25 @@
   },
   {
    "id": "105-1-TECH-046",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "閉鏈式運動因多關節同時參與、承重且產生共同收縮，肌肉活化通常比開放式運動大，所以「開放式的肌肉活化較小」為什麼是錯誤的敘述，是因為不能直接這樣比較；題目要求選錯誤者。",
+   "why_correct": "開放式運動可針對單一肌群施加阻力，該肌群的活化常不低於甚至高於閉鏈式運動；閉鏈式的負荷分散給多個肌群共同收縮。因此說開放式肌肉活化較小是錯誤敘述。",
    "why_others": {
     "A": "開放式多為無承重，閉鏈式多為承重，敘述合理。",
     "C": "遠端自由移動為開放式，遠端固定為閉鏈式，定義正確。",
     "D": "開放式多為單一關節運動，閉鏈式牽動鄰近關節，敘述合理。"
    },
-   "takeaway": "閉鏈式：遠端固定、承重、多關節、共同收縮多。",
+   "takeaway": "開鏈：單一肌群活化集中；閉鏈：承重、多關節共同收縮。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "詳解先說閉鏈肌肉活化通常較大，若如此 B 反而是正確敘述，又改口稱不能直接比較，推理自相矛盾，未說清 B 為何錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "開放式運動肌肉活化不一定較小，其他敘述符合定義。"
    }
   },
   {
@@ -1215,28 +1203,25 @@
   },
   {
    "id": "105-1-TECH-053",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "肱骨向後滑動，在關節面凹凸原則下，對應肩關節屈曲時肱骨頭相對於關節盂的運動，因此仰臥做後向滑動可幫助增加肩屈曲。",
+   "why_correct": "依凹凸原則，肱骨頭為凸面，骨頭運動與滑動方向相反；仰臥做肱骨向後滑動可幫助增加肩屈曲。",
    "why_others": {
-    "A": "外展時肱骨頭應向下滑動。",
-    "B": "水平內收或內收與下滑動較相關，不是向後滑動。",
-    "D": "伸直時肱骨頭向前滑動，與向後滑動相反。"
+    "A": "外展對應肱骨頭向下滑動。",
+    "B": "內收對應肱骨頭向上滑動，不是向後滑動。",
+    "D": "伸直對應肱骨頭向前滑動，與向後滑動相反。"
    },
    "takeaway": "肩後向滑動增加屈曲，下滑動增加外展。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "B 的說明稱內收與下滑動相關錯誤，下滑動對應外展；且水平內收其實與後向滑動相關，說法反而混淆。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "依凹凸原則肱骨向後滑動增加屈曲，其他對應方向正確。"
    }
   },
   {
@@ -1310,14 +1295,14 @@
   },
   {
    "id": "105-1-TECH-057",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "腕伸直時，近端腕骨相對於橈骨為凸面在凹面上滑動，其滑動方向與骨頭運動方向相反，也就是向掌側滑動，因此推向掌心（volar）方向。",
+   "why_correct": "腕伸直時，近端腕骨為凸面在橈骨凹面上滑動，滑動方向與骨頭運動方向相反，也就是向掌側滑動，因此推向掌心（volar）方向。",
    "why_others": {
-    "B": "往手背推動會增加腕屈曲的限制，不是促進伸直。",
+    "B": "往手背推的背向滑動是用來增加腕屈曲活動度。",
     "C": "往尺側滑動對應橈側偏。",
     "D": "往橈側滑動對應尺側偏。"
    },
@@ -1327,11 +1312,8 @@
      "A"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "B 的說明稱往手背推會增加腕屈曲的限制，錯誤；背向滑動是增加腕屈曲活動度。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "腕伸直時近端腕骨向掌側滑動，其他方向對應正確。"
    }
   },
   {
@@ -1455,54 +1437,48 @@
   },
   {
    "id": "105-1-TECH-063",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "胸骨部分的胸大肌下束纖維走向較斜向下，牽拉時需讓手臂高舉過肩，雙手伸直呈 V 字型，才能沿纖維方向拉長。",
+   "why_correct": "胸大肌胸骨部的下束纖維走向較斜向下，牽拉時需讓手臂高舉過肩，雙手伸直呈 V 字型，才能沿纖維方向拉長。",
    "why_others": {
-    "A": "水平外展肘屈曲 90 度偏向牽拉鎖骨部。",
-    "C": "W 字型肘低於肩，牽拉的是鎖骨部或中段纖維。",
-    "D": "調整手的高度可以選擇性牽拉不同部位，所以並非不可行。"
+    "A": "肩高水平外展主要牽拉中段（胸骨上部）纖維。",
+    "C": "手低於肩的 W 字型是強調牽拉鎖骨部。",
+    "D": "調整手的高度可以強調不同部位，並非不可行。"
    },
-   "takeaway": "手高過肩呈 V 字型牽拉胸大肌胸骨部。",
+   "takeaway": "手高過肩牽胸骨部，手低於肩牽鎖骨部。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "A 肩高水平外展屬一般或中段（胸骨上部）纖維牽拉，鎖骨部應以手低於肩（C）強調，詳解把 A、C 都說成鎖骨部，不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "手高舉呈 V 字強調胸骨部、手低於肩強調鎖骨部，說明符合常見教材。"
    }
   },
   {
    "id": "105-1-TECH-064",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "圖中治療師固定橈骨，另一手對近端腕骨從背側向掌側施力，是針對橈腕關節的掌向滑動，用來增加腕屈曲，不是增加尺側偏斜；尺側偏斜需要橈側滑動。",
+   "why_correct": "圖中前臂以尺側緣置於毛巾上呈中立位，治療師固定前臂遠端，另一手把近端腕骨往下推，即橈腕關節的尺側滑動，用來增加橈側偏斜，不是尺側偏斜。",
    "why_others": {
-    "B": "手法作用在橈骨與近端腕骨之間，確實是橈腕關節。",
-    "C": "凹面在橈骨，治療平面在橈骨上。",
-    "D": "固定手同時固定橈骨與尺骨，使前臂不動。"
+    "B": "施力於橈骨與近端腕骨之間，屬橈腕關節鬆動術。",
+    "C": "橈腕關節凹面在橈骨，治療平面在橈骨上。",
+    "D": "固定手同時固定橈骨與尺骨，避免前臂移動。"
    },
-   "takeaway": "橈腕關節掌向滑動增加腕屈曲。",
+   "takeaway": "腕尺側滑動增加橈偏，橈側滑動增加尺偏。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "附圖前臂以尺側緣置於毛巾上（中立位），向下施力為尺側滑動以增加橈側偏，詳解誤判為掌向滑動，且稱掌向滑動增加腕屈曲亦錯（掌向滑動增加伸直）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "附圖前臂尺側朝下、近端腕骨往下推為尺側滑動，增加橈偏而非尺偏，其餘敘述正確。"
    }
   },
   {

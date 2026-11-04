@@ -587,28 +587,25 @@
   },
   {
    "id": "111-1-INTRO-026",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "整脊、推拿屬醫療行為，由無資格者擅自執行應受處罰。只沒收器材而不對整脊開罰，是最不適當的裁罰。",
+   "why_correct": "以「物理治療所」名義由無物理治療師資格者執行整脊等治療，屬違法執行物理治療業務，應依法處罰；只沒收器材而不對其行為開罰，是最不適當的裁罰。",
    "why_others": {
     "A": "出租證書屬應處分的違規情形。",
     "B": "未依法設立即擅自開業，應予罰鍰。",
     "D": "廣告內容不符規定，應予罰鍰。"
    },
-   "takeaway": "無資格者執行整脊推拿，仍屬違法醫療行為。",
+   "takeaway": "無照以物理治療所名義執業，不能以民俗療法免罰。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱整脊推拿一律屬醫療行為不正確（我國民俗調理之推拿不列入醫療管理），C不當的關鍵在於以物理治療所名義由無照者執行物理治療業務。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "無物理治療師資格以治療所名義執行整脊屬違法，不得以民俗療法免罰；出租證書、擅自開業、違規廣告均應處分，說明正確。"
    }
   },
   {
@@ -708,28 +705,25 @@
   },
   {
    "id": "111-1-INTRO-031",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "無障礙廁所須有直徑150公分以上的迴轉空間，讓輪椅使用者能轉向與進出。",
    "why_others": {
-    "B": "推門不利輪椅進出，規定偏向拉門等設計。",
-    "C": "求助鈴須設置多處，一處不符規定。",
-    "D": "應採無障礙設計的馬桶，非一般型式。"
+    "B": "推門不利輪椅使用者開關，規定以橫向拉門為原則。",
+    "C": "求助鈴應設於馬桶側與靠近地面處等位置，只設一處不符。",
+    "D": "馬桶不可有蓋，選項「有蓋馬桶」不符規定。"
    },
-   "takeaway": "無障礙廁所需有150公分迴轉空間。",
+   "takeaway": "無障礙廁所需有直徑150公分迴轉空間，馬桶不可有蓋。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "D錯在馬桶不可有蓋，規範本就要求使用一般型式馬桶，詳解稱應採非一般型式為事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "無障礙廁所需直徑150公分迴轉空間，門以橫向拉門為原則，求助鈴需兩處，馬桶不可有蓋，說明正確。"
    }
   },
   {
@@ -1382,15 +1376,15 @@
   },
   {
    "id": "111-1-INTRO-060",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "上運動神經元病變早期肌肉萎縮不明顯，主要因廢用才逐漸變少；下運動神經元病變才有明顯萎縮。",
+   "why_correct": "上運動神經元病變早期肌肉萎縮不明顯，主要因廢用才逐漸變小；下運動神經元病變才有明顯萎縮。",
    "why_others": {
     "B": "上運動神經元病變常見肌張力上升（痙攣）。",
-    "C": "上運動神經元病變常近端較無力且合併痙攣，並非以遠端為特徵。",
+    "C": "遠端較無力是周邊神經病變的典型分布，不是上運動神經元的鑑別特徵。",
     "D": "伸張反射通常亢進而非較弱。"
    },
    "takeaway": "上運動神經元：反射亢進、張力高、萎縮不明顯。",
@@ -1398,12 +1392,9 @@
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "C 的說明稱上運動神經元病變「常近端較無力」有誤，皮質脊髓徑病變反而以遠端（如手部精細動作）受影響較明顯，排除 C 的理由不成立。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "上運動神經元病變萎縮不明顯、張力上升、反射亢進，說明正確。"
    }
   },
   {

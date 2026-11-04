@@ -26,28 +26,25 @@
   },
   {
    "id": "109-2-TECH-002",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "傳統 TENS 採用高頻率、短脈寬、低強度，目的是以感覺刺激啟動閘門控制（gate control）機制止痛，所以強度只到舒適的麻刺感，不產生肌肉收縮。",
    "why_others": {
-    "B": "長脈寬、低頻、引發肌肉收縮是針刺式（acupuncture-like）TENS 的設定。",
-    "C": "參數雖對，但傳統 TENS 不引發可見的肌肉收縮。",
-    "D": "長脈寬與低頻不符合傳統 TENS 的高頻短脈寬設定。"
+    "B": "長脈寬又引發肌肉收縮，不符傳統 TENS 短脈寬、只有麻刺感的設定。",
+    "C": "脈寬頻率雖對，但傳統 TENS 不引發可見的肌肉收縮。",
+    "D": "長脈寬與較低頻率不符合傳統 TENS 的高頻短脈寬設定。"
    },
    "takeaway": "傳統 TENS：高頻、短脈寬、麻刺感、不收縮。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "B 的 50～100 pps 並非低頻，說它是針刺式 TENS（約 1～5 pps）的設定不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "傳統 TENS 參數為高頻、短脈寬、麻刺感，說明正確。"
    }
   },
   {
@@ -147,28 +144,25 @@
   },
   {
    "id": "109-2-TECH-007",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "調幅式干擾波指的是掃頻式（振幅調變）或差頻的變化，變動差頻式是指差頻（beat frequency）在設定範圍內變動，並非因振幅變動而得名，所以此敘述錯誤。",
+   "why_correct": "變動差頻式是指差頻（beat frequency）在設定範圍內持續改變，變的是頻率，不是振幅；振幅不斷變動、可稱調幅式的是掃描式干擾波，故此敘述錯誤。",
    "why_others": {
     "A": "單電路干擾波在儀器內已預先混合調變，確為預調式設計。",
     "B": "雙電路需兩組電極交叉擺放，電流才能在組織內交會產生干擾。",
     "D": "掃描式使干擾最強的位置移動，適合難以確定精準部位的症狀。"
    },
-   "takeaway": "變動差頻是差頻在範圍內變動，不是振幅變動。",
+   "takeaway": "變動差頻變的是頻率；掃描式變的是振幅與干擾位置。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 把掃頻式說成「振幅調變」，概念混淆；調幅式應指振幅變動的掃描式，變動差頻式是頻率在變。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "變動差頻變的是頻率，掃描式變的是振幅，說明正確。"
    }
   },
   {
@@ -380,16 +374,16 @@
   },
   {
    "id": "109-2-TECH-017",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "冷療降低組織溫度，使神經傳導速度變慢，包含運動神經，所以可降低運動神經傳導速度。",
    "why_others": {
     "A": "冷療主要降低代謝與發炎，並不直接促進組織癒合。",
     "B": "冷療使痛覺與觸覺神經活動降低，產生止痛麻木效果。",
-    "D": "淺層熱的穿透深度受限，傳導方式主要是傳導（conduction），並非對流。"
+    "D": "熱療較淺正是因血流對流把熱帶走，冷療反而穿透較深。"
    },
    "takeaway": "冷療降低神經傳導速度，達成止痛與減少痙攣。",
    "review": {
@@ -397,11 +391,8 @@
      "C"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "D 的說明否定對流的作用不正確；熱療較淺正是因為血流（對流）把熱帶走，冷療反而穿透較深。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "冷療降低神經傳導速度；熱療因血流把熱帶走而較淺，說明正確。"
    }
   },
   {
@@ -754,54 +745,48 @@
   },
   {
    "id": "109-2-TECH-033",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "測量膝屈曲時，髖關節不需要移到最大屈曲；髖屈曲過度會使股直肌放鬆而增加範圍，反而影響測量準確度，所以此敘述錯誤。",
+   "why_correct": "依 Norkin 的方法，測膝屈曲時髖屈曲約 90 度，讓股直肌放鬆即可，不需要把髖移到最大屈曲，所以此敘述錯誤。",
    "why_others": {
     "A": "俯臥時股直肌被拉長，會限制膝屈曲，所以仰臥較佳。",
     "B": "墊毛巾使膝關節呈最大伸直，是標準做法。",
-    "D": "遠端臂沿腓骨外側中線，並以外踝與腓骨頭為參考，是標準對位。"
+    "D": "遠端臂沿腓骨外側中線，以外踝與腓骨頭為參考，是標準對位。"
    },
-   "takeaway": "膝屈曲測量時髖維持原位，不必最大屈曲。",
+   "takeaway": "膝屈曲量測：髖屈曲讓股直肌放鬆，但不必到最大屈曲。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "Norkin 是讓髖屈曲約 90 度使股直肌放鬆，詳解說髖屈曲使股直肌放鬆會影響準確度，以及「髖維持原位」都不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "Norkin 的方法是髖屈曲約 90 度，不是最大屈曲，其他選項說明正確。"
    }
   },
   {
    "id": "109-2-TECH-034",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "牽張提肩胛肌時，應使肩胛骨下轉並上角向上被拉長，而非上轉；敘述中的肩胛上轉與上角下壓與提肩胛肌的作用方向不符。",
+   "why_correct": "牽張提肩胛肌時，頭應側彎並旋轉至對側，同時同側肩外展使肩胛上轉並下壓上角；C 寫成旋轉至同側，故錯誤。",
    "why_others": {
     "A": "闊背肌牽張時固定骨盆，進行肩屈曲與外轉，是合理做法。",
     "B": "大圓肌牽張時固定肩胛骨，執行肩屈曲與外轉，是合理做法。",
-    "D": "牽張上斜方肌時固定肩胛骨，並將頭側彎至對側、轉至同側，是合理做法。"
+    "D": "上斜方肌牽張需固定肩胛，頭側彎至對側、轉至同側，正確。"
    },
-   "takeaway": "提肩胛肌牽張需先使肩胛骨下轉，再讓上角被拉長。",
+   "takeaway": "提肩胛肌：頭轉向對側；上斜方肌：頭轉向同側。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "牽張提肩胛肌正是要肩胛上轉並下壓上角；C 錯在頭應旋轉至對側，詳解改說應下轉，事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "提肩胛肌牽張時頭應轉向對側，說明正確。"
    }
   },
   {
@@ -990,28 +975,25 @@
   },
   {
    "id": "109-2-TECH-043",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "病患完全依賴且體重100公斤，兩床呈垂直擺放。三人搬運（three-person carry）可由三人一起抬起轉位，兼顧速度與舒適，較合適。",
+   "why_correct": "圖中兩床呈垂直擺放，無法並排滑移。病患完全依賴且體重重，三人搬運（three-person carry）可分擔重量，平穩抬起後轉向放到另一床，兼顧時間與舒適。",
    "why_others": {
-    "A": "滑行轉位需病患協助，完全依賴者不適用。",
+    "A": "兩床垂直擺放無法並排，不能以床單滑移轉位。",
     "C": "液壓抬高機準備與吊掛耗時，不符時間考量。",
-    "D": "雙人抬高對100公斤病患負荷大，不安全也不舒適。"
+    "D": "兩人抬 100 公斤完全依賴者負荷過大，不安全也不舒適。"
    },
-   "takeaway": "完全依賴的重量級病患短距離轉床，可用三人搬運。",
+   "takeaway": "兩床無法並排時，完全依賴的重病患可用三人搬運。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "滑行轉位（拉床單）本就適用完全依賴病患，A 不適用的原因是兩床呈垂直擺放、無法並排滑移，詳解稱需病患協助為錯誤理由。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "附圖兩床垂直擺放，無法滑行轉位，選三人搬運的理由與圖相符。"
    }
   },
   {
@@ -1670,28 +1652,25 @@
   },
   {
    "id": "109-2-TECH-072",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "鞋跟高度改變主要影響足部槓桿臂，鞋跟過低並非使義肢膝關節不穩定的原因，故 B 錯誤。",
+   "why_correct": "鞋跟過低使地面反作用力落在膝前，產生伸膝力矩，膝趨於過伸而穩定；鞋跟過高才易造成膝屈曲力矩而不穩，故 B 錯誤。",
    "why_others": {
-    "A": "標準義肢腳掌搭配的鞋跟高度約2公分，正確。",
+    "A": "標準義肢腳掌依一般鞋跟高度設計，約 2 公分，敘述正確。",
     "C": "鞋跟過低使腳趾槓桿臂變長。",
     "D": "鞋跟過高使後跟槓桿臂變長。"
    },
-   "takeaway": "鞋跟高低改變槓桿臂，不是膝不穩的主因。",
+   "takeaway": "鞋跟過高膝易屈曲不穩，過低膝易過伸。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "鞋跟過高會造成膝屈曲力矩而使義肢膝不穩，詳解總結稱鞋跟高低不是膝不穩的主因為錯，也未說明鞋跟過低反使膝趨於過伸穩定。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "鞋跟過低產生伸膝力矩，膝較穩定，C、D 的槓桿臂說明也正確。"
    }
   },
   {

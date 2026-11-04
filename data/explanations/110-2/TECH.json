@@ -309,28 +309,25 @@
   },
   {
    "id": "110-2-TECH-014",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "評估強度－時間曲線時，電極置於運動點，所需電流最小，數值最精準，因此 C 正確。",
    "why_others": {
     "A": "此曲線主要評估神經肌肉的興奮性與去神經程度，不是活化程度。",
     "B": "此法刺激運動神經與肌肉，無法測感覺神經功能。",
-    "D": "曲線變成線性代表去神經化明顯；再神經化時曲線會逐漸回復。"
+    "D": "去神經使曲線右移、時值延長；再神經化時曲線逐漸左移恢復。"
    },
    "takeaway": "強度－時間曲線：電極放運動點，評估去神經程度。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "D的解釋稱「曲線變成線性代表去神經化明顯」不正確，去神經化是曲線向右上偏移、時值延長，部分去神經可見轉折（kink），並非變為線性。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "電極置於運動點閾值最低、數值最準；曲線用於評估興奮性與去神經，去神經右移、再神經化左移，說明合理。"
    }
   },
   {
@@ -957,28 +954,25 @@
   },
   {
    "id": "110-2-TECH-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "核心整體穩定運動（global stabilization）通常以較高強度的等長收縮進行，持續時間可達約十秒或更久，並非不可超過5秒，因此此敘述錯誤。",
+   "why_correct": "核心整體穩定運動屬較低負荷的等長維持訓練，常要求持續較長時間以訓練肌耐力，並沒有每次不可超過5秒的限制，因此此敘述錯誤。",
    "why_others": {
     "A": "縮小腹技巧是局部穩定運動的基本技巧，敘述正確。",
     "B": "緊繃式運動以同時收縮腹部肌群維持脊柱中立，應避免骨盆後傾。",
-    "D": "整體穩定運動強度偏低，以不超過50% 1RM為原則。"
+    "D": "整體穩定運動強度以低至中等為原則，不超過50% 1RM。"
    },
-   "takeaway": "局部穩定重低負荷控制，整體穩定可維持較長等長收縮。",
+   "takeaway": "整體穩定運動屬低負荷、可長時間維持的等長訓練。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 說整體穩定運動以較高強度進行，D 又說整體穩定運動強度偏低，前後矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "整體穩定運動屬低至中負荷可長時間維持的訓練，無不可超過5秒的限制，其餘選項敘述與承認答案一致。"
    }
   },
   {
@@ -1029,16 +1023,16 @@
   },
   {
    "id": "110-2-TECH-045",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "負重反應期（loading response）髖關節受地面反作用力產生屈曲力矩，需要股四頭肌控制膝屈曲；肌力不足時，個案常以軀幹前傾使地面反作用力落在膝前方以穩定膝。",
+   "why_correct": "負重反應期（loading response）地面反作用力通過膝後方，產生膝屈曲力矩，需股四頭肌離心控制；肌力不足時，常以軀幹前傾使地面反作用力移到膝前方，讓膝穩定。",
    "why_others": {
-    "A": "對側腳抬離地面才是對側腳的起點，且此時是對側腳擺盪前期，初次著地才是起點。",
-    "B": "此期踝約蹠屈，由脛前肌離心控制，並非背屈與腓腸肌離心。",
-    "D": "此時髖受屈曲力矩，由臀大肌與膕旁肌等伸肌對抗，並非伸直力矩。"
+    "A": "此期從同側初次著地開始、到對側腳趾離地結束，非對側抬腳才開始。",
+    "B": "此期踝往蹠屈，由脛前肌離心控制，並非背屈與腓腸肌離心。",
+    "D": "此期髖受屈曲力矩，由臀大肌與膕旁肌等伸肌對抗，非伸直力矩。"
    },
    "takeaway": "負重反應期股四頭肌弱，常見軀幹前傾代償。",
    "review": {
@@ -1046,11 +1040,8 @@
      "C"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 把屈曲力矩寫在髖關節，卻接著說由股四頭肌控制，應為膝關節；A 的說明也語意錯亂，沒講清楚負重反應期從同側初次著地開始、到對側腳趾離地結束。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "負重反應期GRF在膝後產生屈曲力矩，股四頭肌弱以軀幹前傾代償；踝蹠屈由脛前肌離心控制、髖受屈曲力矩，皆正確。"
    }
   },
   {
@@ -1265,28 +1256,25 @@
   },
   {
    "id": "110-2-TECH-055",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "Kaltenborn第一級為鬆弛（loosening）牽引，只緩解關節內壓迫，關節面尚未被分離，可用於止痛。",
+   "why_correct": "Kaltenborn第一級為鬆弛（loosening）牽引，只緩解關節內壓迫，關節面尚未被分離，可用於減痛。",
    "why_others": {
-    "B": "牽張軟組織增加活動度是第三級的目的。",
-    "C": "第一級才是用來評估對治療的敏感度，第三級是牽張拉緊組織。",
-    "D": "第三級是牽張，會增加張力，不能用於減痛。"
+    "B": "第二級是拉緊組織，牽張軟組織增加活動度是第三級。",
+    "C": "判定關節對治療敏感度的是第二級，第三級是牽張增加活動度。",
+    "D": "第一、二級可用於減痛與放鬆，第三級牽張則用於增加活動度。"
    },
-   "takeaway": "第一級牽引只緩解壓迫，第二級拉緊組織，第三級牽張。",
+   "takeaway": "一級鬆弛減壓、二級拉緊試探敏感度、三級牽張增加活動度。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "Kaltenborn 用來判定關節對治療敏感度的是第二級（拉緊組織的試驗性治療），不是詳解說的第一級；D 的說明也漏提第二級同樣可用來減痛。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "Kaltenborn一級鬆弛減壓不分離關節面、二級拉緊、三級牽張增加活動度，說明正確。"
    }
   },
   {

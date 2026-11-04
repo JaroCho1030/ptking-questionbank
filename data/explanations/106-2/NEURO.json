@@ -130,26 +130,33 @@
    "id": "106-2-NEURO-006",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "巴可鬆（baclofen）雖可脊髓腔注射，但注射後並非一律必須平躺數小時且不可進行物理治療，此絕對性說法錯誤，故 A 為答案。",
+   "why_correct": "巴可鬆（baclofen）最主要的給藥方式是口服，脊髓腔注射只用於嚴重痙攣或口服效果不佳者，選項稱脊髓腔注射為最主要給藥方式是錯的，故 A 為答案。",
    "why_others": {
-    "B": "巴可鬆為 GABA-B 促進劑，主要作用於脊髓，也有周邊作用，敘述可接受。",
+    "B": "巴可鬆經 GABA-B 受體抑制神經傳導，此敘述不是本題錯誤處。",
     "C": "副作用包含嗜睡、頭暈，治療時需防跌倒，敘述正確。",
     "D": "降低痙攣的同時可能使肌力下降，敘述正確。"
    },
-   "takeaway": "巴可鬆會頭暈與肌力下降，注意跌倒。",
+   "takeaway": "巴可鬆以口服為主，注意頭暈、肌力下降與跌倒。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.85,
+    "blind_confidence": 0.6,
     "verdict": "reasoning_error",
-    "reason": "A 的主要錯誤是巴可鬆最主要給藥方式為口服而非脊髓腔注射，詳解未指出此點，只質疑平躺時間的絕對說法。",
+    "reason": "B 的說明只說「不是本題錯誤處」而未解釋；巴可鬆主要作用於中樞（脊髓）GABA-B 受體，詳解未說明為何「中樞與周邊皆有作用」可接受，推理不完整。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "A 的主要錯誤是巴可鬆最主要給藥方式為口服而非脊髓腔注射，詳解未指出此點，只質疑平躺時間的絕對說法。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -688,28 +695,25 @@
   },
   {
    "id": "106-2-NEURO-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "頸或高位胸髓損傷使肋間肌與腹肌癱瘓，吸氣時只靠橫膈收縮，胸腔因負壓下陷，腹部因橫膈下降而上升，形成胸下陷、腹上升的矛盾呼吸。",
+   "why_correct": "頸或高位胸髓損傷使肋間肌與腹肌癱瘓，橫膈仍有作用。吸氣時橫膈下降使腹部上升，胸廓因缺乏肋間肌支撐被負壓往內吸而下陷，形成胸下陷、腹上升的矛盾呼吸。",
    "why_others": {
-    "A": "此為正常呼吸的反向描述，且不符合矛盾呼吸。",
+    "A": "胸升腹陷是橫膈麻痺的矛盾呼吸，不是本題損傷型態。",
     "B": "胸腹同時上升是正常呼吸型態。",
-    "D": "吸氣時腹腔會因橫膈下壓而上升，不會下陷。"
+    "D": "橫膈仍收縮，吸氣時腹部會上升，不會下陷。"
    },
-   "takeaway": "四肢癱吸氣時胸下陷、腹上升。",
+   "takeaway": "四肢癱吸氣時胸下陷、腹上升；橫膈麻痺則相反。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "A（胸升腹陷）並非正常呼吸的反向（反向應為胸腹皆下陷），且它是橫膈麻痺的矛盾呼吸，詳解稱其不符合矛盾呼吸有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "四肢癱肋間肌癱瘓、橫膈保留造成胸下陷腹上升，與橫膈麻痺相反，說明正確。"
    }
   },
   {
@@ -972,26 +976,33 @@
    "id": "106-2-NEURO-042",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "患者能在仰躺時整條腿屈向胸前，又能在膝伸直下做髖外展，表示已能脫離固定的共同運動模式，做出部分分離動作，至少達布朗斯壯（Brunnstrom）第 IV 期。",
+   "why_correct": "仰躺將整條腿縮向胸前屬屈曲共同運動，第 III 期即可做到；但膝維持伸直下做髖外展，是脫離共同運動的分離動作，因此至少達布朗斯壯（Brunnstrom）第 IV 期。",
    "why_others": {
-    "A": "II 期只有微弱的共同運動出現，無法做到這些動作。",
-    "B": "III 期主要是共同運動下的隨意動作，尚無法分離出外展。",
-    "D": "V 期要求更獨立的分離動作，本題描述只能判斷至少 IV 期。"
+    "A": "II 期只有微弱的共同運動，無法做到這些動作。",
+    "B": "III 期可做屈曲共同運動，但無法在膝伸直下分離外展。",
+    "D": "V 期要求更獨立的分離動作，本題只能判斷至少 IV 期。"
    },
-   "takeaway": "能脫離共同運動做分離動作，約屬布朗斯壯 IV 期以上。",
+   "takeaway": "共同運動內的動作屬 III 期，開始脫離共同運動才算 IV 期。",
    "review": {
     "blind_answer": [
-     "C"
+     "B"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "仰躺整條腿縮向胸前屬屈曲共同運動（III 期即可），詳解卻把它說成脫離共同運動的分離動作；判定 IV 期的依據其實是膝伸直下的髖外展。",
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "膝伸直下髖外展為脫離屈曲共同運動的分離動作，至少 IV 期，推理合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "仰躺整條腿縮向胸前屬屈曲共同運動（III 期即可），詳解卻把它說成脫離共同運動的分離動作；判定 IV 期的依據其實是膝伸直下的髖外展。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1784,15 +1795,15 @@
   },
   {
    "id": "106-2-NEURO-077",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "安寧療護的逆向復健是順應病程惡化，教導患者以較省力的方式維持生活，例如原本能行走者改用輪椅代步，以節省體力與保障安全。",
    "why_others": {
     "A": "由助行器改為枴杖是功能進步，不是逆向。",
-    "B": "由遠端到近端是一般治療順序，與逆向復健無關。",
+    "B": "治療從遠端或近端開始屬操作順序，與逆向復健無關。",
     "D": "減少止痛藥是疼痛管理目標，不是逆向復健。"
    },
    "takeaway": "逆向復健：隨病程退化調整，如改用輪椅。",
@@ -1801,11 +1812,8 @@
      "C"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "B 的說明稱「由遠端到近端是一般治療順序」有誤，一般動作控制訓練是由近端到遠端。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "逆向復健為順應功能退化調整，如改用輪椅，各選項說明正確。"
    }
   },
   {

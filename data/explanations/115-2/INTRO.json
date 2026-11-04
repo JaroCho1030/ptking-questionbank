@@ -1424,28 +1424,25 @@
   },
   {
    "id": "115-2-INTRO-062",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "常態分布左右對稱、呈鐘形，平均數、中位數、眾數幾乎相等，極端值很少。資料明顯偏斜（skewed）又有很多離群值（outlier），就違反了對稱與尾端輕的特性，所以最不適合假設為常態。這時應先轉換資料，或改用無母數檢定。",
    "why_others": {
-    "A": "樣本數大且分布對稱，符合常態特性，中央極限定理也支持近似常態。",
+    "A": "樣本數大且分布對稱，符合常態的對稱特性，可假設近似常態。",
     "B": "平均數接近中位數，代表分布大致對稱，與常態一致。",
-    "D": "Shapiro–Wilk 檢定未達顯著，表示不能拒絕常態假設，可視為近似常態。"
+    "D": "Shapiro–Wilk檢定未達顯著，表示不能拒絕常態假設，可視為近似常態。"
    },
-   "takeaway": "判斷常態看三點：分布對稱、平均數≈中位數、常態檢定未達顯著；偏斜又多離群值就不是常態。",
+   "takeaway": "判斷近似常態看：分布對稱、平均數≈中位數、常態檢定未達顯著；偏斜又多離群值則不適合。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.97,
-    "verdict": "reasoning_error",
-    "reason": "A 選項說「中央極限定理也支持近似常態」，把中央極限定理用錯了：中央極限定理講的是樣本平均數的抽樣分布會趨近常態，不是說原始資料本身會變成常態；A 合理的原因只是分布對稱。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "明顯偏斜又多離群值最不適合假設常態，各選項說明正確。"
    }
   },
   {

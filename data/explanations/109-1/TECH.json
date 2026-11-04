@@ -169,26 +169,33 @@
    "id": "109-1-TECH-008",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "三級紅斑劑量約為一級的5倍；表中一級約60秒（60公分），三級需300秒。距離減半、強度變4倍（平方反比定律），故改為75秒。",
+   "why_correct": "表中照射30秒的紅斑約一天內消退，為最小紅斑劑量（MED）；三級紅斑約為MED的10倍，60公分處需300秒。距離減半、強度變4倍（平方反比定律），時間改為75秒。",
    "why_others": {
-    "A": "37.5秒多除了一次，劑量不足。",
+    "A": "37.5秒換算過頭，劑量只有所需的一半。",
     "C": "120秒未依三級紅斑與平方反比正確換算。",
-    "D": "300秒是60公分處的時間，未換算距離。"
+    "D": "300秒是60公分處的三級劑量，未依距離換算。"
    },
-   "takeaway": "紫外線劑量時間與距離平方成正比。",
+   "takeaway": "三級紅斑約10倍MED；照射時間與距離平方成正比。",
    "review": {
     "blind_answer": [
-     "B"
+     "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "三級紅斑一般為MED的10倍（表中MED約30秒，60公分需300秒），詳解稱一級60秒乘5倍的換算依據不符標準定義。",
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "依表30秒為MED，三級紅斑10倍為300秒，距離減半依平方反比為75秒，計算正確。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "三級紅斑一般為MED的10倍（表中MED約30秒，60公分需300秒），詳解稱一級60秒乘5倍的換算依據不符標準定義。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -906,28 +913,25 @@
   },
   {
    "id": "109-1-TECH-040",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "掌骨基部為凹面、大多角骨為凸面，凹面在凸面上滑動時，滑動方向與骨運動方向相同；外展時朝背側滑動，故往背側滑動可改善。",
+   "why_correct": "在外展內收平面，第一掌骨基部為凸面、大多角骨為凹面；凸面在凹面上動時滑動與骨運動方向相反。外展時掌骨滾向掌側、滑向背側，故往背側滑動可改善外展。",
    "why_others": {
-    "A": "尺側滑動對應其他動作，不改善外展。",
-    "B": "橈側滑動對應其他動作，不是外展所需。",
-    "D": "掌側滑動對應其他動作，不是外展所需。"
+    "A": "尺側滑動對應屈伸平面的動作，不改善外展。",
+    "B": "橈側滑動對應屈伸平面的動作，不改善外展。",
+    "D": "掌側滑動對應內收，與外展所需方向相反。"
    },
-   "takeaway": "凹面滑凸面：滑動方向與骨運動方向相同。",
+   "takeaway": "拇指CMC外展：掌骨凸面在凹面上，向背側滑動。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "在外展內收平面第一掌骨基部為凸面、大多角骨為凹面，外展時滾向掌側而滑向背側，詳解凹凸與同向滑動的推理錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "外展內收平面掌骨凸面在大多角骨凹面上，外展時往背側滑動，說明正確。"
    }
   },
   {
@@ -1237,26 +1241,33 @@
    "id": "109-1-TECH-054",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "該使用者坐姿平衡良好、上肢功能正常且需自行開車放輪椅，不需要椅背後躺功能；後躺骨架較重且不易收納上車。",
+   "why_correct": "使用者坐姿平衡良好、上肢功能正常，且要自行開車、把輪椅收進車內，不需要椅背後躺功能；後躺骨架較重、較長，不易收納上車，顯然不適合。",
    "why_others": {
-    "A": "24吋後輪利於自行推動與運動效率，合適。",
+    "A": "24吋後輪利於自行推動，合適。",
     "C": "鋁合金折合式骨架輕便，便於收進車內，合適。",
-    "D": "近桌型扶手能不影響靠近桌面，合適。"
+    "D": "近桌型利於靠近桌面，但不可移除會妨礙側移位上車，宜選可拆式。"
    },
-   "takeaway": "輪椅處方依使用者能力選擇，良好平衡者不需後躺功能。",
+   "takeaway": "獨立開車的輪椅使用者需要輕便好收納的輪椅，不需後躺。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.5,
     "verdict": "reasoning_error",
-    "reason": "D的說明只談近桌型、忽略「無法後掀或移除」會妨礙此人獨立側移位上車，判為「合適」的理由不成立。",
+    "reason": "D的說明實際指出不可移除扶手會妨礙移位上車、宜選可拆式，等於說D也不適合，未解釋為何D不是答案。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "D的說明只談近桌型、忽略「無法後掀或移除」會妨礙此人獨立側移位上車，判為「合適」的理由不成立。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1330,28 +1341,25 @@
   },
   {
    "id": "109-1-TECH-058",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "站立型輪椅可使使用者站起，縮短與桌面、櫃子等環境設施的距離，利於互動與完成日常活動。",
    "why_others": {
     "A": "嚴重骨質疏鬆者承重有骨折風險，不宜鼓勵多用。",
-    "B": "站立型輪椅主要為功能與承重，不是用來牽拉攣縮的方式。",
+    "B": "膕旁肌攣縮無法完全伸膝者難以安全站立，不宜靠它強行拉筋。",
     "D": "輕度姿勢性低血壓經評估與漸進適應，仍可能使用。"
    },
-   "takeaway": "站立型輪椅的好處之一是可拉近與環境的互動距離。",
+   "takeaway": "站立型輪椅的好處之一是拉近與環境設施的互動距離。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "B的理由稱站立型輪椅不是用來牽拉，與其公認可被動牽張下肢的效益不符；B錯在膕旁肌攣縮無法完全伸膝者難以安全站立。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "站立型輪椅可拉近與環境設施距離，其他選項的禁忌與限制說明合理。"
    }
   },
   {
@@ -1475,28 +1483,25 @@
   },
   {
    "id": "109-1-TECH-064",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "被動範圍只有0至80度，主動僅外展至50度，是完成部分範圍，在去除重力狀態下判斷肌力為2分。",
+   "why_correct": "坐姿肩外展屬抗重力測試姿勢；被動範圍只有0至80度，主動僅外展至50度，只完成部分可動範圍，依此測法判為2分。",
    "why_others": {
-    "A": "活動度正常但僅30度，未完成範圍，不能給2+。",
+    "A": "坐姿僅完成部分範圍應判2分，不是2+。",
     "C": "伴隨聳肩代償動作，不能給3分。",
-    "D": "被動擺位後維持屬壓迫測試，3分需能主動抗重力完成範圍。"
+    "D": "被動擺位後維持不等於主動完成抗重力全範圍，不能判3分。"
    },
    "takeaway": "肌力分級要看主動活動範圍相對於被動活動範圍。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "坐姿肩外展是抗重力姿勢，詳解稱「去除重力狀態下」判2分錯誤；D稱「壓迫測試」用詞亦不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "坐姿僅完成部分可動範圍判2分、聳肩代償與被動擺位維持不能判3分，說明正確。"
    }
   },
   {

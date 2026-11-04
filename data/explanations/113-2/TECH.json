@@ -742,12 +742,12 @@
   },
   {
    "id": "113-2-TECH-033",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "B的膝關節位置寫反了。原始Ober測試是側躺、膝關節屈曲90度；改良式Ober測試（modified Ober test）則是膝關節保持伸直，所以B是錯誤敘述。膝伸直會增加髂脛束張力，也能減少股直肌和髕骨受壓的干擾。",
+   "why_correct": "B的膝關節位置寫反了。原始Ober測試是膝關節屈曲90度；改良式Ober測試（modified Ober test）則保持膝關節伸直，所以B是錯誤敘述。Norkin採用膝伸直，是為了減少股直肌張力，以及對膝內側與髕骨的壓迫。",
    "why_others": {
     "A": "膝關節角度不同，量出的髖內收角度也不同，追蹤時不能混用。",
     "C": "兩種方法的量角器支點都對準受測側的ASIS，敘述正確。",
@@ -758,12 +758,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒有問題，但詳解說「膝伸直會增加髂脛束張力」是錯的：研究（如 Gajdosik）發現改良式 Ober 測試（膝伸直）量到的髖內收角度比 Ober 測試（膝屈曲）大，表示是膝屈曲時軟組織較緊；Norkin 採用膝伸直，是為了減少股直肌張力和對膝內側及髕骨的壓力。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "原始Ober測試屈膝、改良式伸膝，B寫反了，量角器擺位與不可混用的說明正確。"
    }
   },
   {
@@ -1264,15 +1261,15 @@
   },
   {
    "id": "113-2-TECH-055",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "單側後前向滑動（posteroanterior unilateral glide）施力於一側的關節突或橫突，只把該側往前推，會讓椎體繞垂直軸轉動，所以主要增加該節的旋轉活動。推右側時，棘突相對轉向右、椎體前面轉向左。",
    "why_others": {
     "A": "推力由後往前，會讓該節偏向伸直，不會增加屈曲。",
-    "B": "增加側彎通常用橫向推棘突等手法，不是單側後前向滑動的主要效果。",
+    "B": "側彎通常用生理性側彎被動動作處理，不是單側後前向滑動的主要效果。",
     "D": "中央後前向滑動（推棘突）才主要增加伸直，單側施力主要增加旋轉。"
    },
    "takeaway": "後前向滑動：中央推棘突增加伸直，單側推關節突增加旋轉。",
@@ -1280,12 +1277,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒有問題，主要解釋也正確；錯在 B 選項說增加側彎「通常用橫向推棘突」。依 Maitland，從側面推棘突（transverse vertebral pressure）主要產生的是椎體旋轉，不是側彎；側彎通常用生理性側彎被動動作來處理。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "單側後前向滑動產生軸向旋轉，棘突與椎體的轉向描述正確。"
    }
   },
   {
@@ -1385,28 +1379,25 @@
   },
   {
    "id": "113-2-TECH-060",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "按摩的原則是由淺到深、由輕到重、由大範圍到局部。先用撫摩法（stroking）讓病人放鬆、熟悉觸感；再用揉按法（kneading）處理整塊肌肉；接著用力道較大、帶扭轉的扭動法（wringing）；最後才用深層、局部的摩擦法（friction）處理特定組織。",
    "why_others": {
-    "A": "一開始就揉按，沒有先用撫摩放鬆；撫摩放在最後也不符合由淺入深的原則。",
+    "A": "一開始就揉按，沒有先用撫摩讓病人放鬆、熟悉觸感。",
     "B": "扭動法比揉按法用力，不應排在揉按之前。",
-    "C": "一開始就用最強的扭動法，撫摩反而排在中間，順序完全顛倒。"
+    "C": "一開始就用較用力的扭動法，沒有先以撫摩放鬆，順序不當。"
    },
-   "takeaway": "按摩順序：由淺到深、由輕到重、由大範圍到局部，依序是撫摩→揉按→扭動→摩擦。",
+   "takeaway": "按摩由淺到深、由輕到重、由大範圍到局部：撫摩→揉按→扭動→摩擦。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 正確，但詳解有兩處錯誤：A 選項說「撫摩放在最後不符合原則」不對，臨床上按摩本來就常以撫摩開始、也以撫摩結束；C 選項把扭動法說成「最強」，又和正解說明中摩擦法最深層的說法互相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "按摩順序由淺到深、由輕到重：撫摩、揉按、扭動、摩擦，各選項說明正確。"
    }
   },
   {
@@ -1742,28 +1733,25 @@
   },
   {
    "id": "113-2-TECH-075",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "患者是只能在居家平地、用助行器慢慢走的低活動量者（約K1）。動態反應腳掌（dynamic response foot）靠儲能回彈推進，要有足夠步速和負重才發揮得了，而且比較重、比較貴，對這位患者沒有好處，所以最不合適。",
+   "why_correct": "患者只能在居家平地用助行器慢慢走，屬低活動量者。動態反應腳掌（dynamic response foot）靠儲能回彈推進，需要足夠步速與負重才發揮得了，價格也較高，對這位患者沒有好處，所以最不合適。",
    "why_others": {
     "B": "沙奇腳掌（SACH）輕便、便宜、耐用，適合低活動量、在平地緩慢行走的人。",
     "C": "手動鎖定膝站立期穩定度最高，適合年長、虛弱、容易跌倒的截肢者。",
-    "D": "重量啟動站立期控制膝一負重就產生摩擦防止屈膝，穩定性好，適合低活動量者。"
+    "D": "重量啟動站立期控制膝負重時產生摩擦防止屈膝，穩定性好，適合低活動量者。"
    },
-   "takeaway": "低活動量（K1）選穩定、輕、簡單的組件，例如SACH腳和鎖定膝；動態反應腳留給高活動量者。",
+   "takeaway": "低活動量者選穩定、簡單的組件，例如SACH腳和鎖定膝；動態反應腳留給高活動量者。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.93,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒有問題，但詳解說動態反應腳掌「比較重」並不正確：這類腳掌多用碳纖維製成，通常輕巧，不比 SACH 重；不適合的真正原因是它需要足夠的步速與負重才能發揮儲能回彈的效果，而且價格較高。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "低活動量者不適合動態反應腳掌，SACH腳與穩定型膝關節合適，說明正確。"
    }
   },
   {

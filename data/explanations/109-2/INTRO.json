@@ -660,28 +660,25 @@
   },
   {
    "id": "109-2-INTRO-029",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "取得治療師證書後以治療師身分辦理執業登記，應同時中止原物理治療生的登記，這符合規定而不涉及違法。",
+   "why_correct": "取得治療師證書後以治療師身分辦理執業登記，應同時中止原物理治療生的登記，這符合規定，最不涉及違法。",
    "why_others": {
-    "A": "領證前自稱物理治療師屬違法。",
-    "B": "尚未取得執照，不得以治療師身分執行輪椅訓練。",
-    "C": "同時登記治療師與治療生且分處兩地，不合規定。"
+    "A": "電腦計分僅為初步結果，領證並登記前自稱治療師屬違法。",
+    "B": "治療生執行業務須依規定在指導下進行，有涉違法可能，不如D明確。",
+    "C": "同時辦理兩種執業登記且分處不同單位，不合規定。"
    },
    "takeaway": "領證後登記為治療師，須中止治療生的登記。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "B選項並未說以治療師身分執行，物理治療生本可在指導下協助輪椅訓練，詳解以「不得以治療師身分執行」為由與選項內容不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "領證後以治療師登記應中止治療生登記最無違法疑慮，其他選項說明合理。"
    }
   },
   {
@@ -1268,28 +1265,25 @@
   },
   {
    "id": "109-2-INTRO-055",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "由表得敏感度為 9/21，約 0.43；偽陽性率為 6/28，約 0.21。陽性概似比（positive likelihood ratio）為敏感度除以偽陽性率，約 2.05。",
+   "why_correct": "由表得敏感度為 9/21，偽陽性率為 6/28；陽性概似比（positive likelihood ratio）為敏感度除以偽陽性率，計算結果約 2.0，選項中以 2.05 最接近。",
    "why_others": {
-    "A": "此值與陽性概似比的算式不符。",
-    "B": "此值與陽性概似比的算式不符。",
-    "C": "此值與陽性概似比的算式不符。"
+    "A": "此值遠小於敏感度除以偽陽性率的結果。",
+    "B": "此值遠小於敏感度除以偽陽性率的結果。",
+    "C": "此值與計算結果約 2.0 的差距較 D 大。"
    },
    "takeaway": "LR+ = 敏感度 /（1 − 特異度）。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "依表 9/21 除以 6/28 精確值為 2.00，並非約 2.05，2.05 是取近似值後的誤差，詳解應說明 D 為最接近值。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "依附表敏感度9/21、偽陽性率6/28，LR+約2.0，以2.05最接近，計算正確。"
    }
   },
   {
@@ -1641,16 +1635,16 @@
   },
   {
    "id": "109-2-INTRO-071",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "髖置換術後數天，單側小腿腫脹、腿圍增加、背屈時疼痛（Homans sign），脈搏與膚色溫度正常，最符合下肢深部靜脈栓塞（deep vein thrombosis）。",
+   "why_correct": "髖置換術後數天，單側小腿腫脹、腿圍增加、足背屈時小腿痛（Homans sign），動脈脈搏、膚色與溫度正常，最符合下肢深部靜脈栓塞（deep vein thrombosis）。",
    "why_others": {
-    "A": "股靜脈損傷較早出現，且動脈脈搏表現不同。",
-    "B": "動脈栓塞會有缺血，脈搏、溫度與膚色會異常。",
-    "D": "蜂窩組織炎會有紅熱痛，此病人皮膚並無差別。"
+    "A": "手術在左側，腫脹卻在右側，左側股靜脈損傷無法解釋。",
+    "B": "動脈栓塞會缺血，脈搏、溫度與膚色會異常。",
+    "D": "蜂窩組織炎會有紅、熱，此病人膚色溫度兩側無差別。"
    },
    "takeaway": "術後單側小腿腫痛、背屈痛，先想深部靜脈栓塞。",
    "review": {
@@ -1658,11 +1652,8 @@
      "C"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "A 的反駁有誤：股靜脈損傷不會改變動脈脈搏，且手術在左側而腫脹在右側，詳解未指出這個關鍵不符點。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "術後單側小腿腫痛、背屈痛而動脈與膚溫正常符合DVT，其他選項排除理由正確。"
    }
   },
   {

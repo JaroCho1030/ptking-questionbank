@@ -348,28 +348,25 @@
   },
   {
    "id": "110-2-BASIC-016",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "喉咽位於會厭下方到食道入口之間，是空氣與食物共用的通道；氣流往下進入喉，食物則往下進入食道。",
+   "why_correct": "喉咽位於喉的後方，上接口咽、下通食道與喉，是空氣與食物共用的通道；氣流往前下進入喉，食物則往下進入食道。",
    "why_others": {
     "A": "鼻咽僅供空氣通過，食物不經過。",
-    "B": "耳咽管連接中耳與鼻咽，不是食物或空氣通道。",
-    "C": "喉部只是空氣通道，食物不會經過喉部。"
+    "B": "耳咽管是中耳與鼻咽間平衡氣壓的空氣通道，但不通食物。",
+    "C": "喉部只是空氣通道，食物不應經過喉部。"
    },
    "takeaway": "口咽與喉咽是空氣與食物的共同通道。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "B 的說明稱耳咽管不是空氣通道有誤，耳咽管正是中耳與鼻咽間平衡壓力的空氣通道，只是不通食物。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "喉咽是空氣與食物的共同通道，說明正確。"
    }
   },
   {
@@ -995,28 +992,25 @@
   },
   {
    "id": "110-2-BASIC-044",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "手指屈肌跨過腕關節，腕微伸直時屈指肌處於最佳長度張力關係，可產生最大握力，適合握住瓶子。",
+   "why_correct": "手指屈肌跨過腕關節，腕微伸直時屈指肌維持接近最佳的長度張力關係，可產生最大握力，適合握住瓶子。",
    "why_others": {
-    "A": "中立姿勢握力不如微伸直。",
-    "C": "腕完全伸直時屈指肌被拉長，握力下降。",
-    "D": "腕完全屈曲時屈指肌被動不足，握力明顯降低。"
+    "A": "中立姿勢時屈指肌長度不如微伸直理想，握力較小。",
+    "C": "腕完全伸直時屈指肌被過度拉長，握力下降。",
+    "D": "腕完全屈曲時屈指肌過短，產生主動不足（active insufficiency），握力明顯降低。"
    },
-   "takeaway": "最大握力的腕位：微伸直。",
+   "takeaway": "最大握力的腕位是微伸直；腕屈曲造成屈指肌主動不足。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "D 腕完全屈曲時屈指肌過短，屬主動不足（active insufficiency），詳解誤寫為被動不足。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "腕微伸直使屈指肌處於較佳長度張力關係、握力最大，各選項說明正確。"
    }
   },
   {
@@ -1796,26 +1790,33 @@
    "id": "110-2-BASIC-078",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "肩屈曲90度時，伸直手臂啞鈴與肘距離最遠，前臂起始水平，重力力臂最大，因此肘屈肌需要的收縮力最大。",
+   "why_correct": "各擺位在屈肘過程中前臂都會經過水平，重力力矩最大值相近；但肩屈曲90度時，前臂水平正好在肘伸直的起點，此時肘屈肌力臂最小，需要的收縮力最大。",
    "why_others": {
-    "A": "手臂在身側時，啞鈴力臂較小。",
-    "B": "肩後伸20度時前臂方向使力臂小於D。",
-    "C": "肩屈曲45度時力臂小於90度。"
+    "A": "手臂在身側時，前臂水平出現在屈肘90度，此時肘屈肌力臂最大，所需力較小。",
+    "B": "肩後伸20度時，前臂水平出現在屈肘中段，肘屈肌力臂仍大。",
+    "C": "肩屈曲45度時，前臂水平出現在屈肘中途，肘屈肌力臂比D大。"
    },
-   "takeaway": "前臂水平時重力力臂最大，需力最大。",
+   "takeaway": "外力矩最大時若肌肉力臂最小，所需肌力最大。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.45,
     "verdict": "reasoning_error",
-    "reason": "手臂在身側時屈肘到 90 度，前臂也會水平，重力力臂一樣大；D 需力最大是因為重力力矩最大時肘屈肌力臂最小，詳解說 A 的力臂較小是錯的。",
+    "reason": "肩後伸20度時屈肘0到90度前臂始終低於水平（90度時仍低於水平20度），詳解稱各擺位都會經過水平、B在屈肘中段水平皆錯誤。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "手臂在身側時屈肘到 90 度，前臂也會水平，重力力臂一樣大；D 需力最大是因為重力力矩最大時肘屈肌力臂最小，詳解說 A 的力臂較小是錯的。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

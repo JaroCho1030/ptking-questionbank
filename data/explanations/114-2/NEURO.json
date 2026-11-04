@@ -765,28 +765,25 @@
   },
   {
    "id": "114-2-NEURO-034",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:34:40+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "懸吊式跑步機訓練（body weight-supported treadmill training, BWSTT）通常每次約30分鐘，並持續數週以上才看得到步行能力進步，所以③④適當。體重支撐一般從不超過約40%開始，慢慢降到0%。速度應該盡量接近正常步速，太慢效果較差。",
+   "why_correct": "懸吊式跑步機訓練（body weight-supported treadmill training, BWSTT）通常每次約30分鐘，並持續數週以上才看得到步行進步，所以③④適當。體重支撐不從100%開始，多以較低比例起步再遞減；速度應盡量接近正常步速，太慢效果較差。",
    "why_others": {
     "A": "①從100%支撐開始太高，②速度太慢，兩項都不適當。",
-    "B": "①②都錯：支撐多在40%以下，速度應該要比較快。",
-    "C": "②錯：速度低於0.22公尺/秒太慢，對改善步行沒有幫助。"
+    "B": "①②都錯：支撐量不宜從100%開始，速度也應較快。",
+    "C": "②錯：速度低於0.22公尺/秒太慢，步行進步比快速訓練小。"
    },
-   "takeaway": "BWSTT：支撐從約40%以下開始遞減，速度接近正常步速，每次約30分鐘，持續數週以上。",
+   "takeaway": "BWSTT：支撐量不宜過高並逐步遞減，速度接近正常步速，每次約30分鐘、持續數週以上。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒有問題，但 C 選項的說明講成速度低於 0.22 公尺/秒「對改善步行沒有幫助」，說得太過頭：研究（如 Sullivan 2002）只顯示慢速組的進步比快速組小，並不是完全沒有效果，而且這句也和前面「太慢效果較差」的說法不一致。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "BWSTT支撐量不宜從100%起、速度不宜過慢，③④適當，分析正確。"
    }
   },
   {
@@ -1017,80 +1014,71 @@
   },
   {
    "id": "114-2-NEURO-045",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:34:40+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "頸髓第4節（C4）完全損傷者保有頸部與聳肩動作及橫膈部分功能，可用下巴、頭部或吹吸式（sip-and-puff）控制器操作電動輪椅，所以能獨立駕駛電動輪椅是合理目標。",
    "why_others": {
     "B": "C6缺乏肱三頭肌，室內平地可推手推輪椅，戶外坡道與不平路面多需協助。",
-    "C": "T4損傷缺乏軀幹控制，即使穿長腿支架也只能治療性行走，不具功能性。",
+    "C": "T4損傷缺乏軀幹控制，即使穿長腿支架也只能治療性行走。",
     "D": "L1損傷股四頭肌無力，行走仍需長腿支架（KAFO）加輔具。"
    },
-   "takeaway": "C4靠頭部或吹吸控制開電動輪椅；L2以上要長腿支架，T4以下多只能治療性行走。",
+   "takeaway": "C4靠頭部或吹吸控制開電動輪椅；腰髓上段損傷行走仍需長腿支架。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒有問題，各選項的分析大致也正確，但 takeaway 寫「T4以下多只能治療性行走」有誤：損傷位置在 T12–L2 的患者可以穿長腿支架做居家功能性行走，L3 以下更可以在社區行走，不是只能治療性行走；這句還跟詳解自己對 D 選項的說明互相矛盾，容易誤導考生。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "C4可以頭控或吹吸式操作電動輪椅，其餘各節段功能預後說明正確。"
    }
   },
   {
    "id": "114-2-NEURO-046",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:34:40+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "神經機能部位（neurological level of injury, NLI）是指感覺與運動功能都正常的最下方節段。感覺部分C2～C5正常、C6異常，兩側感覺節段都是C5。運動部分C5肱二頭肌5分，C6腕伸肌只有2/1分，未達3分，運動節段也是C5，所以NLI是C5。",
+   "why_correct": "神經機能部位（neurological level of injury, NLI）是感覺與運動功能都正常的最下方節段。感覺C2～C5正常、C6異常，感覺節段是C5。運動部分C5肱二頭肌5分，C6腕伸肌只有2/1分，未達3分，運動節段也是C5，所以NLI是C5。",
    "why_others": {
     "A": "C6感覺異常，腕伸肌也未達3分，所以C6不算正常。",
     "B": "T4以下感覺異常，又在受損節段C6～T3之下，不可能是NLI。",
-    "D": "下肢關鍵肌只有4分，屬於薦髓保留，與NLI無關。"
+    "D": "下肢4分是損傷平面以下保留的運動功能，不決定NLI。"
    },
    "takeaway": "NLI取感覺正常與運動正常（關鍵肌≥3分且上一節5分）兩者中較高的節段。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.93,
-    "verdict": "reasoning_error",
-    "reason": "承認答案 C5 是對的，但 D 選項的說明錯了：下肢關鍵肌 4 分是損傷平面以下保留的運動功能，不是「薦髓保留」；薦髓保留指的是 S4–5 感覺或自主肛門收縮。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "感覺與運動節段皆為C5，NLI判定與各選項說明正確。"
    }
   },
   {
    "id": "114-2-NEURO-047",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:34:40+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "薦髓感覺與自主肛門收縮都還在，屬於不完全損傷，而且是運動不完全損傷。神經機能部位是C5，以下雙側共20條關鍵肌，其中下肢10條都是4分，達3分以上的剛好一半，符合AIS D「至少一半」的標準。",
+   "why_correct": "薦髓感覺與自主肛門收縮都還在，屬不完全損傷；有自主肛門收縮，為運動不完全。神經機能部位C5以下的關鍵肌共18條，雙側下肢10條都是4分，3分以上已超過一半，所以是AIS D。",
    "why_others": {
     "A": "薦髓S4–S5的感覺和運動都還保留，不是完全損傷。",
     "B": "有自主肛門收縮，屬於運動不完全，不是只保留感覺。",
-    "C": "C是3分以上的關鍵肌不到一半；本題剛好一半，達到D。"
+    "C": "AIS C是3分以上的關鍵肌不到一半；本題已超過一半。"
    },
-   "takeaway": "AIS C和D的分法：看神經機能部位以下的關鍵肌，3分以上達一半（含剛好一半）就是D。",
+   "takeaway": "AIS C與D看神經機能部位以下關鍵肌，3分以上達一半以上就是D。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒有問題，但詳解算錯了關鍵肌數目：神經機能部位是 C5，以下的關鍵肌是雙側 C6–T1 加上 L2–S1，共 18 條，不是 20 條；其中 10 條達 3 分以上，已經超過一半，不是「剛好一半」。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "薦髓保留且有自主肛門收縮，C5以下18條關鍵肌中10條≥3分，判AIS D正確。"
    }
   },
   {
@@ -1210,27 +1198,24 @@
   },
   {
    "id": "114-2-NEURO-053",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:34:40+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "56f207dd47a9",
-   "why_correct": "B成立：第五級（混亂—不適當，confused-inappropriate）能穩定執行簡單指令，但注意力短、需外在結構，正好符合「一個口令、一個動作、短時間、定時練習」。A也成立：第四級（混亂—激躁，confused-agitated）處理原則同樣強調單一簡短指令、短時段、固定作息與結構化環境，所以兩個答案都給分。",
+   "why_correct": "B成立：第五級（混亂—不適當，confused-inappropriate）能穩定執行簡單指令，但注意力短、需外在結構，符合「一個口令、一個動作、短時間、定時練習」。A也成立：第四級（混亂—激躁，confused-agitated）的處理原則同樣強調單一簡短指令、短時段、固定作息與結構化環境，所以兩者都給分。",
    "why_others": {
-    "C": "第六級混亂但行為恰當，能遵循多步驟指令，不必限制成一口令一動作。",
-    "D": "第七級自動—恰當，能自己依日常作息活動，需求已超出題目描述。"
+    "C": "第六級也適用此指示，但題目問「至少」，最低級別在更前面。",
+    "D": "第七級自動—恰當也適用，但不是「至少」所需的最低級別。"
    },
-   "takeaway": "第四、五級注意力短、需結構化，要用單一簡短指令、短時段、固定作息；第六級起才能做多步驟。",
+   "takeaway": "題目問「至少」要找最低級別；第四、五級需單一簡短指令、短時段與固定作息。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "詳解把 A、B 都給分的理由講得合理，但說第六級「能遵循多步驟指令」不符合量表：第六級是能穩定遵循簡單指令，熟悉的作業能延續，並沒有多步驟指令的描述，所以用這點排除 C 的理由站不住。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "更正後A、B皆給分，對第四、五級皆適用結構化簡短指令的說明合理。"
    }
   },
   {

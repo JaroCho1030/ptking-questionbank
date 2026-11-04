@@ -5,10 +5,10 @@
    "id": "109-1-INTRO-001",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "五個名稱都是各國對物理治療的稱呼：荷蘭文 fisioterapie、瑞典文 sjukgymnasten、法文 kinésitherapie、德文 krankengymnastik，masseur 也曾用來指物理治療從業者，故五項皆是。",
+   "why_correct": "五個名稱都是各國對物理治療的稱呼：sjukgymnasten 為瑞典文、kinésitherapie 為法文、krankengymnastik 為德文，fisioterapie 是 physiotherapy 的歐洲語系拼法，masseur 也曾用來指物理治療從業者，故五項皆是。",
    "why_others": {
     "B": "漏掉③與⑤，兩者同樣是物理治療的專業名稱。",
     "C": "漏掉②與④，兩者同樣是物理治療的專業名稱。",
@@ -17,14 +17,21 @@
    "takeaway": "各國物理治療名稱不同，五個外文名稱都算。",
    "review": {
     "blind_answer": [
-     "A"
+     "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱 fisioterapie 為荷蘭文有誤，荷蘭文為 fysiotherapie，語別標示屬事實錯誤。",
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "五個名稱皆為各國物理治療相關稱呼，各選項漏列項目說明正確。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "詳解稱 fisioterapie 為荷蘭文有誤，荷蘭文為 fysiotherapie，語別標示屬事實錯誤。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -938,28 +945,25 @@
   },
   {
    "id": "109-1-INTRO-041",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "成年個案的一般病歷，法定保存期限為至少7年，已保存13年超過期限，因此可以銷毀。",
+   "why_correct": "成年個案的一般病歷，法定保存期限為至少7年；45歲下背痛個案的病歷已保存13年，超過期限，因此可以銷毀。",
    "why_others": {
-    "A": "個案為未成年，病歷須保存到成年後一定年限，13年不一定足夠。",
-    "B": "研究相關病歷的保存要求高於一般病歷，不能僅以13年判定可銷毀。",
-    "D": "歇業後病歷仍須依法定年限保存，不是只保存短短數個月。"
+    "A": "未成年者病歷須保存至成年後至少7年，2歲加13年仍未成年。",
+    "B": "人體試驗相關病歷應永久保存，不能銷毀。",
+    "D": "無承接者時，其餘病歷應保存6個月以上才能銷毀，不是3個月。"
    },
-   "takeaway": "病歷成人保存至少7年；未成年與研究病歷要求更長。",
+   "takeaway": "成人病歷至少保存7年；未成年者至成年後7年；人體試驗病歷永久保存。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "D 選項真正錯在法定期限：無承接者時其餘病歷應保存6個月以上才能銷毀（題目寫3個月），詳解卻說歇業後仍須依法定年限保存、不是只保存數個月，與醫療法規定不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "符合醫療法第70條：成人7年、未成年至成年後7年、人體試驗永久、無承接者保存6個月。"
    }
   },
   {

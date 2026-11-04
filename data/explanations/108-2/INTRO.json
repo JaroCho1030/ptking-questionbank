@@ -26,28 +26,25 @@
   },
   {
    "id": "108-2-INTRO-002",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "臺灣於1967年由臺灣大學成立物理治療學系，開始辦理物理治療學士學位教育。",
+   "why_correct": "臺灣於1967年由臺灣大學成立復健醫學系並設物理治療組，開始辦理物理治療學士學位教育。",
    "why_others": {
-    "A": "年份不符，並非學士教育開辦年。",
-    "B": "年份不符，已晚於學士教育開辦時間。",
-    "D": "年份不符，差了一年。"
+    "A": "1960年早於學士教育開辦時間。",
+    "B": "1977年晚於學士教育開辦時間。",
+    "D": "1968年晚了一年。"
    },
    "takeaway": "臺灣物理治療學士教育始於1967年（臺大）。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "臺大1967年成立的是復健醫學系物理治療組（物理治療學系之名較晚才使用），詳解稱1967年成立物理治療學系不符史實。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "臺大1967年設復健醫學系物理治療組，說明正確。"
    }
   },
   {
@@ -75,28 +72,25 @@
   },
   {
    "id": "108-2-INTRO-004",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "個案處理模式的程序為檢查、評量、預後、介入，最後看成果，即③②⑤④①。先蒐集資料再判斷，才能訂出預後與介入。",
    "why_others": {
-    "A": "成果放在預後前，且評量排在檢查前，順序錯誤。",
-    "B": "評量不可先於檢查，成果也應在最後。",
-    "C": "成果不可在介入之前，預後應在介入之前。"
+    "A": "評量排在檢查前，且成果放在預後前，順序錯誤。",
+    "B": "評量排在檢查前，且預後排在介入之後。",
+    "C": "成果排在介入之前，且預後放在最後。"
    },
    "takeaway": "檢查→評量→預後→介入→成果。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "B選項②③④⑤①的成果其實已在最後，詳解卻稱「成果也應在最後」，未正確指出B是預後排在介入之後的錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "檢查→評量→預後→介入→成果，各誤選順序分析正確。"
    }
   },
   {
@@ -147,28 +141,25 @@
   },
   {
    "id": "108-2-INTRO-007",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "澳洲是最早讓民眾不經轉介、直接就診（direct access）取得物理治療服務的國家。",
+   "why_correct": "國內教材慣例以澳洲為最早全面開放民眾不經轉介、直接就診（direct access）取得物理治療服務的國家。",
    "why_others": {
-    "A": "美國是各州陸續開放，時間晚於澳洲。",
-    "B": "英國傳統上以轉介為主，開放較澳洲晚。",
+    "A": "美國為各州個別立法開放，國內教材不以其為最早。",
+    "B": "英國傳統上以醫師轉介為主，開放較晚。",
     "C": "德國長期需醫師處方才能接受治療。"
    },
-   "takeaway": "直接就診最早開放的是澳洲。",
+   "takeaway": "國考答案：直接就診最早開放的是澳洲。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "美國內布拉斯加州1957年即已允許直接就診，早於澳洲1976年，詳解稱美國時間晚於澳洲與事實不符（答案依國內教科書慣例為澳洲）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "以澳洲為最早全國開放直接就診，並註明依國內教材慣例，說明合理。"
    }
   },
   {
@@ -383,28 +374,25 @@
   },
   {
    "id": "108-2-INTRO-017",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "實用論（目的論）延伸出行善利人與切勿傷害；責任論延伸出病人自主與秉持公義，故③④正確。",
+   "why_correct": "實用論（目的論）延伸出利益病患與切勿傷害；責任論延伸出病人自主與秉持公義，故③④正確。",
    "why_others": {
-    "A": "將傷害、自主及利益、公義的來源都配錯。",
-    "B": "②利益病患與公義的來源配錯。",
-    "C": "①切勿傷害與自主的來源配錯。"
+    "A": "①病人自主應屬責任論，②利益病患應屬實用論。",
+    "B": "②利益病患應屬實用論，不是責任論。",
+    "C": "①病人自主應屬責任論，不是實用論。"
    },
    "takeaway": "實用論：行善、不傷害；責任論：自主、公義。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "①中切勿傷害、②中秉持公義的來源本身是對的，詳解對A稱傷害、自主、利益、公義的來源「都配錯」並不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "實用論對應行善與不傷害、責任論對應自主與公義，說明正確。"
    }
   },
   {
@@ -1088,12 +1076,12 @@
   },
   {
    "id": "108-2-INTRO-047",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "民國98至101年的醫療網計畫（第四期）著重醫療與公共衛生服務體系的再造與整合，故本選項正確。",
+   "why_correct": "民國98至101年的醫療網計畫（健康照護升值計畫）著重醫療與公共衛生服務體系的再造，故本選項正確。",
    "why_others": {
     "A": "此年代區間與建立期的歷史分期不符。",
     "B": "擴張期的年代劃分與史實不符。",
@@ -1104,12 +1092,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "民國98至101年的醫療網計畫是第六期（健康照護升值計畫），詳解寫成第四期是事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.3,
+    "verdict": "pass",
+    "reason": "98～101年健康照護升值計畫強調醫療與公衛體系再造，說明合理。"
    }
   },
   {

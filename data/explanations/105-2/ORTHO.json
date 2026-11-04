@@ -968,16 +968,16 @@
   },
   {
    "id": "105-2-ORTHO-043",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "後骨間神經是橈神經的深支，支配外展拇長肌、伸拇短肌與伸拇長肌等伸肌。外展拇短肌則由正中神經支配，不受其支配。",
    "why_others": {
     "A": "橈神經接續自臂神經叢的後索。",
     "C": "橈神經淺感覺支走在前臂橈側，不經腕隧道。",
-    "D": "橈神經繞過外上髁前方後，穿過旋後肌（supinator）再分支，不穿旋前圓肌。"
+    "D": "橈神經在外上髁前方分淺、深支，深支穿旋後肌，非旋前圓肌。"
    },
    "takeaway": "橈神經來自後索，後骨間神經支配伸肌群與外展拇長肌。",
    "review": {
@@ -985,11 +985,8 @@
      "B"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "D 的說明寫橈神經「穿過旋後肌再分支」不正確，橈神經在外上髁前方先分為淺支與深支，之後深支才穿過旋後肌。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "後骨間神經支配外展拇長肌、外展拇短肌由正中神經支配，其他選項說明正確。"
    }
   },
   {
@@ -1046,26 +1043,33 @@
    "id": "105-2-ORTHO-046",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "Pushed elbow 是肘部因撐地受力，橈骨頭相對向前上方位移，主要限制伸肘與旋前或旋後某一方向，並非旋後必定受限。選項 C 的說法不成立，故為錯誤敘述。",
+   "why_correct": "Pushed elbow 是跌倒撐地使橈骨頭被推向近端，卡壓肱橈關節，主要影響肘的屈伸活動，可用橈骨頭下滑（往遠端）鬆動術改善；旋後通常不是典型受限動作，故C錯誤。",
    "why_others": {
     "A": "受傷機制常是跌倒時手伸直撐地。",
-    "B": "橈骨頭向下滑動的鬆動術可用於改善其位置。",
-    "D": "肘屈曲可能因疼痛與關節位置異常而受限。"
+    "B": "橈骨頭下滑鬆動術可把向近端位移的橈骨頭拉回。",
+    "D": "橈骨頭向近端卡壓，可使肘屈曲受限。"
    },
-   "takeaway": "Pushed elbow 多由 FOOSH 造成，可用橈骨頭下滑鬆動術處理。",
+   "takeaway": "Pushed elbow：FOOSH 使橈骨頭上移，用下滑鬆動術處理。",
    "review": {
     "blind_answer": [
-     "C"
+     "D"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 說 pushed elbow 主要限制伸肘與旋前或旋後某一方向，說法模糊，又和 D 說屈肘受限互相矛盾，也沒有說清楚橈骨頭向近端位移的機轉。",
+    "blind_confidence": 0.35,
+    "verdict": "pass",
+    "reason": "pushed elbow 為橈骨頭近端移位、影響肘屈伸、以下滑鬆動術處理，旋後非典型受限，說明合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "why_correct 說 pushed elbow 主要限制伸肘與旋前或旋後某一方向，說法模糊，又和 D 說屈肘受限互相矛盾，也沒有說清楚橈骨頭向近端位移的機轉。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1350,27 +1354,24 @@
   },
   {
    "id": "105-2-ORTHO-059",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "56f207dd47a9",
-   "why_correct": "A、B 皆承認。股骨頭過度前轉使股骨內旋，造成膝外翻，並可能使脛骨代償性內扭（A），也可能因股骨內旋而出現脛骨外扭（B）。原公布答案為 B，更正後 A、B 都給分。",
+   "why_correct": "A、B 皆承認。股骨頭過度前轉使股骨內旋，易伴隨膝外翻。B：脛骨常代償性外扭，讓足部朝前，為原公布答案。A：股骨前轉過度也常與脛骨內扭並存，共同造成內八，更正後亦給分。",
    "why_others": {
-    "C": "前轉過度不會造成膝內翻。",
-    "D": "前轉過度不會造成膝內翻。"
+    "C": "股骨內旋使膝傾向外翻，不是膝內翻。",
+    "D": "股骨內旋使膝傾向外翻，不是膝內翻。"
    },
-   "takeaway": "股骨前轉過度常伴膝外翻，脛骨扭轉可代償。",
+   "takeaway": "股骨前轉過度：膝外翻，脛骨代償性外扭。",
    "review": {
     "blind_answer": [
-     "A"
+     "B"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "股骨前轉過度的代償性脛骨扭轉是外扭，詳解卻把脛骨內扭說成代償，代償方向寫反了。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "股骨前轉過度伴膝外翻，並說明 A、B 更正給分理由，C、D 排除正確。"
    }
   },
   {

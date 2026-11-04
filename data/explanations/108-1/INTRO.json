@@ -49,28 +49,25 @@
   },
   {
    "id": "108-1-INTRO-003",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "針對老人跌倒這個特定危險因子，改造居家環境以預防跌倒，屬於針對特定威脅的預防措施，依本題承認答案歸為第二級。",
+   "why_correct": "居家環境改造是針對跌倒這個特定危險因子加以防範，屬初段預防中的特殊保護，即第二級預防。",
    "why_others": {
-    "A": "第一級是一般性的健康促進，如衛教。",
-    "C": "第三級是已發病後的限制殘障與復健。",
-    "D": "三段五級預防中沒有第四級可對應此情境。"
+    "A": "第一級是健康促進，如一般衛教與體適能，未針對特定危險。",
+    "C": "第三級是早期診斷與適當治療。",
+    "D": "第四級是限制殘障，對象為已發病者。"
    },
-   "takeaway": "針對特定危險因子的預防措施，與一般健康促進不同。",
+   "takeaway": "特殊保護（第二級）：針對特定危險因子，如預防接種、居家防跌。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "三段五級中第三級是早期診斷與適當治療、第四級是限制殘障、第五級是復健，詳解把第三級說成限制殘障與復健，又稱沒有第四級，皆錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "居家防跌改造針對特定危險因子屬特殊保護第二級，說明正確。"
    }
   },
   {
@@ -285,28 +282,25 @@
   },
   {
    "id": "108-1-INTRO-013",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "評估試驗可能之傷害，是避免傷害受試者，對應切勿傷害（non-maleficence）原則，配對正確。",
+   "why_correct": "評估試驗可能造成的傷害，是為了避免傷害受試者，對應切勿傷害（non-maleficence）原則，配對正確。",
    "why_others": {
-    "B": "說明風險與利益對應病人自主的知情，非公平正義。",
-    "C": "意願尊重對應自主，但補償並不屬於此項的主要內涵。",
-    "D": "知情同意與隱私對應自主，不是行善利人。"
+    "B": "說明冒險性與利益對應行善利人，不是公平正義。",
+    "C": "意願尊重與參與補償對應公平正義，不是病人自主。",
+    "D": "知情同意與隱私確保對應病人自主，不是行善利人。"
    },
-   "takeaway": "評估傷害對應切勿傷害原則。",
+   "takeaway": "四原則一對一：評估傷害對應切勿傷害。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "四項責任應一對一對應四原則（說明冒險性與利益對應行善利人、意願尊重與補償對應公平正義），詳解把 B、D 都歸為病人自主，C 的說明也含糊。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "評估傷害對應切勿傷害，其餘配對的正確對應說明合理。"
    }
   },
   {
@@ -1007,28 +1001,25 @@
   },
   {
    "id": "108-1-INTRO-044",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "依公會組織規定，會員人數與理事名額成比例，三十人的公會理事名額上限為十五人，故B正確。",
+   "why_correct": "縣市物理治療師公會的理事名額有十五人的上限，30人的公會理事最多15人，故B正確。",
    "why_others": {
-    "A": "發起組織公會的人數門檻與此敘述不符。",
-    "C": "理監事任期與連選連任比例的規定與此不符。",
-    "D": "常務理事名額與理事長產生方式不符，理事長由常務理事互選。"
+    "A": "發起組織公會的人數門檻並非30人。",
+    "C": "理監事任期為三年，不是四年。",
+    "D": "常務理事不得超過理事名額三分之一，11名理事最多3名常務理事。"
    },
-   "takeaway": "公會理事名額依會員數增加，理事長由常務理事中推選。",
+   "takeaway": "常務理事不超過理事名額三分之一，理事長由常務理事中選出。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "D錯在常務理事不得超過理事名額三分之一（11人應為3人），理事長自常務理事中選出的方式本身並無錯，詳解卻稱理事長產生方式不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "縣市公會理事上限15人、任期三年、常務理事不超過三分之一，說明正確。"
    }
   },
   {
@@ -1286,28 +1277,25 @@
   },
   {
    "id": "108-1-INTRO-056",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "陽性概似比等於敏感度除以（1減特異度），即0.9除以0.2，得4.5。",
    "why_others": {
-    "A": "8不符合計算結果。",
-    "C": "0.22接近陰性概似比的概念，不是陽性。",
-    "D": "0.125是錯誤的倒數運算。"
+    "A": "8是陰性概似比0.125的倒數，不是陽性概似比。",
+    "C": "0.22是陽性概似比4.5的倒數。",
+    "D": "0.125是陰性概似比，即0.1除以0.8。"
    },
-   "takeaway": "LR+ = 敏感度 /（1 - 特異度）。",
+   "takeaway": "LR+＝敏感度÷（1－特異度）；LR−＝（1－敏感度）÷特異度。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "D的0.125正是陰性概似比（0.1/0.8），C的0.22才是LR+的倒數，詳解把C、D的來源說反了。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "LR+=0.9/0.2=4.5，LR−=0.125及其倒數的說明正確。"
    }
   },
   {

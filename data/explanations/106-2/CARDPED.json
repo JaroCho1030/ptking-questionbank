@@ -578,24 +578,21 @@
   },
   {
    "id": "106-2-CARDPED-026",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "b75c34545e8c",
-   "why_correct": "考選部公告一律給分。圖中各選項的心律都有不同程度的異常或干擾，題目只問「絕對禁忌」，圖形判讀與絕對禁忌的界定不夠清楚，原公布答案B也有爭議。",
+   "why_correct": "考選部公告一律給分。A疑為心房顫動，B為規律出現的心室早期收縮，C節律不規則，D接近正常竇性心律。心室早期收縮未必是絕對禁忌，絕對禁忌是未控制、伴症狀或血行動力學不穩的心律不整，單看圖形無法判定，故原答案B有爭議。",
    "why_others": {},
-   "takeaway": "心律圖判讀須配合症狀與血行動力學。",
+   "takeaway": "心律不整是否禁忌運動，須配合症狀與血行動力學判斷。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.35,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱四個選項心律都有異常，但附圖D看來接近正常竇性心律，且未具體說明B（心室早期收縮）為何不足以構成絕對禁忌等實際爭議所在。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "送分題，詳解對各圖判讀與絕對禁忌需視症狀及血行動力學而定的爭議說明合理。"
    }
   },
   {
@@ -807,28 +804,25 @@
   },
   {
    "id": "106-2-CARDPED-036",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "注射胰島素後立即運動注射部位的肌肉，會加速吸收，反而增加低血糖風險，應避免，所以D錯誤。",
    "why_others": {
-    "A": "血糖控制不佳時不宜開始長時間運動。",
+    "A": "此門檻比一般建議嚴格，屬保守做法，錯誤程度不如D。",
     "B": "長效胰島素後晚間激烈運動，夜間有低血糖風險。",
     "C": "視網膜病變者應避免激烈運動，以免出血。"
    },
-   "takeaway": "胰島素注射部位的肌肉運動前要避開。",
+   "takeaway": "運動前胰島素注射部位要避開運動肌群。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "詳解直接肯定A正確，但飯前血糖大於140 mg/dL即不宜長時間運動與常見指引（約>250～300 mg/dL才需暫緩）不符，未加說明。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "注射部位運動加速吸收增加低血糖風險，D錯誤；其餘選項說明合理。"
    }
   },
   {
@@ -1043,28 +1037,25 @@
   },
   {
    "id": "106-2-CARDPED-046",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "治療師把走路這件原本令孩子厭惡的事，與有趣、愉快的活動配對，使走路也引發快樂的情緒，是用愉快經驗建立新連結的引導制約法。",
    "why_others": {
-    "B": "消極適應法是接受限制，不是建立愉快的連結。",
+    "B": "消極適應法是讓孩子逐漸習慣而反應減弱，不是建立愉快連結。",
     "C": "抑制法是壓制不當反應或行為，與本題情境不符。",
     "D": "廢棄法是不再強化而使行為消退，題中治療師是在建立愉悅感。"
    },
-   "takeaway": "把不喜歡的事和愉快經驗配對，即制約。",
+   "takeaway": "把不喜歡的事和愉快經驗配對，即引導制約。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "把消極適應法說成「接受限制」缺乏依據，應是重複暴露使反應減弱的適應（習慣化）類方法，非正解選項的解釋不可靠。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "將走路與愉快活動配對建立正向連結屬引導制約，其餘方法說明合理。"
    }
   },
   {
@@ -1573,28 +1564,25 @@
   },
   {
    "id": "106-2-CARDPED-069",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "三歲半的小輝以腹爬為主要移動，坐姿要靠W型坐姿且需協助轉位，使用後拉式助行器可走短距離，轉彎需協助，符合GMFCS第三級。",
+   "why_correct": "小輝以腹部匍匐爬行為主、需協助轉位到坐姿，靠W型坐姿才能不靠手撐坐穩並雙手操作，室內用助行器短距離行走、轉彎需協助，符合2至4歲第三級的描述。",
    "why_others": {
     "A": "第一級可不用輔具行走，與他不符。",
-    "B": "第二級通常能不需手支撐坐穩，且可能不須輔具行走，與他不符。",
-    "D": "第四級在多數情況需被運送或使用電動移動，他還能用助行器走路。"
+    "B": "第二級能手膝交替爬行並較獨立轉位，他僅腹爬且需協助。",
+    "D": "第四級即使W坐也需手撐才坐得住，他能雙手高舉玩具。"
    },
-   "takeaway": "能用手持輔具走短距離，轉彎需協助，為第三級。",
+   "takeaway": "W型坐可不撐手坐穩＝III；需手撐才坐得住＝IV。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "D的說明有誤：GMFCS 2至4歲第四級同樣可能在成人協助轉向下用助行器在室內走短距離，區分第三、四級的關鍵是能否以W型坐姿不靠手撐坐穩，不是能否用助行器走路。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "腹爬、W坐可雙手操作、助行器短距離行走轉彎需協助符合2至4歲GMFCS第三級。"
    }
   },
   {

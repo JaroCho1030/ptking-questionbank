@@ -233,28 +233,25 @@
   },
   {
    "id": "107-1-CARDPED-011",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "血小板過低（約5萬以下）有出血風險，徒手扣擊為禁忌，故B正確。",
+   "why_correct": "血小板過低（約5萬以下）有出血風險，徒手扣擊屬禁忌，故B正確。",
    "why_others": {
     "A": "扣擊主要鬆動分泌物，並不增加氣流輸送痰液的速度。",
     "C": "使痰液鬆動多歸功於扣擊，震動主要協助痰液往大氣道移動。",
-    "D": "扣擊頻率較快，約在數Hz以上，且此範圍不確切。"
+    "D": "徒手扣擊一般比每秒兩三下更快，此頻率偏慢。"
    },
    "takeaway": "血小板過低是扣擊的禁忌症。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "D選項的反駁「約在數Hz以上，且此範圍不確切」含糊且自相矛盾（2～3 Hz本身即數Hz），未給出正確的扣擊頻率範圍說明其錯在哪。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "血小板過低為扣擊禁忌，扣擊頻率與震動作用說明合理。"
    }
   },
   {
@@ -353,26 +350,33 @@
    "id": "107-1-CARDPED-016",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "高三酸甘油酯血症的切點為三酸甘油酯≧150 mg/dL，不是200，故C錯誤。",
+   "why_correct": "依國健署分類，高三酸甘油酯血症的切點為三酸甘油酯≧150 mg/dL，不是200，故C錯誤。",
    "why_others": {
     "A": "高血脂分為高膽固醇、高三酸甘油酯與混合型三類，正確。",
     "B": "總膽固醇≧200 mg/dL為高膽固醇血症，正確。",
-    "D": "混合型為兩者皆異常，此敘述為題目所述定義，題幹以C為錯。"
+    "D": "混合型切點為兩者皆≧200 mg/dL，與單純高TG切點不同。"
    },
-   "takeaway": "高三酸甘油酯血症的切點是≧150 mg/dL。",
+   "takeaway": "高三酸甘油酯血症≧150；混合型兩者皆≧200。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.35,
+    "blind_confidence": 0.3,
     "verdict": "reasoning_error",
-    "reason": "D選項以「題幹以C為錯」循環論證而未說明其定義為何正確，且主張高TG切點為150卻接受混合型以TG≥200定義，前後不一致。",
+    "reason": "詳解稱國健署高三酸甘油酯血症切點為 150、混合型卻為 200，前後切點不一致且未說明出處，無法確認，疑為編造。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "D選項以「題幹以C為錯」循環論證而未說明其定義為何正確，且主張高TG切點為150卻接受混合型以TG≥200定義，前後不一致。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -844,28 +848,25 @@
   },
   {
    "id": "107-1-CARDPED-037",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "③關節炎患者肌力訓練可從低強度開始；⑤疼痛明顯時可先做等長收縮再進展到動態訓練。①不必先做最大運動測試，②應先延長時間再增強強度，④水溫約為較溫暖的狀態。",
+   "why_correct": "③關節炎患者肌力訓練可從低強度開始；⑤疼痛明顯時可先做等長收縮再進展到動態訓練。①不必先做最大運動測試；②應先延長時間再增強度；④35～37°C過熱，一般建議約28～32°C。",
    "why_others": {
-    "A": "①不需最大運動測試。",
-    "B": "②順序相反，④水溫此處不正確。",
-    "C": "④水溫不正確，且漏了③。"
+    "A": "①不需先做最大運動測試。",
+    "B": "②順序相反；④水溫過高，建議約28～32°C。",
+    "C": "④水溫過高，且漏了③。"
    },
    "takeaway": "關節炎肌力訓練從低強度開始，疼痛時先等長。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "對④的說明「水溫約為較溫暖的狀態」含糊，未指出35～37°C錯在哪（關節炎水中運動建議水溫較低，約28～32°C），無法支持排除④。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "③⑤正確，①②④錯誤的理由（不需最大測試、先增時間、水溫過高）合理。"
    }
   },
   {
@@ -1797,28 +1798,25 @@
   },
   {
    "id": "107-1-CARDPED-078",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "依Vignos功能分類，兒童仍可行走但已無法自行從椅子上站起，對應第5階段。",
+   "why_correct": "依Vignos功能分類，兒童仍可獨立行走但已無法自行從椅子上站起，對應第5階段。",
    "why_others": {
-    "B": "第6階段的特徵與本題描述不同，功能較差一個層級。",
-    "C": "第7階段功能更差，與仍可行走不符。",
-    "D": "第8階段功能更差，與仍可行走不符。"
+    "B": "第6階段需支架或他人協助才能行走，功能較差。",
+    "C": "第7階段穿長腿支架仍需協助平衡才能行走。",
+    "D": "第8階段穿支架可站立，但已無法行走。"
    },
-   "takeaway": "Vignos：能走但無法從椅子站起是第5階。",
+   "takeaway": "Vignos：能獨立走但無法從椅子站起是第5階。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "C稱第7階段與仍可行走不符有誤，Vignos第7階段仍可穿長腿支架在協助下行走，B的說明也未交代第6階段需支架或協助行走的特徵。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "Vignos 第 5 階為可獨立行走但無法從椅子站起，6–8 階描述正確。"
    }
   },
   {

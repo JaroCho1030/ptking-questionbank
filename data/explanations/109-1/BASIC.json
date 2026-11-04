@@ -95,15 +95,15 @@
   },
   {
    "id": "109-1-BASIC-005",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "三角肌（deltoid）肌肉厚實，且肌肉內注射時可避開主要神經與血管，是上臂最常用的肌肉注射部位。",
+   "why_correct": "三角肌（deltoid）肌肉厚實、位置表淺易定位，注射於其中段可避開主要神經與血管，是上臂最常用的肌肉注射部位。",
    "why_others": {
     "B": "肱三頭肌深部有橈神經走行，不是常規注射部位。",
-    "C": "肱二頭肌前方有肱動脈與正中神經，不是常規注射部位。",
+    "C": "肱動脈與正中神經沿肱二頭肌內側緣走行，不是常規注射部位。",
     "D": "肱橈肌位於前臂，肌肉量少，不屬上臂注射部位。"
    },
    "takeaway": "上臂肌肉注射首選三角肌。",
@@ -111,12 +111,9 @@
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.97,
-    "verdict": "reasoning_error",
-    "reason": "C 說肱動脈與正中神經在肱二頭肌「前方」有誤，二者沿肱二頭肌內側緣走行。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "三角肌為上臂常規注射部位，其他選項的神經血管與位置說明正確。"
    }
   },
   {
@@ -769,28 +766,25 @@
   },
   {
    "id": "109-1-BASIC-034",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "心輸出量等於心博量乘心率，即 65 × 70 = 4550 mL/min，約 4.55 L/min；除以體表面積 1.7，心指數約為 2.7 L/min/m²。",
    "why_others": {
-    "A": "0.8 與計算結果不符。",
-    "C": "61 是未以體表面積計算且單位未換算的結果。",
-    "D": "282 與計算結果不符。"
+    "A": "0.8 與心輸出量除以體表面積的結果不符。",
+    "C": "61 是心輸出量 4550 mL/min 除以體重 75 kg，誤用體重。",
+    "D": "282 與心輸出量除以體表面積的結果不符。"
    },
-   "takeaway": "心指數等於心輸出量除以體表面積。",
+   "takeaway": "心指數＝心輸出量 ÷ 體表面積，不是除以體重。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.97,
-    "verdict": "reasoning_error",
-    "reason": "C 的 61 其實是心輸出量 4550 mL/min 除以體重 75 kg 的結果，並非「未除體表面積且單位未換算」（那會是 4550）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "65×70÷1.7≈2.7 L/min/m²，計算與選項C的誤用體重說明正確。"
    }
   },
   {
@@ -1048,28 +1042,25 @@
   },
   {
    "id": "109-1-BASIC-046",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "肩胛骨上旋的力偶（force couple）由前鋸肌下部纖維與上斜方肌（以及中斜方肌）組成，兩者在肩胛骨軸心兩側以相反方向施力，共同使肩胛骨上旋。",
+   "why_correct": "肩胛骨上旋的力偶（force couple）由上斜方肌、下斜方肌與前鋸肌組成，各自在肩胛骨軸心周圍以不同方向施力，合成上旋；選項中只有前鋸肌和上斜方肌同屬此力偶。",
    "why_others": {
-    "A": "棘上肌作用在盂肱關節，不使肩胛骨上旋。",
+    "A": "棘上肌作用在盂肱關節，不參與肩胛骨上旋力偶。",
     "B": "三角肌作用在盂肱關節，不是肩胛骨上旋力偶。",
     "C": "兩者皆為盂肱關節外展肌，不構成肩胛骨力偶。"
    },
-   "takeaway": "肩胛上旋力偶：前鋸肌加上斜方肌。",
+   "takeaway": "肩胛上旋力偶：上斜方肌、下斜方肌與前鋸肌。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "肩胛上旋力偶的組成是上斜方肌、下斜方肌與前鋸肌，詳解寫成中斜方肌有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "肩胛上旋力偶由上、下斜方肌與前鋸肌組成，其他選項說明正確。"
    }
   },
   {
@@ -1708,28 +1699,25 @@
   },
   {
    "id": "109-1-BASIC-074",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "圖中舉杆期的主要動作是軀幹與頭部旋轉，但眼睛應注視靜止的球，不是移動的球杆，因此B錯誤。",
+   "why_correct": "舉杆期主要是軀幹（肩與骨盆）旋轉帶動球杆上舉，頭部應保持穩定、眼睛持續注視地上的球；B說頭部旋轉、眼睛注視移動的球杆，因此錯誤。",
    "why_others": {
-    "A": "揮杆需要複雜的肩部肌肉協調，敘述正確。",
-    "C": "下杆期兩肩動作相反，敘述符合此動作的描述。",
-    "D": "隨勢晚期重心移到左腳，左髖處於最大內轉，圖中可見。"
+    "A": "揮杆需要兩側肩關節肌群複雜協調，敘述正確。",
+    "C": "下杆期兩肩動作方向相反，敘述符合此動作的描述。",
+    "D": "隨勢晚期重心移到左腳，骨盆繞左股骨轉，左髖處於最大內轉。"
    },
-   "takeaway": "揮杆時眼睛注視球，不是球杆。",
+   "takeaway": "揮杆時頭部保持穩定、眼睛注視球，靠軀幹旋轉帶動。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "詳解肯定舉杆期主要動作含頭部旋轉，但揮杆時頭部應保持穩定、眼睛注視球，對B錯誤之處說明不完整且含錯誤敘述。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "舉杆期頭部穩定、眼睛注視球，B錯誤；下杆期兩肩動作與隨勢晚期左髖內轉說明正確。"
    }
   },
   {

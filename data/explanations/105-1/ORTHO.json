@@ -693,28 +693,25 @@
   },
   {
    "id": "105-1-ORTHO-031",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "肩關節囊前側緊縮會限制肱骨外轉，因為外轉時前側關節囊被拉長；後側關節囊緊縮則限制內轉與水平內收。",
+   "why_correct": "肩關節囊前側緊縮會限制肱骨外轉，因為外轉時前側關節囊被拉長；後側關節囊緊縮則限制內轉。",
    "why_others": {
     "B": "內轉主要受後側結構限制。",
     "C": "屈曲主要受後下方關節囊限制。",
-    "D": "內收主要受下方與外側組織限制，不是前側關節囊。"
+    "D": "內收主要受上方關節囊與喙肱韌帶限制，不是前側關節囊。"
    },
    "takeaway": "前側關節囊緊縮限制外轉；後側限制內轉。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "D 說內收主要受下方組織限制有誤，內收時下方關節囊鬆弛，限制內收的是上方關節囊與喙肱韌帶。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "前側關節囊緊縮限制外轉，其他方向說明合理。"
    }
   },
   {
@@ -856,28 +853,25 @@
   },
   {
    "id": "105-1-ORTHO-038",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "斜方肌與前鋸肌無力使肩胛骨無法上旋而下轉，手臂上抬的肌肉主動不足，因此被動活動度正常但無法主動完全上抬；肌力正常但節律會受影響。",
+   "why_correct": "斜方肌與前鋸肌無力使肩胛骨無法上旋而呈下轉，手臂上抬肌群主動不足，因此被動活動度正常卻無法主動完全上抬；肩胛肱骨節律因此受影響，①錯。",
    "why_others": {
-    "A": "肩胛肱骨節律會受影響，且①錯誤。",
-    "B": "題幹說手臂上抬肌力正常，②的代償說法不成立。",
-    "C": "①錯誤，且漏掉③④。"
+    "A": "①錯，節律會受影響；②也錯。",
+    "B": "②錯，三角肌與棘上肌無法代償斜方肌的肩胛上旋功能。",
+    "C": "①②皆錯，且漏掉③④。"
    },
    "takeaway": "肩胛上旋肌無力：被動正常、主動抬不到頂。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "B 以「手臂上抬肌力正常」否定②屬推理錯誤，②錯在三角肌與棘上肌無法代償斜方肌的肩胛上旋功能。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "肩胛上旋肌無力致節律受影響、主動不足，①②錯③④對，說明正確。"
    }
   },
   {
@@ -1066,16 +1060,16 @@
   },
   {
    "id": "105-1-ORTHO-047",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "柯雷氏骨折（Colles' fracture）使遠端橈骨向背側移位，腕隧道內壓力上升，最常傷及正中神經。",
    "why_others": {
-    "A": "尺神經在Guyon管，較少受影響。",
+    "A": "尺神經在 Guyon 管，較少受影響。",
     "C": "橈神經淺支受傷較少見。",
-    "D": "後骨間神經位於前臂近端，不經過腕部。"
+    "D": "後骨間神經在腕部只剩感覺末支，較少因此骨折受損。"
    },
    "takeaway": "柯雷氏骨折常併發正中神經受壓。",
    "review": {
@@ -1083,11 +1077,8 @@
      "B"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "選項D說後骨間神經不經過腕部有誤，其末端感覺支延伸至背側腕關節囊。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "柯雷氏骨折最常併發正中神經損傷，其他選項說明合理。"
    }
   },
   {

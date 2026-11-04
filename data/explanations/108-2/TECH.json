@@ -118,28 +118,25 @@
   },
   {
    "id": "108-2-TECH-006",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "表中30秒照射約8小時出現紅斑、22小時內消退，為恰好引起輕微紅斑的最短劑量；15秒反應較弱且較快消退，60秒起紅斑持續更久，已超過最低劑量。",
+   "why_correct": "最低紅斑劑量（MED）是能引起輕微紅斑、約8小時內出現且24小時內消退的最短照射時間。表中30秒於8小時出現、22小時消退，符合標準。",
    "why_others": {
-    "A": "15秒劑量較低，紅斑反應較弱，不是最低紅斑劑量。",
-    "C": "60秒紅斑持續34小時，反應較強，超過最低劑量。",
+    "A": "15秒紅斑9小時才出現，超過出現時限，不符MED標準。",
+    "C": "60秒紅斑持續到34小時，超過24小時內消退的標準。",
     "D": "75秒並未出現在檢測表中，且劑量更高。"
    },
-   "takeaway": "MED是引起輕微紅斑的最短照射時間，可作為劑量基準。",
+   "takeaway": "MED：約8小時內出現、24小時內消退紅斑的最短時間。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "15秒同樣產生紅斑，詳解只以「反應較弱」排除，未說明MED的判定標準（約8小時內出現、24小時內消退），排除A的推理不成立。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "與附表相符，30秒為8小時內出現、24小時內消退的最短時間。"
    }
   },
   {
@@ -725,28 +722,25 @@
   },
   {
    "id": "108-2-TECH-032",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "逆向量測的記錄電極置於感覺神經的較近端、接近神經幹處，訊號較強，所以複合神經動作電位的振幅較大。",
+   "why_correct": "逆向量測在近端刺激、於遠端（如手指）記錄，記錄處神經較表淺、接近皮膚電極，因此得到的複合神經動作電位振幅較大。",
    "why_others": {
-    "A": "順向量測記錄處遠離神經，主要是振幅較小，而非反應時間較長。",
-    "B": "順向是在神經遠端刺激，在近端記錄，敘述方向相反。",
-    "C": "逆向量測是常用且準確的方法，並非較不精確。"
+    "A": "順向記錄處神經較深，主要影響振幅，而非反應時間。",
+    "B": "順向是在神經遠端刺激、近端記錄，敘述方向相反。",
+    "C": "逆向量測是常用且可靠的方法，並非較不精確。"
    },
-   "takeaway": "逆向量測的CNAP振幅較大；順向訊號較小。",
+   "takeaway": "逆向量測遠端記錄，CNAP振幅較大。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "逆向量測是在近端刺激、於遠端（手指）記錄，詳解說記錄電極置於較近端神經幹處，與事實相反。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "逆向於遠端表淺處記錄故振幅較大，順向方向說明正確。"
    }
   },
   {
@@ -889,28 +883,25 @@
   },
   {
    "id": "108-2-TECH-039",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "Maitland第3級是大振幅進入受限範圍，用於關節較不易痛的情況；急性期通常用第1、2級小到中振幅，不用第3級。",
+   "why_correct": "Maitland第3級是大振幅且達到關節活動障壁，會牽拉組織，用於增加活動度，不適合急性期；急性期以未達阻力的第1、2級減輕疼痛。",
    "why_others": {
     "A": "第4級小振幅在受限處打破關節活動障壁，敘述正確。",
-    "B": "第3級大振幅可達到活動障壁，敘述正確。",
+    "B": "第3級大振幅達到活動障壁，敘述正確。",
     "C": "第4級可用於慢性期，增加關節活動度。"
    },
-   "takeaway": "Maitland急性期用I、II級，III、IV級用於慢性受限。",
+   "takeaway": "Maitland急性期用未達阻力的I、II級，III、IV級用於受限。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "Maitland第2級為大振幅（範圍內未達阻力），詳解稱急性期用第1、2級「小到中振幅」有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "第3級達障壁用於增加活動度，急性期用I、II級，說明正確。"
    }
   },
   {
@@ -1087,26 +1078,33 @@
    "id": "108-2-TECH-047",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "患者踝蹠屈固定變形，行走時會把膝向後推而造成膝反屈；將健側鞋墊高，可補償患側的馬蹄足長度，並使身體重心與膝位置較合理，減輕膝反屈。",
+   "why_correct": "患側踝蹠屈固定變形，站立時小腿無法前傾，膝被往後推而形成膝反屈；調整鞋子、將健側墊高以平衡兩側腳長，可減少患側膝被迫後伸，減輕膝反屈。",
    "why_others": {
-    "A": "膝反屈需防止後伸，三點力應為膝前方向後及膝後上下兩處，位置不符。",
-    "B": "偏軸關節用於膝屈曲不穩，而此題為膝反屈。",
-    "C": "固定蹠屈變形下，背屈輔助彈簧無法有效作用。"
+    "A": "大腿後、膝前、小腿後的配置是控制膝屈曲；防膝反屈應膝後向前推。",
+    "B": "偏軸關節使膝更易伸直鎖住，用於股四頭肌無力，會加重膝反屈。",
+    "C": "蹠屈已是固定變形，背屈輔助彈簧無法帶動踝背屈。"
    },
-   "takeaway": "固定馬蹄變形造成膝反屈時，先以鞋高補償，而非靠關節設計。",
+   "takeaway": "固定馬蹄足造成膝反屈，以鞋高調整補償；防膝反屈的三點力是膝後向前推。",
    "review": {
     "blind_answer": [
-     "D"
+     "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "選項A說明把防膝反屈的三點力寫成「膝前向後、膝後上下兩處」，實際應為膝後向前、大腿前與小腿前反向施力，膝前向後的配置正是選項A本身（用於矯正膝屈曲）。",
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "固定蹠屈以鞋高調整補償、三點力與偏軸關節、背屈輔助彈簧的說明皆正確。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "選項A說明把防膝反屈的三點力寫成「膝前向後、膝後上下兩處」，實際應為膝後向前、大腿前與小腿前反向施力，膝前向後的配置正是選項A本身（用於矯正膝屈曲）。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1419,26 +1417,33 @@
    "id": "108-2-TECH-061",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "近端臂可平行前臂或平行遠端手腕橫紋兩種方式；平行手腕橫紋可避免腕關節動作造成的量測誤差，故較佳。",
+   "why_correct": "近端臂可平行前臂（橈骨）或平行遠端手腕橫紋兩種方式；平行手腕橫紋時不受腕關節動作影響，較能排除腕部活動造成的量測誤差。",
    "why_others": {
-    "A": "量測的是前臂與手腕位置須在中立，但並非採坐姿規定，前臂應旋後位置不同。",
-    "B": "還須固定腕骨，不能只固定橈尺骨。",
-    "C": "支點應對齊第一掌骨底與大多角骨交界處的關節線，描述不完整。"
+    "A": "受測者採坐姿，但前臂應完全旋後、手腕中立，不是前臂正中位。",
+    "B": "除橈骨與尺骨外，還須固定大多角骨。",
+    "C": "支點應對齊第一腕掌關節的關節線，而非大多角骨本身。"
    },
-   "takeaway": "拇指CMC量測以手腕橫紋為近端臂，可排除腕動作誤差。",
+   "takeaway": "拇指CMC屈伸：坐姿前臂旋後；近端臂平行腕橫紋可排除腕動作誤差。",
    "review": {
     "blind_answer": [
-     "D"
+     "C"
     ],
     "blind_confidence": 0.35,
-    "verdict": "reasoning_error",
-    "reason": "選項A說明錯亂：Norkin明定採坐姿，前臂完全旋後、手腕中立，詳解卻稱非坐姿規定又說前臂與手腕須中立。",
+    "verdict": "pass",
+    "reason": "前臂旋後、固定腕骨與橈尺骨、支點對齊CMC關節與近端臂替代對齊的說明符合Norkin。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "選項A說明錯亂：Norkin明定採坐姿，前臂完全旋後、手腕中立，詳解卻稱非坐姿規定又說前臂與手腕須中立。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1489,28 +1494,25 @@
   },
   {
    "id": "108-2-TECH-064",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "測量盂肱關節屈曲時，量角器支點應對齊肩峰外側，沿肱骨大結節，並非肩峰本身；說支點對齊肩峰即為錯誤敘述。",
+   "why_correct": "測量盂肱關節屈曲時，量角器支點應對齊肱骨大結節外側，而非肩峰；因此說支點對齊肩峰是錯誤敘述。",
    "why_others": {
-    "A": "起始姿勢仰臥、膝屈曲、上臂在身側，敘述正確。",
-    "B": "需固定肩胛骨，避免代償，正確。",
-    "D": "近端臂平行腋下中線，正確。"
+    "A": "起始姿勢仰臥、膝屈曲、上臂在身側、手肘伸直，敘述正確。",
+    "B": "需固定肩胛骨，避免肩胛代償，敘述正確。",
+    "D": "近端臂平行軀幹腋中線，敘述正確。"
    },
-   "takeaway": "肩屈曲量測：支點在肩峰外側，近端臂平行腋中線。",
+   "takeaway": "肩屈曲量測：支點在肱骨大結節外側，近端臂平行腋中線。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "Norkin肩屈曲量角器支點在肱骨大結節外側，詳解與takeaway寫成「肩峰外側」不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "支點應在肱骨大結節外側，其餘起始姿勢、固定肩胛、近端臂平行腋中線皆正確。"
    }
   },
   {
@@ -1749,28 +1751,25 @@
   },
   {
    "id": "108-2-TECH-075",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "8週的訓練後，早期肌力增加主要來自神經適應，肌肉肥大需更久；肥大主要來自第II型纖維變粗，敘述說8週肥大且以IIA為主並不恰當，因此為錯誤選項。",
+   "why_correct": "阻力訓練數週後即可出現肌肉肥大，但肥大最明顯的是快縮糖解型纖維（Type IIB，人類多稱IIX），題述以第IIA型纖維變粗為主並不正確，故為錯誤敘述。",
    "why_others": {
-    "A": "早期肌力增加可能來自徵召運動單位數目增加。",
-    "B": "早期肌力增加也可能來自同步化程度增加。",
-    "D": "阻力強度愈高，肌肉肥大可能愈早發生。"
+    "A": "早期肌力增加可來自徵召更多運動單位的神經適應。",
+    "B": "早期肌力增加也可來自運動單位同步活化增加。",
+    "D": "阻力強度愈高，肌肉肥大可能愈早出現。"
    },
-   "takeaway": "早期增力靠神經適應，肥大要更久才明顯。",
+   "takeaway": "早期增力靠神經適應；肥大以快縮糖解型纖維增大最明顯。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.35,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱8週後肌肥大尚未明顯，與Kisner所述肥大約4至8週即可出現（且與其認可D選項相矛盾），未正確說明C錯在何處。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "早期神經適應與肥大以快縮糖解型纖維為主的說法符合教科書（Kisner）。"
    }
   },
   {

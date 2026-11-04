@@ -141,28 +141,25 @@
   },
   {
    "id": "111-2-NEURO-007",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "修正式艾許沃斯量表（MAS）測量肌肉張力，屬於身體功能與構造層次。阻力僅出現在關節活動後半段（不到一半）為 1，出現在前半以內為 1+，故前 1/2 阻力為 1+。",
+   "why_correct": "修正式艾許沃斯量表（MAS）測肌肉張力，屬ICF身體功能層次。1分是活動末端才有卡住或極小阻力；題述阻力出現在活動度前半，不只在末端，故評為1+。",
    "why_others": {
-    "A": "面向對，但 1 分是活動範圍末端才出現輕微阻力，非前 1/2。",
-    "B": "MAS 測張力，不屬活動限制。",
+    "A": "面向對，但1分是末端才出現極小阻力，與題述不符。",
+    "B": "MAS測張力，屬身體功能，不屬活動限制。",
     "D": "面向與分數皆不對。"
    },
-   "takeaway": "MAS 為身體功能層次，1+ 是前半段出現阻力。",
+   "takeaway": "MAS屬身體功能；1分阻力在末端，1+分範圍較大。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 對 MAS 分級的定義錯誤：1 分是活動範圍末端出現 catch 或極小阻力，並非「後半段（不到一半）」出現阻力，與 why_others A 的說法也互相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "MAS屬ICF身體功能，依題述評為1+，各選項說明正確。"
    }
   },
   {
@@ -541,28 +538,25 @@
   },
   {
    "id": "111-2-NEURO-024",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "患者重心偏向患側且健側無法適當承重。在健側提供標的物，引導其主動將重心轉移向健側，可促進健側承重與對稱姿勢，是適當訓練。",
+   "why_correct": "視丘後外側受損易出現推擠症候群（pusher syndrome），被動矯正會引發抗拒。在健側提供標的物，引導病患主動將重心移向健側，可促進健側承重與對稱姿勢。",
    "why_others": {
-    "A": "患側目前缺乏感覺與控制，先訓練患側成效有限。",
-    "B": "協助將重心往健側移但僅被動調整，缺乏主動學習且保護方向不當。",
+    "A": "未先處理重心偏向患側，先強調患側承重無助坐姿穩定。",
+    "B": "被動將重心推向健側易引發推擠抗拒，應改為主動引導。",
     "C": "頭轉向患側會讓重心更偏向患側。"
    },
-   "takeaway": "重心偏患側者以健側標的物引導主動轉移重心。",
+   "takeaway": "推擠患者以健側標的物引導主動轉移重心，避免被動矯正。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "患者重心倒向患側，治療師在患側保護本屬正確，詳解說 B「保護方向不當」是錯的；B 不適當的原因應是被動矯正會引發推擠抗拒。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "視丘後外側受損與推擠症候群相關，以健側標的物引導主動轉移重心的說明正確。"
    }
   },
   {
@@ -705,28 +699,25 @@
   },
   {
    "id": "111-2-NEURO-031",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "D2 伸直模式是上肢模式，不能用於踝關節阻力訓練。下肢踝背屈用下肢 D1 或 D2 屈曲模式較為合適，因此此敘述不適當。",
+   "why_correct": "下肢D2伸直模式含髖伸直、內收與踝蹠屈內翻，用於踝關節阻力訓練會強化蹠屈與伸直協同，不利擺盪期背屈與足部廓清，對中風步行訓練最不適當。",
    "why_others": {
-    "B": "早期可用減重懸吊跑步機進行行走訓練。",
+    "B": "急性期可早期介入，用減重懸吊跑步機進行行走訓練。",
     "C": "部分減重跑步機利用中樞型態產生器（CPG）促進跨步。",
     "D": "踝足矯具可改善足下垂與步態。"
    },
-   "takeaway": "PNF D1、D2 在上肢與下肢各有不同模式，需分清。",
+   "takeaway": "中風步行需背屈；下肢D2伸直含蹠屈，會強化伸直協同。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱 D2 伸直是上肢模式、不能用於踝關節是錯的：下肢也有 D2 伸直（含蹠屈內翻），A 不適當是因為它強化蹠屈與伸直協同，不利於擺盪期背屈。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "下肢D2伸直含髖伸直內收外轉、踝蹠屈內翻，說明正確，其餘選項合理。"
    }
   },
   {
@@ -938,42 +929,39 @@
   },
   {
    "id": "111-2-NEURO-041",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "ASIA 評估先檢查感覺（③）與運動（②）以定出兩側各自的節數，再整合為神經機能節數（④），接著判定完全或不完全損傷（①），最後給予損傷等級（⑤）。",
+   "why_correct": "ASIA評估先檢查感覺（③）與運動（②）定出兩側節數，再整合為神經機能節數（④），接著判定完全或不完全損傷（①），最後給予損傷等級（⑤）。",
    "why_others": {
-    "A": "神經機能節數需在感覺與運動節數之後才能定出，順序顛倒。",
-    "B": "完全或不完全的判定不能最先做，須先有節數資料。",
-    "C": "損傷等級是最後一步，不可在節數確認前判定。"
+    "A": "先定運動再感覺，且在定神經節數前就判完全性，順序錯。",
+    "B": "完全性最先判定，神經節數又排在感覺之前，順序錯。",
+    "C": "完全性與損傷等級排在節數之前，運動放最後，順序錯。"
    },
-   "takeaway": "ASIA 步驟：感覺、運動、神經節數、完全性、損傷等級。",
+   "takeaway": "ASIA步驟：感覺、運動、神經節數、完全性、損傷等級。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "A 選項（②③①④⑤）的神經機能節數仍排在感覺與運動之後，錯在先判完全性再定神經節數（且運動排在感覺前），詳解說「神經節數順序顛倒」不符選項內容。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "ASIA依感覺、運動、神經節數、完全性、AIS順序評估，說明正確。"
    }
   },
   {
    "id": "111-2-NEURO-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "左側 C5 肌力只有 4，未達正常，故運動節數在 C4；左側 C5 輕觸覺為 1，感覺節數也在 C4。神經機能節數取兩者最高（最上位）者，為 C4。",
+   "why_correct": "左側輕觸覺C5為1，左感覺節數為C4；右側針刺覺C7為1，右感覺節數為C6。運動節數右C6、左C5。神經機能節數取四者中最上位，為C4。",
    "why_others": {
-    "A": "感覺節數右側約在 C7、左側在 C4，並非 C6。",
-    "B": "運動節數右側為 C5、左側為 C4，不是 C7。",
-    "D": "神經機能節數取最上位的節數 C4，不是 C7。"
+    "A": "右側感覺節數為C6，但左側為C4，整體感覺節數為C4。",
+    "B": "運動節數右側C6、左側C5，不是C7。",
+    "D": "左側感覺在C5已異常，神經機能節數不可能是C7。"
    },
    "takeaway": "神經機能節數＝兩側感覺與運動節數中最上位者。",
    "review": {
@@ -981,11 +969,8 @@
      "C"
     ],
     "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "依表左側 C5 肌力 4（≥3 且上方感覺正常）運動節數應為 C5、右側為 C6，右側感覺因針刺覺 C7 異常應為 C6；詳解把左運動節數寫成 C4、右感覺寫成 C7、右運動寫成 C5，皆與附圖不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "依附圖，右感覺C6、左感覺C4，運動右C6左C5，神經節數C4，計算正確。"
    }
   },
   {
@@ -1385,28 +1370,25 @@
   },
   {
    "id": "111-2-NEURO-060",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "肌萎縮性側索硬化症通常不影響眼球運動，不會出現單眼無法外展這類動眼神經功能障礙。",
+   "why_correct": "肌萎縮性側索硬化症（ALS）通常保留眼球運動。眼球無法向外移動屬外直肌與外旋神經（abducens nerve）功能障礙，在ALS中極少見，最不可能出現。",
    "why_others": {
     "A": "頸伸肌無力造成頭下垂，需頭靠固定，合理。",
     "B": "上運動神經元受損可造成下肢伸肌痙攣，合理。",
     "C": "症狀可從單側開始，非對稱性無力常見。"
    },
-   "takeaway": "ALS 眼球運動與感覺通常保留。",
+   "takeaway": "ALS眼球運動與感覺通常保留。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "眼球無法向外移動是外直肌／外旋神經（CN VI）問題，詳解稱之為「動眼神經功能障礙」屬事實錯誤，雖結論正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "ALS通常保留眼球運動，其餘現象合理，說明正確。"
    }
   },
   {
@@ -1758,28 +1740,25 @@
   },
   {
    "id": "111-2-NEURO-076",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "C 個案體重減輕不多、沒有疲倦、坐站速度也正常，不符衰弱條件，故不是服務對象。",
+   "why_correct": "C一年減重2.5公斤，約為原體重3%，未達體重減輕標準；不覺疲倦，也能完成5次椅子坐站，SOF三項皆不符，故不是服務對象。",
    "why_others": {
-    "A": "有疲憊且坐站速度偏慢，符合衰弱條件。",
-    "B": "有疲憊且坐站速度偏慢，符合衰弱條件。",
-    "D": "有體重減輕與疲憊感，符合衰弱條件。"
+    "A": "每天感覺疲憊，符合精力降低一項，屬服務對象。",
+    "B": "體重減輕達原體重5%且一週3天以上疲憊，符合條件。",
+    "D": "一年減重5公斤符合體重減輕一項；疲憊僅1～2天不算。"
    },
-   "takeaway": "衰弱評估看體重減輕、疲憊與坐站能力。",
+   "takeaway": "SOF看體重減輕、坐站能力、精力降低，符合任一項即列服務對象。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "SOF 精力降低需一週 3 天以上感到疲憊，D 僅 1～2 天不符，詳解稱 D「有疲憊感符合衰弱條件」錯誤（D 僅體重減輕一項）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "逐一核對SOF三項，C三項皆不符、其餘至少符合一項，計算正確。"
    }
   },
   {

@@ -72,28 +72,25 @@
   },
   {
    "id": "106-1-CARDPED-004",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "硝基甘油是血管擴張劑，主要擴張靜脈與周邊血管，降低前負荷與後負荷，減少心肌耗氧；並可擴張冠狀動脈，緩解心絞痛。",
    "why_others": {
     "A": "硝基甘油不是止痛藥，不作用於疼痛神經。",
     "B": "它不增加心收縮力，作用是降低心臟負荷。",
-    "C": "它不降低動靜脈氧差，此為運動訓練適應。"
+    "C": "心肌攝氧本已接近最大，它靠降低耗氧而非改變動靜脈氧差。"
    },
-   "takeaway": "硝基甘油＝血管擴張劑，減少心肌耗氧。",
+   "takeaway": "硝基甘油＝血管擴張劑，降低負荷、減少心肌耗氧。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "C 選項說「降低動靜脈氧差為運動訓練適應」有誤，運動訓練是使周邊動靜脈氧差增加而非降低。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "硝基甘油擴張靜脈與周邊血管降低負荷與耗氧，其餘選項說明正確。"
    }
   },
   {
@@ -684,14 +681,14 @@
   },
   {
    "id": "106-1-CARDPED-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "柏格氏疾病（Buerger's disease）是動脈血流不足，熱敷會增加代謝需求而血流無法配合，且感覺差易燙傷，不可直接熱敷。",
    "why_others": {
-    "A": "靜脈曲張可用適度熱敷。",
+    "A": "靜脈曲張熱敷可能加重鬱積，需謹慎，但動脈供血不足的禁忌更明確。",
     "C": "足底筋膜炎常用熱療緩解。",
     "D": "慢性期皮下血腫可用熱敷促進吸收。"
    },
@@ -700,12 +697,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "A 選項稱靜脈曲張可適度熱敷不妥，熱敷使血管擴張加重靜脈鬱積與水腫，靜脈曲張通常列為熱療的注意或相對禁忌。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "柏格氏病為動脈供血不足，熱敷增加代謝需求且易燙傷，說明正確。"
    }
   },
   {
@@ -1169,28 +1163,25 @@
   },
   {
    "id": "106-1-CARDPED-051",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "粗大動作功能量表（GMFM）專為腦性麻痺兒童設計，對動作改變敏感，適合追蹤介入後的粗大動作療效，尤其是中重度動作障礙者。",
+   "why_correct": "粗大動作功能量表（GMFM）專為腦性麻痺兒童設計，對粗大動作改變敏感，適合追蹤介入後的療效，包括中重度動作障礙者。",
    "why_others": {
-    "A": "貝萊氏量表是一般發展篩檢，對重度動作障礙兒童的改變不敏感。",
+    "A": "貝萊氏量表評估嬰幼兒整體發展，並非為腦性麻痺粗大動作療效設計。",
     "B": "嬰兒動作評估偏重嬰兒期動作品質與風險判斷。",
-    "C": "早期介入發展量表涵蓋面廣，不是針對粗大動作療效。"
+    "C": "早期介入發展量表涵蓋多領域發展，不是針對粗大動作療效。"
    },
-   "takeaway": "腦性麻痺粗大動作療效：用 GMFM。",
+   "takeaway": "腦性麻痺粗大動作療效：用GMFM。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 正確，但詳解稱貝萊氏量表為「一般發展篩檢」有誤，Bayley 為常模參照的診斷性發展評估工具，而非篩檢工具。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "GMFM專為腦性麻痺粗大動作療效設計，其餘量表說明正確。"
    }
   },
   {

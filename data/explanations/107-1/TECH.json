@@ -141,28 +141,25 @@
   },
   {
    "id": "107-1-TECH-007",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "一級紅斑劑量約為最小紅斑劑量（MED）的2.5倍。表中紅斑在24小時內消失的最長照射時間是30秒（21小時），故MED為30秒，30×2.5＝75秒。",
+   "why_correct": "最小紅斑劑量（MED）是能在約8小時內出現、24小時內消失紅斑的最小照射劑量。10秒組9小時才出現不算，30秒組7.5小時出現、21小時消失，MED為30秒；一級紅斑約2.5倍MED，即75秒。",
    "why_others": {
-    "A": "25秒不是由表中MED換算而來。",
+    "A": "25秒小於MED，產生不了一級紅斑。",
     "B": "50秒不符合MED乘2.5。",
-    "D": "150秒相當於MED的5倍，屬較高級的紅斑劑量。"
+    "D": "150秒相當於MED的5倍，屬二級紅斑劑量。"
    },
    "takeaway": "一級紅斑劑量約等於2.5倍MED。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "MED應以「最小劑量、8小時內出現且24小時內消失」判定（10秒組9小時才出現故不算），詳解以「24小時內消失的最長照射時間」定MED，判定依據錯誤且與「最小」定義矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "依附表 30 秒組為 MED，一級紅斑 2.5 倍為 75 秒，其餘選項說明正確。"
    }
   },
   {
@@ -374,16 +371,16 @@
   },
   {
    "id": "107-1-TECH-017",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "雙動態電流屬低頻單相脈衝電流，脈衝寬度約為毫秒等級，並非5微秒，所以選項敘述錯誤。",
    "why_others": {
     "A": "雙動態電流屬單相脈衝電流，敘述正確。",
     "C": "它由正弦波經半波或全波整流而成，敘述正確。",
-    "D": "100 Hz正弦波整流可得50或100 Hz，敘述正確。"
+    "D": "實為50 Hz正弦波半波整流得50 Hz、全波得100 Hz，結果頻率相符。"
    },
    "takeaway": "雙動態電流脈寬為毫秒級，不是微秒。",
    "review": {
@@ -391,11 +388,8 @@
      "B"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "雙動態電流源自50 Hz正弦波（半波整流50 Hz、全波整流100 Hz），詳解稱「100 Hz正弦波整流可得50或100 Hz」物理上錯誤，未指出D敘述本身的問題。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "雙動態電流脈寬為毫秒級，非 5 微秒，其餘敘述與 D 的頻率說明合理。"
    }
   },
   {
@@ -1008,28 +1002,25 @@
   },
   {
    "id": "107-1-TECH-044",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "動態關節鬆動術（MWM）在主動動作時施加持續滑動，並在終末範圍加被動壓力；其機轉是矯正關節軌跡偏差，且過程應無痛。故①②④正確。",
+   "why_correct": "動態關節鬆動術（MWM）在主動動作時施加持續滑動，並在終末範圍加被動壓力；可矯正關節軌跡偏差，且過程應無痛。故①②④正確。",
    "why_others": {
-    "B": "③錯，MWM 的滑動方向仍依凹凸法則等原則。",
-    "C": "③錯，MWM 並非不遵循鬆動原則。",
+    "B": "③錯，MWM 仍遵循 Kaltenborn 治療平面平行滑動原則。",
+    "C": "③錯，且遺漏正確的②。",
     "D": "③錯，且遺漏正確的①。"
    },
-   "takeaway": "MWM：無痛、矯正軌跡、終末加壓。",
+   "takeaway": "MWM：無痛、矯正軌跡、終末加壓，滑動平行治療平面。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "MWM 遵循的是 Kaltenborn 治療平面平行滑動原則，滑動方向依無痛嘗試決定而非凹凸法則，詳解說「依凹凸法則」有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "MWM 終末加壓、矯正軌跡、無痛，且遵循 Kaltenborn 治療平面，說明正確。"
    }
   },
   {
@@ -1474,28 +1465,25 @@
   },
   {
    "id": "107-1-TECH-064",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "髖屈曲時，若股直肌或闊筋膜張肌代償，會出現髖外展及內轉，是常見的代償動作。",
+   "why_correct": "測髖屈曲時，若由闊筋膜張肌（tensor fasciae latae）代償，會出現髖外展及內轉，是常見的代償動作。",
    "why_others": {
     "A": "肘伸直的常見代償不是肩水平外展。",
-    "B": "腕伸直的代償多來自手指肌肉，不是肘伸直。",
-    "D": "膝屈曲的代償多為髖外轉或屈曲，而非髖伸直。"
+    "B": "腕伸直的代償多來自手指伸肌，不是肘伸直。",
+    "D": "膝屈曲常見代償為髖屈曲，而非髖伸直。"
    },
-   "takeaway": "髖屈曲代償：髖外展與內轉。",
+   "takeaway": "髖屈曲代償外展加內轉：闊筋膜張肌。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "髖屈曲時造成外展加內轉的代償是闊筋膜張肌，股直肌是主要屈髖肌且不產生此代償，詳解寫股直肌有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "髖屈曲由闊筋膜張肌代償出現外展內轉，其餘選項說明合理。"
    }
   },
   {
@@ -1546,54 +1534,59 @@
   },
   {
    "id": "107-1-TECH-067",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "踝背屈的正常終末感是緊實的（韌帶、肌肉被拉緊）；蹠屈可為緊實的或硬的（骨頭相碰），符合 Norkin 的描述。",
    "why_others": {
     "A": "正常蹠屈角度大於背屈角度。",
-    "C": "量角器支點是放在外踝下方，不是內外踝連線中點。",
-    "D": "遠端臂的對齊標記不是第二蹠骨。"
+    "C": "Norkin 支點放在外踝外側面，不是內外踝連線中點。",
+    "D": "遠端臂對齊第五蹠骨外側，不是第二蹠骨。"
    },
    "takeaway": "背屈：緊實；蹠屈：緊實或硬。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "Norkin 的支點是放在外踝外側面上，而非「外踝下方」，C 的說明位置不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "Norkin 記載背屈終末感為緊實、蹠屈為緊實或硬（距骨後結節碰脛骨），量角器支點在外踝外側、遠端臂平行第五蹠骨、蹠屈約50度大於背屈約20度，詳解各句皆正確。"
    }
   },
   {
    "id": "107-1-TECH-068",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "頸椎側彎的正常終末感為緊實的（軟組織拉緊）；出現硬的終末感代表有異常骨性阻擋，屬異常。",
    "why_others": {
     "B": "胸腰椎伸直因棘突相碰，出現硬終末感可屬正常。",
-    "C": "此選項的硬終末感在本題不視為異常答案。",
-    "D": "此選項的硬終末感在本題不視為異常答案。"
+    "C": "胸腰椎側彎時肋骨、小面關節可相抵，正常可為硬。",
+    "D": "胸腰椎旋轉受小面關節與肋骨阻擋，正常可為硬。"
    },
-   "takeaway": "頸椎側彎出現硬終末感是異常。",
+   "takeaway": "頸椎側彎正常為緊實，出現硬終末感是異常。",
    "review": {
     "blind_answer": [
-     "A"
+     "D"
     ],
-    "blind_confidence": 0.35,
+    "blind_confidence": 0.3,
     "verdict": "reasoning_error",
-    "reason": "C、D 只寫「本題不視為異常答案」，沒說明胸腰椎側彎與旋轉的正常終末感，等於沒有解釋。",
+    "reason": "Norkin 所列胸腰椎側彎與旋轉的正常終末感覺為緊實，詳解稱 C、D 正常可為硬缺乏依據。",
     "fails": [
+     "blind_mismatch",
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "C、D 只寫「本題不視為異常答案」，沒說明胸腰椎側彎與旋轉的正常終末感，等於沒有解釋。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

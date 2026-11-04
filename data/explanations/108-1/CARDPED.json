@@ -3,28 +3,25 @@
  "explanations": [
   {
    "id": "108-1-CARDPED-001",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "功能肺餘容積（FRC）等於呼氣儲備容積加肺餘容積，故 ERV 為 1,500 毫升。肺總量（TLC）等於 IRV＋TV＋ERV＋RV，即 2,000＋500＋1,500＋1,000，共 5,000 毫升。",
+   "why_correct": "功能肺餘容積（FRC）等於呼氣儲備容積加肺餘容積，故ERV為1,500毫升。肺總量（TLC）等於IRV＋TV＋ERV＋RV，即2,000＋500＋1,500＋1,000，共5,000毫升。",
    "why_others": {
-    "A": "4,000 少算了 1,000 毫升，未把各容積完整相加。",
-    "B": "4,800 不符合各容積相加的結果。",
-    "D": "6,000 把 FRC 與 ERV 重複計算，多算了 1,000 毫升。"
+    "A": "4,000是肺活量（IRV＋TV＋ERV），漏加肺餘容積。",
+    "B": "4,800不等於各容積相加的結果。",
+    "D": "6,000是IRV＋TV＋FRC＋RV，FRC已含RV，RV被重複計算。"
    },
    "takeaway": "TLC＝IRV＋TV＋ERV＋RV；FRC＝ERV＋RV。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "D 的 6,000 是 IRV＋TV＋FRC＋RV，重複計算的是 RV（FRC 已含 RV），不是 FRC 與 ERV 重複計算（那樣會得 6,500）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "ERV=1,500，TLC=5,000，A與D的錯誤來源計算正確。"
    }
   },
   {
@@ -610,28 +607,25 @@
   },
   {
    "id": "108-1-CARDPED-027",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "運動量目標是以每週總量表示，而不是每日 300～400 MET-min，所以 C 的敘述不正確。",
+   "why_correct": "增進有氧適能的建議運動量目標約為每週500～1,000 MET-min，題述以每日300～400 MET-min表示，單位與數值都不符，所以C錯誤。",
    "why_others": {
-    "A": "體能減退者輕到中度運動即可獲益。",
-    "B": "久坐者即使每次時間較短也有益。",
-    "D": "中度運動每次約 30～60 分鐘、每週多次是常見建議。"
+    "A": "體能減退者執行輕到中度運動即可獲益。",
+    "B": "久坐者即使每次運動時間較短也有益。",
+    "D": "中度運動每次約30～60分鐘、每週多次是常見建議。"
    },
-   "takeaway": "運動量以每週 MET-min 計，不是每日。",
+   "takeaway": "有氧運動量目標以每週計，約500～1,000 MET-min。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "只指出單位應為每週，卻未說明 ACSM 建議目標為每週 500–1,000 MET-min，暗示每週 300–400 即為正確目標，推理不完整易誤導。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "ACSM建議每週500～1,000 MET-min，C單位與數值不符，說明正確。"
    }
   },
   {
@@ -728,28 +722,25 @@
   },
   {
    "id": "108-1-CARDPED-032",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "主動脈氣球幫浦（IABP）在舒張期充氣增加冠狀動脈灌流並減輕後負荷，只是輔助；ECMO 則可實際取代心臟輸出。",
+   "why_correct": "主動脈氣球幫浦（IABP）在舒張期充氣增加冠狀動脈灌流、收縮期洩氣減輕後負荷，只是輔助心臟；ECMO則可實際取代心臟（與肺）的功能。",
    "why_others": {
-    "B": "IABP 不能取代心臟功能。",
-    "C": "ECMO 的重點是取代心肺功能，並非僅說明灌流。",
-    "D": "IABP 不是取代心臟功能，說法錯誤。"
+    "B": "IABP不能取代心臟功能，ECMO也不以提供心肌灌流為功能。",
+    "C": "IABP還能降後負荷，非「僅」灌流；ECMO反增加左心後負荷，不以灌流為功能。",
+    "D": "IABP只能輔助，不能取代心臟功能。"
    },
-   "takeaway": "IABP 輔助灌流，ECMO 可取代心臟功能。",
+   "takeaway": "IABP輔助冠狀灌流並降後負荷；ECMO可取代心肺功能。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "C 的排除理由含糊，未指出真正錯處（IABP 不只提供灌流也降低後負荷，且 VA ECMO 不以增加心肌灌流為功能、反而增加後負荷），考生無法據此分辨 A 與 C。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "IABP增加冠狀灌流並降後負荷屬輔助，ECMO可取代心肺功能，說明正確。"
    }
   },
   {
@@ -1217,28 +1208,25 @@
   },
   {
    "id": "108-1-CARDPED-053",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "早產兒的動脈導管（ductus arteriosus）常因發育不成熟而不易關閉，故比足月兒更容易出現開放性動脈導管（PDA）。",
    "why_others": {
     "A": "動脈導管連接肺動脈與降主動脈，不是肺靜脈。",
-    "B": "足月兒的導管通常在出生後數天內就功能性關閉。",
-    "D": "主要影響是左向右分流使肺血流增加，並非本題要點。"
+    "B": "足月兒的導管通常在出生後短期內就功能性關閉，不需到1個月。",
+    "D": "PDA為左向右分流的非發紺型，主要問題是肺血流過多與心臟負荷。"
    },
-   "takeaway": "早產兒較易有 PDA。",
+   "takeaway": "早產兒較易有PDA；PDA是左向右分流、非發紺型。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "D 選項只說「並非本題要點」，未說明為何該敘述錯誤，且大量左向右分流確可致肺水腫影響換氣，詳解未釐清。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "早產兒較易PDA，導管連接肺動脈與降主動脈、足月兒出生後短期即關閉，說明正確。"
    }
   },
   {

@@ -532,27 +532,24 @@
   },
   {
    "id": "107-2-BASIC-024",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "67b39cc7f906",
-   "why_correct": "向心收縮時，速度越快，可產生的力量越小（C）；離心收縮時，伸長速度越大，產生的力量反而較大（B）。因此兩者皆被承認。",
+   "why_correct": "C：向心收縮時速度越快，可產生的力量越小。B：若把離心收縮的伸長速度算進來，伸長越快力量越大，且可高於等長收縮；題目未限定收縮型態，故也給分。",
    "why_others": {
     "A": "兩者有明確關係，力量－速度曲線已描述。",
-    "D": "速度為零（等長收縮）時力量最大，不是零。"
+    "D": "速度為零即等長收縮，仍可產生相當大的力量，不是0。"
    },
-   "takeaway": "向心收縮：速度快力量小；離心則相反。",
+   "takeaway": "向心：越快力越小；離心：越快力越大且高於等長。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.96,
-    "verdict": "reasoning_error",
-    "reason": "詳解以離心收縮力量大於等長來解釋B給分，卻又在D寫速度為零時力量最大，前後矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "向心越快力越小、離心越快力越大，對 B、C 給分的說明合理。"
    }
   },
   {
@@ -856,28 +853,25 @@
   },
   {
    "id": "107-2-BASIC-038",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "pH 7.25 為酸中毒，PaCO₂ 38 在正常範圍，但 HCO₃⁻ 22 偏低，表示原發問題是碳酸氫根降低，屬代謝性酸中毒。",
+   "why_correct": "pH 7.25 為酸血症。PaCO₂ 38 正常，排除呼吸性原因；HCO₃⁻ 22 落在正常下限，最接近代謝性酸中毒。不過這組數據算出的 pH 應接近正常，與 7.25 不完全相符，也看不到呼吸代償。",
    "why_others": {
     "A": "呼吸性酸中毒應有 PaCO₂ 升高。",
     "B": "pH 偏低，不是鹼中毒。",
     "D": "pH 偏低，不是鹼中毒。"
    },
-   "takeaway": "先看 pH，再看 PaCO₂ 與 HCO₃⁻ 哪個異常。",
+   "takeaway": "先看 pH，再看 PaCO₂ 與 HCO₃⁻ 哪個偏離。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "HCO3- 22 mEq/L仍在正常範圍下限，詳解直接稱偏低、PaCO2正常也未說明缺乏代償，且未指出數據與pH不相符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "pH 低、PaCO₂ 正常最接近代謝性酸中毒，並正確指出數據不完全吻合。"
    }
   },
   {
@@ -1020,28 +1014,25 @@
   },
   {
    "id": "107-2-BASIC-045",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "上舉時肩胛胸廓關節的動作需胸鎖與肩鎖關節共同配合，依本題承認答案，肩鎖關節的向下轉動參與此動作。",
+   "why_correct": "肩胛骨上舉時，鎖骨在胸鎖關節上提，同時肩鎖關節做向下轉動，讓肩胛骨維持近乎垂直的方向，否則肩胛骨會跟著鎖骨傾斜上旋，故 D 正確。",
    "why_others": {
-    "A": "上舉時鎖骨是向後轉，不是向前轉。",
-    "B": "此選項的胸鎖關節動作方向未被採為本題答案。",
-    "C": "此選項的肩鎖關節轉動方向未被採為本題答案。"
+    "A": "胸鎖關節向前轉不是肩胛上舉的組成動作。",
+    "B": "鎖骨向後轉發生在手臂上舉、肩胛上旋，不是肩胛上舉。",
+    "C": "肩鎖關節向上轉動伴隨肩胛上旋，不是肩胛上舉。"
    },
-   "takeaway": "肩胛胸廓上舉需胸鎖、肩鎖關節共同配合。",
+   "takeaway": "肩胛上舉：胸鎖關節上提配合肩鎖關節下轉。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "詳解未說明肩胛上舉是胸鎖關節上提配合肩鎖關節下轉以維持肩胛垂直，B、C只寫「未被採為答案」，且A稱上舉時鎖骨向後轉是混淆了手臂上舉，肩胛上舉並非靠鎖骨後轉。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "肩胛上舉時胸鎖上提配合肩鎖向下轉動，其餘選項說明正確。"
    }
   },
   {
@@ -1092,28 +1083,25 @@
   },
   {
    "id": "107-2-BASIC-048",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "肩外展至180度需肩胛胸廓上旋與盂肱外展約1:2（③）、盂肱外轉讓大結節避開肩峰（④）、鎖骨在胸鎖關節後縮（⑤）。",
    "why_others": {
-    "A": "①肩胛骨應是向後傾斜與外轉（上旋），不是內轉。",
+    "A": "①肩胛骨應是向後傾斜與外轉，不是內轉。",
     "B": "②鎖骨應向後旋轉，不是向前。",
     "C": "②鎖骨向前旋轉不正確，且漏掉⑤。"
    },
-   "takeaway": "外展180度：肩胛上旋1:2、盂肱外轉、鎖骨後縮後轉。",
+   "takeaway": "外展180度：肩胛上旋1:2、盂肱外轉、鎖骨後縮。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "A的說明把肩胛外轉（垂直軸）與上旋（前後軸）混為一談，寫成「外轉（上旋）」屬事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "③④⑤正確，①應為外轉、②應為向後旋轉，說明正確。"
    }
   },
   {
@@ -1700,28 +1688,25 @@
   },
   {
    "id": "107-2-BASIC-074",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "雙腿放下時下背部拱起，代表腹直肌（rectus abdominis）無力，無法穩定骨盆後傾，髖屈肌拉動使腰椎前凸。",
+   "why_correct": "直膝抬起右腳再放下時，髖屈肌會拉骨盆前傾；腹直肌（rectus abdominis）無力則無法穩定骨盆，腰椎被拉成前凸，出現下背拱起。",
    "why_others": {
     "A": "臀大肌無力不會造成腰背拱起。",
     "C": "大腿後肌無力與此現象無直接關係。",
     "D": "豎脊肌無力不會讓腰背拱起。"
    },
-   "takeaway": "抬腿放下時腰拱起：腹肌無力。",
+   "takeaway": "直膝抬腿時腰拱起：腹肌無力。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "題目是單側抬右腳後放下，詳解寫成「雙腿放下時」，與題目情境不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "直膝抬腿時腹直肌無力無法穩定骨盆致腰椎前凸拱起，說明正確。"
    }
   },
   {
@@ -1770,26 +1755,33 @@
    "id": "107-2-BASIC-077",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "周邊神經系統由神經組織與血管、結締組織（如神經內膜、神經束膜、神經外膜）構成。",
+   "why_correct": "周邊神經除神經纖維外，由神經內膜、神經束膜、神經外膜等結締組織包覆，並有血管供應，血管與結締組織是最確定的構成組織。神經外膜內雖有脂肪，屬結締組織的一部分，本題以①③為最佳答案。",
    "why_others": {
-    "B": "脂肪與上皮組織不是周邊神經的構成組織。",
-    "C": "脂肪與上皮組織不屬於周邊神經。",
-    "D": "上皮組織不屬於周邊神經。"
+    "B": "漏掉血管與結締組織這兩個主要成分，且上皮組織不屬周邊神經。",
+    "C": "漏掉最主要的結締組織，且上皮組織不屬周邊神經。",
+    "D": "上皮組織不是周邊神經的構成組織。"
    },
-   "takeaway": "周邊神經含神經、血管與結締組織。",
+   "takeaway": "周邊神經：神經纖維外有三層結締組織被膜與血管供應。",
    "review": {
     "blind_answer": [
-     "A"
+     "D"
     ],
-    "blind_confidence": 0.35,
-    "verdict": "reasoning_error",
-    "reason": "神經外膜實際含有脂肪組織，詳解稱脂肪不是周邊神經構成組織屬事實錯誤；A只是選項中最佳者。",
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "血管與結節組織為周邊神經構成，脂肪歸入結締組織、上皮組織不屬周邊神經的說明合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "神經外膜實際含有脂肪組織，詳解稱脂肪不是周邊神經構成組織屬事實錯誤；A只是選項中最佳者。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

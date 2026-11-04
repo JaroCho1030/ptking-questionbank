@@ -1027,12 +1027,12 @@
   },
   {
    "id": "113-2-ORTHO-045",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "Ober測試（Ober test）的做法是：施測者把上方受測腳外展並伸直髖關節，維持中立旋轉，膝關節彎曲，然後放手，讓腳靠重力自然內收下墜。B說要髖外轉，又說施測者主動下壓，兩點都不對。外轉會讓髂脛束（iliotibial band）放鬆，造成偽陰性。",
+   "why_correct": "Ober測試（Ober test）是把上方受測腳外展並伸直髖關節、維持中立旋轉，膝關節彎曲，然後放手讓腳靠重力自然內收下墜。B寫成髖外轉，不符合中立旋轉的標準擺位；而且應先放手觀察自然下墜，不是一開始就下壓。",
    "why_others": {
     "A": "下方腳屈髖屈膝可以把腰椎壓平、穩定骨盆，敘述正確。",
     "C": "骨盆後傾或旋轉會掩蓋髂脛束的緊繃，必須固定，敘述正確。",
@@ -1043,12 +1043,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒有問題，但詳解說「髖外轉會讓髂脛束放鬆，造成偽陰性」，這個機轉不對：闊筋膜張肌是髖內轉肌，外轉反而會牽拉它；會讓它放鬆、造成偽陰性的是髖內轉（及屈曲）（Kendall），所以這段理由站不住。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "Ober測試應維持髖中立旋轉並先讓腿自然下墜，B的敘述錯誤，其他選項說明正確。"
    }
   },
   {
@@ -1195,12 +1192,12 @@
   },
   {
    "id": "113-2-ORTHO-052",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "內側副韌帶（medial collateral ligament, MCL）由股骨內上髁斜向前下走到脛骨內側，脛骨外轉時韌帶會被拉緊，是限制脛骨外轉和外翻的主要結構。膝屈曲時十字韌帶互相鬆開，這時更要靠MCL限制外轉。",
+   "why_correct": "內側副韌帶（medial collateral ligament, MCL）由股骨內上髁斜向前下走到脛骨內側，脛骨外轉時韌帶被拉緊，是限制脛骨外轉和外翻的主要結構。十字韌帶在脛骨外轉時互相鬆開，對外轉的限制有限。",
    "why_others": {
     "A": "前十字韌帶主要限制脛骨前移，旋轉方面限制的是內轉。",
     "C": "後十字韌帶主要限制脛骨後移，對外轉只是次要限制。",
@@ -1211,64 +1208,55 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.82,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒有問題，但詳解說「膝屈曲時十字韌帶互相鬆開」是錯的：十字韌帶是在脛骨外轉時鬆開，屈曲時後十字韌帶反而會拉緊，所以用這句來支持 MCL 的推論不成立。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "MCL是限制脛骨外轉與外翻的主要結構，十字韌帶在外轉時鬆開，說明正確。"
    }
   },
   {
    "id": "113-2-ORTHO-053",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "檢查旋轉不穩定時，脛骨要轉向「不穩定的那一側」。前外側不穩定（anterolateral instability）用 Slocum test 檢查：脛骨內轉約 30° 再做前拉，若外側脛骨平台過度前移，就是陽性；側移軸移試驗（pivot shift test）同樣在脛骨內轉下進行。",
+   "why_correct": "檢查旋轉不穩定時，要把脛骨轉到能讓受測那一側平台往測試方向移位的位置。前外側不穩定（anterolateral instability）用 Slocum test：脛骨內轉後做前拉，若外側平台過度前移即為陽性；軸移試驗（pivot shift test）也在脛骨內轉下進行。",
    "why_others": {
-    "A": "前內側不穩定要把脛骨外轉約15°做前拉，讓內側平台前移。",
+    "A": "前內側不穩定要把脛骨外轉後做前拉，讓內側平台前移。",
     "C": "後內側不穩定要把脛骨內轉後做後推，不是外轉。",
     "D": "後外側不穩定要把脛骨外轉後做後推，例如後外側抽屜試驗。"
    },
-   "takeaway": "記法：前內、後外用外轉；前外、後內用內轉（脛骨轉向受測那一側）。",
+   "takeaway": "記法：前內、後外用外轉；前外、後內用內轉。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.88,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 和各選項的旋轉方向都寫對了，但詳解提出的通則「脛骨轉向不穩定的那一側」本身錯誤，而且前後矛盾：前外側不穩定要內轉，脛骨其實是轉向內側；後外側不穩定卻要外轉。正確的原理是讓受測那一側的脛骨平台往測試方向移位。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "前外側不穩定在脛骨內轉下檢查（Slocum、軸移試驗），其他方向的轉位說明正確。"
    }
   },
   {
    "id": "113-2-ORTHO-054",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "徒手檢查前十字韌帶（ACL）斷裂，最準確的是 Lachman test，敏感度與特異度都最高。前向抽拉測試要讓膝屈曲 90 度，急性期的疼痛、積液和膕旁肌保護性收縮會擋住脛骨前移，半月板後角也可能卡住，容易出現偽陰性。所以 C 說它「最準確」是錯的。",
+   "why_correct": "徒手檢查前十字韌帶（ACL）斷裂，一般認為 Lachman test 敏感度最好，軸移試驗（pivot shift test）特異度高。前向抽拉測試要屈膝90度，急性期疼痛、積液和膕旁肌保護性收縮會擋住脛骨前移，容易偽陰性，所以 C 說它「最準確」是錯的。",
    "why_others": {
-    "A": "受傷後、關節血腫還沒形成前，或腫脹穩定後，比較不受疼痛與肌肉保護影響，是合適的檢查時機。",
-    "B": "ACL 撕裂常伴隨關節積血，會限制膝關節伸直，並出現輕微的廣泛性疼痛，敘述正確。",
-    "D": "ACL 損傷常合併內側半月板破裂，內側關節線疼痛提示半月板也受傷，敘述正確。"
+    "A": "受傷後血腫未形成前，或腫脹穩定後，較不受疼痛與肌肉保護影響，適合檢查。",
+    "B": "ACL 撕裂常伴隨關節積血，會限制膝伸直，並有輕微廣泛性疼痛，敘述正確。",
+    "D": "內側關節線疼痛是半月板破裂的常見表現，提示合併內側半月板受傷。"
    },
-   "takeaway": "檢測 ACL 最準確的徒手測試是 Lachman test，屈膝 20–30 度做；前向抽拉測試較容易出現偽陰性。",
+   "takeaway": "ACL徒手檢查以 Lachman test（屈膝20–30度）敏感度最好；前向抽拉測試易偽陰性。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.88,
-    "verdict": "reasoning_error",
-    "reason": "承認答案 C 沒有問題，但詳解說 Lachman test「敏感度與特異度都最高」與實證不符：特異度最高的是 pivot shift test（約 98%），Lachman 的強項是敏感度；另外急性 ACL 損傷合併的多半是外側半月板破裂，D 的說明寫「常合併內側半月板破裂」也不夠精確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "Lachman測試最敏感，前向抽拉在急性期容易偽陰性，C說它最準確是錯的，其他選項說明正確。"
    }
   },
   {

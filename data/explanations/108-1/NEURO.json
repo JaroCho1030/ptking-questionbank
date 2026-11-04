@@ -999,28 +999,25 @@
   },
   {
    "id": "108-1-NEURO-044",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "額頭肌肉受雙側皮質神經支配，中樞型顏面神經麻痺（上運動神經元病灶）時額頭相對不受影響，所以抬眼時兩側額頭仍都有抬頭紋。",
    "why_others": {
-    "A": "顏面神經是運動神經，且中樞型額頭正常但不會是感覺異常。",
-    "C": "額頭與眼輪匝肌多半保留，眼皮可閉；無法閉眼是周邊型。",
-    "D": "舌歪屬舌下神經功能，不是顏面神經麻痺的症狀。"
+    "A": "臉頰感覺由三叉神經負責，顏面神經麻痺不造成臉頰感覺異常。",
+    "C": "中樞型主要影響下半臉，眼輪匝肌多保留可閉眼；無法閉眼見於周邊型。",
+    "D": "舌歪屬舌下神經功能，不是顏面神經麻痺的表現。"
    },
    "takeaway": "中樞型保留額頭，周邊型連額頭一起麻痺。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "A選項說「顏面神經是運動神經」不正確，顏面神經為混合神經（含味覺與外耳感覺纖維），臉頰感覺應由三叉神經負責。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "中樞型顏面神經麻痺額頭受雙側支配而保留、眼多可閉，其餘選項非顏面神經表現，說明合理。"
    }
   },
   {
@@ -1301,28 +1298,25 @@
   },
   {
    "id": "108-1-NEURO-057",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "侯葉氏分期（Hoehn & Yahr stage）第I期為症狀只在單側肢體，且平衡未受影響。此患者僅右側肢體有症狀，符合第I期。",
+   "why_correct": "侯葉氏分期（Hoehn & Yahr stage）第I期為症狀只出現在單側，平衡未受影響。此患者僅右上肢有症狀，屬單側，符合第I期。",
    "why_others": {
     "B": "第II期是雙側都有症狀，但平衡尚正常。",
-    "C": "第III期開始出現姿勢反射受損。",
-    "D": "第IV期需要協助才能站立行走，已有嚴重失能。"
+    "C": "第III期開始出現姿勢反射受損、平衡變差。",
+    "D": "第IV期為嚴重失能，但仍可不需協助站立或行走。"
    },
    "takeaway": "侯葉氏：I期單側，II期雙側，III期平衡受損。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "D選項說第IV期需協助才能站立行走錯誤，Hoehn & Yahr第IV期為嚴重失能但仍可不需協助站立或行走，需協助或臥床輪椅是第V期。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "侯葉氏各期定義正確，僅單側症狀屬第I期。"
    }
   },
   {
@@ -1795,28 +1789,25 @@
   },
   {
    "id": "108-1-NEURO-078",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "表中B、C的計時起走測試較慢（15.5秒、14秒），且單腳站與握力也偏弱，顯示移動能力與平衡較差，跌倒風險較高，最需進一步平衡評估。",
+   "why_correct": "計時起走測試（Timed Up and Go）是預測跌倒風險的常用指標。表中B（15.5秒）、C（14秒）明顯較慢，超過常用的跌倒風險切點13.5秒，最需進一步平衡評估。",
    "why_others": {
-    "B": "D的計時起走測試速度尚可（10.5秒），不屬優先。",
-    "C": "D不是優先對象，且漏掉C。",
+    "B": "D雖握力最弱、單腳站最短，但計時起走10.5秒尚在正常範圍。",
+    "C": "D計時起走尚可，且漏掉計時起走偏慢的C。",
     "D": "A各項表現最佳，風險低。"
    },
-   "takeaway": "計時起走測試時間愈長，跌倒風險愈高。",
+   "takeaway": "社區老人跌倒篩檢看計時起走測試，時間愈長風險愈高。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱B、C單腳站與握力也偏弱與附圖不符，表中握力最弱（23磅）與單腳站最短（20秒）的是D奶奶。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "與附表數值相符，以TUG切點13.5秒判斷B、C風險高，推理正確。"
    }
   },
   {

@@ -1073,28 +1073,25 @@
   },
   {
    "id": "113-1-BASIC-047",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "以肱骨頭為轉軸，力矩平衡：D×3 = 2.5×30 + 1.25×60 = 150 kg·cm，所以 D = 50 kg。題目設定力J和力D平行，沿這個方向的力要平衡，關節反作用力就跟三角肌拉力一樣大、方向相反，也就是 50 kg。",
+   "why_correct": "以肱骨頭為轉軸，力矩平衡：D×3＝2.5×30＋1.25×60＝150 kg·cm，所以D＝50 kg。力J與力D平行，兩重量與其垂直，沿此方向力平衡，J與D大小相同、方向相反，為50 kg。",
    "why_others": {
-    "A": "25 kg 只算到手臂或重物其中一個力矩（75÷3），沒有把兩個加起來。",
-    "C": "75 kg 是單一個力矩的數值，或把重量直接相加，沒有除以力臂。",
-    "D": "100 kg 把肌力和反作用力相加，或力矩重複計算，不符合力平衡。"
+    "A": "25 kg只算一個力矩（75÷3），沒有把兩個加起來。",
+    "C": "75是單一力矩的數值（kg·cm），沒有除以力臂。",
+    "D": "100 kg是把肌力與反作用力相加，不符力平衡。"
    },
-   "takeaway": "先用力矩平衡求肌力：肌力×力臂＝Σ重量×力臂；再用力平衡求關節反作用力。",
+   "takeaway": "先用力矩平衡求肌力，再用力平衡求關節反作用力。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "正解 B 的計算沒錯（D×3＝75＋75，D＝50 kg，J 與 D 平行，大小相同），但 C 選項的說明「把重量直接相加」是錯的：2.5＋1.25＝3.75 kg，得不到 75 kg。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "與附圖相符，D×3＝75＋75得D＝50 kg，J與D平行故J＝50 kg，誤選來源說明合理。"
    }
   },
   {
@@ -1375,28 +1372,25 @@
   },
   {
    "id": "113-1-BASIC-060",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "嘴巴完全張開時，髁突（condyle）先轉動，接著往前滑到關節結節（articular eminence）下方。關節盤會跟著髁突一起往前移動，這是外翼肌上頭（superior head of lateral pterygoid）的牽拉加上關節盤本身的形狀所造成的。所以關節盤是往前移動。",
+   "why_correct": "嘴巴完全張開時，髁突（condyle）先轉動，再往前滑到關節結節（articular eminence）下方，主要由外翼肌下頭拉動。關節盤附著在髁突上、形狀又讓它跟著髁突一起滑，所以往前移動。",
    "why_others": {
-    "B": "往後是閉口時關節盤回到原位的方向，由盤後組織的彈性回拉造成。",
-    "C": "開口時關節盤主要是前後向滑動，不是往內移動。",
-    "D": "往外不是開口時關節盤的主要動作，側移動作才會有內外向位移。"
+    "B": "往後是閉口時關節盤回到原位的方向。",
+    "C": "開口時關節盤主要是前後向滑動，不是往內。",
+    "D": "開口時不往外移，側移動作才有內外向位移。"
    },
-   "takeaway": "嘴巴大張時，髁突與關節盤一起往前滑到關節結節下方；閉口時兩者一起往後回到原位。",
+   "takeaway": "大張口時髁突與關節盤一起往前滑到關節結節下方。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒有問題，但詳解說開口時關節盤往前，是靠外翼肌上頭拉動，這點有誤：依現行主流教科書（Neumann、Okeson），開口時拉髁突向前的主要是外翼肌下頭，上頭主要在閉口時收縮、穩定關節盤；關節盤往前是因為它附著在髁突上、本身形狀又讓它跟著髁突一起滑動。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "大張口時髁突與關節盤一起前滑至關節結節下方，正確。"
    }
   },
   {
@@ -1523,28 +1517,25 @@
   },
   {
    "id": "113-1-BASIC-066",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "軸向旋轉時，腹外斜肌（external oblique）使軀幹往對側旋轉，多裂肌（multifidus）在對側協同出力，並穩定節段、抵消腹斜肌造成的屈曲分力，所以①正確。側彎時，同側的胸髂肋肌和腹外斜肌一起收縮，伸直與屈曲的分力互相抵消，留下純側彎，所以③正確。",
+   "why_correct": "右側腹外斜肌使軀幹轉向左，右側多裂肌（multifidus）也是對側旋轉肌，兩者協同，且多裂肌抵消腹斜肌的屈曲分力，①正確。側彎時同側胸髂肋肌與腹外斜肌一起收縮，屈伸分力抵消留下純側彎，③正確。",
    "why_others": {
-    "A": "②錯：多裂肌是伸肌，屈曲時是腹直肌的拮抗肌，不是協同肌。",
-    "C": "②錯：屈曲由腹直肌等負責，多裂肌負責伸直，作用相反。",
-    "D": "漏掉①，多裂肌和腹外斜肌確實在軸向旋轉時協同收縮。"
+    "A": "②錯：多裂肌是伸肌，屈曲時是腹直肌的拮抗肌。",
+    "C": "②錯：屈曲由腹直肌負責，多裂肌負責伸直，作用相反。",
+    "D": "漏掉①，多裂肌與腹外斜肌在軸向旋轉時協同收縮。"
    },
-   "takeaway": "軀幹旋轉和側彎都要靠前後兩側肌群協同收縮，互相抵消屈伸分力；屈曲時多裂肌是拮抗肌。",
+   "takeaway": "旋轉與側彎靠前後肌群協同、抵消屈伸分力；屈曲時多裂肌是拮抗肌。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.82,
-    "verdict": "reasoning_error",
-    "reason": "①的說明寫多裂肌在「對側」協同出力，這不對：右側腹外斜肌讓軀幹轉向左，與它協同的應是同側（右側）多裂肌，因為多裂肌也是對側旋轉肌；對側多裂肌反而會產生相反方向的旋轉。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "多裂肌與腹外斜肌協同旋轉、胸髂肋肌與腹外斜肌協同側彎，屈曲時多裂肌為拮抗肌，符合Neumann。"
    }
   },
   {
@@ -1733,28 +1724,25 @@
   },
   {
    "id": "113-1-BASIC-075",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "胸推需要肩水平內收或屈曲加上手肘伸直；肩推需要肩外展或屈曲、肩胛上旋加上手肘伸直。兩個動作都靠前三角肌（anterior deltoid）帶動肩屈曲，也都靠肱三頭肌（triceps brachii）伸直手肘，所以這兩條肌肉在兩台機器上都會練到。",
+   "why_correct": "胸推需肩屈曲或水平內收加手肘伸直；肩推需肩屈曲或外展加手肘伸直。兩者都靠前三角肌（anterior deltoid）帶動肩部上抬向前，也都靠肱三頭肌（triceps brachii）伸肘，所以兩台機器都練得到。",
    "why_others": {
-    "A": "胸大肌是胸推的主動肌，在肩推裡角色有限；下斜方肌負責肩胛下壓，兩台機器都不是主要訓練它。",
-    "C": "下斜方肌負責肩胛下壓與後縮，往前推或往上推都不是它的主要功能。",
-    "D": "菱形肌負責肩胛後縮，屬於拉的動作；推的動作中肩胛是前突或上旋。"
+    "A": "胸大肌在肩推角色較小；下斜方肌在胸推用不到。",
+    "C": "下斜方肌參與肩推的肩胛上旋，但胸推用不到。",
+    "D": "菱形肌負責肩胛後縮，屬拉的動作，兩者都不是主要訓練它。"
    },
-   "takeaway": "推類動作的共同肌：前三角肌負責肩屈曲，肱三頭肌負責伸肘；菱形肌與斜方肌偏向拉的動作。",
+   "takeaway": "推類動作共同肌：前三角肌與肱三頭肌。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.93,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒問題，但詳解自己寫了肩推需要肩胛上旋，卻只把下斜方肌的功能寫成下壓與後縮，漏掉它是肩胛上旋的主要力偶肌，還斷言肩推不會練到它；③該排除的正確理由是胸推不會用到它，而不是兩台機器都練不到。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "與附圖相符，胸推與肩推共同訓練前三角肌與肱三頭肌，說明合理。"
    }
   },
   {

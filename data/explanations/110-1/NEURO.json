@@ -279,15 +279,15 @@
   },
   {
    "id": "110-1-NEURO-013",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "節律性啟動（rhythmic initiation）從被動帶動，逐步過渡到主動協助再到主動，適合動作啟動困難、尚無法自主做出動作的患者，用來學習跨步。",
    "why_others": {
     "A": "動作誘發通常先從近端髖與骨盆開始，不是先從踝。",
-    "C": "節律性固定是等長維持，不會令患者做屈膝動作。",
+    "C": "第二期病人主動控制不足，且趴姿髖伸直阻力非訓練抬腿跨步。",
     "D": "跨步抬腿需要屈曲模式，D1 伸直不適用。"
    },
    "takeaway": "動作啟動困難時用節律性啟動：被動、協助、主動。",
@@ -296,11 +296,8 @@
      "B"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "C 的排除理由說節律性固定不會令患者屈膝，但選項是要病人在屈膝位置等長維持；真正的問題是第二期病人尚無足夠主動控制，而且趴姿下髖伸直阻力也不是訓練跨步抬腿，所以理由有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "節律性啟動適合動作啟動困難的病人，其他選項說明合理。"
    }
   },
   {
@@ -1308,26 +1305,33 @@
    "id": "110-1-NEURO-057",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "依本題承認答案，此選項指肌肉萎縮型的病變，被視為只侵犯下運動神經元，不牽涉上運動神經元，與同時侵犯上下運動神經元的 ALS 相對。",
+   "why_correct": "此選項實指進行性肌肉萎縮症（progressive muscular atrophy, PMA），英文誤植為 muscular dystrophy。PMA 屬運動神經元疾病，只侵犯下運動神經元；肌肉失養症則是肌肉本身的疾病，兩者不同。",
    "why_others": {
     "A": "進行性延髓麻痺常被視為 ALS 的延髓型，可牽涉上運動神經元。",
     "C": "原發性側索硬化症只侵犯上運動神經元。",
     "D": "ALS 同時侵犯上與下運動神經元。"
    },
-   "takeaway": "ALS 上下運動神經元皆侵犯；PLS 只有上運動神經元。",
+   "takeaway": "PMA 只侵犯下運動神經元，PLS 只侵犯上，ALS 兩者皆有。",
    "review": {
     "blind_answer": [
-     "B"
+     "A"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "詳解未說明此選項實指進行性肌肉萎縮症（PMA，英文誤植為 muscular dystrophy），以「肌肉萎縮型病變」含糊帶過，易讓人誤以為肌肉失養症侵犯下運動神經元。",
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "指出選項實指 PMA、英文誤植，說明合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "詳解未說明此選項實指進行性肌肉萎縮症（PMA，英文誤植為 muscular dystrophy），以「肌肉萎縮型病變」含糊帶過，易讓人誤以為肌肉失養症侵犯下運動神經元。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

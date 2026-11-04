@@ -470,54 +470,48 @@
   },
   {
    "id": "106-1-INTRO-021",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "病患無法表達意願時，由親等較近、關係較緊密的家屬代為表達。選項中兄弟姐妹為二親等血親，法理上較其他選項更能代表。",
+   "why_correct": "病患無法表達意願時，由法定順序較前的家屬代為表達。選項中兄弟姐妹為二親等血親，在常見的家屬代理順序中排在祖父母之前，故最能代表。",
    "why_others": {
-    "A": "祖父母雖是直系血親，但親等較兄弟姐妹遠。",
+    "A": "祖父母雖同為二親等，但法定順序排在兄弟姐妹之後。",
     "C": "男女朋友沒有法律上的親屬關係。",
     "D": "姑嫂為姻親，法理上關係較遠。"
    },
-   "takeaway": "代理意願以親屬關係近者優先，朋友不具法定身分。",
+   "takeaway": "代理意願依法定家屬順序，兄弟姐妹先於祖父母。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱祖父母親等較兄弟姐妹遠有誤，祖父母為二親等直系血親，與兄弟姐妹同為二親等，法定順序差異並非來自親等。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "常見法定家屬順序兄弟姐妹先於祖父母，男女朋友與姻親關係較遠，說明合理。"
    }
   },
   {
    "id": "106-1-INTRO-022",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "紅外線可促進局部循環，但不能直接消除肥胖，此廣告誇大不實，違反專業倫理。合法的物理治療所仍可依規定刊登廣告。",
+   "why_correct": "紅外線可促進局部循環，但無法消除肥胖，此廣告內容誇大不實，違反專業倫理。",
    "why_others": {
     "A": "內容不實，違反專業倫理。",
-    "B": "物理治療所並非不得刊登任何廣告。",
-    "C": "問題在於廣告內容不實，而非療效類廣告一律禁止。"
+    "B": "物理治療所可在法定範圍內刊登廣告，並非一律不得刊登。",
+    "C": "療效宣稱固然不得登載，但本題最根本的問題是內容不實。"
    },
-   "takeaway": "廣告不得誇大不實。",
+   "takeaway": "物理治療所廣告不得誇大不實。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "詳解說C錯在療效類廣告並非一律禁止，但物理治療師法限定物理治療所廣告內容只能是名稱、地址、人員、業務項目等，療效宣稱本就不得登載，C的理由說錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "紅外線無法消除肥胖屬不實廣告，並說明物理治療所可在法定範圍內刊登廣告，合理。"
    }
   },
   {
@@ -832,26 +826,33 @@
    "id": "106-1-INTRO-036",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "依鄉鎮市調解條例，訴訟標的金額在十萬元以下的民事事件，屬強制調解範圍。",
+   "why_correct": "依出題當時的規定，訴訟標的金額在十萬元以下的民事事件屬強制調解。此門檻規定在民事訴訟法，日後可能修正，應以現行法規為準。",
    "why_others": {
-    "A": "五萬元低於強制調解的上限。",
-    "C": "十五萬元超過規定上限。",
-    "D": "二十萬元超過規定上限。"
+    "A": "五萬元不是規定的強制調解門檻。",
+    "C": "十五萬元不是規定的強制調解門檻。",
+    "D": "二十萬元不是規定的強制調解門檻。"
    },
-   "takeaway": "強制調解的金額上限是十萬元。",
+   "takeaway": "本題以十萬元為強制調解門檻；法規門檻會修正。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.4,
+    "blind_confidence": 0.35,
     "verdict": "reasoning_error",
-    "reason": "強制調解的金額門檻規定在民事訴訟法第403條，不在鄉鎮市調解條例，出處錯誤，且現行門檻已提高為50萬元，詳解未說明。",
+    "reason": "詳解斷言出題當時民訴法強制調解門檻為十萬元缺乏可靠依據，且民訴法第403條將醫療糾紛不論金額列為強制調解，也與鄉鎮市調解委員會的任意調解混為一談，未說明。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "強制調解的金額門檻規定在民事訴訟法第403條，不在鄉鎮市調解條例，出處錯誤，且現行門檻已提高為50萬元，詳解未說明。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1412,26 +1413,33 @@
    "id": "106-1-INTRO-061",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "男性乳癌危險因子包括睪丸疾病、高雌激素狀態與年齡，不孕症不屬已知因素；注意本題問「不是」，答案為D的選項敘述符合題意設定。",
+   "why_correct": "男性乳癌危險因子包括年齡增加、睪丸異常（如隱睪）與不孕等荷爾蒙失衡狀態；男性女乳症本身是良性增生，未被確立為獨立危險因子，故選D。",
    "why_others": {
     "A": "隱睪症與睪丸功能異常有關，屬危險因子。",
     "B": "不孕症與內分泌異常相關，屬危險因子。",
     "C": "年齡越大風險越高，屬危險因子。"
    },
-   "takeaway": "男性乳癌風險與雌激素過高及睪丸疾病相關。",
+   "takeaway": "男性乳癌風險與年齡、睪丸異常及荷爾蒙失衡相關。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "why_correct稱不孕症不屬危險因子，卻與why_others B說不孕症是危險因子矛盾，且完全沒說明男性女乳症為何不是危險因子。",
+    "blind_confidence": 0.4,
+    "verdict": "answer_disputed",
+    "reason": "流行病學研究（如大型合併分析）顯示男性女乳症與男性乳癌風險顯著相關，常被列為危險因子，詳解稱其未被確立並不正確，承認答案D站不住。",
     "fails": [
-     "reasoning_error"
-    ]
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "why_correct稱不孕症不屬危險因子，卻與why_others B說不孕症是危險因子矛盾，且完全沒說明男性女乳症為何不是危險因子。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1692,42 +1700,39 @@
   },
   {
    "id": "106-1-INTRO-073",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "PEDro提供多種語言介面，但本題認定目前沒有中文搜尋介面為正確敘述。",
+   "why_correct": "依出題當時情形，PEDro未提供中文搜尋介面，故D為正確敘述；其餘選項都與PEDro的基本特性不符。",
    "why_others": {
     "A": "PEDro可免費查詢。",
     "B": "PEDro分數越高代表研究品質越佳。",
     "C": "PEDro主要收錄治療介入的試驗證據，不是預後。"
    },
-   "takeaway": "PEDro免費，分數越高越好，重治療介入。",
+   "takeaway": "PEDro免費，分數越高品質越好，重治療介入。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "why_correct只說「本題認定」沒有中文介面，未提出任何依據，且自稱PEDro有多語介面，與正解說明自相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "PEDro免費、分數越高品質越好、收錄治療介入證據，以排除法支持D，說明合理。"
    }
   },
   {
    "id": "106-1-INTRO-074",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "絕對風險下降等於對照組風險減去介入組風險，即13%減3.9%等於9.1%。",
    "why_others": {
-    "A": "是將兩者相加，非相減。",
-    "C": "計算結果不符，並非兩者之差。",
-    "D": "30%是相對風險下降，且數值不正確。"
+    "A": "16.9%是兩者相加，非相減。",
+    "C": "3.3是13/3.9的比值，不是兩者之差。",
+    "D": "30%是相對風險（3.9/13），相對風險下降約70%。"
    },
    "takeaway": "ARR等於對照組風險減介入組風險。",
    "review": {
@@ -1735,11 +1740,8 @@
      "B"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "D說30%是相對風險下降有誤，30%（3.9/13）是相對風險，相對風險下降約70%；C的3.3其實是13/3.9的比值，詳解沒說明清楚。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "ARR＝13%－3.9%＝9.1%，干擾選項計算來源說明正確。"
    }
   },
   {

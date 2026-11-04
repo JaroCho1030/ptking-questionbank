@@ -614,28 +614,25 @@
   },
   {
    "id": "105-2-TECH-027",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "熱療使體溫上升後，周邊血管擴張，為了維持心輸出量，心跳率會稍微增加；血壓則因血管阻力下降而變化不大或略降。",
+   "why_correct": "熱療使體溫上升後，周邊血管擴張、周邊阻力下降，為維持心輸出量與血壓，心跳率會代償性稍微增加，穩定後仍維持略高。",
    "why_others": {
-    "B": "體溫上升時心跳是增加，不是降低。",
-    "C": "周邊血管擴張，血壓不會增加。",
-    "D": "血壓變化小，且題目的穩定後反應以心跳率增加為準。"
+    "B": "體溫上升時心跳是代償性增加，不是降低。",
+    "C": "周邊血管擴張使阻力下降，血壓不會增加。",
+    "D": "血壓下降多屬初期短暫反應，經心跳代償後大致維持。"
    },
-   "takeaway": "熱療體溫上升，心跳率稍增。",
+   "takeaway": "熱療體溫上升：血管擴張，心跳率稍增以代償。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "詳解自承血壓可能略降，排除 D 卻只以「以心跳率增加為準」帶過，未提出 D 錯誤的實質理由。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "熱療致周邊血管擴張、心跳率代償性稍增，各選項說明合理。"
    }
   },
   {
@@ -939,28 +936,25 @@
   },
   {
    "id": "105-2-TECH-041",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "下斜方肌測試採俯臥，上肢舉高過頭、約外展 145 度，使手臂順著下斜方肌纖維走向，再抗阻力抬高手臂，才能有效測出該肌肉。",
+   "why_correct": "下斜方肌測試採俯臥，上肢舉高過頭、約外展145度，使手臂順著下斜方肌纖維走向，再抗阻力抬高手臂，才能有效測出該肌肉。",
    "why_others": {
     "A": "下斜方肌收縮造成肩胛下壓與內收，不是外展。",
-    "B": "斜方肌由副神經（脊副神經）支配，肩胛背神經支配菱形肌。",
-    "D": "阻力應施於前臂遠端或肩胛骨，並非強調手腕處；且題意重點在姿勢。"
+    "B": "斜方肌由脊副神經（spinal accessory nerve）支配，肩胛背神經支配菱形肌。",
+    "D": "阻力應施於肱骨遠端（肘上）或肩胛骨，施於手腕力臂過長。"
    },
-   "takeaway": "下斜方肌測試：俯臥、上肢外展約 145 度、副神經支配。",
+   "takeaway": "下斜方肌測試：俯臥、上肢外展約145度、脊副神經支配。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "D 的說明稱阻力應施於「前臂遠端」而非手腕，兩處幾乎同位置，未說清錯誤所在；標準作法是阻力施於肱骨遠端（肘上）或肩胛骨，以免力臂過長。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "下斜方肌為下壓內收、脊副神經支配、俯臥上舉約145度測試，阻力位置說明合理。"
    }
   },
   {
@@ -1287,15 +1281,15 @@
   },
   {
    "id": "105-2-TECH-056",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "髖外轉時股骨頭在髖臼內相對往前滑動（凸面在凹面上，滑動與骨移動方向相反），因此欲增加外轉活動度，需將股骨往前推（anterior glide）。",
+   "why_correct": "髖外轉時，股骨頭（凸面）在髖臼（凹面）內的滑動方向與股骨遠端移動相反，會相對往前滑，因此欲增加外轉活動度，需將股骨往前推（anterior glide）。",
    "why_others": {
-    "A": "往上推用於增加外展或牽引類活動，不是外轉。",
-    "B": "往內側推主要是側向牽拉，不是外轉的對應方向。",
+    "A": "向上滑動不對應外轉；且依凹凸定律髖外展時股骨頭是向下滑。",
+    "B": "往內側推是把股骨頭壓向髖臼，不是外轉對應的滑動方向。",
     "D": "往後滑動用於增加內轉。"
    },
    "takeaway": "髖外轉鬆動：股骨向前滑；內轉：向後滑。",
@@ -1303,12 +1297,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "A 稱股骨往上推可增加外展有誤，依凹凸定律髖外展時股骨頭向下滑，應用向下（尾向）滑動；B 把往內推說成「側向牽拉」也不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "依凹凸定律髖外轉股骨頭向前滑，內轉向後滑，說明正確。"
    }
   },
   {
@@ -1382,16 +1373,16 @@
   },
   {
    "id": "105-2-TECH-060",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "腕屈曲時，月狀骨在橈骨及頭狀骨之間向背側滑動；為增加屈曲，固定頭狀骨，將月狀骨往腹側推。此為本題承認的做法。",
+   "why_correct": "腕屈曲時，頭狀骨相對月狀骨向背側滑動；固定頭狀骨、將月狀骨推往腹側，產生相同的相對運動，因此可增加腕屈曲活動度。",
    "why_others": {
-    "A": "此手法針對的是近排與遠排骨間移動，並非增加屈曲的正確方向。",
-    "B": "三角骨往背側推不是屈曲鬆動的對應手法。",
-    "C": "固定橈骨將舟狀骨往腹側推，用於腕伸直而非屈曲。"
+    "A": "大小多角骨相對舟狀骨往背側滑，對應腕伸直而非屈曲。",
+    "B": "三角骨相對鉤狀骨往背側推，對應腕伸直而非屈曲。",
+    "C": "固定橈骨將舟狀骨往腹側推，用於增加腕伸直而非屈曲。"
    },
    "takeaway": "增加腕屈曲：固定頭狀骨，月狀骨往腹側推。",
    "review": {
@@ -1399,37 +1390,31 @@
      "D"
     ],
     "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 稱腕屈曲時月狀骨相對頭狀骨向背側滑動，卻又推月狀骨往腹側，推理自相矛盾；固定頭狀骨時，屈曲時月狀骨是相對往腹側移動。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "固定頭狀骨推月狀骨向腹側等同頭狀骨相對背滑，增加腕屈曲；其餘選項對應腕伸直，正確。"
    }
   },
   {
    "id": "105-2-TECH-061",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "膝關節的關節囊受限模式為屈曲受限大於伸直受限，且旋轉不受限（旋轉角度沒限制），敘述正確。",
+   "why_correct": "膝關節的關節囊受限模式為屈曲受限大於伸直受限，且旋轉不受限，敘述正確。",
    "why_others": {
-    "A": "髖關節模式為屈曲、外展、內轉受限，不是外轉大於內轉。",
+    "A": "髖關節模式以屈曲、外展、內轉受限為主，不是外轉大於內轉。",
     "C": "踝關節（talocrural）模式是蹠屈受限大於背屈。",
-    "D": "距下關節模式是內翻受限，終至內翻固定，不是外翻較多。"
+    "D": "距下關節是內翻漸受限，最後固定於外翻位，不是外翻較受限。"
    },
    "takeaway": "膝關節模式：屈曲大於伸直，旋轉不受限。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "D 說距下關節「終至內翻固定」有誤，Cyriax 的距下關節囊模式是內翻漸受限，最後固定在外翻位。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "膝關節囊模式屈曲大於伸直、旋轉不受限；髖、踝、距下關節模式說明皆正確。"
    }
   },
   {
@@ -1572,54 +1557,48 @@
   },
   {
    "id": "105-2-TECH-068",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "硬式鉸鏈（rigid hinge）鎖定肘部，會限制前臂的旋前旋後（pronation-supination）等前臂相關動作；肩關節與肘屈伸可由其他方式補償。",
+   "why_correct": "硬式鉸鏈（rigid hinge）連接前臂套筒與上臂環帶，允許肘屈伸，但會把套筒固定在殘肢上，使殘存的前臂旋前旋後（pronation-supination）無法產生。",
    "why_others": {
-    "B": "本題承認硬式鉸鏈不是影響肘屈伸的項目，故此項不是答案。",
+    "B": "硬式鉸鏈本身就是讓肘屈伸的設計，允許此活動。",
     "C": "肩關節屈曲伸直由使用者自身肩部完成，不受鉸鏈限制。",
     "D": "肩關節外展內收由使用者自身肩部完成，不受限制。"
    },
-   "takeaway": "硬式鉸鏈使前臂旋前旋後無法產生。",
+   "takeaway": "硬式鉸鏈允許肘屈伸，但阻止前臂旋前旋後。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 稱硬式鉸鏈「鎖定肘部」、肘屈伸靠其他方式補償，有誤；硬式鉸鏈允許肘屈伸、只阻止前臂旋前旋後，B 的說明也只引用承認答案而無實質理由。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "硬式鉸鏈允許肘屈伸但阻止殘存前臂旋前旋後，說明正確。"
    }
   },
   {
    "id": "105-2-TECH-069",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "奈特（Knight）背架的骨盆帶應位於髂骨嵴下方、對準大轉子與臀部突起處，而非髂骨嵴上方半英吋，故此選項不適當。",
+   "why_correct": "奈特（Knight）背架的骨盆帶應位於髂骨嵴與大轉子之間、臀部最突出處，而非髂骨嵴上方，故此選項不適當。",
    "why_others": {
     "A": "胸帶位於肩胛骨下角下方約一英吋，適當。",
     "C": "側豎桿對齊身體側面中線，適當。",
     "D": "脊旁豎桿與脊柱平行，適當。"
    },
-   "takeaway": "Knight 背架骨盆帶位在髂骨嵴下方，不是上方。",
+   "takeaway": "Knight背架骨盆帶在髂骨嵴與大轉子之間，不在嵴上方。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "骨盆帶應位於髂骨嵴與大轉子之間（薦尾骨處、臀部最突處），詳解說「對準大轉子」不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "Knight背架骨盆帶應位於髂骨嵴與大轉子之間，其餘穿戴位置說明正確。"
    }
   },
   {
@@ -1670,28 +1649,25 @@
   },
   {
    "id": "105-2-TECH-072",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "後足外翻時，需以內側足跟墊（楔形）抬高足跟內側，使跟骨轉向中立，矯正外翻。",
+   "why_correct": "後足外翻時，以內側足跟墊（楔形）抬高足跟內側，使跟骨轉向中立，矯正外翻。",
    "why_others": {
     "A": "外側足跟墊用於後足內翻。",
-    "C": "外側前足楔形墊用於前足旋後等問題，不是後足外翻。",
-    "D": "內側前足楔形墊處理前足問題，不針對後足。"
+    "C": "外側前足楔形墊用於前足外翻，不是後足外翻。",
+    "D": "內側前足楔形墊用於前足內翻，不針對後足。"
    },
    "takeaway": "後足外翻用內側足跟墊，內翻用外側足跟墊。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "C 稱外側前足楔形墊用於前足旋後有誤，外側前足墊用於前足外翻（旋前），前足旋後（內翻）是用內側前足墊。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "後足外翻用內側足跟楔墊，前足內外翻楔墊對應說明正確。"
    }
   },
   {

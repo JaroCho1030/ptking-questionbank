@@ -715,28 +715,25 @@
   },
   {
    "id": "111-2-BASIC-032",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "肺積水使肺泡膜加厚、擴散距離增加，依 Fick 定律氣體擴散速率下降，擴散效益變差。",
+   "why_correct": "肺積水使肺泡膜加厚、擴散距離增加，依 Fick 定律（Fick's law）氣體擴散速率與膜厚度成反比，擴散效益變差。",
    "why_others": {
-    "A": "擴散驅動力是分壓差，積水只會使有效壓差下降。",
-    "C": "擴散係數由氣體與介質性質決定，變大反而有利擴散。",
-    "D": "積水使有效擴散面積減少，而非變大。"
+    "A": "分壓差變大會增加擴散，不會使擴散效益變差。",
+    "C": "擴散係數取決於氣體性質，變大反而有利擴散。",
+    "D": "積水會減少有效擴散面積，而非變大。"
    },
    "takeaway": "肺水腫：膜變厚、擴散距離增加、擴散變差。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "選項 A 說明稱積水只會使有效壓差下降缺乏依據（肺水腫低血氧時肺泡-微血管氧分壓差反而增大），應說明壓力差變大會增加而非降低擴散。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "以Fick定律說明膜厚增加使擴散變差正確，其餘選項說明無誤。"
    }
   },
   {
@@ -1017,28 +1014,25 @@
   },
   {
    "id": "111-2-BASIC-045",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "上斜方肌麻痺會使肩胛下垂，造成盂肱關節向下半脫位；但胸鎖關節是鎖骨近端與胸骨的連結，不會因此向下脫位，故B錯誤。",
+   "why_correct": "上斜方肌麻痺時鎖骨外端與肩胛下垂，鎖骨以第一肋為支點使內端上翹，胸鎖關節傾向向上脫位，而不是向下，故B錯誤。",
    "why_others": {
-    "A": "上斜方肌失去懸吊力，肱骨頭下垂造成盂肱向下半脫位。",
+    "A": "上斜方肌失去懸吊力，肩胛下垂，可致盂肱關節向下半脫位。",
     "C": "前鋸肌由長胸神經（long thoracic nerve）支配，受傷會麻痺。",
-    "D": "前鋸肌無力使肩胛無法穩定貼胸，抗阻外展時翼狀肩胛更明顯，符合敘述。"
+    "D": "前鋸肌是肩胛上旋肌，麻痺時抗阻外展無法上旋，向下旋轉加劇。"
    },
-   "takeaway": "上斜方肌麻痺影響盂肱關節下垂，不是胸鎖關節脫位。",
+   "takeaway": "上斜方肌麻痺：盂肱向下半脫位，胸鎖關節向上脫位。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "上斜方肌麻痺時鎖骨外端下垂會使胸鎖關節向上（superior）脫位，詳解只說不會脫位而未點出方向錯誤；D 的說明只講翼狀肩胛，未解釋肩胛向下旋轉加劇。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "上斜方肌麻痺時鎖骨外端下垂、內端上翹，胸鎖關節傾向向上脫位，推理正確。"
    }
   },
   {
@@ -1157,28 +1151,25 @@
   },
   {
    "id": "111-2-BASIC-051",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "最大握力需要腕伸肌穩定腕部、並讓屈指肌處於最佳長度張力關係，腕伸約 30 度時握力最大。",
+   "why_correct": "腕輕度伸直時，腕伸肌穩定腕部，跨腕掌側的屈指肌被適度拉長、處於較佳長度張力關係，故腕伸約30度握力最大。",
    "why_others": {
-    "A": "伸直過多使屈指肌過度縮短（主動不足），握力下降。",
-    "C": "腕屈曲使屈指肌被拉長且伸肌無法穩定，握力下降。",
-    "D": "屈曲 60 度時握力更差。"
+    "A": "腕伸過多使肌肉偏離最佳長度張力關係，握力下降。",
+    "C": "腕屈曲使屈指肌縮短而主動不足，握力下降。",
+    "D": "屈曲更多，屈指肌主動不足更明顯，握力更差。"
    },
-   "takeaway": "最大握力在腕輕度伸直約 30 度。",
+   "takeaway": "腕輕度伸直時握力最大；腕屈曲使屈指肌主動不足。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "屈指肌跨腕掌側，腕伸直會拉長而腕屈曲才使其縮短（主動不足），詳解 A、C 的長度變化方向寫反。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "腕伸約30度時屈指肌長度張力最佳、屈腕造成主動不足，說明正確。"
    }
   },
   {

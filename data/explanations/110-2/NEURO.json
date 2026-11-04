@@ -374,28 +374,25 @@
   },
   {
    "id": "110-2-NEURO-017",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "牽張反射可促進肌肉啟動，使用後須立即施以恰當阻力，才能把誘發的收縮增強並導入動作。",
    "why_others": {
     "A": "動作口令是執行當下的指令，不是事前解釋。",
     "B": "恰當阻力應使動作平順，抖動表示阻力不當。",
-    "C": "PNF 阻力應順著動作方向與大小配合，此項非核心原則。"
+    "C": "PNF阻力重在沿對角線、依動作方向與病人能力調整大小，非此敘述。"
    },
    "takeaway": "PNF：牽張後立即給阻力，口令在動作當下下達。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "C 只說「非核心原則」，沒有說明為何這句敘述錯誤，不足以排除此選項。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "牽張反射後立即給阻力可增強反應；動作口令為執行當下指令、恰當阻力不應造成抖動，說明可接受。"
    }
   },
   {
@@ -988,14 +985,14 @@
   },
   {
    "id": "110-2-NEURO-043",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "小指外展的關鍵肌為 T1 肌節；肘前窩外側（橈側）的感覺關鍵點屬 C5 皮節。因此為肌節 T1、皮節 C5。",
    "why_others": {
-    "A": "C8 肌節的關鍵肌是小指屈指深肌，C4 的關鍵點在肩上方，兩者皆不符。",
+    "A": "C8關鍵肌為中指遠端指節屈肌，C4關鍵點在肩鎖關節上方，皆不符。",
     "C": "C8 肌節不是小指外展；T1 皮節在肘前窩內側（尺側）。",
     "D": "T2 皮節的關鍵點在腋窩，不在肘前窩外側。"
    },
@@ -1004,12 +1001,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "A 選項說明稱 C8 關鍵肌為「小指」屈指深肌，ISNCSCI 規定為中指遠端指節屈肌，事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "小指外展為T1關鍵肌、肘前窩外側為C5關鍵點，C8、C4、T1、T2關鍵點與關鍵肌敘述均符合ISNCSCI。"
    }
   },
   {
@@ -1547,15 +1541,15 @@
   },
   {
    "id": "110-2-NEURO-067",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "快速轉頭而視線仍固定在影片上，需要前庭眼球反射（VOR）產生反向眼動以穩定視線。",
    "why_others": {
     "A": "追視移動物體屬平滑追視。",
-    "B": "看移動的跑馬燈屬視動性反射，不需 VOR。",
+    "B": "看車內跑馬燈，文字移動靠平滑追視即可，不必由VOR產生。",
     "D": "轉頭看時鐘屬轉移視線的跳視，並非必須由 VOR 產生。"
    },
    "takeaway": "頭動而視線穩定靠 VOR。",
@@ -1563,12 +1557,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "B 選項稱看公車內跑馬燈屬視動性反射有誤，跑馬燈相對乘客靜止於視野內一小區，追看文字屬平滑追視而非全視野誘發的視動反射。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "快速轉頭而視線固定於目標需VOR，追視移動物體屬平滑追視、轉移視線屬跳視，說明正確。"
    }
   },
   {

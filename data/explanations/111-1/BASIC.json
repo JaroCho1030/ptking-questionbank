@@ -373,13 +373,13 @@
    "id": "111-1-BASIC-017",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "兩側輸尿管（ureter）斜向穿過膀胱壁，從膀胱底部的後外側角進入；膀胱頸則是尿道出口所在處。",
    "why_others": {
     "A": "膀胱頸是尿道的出口，輸尿管不在此注入。",
-    "C": "男性有尿道內括約肌，女性則無明確的內括約肌，但此選項敘述不完整，不是最佳答案。",
+    "C": "女性膀胱頸周圍仍有平滑肌形成功能性內括約肌，說女性沒有不正確。",
     "D": "精囊位於膀胱後方，前列腺位於膀胱下方，並非皆在下方。"
    },
    "takeaway": "輸尿管入膀胱後外側角；兩輸尿管口加尿道內口構成膀胱三角。",
@@ -387,12 +387,19 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "C 的說明反而承認女性無明確內括約肌（即同意 C 敘述），只以「不完整」帶過，未說明 C 為何錯，推理自相矛盾。",
+    "blind_confidence": 0.55,
+    "verdict": "answer_disputed",
+    "reason": "Moore等解剖教科書明言女性膀胱頸肌纖維未形成內括約肌、內括約肌僅見於男性，C亦可成立，詳解否定C有爭議，本題可能不只一個答案。",
     "fails": [
-     "reasoning_error"
-    ]
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "C 的說明反而承認女性無明確內括約肌（即同意 C 敘述），只以「不完整」帶過，未說明 C 為何錯，推理自相矛盾。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -675,25 +682,32 @@
    "id": "111-1-BASIC-030",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "de9ec2c36f9c",
-   "why_correct": "本題承認 C 與 D 皆給分：C 的鈉離子影響敘述不精確，D 的「腎上腺皮質激素」表述籠統（應為促腎上腺皮質素 ACTH），兩項都有爭議；原公布答案為 D。",
+   "why_correct": "C與D都給分。C：原意是鈉離子上升會略降醛固酮分泌，但「細胞納鉀離子」文字誤植、題意不清，故也給分。D：促腎上腺皮質素（ACTH）對醛固酮分泌速率影響很小，主要是允許作用，此敘述錯誤；原公布答案為D。",
    "why_others": {
     "A": "細胞外鉀離子上升會強烈刺激醛固酮分泌，敘述成立。",
-    "B": "腎素-血管張力素系統活化會促進醛固酮分泌，方向成立。"
+    "B": "「血管加壓素」應為血管張力素，該系統活化會促進醛固酮分泌。"
    },
-   "takeaway": "醛固酮：K⁺ 上升、血管張力素 II、ACTH 促進；Na⁺ 影響較小。",
+   "takeaway": "醛固酮主要受鉀離子與血管張力素 II 調控，ACTH 影響小。",
    "review": {
     "blind_answer": [
-     "D"
+     "B"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "D 錯的實質原因是 ACTH 對醛固酮分泌速率影響很小（僅允許作用），詳解卻歸因於名稱籠統；且 B 的「血管加壓素」誤植未說明即當成血管張力素。",
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "依Guyton，ACTH對醛固酮分泌速率影響小、鈉離子上升僅略降分泌，C文字誤植故一併給分，說明合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "D 錯的實質原因是 ACTH 對醛固酮分泌速率影響很小（僅允許作用），詳解卻歸因於名稱籠統；且 B 的「血管加壓素」誤植未說明即當成血管張力素。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -767,12 +781,12 @@
   },
   {
    "id": "111-1-BASIC-034",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "前負載（preload）指舒張末期心室肌纖維被拉長的程度，即舒張末期容積；選項說「舒張期開始時」的血量不精確，且前負載與心臟功能異常並非等同，題目指出此敘述錯誤。",
+   "why_correct": "前負載（preload）指舒張末期心室被充盈拉長的程度，相當於舒張末期容積；選項寫「舒張期開始時」的血量，時間點錯誤。",
    "why_others": {
     "A": "後負載是心室射血時需克服的動脈壓力，敘述可成立。",
     "C": "後負載與周邊循環阻力密切相關。",
@@ -784,25 +798,22 @@
      "B"
     ],
     "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 把 D 的內容（前負載與心功能異常）混入 B 的錯誤理由，又在 D 說其成立，前後矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "前負載為舒張末期心室容積，B寫舒張期開始時錯誤，其餘選項說明正確。"
    }
   },
   {
    "id": "111-1-BASIC-035",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "新生兒肺的順應性較成人低，肺泡尚未完全成熟，表面積小、彈性回縮相對偏大，所以「肺順應性較大」是錯的。",
+   "why_correct": "新生兒肺泡數量少、尚未成熟，肺的順應性較成人低，所以「肺順應性較大」是錯的。",
    "why_others": {
     "A": "新生兒胸廓軟骨多，順應性較大。",
-    "C": "胸廓軟、肺彈性回縮力相對大，小氣道易提早閉合，閉鎖容積相對較高。",
-    "D": "上述特性使肺葉較容易塌陷。"
+    "C": "肺彈性回縮力較低，小氣道缺乏徑向牽引而提早閉合，閉鎖容積較高。",
+    "D": "胸廓軟、閉鎖容積高，使肺葉較容易塌陷。"
    },
    "takeaway": "新生兒胸廓很軟、肺順應性偏低，易塌陷。",
    "review": {
@@ -810,11 +821,8 @@
      "B"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "新生兒閉鎖容積高是因肺彈性回縮力較低、小氣道缺乏徑向牽引而提早閉合，詳解說「肺彈性回縮力相對大」是錯的。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "新生兒胸廓順應性高、肺順應性較低、閉鎖容積高易塌陷，說明符合教科書。"
    }
   },
   {

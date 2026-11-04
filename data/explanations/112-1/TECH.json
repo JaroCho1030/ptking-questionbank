@@ -532,28 +532,25 @@
   },
   {
    "id": "112-1-TECH-024",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "兩段式治療床的摩擦力會抵消部分牽拉力，因此起始牽引力設在約病患體重 1/4，用來克服摩擦力。",
+   "why_correct": "腰椎牽引起始常用約病患體重1/4的拉力，先克服下半身與床面間的摩擦阻力，才能把拉力傳到腰椎。兩段式治療床分離後可減少這部分摩擦，使牽引更有效。",
    "why_others": {
-    "A": "應對齊欲牽引的腰椎節段，而不是前上髂棘。",
-    "C": "牽引／放鬆週期要依病患反應調整，並非固定。",
-    "D": "症狀周邊化代表惡化，不是有效牽引。"
+    "A": "床面分離處應對準腰椎欲牽引的區域，不是前上髂棘。",
+    "C": "牽引／放鬆週期要依病患狀況與反應調整，並非固定。",
+    "D": "症狀周邊化代表惡化，應調整或停止牽引。"
    },
-   "takeaway": "腰椎牽引起始力先克服床面摩擦力。",
+   "takeaway": "腰椎牽引起始力要先克服下半身摩擦力；周邊化代表惡化。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "兩段式治療床的設計是消除下半身與床面的摩擦力，詳解卻說兩段式床的摩擦力會抵消牽拉力，機轉說明有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "起始拉力約體重1/4克服下半身摩擦、週期依病患調整、周邊化為惡化，說明合理。"
    }
   },
   {

@@ -26,12 +26,12 @@
   },
   {
    "id": "113-1-ORTHO-002",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "頸椎屈曲旋轉測試（flexion rotation test）是讓頸椎完全屈曲，鎖住下頸椎，只留寰椎－樞椎關節做旋轉。正常大約可轉45度，少於約10度或明顯比另一側少就算陽性。個案右轉只有35度，右側又有卡住和疼痛，所以是右側C1-C2失能。",
+   "why_correct": "頸椎屈曲旋轉測試（flexion rotation test）讓頸椎完全屈曲、鎖住下頸椎，主要留寰椎－樞椎關節做旋轉。正常約可轉45度，明顯少於正常或比另一側明顯受限即為陽性。個案右轉只有35度，右側又卡住疼痛，所以是右側C1-C2失能。",
    "why_others": {
     "A": "C0-C1主要負責點頭屈伸，這個測試看的不是它的旋轉。",
     "B": "C0-C1不是這個測試要檢查的節段，症狀也在右側。",
@@ -42,12 +42,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "詳解把陽性標準寫成「少於約10度」，字面意思是活動度只剩不到約10度，這是錯的；正確標準是轉動角度小於約32度，或比預期值少了約10度以上，考生可能因此記錯標準。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "屈曲旋轉測試分離C1-C2旋轉，轉向受限側即該側寰樞關節失能，說明正確。"
    }
   },
   {
@@ -286,54 +283,48 @@
   },
   {
    "id": "113-1-ORTHO-013",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "雙下肢直腿放下測試（double straight leg lowering test）評估下腹肌控制骨盆的能力。受測者把伸直的雙腿從髖屈曲90度慢慢放下，過程中要維持骨盆後傾、腰椎平貼床面。腰椎開始離床、骨盆前傾時的髖角度，就是判定腹肌肌力等級的依據。",
+   "why_correct": "雙下肢直腿放下測試（double straight leg lowering test）評估下腹肌控制骨盆的能力。雙腿伸直從髖屈曲90度慢慢放下，過程中要維持骨盆後傾、腰椎平貼床面。腰椎開始離床、骨盆前傾時的髖角度，就是腹肌肌力分級的依據。",
    "why_others": {
-    "A": "通常先屈髖屈膝，再把膝伸直到髖屈曲90度，以免下背過度用力。",
-    "C": "放下雙腿時腹肌做離心收縮來穩定骨盆，不是測向心肌力。",
+    "A": "通常先屈髖屈膝，再把膝伸直到髖屈曲90度，避免抬腿時下背過度負荷。",
+    "C": "放腿時腹肌以等長收縮穩住骨盆後傾，做離心收縮的是髖屈肌。",
     "D": "動態腹肌耐力測試達Fair等級並不是執行此測試的前提條件。"
    },
-   "takeaway": "雙腿放下測試：腹肌離心收縮維持骨盆後傾，看腰椎離床時的髖角度來分級。",
+   "takeaway": "雙腿放下測試：腹肌等長收縮維持骨盆後傾，以腰椎離床時的髖角度分級。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.72,
-    "verdict": "reasoning_error",
-    "reason": "承認答案 B 沒有問題，但詳解對腹肌收縮型態的說法有誤。雙腿放下時，腹肌是等長收縮，把骨盆維持在後傾、穩定住；做離心收縮的是髖屈肌。詳解在選項 C 與重點整理中都寫成「腹肌離心收縮」，概念錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "測試須維持骨盆後傾、腰椎貼床，腹肌為等長收縮，各選項說明正確。"
    }
   },
   {
    "id": "113-1-ORTHO-014",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "L5神經根的感覺區在小腿外側與足背，支配臀中肌（gluteus medius）、伸拇長肌和踝背屈肌，所以兩者同時無力最符合L5。直膝抬腿（SLR）受限加上頸屈曲引發疼痛，代表神經根受到張力刺激。踝跳反射主要由S1負責，L5病灶有時也會讓它稍微減弱。",
+   "why_correct": "L5神經根的感覺區在小腿外側與足背，是臀中肌（gluteus medius）與伸拇長肌的主要神經根，也參與踝背屈，兩者同時無力最符合L5。直膝抬腿（SLR）受限加上頸屈曲引發疼痛，代表神經根受張力刺激。踝跳反射以S1為主，L5病灶有時也會讓它減弱。",
    "why_others": {
     "A": "L3的感覺區在大腿前內側，影響股四頭肌和膝跳反射，跟小腿外側無關。",
-    "B": "L4的感覺區在小腿內側，影響脛前肌和膝跳反射，不影響臀中肌。",
-    "D": "S1的感覺區在足外側與足底，造成蹠屈肌無力、踝跳反射消失，不造成背屈無力。"
+    "B": "L4感覺區在小腿內側、主要影響膝跳反射，本例感覺異常在外側，較不符合。",
+    "D": "S1的感覺區在足外側與足底，造成蹠屈肌無力，不造成背屈無力。"
    },
    "takeaway": "L5：小腿外側與足背麻、臀中肌與伸拇肌無力；S1：足外側麻、蹠屈無力、踝反射減弱。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "B 選項說 L4「不影響臀中肌」不正確：臀中肌由上臀神經（L4–S1）支配，L4 也有貢獻，只是 L5 才是主要神經根；而且詳解又說 L4 支配同屬踝背屈肌的脛前肌，所以排除 L4 的理由站不住。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "小腿外側感覺、臀中肌與踝背屈無力符合L5，張力徵象與其他節段鑑別說明正確。"
    }
   },
   {
@@ -614,31 +605,25 @@
   },
   {
    "id": "113-1-ORTHO-027",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "50歲、沒有明確原因發作、夜間痛影響睡眠、主被動活動度都受限，抬手不到90度就聳肩代償，這些都是沾黏性關節囊炎（adhesive capsulitis）的典型表現。手臂放在身體旁做等長阻力測試時無痛、肌力尚可，表示收縮組織沒有問題。因此應優先做被動活動測試，確認是否有關節囊模式（capsular pattern），也就是外轉受限最多，其次是外展，再來是內轉。",
+   "why_correct": "50歲、無明確原因發作、夜間痛、活動度受限，抬手不到90度就聳肩代償，符合沾黏性關節囊炎（adhesive capsulitis）。手臂放身旁做阻力測試無痛，表示收縮組織問題不大，應優先做被動活動測試，確認有無關節囊模式（capsular pattern）。",
    "why_others": {
     "B": "旋轉肌袖病變通常做阻力測試會痛，或有疼痛弧，本題阻力測試無痛。",
     "C": "盂肱關節不穩定多見於年輕人，活動度不會受限；降臂測試是檢查棘上肌撕裂。",
-    "D": "盂唇撕裂多有外傷史或過頭動作史，主訴卡住感，不會全面活動受限。"
+    "D": "盂唇撕裂多有外傷或過頭動作史，主訴卡住感，不會全面活動受限。"
    },
-   "takeaway": "自發性發作、主被動活動度都受限、阻力測試無痛，要想到冰凍肩，並檢查有無關節囊模式：外轉＞外展＞內轉。",
+   "takeaway": "自發性發作、活動度全面受限、阻力測試無痛，想到冰凍肩，檢查關節囊模式：外轉＞外展＞內轉。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.9,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "why_correct 147 字 > 144"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "自發發作、活動受限而阻力測試無痛符合沾黏性關節囊炎，降臂測試屬旋轉肌袖撕裂測試等說明皆正確。"
    }
   },
   {
@@ -1218,28 +1203,25 @@
   },
   {
    "id": "113-1-ORTHO-053",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "膝屈曲90度時，髕韌帶（patellar tendon）對脛骨的拉力方向由前上往後上斜，可拆成兩個分力。沿脛骨長軸的分力把脛骨壓向股骨，形成壓力；垂直長軸的分力把脛骨往後拉，形成向後剪力。所以此角度做股四頭肌收縮，PCL受力較大，ACL負荷小。",
+   "why_correct": "膝屈曲90度時，髕韌帶（patellar tendon）拉脛骨的方向朝上並偏向後方，可拆成兩個分力：沿脛骨長軸的分力把脛骨壓向股骨，形成壓力；垂直長軸的分力把脛骨往後拉，形成向後剪力。此角度PCL受力較大、ACL負荷小。",
    "why_others": {
-    "A": "向前剪力與牽引力出現在接近伸直、約0–30度的角度，不是90度。",
+    "A": "向前剪力出現在接近伸直的角度，而且軸向分力是壓力，不是牽引力。",
     "C": "股四頭肌收縮時軸向分力是壓向股骨，而且90度時有明顯的向後剪力。",
-    "D": "剪力接近零的轉換點約在屈曲60–75度，到90度已轉為向後剪力。"
+    "D": "剪力在中段屈曲角度轉換方向，到90度已是明顯的向後剪力。"
    },
    "takeaway": "開放鍊股四頭肌收縮：接近伸直時脛骨向前剪力（ACL受力），屈曲大時轉為向後剪力（PCL受力）。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "承認答案 B 沒有問題，但 A 選項的說明說牽引力出現在接近伸直時，這不正確：股四頭肌收縮時沿脛骨長軸的分力在各角度都是壓力，接近伸直時只是剪力轉為向前，並不會變成牽引力。這也和詳解自己在 C 選項寫的「軸向分力是壓向股骨」互相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "屈膝90度時髕韌帶拉力產生壓向股骨的軸向力與向後剪力，力學分析正確。"
    }
   },
   {
@@ -1729,26 +1711,33 @@
    "id": "113-1-ORTHO-075",
    "status": "rejected",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "一度燒燙傷（superficial burn）只傷到表皮層，表現為紅、腫、熱、痛，沒有水泡，幾天內就會癒合，不留疤痕。計算燒燙傷總體表面積（TBSA）時不納入一度燒燙傷，只算二度以上，所以A錯誤。",
    "why_others": {
-    "B": "淺二度傷及真皮淺層，神經末梢外露所以很痛，約一到兩週內可自行癒合。",
+    "B": "淺二度傷及真皮淺層，神經末梢受刺激很痛，通常可在短期內自行癒合。",
     "C": "深二度傷及真皮深層，癒合慢，容易形成肥厚性疤痕與攣縮。",
-    "D": "三度為全層皮膚破壞，沒有可以再生的上皮來源，必須植皮。"
+    "D": "三度為全層破壞，除面積很小者可由邊緣癒合，一般都需植皮，故視為正確。"
    },
-   "takeaway": "計算TBSA只算二度以上燒燙傷，一度不算；淺二度最痛，三度需要植皮。",
+   "takeaway": "計算TBSA只算二度以上，一度不算；淺二度最痛，三度通常需要植皮。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "A 的判斷正確：一度燒燙傷不列入 TBSA 計算。但詳解在 D 寫三度燒燙傷「沒有可以再生的上皮來源，必須植皮」是絕對化的錯誤：面積很小的三度傷口可以靠傷口邊緣的上皮爬行和傷口收縮自行癒合，不是一定要植皮；詳解應該說明 D 為什麼仍被視為正確敘述，不該把它寫成必然。",
+    "blind_confidence": 0.65,
+    "verdict": "answer_disputed",
+    "reason": "D「三度燒燙傷一定要植皮」用了絕對字眼，小面積三度燒傷可由邊緣癒合，詳解自己也承認這點；因此D也是錯誤敘述，本題不只一個正解。",
     "fails": [
-     "reasoning_error"
-    ]
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "A 的判斷正確：一度燒燙傷不列入 TBSA 計算。但詳解在 D 寫三度燒燙傷「沒有可以再生的上皮來源，必須植皮」是絕對化的錯誤：面積很小的三度傷口可以靠傷口邊緣的上皮爬行和傷口收縮自行癒合，不是一定要植皮；詳解應該說明 D 為什麼仍被視為正確敘述，不該把它寫成必然。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1822,28 +1811,25 @@
   },
   {
    "id": "113-1-ORTHO-079",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "③教導正確的移位技巧，可以避免殘肢傷口受到撞擊、剪力或拉扯，減少傷口裂開，有助於癒合。④在傷口狀況允許、疼痛也能忍受的情況下，鼓勵患者自主活動，可以促進循環、預防攣縮與併發症。所以③④正確。",
    "why_others": {
-    "A": "①錯：殘肢介於股骨30%至60%屬中段截肢，長段截肢保留的股骨比例更高。",
-    "C": "①分級錯誤；②錯，抽菸會使血管收縮，增加術後感染與傷口癒合不良的風險。",
+    "A": "①錯：長段截肢保留的股骨超過60%，30%至60%不是長段的定義。",
+    "C": "①錯；②也錯，抽菸會增加術後感染與傷口癒合不良的風險。",
     "D": "②錯：抽菸是術後感染與傷口癒合延遲的危險因子，並非無關。"
    },
-   "takeaway": "股骨截肢依殘肢長度分短、中、長段；抽菸會增加傷口感染與不癒合的風險。",
+   "takeaway": "股骨截肢依殘肢長度分短、中、長段，長段保留最多；抽菸會增加感染與傷口不癒合。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒問題，但詳解說「股骨 30% 至 60% 屬中段截肢」不精確：依 1974 年標準化名詞小組的分級，短段是股骨長度 35% 以下，中段是 35%–60%，長段是 60% 以上；①錯是因為長段應超過 60%，詳解卻把 30%–35% 也算進中段。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "長段股骨截肢的定義是保留60%以上，抽菸會增加感染風險，③④正確，推理無誤。"
    }
   },
   {

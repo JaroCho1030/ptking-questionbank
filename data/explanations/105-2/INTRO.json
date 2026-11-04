@@ -1349,24 +1349,31 @@
    "id": "105-2-INTRO-059",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "fcce8684f341",
-   "why_correct": "上喉神經外支支配環甲肌，調節音調；返喉神經支配大部分內在喉肌，傷到會造成聲音沙啞；迷走神經為兩者的上游，受損也影響發聲。故 A、B、C 皆給分。原公布答案僅 A。",
+   "why_correct": "A：上喉神經外支支配環甲肌，傷到影響音調與發聲強度。B：返喉神經支配大部分內在喉肌，傷到會聲音沙啞。C：迷走神經是兩者的上游，受損同樣影響發聲。原公布答案僅 A，更正後 A、B、C 都給分。",
    "why_others": {
-    "D": "下喉神經未被承認為答案。"
+    "D": "下喉神經是返喉神經的終末段，但未被列為給分答案。"
    },
-   "takeaway": "甲狀腺手術損傷上喉、返喉或迷走神經都可能影響發聲。",
+   "takeaway": "甲狀腺手術傷上喉、返喉或迷走神經都可能影響發聲。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "D 只寫「未被承認」而未說明理由，且下喉神經實為返喉神經的終末段，詳解未交代此爭議點。",
+    "blind_confidence": 0.8,
+    "verdict": "answer_disputed",
+    "reason": "下喉神經即返喉神經的終末段，傷及同樣造成聲音沙啞，D 在專業上也應成立，更正後只給 A、B、C 站不住。",
     "fails": [
-     "reasoning_error"
-    ]
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "D 只寫「未被承認」而未說明理由，且下喉神經實為返喉神經的終末段，詳解未交代此爭議點。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

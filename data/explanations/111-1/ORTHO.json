@@ -72,16 +72,16 @@
   },
   {
    "id": "111-1-ORTHO-004",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "頭部後仰角度不足，應想到的是頸椎前側結構如前縱韌帶、頸椎活動受限等；胸鎖乳突肌收縮時使頸伸，上頸椎位置則偏伸，故它緊張不會造成後仰受限，敘述錯誤。",
+   "why_correct": "胸鎖乳突肌雙側收縮會屈曲下頸椎、伸展上頸椎（頭部），它緊張反而使頭部偏向後仰，不會造成頭部後仰角度不足，故敘述錯誤。",
    "why_others": {
     "A": "上頸椎屈肌控制不佳，會使後仰集中在上頸椎，造成上頸部疼痛。",
     "B": "下頸椎與頸胸椎活動不足，後仰不足會由上頸椎代償。",
-    "D": "提肩胛肌緊張會使肩胛下旋，限制向上旋轉。"
+    "D": "提肩胛肌緊張會使肩胛向下旋轉，限制向上旋轉。"
    },
    "takeaway": "後仰集中上頸椎，常是深層屈肌控制差與下頸椎活動不足。",
    "review": {
@@ -89,11 +89,8 @@
      "C"
     ],
     "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "稱胸鎖乳突肌收縮時使頸伸不正確，雙側收縮是屈曲下頸椎、伸展上頸椎（頭部），詳解事實描述有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "胸鎖乳突肌伸展上頸椎，緊張不會造成頭部後仰不足；提肩胛肌使肩胛下旋限制上旋，說明正確。"
    }
   },
   {
@@ -196,28 +193,25 @@
   },
   {
    "id": "111-1-ORTHO-009",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "關節囊太緊或發炎，會在張嘴末期因受限才出現偏移，而非張嘴初期；初期偏移多與盤或肌肉問題有關，因此敘述錯誤。",
+   "why_correct": "關節囊太緊或發炎會限制髁的滑動，偏移多在張嘴後段、滑動需求增加時才出現，而非張嘴初期，因此敘述錯誤。",
    "why_others": {
-    "B": "盤向前脫位無法復位時會造成張口受限，此處題目敘述有爭議，但不屬於本題作答重點。",
+    "B": "關節盤向後脫位卡在髁後方，髁無法回位而無法閉口（open lock）。",
     "C": "隆起太平坦使髁容易滑過前方，造成半脫位。",
     "D": "前位頭姿勢使下頷後縮，咬合模式因而改變。"
    },
-   "takeaway": "關節囊緊造成張嘴末期偏移，初期偏移多來自盤或肌肉。",
+   "takeaway": "關節囊受限造成張嘴後段偏移；盤向後脫位造成無法閉口。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "關節盤向後脫位確實可造成無法閉口（open lock），B 是正確敘述，詳解卻改談前移位並稱有爭議，沒有說明 B 為何正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "張嘴初期以轉動為主、後段才需滑動，關節囊受限偏移出現在後段；盤後脫位致無法閉口、隆起平坦易半脫位、頭前傾致下頷後縮，說明正確。"
    }
   },
   {
@@ -245,28 +239,25 @@
   },
   {
    "id": "111-1-ORTHO-011",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "椎板切除術後最大保護期應避免腰椎承受過大應力，但鼓勵走路可促進循環與活動，且負荷低、安全，最適合在此期進行。",
+   "why_correct": "椎板切除術後最大保護期應避免腰椎承受過大應力，而走路負荷低、安全，可促進循環與活動，最適合在此期進行。",
    "why_others": {
-    "B": "洗澡以淋浴為主是傷口照護，並非最適合此期的運動介入。",
+    "B": "傷口癒合前應保持傷口乾燥，宜以擦澡避免沾濕，淋浴並不適當。",
     "C": "最大保護期應避免提重物，10公斤過重。",
     "D": "強調後仰到極限會增加腰椎應力，不適合最大保護期。"
    },
-   "takeaway": "術後最大保護期：走路可以，避免重物與極限動作。",
+   "takeaway": "術後最大保護期：鼓勵走路，避免重物與極限動作。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "B 的理由只說它「不是運動介入」，但題目沒有限定運動介入，沒有說明 B 為何不適合在最大保護期進行，推理不成立。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "椎板切除術後最大保護期鼓勵走路，避免提重物與極限後仰，說明與承認答案一致。"
    }
   },
   {
@@ -340,27 +331,24 @@
   },
   {
    "id": "111-1-ORTHO-015",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f6492370bfcd",
-   "why_correct": "答A或C都給分。A：屈曲症候群的特徵是屈曲姿勢下症狀緩解，伸直時加重，故成立。C：此類患者前彎時腰椎屈曲多於髖屈曲，屬於原發性功能失調，也成立。",
+   "why_correct": "答A或C皆給分。C：依 Sahrmann 分類，屈曲症候群彎腰時腰椎屈曲比髖屈曲更早、更多，屈曲動作誘發症狀，故成立。A：另有依方向偏好分類者，把屈曲姿勢下症狀緩解者稱為屈曲型，因「屈曲症候群」定義不一而一併給分。",
    "why_others": {
-    "B": "疼痛弧並維持半彎腰是屈曲症候群以外的描述，不符屈曲症候群特徵。",
-    "D": "屈曲症候群的患者坐姿常是骨盆後傾，並非無法維持。"
+    "B": "疼痛弧並需維持半彎腰，不是屈曲症候群的典型描述。",
+    "D": "屈曲症候群患者坐姿常呈骨盆後傾，並非無法維持。"
    },
-   "takeaway": "屈曲症候群：屈曲姿勢緩解、伸直加重，腰椎屈曲多於髖屈曲。",
+   "takeaway": "Sahrmann屈曲症候群：腰椎屈曲多於髖，屈曲誘發症狀。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "詳解把屈曲症候群說成屈曲緩解、伸直加重，與 C 所依據的 Sahrmann 屈曲症候群（屈曲誘發症狀）互相矛盾，也沒有說明 A 為何更正為給分。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "Sahrmann屈曲症候群腰椎屈曲多於髖，方向偏好分類的屈曲型於屈曲緩解，故AC皆給分，B、D說明正確。"
    }
   },
   {
@@ -411,28 +399,25 @@
   },
   {
    "id": "111-1-ORTHO-018",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "橫向前壓測試（transverse anterior stress test）是仰躺時對髂骨施以前向壓力，用來測試前薦髂韌帶是否受傷，屬壓力測試。",
+   "why_correct": "橫向前壓測試（transverse anterior stress test）在仰躺下進行，治療師對兩側髂前上棘（ASIS）向後外方施壓，使薦髂關節前側分開；誘發疼痛表示前薦髂韌帶可能受傷。",
    "why_others": {
-    "A": "此測試不是側躺檢測活動度。",
-    "C": "不是用來檢查姿勢錯位。",
+    "A": "此測試在仰躺進行，屬疼痛誘發測試，不是測活動度。",
+    "C": "此為韌帶壓力測試，不用來判斷髂骨姿勢錯位。",
     "D": "此測試不在俯臥進行，也不用來判定薦骨姿勢錯位。"
    },
-   "takeaway": "橫向前壓測試：仰躺，測前薦髂韌帶。",
+   "takeaway": "橫向前壓：仰躺壓兩側ASIS向後外，使前側分開，測前薦髂韌帶。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "此測試是在仰躺下對兩側 ASIS 向下、向外（後外側）施壓，使前側分開，詳解寫「施以前向壓力」，力的方向描述錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "仰躺壓雙側ASIS向後外、牽張前薦髂韌帶的描述正確，各選項說明合理。"
    }
   },
   {
@@ -808,28 +793,25 @@
   },
   {
    "id": "111-1-ORTHO-035",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "Crank test（及其測試上盂肱韌帶的版本）將手臂置於身側，在此位置上盂肱韌帶最緊，用來評估上盂肱韌帶與前下穩定結構。",
+   "why_correct": "手臂置於身側時上盂肱韌帶（superior glenohumeral ligament）最緊，此時做旋轉加壓可測上盂肱韌帶等前上方結構。外展角度越大，受力結構逐漸轉為中、下盂肱韌帶。",
    "why_others": {
-    "A": "肩胛面外展45度不是此測試位置。",
-    "B": "外展45度時主要是中盂肱韌帶受力。",
-    "C": "外展大於90度時，下盂肱韌帶才最緊。"
+    "A": "肩胛面外展45度不是測上盂肱韌帶的位置。",
+    "B": "外展約45度時主要受力的是中盂肱韌帶。",
+    "C": "外展大於90度主要測下盂肱韌帶等前下方結構。"
    },
-   "takeaway": "上盂肱韌帶在身側位置最緊，外展越大則換下韌帶。",
+   "takeaway": "盂肱韌帶：身側測上、中度外展測中、高度外展測下。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "手臂在身側時測的是上盂肱韌帶（前上方結構），詳解說同時評估「前下穩定結構」不正確，前下方結構要在外展 90 度以上才測得到。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "手臂置身側測上盂肱韌帶、45度測中、90度以上測下，說明正確。"
    }
   },
   {
@@ -1133,28 +1115,25 @@
   },
   {
    "id": "111-1-ORTHO-049",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "Thomas測試中的「J」sign指膝伸展時小腿呈J形外偏，代表髂脛束過緊，牽拉脛骨向外。",
+   "why_correct": "Thomas測試中，受測側大腿放下伸髖時若同時向外展方向偏移，即為J sign，表示髂脛束（iliotibial band）過緊，牽拉大腿往外。",
    "why_others": {
-    "A": "髂腰肌太緊表現為對側大腿抬離床面。",
-    "B": "此徵象與髂腰肌無力無關。",
-    "D": "此徵象與闊筋膜張肌無力無關。"
+    "A": "髂腰肌太緊表現為受測大腿無法平貼床面，不是外展偏移。",
+    "B": "肌肉無力不會造成此偏移徵象。",
+    "D": "外展偏移代表闊筋膜張肌與髂脛束緊，不是無力。"
    },
-   "takeaway": "J sign指向髂脛束過緊。",
+   "takeaway": "Thomas測試大腿放下時外展偏移（J sign）＝髂脛束緊。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "Thomas測試的J sign是受測大腿放下時向外展偏移（髂脛束緊），詳解描述為膝伸展時小腿呈J形外偏、牽拉脛骨向外，與徵象定義不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "J sign為大腿放下時外展偏移、代表髂脛束緊，與其他選項的說明皆正確。"
    }
   },
   {

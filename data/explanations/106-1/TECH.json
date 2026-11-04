@@ -950,28 +950,25 @@
   },
   {
    "id": "106-1-TECH-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "測所有髖伸直肌群（含膕旁肌）時，採俯臥且膝關節伸直，阻力施於腳踝上方，才能測得髖伸直最大肌力。",
    "why_others": {
     "A": "單測臀大肌（gluteus maximus）應屈膝，以減少膕旁肌參與。",
     "B": "全肌群測試阻力應在腳踝上方，不是膕窩上方。",
-    "D": "屈肌過緊應調整俯臥時對側腿的位置，而非改成側躺。"
+    "D": "髖屈肌過緊應改站姿趴床緣測；側躺是去重力姿勢，測不到最大肌力。"
    },
    "takeaway": "全髖伸肌群：伸膝、阻力在腳踝；單測臀大肌：屈膝。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "D 的理由錯誤：髖屈肌過緊時的改良測試是站立、軀幹趴在床緣，而且側躺是去重力姿勢、測不到最大肌力；並不是「調整俯臥時對側腿的位置」。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "全髖伸肌群伸膝阻力在踝上方、臀大肌屈膝、髖屈肌緊改站姿趴床，說明正確。"
    }
   },
   {
@@ -1279,12 +1276,12 @@
   },
   {
    "id": "106-1-TECH-056",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "距下關節（subtalar joint）關節囊受限時，內翻受限比外翻明顯，呈現內翻受限（gunstock deformity）。",
+   "why_correct": "距下關節（subtalar joint）的關節囊受限模式為內翻受限大於外翻，嚴重時內翻逐漸喪失，關節固定於外翻位。",
    "why_others": {
     "A": "蹠屈與背屈主要為踝關節（距小腿關節）動作。",
     "B": "背屈與蹠屈主要為踝關節動作，非距下關節模式。",
@@ -1295,12 +1292,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "gunstock deformity 是肘內翻（cubitus varus）的名稱，與距下關節的關節囊受限模式無關，屬錯誤引用。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "距下關節囊模式內翻受限大於外翻，說明正確。"
    }
   },
   {
@@ -1729,14 +1723,14 @@
   },
   {
    "id": "106-1-TECH-075",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "垂足（drop foot）是踝背屈無力，最常用踝足支架（AFO）矯正，維持足部清地。",
+   "why_correct": "垂足（drop foot）是踝背屈無力，最常用踝足支架（AFO）控制踝關節，維持擺盪期足部離地。",
    "why_others": {
-    "A": "長腿支架範圍包含膝與髖，過度控制。",
+    "A": "長腿支架即膝踝足支架，控制範圍含膝，超過垂足所需。",
     "B": "膝踝足支架（KAFO）用於膝部也需控制的情況。",
     "D": "足部支架無法控制踝關節的背屈。"
    },
@@ -1746,11 +1740,8 @@
      "C"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "長腿支架即 KAFO，範圍是膝、踝、足，不包含髖，A 的說明有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "垂足首選AFO，其餘支架說明正確。"
    }
   },
   {
@@ -1801,28 +1792,25 @@
   },
   {
    "id": "106-1-TECH-078",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "截肢型輪椅因下肢重量減少，重心偏前易後翻，傾背式輪椅因背部傾斜使重心偏後，兩者都需將重心後移配合設計。",
+   "why_correct": "截肢者失去下肢重量，坐姿重心偏後、容易向後翻，需將後輪軸往後移；傾背式輪椅椅背後傾使重心後移，同樣需後移輪軸以防後翻。",
    "why_others": {
-    "B": "偏癱式輪椅主要是降低座高便於腳推進，不是移後重心。",
-    "C": "同樣包含偏癱式，偏癱式不需移後重心。",
-    "D": "偏癱式與運動型輪椅不屬於需後移重心的設計。"
+    "B": "偏癱式輪椅主要是降低座高便於健側腳推進，不需後移。",
+    "C": "包含偏癱式，偏癱式不需後移重心。",
+    "D": "運動型輪椅常將後輪前移以利靈活操控，偏癱式也不需後移。"
    },
-   "takeaway": "截肢型與傾背式輪椅需將重心後移。",
+   "takeaway": "截肢型與傾背式輪椅易後翻，需後移輪軸。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "截肢者失去下肢重量後重心偏後、容易後翻，所以後輪軸要往後移；詳解說「重心偏前易後翻」，前後矛盾且事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "截肢型與傾背式輪椅易後翻需後移輪軸，偏癱式與運動型說明正確。"
    }
   },
   {

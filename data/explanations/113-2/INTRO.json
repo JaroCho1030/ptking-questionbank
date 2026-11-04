@@ -1726,28 +1726,25 @@
   },
   {
    "id": "113-2-INTRO-075",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "二次侵襲率（secondary attack rate）指的是易感接觸者在潛伏期內，因為接觸初次病例（index case）而發病的比例。計算方式是第二波病例數除以易感接觸者總數，可以用來衡量病原體在人與人之間的傳染力（infectivity）。",
    "why_others": {
-    "A": "毒力（virulence）是感染者中出現重症或死亡的比例，反映的是病原體造成嚴重疾病的能力。",
-    "B": "致死力（case fatality rate）是罹病者中死亡的比例，反映的是疾病有多嚴重，不是傳染力。",
-    "D": "發生率（incidence）是一段期間內族群中新發生的病例比例，並不是專指接觸初次病例後出現的第二波病例。"
+    "A": "毒力（virulence）是發病者中出現重症或死亡的比例，反映疾病嚴重度。",
+    "B": "致死力（case fatality rate）是罹病者中死亡的比例，反映嚴重度，不是傳染力。",
+    "D": "發生率（incidence）是期間內族群新病例的比例，不專指第二波病例。"
    },
-   "takeaway": "傳染力看二次侵襲率，病原性看感染者中發病的比例，毒力看重症或死亡，致死力看罹病者死亡率。",
+   "takeaway": "傳染力看二次侵襲率；病原性看感染者中發病比例；毒力看發病者重症或死亡；致死力看罹病者死亡率。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "詳解把毒力的分母寫成「感染者」，這個說法不精確。依標準流病定義，毒力是「發病者（臨床病例）」中出現重症或死亡的比例；以感染者為分母的是病原性。這樣寫會讓考生把毒力和病原性搞混。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "二次侵襲率用來衡量傳染力，毒力、致死率與發生率的定義正確。"
    }
   },
   {

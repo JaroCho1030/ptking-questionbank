@@ -744,26 +744,33 @@
    "id": "109-2-NEURO-033",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "沃夫動作功能測試評估的是上肢動作功能，不是下肢，因此說用來評估下肢功能恢復是錯誤的。",
+   "why_correct": "沃夫動作功能測試（Wolf Motor Function Test）評估的是上肢動作功能，不是下肢，因此說用來評估下肢功能恢復是錯誤的。",
    "why_others": {
     "A": "Fugl-Meyer評估上下肢動作與感覺缺損，敘述正確。",
-    "B": "積木與盒子測驗評估手部操弄物品能力，敘述正確。",
+    "B": "此測驗主要測粗大手部靈巧度與搬移物品能力，錯誤不如D明顯。",
     "C": "中風衝擊量表主要評估生活品質，敘述正確。"
    },
-   "takeaway": "沃夫動作功能測試評估上肢。",
+   "takeaway": "沃夫動作功能測試評估上肢；積木與盒子測粗大手部靈巧度。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "積木與盒子測驗評估的是粗大手部靈巧度而非手指精細動作，詳解避開「精細動作」直接判B敘述正確，事實說明有誤。",
+    "verdict": "answer_disputed",
+    "reason": "Box and Blocks test測的是粗大手部靈巧度而非手指精細動作，B同樣是錯誤敘述，本題不只一個正解，詳解本身也承認B有誤。",
     "fails": [
-     "reasoning_error"
-    ]
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "積木與盒子測驗評估的是粗大手部靈巧度而非手指精細動作，詳解避開「精細動作」直接判B敘述正確，事實說明有誤。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1004,26 +1011,33 @@
    "id": "109-2-NEURO-044",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "低階 LOCF 病人需要有意義、結構化的感覺刺激。由病人手握毛巾自己做出洗臉動作，同時有觸覺、本體覺與動作參與，比單純被動被擦拭提供更多感覺輸入。",
+   "why_correct": "低階 LOCF 病人需要有意義、結構化的感覺刺激。由病人手握毛巾、在帶領下做出洗臉動作，同時有觸覺、本體覺與動作參與，比被動被擦拭提供更多感覺輸入。",
    "why_others": {
-    "A": "長時間單調的刺激容易習慣化，短時間而喜愛的刺激較易喚起。",
-    "B": "刺激只固定在單一方向，較差；應在不同方向給予以促進注意與追視。",
-    "D": "此選項的刺激時間比較缺乏依據，不是本題要考的主動參與原則。"
+    "A": "長時間單調刺激易習慣化，短時間喜愛的音樂較易喚起。",
+    "B": "應從不同方向給予刺激，以促進注意與追視。",
+    "D": "氣切病人呼吸氣流不經鼻腔，嗅覺刺激難以有效。"
    },
-   "takeaway": "主動帶領動作比被動刺激提供更多感覺輸入。",
+   "takeaway": "帶領病人主動參與動作，比被動刺激提供更多感覺輸入。",
    "review": {
     "blind_answer": [
-     "C"
+     "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "D 的說明含糊且未點出關鍵：氣切病人呼吸氣流不經鼻腔，嗅覺刺激難以有效，詳解未正確解釋 D 為何錯。",
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "帶領病人主動操作提供多重感覺輸入，氣切病人氣流不經鼻腔嗅覺刺激難有效，說明合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "D 的說明含糊且未點出關鍵：氣切病人呼吸氣流不經鼻腔，嗅覺刺激難以有效，詳解未正確解釋 D 為何錯。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1330,50 +1344,54 @@
   },
   {
    "id": "109-2-NEURO-058",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "b75c34545e8c",
-   "why_correct": "考選部公告一律給分。本題各選項都有爭議：肌萎縮性側索硬化症（ALS）常合併上運動神經元徵象，而肢體近遠端與延髓起病的順序不固定，頸屈肌無力會造成頭向前垂，不是後仰，使得沒有一個選項明確正確。",
+   "why_correct": "考選部公告一律給分。原答案B主張上肢先、下肢後、最後顏面，但ALS起病部位不固定，也可由延髓或下肢先發；其餘選項也不正確：多由遠端開始、早期常有上運動神經元徵象、頭下垂源於頸伸肌無力，故無確定正解。",
    "why_others": {},
-   "takeaway": "ALS 同時有上、下運動神經元徵象，發病部位不固定。",
+   "takeaway": "ALS 同時有上、下運動神經元徵象，起病部位不固定。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱頸屈肌無力造成頭向前垂，事實上頭下垂（head drop）是頸伸肌無力所致，說明有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "送分題，詳解對ALS起病部位不固定與各選項皆不正確的說明合理。"
    }
   },
   {
    "id": "109-2-NEURO-059",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "輪替運動障礙（dysdiadochokinesia）是小腦損傷的徵象；遲發性運動障礙（tardive dyskinesia）是抗精神病藥引起的基底核問題，不屬於此。",
+   "why_correct": "輪替運動障礙（dysdiadochokinesia）是小腦損傷的徵象。遲發性運動障礙（tardive dyskinesia）是長期使用抗精神病藥造成的基底核相關不自主動作問題，不會出現小腦性的輪替動作困難。",
    "why_others": {
-    "A": "口臉部不自主動作是遲發性運動障礙的典型表現。",
-    "B": "不正常姿勢性張力（如肌張力不全）可見於遲發性運動障礙。",
-    "C": "藥物引起的類巴金森表現可包含肢體僵硬。"
+    "A": "口臉部不自主動作是遲發性運動障礙最典型的表現。",
+    "B": "常合併肌張力不全，出現不正常的姿勢性張力。",
+    "C": "合併的肌張力不全使肌肉張力增加，可表現為肢體僵硬。"
    },
-   "takeaway": "輪替運動障礙是小腦徵象，不是遲發性運動障礙。",
+   "takeaway": "輪替運動障礙是小腦徵象，不屬遲發性運動障礙。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.7,
+    "blind_confidence": 0.6,
     "verdict": "reasoning_error",
-    "reason": "C 的說明以「藥物引起的類巴金森表現」解釋僵硬，混淆了藥物性巴金森症與遲發性運動障礙，未說明僵硬為何屬遲發性運動障礙的表現。",
+    "reason": "C 的說明把肌張力不全（dystonia）等同於僵硬（rigidity），兩者是不同的現象，推理不正確。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "C 的說明以「藥物引起的類巴金森表現」解釋僵硬，混淆了藥物性巴金森症與遲發性運動障礙，未說明僵硬為何屬遲發性運動障礙的表現。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

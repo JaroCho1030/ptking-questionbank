@@ -3,28 +3,25 @@
  "explanations": [
   {
    "id": "112-2-BASIC-001",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "大多角骨（trapezium）是近端腕骨之遠側排的一塊，腕骨屬於手部，歸入上肢骨骼。",
+   "why_correct": "大多角骨（trapezium）屬於遠側排腕骨，位於拇指掌骨基部。腕骨是手部骨骼，歸入上肢。",
    "why_others": {
     "B": "股骨是大腿的骨頭，屬下肢。",
     "C": "跗骨是足部的骨頭，屬下肢。",
     "D": "脛骨是小腿的主要承重骨，屬下肢。"
    },
-   "takeaway": "腕骨屬上肢，跗骨屬下肢，不要混淆。",
+   "takeaway": "腕骨（如大多角骨）屬上肢，跗骨屬下肢，不要混淆。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.98,
-    "verdict": "reasoning_error",
-    "reason": "大多角骨屬遠側排腕骨，詳解寫「近端腕骨之遠側排」自相矛盾且把排別標錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "大多角骨為腕骨屬上肢，其他皆為下肢骨，正確。"
    }
   },
   {
@@ -933,28 +930,25 @@
   },
   {
    "id": "112-2-BASIC-041",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "肌梭密度與動作的精細程度有關，負責精細控制的小肌肉（如手部蚓狀肌、眼外肌、頸深層小肌）每單位肌肉含較多肌梭，以提供豐富的長度回饋。",
+   "why_correct": "第一蚓狀肌負責手指精細動作，運動單元很小、每個單元的肌纖維少，相對於運動單元的肌梭比例很高，能提供細緻的長度回饋。",
    "why_others": {
-    "B": "腓腸肌以產生大力量為主，肌梭密度較低。",
-    "C": "肱橈肌屬較大的屈肘肌，肌梭密度相對低。",
-    "D": "咬肌是咀嚼的力量肌，肌梭密度較低。"
+    "B": "腓腸肌運動單元大、以產生力量為主，肌梭比例低。",
+    "C": "肱橈肌是較大的屈肘肌，肌梭比例不如蚓狀肌。",
+    "D": "咬肌肌梭雖豐富，但屬力量型肌肉，比例仍不及蚓狀肌。"
    },
-   "takeaway": "精細動作的小肌肉肌梭密度高，粗大力量肌密度低。",
+   "takeaway": "負責精細控制、運動單元小的肌肉，肌梭相對比例最高。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "咬肌等閉口肌其實是肌梭豐富的肌肉，詳解說咬肌肌梭密度低不正確，且未扣緊題目「單一運動單元」的比較基準。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "蚓狀肌運動單元小、肌梭相對密度高，說明正確。"
    }
   },
   {
@@ -1074,28 +1068,25 @@
   },
   {
    "id": "112-2-BASIC-047",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "使用一般滑鼠時手掌朝下平放，前臂接近完全旋前，所需旋前活動度最大。",
+   "why_correct": "使用一般滑鼠時手掌朝下平放桌面，前臂接近完全旋前，在四個活動中所需旋前活動度最大。",
    "why_others": {
-    "A": "拿杯子喝水前臂約在中立位附近。",
-    "C": "拍手時前臂約在中立位。",
-    "D": "接聽電話前臂偏中立到旋後，旋前需求小。"
+    "A": "拿杯子喝水以中立到旋後範圍為主。",
+    "C": "拍手時兩掌相對，前臂約在中立位。",
+    "D": "接聽電話需要部分旋前，但不及滑鼠接近完全旋前。"
    },
-   "takeaway": "滑鼠操作需要接近完全旋前。",
+   "takeaway": "滑鼠操作需要接近完全旋前；喝水偏旋後。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "經典研究（Morrey）顯示接聽電話需約40度旋前，詳解說接電話偏中立到旋後、旋前需求小與文獻不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "滑鼠操作需接近完全旋前，喝水偏旋後、拍手中立、接電話部分旋前，合理。"
    }
   },
   {
@@ -1123,28 +1114,25 @@
   },
   {
    "id": "112-2-BASIC-049",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "拇指指間關節屈曲主要靠屈拇長肌，掌指關節屈曲則主要有屈拇短肌參與；選項把肌肉與關節的對應說得不正確，故為錯誤敘述。",
+   "why_correct": "沒有「屈拇深肌」這條肌肉；拇指只有屈拇長肌（flexor pollicis longus）與屈拇短肌。屈拇長肌本身就能屈曲拇指掌指與指間關節，選項把不存在的肌肉列入，為錯誤敘述。",
    "why_others": {
     "B": "指節凹面骨在凸面骨上動，滾動與滑動同向，正確。",
     "C": "屈曲動作軸位於凸面骨頭內，正確。",
     "D": "近端指間關節掌板限制過度伸直，正確。"
    },
-   "takeaway": "指間關節屈曲：屈拇長肌；掌指關節另有屈拇短肌。",
+   "takeaway": "拇指無屈拇深肌；屈拇長肌可屈掌指與指間關節。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "A錯在並無「屈拇深肌」這條肌肉，且屈拇長肌本身可屈曲掌指與指間關節，詳解改稱肌肉與關節對應錯誤，理由不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "無屈拇深肌、凹面在凸面上滾滑同向、軸位於凸面骨、掌板限制過伸，皆正確。"
    }
   },
   {
@@ -1291,27 +1279,24 @@
   },
   {
    "id": "112-2-BASIC-056",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "e9bcfef5477b",
-   "why_correct": "考選部公告答A或D均給分。A：膝屈曲淺時股四頭肌收縮使脛骨前移，前十字韌帶植體受力較大；D：深屈曲範圍同樣被承認，因題意未限定開放或閉鎖鏈。",
+   "why_correct": "考選部公告答A或D均給分。A：膝屈曲淺時股四頭肌收縮使脛骨前移，前十字韌帶植體受力較大，是主要應避開的範圍。D亦被承認，但深屈曲增加植體受力的機轉並不明確，可視為題目對蹲踞姿勢與負荷描述不足所生的爭議。",
    "why_others": {
-    "B": "此中段範圍不是主要需避開的區間。",
-    "C": "此中段範圍不是主要需避開的區間。"
+    "B": "中段屈曲範圍植體受力較低，不是主要需避開的區間。",
+    "C": "中段屈曲範圍植體受力較低，不是主要需避開的區間。"
    },
-   "takeaway": "ACL 術後蹲踞須留意淺屈曲時股四頭造成的前移力。",
+   "takeaway": "ACL術後蹲踞須留意淺屈曲時股四頭肌造成的脛骨前移力。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "詳解以「題意未限定開放或閉鎖鏈」解釋D也給分，並未說明深屈曲範圍為何會增加植體受力，對爭議的說明不成立。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "淺屈曲時股四頭肌使脛骨前移增加ACL植體受力，對D給分爭議的說明合理。"
    }
   },
   {
@@ -1431,28 +1416,25 @@
   },
   {
    "id": "112-2-BASIC-062",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "頭前移初期使頭長肌與頸長肌等前方深層屈肌縮短；為了往前看，上頸過度伸直則使枕下肌與舌上肌縮短。",
    "why_others": {
-    "A": "把頸長肌放在上頸伸直、枕下肌放在前移，配對錯誤。",
-    "C": "枕下肌是上頸伸直時才縮短，不屬於 A。",
-    "D": "A 與 B 的肌群整個對調。"
+    "A": "把舌上肌放在前移、頸長肌放在上頸伸直，配對錯誤。",
+    "C": "枕下肌放在前移、頸長肌放在上頸伸直，配對錯誤。",
+    "D": "A與B的肌群整個對調。"
    },
-   "takeaway": "前移：頭頸長肌縮短；上頸伸直：枕下肌與舌上肌縮短。",
+   "takeaway": "前移：頭長肌、頸長肌縮短；上頸伸直：枕下肌、舌上肌縮短。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "A選項是把舌上肌放在前移、頸長肌與枕下肌放在上頸伸直，詳解說A把枕下肌放在前移，與選項內容不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "與承認答案一致，各選項配對錯誤的說明正確。"
    }
   },
   {

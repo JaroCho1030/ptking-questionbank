@@ -210,28 +210,25 @@
   },
   {
    "id": "114-1-CARDPED-010",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "搖動法（shaking）與彈動法（rib springing）對胸廓施力比扣擊更大，骨質疏鬆、肋骨骨折、凝血異常等不適合扣擊的情況，通常也不適合用這兩種手法。這時應改用較溫和的震動法（vibration），所以 A 錯誤。",
+   "why_correct": "搖動法（shaking）是較強的震動，彈動法（rib springing）對胸廓施力也很大，骨質疏鬆、肋骨骨折、凝血異常等不宜扣擊的情況，通常也不宜用這兩種手法，應改用較溫和的震動法（vibration），所以A錯誤。",
    "why_others": {
     "B": "正確：手法要施在正在姿位引流的那個肺節段上，才能把痰鬆動。",
     "C": "正確：隔一層薄布可保護皮膚又不減弱效果，節奏穩定病人較舒適。",
     "D": "正確：手掌弓成杯狀、手指併攏，可形成空氣墊減少疼痛及皮膚泛紅。"
    },
-   "takeaway": "手法強度由小到大：震動＜扣擊＜搖動或彈動。不能扣擊時就退一級用震動，不能改用更強的手法。",
+   "takeaway": "不宜扣擊時，也要避免施力大的搖動與彈動，可改用較溫和的震動法。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒錯，問題在詳解的理由：它把強度排成「震動＜扣擊＜搖動或彈動」，硬說搖動一定比扣擊強，教科書沒有這種排序，屬於自己編的層級；一般只說搖動是較強的震動，彈動很強，所以不能扣擊的情況通常也不能用這兩種手法。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.3,
+    "verdict": "pass",
+    "reason": "不宜扣擊時也應避免施力大的搖動與彈動、改用溫和的震動法，其他選項說明正確。"
    }
   },
   {
@@ -673,28 +670,25 @@
   },
   {
    "id": "114-1-CARDPED-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "劇烈運動可能誘發潛在心血管事件，例如肥厚性心肌病變（hypertrophic cardiomyopathy）造成的心因性猝死。有猝死或心臟病家族史的運動員屬於高風險族群，參賽前應先接受心血管評估（心電圖、心臟超音波等），及早篩出高風險者，才能真正預防事件發生。",
+   "why_correct": "劇烈運動可能誘發潛在心血管事件，例如肥厚性心肌病變（hypertrophic cardiomyopathy）造成的心因性猝死。有猝死或心臟病家族史的運動員屬於高風險族群，參賽前應先接受心血管評估，及早篩出高風險者，才能預防事件發生。",
    "why_others": {
     "A": "不同運動類型的強度與心血管負荷不同，運動計畫應個別化調整，不宜一成不變。",
     "B": "胸痛、暈厥、心悸等警訊症狀是停止運動並就醫的重要依據，不能忽視。",
-    "D": "專業人員還應具備進階急救能力，例如使用AED與進階心臟救命術（ACLS）。"
+    "D": "僅有基礎急救不夠，現場應有緊急應變計畫與AED，並視需要具備進階救命能力。"
    },
    "takeaway": "預防運動猝死：賽前篩檢高風險者（家族史、症狀），注意警訊症狀，並備妥急救能力與AED。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒問題，但 D 的解析把「使用 AED」說成進階急救能力；依 AHA 分類，AED 本來就屬於基礎救命術（BLS），這樣舉例有事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "有家族史的高風險運動員賽前應做心血管評估，其他選項錯在哪裡也說明清楚。"
    }
   },
   {
@@ -722,28 +716,25 @@
   },
   {
    "id": "114-1-CARDPED-032",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "PAR-Q+ 第一部分有任一題答「是」，就要填後續追問題。追問題就算全部答「否」，問卷也沒有說「直接開始運動」，而是建議諮詢合格的運動專家，擬定安全有效的運動計畫，並且從低強度慢慢開始、逐步增加。C 寫成可以直接開始運動，所以是錯的。",
+   "why_correct": "PAR-Q+ 第一部分有任一題答「是」，就要填後續追問題。追問題全答「否」時，雖可開始增加身體活動，但仍建議諮詢合格運動專家擬定計畫，並從低強度慢慢開始、逐步增加。C只寫可開始運動，漏掉這些前提，因此被視為錯誤。",
    "why_others": {
     "A": "正確：第一部分有7題一般健康問題，全部答「否」可跳過追問題，直接簽署聲明。",
-    "B": "正確：追問題有任一題答「是」，建議運動前先取得更多資訊或諮詢合格運動專家。",
+    "B": "正確：追問題有任一題答「是」，建議運動前先諮詢合格運動專家取得更多資訊。",
     "D": "正確：簽署後最長有效12個月，健康狀況改變就失效，須重新填寫。"
    },
-   "takeaway": "PAR-Q+：追問題全答「否」仍建議找運動專家擬定計畫、漸進開始；有效期最長12個月。",
+   "takeaway": "PAR-Q+：追問題全答「否」可增加活動，但仍建議找運動專家、漸進開始；有效期最長12個月。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.35,
-    "verdict": "reasoning_error",
-    "reason": "PAR-Q+ 原文寫的是追問題全答「否」時「you are ready to become more physically active」，再建議諮詢運動專家、從低強度慢慢開始，所以詳解說問卷「沒有說可以開始運動」並不符合原文，用這點判定 C 錯誤的理由站不住。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "追問題全答否仍建議諮詢運動專家並漸進開始，C漏掉這些前提，其他選項說明符合PAR-Q+。"
    }
   },
   {

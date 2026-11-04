@@ -351,28 +351,25 @@
   },
   {
    "id": "112-1-NEURO-016",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "收縮－放鬆（CR）以等張收縮，固定－放鬆（HR）以等長收縮，兩者都用在受限方向的肌群以增加活動度。",
+   "why_correct": "收縮－放鬆（CR）讓受限的緊繃肌群做等張收縮，固定－放鬆（HR）則做等長收縮，兩者都用來增加活動度。",
    "why_others": {
-    "A": "有疼痛時偏用 HR，兩者適應症說反了。",
-    "B": "兩者都用於受限的肌群，不是作用肌與拮抗肌之分。",
-    "D": "兩者的阻力都由治療師控制。"
+    "A": "CR用於無痛受限正確，但HR適用有痛且角度受限者。",
+    "B": "兩者都作用於限制活動的緊繃肌群，不是一用作用肌一用拮抗肌。",
+    "D": "兩者阻力都由治療師給予，並非HR由患者自控。"
    },
-   "takeaway": "CR 等張，HR 等長。",
+   "takeaway": "CR等張，HR等長；有痛時選HR。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "A 前半（CR 用於無痛且角度受限）本身正確，錯在 HR 用於有痛且角度受限而非角度未受限，詳解稱兩者適應症說反了並不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "CR為等張、HR為等長收縮，HR適用有痛受限者，各選項說明正確。"
    }
   },
   {
@@ -541,28 +538,25 @@
   },
   {
    "id": "112-1-NEURO-024",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "病人下肢無主動動作，只有伸直張力，可在仰臥帶領重複的髖屈曲內收加膝屈曲的屈曲協同動作，促進擺盪期跨步。",
+   "why_correct": "病人下肢無主動動作，只有膝伸直張力，跨步受限。在平躺下帶領重複做髖屈曲合併膝屈曲，練習擺盪期需要的屈曲動作並對抗伸直張力，為行走時跨步做準備。",
    "why_others": {
-    "B": "靠牆承重練的是站立期，不是跨步。",
-    "C": "拍打股四頭肌是伸膝肌，不能幫助抬腳。",
-    "D": "冰敷是降低張力，不是誘發收縮，也不幫助抬腳。"
+    "B": "靠牆承重延長的是站立期，不是訓練跨步。",
+    "C": "拍打股四頭肌誘發的是伸膝，與擺盪期需要的屈膝相反。",
+    "D": "快速冰敷雖可誘發股四頭肌收縮，但伸膝會加重伸直張力，不利跨步。"
    },
-   "takeaway": "無主動動作：先用屈曲協同促進跨步。",
+   "takeaway": "跨步不足要練擺盪期的髖膝屈曲，不是誘發伸膝肌。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "下肢屈曲協同為髖屈曲、外展外轉加膝屈曲，詳解寫成髖屈曲內收屬屈曲協同為事實錯誤；且快速冰敷本可誘發收縮，D 的說明亦不精確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "練擺盪期髖膝屈曲以對抗伸直張力的推理正確，其他選項說明合理。"
    }
   },
   {
@@ -935,28 +929,25 @@
   },
   {
    "id": "112-1-NEURO-041",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "胸髓第10～12節完全損傷者軀幹與骨盆控制良好，穿長腿支架配合助行器可短距離行走，但耗能高，日常移動仍多以輪椅為主。",
+   "why_correct": "胸髓第10～12節完全損傷者上肢與上段軀幹功能完整，穿長腿支架配合助行器可短距離行走，但耗能高，日常移動仍多以輪椅為主。",
    "why_others": {
-    "A": "側傾、前傾多用於撐起不足者，撐起減壓才是最有效方式。",
+    "A": "減壓方式要依個案能力選擇，說某種方式「最佳、效能最好」過於絕對。",
     "C": "撐起能力不足者應先從等高轉位開始，循序漸進。",
     "D": "選配裝具也必須考量耗能與長期關節、肌肉負荷。"
    },
-   "takeaway": "T10～12完全損傷可穿長腿支架短距離行走，但耗能大，仍多用輪椅。",
+   "takeaway": "胸髓下段完全損傷可穿長腿支架短距離行走，但耗能大，仍多用輪椅。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "A 的解析稱「撐起減壓才是最有效方式」與實證不符，足夠角度的前傾減壓效果不輸甚至優於難以持久的撐起，A 錯在「最佳」的絕對說法而非撐起較有效。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "T10–12完全損傷可穿長腿支架短距離行走但耗能大，各選項說明正確。"
    }
   },
   {
@@ -1214,28 +1205,25 @@
   },
   {
    "id": "112-1-NEURO-053",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "侯葉氏第三期為雙側症狀合併姿勢反射受損、平衡稍差，但生活仍可獨立。",
+   "why_correct": "侯葉氏第三期為雙側症狀合併姿勢反射受損、平衡稍差，但生活仍可獨立，符合本題描述。",
    "why_others": {
-    "A": "第一期為單側症狀。",
-    "B": "第二期為雙側症狀，但無平衡受損。",
-    "D": "第四期失能嚴重，雖仍可站走但需要協助。"
+    "A": "第一期只有單側症狀。",
+    "B": "第二期為雙側症狀，但尚無平衡受損。",
+    "D": "第四期失能嚴重，雖仍可不需協助站立行走，已難獨立生活。"
    },
-   "takeaway": "H&Y III：雙側加平衡受損，仍能獨立生活。",
+   "takeaway": "H&Y III：雙側症狀加平衡受損，仍能獨立生活。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "D 稱第四期「雖仍可站走但需要協助」有誤，H&Y IV 定義為失能嚴重但仍可不需協助站立與行走。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "H&Y各期定義描述正確。"
    }
   },
   {

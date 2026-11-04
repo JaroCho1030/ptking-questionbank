@@ -375,28 +375,25 @@
   },
   {
    "id": "113-1-NEURO-017",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "節律啟動（rhythmic initiation）是本體感覺神經肌肉誘發術（PNF）中專門處理起始動作困難的技巧，依序由被動、主動輔助、主動到阻力動作，在活動範圍內有節律地重複，讓患者學會動作模式、放鬆並啟動動作。常用於帕金森氏症等起始困難或張力過高的患者。",
+   "why_correct": "節律啟動（rhythmic initiation）是本體感覺神經肌肉誘發術（PNF）處理起始動作困難的典型技巧，依序由被動、主動輔助、主動到阻力動作，有節律地重複，讓患者學會動作並開始動作。",
    "why_others": {
-    "A": "作用肌反轉是同一肌群向心與離心收縮交替，用來訓練離心控制與肌力。",
-    "C": "交替性等長收縮在拮抗肌之間交替做等長收縮，主要促進穩定度。",
-    "D": "固定－放鬆－主動收縮靠等長收縮後放鬆再主動收縮，主要用於增加活動度與啟動肌力，不是處理起始困難。"
+    "A": "作用肌反轉是同一肌群向心與離心交替，訓練離心控制與肌力。",
+    "C": "交替性等長收縮在拮抗肌間交替等長收縮，主要促進穩定度。",
+    "D": "也可用於起始困難，但不如節律啟動是此問題的典型首選。"
    },
-   "takeaway": "起始動作困難選節律啟動：被動→主動輔助→主動→阻力，逐步推進。",
+   "takeaway": "起始動作困難首選節律啟動：被動→主動輔助→主動→阻力。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "D 選項描述有誤：依 O'Sullivan，固定－放鬆－主動收縮的做法是在縮短位做等長收縮，放鬆後被動移到延長位，再主動向心收縮；它的適應症本身就包括起始動作困難、低張力與無力，並不是以增加活動度為主（增加活動度是 hold-relax）。詳解說它「不是處理起始困難」並不正確，應改為說明節律啟動才是處理起始困難的典型首選技巧。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "節律啟動為起始動作困難的典型技巧，其他技巧說明正確。"
    }
   },
   {
@@ -654,28 +651,25 @@
   },
   {
    "id": "113-1-NEURO-029",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "推者症候群（pusher syndrome）主要是身體垂直感知（subjective postural vertical）偏向患側，病人會用健側推向患側，並抗拒別人把身體擺正。王先生動作已恢復到布朗斯壯（Brunnstrom）第五期，卻還是會往患側倒，所以問題在中線認知，治療上應利用視覺回饋等方式，幫他重新建立垂直與中線的概念。",
+   "why_correct": "推者症候群（pusher syndrome）的主觀身體垂直感知偏向腦損傷同側（健側），病人以為身體歪了，便用健側推向患側去「矯正」，並抗拒被擺正。王先生動作已達布朗斯壯（Brunnstrom）第五期仍倒向患側，問題在中線認知。",
    "why_others": {
-    "A": "肌力已達第五期，傾倒主因是垂直感知異常，不是肌力不足。",
+    "A": "動作已達第五期，傾倒主因是垂直感知異常，不是肌力不足。",
     "C": "傾倒來自知覺障礙，不是病人不願配合。",
-    "D": "推者症候群多數會隨時間改善，預後不差，可以把獨立行走設為目標。"
+    "D": "推者症候群多數會隨時間改善，不應只把目標設在輪椅。"
    },
-   "takeaway": "推者症候群主因是垂直/中線感知偏斜，要用視覺回饋重建中線，而且多數預後良好。",
+   "takeaway": "推者症候群：垂直感知偏向健側，治療重點是重建中線認知。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒有問題，但詳解說推者症候群的主觀身體垂直感知「偏向患側」是錯的；依 Karnath 的研究，這種垂直感知是偏向腦損傷同側，也就是健側（約 18°），病人才會用健側把身體推向患側去「矯正」。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "推者症候群主觀垂直感偏向健側，問題在中線認知，多數預後可改善，正確。"
    }
   },
   {
@@ -823,26 +817,33 @@
    "id": "113-1-NEURO-036",
    "status": "rejected",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "顱內壓升高（increased intracranial pressure）常見的徵象有頭痛、嘔吐、意識程度下降、視神經乳頭水腫，腦幹受壓時還會出現呼吸不規律。心跳變慢屬於庫欣反射（Cushing reflex）的晚期表現，不是一般伴隨的徵象，所以本題選B。",
+   "why_correct": "意識程度降低、視神經乳頭水腫（papilledema）與呼吸不規律，都是顱內壓升高（increased intracranial pressure）常列出的伴隨徵象。心跳變慢只在庫欣反射（Cushing reflex）合併血壓升高時出現，單獨的心跳下降並非固定表現，四者中最不符合，故選B。",
    "why_others": {
-    "A": "腦灌流下降、網狀活化系統受壓，意識程度最早下降，是最敏感的指標。",
-    "C": "顱內壓經視神經鞘傳到視神經乳頭，造成水腫，是典型徵象。",
-    "D": "腦幹呼吸中樞受壓，會出現陳施氏呼吸（Cheyne-Stokes respiration）等不規律呼吸型態。"
+    "A": "腦灌流下降、網狀活化系統受壓，意識程度下降是最敏感的指標。",
+    "C": "顱內壓經視神經鞘傳到視神經乳頭造成水腫，是典型徵象。",
+    "D": "腦幹呼吸中樞受壓，會出現不規律的呼吸型態，是常列出的徵象。"
    },
-   "takeaway": "顱內壓升高的典型徵象：意識下降、頭痛嘔吐、視乳頭水腫、呼吸不規律；心跳變慢屬晚期庫欣反射。",
+   "takeaway": "顱內壓升高：意識下降最敏感，另有視乳頭水腫、呼吸不規律；心跳變慢需配合庫欣反射判讀。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "詳解以「心跳變慢屬晚期庫欣反射，所以不是伴隨徵象」排除B，自相矛盾：庫欣反射本身就是顱內壓升高的徵象，而且D的呼吸不規律同樣是腦幹受壓的晚期表現（也屬庫欣三聯徵），詳解卻把D算成徵象，標準前後不一致。",
+    "blind_confidence": 0.3,
+    "verdict": "answer_disputed",
+    "reason": "心跳變慢是庫欣三徵（Cushing triad）的經典成分，教科書普遍列為顱內壓升高的徵象，四個選項其實都是伴隨徵象，B作為唯一「不是」的答案站不住。",
     "fails": [
-     "reasoning_error"
-    ]
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "詳解以「心跳變慢屬晚期庫欣反射，所以不是伴隨徵象」排除B，自相矛盾：庫欣反射本身就是顱內壓升高的徵象，而且D的呼吸不規律同樣是腦幹受壓的晚期表現（也屬庫欣三聯徵），詳解卻把D算成徵象，標準前後不一致。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1590,28 +1591,25 @@
   },
   {
    "id": "113-1-NEURO-069",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "神經肌肉電刺激（NMES）的作用是延緩失神經肌肉萎縮、維持肌肉特性，加速神經再生的證據並不足。感覺喪失也只是要謹慎使用、加強監測皮膚的情況，並不是絕對禁忌。D的兩個說法都不正確，所以選D。",
+   "why_correct": "神經肌肉電刺激（NMES）主要用來延緩失神經肌肉萎縮、維持肌肉特性；能否加速神經再生，只有特定電刺激方式的初步研究，並非常規目的。感覺喪失也只是要謹慎使用、加強監測皮膚，不是絕對禁忌。D的說法不恰當，所以選D。",
    "why_others": {
     "A": "術後擺位可避免牽拉或壓迫修復的神經，做法正確。",
     "B": "固定期一過就及早活動，可以預防關節攣縮和組織沾黏，做法正確。",
     "C": "神經失用症只是傳導暫時阻斷，通常會自行恢復，保護好患部等待即可。"
    },
-   "takeaway": "電刺激用來延緩失神經肌肉萎縮，不能加速神經再生；感覺喪失時要小心使用，但不是絕對禁忌。",
+   "takeaway": "電刺激主要延緩失神經肌肉萎縮，促進再生的證據有限；感覺喪失需謹慎但非絕對禁忌。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒有問題，但 takeaway 把話說得太絕對：寫電刺激「不能加速神經再生」，跟前文「證據並不足」自相矛盾，也不符合現有研究，因為已有動物與人體研究顯示短暫低頻電刺激（如 20 Hz）能促進軸突再生。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "正確點出電刺激促進再生證據有限、感覺喪失屬注意事項而非絕對禁忌，其他選項說明也正確。"
    }
   },
   {
@@ -1639,28 +1637,25 @@
   },
   {
    "id": "113-1-NEURO-071",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "純垂直、擺動性（pendular）的眼震，而且方向不隨頭部姿勢改變，是中樞性眼震的典型特徵；搖頭誘發眼震陰性，也不支持單側周邊前庭功能低下。中樞病灶常同時影響眼動控制，所以快速掃視（saccade）測試可能異常，①⑤正確。",
+   "why_correct": "純垂直、擺動性（pendular）的眼震不符合周邊前庭性眼震的特徵，提示中樞病灶；搖頭誘發眼震陰性也不支持單側周邊前庭功能低下。中樞病灶常同時影響眼動控制，所以快速掃視（saccade）測試可能異常，①⑤正確。",
    "why_others": {
     "B": "周邊性眼震多為水平或水平旋轉；後半規管BPPV是旋轉加上跳性眼震，本例不符。",
     "C": "①正確，但中樞異常時平滑追蹤常會受損，④「正常」不對。",
     "D": "本例眼震呈中樞性特徵，不是周邊病因；平滑追蹤也不太會正常。"
    },
-   "takeaway": "純垂直或純旋轉、擺動性、方向不變的眼震屬中樞性，常伴隨掃視或平滑追蹤異常。",
+   "takeaway": "純垂直或純旋轉、擺動性的眼震屬中樞性，常伴隨掃視或平滑追蹤異常。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒有問題，但詳解在 why_correct 與 takeaway 都把「方向不隨頭位改變」當成中樞性眼震的典型特徵，這是錯的：方向固定其實比較像周邊前庭性眼震，方向會改變才是中樞徵象；判斷本例為中樞性，應該根據純垂直、擺動性的眼震。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "純垂直、擺動性且方向固定的眼震屬中樞性，伴隨眼動異常，對①⑤與各選項的推理正確。"
    }
   },
   {
@@ -1826,10 +1821,10 @@
   },
   {
    "id": "113-1-NEURO-079",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "長照居家復能（reablement）以功能和活動參與為導向，目標是讓個案在自己家裡恢復日常生活自理、減少對照顧者的依賴。蕭爺爺起身、移位都要家人協助，所以把「獨立完成坐到站」這個具體、可量測的功能性目標放在優先。",
    "why_others": {
@@ -1837,20 +1832,14 @@
     "B": "增加肌力是達成目標的手段，屬於損傷層次，不是復能的主要目標。",
     "D": "預防攣縮屬於維持性、預防性目標，跟提升日常生活獨立沒有直接關係。"
    },
-   "takeaway": "居家復能的目標要訂在活動與參與層次，而且具體、可量測，例如「獨立完成坐到站」；肌力、關節活動度這類損傷層次的改善只是手段。",
+   "takeaway": "居家復能目標要訂在活動與參與層次且具體可量測，如獨立坐到站；肌力等只是手段。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.9,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "takeaway 61 字 > 60"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "居家復能以活動參與層次的具體功能目標為主，對各選項的層次分析正確。"
    }
   },
   {

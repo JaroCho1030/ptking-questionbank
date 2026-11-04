@@ -72,28 +72,25 @@
   },
   {
    "id": "108-2-BASIC-004",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "冠狀窩（coronoid fossa）位於肱骨遠端前側，容納尺骨冠突，不屬於股骨。",
+   "why_correct": "冠狀窩（coronoid fossa）位於肱骨遠端前側，肘屈曲時容納尺骨冠突，不屬於股骨。",
    "why_others": {
     "B": "臀肌粗隆在股骨近端後側，是臀大肌的附著處。",
     "C": "粗線在股骨幹後側，是多條肌肉的附著處。",
     "D": "大轉子在股骨近端外側，屬股骨構造。"
    },
-   "takeaway": "冠狀窩在肱骨與尺骨，不在股骨。",
+   "takeaway": "冠狀窩在肱骨遠端，尺骨上的是冠突。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "takeaway 稱冠狀窩在肱骨與尺骨有誤，冠狀窩只在肱骨，尺骨上的是冠突。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "冠狀窩屬肱骨，其餘皆為股骨構造，說明正確。"
    }
   },
   {
@@ -1237,15 +1234,15 @@
   },
   {
    "id": "108-2-BASIC-054",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "拇指外展長肌屬前臂後側深層肌群，肌腹在前臂，不在手掌的魚際隆起，故不屬於魚際肌群（thenar muscles）。",
+   "why_correct": "拇指外展長肌屬前臂後側深層肌群，起點與肌腹都在前臂，不在手掌的魚際隆起，故不屬於魚際肌群（thenar muscles）。",
    "why_others": {
     "A": "屈拇指短肌屬魚際肌群。",
-    "B": "拇指內收肌通常歸入拇指的手內在肌群，不符合本題要選的對象。",
+    "B": "拇指內收肌屬手內在肌，歸類有爭議，不如前臂肌C明確不屬。",
     "D": "拇指外展短肌屬魚際肌群。"
    },
    "takeaway": "拇指外展長肌是前臂肌，不是魚際肌。",
@@ -1254,11 +1251,8 @@
      "C"
     ],
     "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "B的說明以「不符合本題要選的對象」循環帶過，未交代拇指內收肌是否屬魚際肌（多數解剖書將其另列為內收肌區），未說明為何C比B更應選。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "拇指外展長肌為前臂肌，並如實說明拇指內收肌歸類有爭議。"
    }
   },
   {
@@ -1286,14 +1280,14 @@
   },
   {
    "id": "108-2-BASIC-056",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "力矩平衡：W×a＝F×b，得F＝100×0.25÷0.05＝500 N。FQ與FL夾角106度，兩者合力為2F cos53°＝2×500×0.6＝600 N，與髕股關節反力FP大小相等。",
+   "why_correct": "力矩平衡：W×a＝F×b，得F＝100×0.25÷0.05＝500 N。FQ與FL大小皆為F、夾角106度，合力為2F cos53°＝2×500×0.6＝600 N，與髕股關節反力FP大小相等。",
    "why_others": {
-    "A": "500 N只是F本身，未合成FQ與FL。",
+    "A": "300 N只算了一側分量F cos53°，未將兩力相加。",
     "B": "500 N只是F本身，未合成FQ與FL。",
     "D": "800 N誤用sin53°，應用cos53°。"
    },
@@ -1303,11 +1297,8 @@
      "C"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "計算正確，但A選項是300 N，詳解卻寫成「500 N只是F本身」，與題目選項不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "力矩求得F=500 N，2F cos53°=600 N，計算與各誤選說明正確。"
    }
   },
   {
@@ -1565,16 +1556,16 @@
   },
   {
    "id": "108-2-BASIC-068",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "腰方肌（quadratus lumborum）位在腰椎外側，單側收縮可使腰椎側彎或提髖，這是它的主要作用。",
+   "why_correct": "腰方肌（quadratus lumborum）位在腰椎外側，連接髂嵴、第12肋與腰椎橫突，單側收縮可使腰椎側彎或提髖。",
    "why_others": {
     "A": "腰方肌位於腰椎椎體後外側，不是前方。",
-    "B": "兩側同時收縮是穩定或輕微伸直，不是前彎。",
-    "D": "T10完全損傷者腰方肌仍有神經支配，但選項敘述並非本題要的正確說法。"
+    "B": "兩側同時收縮協助腰椎伸直與穩定，不是前彎。",
+    "D": "腰方肌由T12以下神經支配，T10完全損傷時已失去支配。"
    },
    "takeaway": "腰方肌單側收縮造成腰椎側彎或提髖。",
    "review": {
@@ -1582,11 +1573,8 @@
      "C"
     ],
     "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "D的說明錯誤：腰方肌由T12–L3支配，T10完全損傷者腰方肌已無神經支配，不能藉其行走訓練，詳解卻說「仍有神經支配」。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "腰方肌位置、作用與T12以下支配的說明正確。"
    }
   },
   {
@@ -1709,28 +1697,25 @@
   },
   {
    "id": "108-2-BASIC-074",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "圖C雙手靠近身體中線、手肘貼近身側，肩關節在水平內收方向用力較多，能更有效地訓練胸大肌。",
+   "why_correct": "圖C雙手靠攏於胸下、手肘向外張開，上臂需往身體中線方向用力，肩水平內收的需求較大，能更有效訓練胸大肌。",
    "why_others": {
-    "A": "圖A手距較寬，胸大肌負荷分配不如圖C。",
-    "B": "圖B手距居中，胸大肌效果不如圖C。",
-    "D": "手部擺位改變肩與肘的力臂，會影響各肌肉訓練效果。"
+    "A": "圖A手距較寬，胸大肌訓練效果不如圖C。",
+    "B": "圖B手距約與肩同寬，胸大肌效果不如圖C。",
+    "D": "手部擺位改變肩與肘的受力，會影響各肌肉訓練效果。"
    },
-   "takeaway": "手部擺位會改變胸大肌的訓練效果。",
+   "takeaway": "伏地挺身雙手靠攏，可加強胸大肌水平內收的負荷。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "附圖C是雙手靠攏於胸下、手肘向外張開，詳解卻描述為「手肘貼近身側」，與附圖不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "與附圖相符，窄手距伏地挺身增加胸大肌負荷，說明合理。"
    }
   },
   {

@@ -235,26 +235,33 @@
    "id": "111-2-TECH-011",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "要提高肌電訊號品質，需降低電極與皮膚間阻抗並減少訊號衰減：組織電解離子多有利導電（①），電導液改善介面（③），放大器輸入阻抗高可減少訊號損失（④）。皮膚電阻增加（②）則使訊號變差。",
+   "why_correct": "①組織電解離子多則導電佳；③電導液降低電極與皮膚介面阻抗，題意的「易極化」宜理解為易解離導電，電極本身仍以不易極化者為佳；④放大器輸入阻抗高可減少訊號衰減。",
    "why_others": {
-    "A": "含②，皮膚電阻增加會使雜訊增加、訊號品質變差。",
+    "A": "含②，皮膚電阻增加使訊號衰減、雜訊增加。",
     "C": "含②，且漏掉①與③。",
     "D": "漏掉④，高輸入阻抗同樣有助訊號品質。"
    },
-   "takeaway": "肌電訊號好：皮膚阻抗低、放大器輸入阻抗高。",
+   "takeaway": "肌電訊號好：介面阻抗低、放大器輸入阻抗高。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "詳解把③改述為「電導液改善介面」，迴避題目「易極化」的字眼；易極化的電極／電導液會增加雜訊、降低訊號品質，詳解未說明為何仍算正確，推理不完整。",
+    "blind_confidence": 0.4,
+    "verdict": "answer_disputed",
+    "reason": "肌電量測應使用不易極化的電極與電導液，③字面敘述錯誤，承認答案B含③，嚴格而言沒有完全正確的選項；詳解以「易解離」重新詮釋屬牽強解讀。",
     "fails": [
-     "reasoning_error"
-    ]
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "詳解把③改述為「電導液改善介面」，迴避題目「易極化」的字眼；易極化的電極／電導液會增加雜訊、降低訊號品質，詳解未說明為何仍算正確，推理不完整。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -420,28 +427,25 @@
   },
   {
    "id": "111-2-TECH-019",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "冷熱交替療法使血管反覆收縮與擴張，形成血管幫浦，促進局部血液循環。",
+   "why_correct": "冷熱交替療法使血管反覆收縮與擴張，形成血管幫浦作用，促進局部血液循環。",
    "why_others": {
-    "A": "它主要用於肢體遠端，而非全身水療。",
-    "B": "通常從熱水開始，不是先冷水。",
-    "C": "冷水時間通常比熱水短，不是 3 分鐘對 5 分鐘。"
+    "A": "它主要用於手足等肢體遠端，而非全身水療。",
+    "B": "通常從熱水開始，不是先浸冷水。",
+    "C": "常用熱水約3至4分鐘、冷水約1分鐘，與3對5分鐘不符。"
    },
    "takeaway": "冷熱交替：血管交替收縮擴張，促進循環。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "C 選項本身就是冷 3 分鐘、熱 5 分鐘（冷比熱短），詳解以「冷水時間通常比熱水短」反駁不成立；應說明常用比例約熱 3–4 分鐘、冷 1 分鐘。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "冷熱交替藉血管收縮舒張促進循環、多用於肢體遠端、由熱水開始，說明正確。"
    }
   },
   {
@@ -883,28 +887,25 @@
   },
   {
    "id": "111-2-TECH-039",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "肩胛上抬主要由上斜方肌與提肩胛肌作用，因此該動作可測得這兩條肌肉。",
+   "why_correct": "肩胛上抬主要由上斜方肌與提肩胛肌作用，因此此動作的徒手肌力測試可測得這兩條肌肉的肌力。",
    "why_others": {
-    "A": "低等級時常雙側一起測，並非不論等級都分開。",
-    "B": "一般坐姿是抗重力，需考慮重力因素。",
-    "D": "肩胛上抬主要與副神經及 C3-C4 相關，不是 C5。"
+    "A": "坐姿抗重力等級時通常雙側同時測試，不必分開。",
+    "B": "坐姿屬抗重力測試，低等級需改姿勢除去重力。",
+    "D": "肩胛上抬主要對應C4肌節與副神經，不是C5。"
    },
    "takeaway": "肩胛上抬＝上斜方肌＋提肩胛肌。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "A 的反駁說「低等級時常雙側一起測」與標準相反；徒手肌力測試肩胛上抬通常是在坐姿抗重力等級（5–3 分）時雙側同時測試。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "肩胛上抬由上斜方肌與提肩胛肌執行，抗重力等級雙側同測、對應C4與副神經，說明正確。"
    }
   },
   {
@@ -1096,28 +1097,25 @@
   },
   {
    "id": "111-2-TECH-048",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "舟狀骨在橈骨上屬凸面對凹面，滑行方向與骨面凸動方向相同，即遵循凸對凹原則：凸面（舟狀骨）的滑動方向與骨運動方向相同。",
+   "why_correct": "舟狀骨為凸面、橈骨遠端為凹面，活動凸面的舟狀骨時，滑動方向與骨運動方向相反，屬凸對凹原則。",
    "why_others": {
-    "A": "掌側滑行應固定橈骨，活動舟狀骨（遠端）。",
-    "C": "舟狀骨掌側滑行對應腕背屈的滑動，不增加掌屈。",
-    "D": "尺側偏移時舟狀骨向橈側滑動，與掌側滑行無關。"
+    "A": "掌側滑行應固定橈骨，活動遠端的舟狀骨。",
+    "C": "舟狀骨掌側滑行用來增加腕背伸，不是掌屈。",
+    "D": "掌側滑行主要配合腕伸直，不是用來增加尺側偏移。"
    },
-   "takeaway": "凸對凹原則：凸面滑動方向與骨運動方向相同。",
+   "takeaway": "凸對凹：凸面滑動方向與骨運動方向相反。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "凸對凹原則應是凸面滑動方向與骨運動方向相反，詳解與takeaway寫成相同。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "凸舟狀骨在凹橈骨上滑動屬凸對凹，固定橈骨、掌側滑行增加腕背伸，說明正確。"
    }
   },
   {
@@ -1309,28 +1307,25 @@
   },
   {
    "id": "111-2-TECH-057",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "脛神經鬆動時，動作包含踝背屈、足外翻與趾伸直，腓腸神經與腓總神經則不含趾伸直，因此差別為趾伸直。",
+   "why_correct": "脛神經鬆動為踝背屈、足外翻加趾伸直；腓腸神經為踝背屈加內翻；腓總神經為踝蹠屈加內翻。選項中只有趾伸直與兩者皆不同。",
    "why_others": {
-    "A": "髖內轉三種神經鬆動皆可能納入，不是差別。",
-    "B": "腓腸神經與腓總神經是踝蹠屈、內翻，非脛神經差別所在。",
-    "C": "足內翻是腓腸神經與腓總神經的動作，不是脛神經特有。"
+    "A": "髖內轉可用於三種神經鬆動，不是差別。",
+    "B": "蹠屈只屬腓總神經，脛神經與腓腸神經同為背屈。",
+    "C": "足內翻屬腓腸與腓總神經，脛神經是外翻。"
    },
-   "takeaway": "脛神經鬆動特有動作是趾伸直。",
+   "takeaway": "脛神經鬆動：背屈、外翻、趾伸直，趾伸直為其獨有。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "B稱腓腸神經鬆動為踝蹠屈有誤，腓腸神經為踝背屈加內翻，只有腓總神經為蹠屈。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "脛神經背屈外翻加趾伸直、腓腸神經背屈內翻、腓總神經蹠屈內翻，說明正確。"
    }
   },
   {
@@ -1680,15 +1675,15 @@
   },
   {
    "id": "111-2-TECH-073",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "外展鞍板置於兩大腿之間，位置宜靠近大腿遠端接近膝，才能有效維持下肢對位，防止內收與向前滑動。",
+   "why_correct": "外展鞍板置於兩大腿之間以防止髖內收；放在大腿遠端靠近膝處力臂較長，較小的鞍板就能有效維持下肢對位。",
    "why_others": {
-    "B": "太大會壓迫會陰與影響轉位，應適中。",
-    "C": "鞍板是防止內收過度，不是防止外展。",
+    "B": "太大會壓迫會陰並妨礙轉位，尺寸應適中。",
+    "C": "鞍板是防止髖內收過度，不是防止外展。",
     "D": "防止臀部前滑主要靠骨盆帶與座墊，不是鞍板。"
    },
    "takeaway": "外展鞍板放近大腿遠端，用來避免髖內收。",
@@ -1697,11 +1692,8 @@
      "A"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "why_correct稱鞍板可防止向前滑動，與D的說明（防前滑不靠鞍板）自相矛盾且不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "外展鞍板置大腿遠端以防髖內收，不用於防前滑，各選項說明合理。"
    }
   },
   {

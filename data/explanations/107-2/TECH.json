@@ -49,54 +49,48 @@
   },
   {
    "id": "107-2-TECH-003",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "超音波吸收與組織的蛋白質（膠原）含量相關。骨骼吸收最高，皮膚次之，肌肉再次，脂肪含水與蛋白質少，吸收最低，因此順序為骨骼＞皮膚＞肌肉＞脂肪。",
+   "why_correct": "超音波吸收與組織的蛋白質（尤其膠原）含量相關，含水量越高吸收反而越低。骨骼吸收最高，皮膚次之，肌肉再次，脂肪蛋白質少、吸收最低。",
    "why_others": {
     "A": "把肌肉排在最高，順序不符。",
     "C": "肌肉與脂肪的吸收都不會高於骨骼與皮膚。",
-    "D": "皮膚吸收不會高過骨骼，且骨骼不是最低。"
+    "D": "皮膚吸收不會高過骨骼，且骨骼吸收最高而非最低。"
    },
-   "takeaway": "超音波吸收：骨骼＞皮膚＞肌肉＞脂肪。",
+   "takeaway": "超音波吸收看蛋白質含量：骨骼＞皮膚＞肌肉＞脂肪。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案正確，但以「脂肪含水少」解釋吸收低有誤，含水量高的組織吸收反而低，吸收主要與蛋白質含量有關。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "超音波吸收依蛋白質含量骨骼＞皮膚＞肌肉＞脂肪，說明正確。"
    }
   },
   {
    "id": "107-2-TECH-004",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "波長由大到小依序為短波、微波、紅外線、可見光、紫外線，即①②⑤③④。頻率越高波長越短。",
    "why_others": {
     "A": "紫外線不應排在可見光與紅外線之前。",
     "C": "微波波長小於短波，不能排在短波前面。",
-    "D": "順序幾乎顛倒，成了由小到大。"
+    "D": "把紅外線排第一、短波與微波放最後，順序錯誤。"
    },
    "takeaway": "波長：短波＞微波＞紅外線＞可見光＞紫外線。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "答案正確，但D選項（⑤③④①②）並非由小到大排列，詳解說它「成了由小到大」不符事實。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "波長短波＞微波＞紅外線＞可見光＞紫外線，排序正確。"
    }
   },
   {
@@ -685,15 +679,15 @@
   },
   {
    "id": "107-2-TECH-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "連續直流電下，正極產生鹽酸酸化反應，負極產生氫氧化鈉鹼化反應，這是離子電泳燒傷風險的來源。",
+   "why_correct": "連續直流電下，正極產生鹽酸酸化反應，負極產生氫氧化鈉鹼化反應，這是離子電泳化學性燒傷風險的來源。",
    "why_others": {
-    "A": "酸鹼反應的化合物與極性都不符。",
-    "B": "酸鹼極性顛倒且化合物不符。",
+    "A": "極性正確（正極酸、負極鹼），但產物應為鹽酸與氫氧化鈉。",
+    "B": "酸鹼極性顛倒，且產物不是醋酸與碳酸氫鈉。",
     "D": "酸鹼極性顛倒。"
    },
    "takeaway": "正極酸（鹽酸），負極鹼（氫氧化鈉）。",
@@ -701,12 +695,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "A選項極性（正極酸、負極鹼）其實正確，只有化合物不符，詳解說「化合物與極性都不符」有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "直流電正極產生鹽酸、負極產生氫氧化鈉，各選項分析正確。"
    }
   },
   {
@@ -964,28 +955,25 @@
   },
   {
    "id": "107-2-TECH-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "Maitland 第一、二級為大振幅振動，作用在活動範圍的前段，主要刺激關節機械感受器（mechanoreceptors），經疼痛閘門機制減輕疼痛。",
+   "why_correct": "Maitland第一級為小振幅、第二級為大振幅，皆在未達阻力的範圍內進行，主要刺激關節機械感受器（mechanoreceptors），經疼痛閘門機制減輕疼痛，故D正確。",
    "why_others": {
-    "A": "第一級是小振幅，且靠機械感受器抑制疼痛，不是誘發傷害感受器。",
-    "B": "第二級是大振幅，但第一、二級都用於疼痛，適應症相近，且強度不是第二級大於第一級的概念。",
-    "C": "第一級小振幅適用於疼痛明顯的急性期，不是慢性期。"
+    "A": "第一級是小振幅，且靠刺激機械感受器抑制疼痛，非誘發傷害感受器。",
+    "B": "一、二級差在振幅大小而非強度，適應症同樣是止痛。",
+    "C": "第一級用於疼痛明顯的急性期，不是慢性期。"
    },
-   "takeaway": "Maitland 一、二級用於止痛，三、四級用於增加活動度。",
+   "takeaway": "Maitland一、二級用於止痛，三、四級用於增加活動度。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 稱「第一、二級為大振幅」有誤，第一級為小振幅，且與 A 的說明自相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "Maitland一、二級皆為止痛，二級大振幅刺激機械感受器，其餘選項駁斥正確。"
    }
   },
   {
@@ -1013,28 +1001,25 @@
   },
   {
    "id": "107-2-TECH-044",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "③錯：肌肉能量技術用於頸部並非一律嚴禁，只是須注意安全；①②④皆符合該技術的操作原則，故錯誤的是僅①②③以外的組合，答案為 C 所列之錯誤敘述的選取。",
+   "why_correct": "①錯：肌肉能量技術每次只需重複少數幾回。②錯：病人以輕度的次最大力量短暫收縮，不需抵抗中度到最大阻力。③錯：頸部可謹慎使用，並非嚴禁。④正確，故選①②③。",
    "why_others": {
-    "A": "選項含④，但④正確，且漏掉錯誤的③。",
-    "B": "選項含④，且遺漏①，不符題意。",
-    "D": "選項含④，且遺漏①，不符題意。"
+    "A": "④是正確敘述不應選入，且漏了錯誤的③。",
+    "B": "④是正確敘述不應選入，且漏了錯誤的②。",
+    "D": "④是正確敘述不應選入，且漏了錯誤的①。"
    },
-   "takeaway": "肌肉能量技術用次最大等長收縮，頸部謹慎使用而非禁用。",
+   "takeaway": "肌肉能量技術：輕度次最大等長收縮、少數回，頸部謹慎而非禁用。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱①②④皆正確、只有③錯，與答案 C（①②③錯）矛盾；實際上①（應3～5回）、②（應輕度阻力、維持較短）皆錯，④才正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "肌肉能量技術少數回、輕度短暫收縮、頸部可謹慎使用，①②③錯誤的判斷正確。"
    }
   },
   {
@@ -1157,28 +1142,25 @@
   },
   {
    "id": "107-2-TECH-050",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "機械式肘下義肢的 8 字吊帶交叉點若偏向健側，吊帶張力與摩擦集中在患側腋下，造成腋下疼痛。",
+   "why_correct": "肘下機械式義肢的8字吊帶以健側腋下環固定，交叉點若過於靠近健側，腋下環受力集中，壓迫健側腋下造成疼痛。",
    "why_others": {
-    "B": "套筒滑脫通常影響懸吊穩定，不特別造成腋下痛。",
+    "B": "套筒滑脫影響懸吊穩定，不特別造成腋下痛。",
     "C": "胸大肌肌力不足並非腋下疼痛的原因。",
     "D": "肘屈曲攣縮影響套筒與動作，不是腋下痛主因。"
    },
-   "takeaway": "肘下義肢腋下痛，先檢查吊帶交叉位置。",
+   "takeaway": "肘下義肢健側腋下痛，先檢查8字吊帶交叉點是否偏健側。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "8字吊帶的腋下環套在健側腋下，交叉點太靠健側時壓迫的是健側腋下，詳解說成患側腋下有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "8字吊帶交叉點過於靠近健側造成健側腋下壓迫痛，說明正確。"
    }
   },
   {
@@ -1206,28 +1188,25 @@
   },
   {
    "id": "107-2-TECH-052",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "經股骨截肢後，髖屈肌與外展、外轉肌常失衡，最易形成髖屈曲、外展與外轉攣縮，故須加強伸直與內收方向的牽張。",
+   "why_correct": "經股骨截肢後，髖屈肌與外展肌相對強勢，加上常屈髖擺放，最易形成髖屈曲與外展攣縮，故最主要須加強後伸與內收方向的牽張。",
    "why_others": {
-    "A": "髖屈曲與外展本身就是容易攣縮的方向，不是要牽張的方向。",
-    "C": "髖屈曲與外轉是易攣縮方向。",
-    "D": "後伸正確，但內轉不是要加強牽張的方向。"
+    "A": "髖屈曲與外展正是易攣縮的方向，牽張方向應相反。",
+    "C": "髖屈曲是易攣縮的方向，外轉也非最主要的牽張方向。",
+    "D": "後伸正確，但內轉不是最主要方向，應為後伸與內收。"
    },
-   "takeaway": "經股截肢要預防髖屈曲、外展、外轉攣縮，故牽張伸直與內收。",
+   "takeaway": "經股截肢最怕髖屈曲外展攣縮，牽張重點是後伸與內收。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "詳解先說易形成外轉攣縮，卻在 D 稱內轉不是要牽張的方向，前後矛盾；D 應以「伸直與內收才是最主要的方向」說明。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "經股截肢易髖屈曲外展攣縮，牽張重點為後伸與內收，說明正確。"
    }
   },
   {
@@ -1326,25 +1305,32 @@
    "id": "107-2-TECH-057",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "67b39cc7f906",
-   "why_correct": "考選部公告 B、C 都給分。右膕旁肌緊（膕角 85 度），故右腿靠不宜垂直 90 度；選項 B 的座背 95 度與只降左前座墊的調整，和左髖屈曲小於 90 度的量測結果不相稱，兩者皆有爭議。原公布答案僅 C。",
+   "why_correct": "考選部更正B、C都給分。右側膕角85度表示膕旁肌緊，垂直式腿靠使膝伸得超過可容許範圍，牽拉膕旁肌，故C不恰當。左髖屈曲不到90度，B座背仍設95度，只降低左前座墊能否足夠開放左髖角度有疑義，也可判為不恰當。原公布答案僅C。",
    "why_others": {
-    "A": "左髖屈曲不足、右髖 110 度，座背 110 度可容納髖屈曲受限，合理。",
-    "D": "左膕角大於 110 度，左腿靠 90 度垂直式可行。"
+    "A": "左髖屈曲不足90度，座背110度可開放髖角，容納屈髖受限，合理。",
+    "D": "左膕角大於110度，膕旁肌長度足夠，垂直式腿靠可行。"
    },
-   "takeaway": "膕旁肌緊的一側腿靠要向前伸，不能垂直。",
+   "takeaway": "膕旁肌緊的一側，腿靠要往後收讓膝更屈，不宜用垂直式。",
    "review": {
     "blind_answer": [
-     "C"
+     "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "右膕角85度表示膕旁肌緊，腿靠應更往後收、讓膝更彎曲，詳解 takeaway 說「腿靠要向前伸」方向相反，會加重膕旁肌牽拉；B 的爭議說明也含糊。",
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "依附圖右膕角85度、左髖屈曲不足90度，C與B不恰當的說明與更正給分一致。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "右膕角85度表示膕旁肌緊，腿靠應更往後收、讓膝更彎曲，詳解 takeaway 說「腿靠要向前伸」方向相反，會加重膕旁肌牽拉；B 的爭議說明也含糊。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1810,28 +1796,25 @@
   },
   {
    "id": "107-2-TECH-077",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "平背（flat back）腰薦角減少，而不是增加。",
+   "why_correct": "平背（flat back）以腰椎前凸減少、骨盆後傾為特徵，腰薦角隨之減少而非增加，故C最不可能發生。",
    "why_others": {
-    "A": "平背常伴胸椎後凸減少，此選項為可能。",
-    "B": "平背者骨盆後傾，髖過度伸直，可能發生。",
+    "A": "胸椎正常為後凸，題目「前凸」用詞不精確，宜解為胸椎曲度變平，可能發生。",
+    "B": "平背者骨盆後傾，常伴髖過度伸直，可能發生。",
     "D": "骨盆後傾是平背特徵。"
    },
-   "takeaway": "平背：骨盆後傾、腰椎前凸與腰薦角減少。",
+   "takeaway": "平背：骨盆後傾、腰椎前凸與腰薦角減少、胸椎曲度變平。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "A 選項寫「胸椎前凸減少」，詳解卻改寫成「胸椎後凸減少」來說明，與題目不符，也未指出題目用詞問題。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "平背腰椎前凸減少、骨盆後傾、腰薦角減少，並合理處理A選項用詞問題。"
    }
   },
   {

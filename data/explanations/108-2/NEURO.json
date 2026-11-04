@@ -1156,28 +1156,25 @@
   },
   {
    "id": "108-2-NEURO-051",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "ALS 下運動神經元受損時，舌部肌肉在休息狀態下可見局部肌肉抽動（fasciculation），是延髓功能評估的重要觀察項目。",
+   "why_correct": "ALS下運動神經元受損時，舌肌在休息狀態可見局部肌肉抽動（fasciculation），是延髓功能評估的重要觀察項目。",
    "why_others": {
-    "A": "吐舌偏向一側可見，但評估重點不只於此，此項並非本題所指的主要觀察。",
+    "A": "吐舌偏向是單側舌下神經病變表現，ALS重點在萎縮與抽動。",
     "C": "圓唇吐氣主要是口輪匝肌，並非咀嚼肌。",
-    "D": "胸鎖乳突肌是副神經支配，與延髓功能及呼吸測試無此關聯。"
+    "D": "胸鎖乳突肌應以抗阻轉頭等方式單獨測試。"
    },
-   "takeaway": "ALS 延髓評估要看舌頭靜止時的肌束抽動。",
+   "takeaway": "ALS延髓評估要看舌頭靜止時的肌束抽動。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "D 的解析稱胸鎖乳突肌與延髓功能及呼吸測試無關不正確：胸鎖乳突肌為呼吸輔助肌，副神經也常列入延髓／腦神經評估，D 錯在應另以抗阻轉頭等方式單獨測試；A 的解析也含糊未說明真正錯因。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "ALS延髓評估觀察舌肌靜止時肌束抽動，其餘選項說明正確。"
    }
   },
   {
@@ -1828,26 +1825,33 @@
    "id": "108-2-NEURO-080",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "圖中病灶位於標示 R 的右側大腦半球額頂區，影響右側運動皮質，造成對側（左側）偏癱。",
+   "why_correct": "MRI指環狀病灶位於標示R的右側額葉，病灶及周圍水腫可波及運動區或其下行路徑，造成對側（左側）偏癱。",
    "why_others": {
     "B": "病灶在右腦，對側應為左側，而非右側偏癱。",
     "C": "單一側大腦病灶不會造成四肢癱瘓。",
     "D": "下半身癱瘓多見於脊髓病變，並非此病灶表現。"
    },
-   "takeaway": "大腦運動區病灶造成對側偏癱，右腦病灶對應左側偏癱。",
+   "takeaway": "單側大腦病灶影響運動路徑，造成對側偏癱。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.7,
+    "blind_confidence": 0.25,
     "verdict": "reasoning_error",
-    "reason": "附圖病灶位於標 R 側的額葉前中段，並非詳解所稱的額頂區、直接位於運動皮質；左側偏癱應以右額葉病灶及周圍水腫波及運動區或其下行路徑來解釋。",
+    "reason": "批次未提供MRI附圖，無法確認詳解所述病灶位於右側額葉，判為無法確認。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "附圖病灶位於標 R 側的額葉前中段，並非詳解所稱的額頂區、直接位於運動皮質；左側偏癱應以右額葉病灶及周圍水腫波及運動區或其下行路徑來解釋。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   }
  ]

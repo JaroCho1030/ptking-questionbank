@@ -49,28 +49,25 @@
   },
   {
    "id": "111-2-ORTHO-003",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "前位頭部時上頸椎過度後伸，使下頜骨相對向後、向下移位，張口肌群長度改變，改變顳頜關節的力學。",
+   "why_correct": "前位頭部時頭前移、上頸椎後伸，舌骨上、下肌群受牽張而將下頜往後下拉，使下頜骨向後、向下移位，改變顳頜關節力學。",
    "why_others": {
-    "A": "舌骨向下移位不是前位頭部公認的下頜關節影響。",
-    "C": "髁突後移時，間盤相對較易向前位移，而非向後。",
-    "D": "舌骨下肌在前位頭部時是被拉長，而非變短。"
+    "A": "舌骨向下移位不是前位頭部對顳頜關節的典型描述。",
+    "C": "下頜髁突後移時，間盤相對易向前位移，非向後。",
+    "D": "舌骨下肌在前位頭部時受牽張，而非變短。"
    },
-   "takeaway": "前位頭部：下頜向後下移位，舌骨上肌短、下肌長。",
+   "takeaway": "前位頭部：舌骨上下肌群受牽張，下頜被拉向後下。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "takeaway稱前位頭部時舌骨上肌變短有誤，經典描述（如Kisner）為舌骨上、下肌群皆受牽張而將下頜往後下拉。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "前位頭部時舌骨上下肌群受牽張、下頜被拉向後下的說明合理，其餘選項排除無誤。"
    }
   },
   {
@@ -952,28 +949,25 @@
   },
   {
    "id": "111-2-ORTHO-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "掌指關節掌側由淺到深依序為屈肌滑車、屈指淺肌、屈指深肌，最深處緊貼關節的是掌板（volar plate），因此順序為②③④①。",
    "why_others": {
     "A": "掌板位於最深層，不在最淺層。",
-    "C": "掌板應在最深層，且屈指淺肌在深肌之前。",
-    "D": "滑車為最淺，掌板為最深，順序顛倒。"
+    "C": "掌板應在最深層，不會在滑車與屈指淺肌之間。",
+    "D": "屈肌滑車在最淺層，不應排在兩條屈肌腱之後。"
    },
-   "takeaway": "MCP 掌側由淺到深：滑車、淺肌、深肌、掌板。",
+   "takeaway": "MCP掌側由淺到深：滑車、淺肌、深肌、掌板。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "C 選項（②①③④）中屈指淺肌本就在深肌之前，詳解卻以此為錯誤理由；D 的掌板也確在最深層，真正錯的是滑車位置，說明與選項不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "MCP掌側由淺到深為滑車、屈指淺肌、屈指深肌、掌板，說明正確。"
    }
   },
   {
@@ -1139,28 +1133,25 @@
   },
   {
    "id": "111-2-ORTHO-050",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "90-90 直腿抬高測試（90-90 SLR）是將髖屈 90 度後主動伸膝，用以評估膕旁肌長度，過程中牽拉坐骨神經，可能誘發神經根症狀。",
+   "why_correct": "90-90直腿抬高測試（90-90 SLR）是髖屈90度後主動伸膝，評估膕旁肌長度；伸膝過程同時牽拉坐骨神經，可能誘發神經根症狀。",
    "why_others": {
-    "A": "抱大腿是固定髖在 90 度，並非因股直肌無力。",
-    "B": "主要測的是膕旁肌柔軟度，不是專測坐骨神經壓迫。",
-    "C": "膝膕角大於 125 度屬膕旁肌緊繃的判讀，不能說測試陽性是這樣定義。"
+    "A": "抱大腿是固定髖屈90度，並非因股直肌無力。",
+    "B": "主要評估膕旁肌柔軟度，不是專測坐骨神經壓迫。",
+    "C": "膕角愈大表示膝愈接近伸直、柔軟度愈好，不代表陽性。"
    },
-   "takeaway": "90-90 SLR 主測膕旁肌長度，亦可牽動神經根。",
+   "takeaway": "90-90 SLR主測膕旁肌長度，亦可牽動神經根。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "C 的解釋稱膕角大於 125 度屬膕旁肌緊繃的判讀，事實相反（膕角愈大表示愈接近伸直、柔軟度愈好），且推理自相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "90-90 SLR主測膕旁肌長度，伸膝時可能牽動神經根，各選項說明合理。"
    }
   },
   {

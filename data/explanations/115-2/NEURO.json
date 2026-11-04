@@ -121,28 +121,25 @@
   },
   {
    "id": "115-2-NEURO-006",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "肌力評估指數（Motricity Index）上肢測捏握、屈肘、肩外展，下肢測踝背屈、伸膝、屈髖。每項依加權給分，三項加總後再加1分，單一肢體滿分100；上下肢分數平均即為單側總分，最低0分，坐姿就能完成施測。",
    "why_others": {
     "B": "也評估遠端動作，如捏握與踝背屈，不只近端大肌群。",
-    "C": "上下肢的各項目都用同一套加權分數，並無不同。",
+    "C": "加權依項目而定（捏握另有一套），不是上肢、下肢各用不同加權。",
     "D": "急性期到慢性期都可使用，常用來追蹤恢復進展。"
    },
-   "takeaway": "Motricity Index：上下肢各3項，加權給分後加1分，滿分100，坐姿施測，含遠端動作。",
+   "takeaway": "Motricity Index：上下肢各3項，加權給分後加1分，單肢滿分100，坐姿施測，含遠端動作。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "選 A 沒錯，但 C 的解釋有事實錯誤：上肢捏握（pinch grip）用的是另一套給分（0/11/19/22/26/33），其他項目用 0/9/14/19/25/33，所以「上下肢所有項目都用同一套加權分數」並不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "Motricity Index的項目、加權、滿分與施測姿勢描述正確。"
    }
   },
   {
@@ -843,12 +840,12 @@
   },
   {
    "id": "115-2-NEURO-037",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "控制關鍵點（key points of control）是治療師手放在身體近端部位（如肩帶、骨盆、胸骨）施加操作的位置。透過這些點可以抑制不正常的姿勢張力，提供本體感覺輸入，誘發正常的動作反應，並引導、調節動作品質。四項功能都成立，所以選D。",
+   "why_correct": "控制關鍵點（key points of control）是治療師手放置操作的部位，包括胸骨等中央關鍵點、肩帶與骨盆等近端關鍵點，以及手、足等遠端關鍵點。透過它們可抑制異常姿勢張力、提供本體感覺輸入、誘發動作並調節動作品質，四項都成立。",
    "why_others": {
     "A": "除了抑制張力，關鍵點還有感覺輸入、誘發與調節動作的作用。",
     "B": "漏了提供本體感覺輸入、調節動作品質這兩項作用。",
@@ -859,12 +856,9 @@
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 正確，但詳解把控制關鍵點定義成「身體近端部位」並不準確：Bobath 的關鍵點分成中央（胸骨）、近端（肩帶、骨盆），也包括手、足等遠端關鍵點，所以這句定義有事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "控制關鍵點四項作用都成立，說明正確。"
    }
   },
   {
@@ -1247,52 +1241,66 @@
    "id": "115-2-NEURO-054",
    "status": "rejected",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "前向轉位時，病患面對輪椅、雙手撐在座椅上。靠頭－臀關係（head-hips relationship）把頭和軀幹往下往前壓，帶動骨盆上抬（①）；T12損傷的上肢肌力完整，用肱三頭肌和闊背肌撐起並抬高身體（③），就能上到座椅。",
    "why_others": {
-    "B": "用屈肘肌勾住輪椅是C5–C6缺少三頭肌時的代償，T12不需要；一手撐椅一手撐地是側向轉位。",
-    "C": "④一手撐椅一手撐地屬於側向轉位；⑤肩伸直柔軟度是背向轉位才需要，前向轉位都不需要。",
-    "D": "②是高位頸髓損傷的代償技巧，④屬於側向轉位，兩者都不是前向轉位的必要條件。"
+    "B": "屈肘肌勾輪椅是C5–C6缺三頭肌的代償，T12不需要；④屬側向轉位。",
+    "C": "④一手撐椅一手撐地屬側向轉位；⑤肩伸直柔軟度是背向轉位才需要。",
+    "D": "②是C5–C6缺三頭肌時的代償；④屬側向轉位，都不是前向轉位必要條件。"
    },
    "takeaway": "前向轉位：頭－臀關係加上三頭肌、闊背肌撐起；側向轉位要膕旁肌延展性，背向轉位要肩伸直柔軟度。",
    "review": {
     "blind_answer": [
-     "A"
+     "C"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒有問題，但詳解 D 項說②是「高位頸髓損傷」的代償技巧有誤：高位頸髓損傷一般指 C1–C4，這類病患沒有屈肘肌，無法這樣勾住輪椅；這是 C5–C6 缺少三頭肌時的代償，也和 B 項自己寫的 C5–C6 前後不一致。",
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "前向轉位靠頭－臀關係加三頭肌、闊背肌撐起，其他選項排除合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "答案 A 沒有問題，但詳解 D 項說②是「高位頸髓損傷」的代償技巧有誤：高位頸髓損傷一般指 C1–C4，這類病患沒有屈肘肌，無法這樣勾住輪椅；這是 C5–C6 缺少三頭肌時的代償，也和 B 項自己寫的 C5–C6 前後不一致。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
    "id": "115-2-NEURO-055",
    "status": "rejected",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "肛周S4-5感覺保留，屬不完全損傷；肘彎曲達3分，且能自主呼吸、聳肩可抗最大阻力，代表C4以上功能正常，所以神經節定為C5。C5以下的關鍵肌中，雙下肢5組都在3分以上，超過半數，屬ASIA D。上肢比下肢弱，薦椎區又有保留，符合中髓症候群（central cord syndrome）。",
+   "why_correct": "肛周皮節有保留，屬不完全損傷。運動節為C5（肘彎曲3分且以上正常），但圖中C5以下皮節都是1分，感覺節為C4，依規則神經節應取較頭側的C4。下肢關鍵肌都≥3分，超過半數，屬ASIA D；上肢比下肢弱、薦區保留，符合中髓症候群。只有C同時符合D與中髓症候群。",
    "why_others": {
-    "A": "超過半數關鍵肌≥3分，應為D；前髓症候群會造成下肢癱瘓，與本例不符。",
-    "B": "肘彎曲已達3分且上方正常，神經節為C5；分級也應為D而非C。",
-    "D": "神經節應為C5；前髓症候群以下肢運動和痛覺喪失為主，與本例不符。"
+    "A": "下肢關鍵肌多為4～5分，過半≥3分，應為D；前髓症候群以下肢癱瘓為主。",
+    "B": "分級應為D而非C：神經節以下過半關鍵肌達3分以上。",
+    "D": "前髓症候群以運動與痛溫覺喪失為主、下肢受影響，本例下肢肌力好。"
    },
-   "takeaway": "C、D的區分：損傷節以下過半關鍵肌≥3分屬D；上肢比下肢弱即為中髓症候群。",
+   "takeaway": "ASIA C、D看神經節以下關鍵肌是否過半≥3分；神經節取感覺節與運動節較頭側者。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
+    "blind_confidence": 0.5,
     "verdict": "reasoning_error",
-    "reason": "附圖顯示 C5 以下皮節都是灰色（1 分），感覺節應為 C4。詳解卻只依肌力、自主呼吸和聳肩就把神經節定為 C5，完全沒提感覺節；依 ISNCSCI，神經節應取感覺節與運動節中較頭側者，所以這個推理有誤。C 仍是最佳選項，是因為只有它同時寫 ASIA D 和中髓症候群。另外，takeaway 說「上肢比下肢弱即為中髓症候群」也過度簡化。",
+    "reason": "詳解自己推得神經節應為C4，卻說只有寫C5的C符合，前後矛盾，也沒說明為何仍選C5。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "附圖顯示 C5 以下皮節都是灰色（1 分），感覺節應為 C4。詳解卻只依肌力、自主呼吸和聳肩就把神經節定為 C5，完全沒提感覺節；依 ISNCSCI，神經節應取感覺節與運動節中較頭側者，所以這個推理有誤。C 仍是最佳選項，是因為只有它同時寫 ASIA D 和中髓症候群。另外，takeaway 說「上肢比下肢弱即為中髓症候群」也過度簡化。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1412,28 +1420,25 @@
   },
   {
    "id": "115-2-NEURO-061",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "路徑2是紋狀體（striatum）到內蒼白球的直接路徑，路徑3是紋狀體到外蒼白球的間接路徑，兩者都用GABA，屬於抑制性。路徑5是外蒼白球到視丘下核（subthalamic nucleus），也是GABA抑制性。所以答案是2、3、5。",
    "why_others": {
     "A": "路徑1是皮質到紋狀體的麩胺酸（glutamate）投射，屬於興奮性。",
     "C": "路徑4是視丘下核到內蒼白球的麩胺酸投射，屬於興奮性。",
-    "D": "路徑4是視丘下核送出的興奮性投射，不是抑制性。"
+    "D": "包含興奮性的路徑4，且漏掉抑制性的路徑2。"
    },
-   "takeaway": "基底核中只有皮質與視丘下核的輸出是興奮性（麩胺酸），紋狀體與蒼白球的輸出都是GABA抑制性。",
+   "takeaway": "紋狀體與蒼白球的輸出都是GABA抑制性；皮質→紋狀體、視丘下核→內蒼白球是麩胺酸興奮性。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "各路徑判斷都正確：1、4 是興奮性，2、3、5 是 GABA 抑制性，答案 B 沒問題；但 takeaway 說「只有皮質與視丘下核的輸出是興奮性」，漏掉了圖中同樣屬興奮性（麩胺酸）的視丘→皮質投射，而黑質的多巴胺投射也不能單純歸成興奮或抑制，這個以偏概全的說法會誤導考生。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "與附圖相符：2、3、5為GABA抑制性，1、4為麩胺酸興奮性。"
    }
   },
   {

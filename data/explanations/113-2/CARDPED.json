@@ -187,28 +187,25 @@
   },
   {
    "id": "113-2-CARDPED-009",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "PCD患者纖毛擺動異常，黏液纖毛清除功能受損，痰液滯留，需要靠呼吸道清潔技術代償。PEP吐氣時產生正壓，能撐開小氣道、增加側支通氣，讓氣流進到痰液後方，把分泌物推往中央氣道再咳出，是直接用來清痰的技術。",
    "why_others": {
     "A": "腹式呼吸用來改善呼吸效率、減少呼吸輔助肌使用，本身不是清痰技術。",
-    "B": "圓唇吐氣主要防止阻塞性肺病的小氣道塌陷、減輕呼吸困難，清痰效果有限。",
-    "C": "有氧運動可輔助排痰並提升體能，但清潔氣道的效果不如專門的清痰器材直接。"
+    "B": "圓唇吐氣主要防止小氣道塌陷、減輕呼吸困難，清痰效果有限。",
+    "C": "有氧運動可輔助排痰並提升體能，但清潔氣道不如專門的清痰技術直接。"
    },
-   "takeaway": "纖毛功能異常（PCD、囊性纖維化）以呼吸道清潔技術為主，PEP是常用的清痰器材。",
+   "takeaway": "PCD是纖毛本身缺陷、黏液清除差，治療以呼吸道清潔技術為主，PEP是常用清痰器材。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "選項分析大致正確，但 takeaway 把囊性纖維化歸為「纖毛功能異常」並不正確：囊性纖維化是 CFTR 氯離子通道缺陷造成黏液濃稠，纖毛本身結構正常，與 PCD 的原發性纖毛缺陷不同。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "PCD的黏液纖毛清除受損，需要呼吸道清潔技術，PEP是直接用來清痰的器材，說明正確。"
    }
   },
   {
@@ -305,28 +302,25 @@
   },
   {
    "id": "113-2-CARDPED-014",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "長期全身性類固醇（systemic corticosteroids）會抑制膠原合成、減少骨形成並分解蛋白質，讓肌腱、韌帶與關節軟骨變弱，還可能造成股骨頭缺血性壞死（avascular necrosis）。所以關節完整性只會下降，不會增加，D 最不可能是藥物的影響。",
    "why_others": {
     "A": "類固醇抑制成骨細胞、減少鈣吸收，是骨質疏鬆的常見原因。",
-    "B": "類固醇分解肌肉蛋白，造成類固醇肌病變與肌肉無力，屬可能的副作用。",
+    "B": "類固醇分解肌肉蛋白造成肌病變，典型以近端無力為主，仍屬可能的影響。",
     "C": "骨質疏鬆會讓脊椎容易發生壓迫性骨折，這是長期用類固醇的典型併發症。"
    },
-   "takeaway": "長期類固醇會讓骨、肌、結締組織都變弱：骨鬆、壓迫性骨折、肌病變、關節與肌腱變脆弱。",
+   "takeaway": "長期類固醇讓骨、肌、結締組織都變弱：骨鬆、壓迫性骨折、近端肌病變、肌腱變脆弱。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "類固醇肌病變的典型表現是近端肌肉無力（如髖帶、肩帶），不是遠端；B 的說明直接把「遠端肌肉無力」當成典型副作用，沒有交代近端與遠端的差別，事實描述不精確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "類固醇會削弱結締組織，不會增加關節完整性，骨鬆、骨折與肌病變的說明正確。"
    }
   },
   {
@@ -1254,28 +1248,25 @@
   },
   {
    "id": "113-2-CARDPED-055",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "頭部擺在正中（midline）位置，可以避免頸靜脈受壓，維持腦部靜脈回流順暢。床頭抬高約30度能降低顱內靜脈壓，減少早產兒脆弱的生發基質（germinal matrix）因壓力波動而出血，所以出生後頭幾天建議採用這個擺位。",
+   "why_correct": "頭部擺在正中（midline）位置可避免頸靜脈受壓，維持腦部靜脈回流；床頭稍微抬高能降低顱內靜脈壓，減少早產兒脆弱的生發基質（germinal matrix）因壓力波動而出血。四個選項中以A最符合。",
    "why_others": {
-    "B": "頭轉向一側會壓迫同側頸靜脈，影響回流、升高顱內壓；抬高45度也過高。",
+    "B": "頭轉向一側會壓迫同側頸靜脈，影響腦部靜脈回流。",
     "C": "頸部屈曲會壓迫頸部血管、阻礙靜脈回流，也可能影響呼吸道通暢。",
-    "D": "頸部過度伸直同樣會影響靜脈回流，床頭只抬高15度也不夠。"
+    "D": "頸部伸直會影響頸靜脈回流、造成顱內壓波動，不利預防出血。"
    },
-   "takeaway": "預防早產兒腦室內出血（IVH）：頭部保持正中，床頭抬高約30度，讓頸靜脈回流順暢。",
+   "takeaway": "預防早產兒腦室內出血（IVH）：頭部保持正中、床頭稍抬高，避免轉頭與頸部屈伸。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.93,
-    "verdict": "reasoning_error",
-    "reason": "承認答案 A 正確，但詳解在 D 寫「床頭只抬高15度也不夠」有誤：常見的 IVH 預防照護指引是建議頭部正中、床頭抬高 15–30 度，15 度本身並非不足。D 錯在頭部伸直 30 度會影響頸靜脈回流，而不是床頭角度。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "頭部正中、床頭抬高可維持頸靜脈回流，降低IVH風險，各選項說明正確。"
    }
   },
   {

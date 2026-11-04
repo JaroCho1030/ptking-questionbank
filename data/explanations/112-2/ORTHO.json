@@ -535,28 +535,25 @@
   },
   {
    "id": "112-2-ORTHO-024",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "左髂骨較高時，骨盆姿勢與腰椎旋轉方向沒有必然的對應，腰椎向左旋轉與其他三項表現的關係最小，所以最不吻合。",
+   "why_correct": "左髂骨較高時腰椎會向左側彎；依腰椎在中立位的耦合動作，側彎與旋轉方向相反，腰椎應向右旋轉，因此向左旋轉最不吻合。",
    "why_others": {
-    "A": "髂骨較高側髖關節常呈現些微內收，吻合。",
-    "C": "胸椎代償向右側彎，與左髂骨高的情況吻合。",
+    "A": "髂骨較高側髖關節呈些微內收，吻合。",
+    "C": "腰椎左側彎，胸椎向右側彎代償，吻合。",
     "D": "右側薦髂關節面較水平，可與骨盆高低差相符。"
    },
-   "takeaway": "骨盆高低差看側彎與髖內收的代償方向。",
+   "takeaway": "左髂骨高：腰椎左側彎、耦合向右旋轉，胸椎右側彎代償。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "詳解以「骨盆與腰椎旋轉沒有必然對應」作理由不正確，應說明左髂骨高時腰椎向左側彎、依耦合動作會向右旋轉，故向左旋轉不吻合。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "左髂骨高致腰椎左側彎、中立位耦合向右旋，故左旋最不吻合，說明正確。"
    }
   },
   {
@@ -748,28 +745,25 @@
   },
   {
    "id": "112-2-ORTHO-033",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "背太重的書包會壓迫鎖骨上方與下方的神經血管，是胸廓出口症候群的成因之一。",
+   "why_correct": "背太重的書包會把鎖骨與肩帶往下壓，使肋鎖間隙變窄、壓迫神經血管，是胸廓出口症候群的成因之一。",
    "why_others": {
-    "A": "最常見的是前斜角肌與中斜角肌緊，而不是後斜角肌。",
-    "B": "主要壓迫的是臂神經叢與鎖骨下血管，不是腋神經。",
-    "D": "測試結果並不是這個症候群的必要敘述，題意不符。"
+    "A": "常見壓迫在前斜角肌與中斜角肌之間，不是後斜角肌。",
+    "B": "主要壓迫臂神經叢與鎖骨下血管，不是腋神經。",
+    "D": "Rockwood測試是檢查肩關節前向不穩定，不是此症的測試。"
    },
-   "takeaway": "胸廓出口症候群：重背包與斜角肌、肋鎖間隙壓迫。",
+   "takeaway": "胸廓出口症候群：重背包、斜角肌與肋鎖間隙壓迫。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "D的說明含糊且誤導，Rockwood測試是檢查肩前向不穩，並非胸廓出口症候群的測試，詳解未指出此點。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "重背包壓迫肋鎖間隙為成因，前中斜角肌間、臂神經叢、Rockwood為肩前向不穩測試，正確。"
    }
   },
   {

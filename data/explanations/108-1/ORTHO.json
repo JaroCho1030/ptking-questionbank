@@ -141,28 +141,25 @@
   },
   {
    "id": "108-1-ORTHO-007",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "後方可摸到階梯狀隆起，且Sharp-Purser test陽性，代表寰椎（C1）相對於樞椎（C2）向前滑脫，齒突無法擋住寰椎，造成寰軸不穩。",
+   "why_correct": "寰椎（C1）相對樞椎（C2）向前滑脫時，上頸椎後方可摸到階梯狀隆起。寰椎前移主要由橫韌帶限制，橫韌帶鬆弛或斷裂即造成寰軸不穩，Sharp-Purser test將C1往後推可感到復位而呈陽性。",
    "why_others": {
     "A": "棘突骨折不會造成Sharp-Purser陽性的寰軸不穩。",
-    "B": "枕骨向前滑脫是寰枕關節問題，非此測試所指。",
-    "D": "是C1相對C2往前，不是C2向前滑脫。"
+    "B": "枕骨向前滑脫是寰枕關節問題，非此測試所檢查。",
+    "D": "測試檢查的是C1相對C2往前，不是C2向前滑脫。"
    },
-   "takeaway": "Sharp-Purser陽性：C1向前滑脫，寰軸不穩。",
+   "takeaway": "Sharp-Purser陽性：C1前移，橫韌帶失能致寰軸不穩。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "寰椎前移主要由橫韌帶限制，詳解稱「齒突無法擋住寰椎」造成寰軸不穩，機轉描述有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "Sharp-Purser陽性代表寰椎相對樞椎前移、橫韌帶失能，說明正確。"
    }
   },
   {
@@ -700,28 +697,25 @@
   },
   {
    "id": "108-1-ORTHO-031",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "肩胛過度上抬時，應在上舉時給予下斜方肌（lower trapezius）觸覺指引，並讓病患在肩胛上旋時專注避免上抬，建立動作控制。",
+   "why_correct": "手臂上舉時肩胛過度上抬，需在上舉情境中矯正。給予下斜方肌（lower trapezius）觸覺指引，讓病患在肩胛上旋時專注避免上抬，可建立正確的動作控制。",
    "why_others": {
     "A": "單純下壓練習沒有結合手臂上舉的動作情境。",
-    "B": "於肘部給予往上阻力會增加上斜方肌代償。",
+    "B": "雖徵召下壓肌群，但未結合上舉與上旋的動作情境。",
     "D": "菱形肌作用是下旋，與上舉時需要的上旋不符。"
    },
-   "takeaway": "矯正肩胛上抬：下斜方肌提示，上舉時控制。",
+   "takeaway": "矯正上舉時肩胛上抬：下斜方肌提示，在上旋中控制。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "肘部給予往上阻力時病患需下壓肩胛抵抗，徵召的是下壓肌群而非上斜方肌，B的排除理由錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "在上舉情境以下斜方肌引導控制上抬，各選項分析正確。"
    }
   },
   {
@@ -1466,28 +1460,25 @@
   },
   {
    "id": "108-1-ORTHO-064",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "下坡跑與較硬或傾斜路面會增加髂脛束摩擦，所以上坡傷害較小的說法或公路比泥土好都不恰當，此敘述最不恰當。",
+   "why_correct": "下坡跑確實比上坡更易加重髂脛束摩擦，前半句本身正確；但公路多為較硬且有傾斜的路面，反而增加髂脛束負擔，說公路比泥土路好不正確，故此敘述最不恰當。",
    "why_others": {
-    "A": "急性期休息並避免反覆屈伸是合理的。",
+    "A": "症狀期休息並避免反覆大範圍屈伸是合理的。",
     "B": "牽張髖屈肌、股直肌與髂脛束可降低髂脛束張力。",
     "C": "加強臀部肌群可改善骨盆與下肢力線。"
    },
-   "takeaway": "髂脛束症候群：避免下坡與硬路面，強化臀肌。",
+   "takeaway": "髂脛束症候群：避免下坡與傾斜硬路面，強化臀肌。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "下坡跑確實比上坡更易加重髂脛束摩擦，「上坡傷害較小」本身正確，D不恰當處在公路（傾斜硬路面）較泥土好；詳解卻稱上坡傷害較小的說法也不恰當，與自身前句矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "下坡與傾斜硬路面加重髂脛束症狀，其餘處置合理，說明正確。"
    }
   },
   {

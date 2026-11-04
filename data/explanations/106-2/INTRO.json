@@ -101,15 +101,15 @@
   },
   {
    "id": "106-2-INTRO-005",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "莫爾（Moore）的專業發展階段由低到高依序是終身承諾、代表性專業團體、專業教育、個案服務、獨立自主性，即③⑤②①④。",
    "why_others": {
-    "A": "順序完全相反於正確排列。",
-    "C": "終身承諾應最先，順序不符。",
+    "A": "只是照編號排列，與正確順序③⑤②①④不符。",
+    "C": "以專業教育為首不對，終身承諾才是最初階段。",
     "D": "專業教育應在代表性專業團體之後，順序顛倒。"
    },
    "takeaway": "順序：終身承諾→團體→教育→服務→自主。",
@@ -117,12 +117,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "選項 A ①②③④⑤ 並非正確順序③⑤②①④的完全相反，A 的說明錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "Moore專業發展順序為終身承諾、團體、教育、服務、自主，說明正確。"
    }
   },
   {
@@ -295,28 +292,25 @@
   },
   {
    "id": "106-2-INTRO-013",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "對病人身體隱私的檢查，應取得病人本人同意；病人有決定能力時，不能僅憑家屬同意就施行。",
+   "why_correct": "觸及身體隱私的檢查，須先徵得病人同意，並應有護理人員或第三者在場陪同；只憑同意、甚至僅家屬同意即施行，不符實習規範。",
    "why_others": {
     "A": "維護病人權益與隱私符合實習規範。",
     "B": "服裝整齊、態度莊重符合規範。",
     "D": "執行業務時配戴名牌以供辨識，符合規範。"
    },
-   "takeaway": "隱私檢查須獲病人本人同意。",
+   "takeaway": "隱私檢查須病人同意，並有第三者陪同。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "C 錯在觸及隱私的檢查除病人同意外還須有護理人員或第三者陪同，詳解只談家屬同意，並暗示取得病人同意即可施行，漏掉關鍵規範。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "隱私檢查須病人同意並有第三者陪同，僅家屬同意即施行不符規範，說明正確。"
    }
   },
   {
@@ -1290,16 +1284,16 @@
   },
   {
    "id": "106-2-INTRO-056",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "貼紮組風險為6/50＝12%，控制組為12/48＝25%。相對風險降低為（25－12）/25＝52%。",
+   "why_correct": "貼紮組風險為6/50＝12%，控制組為12/48＝25%。相對風險降低為（25%－12%）/25%＝52%。",
    "why_others": {
-    "A": "6%並非任何正確的風險計算結果。",
+    "A": "6是貼紮組受傷人數，不是風險降低。",
     "B": "13%是絕對風險降低，不是相對風險降低。",
-    "C": "48%是控制組人數，與風險降低無關。"
+    "C": "48%是相對風險（12%/25%），不是相對風險降低。"
    },
    "takeaway": "RRR＝（對照風險－實驗風險）/對照風險。",
    "review": {
@@ -1307,11 +1301,8 @@
      "D"
     ],
     "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "C 的 48% 是相對風險（12%/25%），詳解卻說成控制組人數，屬錯誤說明。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "RRR＝(25%－12%)/25%＝52%，13%為ARR、48%為RR，說明正確。"
    }
   },
   {
@@ -1824,28 +1815,25 @@
   },
   {
    "id": "106-2-INTRO-079",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "影像上R標示在左側，故影像左邊是病人右側。右側顱骨內板下可見新月形高密度影，貼著腦表面，符合右側硬腦膜下出血。",
+   "why_correct": "影像上R標示在左側，故影像左邊是病人右側。病人右側顱骨內板下可見沿腦凸面延伸的新月形積血，貼著腦表面並壓迫腦組織，符合右側硬腦膜下出血。",
    "why_others": {
     "A": "硬腦膜上出血呈雙凸透鏡形，不是新月形。",
     "B": "硬腦膜上出血形狀與左側判讀皆不符。",
-    "D": "新月形出血在病人右側，不是左側。"
+    "D": "新月形積血在病人右側，不是左側。"
    },
-   "takeaway": "新月形出血為硬腦膜下，注意影像左右相反。",
+   "takeaway": "新月形為硬腦膜下出血，判讀時注意影像左右與病人相反。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "左右判讀與新月形硬腦膜下出血正確，但附圖中血塊看不出是高密度（看起來較接近等密度），「高密度影」這句無法確認。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "影像左右判讀正確，病人右側沿腦凸面的新月形積血符合右側硬腦膜下出血，各選項說明正確。"
    }
   },
   {

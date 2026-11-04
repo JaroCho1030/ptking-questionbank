@@ -3,28 +3,25 @@
  "explanations": [
   {
    "id": "110-1-CARDPED-001",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "pH 7.6 高於正常，屬鹼血症。PaCO₂ 20 mmHg 明顯偏低，是造成鹼化的原因，而 HCO₃⁻ 25 mEq/L 正常，沒有代謝性變化，故為呼吸性鹼中毒。",
    "why_others": {
-    "A": "酸中毒時 pH 會偏低且 PaCO₂ 偏高，與本題相反。",
+    "A": "呼吸性酸中毒 pH 偏低且 PaCO₂ 偏高，與本題相反。",
     "C": "代謝性酸中毒的 HCO₃⁻ 會下降且 pH 偏低，本題都不符。",
     "D": "代謝性鹼中毒的 HCO₃⁻ 會升高，本題 HCO₃⁻ 正常。"
    },
-   "takeaway": "先看 pH 判酸鹼，再看 PaCO₂ 與 HCO₃⁻ 哪個與 pH 同向。",
+   "takeaway": "先看 pH；PaCO₂ 與 pH 反向是呼吸性，HCO₃⁻ 與 pH 同向是代謝性。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "判讀本身正確，但 takeaway 說看 PaCO₂ 與 HCO₃⁻ 哪個「與 pH 同向」有誤：呼吸性異常時 PaCO₂ 與 pH 反向變化（本題 PaCO₂ 低、pH 高），依此口訣反而會誤判。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "pH 升高、PaCO₂ 降低、HCO₃⁻ 正常，判為呼吸性鹼中毒正確。"
    }
   },
   {
@@ -344,28 +341,25 @@
   },
   {
    "id": "110-1-CARDPED-015",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "冠狀動脈需阻塞到相當高的程度（約七成以上）才會在休息時出現心絞痛，阻塞僅 25% 時休息幾乎沒有症狀，因此 C 錯誤。",
+   "why_correct": "冠狀動脈輕度阻塞時休息血流仍足夠；中度狹窄通常只在用力時出現症狀，要非常嚴重的狹窄才會在休息時心絞痛。阻塞 25% 休息時不會有心絞痛，故 C 錯誤。",
    "why_others": {
     "A": "心肌供氧取決於冠狀動脈血流與動靜脈氧差，正確。",
     "B": "心率、收縮力與心壁張力決定心肌耗氧量，正確。",
     "D": "心肌缺血可表現為心絞痛、心電圖變化或心室功能不全，正確。"
    },
-   "takeaway": "冠狀動脈要明顯狹窄才在休息時出現症狀。",
+   "takeaway": "冠狀動脈狹窄越嚴重越早出現症狀，休息時心絞痛代表極嚴重狹窄。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "答案正確，但說冠狀動脈阻塞約七成以上就會在休息時心絞痛不正確：約 70% 狹窄通常只在用力時出現症狀，休息時心絞痛多見於約 90% 以上的嚴重狹窄。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "阻塞 25% 休息時不會有心絞痛，說明正確。"
    }
   },
   {
@@ -879,28 +873,25 @@
   },
   {
    "id": "110-1-CARDPED-038",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "重症患者的肌肉無力與氧化壓力增加、自由基上升有關，而不是下降，因此 D 錯誤。",
+   "why_correct": "重症患者肌無力（ICU-acquired weakness）與氧化壓力增加、自由基上升有關，而不是下降，因此 D 錯誤。",
    "why_others": {
     "A": "臥床過久造成廢用性肌肉萎縮。",
     "B": "發炎性細胞激素上升促進肌肉蛋白分解。",
     "C": "營養不良使肌肉流失。"
    },
-   "takeaway": "重症肌無力：臥床、發炎、營養不良與氧化壓力上升。",
+   "takeaway": "重症患者肌無力：臥床、發炎、營養不良與氧化壓力上升。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "內容正確，但 takeaway 用「重症肌無力」一詞，此為 myasthenia gravis 的專有名稱，與重症患者肌無力（ICU-acquired weakness）不同，會誤導考生。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "重症肌無力與自由基上升有關，說明正確。"
    }
   },
   {
@@ -1666,26 +1657,33 @@
    "id": "110-1-CARDPED-072",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "先天性肌性斜頸多與子宮內擁擠姿勢壓迫有關，屬於產前變形（prenatal deformation）。",
    "why_others": {
-    "A": "變形多由外在機械力引起，內因性則多屬原發性。",
+    "A": "產前變形多由子宮內外力造成，內因性者屬少數，A 非最適敘述。",
     "C": "蹠骨內收多與子宮內姿勢有關，非肌張力異常。",
     "D": "杵狀足是踝背屈受限，而非蹠屈受限。"
    },
-   "takeaway": "子宮內擁擠造成的是變形，如斜頸。",
+   "takeaway": "子宮內擁擠造成的是變形，如先天性肌性斜頸。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.65,
+    "blind_confidence": 0.6,
     "verdict": "reasoning_error",
-    "reason": "A的說明稱內因性變形多屬原發性有誤，內因性變形（如神經肌肉疾病所致）通常是次發於其他原發問題，詳解對A錯在何處的推理不正確。",
+    "reason": "A 的說明只以內因性較少見來駁斥，沒有說明為何錯；內因性變形確實常繼發於神經肌肉等異常，這個推理站不住。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "A的說明稱內因性變形多屬原發性有誤，內因性變形（如神經肌肉疾病所致）通常是次發於其他原發問題，詳解對A錯在何處的推理不正確。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

@@ -611,28 +611,25 @@
   },
   {
    "id": "107-1-ORTHO-027",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "右側薦骨基部較深（偏後）、下外角較高，加上右側髂後上棘觸痛，提示右側薦髂關節後方受力，最可能是後薦髂韌帶扭傷。",
+   "why_correct": "右側薦骨基部較深表示右側偏前，下外角左右不對稱，顯示右側薦髂關節對位異常；觸痛又位於右側髂後上棘，正是後薦髂韌帶附著處，故最可能是後薦髂韌帶扭傷。",
    "why_others": {
     "A": "臀大肌拉傷不會造成薦骨位置改變。",
-    "B": "左側多裂肌無力與此位置關係不明確。",
-    "D": "薦棘韌帶位置較深，不會在髂後上棘處觸痛。"
+    "B": "左側多裂肌無力與右側髂後上棘痛關係不明確。",
+    "D": "薦棘韌帶位於骨盆深處，不會在髂後上棘處觸痛。"
    },
-   "takeaway": "髂後上棘痛加薦骨偏位：後薦髂韌帶問題。",
+   "takeaway": "髂後上棘痛加薦骨偏位：想到後薦髂韌帶。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "薦骨基部「較深」是指偏前（前傾/點頭），詳解誤寫成「偏後」，事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "薦骨偏位加右側髂後上棘觸痛指向右側後薦髂韌帶，其餘選項排除合理。"
    }
   },
   {
@@ -683,28 +680,25 @@
   },
   {
    "id": "107-1-ORTHO-030",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "胸椎各節的棘突與椎體因關節面方向相連，將第8節棘突往前推時，鄰近的第9節椎體也會往前移動，故敘述正確。",
+   "why_correct": "依三分法則（rule of threes），第7至9節胸椎的棘突尖約位於下一節椎體的高度，所以往前推第8節棘突時，常連帶推動第9節椎體往前移動。",
    "why_others": {
     "A": "下段胸椎棘突又趨向水平，並非越往下越朝下。",
     "B": "第4至6節棘突尖約在本身與下一節橫突之間，非同高。",
-    "D": "第12節棘突頂點約與本身橫突相當，並非L1橫突。"
+    "D": "第12節棘突頂點約與本身橫突同高，並非L1橫突。"
    },
-   "takeaway": "胸椎棘突與橫突的相對高度因節段而異。",
+   "takeaway": "三分法則：T7-9 棘突尖約在下一節椎體高度。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "C 成立的依據是三分法則中 T7-9 棘突尖位於下一節椎體/橫突高度，詳解以「關節面方向相連」解釋屬錯誤推理。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "依三分法則 T7–9 棘突尖約在下一節高度，其餘選項說明正確。"
    }
   },
   {

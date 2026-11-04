@@ -95,28 +95,25 @@
   },
   {
    "id": "114-2-ORTHO-005",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "胸椎後凸過大時，肩胛常呈前傾、前突，下斜方肌與前鋸肌（serratus anterior）被拉長而無力，胸小肌則短緊。前鋸肌能讓肩胛貼住胸廓並往上旋，訓練它有助於矯正肩胛失衡。",
+   "why_correct": "胸椎後凸過大時常伴隨圓肩、肩胛前傾前突，胸小肌短緊，中、下斜方肌被拉長，前鋸肌（serratus anterior）則無力、控制不足。前鋸肌能讓肩胛貼住胸廓並上旋，訓練它有助於矯正肩胛失衡。",
    "why_others": {
-    "A": "下斜方肌已被拉長、無力，應該做肌力訓練，不該再牽伸。",
+    "A": "下斜方肌已被拉長、無力，應做肌力訓練，不該再牽伸。",
     "B": "胸小肌短緊會讓肩胛前傾，應該牽伸而非肌力訓練。",
-    "D": "闊背肌常偏緊，會讓肩胛下壓、肱骨內旋，加強它對改善姿勢沒有幫助。"
+    "D": "闊背肌常偏緊，會讓肩胛下壓、肱骨內旋，加強它無助改善姿勢。"
    },
    "takeaway": "駝背、圓肩：牽伸胸小肌、胸大肌，加強前鋸肌與中、下斜方肌。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒問題，但詳解說肩胛前突時前鋸肌「被拉長」並不正確。前鋸肌是肩胛前突肌，肩胛前突時它處於縮短的位置。依 Janda 上交叉症候群的說法，前鋸肌是無力、控制不足，不是被拉長；被拉長的是中、下斜方肌與菱形肌。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "駝背圓肩時前鋸肌無力應加強，其餘選項分析正確。"
    }
   },
   {
@@ -745,28 +742,25 @@
   },
   {
    "id": "114-2-ORTHO-033",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "反置式人工肩關節置換術（reverse shoulder arthroplasty）術後約6週屬保護期，會用肩吊帶保護並避免伸展、內收、內旋的組合動作，但仍應早期介入被動活動度、遠端關節運動與次大等長收縮，以防僵硬並維持肌力。「不建議做運動」過於保守，所以最不適當。",
+   "why_correct": "反置式人工肩關節置換術（reverse shoulder arthroplasty）術後早期屬保護期，平時戴吊帶並避免伸展、內收、內旋的組合動作，但仍應早期做被動活動度、遠端關節運動與次大等長收縮，以防僵硬。「不建議做運動」過於保守，最不適當。",
    "why_others": {
-    "B": "第二級小幅度鬆動不牽拉組織，可減輕疼痛、保持關節活動，早期可以使用。",
+    "B": "第二級是不達阻力極限的大幅度擺動，可減痛、維持活動，早期可用。",
     "C": "肘、腕、手的主動運動不會對肩關節造成負荷，還能預防遠端僵硬與水腫。",
-    "D": "在肩胛平面做非承重的次大等長收縮，對假體穩定度影響小，早期可以執行。"
+    "D": "在肩胛平面做非承重的次大等長收縮，對假體穩定度影響小，早期可執行。"
    },
-   "takeaway": "反置式肩關節置換術後早期要戴吊帶保護，同時開始被動活動度、遠端關節運動與等長收縮，不能完全不動。",
+   "takeaway": "反置式肩置換術後早期戴吊帶保護，但仍要做被動活動、遠端運動與等長收縮。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "承認答案 A 沒有問題，但 B 的解析把 Maitland 第二級說成「小幅度」鬆動，這是錯的；第二級應是在活動範圍內、不到達組織阻力極限的大幅度擺動，小幅度的是第一級。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "RSA術後早期仍應做被動、遠端與等長運動，「不建議做運動」最不適當，說明正確。"
    }
   },
   {
@@ -840,28 +834,25 @@
   },
   {
    "id": "114-2-ORTHO-037",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "後外側旋轉不穩定（posterolateral rotatory instability, PLRI）多因外側尺側副韌帶（LUCL）受損。前臂旋後時肘由屈曲往伸直，到屈曲約40度附近，橈骨頭與尺骨會相對肱骨往後外側半脫位，所以容易出現卡住、聲響或滑動感，軸移試驗（pivot shift test）就是重現這個動作。",
+   "why_correct": "後外側旋轉不穩定（posterolateral rotatory instability, PLRI）多因外側尺側副韌帶（LUCL）受損。前臂旋後、肘由屈曲往伸直到約40度附近時，橈骨頭與尺骨相對肱骨往後外側半脫位，所以容易出現卡住、聲響或滑動感。",
    "why_others": {
-    "B": "屈曲120度時關節已復位而穩定，前臂旋前也會減少後外側旋轉的應力。",
+    "B": "屈曲120度時關節已復位而穩定，前臂旋前也會減少後外側旋轉應力。",
     "C": "半脫位多在接近伸直的小角度出現，屈曲120度時已復位。",
-    "D": "旋前會使外側結構繃緊而較穩定，誘發PLRI要旋後。"
+    "D": "旋前使外側結構較穩定，誘發PLRI要在旋後位。"
    },
-   "takeaway": "PLRI：LUCL受損，前臂旋後、肘由屈往伸到約40度最容易半脫位（軸移試驗）。",
+   "takeaway": "PLRI：LUCL受損，前臂旋後、肘由屈往伸到約40度時最容易半脫位。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒問題，但詳解說軸移試驗「就是重現」肘由屈往伸的動作，這點不對：標準的 pivot shift test 是從伸直、旋後位開始，同時施加外翻與軸向壓力，再把肘往屈曲方向帶；在約 20–40 度時出現半脫位，繼續屈曲則復位並發出 clunk 聲，方向正好和題目情境相反。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "PLRI為LUCL受損，旋後且由屈往伸至約40度時易半脫位，分析正確。"
    }
   },
   {

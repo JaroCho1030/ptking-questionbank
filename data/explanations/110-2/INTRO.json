@@ -1204,28 +1204,25 @@
   },
   {
    "id": "110-2-INTRO-053",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "PEDro 的優點包括提供效度評讀訓練、評分意見回饋管道及依身體部位檢索；D 所述特定限制條件的檢索並未被視為其優勢。",
+   "why_correct": "PEDro 專收物理治療臨床試驗並以量表評分，優點是提供內在效度評讀教學、評分意見回饋管道，並可依身體部位等欄位檢索；但其檢索介面較簡單，限制條件不如大型綜合資料庫細緻，故D不算其優點。",
    "why_others": {
     "A": "有提供評估內在效度的教學課程。",
     "B": "有管道可回饋對文獻評分的不同意見。",
     "C": "可依身體部位檢索是其特色。"
    },
-   "takeaway": "PEDro 特色：評分、教學、依部位檢索。",
+   "takeaway": "PEDro 特色：試驗評分、評讀教學、依部位檢索。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.35,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 只重述 D 不是優點，沒有說明依據；PEDro 的進階檢索其實提供多種限制欄位，詳解沒有交代 D 為何不算優點。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.3,
+    "verdict": "pass",
+    "reason": "PEDro提供內在效度評讀教學、評分異議回饋管道與依身體部位檢索，詳解依此判D非其優點，與承認答案一致。"
    }
   },
   {
@@ -1325,28 +1322,25 @@
   },
   {
    "id": "110-2-INTRO-058",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "持續疼痛比例約 51%（55/108），以比例的標準誤估算近似 95% 信賴區間，約為上下各 7 個百分點，得 44%～58%。",
+   "why_correct": "持續疼痛比例為55/108，約51%。題目要的近似95%信賴區間採粗估法：誤差範圍約 1/√(2N)，即 1/√216，約7個百分點，得44%～58%。",
    "why_others": {
-    "B": "區間下限與上限都偏低。",
-    "C": "區間整體偏低，未以 51% 為中心。",
-    "D": "區間整體偏低，未以 51% 為中心。"
+    "B": "以50%為中心，並非以51%為中心。",
+    "C": "以49%為中心，並非以51%為中心。",
+    "D": "以48%為中心，並非以51%為中心。"
    },
-   "takeaway": "比例的信賴區間以估計值為中心加減誤差範圍。",
+   "takeaway": "粗估比例的95%信賴區間：估計值 ± 1/√(2N)。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "詳解說以比例的標準誤估算約為上下各 7 個百分點，但 1.96×√(0.51×0.49/108) 約 9.4 個百分點，只有用 ±1/√(2N) 的粗估法才約 7 個百分點，方法說明錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.3,
+    "verdict": "pass",
+    "reason": "以粗估法比例±1/√(2N)＝51%±約7%得44%～58%，其餘選項中心點分析正確。"
    }
   },
   {
@@ -1581,28 +1575,25 @@
   },
   {
    "id": "110-2-INTRO-069",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "椎弓斷裂患者雖多有疼痛，但大多數可先以保守治療改善，只有保守治療無效或滑脫進展、出現神經症狀時才考慮手術。",
+   "why_correct": "椎弓斷裂多數患者沒有症狀，有症狀者也大多先以保守治療處理，只有保守治療無效、滑脫進展或出現神經症狀時才考慮手術，故C錯誤。",
    "why_others": {
-    "A": "此年齡階段為好發期，是正確敘述。",
+    "A": "椎弓斷裂多在兒童期開始出現，敘述成立。",
     "B": "L5～S1 為最常見部位。",
     "D": "斜位 X 光的 Scottish dog's neck 缺口是診斷依據。"
    },
-   "takeaway": "椎弓斷裂以保守治療為主，不是一發現就開刀。",
+   "takeaway": "椎弓斷裂多無症狀，以保守治療為主，不是一發現就開刀。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "詳解說椎弓斷裂患者多有疼痛，但其實大多數患者沒有症狀，這也是 C 錯誤的原因之一，詳解反而承認了錯誤的前提。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "椎弓斷裂多無症狀、以保守治療為主，L5-S1最常見、斜位片蘇格蘭狗頸缺口為診斷依據，說明正確。"
    }
   },
   {
@@ -1699,28 +1690,25 @@
   },
   {
    "id": "110-2-INTRO-074",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "風險評估先做危害評估（辨識危害），再做暴露評估，劑量反應評估可與暴露評估平行進行，最後整合為風險特徵描述。",
    "why_others": {
-    "A": "危害評估應在暴露評估之前，且劑量反應與暴露可平行。",
-    "B": "劑量反應不必接在暴露評估之後。",
+    "A": "危害評估應在暴露評估之前，且風險特徵描述應放最後。",
+    "B": "風險特徵描述應放在最後，B 卻把劑量反應排在最後。",
     "C": "危害評估應先於暴露評估，順序顛倒。"
    },
-   "takeaway": "危害評估，再暴露與劑量反應，最後風險特徵描述。",
+   "takeaway": "危害評估，再暴露與劑量反應並行，最後風險特徵描述。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "B 的順序是暴露評估之後接風險特徵描述、最後才是劑量反應，錯在風險特徵描述沒有放在最後；詳解說劑量反應接在暴露評估之後，與選項內容不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "危害鑑定後暴露評估與劑量反應評估並行，最後風險特徵描述，各錯誤選項說明正確。"
    }
   },
   {

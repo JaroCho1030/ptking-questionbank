@@ -511,26 +511,33 @@
    "id": "108-1-BASIC-023",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "阻力訓練初期肌力快速增加，主要來自神經適應，例如運動單位召集增加與同步化；肌肉肥大要較晚才成為明顯因素。",
+   "why_correct": "阻力訓練初期肌力快速增加，主要來自神經適應，例如運動單位召集增加與同步化；此時肌肉橫截面積變化還很小。",
    "why_others": {
-    "B": "後期肌肉適應變重要，但「主因」說法太絕對，且題意以初期神經適應為標準答案。",
+    "B": "肌肥大要較長期訓練才逐漸成為主因，6週即以肌肉為主的界定偏早。",
     "C": "神經與肌肉的貢獻隨時間而變，並非等量。",
-    "D": "訓練 6 週後肌力仍可持續進步，並無固定平原期。"
+    "D": "訓練6週後肌力仍可持續進步，並無固定平原期。"
    },
-   "takeaway": "阻力訓練初期肌力增加以神經適應為主。",
+   "takeaway": "阻力訓練初期肌力增加以神經適應為主，肌肥大較晚才明顯。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.55,
     "verdict": "reasoning_error",
-    "reason": "B選項（後期肌力增加以肌肥大為主）在教科書中一般視為正確，詳解僅以「說法太絕對」「以A為標準答案」排除，沒有實質依據且屬循環論證。",
+    "reason": "詳解稱6週即以肌肉適應為主「偏早」並無依據，常用教科書多指出約6～8週後肌肥大逐漸成為主因，未正確說明B錯在何處。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "B選項（後期肌力增加以肌肥大為主）在教科書中一般視為正確，詳解僅以「說法太絕對」「以A為標準答案」排除，沒有實質依據且屬循環論證。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -811,28 +818,25 @@
   },
   {
    "id": "108-1-BASIC-036",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "乙醯膽鹼與腎上腺素（epinephrine）可直接作用於冠狀血管及心臟，影響冠狀血流；前者使血管擴張，後者經受體調節血管張力與心肌代謝。",
+   "why_correct": "心臟與冠狀血管的生理調節主要來自自主神經系統：副交感的乙醯膽鹼與交感系統的兒茶酚胺如腎上腺素（epinephrine），兩者可直接作用於冠狀血管受體，改變冠狀血流。",
    "why_others": {
-    "B": "GABA 是中樞抑制性傳遞物質，不直接調節冠狀血流。",
-    "C": "②多巴胺不屬於此題的直接作用答案，且缺少①。",
-    "D": "②④皆不屬於此題的標準答案。"
+    "B": "GABA是中樞抑制性傳導物質，不直接調節冠狀血流。",
+    "C": "多巴胺雖可作用於血管受體，但非調節冠狀血流的主要生理物質，且缺①。",
+    "D": "GABA不調節冠狀血流，多巴胺也非主要生理調節者。"
    },
-   "takeaway": "冠狀血流由乙醯膽鹼與腎上腺素等直接調節。",
+   "takeaway": "冠狀血流的神經調節：乙醯膽鹼與腎上腺素等自主神經物質。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "排除多巴胺僅稱「不屬於此題答案」為循環論證，且多巴胺可經D1受體直接擴張冠狀血管，詳解未提出實質理由。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "乙醯膽鹼與腎上腺素作用於冠狀血管受體，GABA與多巴胺非主要調節者，說明合理。"
    }
   },
   {
@@ -1136,28 +1140,25 @@
   },
   {
    "id": "108-1-BASIC-050",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "腕關節伸直約30度時，屈指肌長度與張力關係最理想，可產生最大抓握力，是功能位置。",
+   "why_correct": "腕關節伸直約30度時，屈指肌處於較理想的長度張力關係，可產生最大抓握力，也是手的功能位置。",
    "why_others": {
-    "A": "腕屈曲時屈指肌被動不足，抓握力明顯下降。",
+    "A": "腕屈曲時屈指肌過度縮短，產生主動不足，握力明顯下降。",
     "B": "腕中立位握力尚可，但不及伸直30度。",
-    "D": "伸直過大時屈指肌過度放鬆，握力下降。"
+    "D": "伸直過大使屈指肌被拉長超過最佳長度，握力下降。"
    },
-   "takeaway": "最大握力：腕伸直約30度。",
+   "takeaway": "最大握力：腕伸直約30度；腕屈曲造成屈指肌主動不足。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "腕屈曲時屈指肌是縮短造成主動不足而非被動不足，腕過度伸直時屈指肌是被拉長而非過度放鬆，A與D的機轉說明錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "腕伸直約30度握力最大，屈曲造成屈指肌主動不足，說明正確。"
    }
   },
   {
@@ -1346,28 +1347,25 @@
   },
   {
    "id": "108-1-BASIC-059",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "黃韌帶（ligamentum flavum）位於椎弓板間，緊貼並保護後方的骨突關節囊（apophyseal joint capsule），避免被夾入。",
+   "why_correct": "黃韌帶（ligamentum flavum）位於相鄰椎板之間，緊貼骨突關節囊（apophyseal joint capsule）前內側，可保護關節囊、避免其被夾入關節。",
    "why_others": {
     "A": "黃韌帶富含彈力蛋白，不是膠原蛋白。",
-    "B": "黃韌帶附著於椎板的前表面，不是後表面。",
-    "C": "限制後伸的主要結構是前縱韌帶，黃韌帶不負責後伸限制。"
+    "B": "黃韌帶由上位椎板前表面連到下位椎板後上緣，並非都附著於後表面。",
+    "C": "黃韌帶被拉長時抵抗的是前屈，不是後伸。"
    },
-   "takeaway": "黃韌帶富含彈力蛋白、保護骨突關節囊。",
+   "takeaway": "黃韌帶富含彈力蛋白、限制前屈、保護骨突關節囊。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "黃韌帶是由上位椎板前表面連到下位椎板後表面（上緣），詳解稱其附著於椎板前表面而非後表面，對B的錯誤理由說明不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "黃韌帶富含彈力蛋白、由上位椎板前面連到下位椎板、限制前屈、保護骨突關節囊，說明正確。"
    }
   },
   {
@@ -1704,28 +1702,25 @@
   },
   {
    "id": "108-1-BASIC-074",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "加速期肘由屈曲轉為伸直，肱三頭肌（triceps brachii）是以向心收縮完成伸肘，並非等長收縮維持，故C錯誤。",
+   "why_correct": "圖4→5加速期，主要動力來自軀幹旋轉與肩水平內收、內轉，肘關節只是在略屈的位置保持穩定，並非由肱三頭肌等長收縮維持伸直，故C錯誤。",
    "why_others": {
     "A": "準備期動作較慢，肌肉活動低於加速期。",
     "B": "正手擊球時肩水平內收，胸大肌與前鋸肌是作用肌。",
-    "D": "隨勢期棘下肌需離心活化以減速肩外旋與旋轉。"
+    "D": "隨勢期肩持續內轉，棘下肌需離心收縮以減速肩內轉。"
    },
-   "takeaway": "加速期伸肘是肱三頭肌向心收縮。",
+   "takeaway": "正手加速期靠肩水平內收與內轉；隨勢期棘下肌離心減速。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "附圖加速期（圖4→5）肘並非由屈轉伸，且正手隨勢期肩為內轉，棘下肌是離心減速肩內轉而非外旋，C與D說明有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "依附圖加速期以肩水平內收內轉為主、肘非靠三頭肌等長伸直，隨勢期棘下肌離心減速，說明正確。"
    }
   },
   {

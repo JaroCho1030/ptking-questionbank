@@ -302,28 +302,25 @@
   },
   {
    "id": "108-1-TECH-014",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "頸椎牽引初期應從較小力量開始，約3～4公斤，再依反應調整。",
+   "why_correct": "頸椎牽引初期應從較小力量開始，約3～4公斤，再依病患反應逐步調整。",
    "why_others": {
-    "A": "打開小面關節所需力量遠超此比例，說法不正確。",
-    "C": "最大牽拉力並非以體重1/2為標準。",
+    "A": "分開小面關節所需力量遠低於體重1/4，比例過高。",
+    "C": "體重1/2對頸椎過大，並非最大牽拉力的設定原則。",
     "D": "力量增加應依個案反應調整，不是固定每週1公斤。"
    },
-   "takeaway": "頸椎牽引初期力量宜小，約3～4公斤。",
+   "takeaway": "頸椎牽引初期力量宜小，約3～4公斤，再依反應調整。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "頸椎小面關節分離約需體重7%左右，A的錯誤在於1/4過高，詳解卻說所需力量遠超此比例，方向相反。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "頸椎牽引初期約3～4公斤並依反應調整，其他選項錯誤說明合理。"
    }
   },
   {
@@ -561,24 +558,21 @@
   },
   {
    "id": "108-1-TECH-025",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "b75c34545e8c",
-   "why_correct": "考選部公告一律給分。本題比較中頻干擾波與低頻電刺激，四個選項的描述難以明確判斷誰錯，且各選項的優缺點說法有爭議，故送分。",
+   "why_correct": "考選部公告一律給分。本題要選錯誤敘述，但B與C都與干擾波特性不符：干擾波仍能引起明顯肌肉收縮，且通常比低頻電刺激較不刺痛，出現不只一個錯誤選項，故送分。",
    "why_others": {},
-   "takeaway": "送分題，干擾波與低頻比較的細節較有爭議。",
+   "takeaway": "干擾波仍可引起收縮，且皮膚刺痛感通常較低頻小。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "送分原因應是B（干擾波仍可產生明顯收縮）與C（干擾波較不痛）都屬錯誤敘述而有多個答案，詳解只籠統說難以判斷誰錯，未合理說明爭議。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "B後半與C皆與干擾波特性不符，以多個錯誤選項解釋送分合理。"
    }
   },
   {
@@ -912,28 +906,25 @@
   },
   {
    "id": "108-1-TECH-040",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "放鬆的鬆動術（relaxation mobilization）使用I-II級的TZ間歇性牽拉（traction），目的在止痛與放鬆。",
+   "why_correct": "Kaltenborn放鬆的鬆動術（relaxation mobilization）以I–II級間歇性牽拉（traction）達到止痛與放鬆，作用在鬆弛區內，不進入牽張；四選項中C最符合此劑量。",
    "why_others": {
-    "A": "I級牽張用於關節稍受力，非放鬆鬆動術的設定劑量。",
-    "B": "III級牽張用於增加活動度，不是放鬆。",
-    "D": "III級SZ振動牽拉不是放鬆的設定。"
+    "A": "Kaltenborn的牽張屬第III級，並無I級牽張之說。",
+    "B": "III級牽張用於增加關節活動度，不是放鬆。",
+    "D": "III級已進入牽張範圍，用於增加活動度，非放鬆。"
    },
-   "takeaway": "放鬆鬆動術：I-II級TZ間歇性牽拉。",
+   "takeaway": "Kaltenborn放鬆鬆動術：I–II級間歇性牽拉，不做牽張。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "Kaltenborn放鬆鬆動術為I-II級在鬆弛區（SZ）的間歇性牽拉，TZ屬第III級起點，詳解照抄TZ當事實，且Kaltenborn並無I級牽張之說。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "Kaltenborn放鬆鬆動為I–II級間歇牽拉、III級才是牽張，說明正確。"
    }
   },
   {
@@ -984,28 +975,25 @@
   },
   {
    "id": "108-1-TECH-043",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "增加腕伸直時，近端腕骨相對橈骨與遠端腕骨相對近端列皆往掌側滑動，因此固定遠端或近端骨再把被鬆動骨推向掌側，①②③方向正確；④以舟狀骨為固定端鬆動月狀骨不是此動作的標準做法。",
+   "why_correct": "依凹凸定律：腕伸直時近端列凸面在橈骨上往掌側滑（③）；頭狀骨凸頭在月狀骨上往掌側滑（②）；大小菱角骨相對舟狀骨往背側滑，等同固定它而把舟狀骨推向掌側（①）。",
    "why_others": {
-    "A": "含④，固定舟狀骨鬆動月狀骨不符合伸直的標準做法。",
-    "B": "含④，該操作不正確。",
-    "C": "含④，且漏掉②，所以不正確。"
+    "A": "含④；舟狀骨與月狀骨並排，其間掌背滑動與腕伸直無關。",
+    "B": "含④錯誤操作，且漏掉正確的①。",
+    "C": "含④錯誤操作，且漏掉正確的②。"
    },
-   "takeaway": "腕伸直鬆動：被鬆動的腕骨往掌側滑。",
+   "takeaway": "腕伸直鬆動依凹凸定律判斷各腕骨間的滑動方向。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱「遠端腕骨相對近端列往掌側滑」，但①是固定大小菱角骨、把近端的舟狀骨往掌側推（等於遠端列相對往背側），原則和①自相矛盾；④也只說「不是標準做法」，沒解釋為什麼錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "依凹凸定律說明①②③為增加腕伸直的正確鬆動，排除④合理。"
    }
   },
   {
@@ -1102,16 +1090,16 @@
   },
   {
    "id": "108-1-TECH-048",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "膝屈曲攣縮的患者膝關節無法完全伸直，撥盤式帶鎖（dial lock）可把膝鎖定在特定屈曲角度，適合需固定在攣縮角度的情況。",
    "why_others": {
     "A": "拉環式帶鎖只能鎖在完全伸直位置，無法配合攣縮角度。",
-    "C": "多軸式膝關節用於膝上截肢義肢，不能固定角度。",
-    "D": "偏軸式膝關節靠後移軸心提供站立穩定，仍需膝接近伸直。"
+    "C": "多軸式矯具膝關節模擬滾滑動、可自由活動，不能鎖定角度。",
+    "D": "偏軸式靠軸心後移提供站立穩定，需膝接近伸直。"
    },
    "takeaway": "膝屈曲攣縮需固定：選撥盤式可調角度鎖。",
    "review": {
@@ -1119,11 +1107,8 @@
      "B"
     ],
     "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "C的說明稱多軸式膝關節用於膝上截肢義肢，但多軸式本來就是KAFO矯具膝關節的一種類型，把它說成義肢用，與題目情境不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "撥盤式鎖可鎖在屈曲角度，其他膝關節型式說明正確。"
    }
   },
   {
@@ -1197,28 +1182,25 @@
   },
   {
    "id": "108-1-TECH-052",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "雙側膝上截肢者重心後移，輪椅須調整後輪位置，且患者32歲可自行活動；斜躺靠背主要用於需照護者協助的重度個案，對有獨立能力者並不適合，反而不利轉移與自主推動。",
+   "why_correct": "雙側膝上截肢後下肢重量消失，重心後移，輪椅本就易後翻；斜躺靠背會讓重心更往後，增加後翻風險。且32歲患者多可獨立操作，不需為照護而設計斜躺。",
    "why_others": {
     "A": "ROHO氣墊可分散坐骨壓力，減少壓瘡，正確。",
-    "B": "後輪可用較小輪徑以利推動，正確。",
+    "B": "後輪輪徑可依使用者需求選擇，並非禁忌。",
     "C": "扶手可拆以利側方轉移，正確。"
    },
-   "takeaway": "年輕獨立的雙膝上截肢者輪椅重在轉移與自主操作。",
+   "takeaway": "雙膝上截肢重心後移，輪椅要防後翻，避免斜躺靠背。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "B的說明稱較小後輪「以利推動」，但後輪越小推動效率越差，這個理由不成立；D也沒有點出斜躺靠背會讓重心更往後、增加後翻風險。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "雙膝上截肢重心後移易後翻，斜躺靠背不宜，其餘選項說明合理。"
    }
   },
   {
@@ -1384,28 +1366,25 @@
   },
   {
    "id": "108-1-TECH-060",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "室外通路淨寬至少130公分，供輪椅與行人通行，是規範內容。",
+   "why_correct": "室外通路淨寬至少130公分，供輪椅與行人通行，符合規範。",
    "why_others": {
-    "B": "室內走廊寬度要求低於150公分，並非此數值。",
-    "C": "需做斜角處理的高低差遠小於3公分，數值錯誤。",
+    "B": "室內通路走廊寬度要求低於150公分，數值錯誤。",
+    "C": "高低差超過3公分應設坡道，不能只做1/2斜角處理。",
     "D": "地面坡度應是不得大於1/15，不是不得小於。"
    },
-   "takeaway": "無障礙規範數值要記準：室外通路至少130公分。",
+   "takeaway": "無障礙規範：室外通路至少130公分，高差超過3公分設坡道。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "C的說明稱需做斜角處理的高低差「遠小於3公分」，但規範是0.5～3公分做1/2斜角、超過3公分要設坡道，C錯在超過3公分仍用斜角，詳解講錯理由。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "室外通路130公分、室內120公分、高差逾3公分設坡道、坡度不大於1/15，皆符規範。"
    }
   },
   {
@@ -1459,28 +1438,25 @@
   },
   {
    "id": "108-1-TECH-063",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "髖外展的5分標準是在抗重力姿勢下能抵抗施於腳踝（遠端）的最大阻力；4分則是只能抵抗中等阻力。能抵抗腳踝處及股骨遠端的阻力，所以是5分。",
+   "why_correct": "施於腳踝處阻力的力臂較長，能同時抵抗腳踝與股骨遠端的阻力，表示能承受最大阻力，為5分；只能抵抗短力臂的股骨遠端阻力則為4分。",
    "why_others": {
-    "A": "能抵抗腳踝處阻力已達5分，不是4分。",
-    "B": "能抗腳踝阻力卻不能抗股骨遠端阻力，邏輯不通。",
+    "A": "能抵抗長力臂的腳踝阻力，卻不能抗股骨遠端阻力，不合理。",
+    "B": "只能抗股骨遠端、不能抗腳踝阻力應為4分，不是5分。",
     "C": "同時抵抗兩處阻力是5分，不是4分。"
    },
-   "takeaway": "髖外展5分：能抵抗施於腳踝的最大阻力。",
+   "takeaway": "髖外展5分：連施於腳踝的長力臂阻力都能抵抗。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "B的說明把選項內容講反：B是「能抗股骨遠端阻力、不能抗腳踝阻力」（應為4分而非5分），詳解卻寫成「能抗腳踝卻不能抗股骨遠端」。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "以長短力臂阻力區分5分與4分，與承認答案一致且推理合理。"
    }
   },
   {

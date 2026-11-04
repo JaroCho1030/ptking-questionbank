@@ -900,15 +900,15 @@
   },
   {
    "id": "113-2-BASIC-040",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "季節性打噴嚏、流鼻水、眼睛癢屬於過敏性鼻炎，是第一型過敏（type I hypersensitivity）。過敏原與附著在肥大細胞（mast cell）上的IgE結合後，肥大細胞脫顆粒並釋放組織胺，所以吃抗組織胺劑能緩解症狀。",
    "why_others": {
     "A": "IgA主要在黏膜與分泌物中做局部防禦，不會引發肥大細胞釋放組織胺。",
-    "B": "IgD主要表現在未成熟B細胞表面，作為抗原受體，和過敏無關。",
+    "B": "IgD與IgM一起表現在成熟初始B細胞表面作為抗原受體，與過敏無關。",
     "D": "IgM是初次免疫反應最早產生的抗體，會活化補體，但不參與第一型過敏。"
    },
    "takeaway": "IgE介導第一型過敏：先結合肥大細胞，再釋放組織胺；抗組織胺劑有效就想到IgE。",
@@ -916,12 +916,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.99,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒有問題，但 B 選項的說明有事實錯誤：IgD 是和 IgM 一起表現在成熟的初始（naive）B 細胞表面，未成熟 B 細胞只表現 IgM，詳解說 IgD「主要表現在未成熟B細胞表面」並不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "季節性過敏屬IgE介導的第一型過敏，各抗體功能說明正確。"
    }
   },
   {
@@ -1225,28 +1222,25 @@
   },
   {
    "id": "113-2-BASIC-054",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "髖關節三條關節囊韌帶呈螺旋狀纏繞股骨頸，髖伸直時三條一起扭緊（close-packed position，緊密堆積位）。髖屈曲時螺旋鬆開，三條韌帶都放鬆，所以髖彎曲時韌帶最鬆弛。",
    "why_others": {
-    "A": "髖內收會拉緊坐股韌帶與髂股韌帶上束，並不是三條都鬆。",
-    "B": "髖外展會拉緊恥股韌帶與髂股韌帶下束，並非全部放鬆。",
+    "A": "髖內收會拉緊髂股韌帶上束，三條韌帶並非都放鬆。",
+    "B": "髖外展會拉緊恥股韌帶等結構，三條韌帶並非都放鬆。",
     "C": "髖伸直時三條韌帶一起扭緊，是最緊的姿勢。"
    },
-   "takeaway": "髖韌帶在伸直（加內旋、外展）時扭緊，屈曲時鬆弛。",
+   "takeaway": "髖韌帶在伸直時扭緊，屈曲時螺旋鬆開最鬆弛。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "承認答案 D 沒有問題，但 A 選項的說明有誤：主要教科書（如 Kapandji）記載，髖內收時拉緊的是髂股韌帶上束，恥股韌帶與坐股韌帶此時是鬆的；坐股韌帶在外展、內旋、伸直時才拉緊，所以「內收拉緊坐股韌帶」這句不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "髖伸直時三條韌帶扭緊、屈曲時鬆弛，內收與外展會拉緊其中部分韌帶，說明正確。"
    }
   },
   {

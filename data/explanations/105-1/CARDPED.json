@@ -141,28 +141,25 @@
   },
   {
    "id": "105-1-CARDPED-007",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "FEV₁/FVC 為 62%，明顯偏低，代表氣流阻塞（氣喘）；同時 FVC 也降到預期值 58%，反映肋骨骨折疼痛限制胸廓擴張的限制性成分，因此屬限制合併阻塞型。",
+   "why_correct": "FEV₁/FVC 為 62%，明顯偏低，代表氣喘造成的氣流阻塞；同時肋骨骨折疼痛限制胸廓擴張，加上 FVC 降低，有限制性成分，因此屬限制合併阻塞型。",
    "why_others": {
     "A": "限制型 FEV₁/FVC 通常正常或偏高，此處明顯降低。",
-    "B": "單純阻塞型 FVC 不應同時明顯降低，此例另有限制成分。",
+    "B": "此例另有肋骨骨折疼痛限制胸廓擴張，不只阻塞。",
     "D": "肺心症是肺病導致右心病變，不是肺功能分類型態。"
    },
-   "takeaway": "比值低且 FVC 也低，要想到阻塞合併限制。",
+   "takeaway": "比值低加上限制胸廓的病因，要想到阻塞合併限制。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "B的說明稱單純阻塞型FVC不應明顯降低有誤，嚴重阻塞因空氣滯留FVC常會下降，應改以肋骨骨折疼痛限制胸廓擴張作為合併限制的依據。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "比值降低示阻塞、肋骨骨折與 FVC 降低示限制，推理正確。"
    }
   },
   {
@@ -400,28 +397,25 @@
   },
   {
    "id": "105-1-CARDPED-018",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "85% 最大攝氧量屬高強度，自覺用力係數約在吃力以上的 16 至 17；14 屬中等，兩者不相當。",
+   "why_correct": "85% 最大攝氧量已接近非常吃力，自覺用力係數應明顯高於 14；14 只到稍吃力程度，兩者不相當。",
    "why_others": {
     "A": "兩者都屬低強度範圍，彼此大致相當。",
-    "B": "70% 最大心率屬中等強度，與 RPE 12 至 13 相當。",
-    "D": "心率儲備百分比與攝氧量儲備百分比大致一致，兩者相當。"
+    "B": "70% 最大心率屬中等強度，與自覺用力係數 12 至 13 相當。",
+    "D": "兩者都屬中等強度範圍，彼此大致相當。"
    },
-   "takeaway": "高強度對應 RPE 約 16 至 17。",
+   "takeaway": "強度越高自覺用力係數越高，85% 最大攝氧量遠高於 14。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "D選項是60%最大攝氧量，詳解卻以心率儲備與攝氧量儲備（VO2R）一致來論證，與選項內容不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "85% 最大攝氧量屬高強度，RPE 14 偏低不相當，其餘配對大致相當。"
    }
   },
   {
@@ -1022,28 +1016,25 @@
   },
   {
    "id": "105-1-CARDPED-045",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "皮亞傑認知發展依序為感覺動作期、前運思期、具體運思期、形式運思期，也就是②④③①。",
    "why_others": {
-    "A": "形式運思期是最後階段，不能排在第二。",
+    "A": "形式運思期是最後階段，不能排在第一。",
     "B": "形式運思期不可早於前運思期與具體運思期。",
-    "D": "具體運思期晚於前運思期，不能排第一。"
+    "D": "具體運思期晚於感覺動作期與前運思期，不能排第一。"
    },
    "takeaway": "感覺動作、前運思、具體運思、形式運思。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.98,
-    "verdict": "reasoning_error",
-    "reason": "選項A的順序①②④③是把形式運思期排在第一，詳解卻說它「排在第二」，與選項不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "皮亞傑階段順序與各選項排除正確。"
    }
   },
   {

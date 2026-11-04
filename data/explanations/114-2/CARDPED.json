@@ -141,53 +141,44 @@
   },
   {
    "id": "114-2-CARDPED-007",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "長期呼吸器使用（prolonged mechanical ventilation, PMV）的通用定義是連續使用呼吸器至少21天，而且每天使用至少6小時。這個標準常用來界定呼吸器依賴的病人，作為轉介呼吸照護中心或規劃脫離呼吸器（weaning）的依據。",
+   "why_correct": "長期呼吸器使用（prolonged mechanical ventilation, PMV）的通用定義是連續使用呼吸器至少21天，而且每天使用至少6小時。這個標準常用來界定呼吸器依賴的病人。",
    "why_others": {
-    "A": "7天太短，只能算延遲脫離，還不到長期使用的門檻。",
-    "C": "42天超過定義門檻，標準是21天，不是42天。",
-    "D": "3個月不是PMV的定義天數，時間設得太長了。"
+    "A": "7天遠低於PMV至少21天的門檻。",
+    "C": "42天不是定義門檻，標準是至少21天。",
+    "D": "3個月不是PMV的定義天數，門檻是21天。"
    },
-   "takeaway": "PMV記「21天、每天6小時」：連續使用呼吸器至少21天，且每天使用至少6小時。",
+   "takeaway": "PMV記「21天、每天6小時」：連續使用呼吸器至少21天，且每天至少6小時。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "承認答案 B（PMV：至少 21 天、每天至少 6 小時）沒有問題，但 A 選項的解釋有誤。詳解說「7 天只能算延遲脫離」，混淆了兩件事：脫離分類中的 7 天是從第一次自主呼吸試驗（SBT）起算，不是呼吸器總使用天數；而且依該分類，超過 7 天屬於「長期脫離（prolonged weaning）」，7 天以內是「困難脫離」，並沒有「延遲脫離」這個類別。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "PMV定義為連續至少21天、每天至少6小時，敘述正確。"
    }
   },
   {
    "id": "114-2-CARDPED-008",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "b75c34545e8c",
-   "why_correct": "考選部公告一律給分。限制型肺疾病的特徵是全肺量（TLC）下降，用力肺活量（FVC）、吸氣儲備量與吐氣儲備量通常也會跟著變小。原公布答案D寫「僅⑤變小」，忽略了FVC等參數同樣下降，所以不對。A寫全部變小也不一定成立：神經肌肉無力或胸壁病變時，殘餘量（RV）可能正常甚至增加。由於沒有一個選項在各種情況下都正確，因此送分。",
+   "why_correct": "考選部公告一律給分。限制型肺疾病全肺量（TLC）下降，用力肺活量（FVC）、吸氣與吐氣儲備量通常也變小，原答案D「僅⑤變小」不完整。A全部變小也不一定成立，神經肌肉或胸壁病變時殘餘量可能正常或增加，故無選項完全正確。",
    "why_others": {},
-   "takeaway": "限制型肺疾病的核心是TLC下降，FVC通常也會變小；RV則依病因而定，可能減少、正常或增加。",
+   "takeaway": "限制型肺疾病核心是TLC下降，FVC通常也變小；RV依病因而定。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.85,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "why_correct 153 字 > 144"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "送分題，說明原答案D不完整、A亦非必然成立，爭議說明合理。"
    }
   },
   {
@@ -632,28 +623,25 @@
   },
   {
    "id": "114-2-CARDPED-028",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "心率儲備（heart rate reserve, HRR）＝150－80＝70 bpm。主訓練期約取60～80% HRR，也就是約122～136 bpm，接近但不超過無氧閾。熱身期強度要比主訓練低，約40～50% HRR，算出來約108～115 bpm，所以選105～115。",
+   "why_correct": "心率儲備（heart rate reserve, HRR）＝150－80＝70 bpm。熱身強度要低於主訓練，約取40～50% HRR，換算約108～115 bpm，所以選105～115；主訓練則以無氧閾心率附近為上限。",
    "why_others": {
     "A": "約只有15～30% HRR，接近休息心率，熱身效果不足。",
-    "C": "約57～71% HRR，屬於主訓練期的強度，不是熱身。",
-    "D": "介於無氧閾到尖峰心率之間，強度太高，熱身不宜採用。"
+    "C": "約57～71% HRR，已接近無氧閾，屬主訓練強度，不是熱身。",
+    "D": "落在無氧閾到尖峰心率之間，強度太高，不適合熱身。"
    },
-   "takeaway": "先算HRR＝尖峰－休息；熱身約40～50% HRR，主訓練約60～80% HRR，以無氧閾為上限。",
+   "takeaway": "先算HRR＝尖峰－休息；熱身約40～50% HRR，主訓練以無氧閾心率為上限。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "詳解算出主訓練期 80% HRR 約為 136 bpm，已經高於無氧閾心率 135 bpm，卻寫成「接近但不超過無氧閾」，數字和敘述互相矛盾；其餘的 HRR 換算正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "HRR計算與各選項換算百分比皆正確，熱身取40～50% HRR合理。"
    }
   },
   {
@@ -842,28 +830,25 @@
   },
   {
    "id": "114-2-CARDPED-037",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "圖中導管從上臂皮膚直接穿出，外接一段延長管與接頭，符合周邊置入中心靜脈導管（peripherally inserted central catheter, PICC）的外觀。導管從上臂靜脈一路走到上腔靜脈。在置管那隻手臂綁壓脈帶量血壓，可能壓壞導管、造成血栓或阻塞，所以不可以加壓。",
+   "why_correct": "圖中上臂可見導管從皮膚穿出，外接延長管與接頭，符合周邊置入中心靜脈導管（peripherally inserted central catheter, PICC）的外觀。在置管手臂綁壓脈帶量血壓，可能損壞導管或造成血栓、阻塞，所以該手不可加壓量血壓。",
    "why_others": {
-    "A": "Port-A 整個埋在胸壁皮下，外面看不到導管，用的時候才插針。",
-    "B": "Swan-Ganz 多從頸部或鎖骨下置入，量的是肺動脈壓，不會放在上臂。",
-    "C": "A-Line 多放在橈動脈，會接壓力監測管路，用來量動脈壓及抽動脈血。"
+    "A": "Port-A整個埋在胸壁皮下，外觀看不到外露導管。",
+    "B": "Swan-Ganz主要監測肺動脈壓，屬重症監測，圖中不是此裝置。",
+    "C": "A-line多置於橈動脈，可量動脈壓、抽血；圖中裝置不是A-line。"
    },
-   "takeaway": "上臂有外露導管就是 PICC，那隻手不量血壓、不抽血，也避免提重物。",
+   "takeaway": "PICC置管手臂不量血壓、不做周邊靜脈穿刺抽血，也避免提重物。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒問題，但詳解有幾句話說得太絕對：Swan-Ganz 其實可以經肘前／肱靜脈置入，「不會放在上臂」不對；上臂有外露導管也可能是 midline catheter，「就是 PICC」以偏概全；PICC 本身常用來抽血，應該寫成「該手臂不做周邊靜脈穿刺抽血」；C 的說明也沒有講清楚選項錯在哪裡（A-line 可以抽血做動脈血氧分析）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "附圖上臂可見外露導管與接頭，符合PICC，各選項排除正確。"
    }
   },
   {
@@ -1305,28 +1290,25 @@
   },
   {
    "id": "114-2-CARDPED-057",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "整體動作評估（General Movement Assessment, GMA）是在矯正年齡3–5個月觀察嬰兒的扭動動作（fidgety movements）。若扭動動作缺失，預測日後發展為腦性麻痺的敏感度與特異度都很高，是早期預測腦性麻痺最好的工具之一。",
+   "why_correct": "整體動作評估（General Movement Assessment, GMA）在矯正約3–5個月觀察不安動作（fidgety movements）。若不安動作缺失，預測日後發展為腦性麻痺的敏感度與特異度都很高，是早期預測腦性麻痺最好的工具之一。",
    "why_others": {
-    "B": "Bayley-III評估整體發展遲緩，不是專為預測腦性麻痺設計，早期預測力較低。",
-    "C": "PDMS-2測粗大與精細動作發展程度，用於鑑別遲緩，預測腦性麻痺的準確度不高。",
-    "D": "NSMDA可評估神經動作功能，但3個月時預測腦性麻痺的準確度不如GMA。"
+    "B": "Bayley-III評估整體發展，不是專為預測腦性麻痺設計，早期預測力較低。",
+    "C": "PDMS-2測粗大與精細動作發展程度，預測腦性麻痺的準確度不高。",
+    "D": "NSMDA可評估神經動作功能，但早期預測腦性麻痺不如GMA。"
    },
-   "takeaway": "矯正3–5個月沒有扭動動作（GMA）是早期預測腦性麻痺的強力指標。",
+   "takeaway": "矯正3–5個月缺乏不安動作（fidgety movements）是預測腦性麻痺的強力指標。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "答案A沒有問題，但詳解把 fidgety movements 寫成「扭動動作」，這是錯的：「扭動動作」是 writhing movements，出現在足月到矯正約2個月之間；fidgety movements 應譯為「不安動作／煩躁動作」。兩者混在一起會讓考生誤解 GMA 在矯正3–5個月觀察的是哪一種動作。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "GMA於矯正3–5個月觀察fidgety movements預測CP力最佳，敘述正確。"
    }
   },
   {

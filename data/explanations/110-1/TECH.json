@@ -168,28 +168,25 @@
   },
   {
    "id": "110-1-TECH-008",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "HVPC 脈波極短，電流通過皮膚時皮膚電阻低，而高電壓使電流容易穿透皮膚，因此有較多電流密度可到達深部治療部位，且不適感較低。",
+   "why_correct": "高壓脈衝電流（HVPC）脈寬極短、電壓高，皮膚阻抗相對低，因此有較多電流能穿過皮膚到達治療部位，且不適感較低。",
    "why_others": {
-    "A": "HVPC 的短脈波使皮膚阻抗降低，但此選項說法不是其特色。",
-    "C": "脈波相寬短，平均電流低，熱效應少。",
-    "D": "HVPC 平均電流低，電極下化學反應很少，不是特色。"
+    "A": "皮膚阻抗降低時電壓降應較少，非較多，敘述錯誤。",
+    "C": "脈寬短，平均電流低，熱效應少。",
+    "D": "平均電流低，電極下化學反應很少，不是特色。"
    },
-   "takeaway": "HVPC 脈波短、電壓高，容易穿透皮膚，產熱與化學反應都少。",
+   "takeaway": "HVPC 脈寬短、電壓高，易穿透皮膚，產熱與化學反應都少。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "A 的錯誤在於皮膚阻抗降低時電壓降應較少而非較多，詳解反而肯定前半且只說「不是其特色」，未正確指出錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "HVPC 脈寬短、電壓高，易穿透皮膚，說明正確。"
    }
   },
   {
@@ -861,28 +858,25 @@
   },
   {
    "id": "110-1-TECH-038",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "測髖外展時，側臥並使髖稍微伸直，主要由臀中肌（gluteus medius）後側纖維負責外展，可測到臀中肌。",
+   "why_correct": "測髖外展時，側臥並使髖稍微伸直，主要由臀中肌（gluteus medius）負責外展，可測到臀中肌。",
    "why_others": {
-    "A": "髖屈曲 45 度的外展姿勢，主要測到闊筋膜張肌與縫匠肌，但此選項不是標準臀中肌測試。",
-    "C": "內轉姿勢下加入內轉，主要是闊筋膜張肌。這與題中說的不一致。",
-    "D": "外轉姿勢下測到的是髖外轉而非臀大肌的外展。"
+    "A": "髖屈曲 45 度外展主要測到闊筋膜張肌，不是縫匠肌。",
+    "C": "闊筋膜張肌需在髖屈曲姿勢下外展才能分離測試，非 0 度內轉。",
+    "D": "外轉姿勢下外展易由髖屈肌代償，不是臀大肌的測試。"
    },
-   "takeaway": "髖外展：稍伸直測臀中肌，屈曲測闊筋膜張肌。",
+   "takeaway": "側躺髖稍伸直外展測臀中肌；髖屈曲外展測闊筋膜張肌。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "A 說髖屈 45 度會測到縫匠肌有誤（應為闊筋膜張肌），C 的說明肯定內轉測到闊筋膜張肌卻又稱不一致，未正確說明 C 為何錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "側躺髖稍伸直外展測臀中肌，其他選項說明正確。"
    }
   },
   {
@@ -1120,41 +1114,38 @@
   },
   {
    "id": "110-1-TECH-049",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "此手法固定距骨、將跟骨在距跟關節後部滑動，用於增加該關節的外翻活動度，也可用來評估關節的活動。",
+   "why_correct": "側躺時患肢脛側（內側）貼床，跟骨往地面滑動即向內側滑動。跟骨後關節面為凸面，依凹凸定則此滑動可增加距跟關節後部的外翻，也能用來評估活動度。",
    "why_others": {
-    "A": "滑動方向為朝地面（內外側向的描述與題意不符）。",
-    "C": "距跟關節後部的跟骨關節面為凹面，但此敘述與題意的滑動規則不符。",
-    "D": "鬆動術的手法同時可用於評估關節活動度。"
+    "A": "患肢內側貼床、跟骨往地面滑，是向內側而非外側滑動。",
+    "C": "後部跟骨關節面為凸面，是凸面對凹面滑動。",
+    "D": "鬆動手法同時可用於評估關節活動度。"
    },
-   "takeaway": "鬆動術的手法既可治療也可評估關節活動。",
+   "takeaway": "跟骨後關節面為凸面：向內滑動增加外翻。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "距跟關節後部的跟骨關節面是凸面，詳解寫成凹面是錯的；此手法實為跟骨向內側滑動，A 的駁斥也沒點出是內側而非外側滑動。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "內側貼床、跟骨往地面滑動即向內滑，可增加外翻，凹凸定則說明正確。"
    }
   },
   {
    "id": "110-1-TECH-050",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "腕關節的動態關節鬆動術（MWM）是治療師對近端腕骨排施以持續的被動滑動（如向拇指側），患者同時主動做腕屈伸，且動作應無痛。",
+   "why_correct": "腕關節的動態關節鬆動術（mobilization with movement, MWM）是治療師對近端腕骨排施以持續的被動滑動（如向拇指側），患者同時主動做腕屈伸，且動作應無痛。",
    "why_others": {
-    "B": "動作是患者主動執行，不是被動。",
-    "C": "不在末端施加被動加壓，應在無痛範圍內操作。",
+    "B": "動作由患者主動執行，不是被動。",
+    "C": "末端加壓僅在無痛時附加，不是此技術的必要步驟。",
     "D": "MWM 的原則是動作必須無痛。"
    },
    "takeaway": "MWM：持續滑動、主動動作、全程無痛。",
@@ -1163,11 +1154,8 @@
      "A"
     ],
     "blind_confidence": 0.45,
-    "verdict": "reasoning_error",
-    "reason": "Mulligan 的 MWM 原則上會在無痛的末端範圍施加加壓，詳解說「不在末端施加被動加壓」與事實不符（C 是否也算正確有爭議）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "MWM 是持續滑動加上患者主動、無痛的動作，說明正確。"
    }
   },
   {
@@ -1709,26 +1697,33 @@
    "id": "110-1-TECH-074",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "座深不足會使大腿支撐面積變小，壓力集中而易產生壓瘡，也讓坐姿不穩、骨盆易歪斜；膝後窩受壓導致薦椎坐姿是座深過長的問題。",
+   "why_correct": "座深不足會使大腿支撐面積變小，壓力集中於坐骨而易產生壓瘡，也讓坐姿不穩、骨盆易歪斜；膝後窩受壓導致薦椎坐姿是座深過長的問題。",
    "why_others": {
-    "B": "②腿部支撐不足雖有可能，但本題未承認；漏掉①。",
+    "B": "完全損傷者下肢感覺喪失，主要風險不是腿部不適；且漏了①。",
     "C": "④膝後窩受壓是座深過長才會發生。",
-    "D": "②④兩項皆不是本題承認的答案。"
+    "D": "②下肢感覺喪失不以不適為主；④是座深過長的問題。"
    },
    "takeaway": "座深不足：壓力集中、骨盆不穩；過長才壓膝後窩。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.55,
+    "blind_confidence": 0.4,
     "verdict": "reasoning_error",
-    "reason": "詳解承認②「有可能」，卻只以「本題未承認」排除，沒有提出專業理由，推理不成立。",
+    "reason": "L3 以下完全損傷仍保留大腿前側部分感覺，詳解以「下肢感覺喪失」排除②，事實描述有誤。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "詳解承認②「有可能」，卻只以「本題未承認」排除，沒有提出專業理由，推理不成立。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

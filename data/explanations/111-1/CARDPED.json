@@ -233,28 +233,25 @@
   },
   {
    "id": "111-1-CARDPED-011",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "膜面與鼓面的切換是旋轉胸件與管路相接的接頭（柄）處，圖中D箭頭所指之處，轉動後即可切換使用面。",
+   "why_correct": "膜面與鼓面的切換是轉動胸件與管路相接的柄部，即圖中D箭頭所指處，轉動後聲音改由另一面傳導。",
    "why_others": {
-    "A": "A是耳塞，用於貼合耳道，與面的切換無關。",
-    "B": "B是膜面本身，是接觸胸壁的部分，不是切換機構。",
-    "C": "C是鼓面本身，不是切換處。"
+    "A": "A是耳塞，用於貼合耳道，與切換無關。",
+    "B": "B是較小、中央有傳音孔的鼓面，是接觸身體的部分，不是切換處。",
+    "C": "C是較大的膜面，是接觸身體的部分，不是切換處。"
    },
-   "takeaway": "轉動胸件接頭處切換膜面與鼓面。",
+   "takeaway": "轉動胸件與管路相接的柄部，切換膜面與鼓面。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "附圖B所指上方面中央有傳音孔、較小，應為鼓面，C為較大的膜面，詳解把B、C的身分寫反。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "圖中D指胸件與管路相接柄部，轉動可切換膜面與鼓面；A耳塞、B較小鼓面、C較大膜面，與圖相符。"
    }
   },
   {
@@ -402,28 +399,25 @@
   },
   {
    "id": "111-1-CARDPED-018",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "運動訓練能降低交感神經興奮性，是因為對交感反應性下降，並非單純因正腎上腺素減少就促進心理健康，此因果敘述不正確。",
+   "why_correct": "運動改善心理健康與腦內正腎上腺素、血清素等單胺類增加有關，而非減少；因此「減少正腎上腺素故可增進心理健康」的因果敘述錯誤。",
    "why_others": {
     "A": "運動可減少憂鬱、沮喪、焦慮與害怕。",
     "B": "運動可改善情緒並增加信心。",
     "C": "增加活動可使交感神經興奮性下降。"
    },
-   "takeaway": "心臟復健的心理益處來自情緒改善與自主神經調節。",
+   "takeaway": "運動的心理益處與腦內單胺類增加有關，不是減少。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "D錯在運動改善心理健康與腦內正腎上腺素等單胺類增加有關，而非減少；詳解的理由含糊，未點出正確機轉。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.35,
+    "verdict": "pass",
+    "reason": "運動的心理益處與腦內單胺類增加有關，D以減少正腎上腺素推論增進心理健康錯誤，其餘選項正確。"
    }
   },
   {
@@ -1233,28 +1227,25 @@
   },
   {
    "id": "111-1-CARDPED-054",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "左側臥時，胃的食道交界處位在胃內容物上方，胃內容物較不易逆流至食道，因此較能減緩胃食道逆流。",
    "why_others": {
     "A": "仰臥時胃內容物易貼近賁門，逆流機會較高。",
     "B": "右側臥時賁門位置較低，內容物易逆流。",
-    "D": "水平趴臥未抬高上半身，減緩有限，且有嬰兒猝死風險。"
+    "D": "趴臥也能減少逆流，但有嬰兒猝死風險，不建議使用。"
    },
-   "takeaway": "胃食道逆流：左側臥最有利。",
+   "takeaway": "嬰兒胃食道逆流：左側臥最適合；趴臥有猝死風險。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "D說水平趴臥減緩逆流有限不正確，研究顯示趴臥與左側臥同樣能明顯減少逆流，不選它主要是因嬰兒猝死風險。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "左側臥使胃食道交界在內容物上方減少逆流，趴臥雖減逆流但有猝死風險，說明正確。"
    }
   },
   {

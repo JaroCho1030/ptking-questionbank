@@ -624,28 +624,25 @@
   },
   {
    "id": "107-2-NEURO-028",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "T1–T6完全性損傷者上肢功能正常，軀幹控制有限。長期目標可訂為使用長腿支架做短距離行走運動，主要為運動與站立目的；獨立生活能力已不是此層級的特別重點。",
+   "why_correct": "T1–T6完全性損傷者上肢功能完整，日常生活可在輪椅層級完全獨立；但軀幹與下肢控制不足，行走只能訂為穿長腿支架做短距離的治療性行走。",
    "why_others": {
-    "A": "穿無扣上衣是較低位損傷的短期目標，且不具長期代表性。",
+    "A": "上肢功能完整者穿無扣上衣應能獨立完成，不足以作為長期目標。",
     "B": "青蛙式呼吸是高位頸髓損傷用於呼吸支持的技巧。",
-    "D": "使用踝足矯具長距離戶外步行需下肢功能，較不可能。"
+    "D": "下肢與軀幹癱瘓，僅靠踝足矯具無法穩定膝髖做長距離行走。"
    },
-   "takeaway": "T1–T6完全損傷：長腿支架短距離行走為運動性目標，不是功能性行走。",
+   "takeaway": "T1–T6完全損傷：生活輪椅層級獨立，長腿支架短距離治療性行走。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱T1–T6完全損傷者「獨立生活能力已不是此層級的特別重點」有誤，此層級正以生活完全獨立為預期目標，且A稱穿無扣上衣是「較低位損傷的短期目標」也不準確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "T1–T6完全損傷以長腿支架短距離治療性行走為長期目標，其餘選項說明合理。"
    }
   },
   {
@@ -1776,28 +1773,25 @@
   },
   {
    "id": "107-2-NEURO-078",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "最大心跳約 220 減年齡等於 150，心跳儲備為 150 減 75 等於 75；目標心跳為 75 乘 0.8 再加 75，約 135，最接近 130。",
+   "why_correct": "最大心跳約220減年齡等於150，心跳儲備為150減75等於75；目標心跳為75乘0.8再加75，約135，選項中最接近130。",
    "why_others": {
-    "A": "170 超過估計最大心跳。",
-    "B": "150 約等於最大心跳，太高。",
-    "D": "110 約只有 50% 儲備，太低。"
+    "A": "170超過估計最大心跳。",
+    "B": "150約等於最大心跳，強度太高。",
+    "D": "110只相當於約一半的心跳儲備，太低。"
    },
-   "takeaway": "Karvonen：目標心跳加休息心跳，儲備乘強度。",
+   "takeaway": "Karvonen：目標心跳＝休息心跳＋（最大心跳－休息心跳）×強度。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "計算正確，但 takeaway 寫成「目標心跳加休息心跳」，公式敘述錯誤，應為目標心跳＝休息心跳＋儲備×強度。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "Karvonen公式計算約135，最接近130，計算正確。"
    }
   },
   {

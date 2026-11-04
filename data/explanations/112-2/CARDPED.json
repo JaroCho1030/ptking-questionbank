@@ -26,28 +26,25 @@
   },
   {
    "id": "112-2-CARDPED-002",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "黏液纖毛運送（mucociliary clearance）是把痰液往上送至氣管及主支氣管等大氣道，再由咳嗽排出；此選項對代數範圍的描述不正確，故為錯誤敘述。",
+   "why_correct": "咳嗽的有效清除範圍不只限於第一到第三代的大支氣管，還能延伸到更遠端的分叉；纖毛不必把痰送到那麼近端才能咳出，因此C為錯誤敘述。",
    "why_others": {
     "A": "纖毛朝同一方向高頻擺動，把分泌物往口端送，正確。",
     "B": "呼吸細支氣管以下無纖毛，需靠氣流與重力，正確。",
     "D": "巨噬細胞吞噬異物後經淋巴帶離，正確。"
    },
-   "takeaway": "痰液靠纖毛送到大氣道後咳出；末梢無纖毛。",
+   "takeaway": "咳嗽清除範圍比大支氣管更遠；末梢無纖毛靠氣流重力。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "詳解說纖毛把痰送到氣管及主支氣管再咳出，反而與 C 的敘述相符，沒有說明真正錯在哪裡（咳嗽可清除的範圍大約到第六、七代分叉，不只第一到第三代），推理無法支持 C 為錯誤敘述。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "咳嗽有效範圍可達較遠端分叉，其他選項敘述正確的說明合理。"
    }
   },
   {
@@ -355,16 +352,16 @@
   },
   {
    "id": "112-2-CARDPED-016",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "焦慮、疼痛會引起過度換氣，二氧化碳排出增加，造成呼吸鹼血症（respiratory alkalosis）。",
+   "why_correct": "焦慮、疼痛會引起過度換氣，二氧化碳排出增加，造成呼吸鹼血症（respiratory alkalosis），是最典型正確的配對。",
    "why_others": {
     "A": "持續嘔吐多引起代謝鹼血症，糖尿病酮酸中毒是代謝酸血症。",
-    "C": "慢性腎衰竭多見代謝酸血症。",
-    "D": "此敘述不如 B 典型，且腎毒性機轉描述不精確。"
+    "C": "慢性腎衰竭多見代謝酸血症，不是代謝鹼血症。",
+    "D": "代謝酸血症典型見於酮酸中毒、腹瀉、腎衰竭，以急性腎中毒為代表不精確。"
    },
    "takeaway": "過度換氣導致呼吸鹼血症，通氣不足導致呼吸酸血症。",
    "review": {
@@ -372,11 +369,8 @@
      "B"
     ],
     "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "D 的排除理由只說「不如 B 典型、機轉描述不精確」，沒有具體的錯誤依據；急性腎損傷本來就常合併代謝性酸中毒，詳解沒有交代 D 錯在哪裡。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "焦慮疼痛致過度換氣呼吸鹼血症，嘔吐致代謝鹼、慢性腎衰竭致代謝酸，說明正確。"
    }
   },
   {
@@ -869,26 +863,35 @@
    "id": "112-2-CARDPED-038",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "中心靜脈導管（central venous catheter）從頸部或胸部大靜脈置入，不影響手臂的靜脈回流，所以右手仍可測血壓。",
+   "why_correct": "中心靜脈導管（central venous catheter）從頸部或胸部大靜脈置入，手臂上沒有血管通路，因此右手仍可加壓量血壓。",
    "why_others": {
-    "A": "PICC 經手臂靜脈置入，同側避免加壓。",
-    "C": "動靜脈瘻管同側不可加壓，以免阻塞。",
-    "D": "Port-A 若經手臂靜脈置入，同側仍宜避免加壓。"
+    "A": "PICC經手臂靜脈置入，同側手臂應避免加壓。",
+    "C": "動靜脈瘻管同側不可加壓，以免阻塞瘻管。",
+    "D": "Port-A為長期植入的血管通路，同側上肢一般避免加壓量血壓。"
    },
-   "takeaway": "有肢體血管通路或瘻管的手臂不測血壓。",
+   "takeaway": "有手臂血管通路、瘻管或長期植入導管的一側不量血壓。",
    "review": {
     "blind_answer": [
-     "B"
+     "B",
+     "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "D 只用「若經手臂靜脈置入」這種假設排除，但 Port-A 通常植入在胸壁、經頸部或鎖骨下靜脈置入，詳解沒有說清楚 D 為何不能在右手量血壓。",
+    "blind_confidence": 0.4,
+    "verdict": "answer_disputed",
+    "reason": "Port-A多經胸壁鎖骨下或頸靜脈植入，手臂無通路，一般可於同側手臂量血壓，D與B同樣成立，詳解稱Port-A同側應避免加壓依據不足。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch",
+     "answer_disputed"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "D 只用「若經手臂靜脈置入」這種假設排除，但 Port-A 通常植入在胸壁、經頸部或鎖骨下靜脈置入，詳解沒有說清楚 D 為何不能在右手量血壓。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

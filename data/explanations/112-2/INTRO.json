@@ -473,28 +473,25 @@
   },
   {
    "id": "112-2-INTRO-021",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "支出目標制下，超過目標的部分仍會支付，只是之後依規定調整，不是不予支付；因此敘述錯誤。",
+   "why_correct": "支出目標制採事先固定的點值，實際利用量超過目標時，超過的部分仍照付，之後再調整下一期的費用，不是不予支付，因此敘述錯誤。",
    "why_others": {
     "A": "總額預算可有效控制醫療費用，敘述正確。",
     "B": "支出上限制每點支付金額事後結算，屬回溯性，敘述正確。",
     "D": "點值不固定使醫師收入不穩定，敘述正確。"
    },
-   "takeaway": "支出上限制超過不付；支出目標制超過仍付。",
+   "takeaway": "支出上限制：點值回溯下調；支出目標制：超過仍付，下期調整。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "takeaway 稱「支出上限制超過不付」不正確，支出上限制是以點值回溯下調方式全部給付，並非超過部分不付。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "支出目標制超過仍照付、下期調整，支出上限制點值回溯，說明正確。"
    }
   },
   {
@@ -617,28 +614,25 @@
   },
   {
    "id": "112-2-INTRO-027",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "C 所述的最低點數與繼續教育規定不符，因此錯誤；其他選項描述的類別、期限與要求皆符合規定。",
+   "why_correct": "至少12點的規定針對的是專業品質、專業倫理、專業相關法規三類合計，不包含專業課程；選項把專業課程算進去，類別錯誤，因此C錯。",
    "why_others": {
-    "A": "課程類別分類符合規定。",
-    "B": "每六年應完成的積分符合規定。",
+    "A": "課程類別分為這四類，符合規定。",
+    "B": "每六年應完成的積分數符合規定。",
     "D": "須包含感染管制及性別議題課程，符合規定。"
    },
-   "takeaway": "繼續教育：分類、期限、積分與必修議題要熟記。",
+   "takeaway": "12點下限算品質、倫理、法規三類，不含專業課程。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "C 的錯誤在類別（應為專業品質、專業倫理、專業相關法規合計至少12點，不含專業課程），點數12點本身正確，詳解說成最低點數不符是錯的。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "12點下限為品質、倫理、法規三類合計，不含專業課程，符合規定。"
    }
   },
   {
@@ -1038,28 +1032,25 @@
   },
   {
    "id": "112-2-INTRO-045",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "陰性概似比 LR– ＝（1－敏感度）÷ 特異度＝（1－0.9）÷ 0.8＝0.125。",
    "why_others": {
-    "A": "誤用其他算法，非 LR–。",
-    "B": "約為 LR+ 計算錯誤的結果。",
-    "D": "無對應的正確公式。"
+    "A": "0.1÷0.2，誤把（1－特異度）當分母。",
+    "B": "4.5是LR+（0.9÷0.2），不是LR–。",
+    "D": "1.9÷0.8，誤把1＋敏感度當分子。"
    },
    "takeaway": "LR–＝（1－敏感度）÷特異度；LR+＝敏感度÷（1－特異度）。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "B 的 4.5 正好是正確的 LR+（0.9÷0.2），詳解卻說是「LR+ 計算錯誤的結果」，與事實不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.98,
+    "verdict": "pass",
+    "reason": "LR–＝0.1/0.8＝0.125，各誤選計算來源正確。"
    }
   },
   {

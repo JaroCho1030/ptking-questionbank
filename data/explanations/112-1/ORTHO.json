@@ -49,27 +49,24 @@
   },
   {
    "id": "112-1-ORTHO-003",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f6492370bfcd",
-   "why_correct": "頂韌帶連接齒突尖與枕骨大孔前緣，主要抵抗枕骨與上頸椎的拉離（distraction）；因位於中線附近，也有教材認為對旋轉有些許限制，故 A、C 均承認。",
+   "why_correct": "頂韌帶（apical ligament）連接齒突尖與枕骨大孔前緣，主要限制枕骨與上頸椎間的拉離，故A成立。原公布答案C另含旋轉，但上頸椎旋轉主要由翼狀韌帶限制，頂韌帶對旋轉的角色有爭議，因此A、C都給分。",
    "why_others": {
-    "B": "韌帶只抗拉伸，擠壓由骨性結構承受。",
-    "D": "擠壓不是韌帶的功能，此組合不成立。"
+    "B": "韌帶抵抗的是拉伸，不限制擠壓。",
+    "D": "含擠壓且缺拉離，此組合不成立。"
    },
-   "takeaway": "頂韌帶限制枕骨與軸椎的拉離，不抗擠壓。",
+   "takeaway": "頂韌帶主要限制拉離；上頸旋轉主要靠翼狀韌帶限制。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "以「位於中線附近」推論頂韌帶限制旋轉不合邏輯，中線韌帶對旋轉的控制力反而最小，旋轉主要由翼狀韌帶限制，對送分爭議的說明不當。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "頂韌帶附著與限制拉離正確，對旋轉爭議與更正給分的說明合理。"
    }
   },
   {
@@ -330,28 +327,25 @@
   },
   {
    "id": "112-1-ORTHO-015",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "薦骨後扭轉失能時，薦骨底相對往後，當腰椎處於平坦狀態，彈壓測試（spring test）會誘發出陽性反應，這是此失能的特徵。",
+   "why_correct": "後扭轉失能時薦骨底往後、往前（點頭）受限，腰椎跟著變平坦、前凸減少。此時做腰椎彈壓測試（spring test）會出現陽性，是後扭轉的特徵之一。",
    "why_others": {
-    "A": "此失能是往後受限，右側薦骨底往前旋受限的說法與失能方向不符。",
-    "B": "坐姿前彎與 Gillet's 測試側別的說法與此失能不符。",
-    "D": "後扭轉時薦骨底與下外角應偏向後，不是往前。"
+    "A": "右斜軸左扭轉是左側薦骨底後移、往前受限，不是右側。",
+    "B": "此失能坐姿前彎與Gillet's測試陽性側應在左側。",
+    "D": "左側薦骨底是往後，往前的是對側（右側）下外角。"
    },
-   "takeaway": "薦骨後扭轉：腰椎平坦時，彈壓測試陽性。",
+   "takeaway": "薦骨後扭轉：薦骨底後移、腰椎平坦，彈壓測試陽性。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "左扭轉於右斜軸（L on R）是左側薦骨底後移、往前受限而非「往後受限」，且對側下外角是往前，D與A的說明有誤、B未說明實際陽性側（左側）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "右斜軸左扭轉為左側薦骨底後移、右下外角前移、腰椎平坦彈壓測試陽性，各選項說明一致。"
    }
   },
   {
@@ -954,28 +948,25 @@
   },
   {
    "id": "112-1-ORTHO-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "肘關節內病變（如積液、發炎）時，關節囊內壓力在稍屈曲位最低，伸直最先受限，也通常最後才恢復，因此最先受限的動作為伸直。",
+   "why_correct": "肘關節內病變（如積液、發炎）時，關節在稍屈曲位容積最大、壓力最低，病人傾向維持屈曲姿勢，因此伸直通常最先出現受限。",
    "why_others": {
-    "B": "旋後並非最先恢復的動作。",
-    "C": "屈曲不是最先恢復的動作，伸直才是最先受限。",
-    "D": "屈曲受限使手無法到口，對上肢功能影響通常更大。"
+    "B": "一般描述為伸直最先受限也最先恢復，不是旋後。",
+    "C": "一般描述為伸直最先恢復，不是屈曲。",
+    "D": "屈曲受限使手難以到口、梳頭，對上肢功能影響通常更大。"
    },
-   "takeaway": "肘關節內病變，伸直最先受限。",
+   "takeaway": "肘關節內病變：伸直最先受限，屈曲受限對功能影響較大。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱伸直「通常最後才恢復」缺乏依據，且與教科書常見「伸直最先受限亦最先恢復」說法相左；B、C的排除也只是重述結論，沒有說出理由。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "肘關節內病變伸直最先受限也最先恢復、屈曲受限對功能影響較大，符合Magee敘述。"
    }
   },
   {

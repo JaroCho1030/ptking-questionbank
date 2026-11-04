@@ -955,28 +955,25 @@
   },
   {
    "id": "112-1-CARDPED-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "協同發展理論把嬰兒行為分成自律、動作、意識狀態、專注互動與自我調節系統。眼神漂浮、呆視、眼神閃躲等屬於意識狀態系統的窘迫訊號。",
+   "why_correct": "協同發展理論把嬰兒行為分成自律、動作、意識狀態、專注互動與自我調節系統。眼神漂浮、呆滯無神屬意識狀態系統的窘迫訊號，表示難以維持清醒穩定狀態。",
    "why_others": {
-    "A": "生理系統的窘迫訊號多為膚色改變、呼吸不規則、打嗝、嘔吐等。",
-    "B": "動作系統的窘迫訊號多為張力過高或過低、手腳亂動、肢體僵直等。",
-    "D": "專注互動系統的窘迫訊號多為迴避注視、轉頭不看人，與眼神漂浮的歸類不同。"
+    "A": "生理系統窘迫訊號多為膚色改變、呼吸不規則、打嗝等。",
+    "B": "動作系統窘迫訊號多為張力過高或過低、肢體亂動等。",
+    "D": "專注互動系統窘迫訊號多為迴避注視、轉頭避開互動。"
    },
-   "takeaway": "眼神漂浮、呆視、眼神閃爍歸意識狀態系統的窘迫訊號。",
+   "takeaway": "眼神漂浮、呆滯歸意識狀態；迴避注視歸專注互動。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 把眼神閃躲歸為意識狀態系統，D 又把迴避注視歸為專注互動系統，同一現象前後歸類矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "眼神漂浮屬意識狀態系統窘迫訊號，其餘系統的訊號說明正確。"
    }
   },
   {
@@ -1096,28 +1093,25 @@
   },
   {
    "id": "112-1-CARDPED-048",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "坐姿發展先出現環坐，再來是長坐，之後可坐上適合的小椅子，最後才出現側坐等較需要旋轉與分離動作的坐姿，故順序為④→①→③→②。",
+   "why_correct": "坐姿發展先出現支撐面大的環坐，再來是長坐，之後出現需軀幹旋轉的側坐，最後才能自己坐上小椅子，故順序為④→①→③→②。",
    "why_others": {
     "A": "把側坐排在長坐之前，順序不符。",
-    "B": "把側坐排在最後，並把坐小椅子放在側坐之前，順序不符。",
+    "B": "把坐小椅子排在側坐之前，順序不符。",
     "C": "把長坐排在最後，順序不符。"
    },
-   "takeaway": "環坐→長坐→側坐→坐小椅子，順序要記熟。",
+   "takeaway": "環坐→長坐→側坐→坐小椅子。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 文字寫坐小椅子在前、側坐最後，與它給的順序④→①→③→②矛盾，反而符合選項B。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "環坐→長坐→側坐→坐小椅子的順序與各選項排除說明正確。"
    }
   },
   {

@@ -164,16 +164,16 @@
   },
   {
    "id": "105-1-NEURO-008",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "肌梭的 Ia 傳入纖維為初級末梢，對肌肉長度變化的速度（動態）與長度都敏感，主要提供牽張速度訊息。",
    "why_others": {
     "B": "Ib 來自高爾基腱器，反映肌肉張力。",
     "C": "II 型主要提供肌肉長度（靜態）訊息。",
-    "D": "Aα 是支配梭外肌的運動神經纖維，不是肌梭傳入。"
+    "D": "Aα是依纖維直徑的分類，Ia、Ib都屬此類，不專指速度訊息。"
    },
    "takeaway": "Ia 感速度，II 感長度，Ib 感張力。",
    "review": {
@@ -181,11 +181,8 @@
      "A"
     ],
     "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "D 的說明有誤：Ia（及 Ib）傳入纖維本身就屬 Aα 類纖維，不能說 Aα 只是支配梭外肌的運動纖維、不是肌梭傳入。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "Ia 對牽張速度敏感、II 反映長度、Ib 反映張力，說明正確。"
    }
   },
   {
@@ -929,14 +926,14 @@
   },
   {
    "id": "105-1-NEURO-041",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "創傷後失憶期（post-traumatic amnesia, PTA）指受傷後無法形成連續新記憶的時期。此患者第三天仍有記憶片段，第四天的治療不記得，第五天起恢復連續記憶，故失憶期算到第四天，共 4 天。",
+   "why_correct": "創傷後失憶期（post-traumatic amnesia, PTA）指受傷後無法形成連續新記憶的時期。第三天的記憶只是片段，第四天仍不記得，第五天起恢復連續記憶，故失憶期為 4 天。",
    "why_others": {
-    "A": "第三天已能記得家人探視，不算失憶期結束後才算的天數。",
+    "A": "第三天只是記憶孤島，連續記憶到第五天才恢復，不是 3 天。",
     "C": "第五天起記憶已恢復連續，不屬失憶期。",
     "D": "第六天記憶早已正常，不應納入。"
    },
@@ -945,12 +942,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "A 選項說明語意不通，沒有說清楚第三天只是記憶孤島、PTA 要到恢復連續記憶（第五天）前才結束，所以不是 3 天。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "第三天為記憶孤島，第五天起恢復連續記憶，PTA 4 天推理合理。"
    }
   },
   {
@@ -1576,16 +1570,16 @@
   },
   {
    "id": "105-1-NEURO-069",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "周邊神經損傷屬下運動神經元病變，反射弧中斷，深腱反射會減弱或消失，並伴隨肌肉張力下降。",
    "why_others": {
     "A": "增強見於上運動神經元病變。",
-    "C": "反射弧受損，反射不可能不變。",
-    "D": "先增強再減弱是上運動神經元損傷後脊髓休克恢復的過程，不是周邊神經損傷。"
+    "C": "反射弧受損，反射不會維持不變。",
+    "D": "周邊神經損傷不會先增強；中樞的脊髓休克則是先消失後增強。"
    },
    "takeaway": "LMN 病變反射減弱，UMN 病變反射增強。",
    "review": {
@@ -1593,11 +1587,8 @@
      "B"
     ],
     "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "D 選項說明錯誤：脊髓休克的過程是反射先消失或減弱、之後才增強，不是先增強再減弱。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "LMN 損傷反射弧中斷致深腱反射減弱，說明正確。"
    }
   },
   {

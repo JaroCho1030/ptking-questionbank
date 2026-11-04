@@ -649,28 +649,25 @@
   },
   {
    "id": "115-1-NEURO-029",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "伸手取物前，軀幹要先做預期性姿勢調整（anticipatory postural adjustment），近端穩定之後遠端才能動。玻巴斯療法（Bobath/NDT）把骨盆當成近端關鍵點（key point）。骨盆前傾可以帶出腰椎伸直與軀幹直立，重心才能往前移，坐姿穩定，手臂也較容易向前伸。",
+   "why_correct": "伸手取物前，軀幹要先做預期性姿勢調整（anticipatory postural adjustment），近端穩定之後遠端才能動。玻巴斯療法（Bobath/NDT）把骨盆當成近端關鍵點（key point）。骨盆前傾可帶出腰椎伸直與軀幹直立，重心才能前移，坐姿穩定，手臂也較容易向前伸。",
    "why_others": {
     "B": "骨盆後傾會讓軀幹屈曲、駝背，重心往後，不利往前伸手與維持姿勢穩定。",
-    "C": "肩帶前突是伸手動作本身的遠端成分，不是誘發姿勢穩定的首選近端關鍵點。",
+    "C": "肩帶雖也是近端關鍵點，但前突偏向帶出伸手動作，較難先建立軀幹的姿勢穩定。",
     "D": "肩帶後縮與往前伸手的方向相反，不能促進預期性姿勢調整。"
    },
-   "takeaway": "NDT伸手取物：先做近端骨盆前傾、讓軀幹伸直，取得姿勢穩定後，遠端上肢才動。",
+   "takeaway": "NDT伸手取物：先以骨盆前傾讓軀幹伸直、取得姿勢穩定，上肢再往前伸。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒有問題，但 C 選項的解釋有錯：在玻巴斯療法裡，肩帶跟骨盆一樣是近端關鍵點，詳解卻把肩帶前突說成伸手動作的「遠端成分」。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "以骨盆前傾建立近端姿勢穩定再伸手，說明合理。"
    }
   },
   {
@@ -1158,10 +1155,10 @@
   },
   {
    "id": "115-1-NEURO-051",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "T12完全損傷患者下肢完全癱瘓，髖、膝都無法自主控制，只穿踝足矯具（AFO）撐不住膝關節。必須穿雙側膝踝足矯具（KAFO），再搭配枴杖或助行器，用擺過步態（swing-through gait）練習行走，所以C錯誤。",
    "why_others": {
@@ -1169,17 +1166,14 @@
     "B": "C5～C6患者手部抓握不足，輪圈加凸起手把（projections）才推得動輪椅。",
     "D": "減重跑步機訓練靠反覆步行的感覺輸入，誘發脊髓中樞型態產生器（CPG）的節律性步態。"
    },
-   "takeaway": "低位胸髓（T10～L2）完全損傷：雙側KAFO加枴杖練習擺過步態，多半只能做運動性步行。",
+   "takeaway": "低位胸髓完全損傷練走需雙側KAFO加枴杖或助行器，只穿AFO撐不住膝。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 和各選項的分析都對，但重點整理說 T10～L2 完全損傷「多半只能做運動性步行」有誤；常見教材把 T10～L2 歸為穿 KAFO 可達居家性步行，運動性步行才是更高位的胸髓損傷（約 T2～T9）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "T12完全損傷需雙側KAFO加輔具才能行走，其他選項說明正確。"
    }
   },
   {
@@ -1391,28 +1385,25 @@
   },
   {
    "id": "115-1-NEURO-061",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "頂核（fastigial nuclei）接收前庭小腦（絨球小結葉）與蚓部的投射，再傳到前庭核與網狀結構，負責調控平衡、軀幹姿勢和眼球運動。頂核或前庭小腦受損時，前庭眼球反射的增益（gain）調整會出問題，臨床上可見眼振與 VOR 異常。",
+   "why_correct": "頂核（fastigial nuclei）接收小腦蚓部的投射，再傳到前庭核與網狀結構，參與調控平衡、軀幹姿勢與眼球運動。頂核受損時，前庭眼球反射的調控會出問題，臨床上可見眼振與VOR異常。",
    "why_others": {
     "B": "齒狀核屬於大腦小腦路徑，管肢體動作的計畫與協調，跟VOR關係不大。",
-    "C": "球狀核屬中間核，屬脊髓小腦路徑，主要調控近端肢體動作。",
+    "C": "球狀核屬中間核，主要調控同側肢體（偏遠端）動作的協調，與VOR無直接關係。",
     "D": "栓狀核也是中間核，負責同側肢體動作的修正，與前庭眼動無直接關係。"
    },
-   "takeaway": "前庭小腦與蚓部經頂核連到前庭核，管平衡與眼動；齒狀核管動作計畫，中間核管肢體協調。",
+   "takeaway": "深層小腦核中頂核連到前庭核，管平衡與眼動；中間核管肢體協調，齒狀核管動作計畫。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 A 沒問題，但詳解有兩處錯誤：一是說球狀核「主要調控近端肢體動作」，中間核（球狀核、栓狀核）經紅核脊髓徑與外側皮質脊髓系統，主要管遠端肢體，近端與軀幹是頂核和蚓部在管；二是說前庭小腦「經頂核」連到前庭核，其實絨球小結葉主要是直接投射到前庭核，不經頂核。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "頂核連結前庭核，與VOR最相關，其他核團說明正確。"
    }
   },
   {

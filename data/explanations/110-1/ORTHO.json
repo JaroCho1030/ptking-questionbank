@@ -3,28 +3,25 @@
  "explanations": [
   {
    "id": "110-1-ORTHO-001",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "橫向脊椎施壓（transverse vertebral pressure）是從棘突或橫突側面施力，用來評估並治療脊椎節段的活動與疼痛反應，並非專門檢查單側小面關節活動度，因此最不符合其理論。",
+   "why_correct": "Maitland 的橫向脊椎施壓（transverse vertebral pressure）是施力於棘突側面，評估與治療節段的活動與疼痛反應；評估單側小面關節的應是單側後前向施壓（unilateral PA），故 B 最不符。",
    "why_others": {
     "A": "Maitland 概念重視病人症狀與反應，而非醫學診斷標籤。",
     "C": "評估手法與治療手法相近，評估中找到的動作可直接用於治療。",
     "D": "目的在了解各節脊椎動作如何影響疼痛，符合其理論。"
    },
-   "takeaway": "Maitland 以症狀為導向，評估即治療，不單看診斷。",
+   "takeaway": "棘突側推是橫向施壓；單側小面關節用單側後前向施壓。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "Maitland 的橫向脊椎施壓是施力於棘突側面，詳解寫成「棘突或橫突側面」不正確；評估單側小面關節的應是單側後前向施壓（unilateral PA）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "橫向施壓是推棘突側面，評估單側小面關節要用單側後前向施壓，說明正確。"
    }
   },
   {
@@ -420,28 +417,25 @@
   },
   {
    "id": "110-1-ORTHO-019",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "ASIS 與坐骨粗隆連線和 PSIS 與大轉子連線的交會處，位於臀部深層，可觸及梨狀肌（piriformis）。",
    "why_others": {
     "A": "臀大肌是表層大塊肌肉，不是以此定位。",
     "B": "臀小肌位於臀中肌深層，位置較偏上。",
-    "C": "股方肌位置較低，靠近坐骨粗隆到大轉子之間。"
+    "C": "股方肌位置較低，位於坐骨粗隆到大轉子之間。"
    },
-   "takeaway": "梨狀肌位於 PSIS 與大轉子連線與坐骨交會處。",
+   "takeaway": "ASIS–坐骨粗隆連線與 PSIS–大轉子連線交會處觸診梨狀肌。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "takeaway 把定位寫成「PSIS 與大轉子連線與坐骨交會處」，誤述了題目的兩條連線（應是與 ASIS–坐骨粗隆連線交會）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "兩線交會處觸診梨狀肌，其他選項說明合理。"
    }
   },
   {
@@ -653,28 +647,25 @@
   },
   {
    "id": "110-1-ORTHO-029",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "圖 B 為側躺的睡眠者牽張（sleeper stretch），側躺以另一手把上臂內轉壓向床面，牽張後側關節囊與外旋肌群，適合後關節囊緊的個案。",
+   "why_correct": "圖 B 為側躺，上臂水平內收橫過胸前，並由另一手加壓，牽張肩後側關節囊與後側結構，適合後關節囊過緊的個案。",
    "why_others": {
-    "A": "圖 A 是撐住支撐物下壓身體，牽張的是前側結構。",
-    "C": "圖 C 雙手貼牆在角落，是牽張胸大肌與前側。",
-    "D": "圖 D 是趴在桌面前伸，牽張的是後下與背闊肌，不是後關節囊。"
+    "A": "撐住後方支撐物下壓身體使肩伸直，牽張的是前側結構。",
+    "C": "雙手貼牆於角落前傾，牽張胸大肌與肩前側。",
+    "D": "前臂置桌面、身體下壓使肩屈曲，牽張下方結構而非後關節囊。"
    },
-   "takeaway": "後關節囊緊：睡眠者牽張（sleeper stretch）。",
+   "takeaway": "後關節囊緊：做水平內收方向的牽張。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "附圖 B 是側躺、手臂水平內收橫過胸前並由另一手加壓的牽張，不是詳解所寫「以另一手把上臂內轉壓向床面」的 sleeper stretch，詳解與附圖不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "與附圖相符：B 為側躺水平內收牽張後側結構，A、C、D 牽張的是前側或下方。"
    }
   },
   {
@@ -770,28 +761,25 @@
   },
   {
    "id": "110-1-ORTHO-034",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "此為 O'Brien 測試（主動壓縮測試）的變化型，也可檢查肩上唇（SLAP）或後上方問題。投擲隨勢期的後側症狀可能對應陽性。",
+   "why_correct": "此描述為 Jerk test：肩屈曲 90 度並內轉，沿肱骨軸向施力同時水平內收，用來檢查肩後向不穩或後側盂唇病灶。投擲隨勢期肱骨頭承受向後應力，此期有症狀者此測試可能陽性。",
    "why_others": {
-    "A": "Kim test 是另一種後下方盂唇測試，並非此描述。",
-    "B": "不是測試前鋸肌無力。",
+    "A": "Kim test 的姿勢與施力方向不同，此描述為 Jerk test。",
+    "B": "此測試檢查後向不穩，與前鋸肌無力無關。",
     "C": "肩峰下凹陷是向下不穩的溝槽徵象，不是此測試的陽性反應。"
    },
-   "takeaway": "隨勢期後側症狀要想到後側盂唇或 SLAP 問題。",
+   "takeaway": "Jerk test 測肩後向不穩；隨勢期症狀要想到後側。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "題目描述的是 Jerk test（屈曲 90 度、內轉、軸向施力加水平內收，用來測後向不穩或後側盂唇），詳解誤稱為 O'Brien 測試的變化型。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "描述為 Jerk test，用來檢查後向不穩，隨勢期症狀可能陽性，說明正確。"
    }
   },
   {
@@ -1147,13 +1135,13 @@
    "id": "110-1-ORTHO-050",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "後外側進路較易造成後側關節不穩定與脫位，因此術中會修補後側關節囊與短外旋肌群，以提高穩定度。",
    "why_others": {
     "A": "後外側進路保留臀中肌，直接外側進路才會破壞臀中肌。",
-    "B": "此並非公認的術式選擇原則，說法不嚴謹。",
+    "B": "此類患者後脫位風險高，常選前外側等進路並處理軟組織失衡。",
     "D": "直接外側進路涉及臀中肌、臀小肌，不包含髂腰肌。"
    },
    "takeaway": "後外側進路易脫位，需修補後關節囊。",
@@ -1161,12 +1149,19 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
+    "blind_confidence": 0.6,
     "verdict": "reasoning_error",
-    "reason": "B 僅稱「非公認原則、說法不嚴謹」而未說明錯誤原因；文獻中對髖屈曲內轉姿勢、後脫位風險高的神經肌肉失衡患者，確有偏好採外側／前外側進路的說法，詳解未能交代此選項為何錯。",
+    "reason": "B 的說明只說常選前外側等進路，沒有駁倒直接外側進路；直接外側進路本來就常用於後脫位風險高的病人，推理不成立。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "B 僅稱「非公認原則、說法不嚴謹」而未說明錯誤原因；文獻中對髖屈曲內轉姿勢、後脫位風險高的神經肌肉失衡患者，確有偏好採外側／前外側進路的說法，詳解未能交代此選項為何錯。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1700,24 +1695,21 @@
   },
   {
    "id": "110-1-ORTHO-074",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "296f93e231c2",
-   "why_correct": "四項都是前十字韌帶重建後評估重返高風險活動的指標：膕旁肌與股四頭肌肌力比值、兩側穩定度差異、本體感覺及功能動作表現，各自成立，故四項都給分。",
+   "why_correct": "考選部更正為四個選項都給分。原公布答案 A 的膕旁肌與股四頭肌比值是常用肌力標準，但題目問「最低標準」題意不明：B 的兩側差異 10 mm 過寬、D 要求與對側相同過嚴，各選項都難作為唯一答案，因此全部給分。",
    "why_others": {},
-   "takeaway": "重返高風險活動要綜合肌力、穩定、本體感覺與功能。",
+   "takeaway": "重返高風險活動需綜合肌力、穩定度、本體感覺與功能測試。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱四項各自成立，但B的兩側差異小於10 mm並非合理的重返標準（常用小於3 mm），D要求與對側相同也過嚴，送分原因應是題意不明而非四項皆正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "送分說明合理：題目問最低標準題意不明，各選項都難作為唯一答案。"
    }
   },
   {

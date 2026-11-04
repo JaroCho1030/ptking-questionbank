@@ -1275,15 +1275,15 @@
   },
   {
    "id": "115-2-TECH-056",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "Maitland等級Ⅴ是高速小幅度的推擠操作（manipulation/thrust）。類風濕性關節炎（rheumatoid arthritis）的韌帶、關節囊被發炎侵蝕而鬆弛，骨質也比較脆弱，這類操作會增加半脫位、韌帶斷裂或骨折的風險，屬於禁忌，所以這個敘述最不適當。",
    "why_others": {
     "A": "骨頭已癒合，只剩關節活動度受限，正是關節鬆動術的適應症。",
-    "B": "等級Ⅰ、Ⅱ是小幅度、不碰到阻力的振動，能抑制疼痛和肌肉保護性緊繃。",
+    "B": "等級Ⅰ小幅、Ⅱ大幅，都在不碰到阻力的範圍振動，可抑制疼痛與保護性肌肉緊繃。",
     "C": "等級Ⅲ、Ⅳ會進入組織阻力範圍，可牽拉緊繃的關節囊，適用於非急性期。"
    },
    "takeaway": "等級Ⅰ、Ⅱ用來止痛，Ⅲ、Ⅳ用來牽拉；等級Ⅴ是推擠操作，類風濕性關節炎的關節不可使用。",
@@ -1291,12 +1291,9 @@
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "B 選項的解釋把等級Ⅰ、Ⅱ都說成「小幅度」的振動，這是錯的：Maitland 等級Ⅱ是在活動範圍內、不碰到限制的大幅度振動，只有等級Ⅰ是在活動範圍起始處的小幅度振動。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "類風濕性關節炎禁用等級Ⅴ推擠操作，其他選項說明正確。"
    }
   },
   {
@@ -1347,28 +1344,25 @@
   },
   {
    "id": "115-2-TECH-059",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
    "why_correct": "彈壓測試（spring test）是病人俯臥時，治療師在單一節段的棘突或橫突施加後往前（PA）的彈性壓力，逐節感受活動量、終端感覺（end feel）和有沒有誘發疼痛，所以最適合用來評估各節脊椎的活動品質。",
    "why_others": {
-    "A": "牽引測試是整段分離椎間，看症狀會不會減輕，主要用來篩檢神經根壓迫，無法逐節評估活動。",
+    "A": "牽引測試是整段分離椎間，看症狀會不會減輕，無法逐節評估活動。",
     "B": "按壓測試是軸向加壓，看會不會誘發症狀，偏向神經根或椎間孔的激發測試。",
     "D": "節律鬆動是治療手法，用來減輕疼痛、增加活動度，不是評估活動品質的測試。"
    },
-   "takeaway": "逐節評估脊椎活動量與終端感覺選彈壓測試（PA spring）；牽引、按壓測試用來激發神經症狀。",
+   "takeaway": "逐節評估脊椎活動量與終端感覺選彈壓測試；按壓測試看是否誘發症狀，牽引測試看症狀是否減輕。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒有問題，各選項的分析也正確，但 takeaway 寫「牽引、按壓測試用來激發神經症狀」並不正確：牽引測試是看症狀會不會減輕，不是用來激發症狀，這句也和 A 的說明自相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "彈壓測試可逐節評估活動量與終端感覺，其他選項說明正確。"
    }
   },
   {
@@ -1606,14 +1600,14 @@
   },
   {
    "id": "115-2-TECH-070",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "腳踏板（footrest）太高時，膝蓋與髖關節被抬高，大腿遠端離開座墊，原本由大腿後側分擔的體重轉由骨盆承擔，壓力集中在坐骨粗隆（ischial tuberosity），增加壓瘡風險。",
    "why_others": {
-    "A": "腳踏板過低或座椅過深、骨盆後傾時才容易往前滑，抬高腳踏板反而不易前滑。",
+    "A": "前滑多與骨盆後傾、座深不當等有關，不是腳踏板過高最主要的影響。",
     "C": "壓力主要集中在坐骨，不會完全轉移到背部，「完全」的說法有誤。",
     "D": "大腿會離開座墊而非完全貼合，壓力分布變得更不均勻。"
    },
@@ -1622,12 +1616,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒有問題，但 A 的解析寫「抬高腳踏板反而不易前滑」並不恰當。腳踏板過高會讓髖關節屈曲增加，骨盆容易後傾，進而形成骶骨坐姿，這句話缺乏依據，也可能誤導考生；另外用「才」把前滑的原因限定在那幾種情況，說法也過於絕對。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "腳踏板過高使大腿離開座墊，壓力集中在坐骨粗隆，說明正確。"
    }
   },
   {

@@ -168,14 +168,14 @@
   },
   {
    "id": "106-1-ORTHO-008",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "頸椎小面關節（facet joint）是有關節囊與滑液的滑液關節（synovial joint），所以D正確。",
+   "why_correct": "頸椎小面關節（facet joint）有關節囊與滑液，屬滑液關節（synovial joint），所以D正確。",
    "why_others": {
-    "A": "上頸椎的耦合動作不是這樣單純的立即反向旋轉。",
+    "A": "枕骨左側彎時經翼狀韌帶使軸椎立即向左（同側）旋轉，不是向右。",
     "B": "椎動脈也供應腦幹與小腦，阻塞會減少腦幹血流。",
     "C": "頸椎小面關節角度有利旋轉，頸椎旋轉幅度大。"
    },
@@ -185,11 +185,8 @@
      "D"
     ],
     "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "A錯在方向：枕骨左側彎經翼狀韌帶使軸椎立即向左（同側）旋轉，詳解說『不是單純立即反向旋轉』含糊且暗示非立即，未點出真正錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "小面關節為滑液關節；枕骨側彎使軸椎同側旋轉、椎動脈供應腦幹等說明正確。"
    }
   },
   {
@@ -358,28 +355,25 @@
   },
   {
    "id": "106-1-ORTHO-016",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "特定腰椎扭轉測試採右側臥，治療師握患者右手臂向上向前拉，直到測試椎節出現移動，藉此引起該節的旋轉。",
+   "why_correct": "特定腰椎扭轉測試採右側臥，治療師握患者下方的右手臂向上向前拉，直到測試椎節出現移動，藉此引起該節的旋轉。",
    "why_others": {
-    "A": "手臂側別錯誤，此題標準答案為握右手臂。",
+    "A": "右側臥時應拉下方的右手臂，握左手臂側別錯誤。",
     "C": "測試應採側臥，而非俯臥。",
     "D": "測試應採側臥，而非仰臥。"
    },
-   "takeaway": "此測試採側臥，握上方手臂做扭轉。",
+   "takeaway": "右側臥，拉下方右手臂向前上，直到測試椎節移動。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "右側臥時右手臂為下方手臂，takeaway寫『握上方手臂』與詳解及答案矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "右側臥、拉下方右手臂向前上至測試節段移動，符合測試方法。"
    }
   },
   {
@@ -430,28 +424,25 @@
   },
   {
    "id": "106-1-ORTHO-019",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "腹直肌主要作用是軀幹屈曲與骨盆後傾，穩定肋骨不是其代表作用，故C的敘述有誤。",
+   "why_correct": "吸氣時固定下肋、對抗橫膈拉動肋骨的是腰方肌；腹直肌收縮是將肋骨往下拉、使軀幹屈曲並協助用力呼氣，並非固定肋骨對抗橫膈，故C錯誤。",
    "why_others": {
     "A": "右外斜肌加左內斜肌可造成屈曲並向左旋轉。",
     "B": "同側內外斜肌共同收縮可產生同側側彎。",
     "D": "腹橫肌（transverse abdominis）屬姿勢性穩定肌，各方向動作都收縮。"
    },
-   "takeaway": "腹橫肌是脊椎穩定的姿勢性肌肉。",
+   "takeaway": "腰方肌吸氣時固定下肋；腹直肌主屈曲軀幹、助用力呼氣。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "詳解僅以『穩定肋骨不是其代表作用』判C錯，『非代表作用』不能證明敘述錯誤，推理不成立。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "吸氣時固定下肋者為腰方肌而非腹直肌，其餘斜肌與腹橫肌說明正確。"
    }
   },
   {
@@ -1104,28 +1095,25 @@
   },
   {
    "id": "106-1-ORTHO-048",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "祈禱試驗（prayer test）是檢查正中神經與手指伸展，而非橈神經，所以此組合錯誤。",
+   "why_correct": "祈禱試驗（prayer test）即反向Phalen，雙手合掌使腕背伸以誘發正中神經症狀，與橈神經無關，所以此組合錯誤。",
    "why_others": {
-    "A": "Wartenberg's sign 是尺神經病變時小指外展，組合正確。",
-    "B": "Froment's sign 檢查尺神經支配的拇內收肌，組合正確。",
-    "C": "Phalen's test 用於腕隧道症候群，與正中神經相符。"
+    "A": "Wartenberg's sign是尺神經病變時小指外展，組合正確。",
+    "B": "Froment's sign檢查尺神經支配的拇內收肌，組合正確。",
+    "C": "Phalen's test用於腕隧道症候群，與正中神經相符。"
    },
-   "takeaway": "Phalen 與 prayer test 對應正中神經。",
+   "takeaway": "Phalen（腕屈）與prayer test（腕伸）都測正中神經。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "prayer test（反向 Phalen）是以腕背伸姿勢誘發正中神經症狀，詳解說它檢查「手指伸展」不正確。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "Prayer test為反向Phalen測正中神經，Wartenberg與Froment屬尺神經，說明正確。"
    }
   },
   {
@@ -1592,27 +1580,24 @@
   },
   {
    "id": "106-1-ORTHO-069",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f6492370bfcd",
-   "why_correct": "考選部公告 A、C 皆給分。踝後內側痛加上抗阻拇趾屈曲痛，指向屈拇長肌夾擠（後踝夾擠）。後內側 shin splints 痛在小腿遠端脛骨內緣，與此不符；跗三角骨骨折位置偏後，與屈拇長肌症狀不直接對應，故兩者都被認可。",
+   "why_correct": "本題A、C皆給分。踝後內側痛合併抗阻拇趾屈曲痛，典型是屈拇長肌在後踝受夾擠。C：後內側shin splints痛在小腿脛骨內緣，不在踝後內側，最不可能。A：跗三角骨是獨立副骨，「骨折」說法不精確，常見的是其造成的夾擠，故也被認可。",
    "why_others": {
     "B": "屈拇長肌夾擠會造成後內側痛與拇趾屈曲痛，是可能原因。",
     "D": "距骨後突過大造成軟組織夾擠，是後踝夾擠的可能原因。"
    },
-   "takeaway": "後內側痛合併拇趾屈曲痛，想到屈拇長肌夾擠。",
+   "takeaway": "踝後內側痛合併拇趾屈曲痛，想到屈拇長肌後踝夾擠。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "屈拇長肌正走在距骨後突內外結節之間，跗三角骨病變正是後踝夾擠與拇趾屈曲痛的典型原因，詳解說其與屈拇長肌症狀不直接對應錯誤（A 給分較合理的理由是跗三角骨為副骨，談不上骨折）。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "後內側shin splints痛在脛骨內緣最不可能，並對A給分爭議與B、D可能原因作合理說明。"
    }
   },
   {
@@ -1686,28 +1671,25 @@
   },
   {
    "id": "106-1-ORTHO-073",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "膝上截肢者因髖外展、伸直肌群被截斷，容易出現髖屈曲、外展與外轉攣縮，並非屈曲與內收，故此項錯誤。",
+   "why_correct": "膝上截肢者內收肌（如內收大肌）的附著被截斷，臀中肌等外展肌失去拮抗，加上髖屈肌占優勢，易出現髖屈曲與外展攣縮，而非內收，故此項錯誤。",
    "why_others": {
     "A": "膝上義肢主要承重在坐骨粗隆，敘述正確。",
     "B": "膝下義肢主要承重在髕韌帶，敘述正確。",
     "D": "膝下截肢易有髖與膝屈曲攣縮，敘述正確。"
    },
-   "takeaway": "膝上截肢易髖屈曲、外展、外轉攣縮。",
+   "takeaway": "膝上截肢易髖屈曲、外展攣縮，不是內收。",
    "review": {
     "blind_answer": [
      "C"
     ],
     "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "膝上截肢的外展攣縮是因內收大肌等內收肌附著被截斷、臀中肌失去拮抗，詳解說「髖外展肌群被截斷」錯誤且與外展攣縮自相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "膝上截肢易髖屈曲外展攣縮而非內收，其餘承重與攣縮說明正確。"
    }
   },
   {

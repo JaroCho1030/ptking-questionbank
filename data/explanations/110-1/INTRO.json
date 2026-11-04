@@ -264,26 +264,33 @@
    "id": "110-1-INTRO-012",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "病人本人未表達意願，家屬意見不一致時，若有家屬反對，須先由反對者以書面撤回不同意放棄急救的表示，才能執行 DNR，以避免糾紛並尊重家屬意願。",
+   "why_correct": "病人未表達意願時，依安寧緩和醫療條例由最近親屬依順序同意，配偶順序先於成年子女。後順序者已同意時，先順序者的不同意應以書面表示；配偶已反悔，須由配偶以書面撤回該不同意，才能執行 DNR。",
    "why_others": {
-    "A": "配偶（有決定權的家屬）持反對，不能僅憑子女同意就執行。",
-    "B": "不是任何親屬反對就一律不執行，須依家屬意見整合處理。",
-    "D": "病人未簽署時，仍可由家屬代為決定，不能因此一律不執行。"
+    "A": "配偶順序先於子女，其反對不能以子女同意書略過。",
+    "B": "並非任何親屬反對都決定結果，依法以親屬順序處理。",
+    "D": "病人未簽署時，可由最近親屬依順序代為同意。"
    },
-   "takeaway": "DNR 有家屬異議時，須對方書面撤回才執行。",
+   "takeaway": "DNR 代理同意依親屬順序，配偶先於成年子女。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
+    "blind_confidence": 0.4,
     "verdict": "reasoning_error",
-    "reason": "詳解把規則說成任何家屬反對都須書面撤回，漏了安寧緩和醫療條例的關鍵：配偶順序先於成年子女，後順序者已同意時先順序者的不同意須以書面表示，B 的「家屬意見整合」也無法源依據。",
+    "reason": "法條規定的是先順序者的不同意須以書面表示，詳解卻推成配偶須以書面撤回才能執行，推理跳躍、前後不一致。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "詳解把規則說成任何家屬反對都須書面撤回，漏了安寧緩和醫療條例的關鍵：配偶順序先於成年子女，後順序者已同意時先順序者的不同意須以書面表示，B 的「家屬意見整合」也無法源依據。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -547,26 +554,33 @@
    "id": "110-1-INTRO-024",
    "status": "rejected",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "物理治療所人員洩漏業務上知悉的他人秘密，依法應依刑法洩密罪或相關規定處理，並非本選項所述罰鍰與廢止開業執照，故敘述錯誤。",
+   "why_correct": "物理治療師法對物理治療所人員洩密確有行政罰鍰，但罰鍰額度與處分內容與此選項不同；本選項套用的是容留無資格人員執業的罰則，故錯誤。",
    "why_others": {
     "A": "無資格執業致人死傷依刑法加重其刑，敘述正確。",
     "B": "租借證照者廢止證書並移送檢察機關，敘述正確。",
     "C": "容留無資格人員執業的罰則敘述正確。"
    },
-   "takeaway": "洩密屬刑責範疇，與容留無資格者罰則不同。",
+   "takeaway": "洩密與容留無資格者都有罰鍰，但額度與處分不同。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.4,
+    "blind_confidence": 0.3,
     "verdict": "reasoning_error",
-    "reason": "物理治療師法對物理治療所人員洩密訂有行政罰鍰，D 錯在罰鍰額度與處分內容；詳解說成只依刑法洩密罪處理、不罰鍰，與法規不符。",
+    "reason": "沒有指出洩密的實際罰則；稱罰鍰額度不同也有疑義，D 錯的應在得廢止開業執照這一點，無法讓考生確認。",
     "fails": [
      "reasoning_error"
-    ]
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "物理治療師法對物理治療所人員洩密訂有行政罰鍰，D 錯在罰鍰額度與處分內容；詳解說成只依刑法洩密罪處理、不罰鍰，與法規不符。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1252,15 +1266,15 @@
   },
   {
    "id": "110-1-INTRO-054",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
    "why_correct": "臨界值設為 0.01，要 p 小於 0.01 才算顯著。表中只有 vitality 的 p 值為 .005，其餘最小為 .015，都未達 0.01。",
    "why_others": {
-    "A": "這些項目的 p 值多為 .015 至 .040，未小於 0.01。",
-    "B": "physical functioning 與 bodily pain 的 p 值分別為 .537 與 .982，皆不顯著。",
+    "A": "雖含 vitality，但其餘項目 p 值都大於 0.01，未達顯著。",
+    "B": "physical functioning 與 bodily pain 的 p 值為 .537 與 .982，不顯著。",
     "C": "mental health 為 .019、role limitations-emotional 為 .015，皆大於 0.01。"
    },
    "takeaway": "顯著與否要對照題目設定的臨界值，此題為 0.01。",
@@ -1268,12 +1282,9 @@
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "A 選項包含 vitality（p=.005），詳解卻稱這些項目未小於 0.01，A 錯誤的理由應是含有未達顯著的項目。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "與附圖相符：只有 vitality 的 p=.005 小於 0.01，其餘 p 值引用正確。"
    }
   },
   {
@@ -1393,28 +1404,25 @@
   },
   {
    "id": "110-1-INTRO-060",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "肝硬化合併食道靜脈瘤且曾有出血跡象，應做內視鏡結紮術（endoscopic variceal ligation）預防出血，是標準處置。",
+   "why_correct": "肝硬化合併食道靜脈瘤，應以內視鏡結紮術（endoscopic variceal ligation）預防出血，是標準處置。",
    "why_others": {
-    "B": "黃疸不等於失代償，且評分不一定是 8 分，敘述不可靠。",
-    "C": "血小板低是門脈高壓脾腫大所致，並非常規輸注指標。",
-    "D": "凝血異常不是出血的唯一原因，不應立即輸注血漿。"
+    "B": "依數據 Child-Pugh 約 6 分屬 A 級代償期，非 8 分失代償。",
+    "C": "血小板低多因門脈高壓脾功能亢進，無活動性大出血不需立即輸注。",
+    "D": "目前無活動性大出血，不需立即輸注新鮮冷凍血漿。"
    },
    "takeaway": "肝硬化食道靜脈瘤：內視鏡結紮預防出血。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "依題目數據（膽紅素<2、白蛋白正常、INR 2.1、無腹水與腦病變）Child-Pugh 可算出為 6 分（A 級、代償期），詳解只說「不一定是 8 分」未正確說明 B 為何錯。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "Child-Pugh 6 分屬 A 級，以內視鏡結紮預防出血正確。"
    }
   },
   {

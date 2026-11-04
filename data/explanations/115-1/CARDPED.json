@@ -166,26 +166,33 @@
    "id": "115-1-CARDPED-008",
    "status": "rejected",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "心肌受損後，肌鈣蛋白I（Troponin I）在數小時內就開始上升，高敏感度檢驗更早測得。它專一性最高，而且會維持升高一至兩週，是急性心肌梗塞（acute myocardial infarction）首選的生化指標。題目選項中它最早上升。",
+   "why_correct": "心肌受損後，肌鈣蛋白I（Troponin I）通常在數小時內上升，高敏感度檢驗可更早測得，而且專一性最高。CK-MB上升時間相近，但早期敏感度較低，常還測不到；LDH、SGOT則更晚才上升。選項中以Troponin I最早可測得上升。",
    "why_others": {
-    "B": "CK-MB上升時間與肌鈣蛋白相近或稍晚，約一兩天內就恢復正常。",
-    "C": "LDH在一天以上才上升，是最晚的指標，可持續一至兩週。",
-    "D": "SGOT（AST）約半天後才上升，也沒有心肌專一性。"
+    "B": "CK-MB上升時間與Troponin相近，但早期敏感度較低，數天內回到正常。",
+    "C": "LDH要一天以上才上升，是最晚的指標。",
+    "D": "SGOT（AST）較晚上升，也沒有心肌專一性。"
    },
-   "takeaway": "心肌酵素上升順序：肌紅素→Troponin≈CK-MB→SGOT→LDH；Troponin最專一。",
+   "takeaway": "選項中Troponin I最早可測得上升且最專一；LDH最晚上升、持續最久。",
    "review": {
     "blind_answer": [
-     "A"
+     "B"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "CK-MB 通常要 48–72 小時（2–3 天）才回到正常，詳解寫「約一兩天內就恢復正常」低估了時間；而且詳解說 CK-MB 和 Troponin 上升時間「相近」，又在口訣寫成「Troponin≈CK-MB」，沒有說清楚為什麼 Troponin I 是最早上升的，推理不夠嚴謹。",
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "Troponin I最早可測得且專一性最高，其餘標記物時序說明合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "CK-MB 通常要 48–72 小時（2–3 天）才回到正常，詳解寫「約一兩天內就恢復正常」低估了時間；而且詳解說 CK-MB 和 Troponin 上升時間「相近」，又在口訣寫成「Troponin≈CK-MB」，沒有說清楚為什麼 Troponin I 是最早上升的，推理不夠嚴謹。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -213,31 +220,25 @@
   },
   {
    "id": "115-1-CARDPED-010",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "依 ACSM 篩檢流程，有規律運動、已知心血管、代謝或腎臟疾病但無症狀的人，繼續做中等強度運動不需要醫師許可，要進階到高強度運動前才建議先取得醫學許可（medical clearance）。張女士只想做中等強度運動，說她「應先取得醫師許可」是錯的。",
+   "why_correct": "依ACSM篩檢流程，有規律運動、已知心血管、代謝或腎臟疾病但無症狀的人，繼續做中等強度運動不需要醫師許可，要進階到高強度運動前才建議先取得醫學許可（medical clearance）。張女士只想做中等強度運動，說她「應先取得醫師許可」是錯的。",
    "why_others": {
-    "A": "不論有沒有規律運動，只要出現疑似心肺代謝疾病的症狀，就應停止運動並先接受醫學評估。",
-    "C": "有代謝疾病、無症狀的規律運動者，要開始高強度運動前建議先取得醫學許可。",
-    "D": "沒有規律運動、沒有已知疾病、也沒有症狀，不需醫學許可，可從輕到中等強度開始。"
+    "A": "不論有沒有規律運動，出現疑似心肺代謝疾病症狀就應先接受醫學評估。",
+    "C": "有代謝疾病、無症狀的規律運動者，開始高強度運動前建議先取得醫學許可。",
+    "D": "無規律運動、無已知疾病也無症狀，不需醫學許可，可從輕到中等強度開始。"
    },
-   "takeaway": "ACSM 篩檢看三件事：有無規律運動、有無已知疾病、有無症狀。有症狀一律先就醫；有規律運動又無症狀的病人，只有進階到高強度才需醫學許可。",
+   "takeaway": "ACSM看規律運動、已知疾病、症狀；有症狀先就醫，規律運動無症狀者進階高強度才需許可。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.9,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "takeaway 64 字 > 60"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "依ACSM流程，規律運動且無症狀的已知疾病者做中等強度不需醫師許可，各選項分析正確。"
    }
   },
   {
@@ -748,28 +749,25 @@
   },
   {
    "id": "115-1-CARDPED-033",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "Spironolactone 屬保鉀型利尿劑，會減少血容量，運動時血管擴張再加上血容量不足，容易出現低血壓；高血鉀等電解質失衡則會引起腿軟、噁心。運動中收縮壓下降超過20 mmHg，又有頭暈、無力等症狀，最符合利尿劑的副作用。",
+   "why_correct": "Spironolactone屬保鉀型利尿劑，會減少血容量，運動時血管擴張加上血容量不足，容易低血壓；高血鉀等電解質失衡也會造成腿軟、噁心。訓練中血壓明顯下降並出現腿軟、想吐，最符合利尿劑的副作用。",
    "why_others": {
-    "A": "Spironolactone 是保鉀型利尿劑，容易造成高血鉀，不是低血鉀。",
-    "B": "乙型致效劑常見副作用是心悸、手抖，不會造成低血糖或血壓下降。",
-    "D": "乙型致效劑會擴張支氣管；SpO₂ 91％ 對COPD患者算可接受，不像缺氧。"
+    "A": "Spironolactone是保鉀型利尿劑，容易造成高血鉀，不是低血鉀。",
+    "B": "乙型致效劑常見心悸、手抖，較易使血糖升高，不會造成低血糖。",
+    "D": "乙型致效劑會擴張支氣管；SpO₂ 91％對COPD患者算可接受。"
    },
-   "takeaway": "利尿劑可能造成低血容量、低血壓與電解質失衡；運動時血壓下降又有症狀，應停止運動並評估。",
+   "takeaway": "利尿劑可能造成低血容量、低血壓與電解質失衡；運動中血壓下降又有症狀應停止評估。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 C 沒有問題，但詳解有兩處不正確：一是說乙型致效劑「不會造成血壓下降」，這說法太絕對，β2 致效劑會使周邊血管擴張，可能讓舒張壓下降，還會引起反射性心搏過速；二是寫病患有「頭暈」，但題目只寫了「腿軟、想吐」，與題幹不符。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "Spironolactone致低血容量與高血鉀等電解質失衡，其餘選項排除正確。"
    }
   },
   {
@@ -843,28 +841,25 @@
   },
   {
    "id": "115-1-CARDPED-037",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "長者做漸進式運動測試時，年齡預估最大心率（age-predicted HRmax）雖然有個別差異，但仍可當作參考指標，達到預估值附近、再配合自覺費力程度與臨床徵象，就能考慮終止測試。說年紀大「不可」用它當終止指標並不正確，所以D這項注意事項不適用。",
+   "why_correct": "年齡預估最大心率（age-predicted HRmax）個別差異很大，本來就不建議任何人拿它當終止測試的指標，這點並非長者特有。D把它說成因「年紀較大」才不可使用，理由與年齡無關，所以不適用在林爺爺身上。",
    "why_others": {
     "A": "長者體能較差，起始負荷要低、每階增量要小，這項適用。",
-    "B": "長者股四頭肌容易局部疲乏，騎腳踏車測到的尖峰攝氧量常比跑步機低，這項適用。",
+    "B": "長者股四頭肌易局部疲乏，騎腳踏車測得的尖峰攝氧量常比跑步機低。",
     "C": "長者步速有限，用增加坡度取代加速比較安全，這項適用。"
    },
-   "takeaway": "長者運動測試：起始負荷低、增量小，跑步機以加坡度為主；年齡預估最大心率仍可參考。",
+   "takeaway": "長者運動測試：起始負荷低、增量小，跑步機加坡度為主；預估最大心率不宜當終止指標。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒有問題，但詳解的理由站不住：ACSM 認為年齡預估最大心率的個別差異太大，本來就不建議任何人拿它當終止測試的指標。D 不適用，是因為這點並非長者特有、與「年紀較大」無關。詳解卻說達到預估值附近就能考慮終止，這與指引相反。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "預估最大心率本就不宜當任何人的終止指標，與年齡無關，其餘長者測試注意事項正確。"
    }
   },
   {
@@ -1307,26 +1302,33 @@
    "id": "115-1-CARDPED-057",
    "status": "rejected",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "經期後週數（postmenstrual age）37～42週相當於足月。這時頸部屈肌與伸肌的張力已經比較平衡，拉坐（pull-to-sit）時頭部可以短暫和軀幹維持在同一直線上，代表頭部控制已經成熟到足月的程度。",
+   "why_correct": "經期後週數（postmenstrual age）37～42週相當於足月。此時頸部屈肌與伸肌張力較平衡，拉坐（pull-to-sit）時頭部能短暫與軀幹維持在同一直線，代表頭部控制已達足月程度。",
    "why_others": {
-    "B": "被動踝背屈角度屬於身體成熟度與肌張力的指標，不是本題所問的足月神經行為表現。",
+    "B": "足月時被動踝背屈角度大、腳背可貼近小腿，僅「超過30度」不足以代表足月表現。",
     "C": "足月兒吸吮是一連串多次的規律吸吮，連續只有4次屬於不成熟的表現。",
     "D": "四肢伸直外展、缺乏屈曲是較早期早產兒的姿勢，足月兒應呈現生理性屈曲。"
    },
-   "takeaway": "足月兒的特徵：生理性屈曲姿勢、拉坐時頭部能短暫和軀幹成一直線、規律而連續的吸吮。",
+   "takeaway": "足月表現：生理性屈曲姿勢、拉坐時頭可短暫與軀幹成一線、規律連續的吸吮。",
    "review": {
     "blind_answer": [
-     "A"
+     "B"
     ],
-    "blind_confidence": 0.4,
-    "verdict": "reasoning_error",
-    "reason": "B 的排除理由不成立：被動踝背屈角度本來就是 Dubowitz、Amiel-Tison 等新生兒神經評估裡的肌張力項目，不能說它「不是神經行為表現」就排除；詳解也沒有說明足月時踝背屈角度應該是多少，所以沒交代 B 為什麼錯。",
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "足月兒拉坐時頭可短暫與軀幹成一線，其他選項的說明大致合理。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "B 的排除理由不成立：被動踝背屈角度本來就是 Dubowitz、Amiel-Tison 等新生兒神經評估裡的肌張力項目，不能說它「不是神經行為表現」就排除；詳解也沒有說明足月時踝背屈角度應該是多少，所以沒交代 B 為什麼錯。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {
@@ -1377,31 +1379,25 @@
   },
   {
    "id": "115-1-CARDPED-060",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "早產兒視網膜病變（ROP）第二階段時，視網膜缺氧會使血管內皮生長因子（VEGF）大量分泌，引發新生血管異常增生。這些血管結構脆弱、通透性高，所以容易出血、水腫，嚴重時會產生纖維化，牽拉視網膜，最後造成剝離。",
+   "why_correct": "早產兒視網膜病變（ROP）第二階段時，視網膜缺氧會使血管內皮生長因子（VEGF）大量分泌，引發新生血管異常增生。這些血管結構脆弱、通透性高，所以容易出血、水腫，嚴重時會纖維化牽拉視網膜，造成剝離。",
    "why_others": {
-    "A": "兩階段的順序寫反了：第一階段是高氧抑制生長因子，使血管停止發育；第二階段才是缺氧造成新生血管增生。",
+    "A": "順序寫反：第一階段是高氧抑制生長因子使血管停滯，第二階段才是缺氧致新生血管增生。",
     "B": "嚴重的視網膜病變與較差的神經發展預後有關，可視為高風險指標。",
-    "C": "成因是多重的，還包括出生週數小、出生體重低、氧濃度波動與感染等，不只跟高氧有關。"
+    "C": "成因是多重的，還包括出生週數小、出生體重低、氧濃度波動等，不只跟高氧有關。"
    },
-   "takeaway": "ROP分兩階段：先是高氧使血管停止發育，後是缺氧使VEGF增加，長出脆弱的新生血管，容易出血、水腫。",
+   "takeaway": "ROP分兩階段：先是高氧使血管停止發育，後是缺氧使VEGF增加，長出脆弱新生血管，易出血、水腫。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.9,
-    "verdict": null,
-    "reason": null,
-    "fails": [
-     "format"
-    ],
-    "problems": [
-     "why_others A 49 字 > 44"
-    ]
+    "blind_confidence": 0.8,
+    "verdict": "pass",
+    "reason": "ROP兩階段機轉（先高氧抑制VEGF，後缺氧VEGF增加）與各選項說明正確。"
    }
   },
   {
@@ -1431,26 +1427,33 @@
    "id": "115-1-CARDPED-062",
    "status": "rejected",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T02:54:26+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "這位兒童能自己完成大多數物品操作，只是速度較慢、品質較差，偶爾需要大人提醒或協助，也會改用別的方法（一手壓珠、一手穿線）。這符合迷你徒手能力分類系統（Mini-MACS）第Ⅱ級：能操作多數物品，但品質或速度下降。",
+   "why_correct": "這位兒童能自己完成大多數物品操作，只是速度較慢、品質較差，需要大人提醒，也會改用別的方法（一手壓珠、一手穿線）。這符合迷你徒手能力分類系統（Mini-MACS）第Ⅱ級：能操作多數物品，但品質或速度下降。",
    "why_others": {
-    "A": "第Ⅰ級操作輕鬆又成功，表現不會明顯慢於同儕，也不需要提醒。",
+    "A": "第Ⅰ級操作輕鬆成功，速度與品質不比同儕差；本例慢且品質下降。",
     "C": "第Ⅲ級操作有困難，需要大人先準備或調整活動才能完成，本例不必。",
     "D": "第Ⅳ級只能用簡單動作操作少數容易處理的物品，而且需要持續協助。"
    },
-   "takeaway": "Mini-MACS第Ⅱ級：能做但慢、品質差，可能改用替代方法；第Ⅲ級要先準備或調整活動。",
+   "takeaway": "Mini-MACS第Ⅰ、Ⅱ級差在速度與品質是否下降；第Ⅲ級要大人先準備或調整活動。",
    "review": {
     "blind_answer": [
-     "B"
+     "C"
     ],
-    "blind_confidence": 0.65,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒有問題，但詳解對 A 的說明有誤：Mini-MACS 第Ⅰ級的原文就寫到，孩子可能比同齡兒童需要稍多一點大人協助，所以「也不需要提醒」不正確；第Ⅰ與第Ⅱ級真正的差別在於操作的速度與品質有沒有下降。",
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "能操作多數物品但速度品質下降、需提醒，符合Mini-MACS第Ⅱ級，各級描述正確。",
     "fails": [
-     "reasoning_error"
-    ]
+     "blind_mismatch"
+    ],
+    "previous": {
+     "verdict": "reasoning_error",
+     "reason": "答案 B 沒有問題，但詳解對 A 的說明有誤：Mini-MACS 第Ⅰ級的原文就寫到，孩子可能比同齡兒童需要稍多一點大人協助，所以「也不需要提醒」不正確；第Ⅰ與第Ⅱ級真正的差別在於操作的速度與品質有沒有下降。",
+     "fails": [
+      "reasoning_error"
+     ]
+    }
    }
   },
   {

@@ -443,28 +443,25 @@
   },
   {
    "id": "114-1-INTRO-020",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "人體研究法（Human Subjects Research Act）第2條規定，主管機關為衛生福利部。人體研究審查會（IRB）的查核、研究計畫審查等事項，也是由衛福部主管。",
+   "why_correct": "人體研究法（Human Subjects Research Act）明定主管機關為衛生福利部，負責相關規範與審查制度。至於個別研究機構的監督、查核，則由該機構所屬的中央目的事業主管機關辦理。",
    "why_others": {
-    "A": "內政部主管戶政、警政等內政事務，不主管人體研究。",
-    "B": "教育部主管各級學校與教育事務，不是人體研究法的主管機關。",
-    "C": "科技部（現改為國科會）負責補助研究經費，不是法定主管機關。"
+    "A": "內政部主管戶政、警政等內政事務，不是人體研究法的主管機關。",
+    "B": "教育部主管教育事務，不是人體研究法的主管機關。",
+    "C": "科技部（現為國科會）主要補助研究經費，不是法定主管機關。"
    },
-   "takeaway": "人體研究法、醫療法、物理治療師法的主管機關都是衛生福利部。",
+   "takeaway": "人體研究法、醫療法、物理治療師法的中央主管機關都是衛生福利部。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.97,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒錯，但詳解有兩處錯誤：一是規定主管機關為衛生福利部的是人體研究法第3條，不是第2條；二是依同條第2項，人體研究的監督、查核等事項由研究機構所屬的中央目的事業主管機關管轄，不是全部由衛福部主管。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "人體研究法第3條主管機關為衛福部，監督查核歸目的事業主管機關，敘述正確。"
    }
   },
   {
@@ -1182,28 +1179,25 @@
   },
   {
    "id": "114-1-INTRO-052",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "6S金字塔（6S pyramid）由上而下是Systems、Summaries、Synopses of syntheses、Syntheses、Synopses of studies、Studies。越上層整合程度越高，越能直接用在臨床決策，所以應該從上往下查，順序是①⑤④③②⑥。",
+   "why_correct": "6S金字塔（6S pyramid）由上而下是Systems、Summaries、Synopses of syntheses、Syntheses、Synopses of studies、Studies。越上層整合程度越高，越能直接用於臨床決策，所以應從上往下查，順序是①⑤④③②⑥。",
    "why_others": {
-    "A": "Summaries排在Systems前面，而且Synopses of studies被放在Syntheses之前，兩處都錯。",
-    "B": "最上層Systems錯放到Summaries之後，Synopses of studies的位置也錯了。",
-    "D": "Synopses of studies應在Syntheses之後，Summaries也應排在第二位。"
+    "A": "Summaries放在Systems前，且Synopses of studies排在Syntheses前。",
+    "B": "只把Systems與Summaries對調；最上層應是Systems。",
+    "D": "Summaries應排第二，Synopses of studies應排在Syntheses之後。"
    },
    "takeaway": "6S由上而下：Systems→Summaries→Synopses of syntheses→Syntheses→Synopses of studies→Studies。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "B 選項（⑤①④③②⑥）只把 Systems 和 Summaries 的順序對調了，Synopses of studies 排在第五位是對的，詳解卻說它的「位置也錯了」，這是事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "6S由上而下順序與各選項錯誤分析皆正確。"
    }
   },
   {
@@ -1483,28 +1477,25 @@
   },
   {
    "id": "114-1-INTRO-065",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "預防心因性猝死的重點是規律、中等強度的有氧運動，不是單次時間拉得很長。每週5次、每次至少30分鐘，相當於每週累積約150分鐘，符合一般健康促進的建議。規律運動可以改善自主神經平衡、降低心血管危險因子，且分散在多天進行，比較不會因為單次負荷過大而誘發心律不整。",
+   "why_correct": "預防心因性猝死重在規律、中等強度的有氧運動。每週5次、每次至少30分鐘，每週累積約150分鐘，符合一般健康促進的基本建議，而且分散在多天進行，是最典型的建議模式。",
    "why_others": {
-    "A": "頻率太低，每週累積只有100分鐘，達不到建議量。",
-    "B": "總量雖然夠，但頻率偏低，單次時間又長，不是較理想的模式。",
-    "D": "每次至少50分鐘，總量超過需求，單次負荷也偏高，反而可能增加風險。"
+    "A": "頻率太低，每週累積只有約100分鐘，未達建議量。",
+    "B": "總量雖已達標，但頻率較低，不是最典型的建議模式。",
+    "D": "總量雖更多，但每次50分鐘門檻較高，不是較合適的基本建議。"
    },
-   "takeaway": "預防猝死建議中等強度有氧運動，每週5次、每次30分鐘，約每週150分鐘。",
+   "takeaway": "預防猝死的基本建議：中等強度有氧運動，每週5次、每次至少30分鐘。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "詳解說 D「每次 50 分鐘單次負荷偏高，反而可能增加風險」，這點沒有根據：每週 5 次、每次 50 分鐘的中等強度運動約 250 分鐘，仍在指引建議的 150–300 分鐘範圍內，可以帶來更多好處，不會增加猝死風險；B 說「單次時間又長」也同樣沒有根據。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "每週5次每次30分鐘符合每週150分鐘建議，各選項分析合理。"
    }
   },
   {

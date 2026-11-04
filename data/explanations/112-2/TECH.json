@@ -630,28 +630,25 @@
   },
   {
    "id": "112-2-TECH-028",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "震波的尖峰壓力是兆帕（MPa）等級，遠大於選項所說的 10 毫帕，所以錯誤。",
+   "why_correct": "震波的尖峰壓力是兆帕（MPa）等級，遠大於選項所說的10毫帕（mPa），所以錯誤。",
    "why_others": {
-    "A": "震波是一種聲波（機械波）。",
-    "C": "低能量震波的能量密度小於 3 mJ/mm²，此為常見分類。",
-    "D": "震波頻率可高達 20 Hz。"
+    "A": "震波是一種聲波（機械波），正確。",
+    "C": "治療用震波的能量密度一般在此上限以下，正確。",
+    "D": "震波的衝擊頻率可高達約20 Hz，正確。"
    },
-   "takeaway": "震波尖峰壓力是 MPa 等級，不是 mPa。",
+   "takeaway": "震波尖峰壓力是MPa等級，不是mPa。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "C 說明稱「低能量震波能量密度小於 3 mJ/mm² 為常見分類」不正確，低能量分界約在 0.08～0.12 mJ/mm²，3 mJ/mm² 是治療用震波整體的上限範圍。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "震波尖峰壓力為MPa等級，其他特性敘述正確。"
    }
   },
   {
@@ -1054,15 +1051,15 @@
   },
   {
    "id": "112-2-TECH-046",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "單側患肢完全不能承重時，以雙腋下枴與健側腳形成三點式步態：兩枴與患肢同時向前，再跨健側腳，患肢全程不著地。",
+   "why_correct": "單側患肢完全不能承重時，用雙腋下枴與健側腳形成三點式步態：兩枴與患肢同時向前，再跨健側腳，患肢全程不著地承重。",
    "why_others": {
-    "A": "一點式需雙腳都能部分承重，兩枴與雙腳輪流。",
-    "B": "兩點式需雙腳都能承重，一枴配對側腳。",
+    "A": "一點式並非標準的腋下枴步態分類，不適用。",
+    "B": "兩點式需雙腳都能承重，一枴配對側腳同時移動。",
     "D": "四點式需雙腳都能承重，一次只移動一個點。"
    },
    "takeaway": "患肢完全不承重：三點式步態。",
@@ -1070,12 +1067,9 @@
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "A 把一點式步態說成「雙腳部分承重、兩枴與雙腳輪流」，這其實是四點式的描述，一點式並沒有這樣的標準定義，屬於編造。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "患肢完全不承重用三點式步態，其他步態說明正確。"
    }
   },
   {
@@ -1780,28 +1774,25 @@
   },
   {
    "id": "112-2-TECH-077",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "上肢義肢檢測的前臂旋轉應是達到一定比例以上才算合格，而不是受限角度小於 70% 才合格，此選項方向敘述有誤。",
+   "why_correct": "肘下義肢檢測的標準是前臂旋轉受限應小於50%，也就是至少保留一半以上的旋轉；選項寫70%，數值錯誤。",
    "why_others": {
-    "B": "肘上義肢操控末端裝置效率標準敘述成立。",
-    "C": "肘下義肢操控末端裝置效率標準敘述成立。",
-    "D": "肘彎曲 90 度時末端裝置能完全打開，是合格標準。"
+    "B": "肘上義肢操控效率大於50%為合格，敘述正確。",
+    "C": "肘下義肢操控效率大於70%為合格，敘述正確。",
+    "D": "肘屈曲90度時末端裝置能完全打開，是合格標準。"
    },
-   "takeaway": "上肢義肢檢測看操控效率與開合能力。",
+   "takeaway": "肘下義肢前臂旋轉受限應小於50%；操控效率肘下高於肘上。",
    "review": {
     "blind_answer": [
      "A"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "標準是前臂旋轉受限應小於 50%（保留 50% 以上），A 錯在數值 70%，不是詳解說的「方向敘述有誤」，詳解也沒有給出正確標準。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "肘下義肢前臂旋轉受限應小於50%，其他檢測標準敘述合理。"
    }
   },
   {

@@ -10,6 +10,10 @@
         → 寫手格式合格、盲解有結果的題 → DIR/check/<批次>.md → DIR/results/check/<批次>.json
     python -m pipeline.explain_batches --import DIR [--model 標示]
         → 三種結果合併、照 explain.judge 判定（通過＝格式合格、盲解答案 ⊆ 承認答案、verdict = pass），寫進 data/explanations
+    python -m pipeline.explain_batches --export-retry DIR [--years …] [--only …] [--limit N] [--batch-size 40]
+        → 改寫輪：只選 pending、或不通過原因只有格式／推理有錯的題（explain.retryable），寫手批次附上一版詳解與審稿意見，
+          盲解、比對照舊（重新盲解，不沿用舊結果）；批次名 retry_<序號>（跨試卷），之後一樣 --export-check、--import。
+          改寫後仍不通過的，review.previous 留著上一版的審稿意見。
 
 批次名 <年-次>_<科目>_<序號>，每批最多 --batch-size 題；結果 JSON 都是 {"batch": "...", "results": [...]}，
 缺題、多題、格式不對都只列警告，不寫入那一題（重跑那份批次即可）。
@@ -118,26 +122,34 @@ def save_manifest(out_dir: Path, manifest: dict) -> None:
     (out_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), "utf-8")
 
 
-def export(out_dir: Path, todo: list[tuple[str, str, dict]], batch_size: int) -> None:
-    """寫手與盲解兩種批次檔；同一題在兩種批次裡同名同序。"""
+def export(out_dir: Path, todo: list[tuple[str, str, dict]], batch_size: int,
+           previous: dict[str, dict] | None = None) -> None:
+    """寫手與盲解兩種批次檔；同一題在兩種批次裡同名同序。
+    previous = {id: 上一版詳解}（改寫輪）：寫手批次附上一版與審稿意見，批次跨試卷、名叫 retry_<序號>。"""
     out_dir.mkdir(parents=True, exist_ok=True)
     idx = X.QuestionIndex()
     manifest = load_manifest(out_dir)
-    by_paper: dict[tuple[str, str], list[dict]] = {}
+    groups: dict[tuple[str, str] | None, list[dict]] = {}
     for exam_dir, subject, q in todo:
-        by_paper.setdefault((exam_dir, subject), []).append(q)
+        groups.setdefault(None if previous is not None else (exam_dir, subject), []).append(q)
     total = 0
-    for (exam_dir, subject), qs in by_paper.items():
+    for key, qs in groups.items():
         for k, start in enumerate(range(0, len(qs), batch_size), 1):
             chunk = qs[start:start + batch_size]
-            name = chunk_name(exam_dir, subject, k)
-            writer_items = [(q, X.writer_prompt(q, idx.group_prev(q), idx.topic_name(q))) for q in chunk]
+            name = chunk_name(*key, k) if key else f"retry_{k}"
+            writer_items = [(q, X.writer_prompt(q, idx.group_prev(q), idx.topic_name(q),
+                                                (previous or {}).get(q["id"]))) for q in chunk]
             blind_items = [(q, X.blind_prompt(q, idx.group_prev(q))) for q in chunk]
             write_batch(out_dir, "writer", name, writer_items)
             write_batch(out_dir, "blind", name, blind_items)
-            manifest["batches"][name] = {"exam": exam_dir, "subject": subject, "ids": [q["id"] for q in chunk]}
+            m = {"ids": [q["id"] for q in chunk]}
+            if key:
+                m = {"exam": key[0], "subject": key[1], **m}
+            manifest["batches"][name] = m
             for q in chunk:
                 manifest["hashes"][q["id"]] = X.answers_hash(q)
+                if previous is not None:
+                    manifest.setdefault("previous", {})[q["id"]] = previous[q["id"]].get("review") or {}
             total += len(chunk)
             print(f"{name}: {len(chunk)} 題")
     save_manifest(out_dir, manifest)
@@ -235,8 +247,25 @@ def import_results(out_dir: Path, model: str) -> dict[str, dict]:
         print(f"[warn] {line}", file=sys.stderr)
     state = {"ids": ids, "hashes": manifest["hashes"], "results": results, "errors": errors, "model": model, "usage": {}}
     written = X.write_entries(state, idx)
+    keep_previous(written, manifest.get("previous") or {})
     X.summarize(state, written)
     return written
+
+
+def keep_previous(written: dict[str, dict], previous: dict[str, dict]) -> None:
+    """改寫輪：這次又沒通過的題，把上一版的審稿意見留在 review.previous（人工看時知道已經試過什麼）。"""
+    touched: set[tuple[str, str]] = set()
+    for qid, e in written.items():
+        prev = previous.get(qid)
+        if prev and e["status"] == "rejected":
+            e["review"]["previous"] = {k: prev.get(k) for k in ("verdict", "reason", "fails") if prev.get(k)}
+            touched.add(("-".join(qid.split("-")[:2]), qid.split("-")[2]))
+    for exam_dir, subject in touched:
+        existing = X.load_explanations(exam_dir, subject)
+        for qid, e in written.items():
+            if qid in existing and existing[qid].get("source") != "human" and "previous" in e["review"]:
+                existing[qid] = e
+        X.save_explanations(exam_dir, subject, existing)
 
 
 # ---------------------------------------------------------------- CLI
@@ -245,6 +274,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     g = ap.add_mutually_exclusive_group(required=True)
     g.add_argument("--export", metavar="DIR", help="產生寫手與盲解批次檔")
+    g.add_argument("--export-retry", metavar="DIR", help="改寫輪：只選 pending 或只因格式／推理有錯不通過的題，寫手批次附上一版與審稿意見")
     g.add_argument("--export-check", metavar="DIR", help="寫手、盲解結果都有了之後，產生比對批次檔")
     g.add_argument("--import", dest="import_dir", metavar="DIR", help="匯入三種結果，寫進 data/explanations")
     ap.add_argument("--only", help="只做某份試卷，例如 110-1/NEURO")
@@ -255,14 +285,18 @@ def main(argv=None):
     ap.add_argument("--model", default=DEFAULT_MODEL, help="寫進詳解的 model 標示")
     args = ap.parse_args(argv)
 
-    if args.export:
+    if args.export or args.export_retry:
         from .fetch import parse_years
         years = parse_years(args.years) if args.years else None
-        todo = X.select_todo(args.only, args.limit, args.force, years)
+        if args.export:
+            todo, previous = X.select_todo(args.only, args.limit, args.force, years), None
+        else:
+            rows = X.select_retry(args.only, args.limit, years)
+            todo, previous = [r[:3] for r in rows], {r[2]["id"]: r[3] for r in rows}
         if not todo:
             print("沒有要生成的題目。")
             return
-        export(Path(args.export), todo, args.batch_size)
+        export(Path(args.export or args.export_retry), todo, args.batch_size, previous)
     elif args.export_check:
         export_check(Path(args.export_check))
     else:

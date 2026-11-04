@@ -187,28 +187,25 @@
   },
   {
    "id": "106-2-TECH-009",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
-   "why_correct": "短波會干擾其他電子儀器，干擾波等電療儀器通常需遠離短波，而至少1公尺這個距離並非標準，故此敘述被視為錯誤。",
+   "why_correct": "短波會干擾附近電子儀器，干擾波等其他電療儀器應距短波至少約3公尺以上，題目寫1公尺距離不足，故此敘述錯誤。",
    "why_others": {
-    "B": "間歇短波時治療師需保持一定距離，敘述屬合理。",
-    "C": "連續短波輻射較強，治療師需更遠，敘述合理。",
+    "B": "間歇短波時治療師需保持一定距離，敘述合理。",
+    "C": "連續短波輻射較強，治療師需離更遠，敘述合理。",
     "D": "毛巾吸汗可避免汗水集中而灼傷，是正確作法。"
    },
-   "takeaway": "短波注意：遠離電子儀器、治療師保持距離、毛巾吸汗。",
+   "takeaway": "其他電療儀器要遠離短波約3公尺以上。",
    "review": {
     "blind_answer": [
      "A"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "詳解只說1公尺「並非標準」，未說明其他電療儀器應距短波至少約3公尺以上，錯誤理由交代不實。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.45,
+    "verdict": "pass",
+    "reason": "其他電療儀器應距短波約 3 公尺，1 公尺不足；治療師距離與毛巾吸汗說明正確。"
    }
   },
   {
@@ -1189,28 +1186,25 @@
   },
   {
    "id": "106-2-TECH-052",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "椅面到踏板距離太長，會使腳踩不到或大腿懸空，骨盆易向前滑成骶坐姿，壓力集中到薦尾椎。",
+   "why_correct": "椅面到踏板距離太長，腳踩不穩踏板，大腿遠端壓在座面前緣，身體容易往前下滑，骨盆後傾成骶坐姿（sacral sitting），壓力便集中到薦尾椎。",
    "why_others": {
     "A": "座深太短主要使大腿支撐不足。",
     "B": "座寬太寬主要造成姿勢不穩與側傾。",
     "C": "椅背太高主要影響肩胛與上肢活動。"
    },
-   "takeaway": "踏板太遠易使骨盆前滑，壓力落在薦尾椎。",
+   "takeaway": "踏板太遠易使人前滑成骶坐姿，壓力落在薦尾椎。",
    "review": {
     "blind_answer": [
      "D"
     ],
     "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "椅面到踏板距離太長時大腿遠端反而壓在座面上，「大腿懸空」是踏板太高（距離太短）的結果，敘述有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "踏板過遠使身體前滑成骶坐姿，壓力集中薦尾椎，說明合理。"
    }
   },
   {
@@ -1336,28 +1330,25 @@
   },
   {
    "id": "106-2-TECH-058",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "乙圖是上下樓梯用的助行器，兩種握把高度是為了上下樓梯時使用，不是讓不同身高者兼用，所以 C 錯誤。",
+   "why_correct": "乙是雙層握把助行器，低握把讓患者從坐姿撐起站立，高握把則用於站起後行走，目的在協助起身，不是讓不同身高者兼用，所以 C 錯誤。",
    "why_others": {
-    "A": "握把高度設定使肘約呈 20 到 30 度是常見原則。",
+    "A": "握把高度使肘屈約 20 到 30 度是常見原則。",
     "B": "甲為傳統助行器，穩定但步態連續性較差。",
     "D": "丙前方兩支點改為輪子，不需提起即可推行。"
    },
-   "takeaway": "乙型兩段握把是為了上下樓梯。",
+   "takeaway": "雙層握把助行器：低握把撐起站立，高握把行走。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "圖乙的雙層握把助行器是為了協助從坐姿起身（低握把撐起、高握把行走），並非上下樓梯用，詳解對C錯誤原因的說明有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.75,
+    "verdict": "pass",
+    "reason": "附圖乙為雙層握把助行器，低握把用於撐起站立，非供不同身高兼用，其餘選項與圖相符。"
    }
   },
   {
@@ -1546,28 +1537,25 @@
   },
   {
    "id": "106-2-TECH-067",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "手腕橈側偏移受橈骨莖突碰觸大多角骨，正常為硬的終末感覺；尺側偏移正常應為緊實，若出現硬的感覺屬異常。",
+   "why_correct": "手腕尺側偏移正常受韌帶與軟組織限制，為緊實的終末感覺，若出現硬的終末感覺屬異常。橈側偏移則因橈骨莖突碰觸舟狀骨，正常即為硬的。",
    "why_others": {
-    "A": "伸腕此處硬終末感覺不是最典型的異常例。",
-    "C": "橈側偏移正常即為硬的終末感覺。",
-    "D": "掌指關節屈曲出現硬終末感覺不是本題的最佳異常例。"
+    "A": "伸腕正常可為緊實或硬的終末感覺，出現硬不一定異常。",
+    "C": "橈側偏移因橈骨莖突碰舟狀骨，正常即為硬的。",
+    "D": "掌指關節屈曲正常可為硬或緊實，出現硬不一定異常。"
    },
-   "takeaway": "橈側偏移正常終末為硬，尺側偏移為緊實。",
+   "takeaway": "尺側偏移正常為緊實，橈側偏移正常為硬。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.35,
-    "verdict": "reasoning_error",
-    "reason": "橈側偏移硬終末感覺是橈骨莖突碰觸舟狀骨而非大多角骨，且未說明伸腕與掌指屈曲正常亦可能為硬的終末感覺。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "尺側偏移正常為緊實、橈側偏移正常為硬，伸腕與掌指屈曲可為硬，說明符合 Norkin。"
    }
   },
   {

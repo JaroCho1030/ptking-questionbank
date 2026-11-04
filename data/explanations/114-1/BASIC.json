@@ -325,28 +325,25 @@
   },
   {
    "id": "114-1-BASIC-015",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "肺泡（alveoli）壁由第一型、第二型肺泡細胞和薄薄的結締組織構成，用來讓氣體擴散，裡面沒有平滑肌。平滑肌只存在傳導氣道，到呼吸性細支氣管、肺泡管入口處就漸漸消失了。",
+   "why_correct": "肺泡（alveoli）壁由第一型、第二型肺泡細胞和少量結締組織構成，用來讓氣體擴散，沒有平滑肌。平滑肌從氣管一路延伸到呼吸性細支氣管與肺泡管的肺泡開口處，到肺泡本身就沒有了。",
    "why_others": {
     "A": "氣管後壁C形軟骨缺口處有氣管肌，屬於平滑肌。",
     "C": "支氣管黏膜下有環狀平滑肌，能調節管徑。",
-    "D": "細支氣管沒有軟骨，但平滑肌比例最高，是氣喘時收縮的主要部位。"
+    "D": "細支氣管沒有軟骨、以平滑肌為主，是氣喘時收縮的主要部位。"
    },
-   "takeaway": "從氣道往下，軟骨越來越少、平滑肌比例越來越高，到了肺泡就沒有平滑肌。",
+   "takeaway": "平滑肌一路延伸到肺泡管的肺泡開口，肺泡壁本身沒有平滑肌。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.93,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒有問題，但詳解說「平滑肌只存在傳導氣道」是錯的：呼吸性細支氣管和肺泡管屬於呼吸區，仍有平滑肌（肺泡管在肺泡開口處有平滑肌結節）；這句也和後半句「到呼吸性細支氣管、肺泡管入口處才漸漸消失」互相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "平滑肌延伸到肺泡管，肺泡壁本身沒有平滑肌，說明正確。"
    }
   },
   {
@@ -1002,10 +999,10 @@
   },
   {
    "id": "114-1-BASIC-044",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "肌力大小取決於長度–張力關係（length-tension relationship）與力臂。肩屈曲0度（手臂垂在身側）時，肩屈曲肌處在被拉長的位置，較接近有利的收縮長度；肩伸直肌則處在縮短的位置，產生的張力較小。所以這個姿勢下屈曲肌的等長肌力比較大。",
    "why_others": {
@@ -1013,17 +1010,14 @@
     "C": "前臂旋後30度時，旋後肌已縮短、旋前肌被拉長，旋前肌力較大。",
     "D": "肘屈曲肌在約90度時力臂最大、長度適中，肌力比30度時大。"
    },
-   "takeaway": "肌肉在被拉長的位置等長肌力較大；判斷時要考慮雙關節肌的長度與力臂。",
+   "takeaway": "等長肌力取決於是否接近最佳長度與力臂大小，不是肌肉越長就越大。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "各選項的判斷大致正確，但 takeaway 說「肌肉在被拉長的位置等長肌力較大」，這個通則過於絕對，而且跟 D 的解析互相矛盾：肘屈曲 30 度時屈肘肌比 90 度時更長，力量反而較小。肌力決定於長度–張力曲線上的最佳長度以及力臂，並不是肌肉越長就越大。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "以長度–張力關係與力臂解釋各選項，推理合理且與承認答案一致。"
    }
   },
   {
@@ -1074,28 +1068,25 @@
   },
   {
    "id": "114-1-BASIC-047",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "中盂肱韌帶（middle glenohumeral ligament）位於關節囊前方，在肩外展約45度附近最緊，主要限制肱骨頭往前移位，也限制外轉。所以「肱骨頭前移－中盂肱韌帶」這組配對正確。",
+   "why_correct": "中盂肱韌帶（middle glenohumeral ligament）位於關節囊前方，在肩外展中段角度時較緊，主要限制肱骨頭往前移位，也限制外轉。所以「肱骨頭前移－中盂肱韌帶」這組配對正確。",
    "why_others": {
     "A": "上盂肱韌帶在手臂內收時拉緊，限制下移與外轉；外展時反而放鬆。",
-    "B": "盂肱韌帶都在前方，限制的是外轉，不是內轉。",
+    "B": "內轉主要由後方結構限制，例如外展時的下盂肱韌帶後束，不是中盂肱韌帶。",
     "C": "上盂肱韌帶限制肱骨頭下移；限制上移的是喙肩弓（coracoacromial arch）。"
    },
-   "takeaway": "盂肱韌帶都在前方、限制外轉；上管內收時下移，中管前移，下管外展時前下移。",
+   "takeaway": "上盂肱韌帶內收時限制下移，中盂肱韌帶限制前移，下盂肱韌帶外展時限制前下移。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.88,
-    "verdict": "reasoning_error",
-    "reason": "答案 D 沒有問題，但詳解在 B 選項和 takeaway 都說「盂肱韌帶都在前方、只限制外轉」，這是錯的：下盂肱韌帶複合體有後束（posterior band），肩外展 90 度時會限制內轉。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.7,
+    "verdict": "pass",
+    "reason": "中盂肱韌帶限制肱骨頭前移，上盂肱韌帶限制下移，各配對說明正確。"
    }
   },
   {
@@ -1238,28 +1229,25 @@
   },
   {
    "id": "114-1-BASIC-054",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "以髖關節為支點取力矩平衡：體重W產生的力矩由外展肌與枴杖共同抵抗。HAF×4＋CF×30＝W×8，HAF×4＝640×8－72×30＝5120－2160＝2960，所以HAF＝740 N。",
+   "why_correct": "圖中以髖關節為支點取力矩平衡：體重W在內側產生的力矩，由外側的外展肌與對側枴杖共同抵抗。HAF×4＋CF×30＝W×8，HAF×4＝640×8－72×30＝5120－2160＝2960，所以HAF＝740 N。",
    "why_others": {
-    "A": "630 N的力矩無法和體重力矩平衡，是計算錯誤。",
-    "C": "850 N代入後力矩總和超過體重力矩，不平衡。",
-    "D": "960 N沒有正確扣除枴杖力矩72×30的貢獻。"
+    "A": "630 N代入後，外展肌與枴杖的力矩總和小於體重力矩，無法平衡。",
+    "C": "850 N代入後，力矩總和大於體重力矩，無法平衡。",
+    "D": "960 N代入後，力矩總和同樣大於體重力矩，無法平衡。"
    },
    "takeaway": "對側枴杖的力臂長，可抵消大量體重力矩，減少髖外展肌力與關節反作用力。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "主算式與 740 N 都正確，但 D 選項的解釋有誤：如果完全不扣掉枴杖的力矩，HAF 應該是 640×8÷4＝1280 N，不是 960 N，所以把 960 N 說成「沒有扣除枴杖力矩」的結果，是錯誤的推理。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "與附圖相符，力矩平衡式HAF×4＋72×30＝640×8，算得740 N正確。"
    }
   },
   {
@@ -1540,15 +1528,15 @@
   },
   {
    "id": "114-1-BASIC-067",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "claude-opus-5-5",
-   "generated_at": "2026-11-03T03:12:08+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "腹橫肌依纖維走向與附著點分為上、中、下三區。中段纖維水平走向，向後經胸腰筋膜（thoracolumbar fascia）附著到腰椎橫突。收縮時拉緊胸腰筋膜、提高腹內壓，像束腰一樣環抱腰椎，所以形成 corset effect，穩定腰椎節段。",
+   "why_correct": "腹橫肌依附著點分為上、中、下三區。中段纖維向後經胸腰筋膜（thoracolumbar fascia）附著到腰椎橫突，收縮時拉緊胸腰筋膜、提高腹內壓，像束腰一樣環抱腰椎，形成 corset effect，穩定腰椎節段。",
    "why_others": {
-    "A": "上段起於下位肋骨內面，走向較斜，主要穩定胸廓與白線，和胸腰筋膜關係少。",
-    "C": "下段起於髂嵴與腹股溝韌帶，向內下走，主要壓緊骨盆、穩定薦髂關節。",
+    "A": "上段起於下位肋骨內面，主要穩定胸廓，和胸腰筋膜關係較少。",
+    "C": "下段起於髂嵴與腹股溝韌帶，主要壓緊骨盆、穩定薦髂關節。",
     "D": "三區功能各有不同，經胸腰筋膜形成束腰效應的主要是中段纖維。"
    },
    "takeaway": "腹橫肌分區：上段穩定胸廓、中段經胸腰筋膜束腰穩定腰椎、下段穩定骨盆與薦髂關節。",
@@ -1556,12 +1544,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "答案 B 沒問題，但詳解把纖維走向寫顛倒了：依 Urquhart 與 Hodges 的解剖研究，上段纖維大致水平，中、下段纖維向內下斜行；詳解卻說中段水平、上段較斜，這個事實有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "中段腹橫肌經胸腰筋膜附著腰椎、形成束腰效應，各分區功能說明正確。"
    }
   },
   {

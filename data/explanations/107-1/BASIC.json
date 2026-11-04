@@ -879,28 +879,25 @@
   },
   {
    "id": "107-1-BASIC-039",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
    "why_correct": "淨過濾壓等於腎絲球靜水壓減去鮑氏囊靜水壓與血漿膠體滲透壓，即 45 − 10 − 20 = 15 mmHg。",
    "why_others": {
-    "A": "10 為鮑氏囊壓，並非淨過濾壓。",
-    "C": "30 是 45 − 10 − 5 之類的錯誤算法。",
-    "D": "65 是把三個壓力相加，方向錯誤。"
+    "A": "10 為鮑氏囊靜水壓，並非淨過濾壓。",
+    "C": "30 是兩個對抗壓力相加（10＋20），不是淨過濾壓。",
+    "D": "65 是把膠體滲透壓加上去（45＋20），方向錯誤。"
    },
-   "takeaway": "淨過濾壓＝腎絲球靜水壓－囊壓－膠體滲透壓。",
+   "takeaway": "淨過濾壓＝腎絲球靜水壓－囊內壓－膠體滲透壓。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.97,
-    "verdict": "reasoning_error",
-    "reason": "D 選項說 65 是三個壓力相加有誤，三者相加為 75，65 應為 45＋20 之類的錯誤算法。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.95,
+    "verdict": "pass",
+    "reason": "45−10−20＝15 mmHg，各錯誤選項的來源解釋正確。"
    }
   },
   {
@@ -928,54 +925,48 @@
   },
   {
    "id": "107-1-BASIC-041",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "伏地挺身時手掌固定於地面，棘下肌與旋前方肌（pronator quadratus）分別作用於肩與前臂，共同穩定並完成前臂旋前姿勢下的動作，構成成立的力偶配對。",
+   "why_correct": "伏地挺身手掌固定時，前臂旋前是肱骨與尺骨繞固定的橈骨轉動。棘下肌使肱骨外轉並帶動尺骨，旋前方肌（pronator quadratus）把尺骨拉向橈骨，兩者方向一致，構成手腕旋後姿勢下的旋前力偶。",
    "why_others": {
-    "A": "提肩胛肌使肩胛骨向下旋轉，上旋力偶是上下斜方肌與前鋸肌。",
+    "A": "提肩胛肌使肩胛骨向下旋轉，上旋力偶是斜方肌與前鋸肌。",
     "C": "腹直肌與股二頭肌合力使骨盆後傾，不是前傾。",
     "D": "豎脊肌與髂腰肌合力使骨盆前傾，不是後傾。"
    },
-   "takeaway": "骨盆前傾：豎脊肌加髂腰肌；後傾：腹直肌加髖伸肌。",
+   "takeaway": "手掌固定時，棘下肌外轉肱骨可與旋前方肌形成旋前力偶。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 把題目的「手腕旋後姿勢下的前臂旋前動作」誤寫成「前臂旋前姿勢下的動作」，也沒有說明手掌固定時棘下肌外轉肱骨如何與旋前方肌形成旋前力偶。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "手掌固定時棘下肌與旋前方肌形成旋前力偶（Neumann），其餘選項說明正確。"
    }
   },
   {
    "id": "107-1-BASIC-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "肘屈肌離心收縮時，肌肉力矩與重力造成的動作力矩方向相反，兩者的關係依本題承認答案歸為第二種槓桿，其餘選項的機械性優勢敘述都有誤。",
+   "why_correct": "拿啞鈴離心收縮時，啞鈴重量是主導動作的動力，肘屈肌出力則變成阻力。支點在肘，啞鈴的力臂遠大於肌肉的力臂，動力臂大於阻力臂，所以屬第二種槓桿。",
    "why_others": {
     "A": "第一種槓桿的機械性優勢可大於、等於或小於1。",
-    "B": "第二種槓桿力臂較長，肌肉出力小於阻力即可平衡。",
-    "C": "第三種槓桿機械性優勢小於1，第二種才具最大優勢。"
+    "B": "第二種槓桿動力臂較長，出力小於阻力即可平衡。",
+    "C": "第三種槓桿機械性優勢小於1，是最小的。"
    },
-   "takeaway": "第二種槓桿力臂大於阻力臂，機械性優勢大於1。",
+   "takeaway": "離心時外力為動力、肌力為阻力，角色互換變第二種槓桿。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.55,
-    "verdict": "reasoning_error",
-    "reason": "why_correct 只寫「依承認答案歸為第二種槓桿」，沒有說明離心時外力為動力、肌力為阻力、動力臂大於阻力臂，所以屬第二種槓桿，推理是循環論證。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.6,
+    "verdict": "pass",
+    "reason": "離心時啞鈴為動力、肌力為阻力，動力臂較長屬第二種槓桿，其餘選項說明正確。"
    }
   },
   {
@@ -1003,28 +994,25 @@
   },
   {
    "id": "107-1-BASIC-044",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "長骨彎曲時，凹側受壓迫、凸側受張力。張力過高易造成橫向骨折，斜裂骨折則與壓迫及剪力、扭力有關，因此敘述錯誤。",
+   "why_correct": "長骨彎曲時，凹側受壓迫、凸側受張力。張力過高典型造成橫向骨折，斜裂骨折主要與壓迫合併彎曲有關，因此「高張力易產生斜裂骨折」錯誤。",
    "why_others": {
-    "A": "骨頭抗壓力強於抗張力，敘述正確。",
+    "A": "成人骨頭抗壓力強於抗張力，敘述正確。",
     "B": "高壓迫力使骨質緩慢破壞，敘述正確。",
-    "C": "彎曲骨幹可產生彎曲力或扭力，敘述正確。"
+    "C": "骨幹受力可產生彎曲力或扭力，敘述正確。"
    },
-   "takeaway": "張力導致橫向骨折，壓迫與扭力導致斜裂。",
+   "takeaway": "張力致橫向骨折，壓迫致斜裂，扭力致螺旋骨折。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "詳解與 takeaway 說扭力導致斜裂骨折，但扭力典型造成螺旋骨折，斜裂骨折主要與壓迫（合併彎曲）有關，事實有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.55,
+    "verdict": "pass",
+    "reason": "骨抗張力較弱、張力致橫向骨折、壓迫合併彎曲致斜裂，說明合理。"
    }
   },
   {
@@ -1167,15 +1155,15 @@
   },
   {
    "id": "107-1-BASIC-051",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "菱形肌、提肩胛肌與胸小肌的附著方向，會把肩胛骨下角拉向內下，使關節盂朝下，合力造成肩胛骨向下旋轉。",
+   "why_correct": "菱形肌與提肩胛肌把肩胛骨內緣往內上拉，胸小肌把喙突往前下拉，使關節盂朝下、下角往內上移動，三者合力造成肩胛骨向下旋轉。",
    "why_others": {
-    "A": "向上旋轉是上、下斜方肌與前鋸肌的合力。",
-    "C": "後縮不是胸小肌的作用，三者合力主軸也不是後縮。",
+    "A": "向上旋轉是斜方肌與前鋸肌的合力。",
+    "C": "後縮不是胸小肌的作用，三者合力主軸不是後縮。",
     "D": "前突主要由前鋸肌與胸小肌，菱形肌則相反。"
    },
    "takeaway": "向下旋轉：菱形肌、提肩胛肌、胸小肌。",
@@ -1183,12 +1171,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.95,
-    "verdict": "reasoning_error",
-    "reason": "向下旋轉時肩胛下角是往內上移動（菱形肌往內上拉），詳解寫「下角拉向內下」方向有誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.85,
+    "verdict": "pass",
+    "reason": "菱形肌、提肩胛肌與胸小肌合力為向下旋轉，說明正確。"
    }
   },
   {

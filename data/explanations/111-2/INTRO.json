@@ -3,28 +3,25 @@
  "explanations": [
   {
    "id": "111-2-INTRO-001",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "1999年921大地震後的災後復健需求，促使物理治療走入社區，成為我國社區物理治療發展的重要契機。",
+   "why_correct": "1999年921大地震後，災區大量復健需求促使物理治療走入社區，成為我國社區物理治療發展的重要契機。",
    "why_others": {
-    "A": "我國物理治療的起步早於1945年，並非始於戰後傷兵復健。",
+    "A": "我國物理治療約在1950年代因小兒麻痺等復健需求起步，非始於1945年。",
     "C": "第一家物理治療所並非成立於2000年，時間不符。",
-    "D": "臺大設系後，各校院是逐步而非迅速成立物理治療學系。"
+    "D": "各校院物理治療學系是在之後逐步成立，並非迅速成立。"
    },
    "takeaway": "921地震災後復建是社區物理治療發展的契機。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.7,
-    "verdict": "reasoning_error",
-    "reason": "A 的反駁稱我國物理治療起步早於1945年，與一般記載（約1950年代因小兒麻痺與復健需求才起步）不符，屬事實錯誤。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.5,
+    "verdict": "pass",
+    "reason": "921地震促成社區物理治療發展正確，其餘選項的排除理由合理。"
    }
   },
   {
@@ -98,28 +95,25 @@
   },
   {
    "id": "111-2-INTRO-005",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "修正式艾許沃斯量表中，1+級是指在被動運動後半段（不到一半活動度）出現輕微阻力，且持續到活動末端。",
+   "why_correct": "修正式艾許沃斯量表中，1+級指被動活動時出現卡住（catch），之後在剩餘不到一半的活動度持續有輕微阻力，符合題述。",
    "why_others": {
-    "A": "1級是在活動末端才出現輕微阻力或卡住感。",
+    "A": "1級是在活動末端才出現卡住或極小阻力。",
     "C": "2級是大部分活動度中阻力較明顯，但肢體仍易被移動。",
     "D": "3級是被動運動困難，阻力明顯增加。"
    },
-   "takeaway": "1+級：前半段不到一半活動度即出現輕微阻力。",
+   "takeaway": "1+級：卡住後在剩餘不到一半活動度出現輕微阻力。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.8,
-    "verdict": "reasoning_error",
-    "reason": "takeaway 寫1+級是「前半段」出現輕微阻力，與定義（卡住後於剩餘不到一半活動度出現輕微阻力）及前文矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "1+級為卡住後在剩餘不到一半活動度有輕微阻力，各級定義正確。"
    }
   },
   {
@@ -733,28 +727,25 @@
   },
   {
    "id": "111-2-INTRO-032",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "年流動率為離職人數除以平均人數，原有10位治療師離職4位，流動率為40%。",
+   "why_correct": "本題以原有人數為分母計算：原有10位治療師，年內離職4位且未補人，年流動率＝4÷10＝40%。",
    "why_others": {
     "A": "人力規劃應依工作量與客觀指標，不只靠個人經驗。",
     "C": "工作輪調有助於訓練與培養員工，敘述相反。",
     "D": "休假仍需訂定公平的政策，不應只偏袒資深者。"
    },
-   "takeaway": "流動率等於離職人數除以平均人數。",
+   "takeaway": "流動率＝離職人數÷基準人數，本題以原有10人為基準。",
    "review": {
     "blind_answer": [
      "B"
     ],
     "blind_confidence": 0.6,
-    "verdict": "reasoning_error",
-    "reason": "詳解稱流動率為離職人數除以平均人數，卻以4/10算出40%；若用平均人數(10+6)/2=8應得50%，公式與計算自相矛盾。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "以原有10人為分母算出40%，並說明分母假設，其餘選項排除合理。"
    }
   },
   {
@@ -920,28 +911,25 @@
   },
   {
    "id": "111-2-INTRO-040",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "醫院品質管理演進依序為品質控制、品質保證、全面品質管制、全員品質管制，最後是全面品質管理。",
+   "why_correct": "醫院品質管理演進依序為品質控制、品質保證、全面品質管制、全員品質管制，最後是全面品質管理，即②①④③⑤。",
    "why_others": {
-    "A": "順序錯，品質控制應最先出現。",
-    "B": "順序錯，全員品質管制不應在最後之前。",
-    "C": "順序錯，品質控制應最先出現。"
+    "A": "把品質保證排在品質控制之前，順序錯。",
+    "B": "把全面品質管理⑤提前到④③之前，順序錯。",
+    "C": "品質保證排在品質控制前，且⑤提前，順序錯。"
    },
-   "takeaway": "品管演進：控制、保證、全面管制、全員、全面管理。",
+   "takeaway": "品管演進：控制、保證、全面管制、全員管制、全面管理。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.75,
-    "verdict": "reasoning_error",
-    "reason": "B 的說明「全員品質管制不應在最後之前」與正確順序矛盾（全員品管本就在最後的全面品質管理之前），B 真正錯在⑤提前至④③之前。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "品質控制→品質保證→全面品質管制→全員品質管制→全面品質管理順序正確。"
    }
   },
   {
@@ -969,28 +957,25 @@
   },
   {
    "id": "111-2-INTRO-042",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T04:05:46+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "31c9bf9e281c",
-   "why_correct": "實證物理治療從臨床不確定處出發：先提出可回答的問題，再搜尋證據、嚴格評讀證據，最後把結果恰當應用到病人身上。因此是①②③④。",
+   "why_correct": "實證步驟依序為提出問題、搜尋證據、嚴格評讀、恰當應用，最後衡量結果。選項中沒有含全部五步者，C涵蓋前四步且無缺漏，最為適當。",
    "why_others": {
-    "A": "缺少最前面的提出問題。",
-    "B": "缺少搜尋證據，也不能跳過它直接評讀。",
-    "D": "缺少嚴格評讀，未經評讀的證據不應直接應用。"
+    "A": "缺①，沒有明確問題就無法有效搜尋證據。",
+    "B": "缺②④，未搜尋證據便無從評讀，也未應用。",
+    "D": "缺③，未經嚴格評讀的證據不應直接應用。"
    },
-   "takeaway": "實證步驟：問題、搜尋、評讀、應用。",
+   "takeaway": "實證五步：問題、搜尋、評讀、應用、衡量結果。",
    "review": {
     "blind_answer": [
      "C"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "標準實證步驟包含第五步衡量結果，詳解未說明為何排除⑤，且結論把實證步驟寫成只有四步，容易誤導。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "說明實證五步並指出選項中C涵蓋前四步最適當，推理合理。"
    }
   },
   {

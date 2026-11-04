@@ -95,16 +95,16 @@
   },
   {
    "id": "109-1-CARDPED-005",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "f64048da0d30",
    "why_correct": "新生兒與嬰兒的呼吸速率本來就比成人快，兩週大嬰兒約在每分鐘三十到六十次之間，40 次屬正常範圍，不需特別處置。",
    "why_others": {
     "B": "呼吸速率正常，且沒有缺氧徵象，不需給氧。",
     "C": "數值正常，不必通知護理人員處理。",
-    "D": "頭高腳低姿勢無必要，也可能增加胃食道逆流。"
+    "D": "呼吸正常，不需要改變姿勢做緊急處置。"
    },
    "takeaway": "嬰兒正常呼吸速率偏快，約三十到六十次，40 次正常。",
    "review": {
@@ -112,24 +112,21 @@
      "A"
     ],
     "blind_confidence": 0.9,
-    "verdict": "reasoning_error",
-    "reason": "D 選項說頭高腳低姿勢可能增加胃食道逆流有誤，抬高頭部通常是用來減少逆流。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "verdict": "pass",
+    "reason": "新生兒正常呼吸速率約30到60次，40次正常，說明正確。"
    }
   },
   {
    "id": "109-1-CARDPED-006",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "抽菸導致的慢性阻塞性肺病是氣流受限：吐氣尖峰流速降低、曲線凹陷如杓狀，且殘餘容積與總肺容量增加、圖形右移。B 圖符合。",
+   "why_correct": "抽菸導致的慢性阻塞性肺病是氣流受限：吐氣尖峰流速降低，吐氣曲線在尖峰後快速下降、呈凹陷杓狀，且殘餘容積（RV）增加。B 圖符合。",
    "why_others": {
     "A": "A 是正常的流速－肺容積圖。",
-    "C": "C 的總肺容量縮小，屬限制性肺疾病。",
+    "C": "C 的總肺容量明顯縮小，屬限制性肺疾病。",
     "D": "D 的吸吐氣流速都被截平，屬固定型上呼吸道阻塞。"
    },
    "takeaway": "COPD 流速容積圖：吐氣曲線凹陷、尖峰流速降低、RV 增加。",
@@ -137,12 +134,9 @@
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "附圖橫軸左側容積較大，肺容積增加應使曲線往左移，詳解寫「圖形右移」與附圖不符；B 圖的 TLC 也看不出明顯增加。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.9,
+    "verdict": "pass",
+    "reason": "與附圖相符：B為吐氣曲線凹陷且RV增加的阻塞型，A正常、C限制型、D固定型上呼吸道阻塞。"
    }
   },
   {
@@ -193,54 +187,48 @@
   },
   {
    "id": "109-1-CARDPED-009",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "1d1e75d81c49",
-   "why_correct": "T1 完全性脊髓損傷時，橫膈（頸 3 至 5）完整，肋間肌也只受到有限影響，呼吸型態接近正常，以橫膈為主，因此最可能評為橫膈型的 4 分。",
+   "why_correct": "T1 完全性脊髓損傷時，肋間肌與腹肌幾乎全部癱瘓，胸廓擴張消失；橫膈由頸神經支配而完整，呼吸只剩橫膈作用，因此評估結果為橫膈 4 分。",
    "why_others": {
-    "A": "頸部輔助肌代償是高位頸髓損傷才會出現。",
-    "B": "T1 損傷橫膈功能保留，不會出現頸部代償。",
-    "C": "橫膈為主但仍會評高分，且無明顯胸部型。"
+    "A": "頸部輔助肌代償見於橫膈受影響的高位頸髓損傷。",
+    "B": "T1 損傷橫膈功能完整，不需頸部輔助肌代償。",
+    "C": "肋間肌已癱瘓，胸部擴張幾乎消失，不會有胸部分數。"
    },
-   "takeaway": "T1 以下損傷橫膈完好，呼吸型態接近正常的橫膈呼吸。",
+   "takeaway": "T1 完全損傷：肋間肌與腹肌癱瘓，只剩橫膈呼吸。",
    "review": {
     "blind_answer": [
      "D"
     ],
-    "blind_confidence": 0.5,
-    "verdict": "reasoning_error",
-    "reason": "T1 完全性損傷會癱瘓幾乎所有肋間肌與腹肌，詳解說肋間肌只受有限影響、呼吸型態接近正常是錯的；正確理由是胸部擴張消失、只剩橫膈呼吸，C 的說明也語意不清。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.4,
+    "verdict": "pass",
+    "reason": "T1完全損傷肋間肌與腹肌癱瘓、橫膈完整，評估為橫膈4分，說明正確。"
    }
   },
   {
    "id": "109-1-CARDPED-010",
-   "status": "rejected",
+   "status": "pass",
    "source": "llm",
-   "model": "subagent writer=sonnet review=opus",
-   "generated_at": "2026-11-03T14:05:56+00:00",
+   "model": "subagent writer=opus review=opus (retry)",
+   "generated_at": "2026-11-04T08:58:24+00:00",
    "answers_hash": "9941b1ab3b19",
-   "why_correct": "足月新生兒心率正常約在一百二十到一百六十之間，220 bpm 明顯過快，合併呼吸次數 48 偏高，顯示胎便吸入症候群的新生兒狀況不穩，治療應先暫停。",
+   "why_correct": "心率 220 bpm 遠高於足月新生兒的正常範圍，屬明顯心搏過速，顯示胎便吸入的新生兒狀況不穩定，物理治療應先暫停；B 的血壓與呼吸次數則在可接受範圍。",
    "why_others": {
-    "A": "心率 180 略快，但治療中的哭鬧常見，尚在可觀察範圍。",
-    "C": "心率 100 稍低，血壓與呼吸穩定。",
+    "A": "心率 180 偏快，可能與哭鬧有關，血壓呼吸穩定，可觀察。",
+    "C": "心率 100 位於下限邊緣，血壓與呼吸穩定。",
     "D": "各項數值皆在可接受範圍。"
    },
-   "takeaway": "新生兒心率過高、呼吸急促時，應先暫停治療。",
+   "takeaway": "新生兒心率明顯過快（如 220）時，應先暫停治療。",
    "review": {
     "blind_answer": [
      "B"
     ],
-    "blind_confidence": 0.85,
-    "verdict": "reasoning_error",
-    "reason": "新生兒正常呼吸次數約 30 至 60 次，詳解說 48 次偏高是事實錯誤；應暫停的主因只是心率 220 過快。",
-    "fails": [
-     "reasoning_error"
-    ]
+    "blind_confidence": 0.65,
+    "verdict": "pass",
+    "reason": "心率220 bpm為明顯心搏過速應暫停治療，其他組數值說明合理。"
    }
   },
   {
