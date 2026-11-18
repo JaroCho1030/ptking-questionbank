@@ -1,4 +1,4 @@
-"""把 data/json + taxonomy 打包成 App 用的 SQLite 題庫與 manifest.json。
+"""把 data/json + taxonomy 打包成 SQLite 題庫、manifest.json 與對戰題目池。
 
 用法：
     python -m pipeline.build --version 2026.10.16-1 \
@@ -6,6 +6,7 @@
 產出：
     dist/questions.sqlite   App 內建與遠端更新都用這個檔（含附圖 BLOB）
     dist/manifest.json      App 啟動時先抓這個檔比版本號
+    dist/battle_pool.json   對戰出題與判分用的題目 ID、承認答案
 
 版本號規則：YYYY.MM.DD-N（同一天第 N 次），App 端用字串比較（新版 > 舊版）即可，所以要補零。
 schema_version 只在資料表結構不相容時才 +1，App 用它決定能不能吃這份題庫。
@@ -17,6 +18,7 @@ import hashlib
 import json
 import os
 import sqlite3
+from collections.abc import Iterable
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -26,6 +28,7 @@ from . import config as C
 from .explain import answers_hash, iter_explanation_files
 
 SCHEMA_VERSION = 1
+BATTLE_MAX_CHARS = 150
 
 SCHEMA_SQL = """
 PRAGMA journal_mode = DELETE;
@@ -122,6 +125,31 @@ CREATE VIRTUAL TABLE questions_fts USING fts5(
 """
 
 
+def is_battle_eligible(question: dict) -> bool:
+    """依題庫原始字元數篩選對戰題目，不修改題目或答案。"""
+    if (question.get("group_id") is not None
+            or question["is_voided"] or question["has_figure"]):
+        return False
+    return (len(question["stem"])
+            + sum(len(question["options"][k]) for k in C.OPTION_LETTERS)
+            <= BATTLE_MAX_CHARS)
+
+
+def make_battle_pool(version: str, entries: Iterable[tuple[str, dict]]) -> dict:
+    """科目取自所屬試卷，答案維持原順序，題目依 ID 排序。"""
+    counts = {s["code"]: 0 for s in C.SUBJECTS}
+    questions = []
+    for subject_code, question in entries:
+        if is_battle_eligible(question):
+            counts[subject_code] += 1
+            questions.append({"id": question["id"],
+                              "accepted_answers": list(question["accepted_answers"])})
+    questions.sort(key=lambda q: q["id"])
+    return {"bank_version": version, "max_chars": BATTLE_MAX_CHARS,
+            "question_count": len(questions), "subject_counts": counts,
+            "questions": questions}
+
+
 def _sha256_file(p: Path) -> str:
     h = hashlib.sha256()
     with p.open("rb") as f:
@@ -171,9 +199,11 @@ def build(version: str, release_base_url: str | None) -> None:
     exams_summary = []
     q_total = 0
     all_questions: dict[str, dict] = {}
+    battle_entries = []
     for p in sorted(C.JSON_DIR.glob("*/*.json")):
         data = json.loads(p.read_text("utf-8"))
         ex, qs = data["exam"], data["questions"]
+        battle_entries.extend((ex["subject_code"], q) for q in qs)
         con.execute("INSERT INTO exams VALUES (?,?,?,?,?,?,?,?,?)",
                     (ex["id"], ex["roc_year"], ex["round"], ex["subject_code"], ex.get("paper_code"),
                      len(qs), ex.get("source_q"), ex.get("source_s"), ex.get("source_m")))
@@ -238,8 +268,11 @@ def build(version: str, release_base_url: str | None) -> None:
         "exams": exams_summary,
     }
     (C.DIST_DIR / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), "utf-8")
+    battle_pool = make_battle_pool(version, battle_entries)
+    (C.DIST_DIR / "battle_pool.json").write_text(json.dumps(battle_pool, ensure_ascii=False, indent=2), "utf-8")
     print(f"questions.sqlite {db_path.stat().st_size / 1e6:.1f} MB，{q_total} 題（詳解 {n_expl} 題），版本 {version}")
     print(f"manifest → {C.DIST_DIR / 'manifest.json'}")
+    print(f"battle_pool → {C.DIST_DIR / 'battle_pool.json'}（{battle_pool['question_count']} 題）")
 
 
 def main(argv=None):
