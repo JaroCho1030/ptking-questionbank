@@ -41,6 +41,29 @@ App 端怎麼使用題庫（篩選、統計、更新）不在這裡。
 - **選項是圖片的題目**（例：113-1-NEURO-031）：選項文字為空字串、附圖是 A→D 由上而下拼好的圖；App 顯示「A（見附圖）」。不手動改 JSON（`parse --all` 會覆蓋，只保留主題標記）。
 - SQLite 的完整 DDL 在 `pipeline/build.py`（`schema_version` 只在表結構不相容時 +1）。
 
+## 對戰題目池（`battle_pool.json`）
+
+App 的對戰模式只從這份清單出題，伺服器用它判分。`pipeline.build` 和 `questions.sqlite`、`manifest.json` 一起產生，隨 Release 發布。
+
+- 排除：題組題（`group_id` 不是 null）、送分題（`is_voided`）、有附圖的題（`has_figure`）、題目過長的題。
+- 過長＝`stem` 加四個選項文字的字元數超過 150（Python `len`，不去空白、不正規化）。
+- 答案可複數的題照收，`accepted_answers` 原樣帶上。
+- 答案被更正 → 下一版 Release 的清單跟著變；題目 ID 不變。
+- `questions` 依 ID 排序；`subject_counts` 依科目代碼表的順序。
+- 不改 `manifest.json`、`questions.sqlite` 的格式（舊版 App 照常更新）；`schema_version` 不變。
+
+```json
+{
+  "bank_version": "2026.11.04-1",
+  "max_chars": 150,
+  "question_count": 7367,
+  "subject_counts": {"BASIC": 1250, "INTRO": 1355, "TECH": 1244, "NEURO": 1185, "ORTHO": 1123, "CARDPED": 1210},
+  "questions": [{"id": "105-1-BASIC-001", "accepted_answers": ["A"]}]
+}
+```
+
+（數字是 `2026.11.04-1` 的資料算出來的；`questions` 只示意一筆。）
+
 ## 主題標記
 
 ### 複數主題的規則
