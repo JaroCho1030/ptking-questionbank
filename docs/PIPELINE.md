@@ -64,6 +64,22 @@ App 的對戰模式只從這份清單出題，伺服器用它判分。`pipeline.
 
 （數字是 `2026.11.04-1` 的資料算出來的；`questions` 只示意一筆。）
 
+## 全部題目清單（`question_catalog.json`）
+
+`pipeline.build` 同時產生 `dist/question_catalog.json`，隨 GitHub Release 作為附件發布，供後端檢查題號與選項。從同一批寫入 `questions.sqlite` 的題目產生，包含送分、附圖及題組，依 ID 排序；不含題幹、答案、詳解或作者資料。不改 manifest、SQLite schema 或對戰池。
+
+```json
+{
+  "bank_version": "2026.11.22-1",
+  "question_count": 1,
+  "questions": [{"id": "108-1-NEURO-001", "option_count": 4}]
+}
+```
+
+選項數按鍵計算，空文字的附圖選項也算；現有 SQLite 固定 A–D，因此全部為 4。重複 ID 或不是 A–D 的選項結構會讓 build 失敗。新 schema 若支援其他選項數，需同步調整這項檢查。
+
+發布順序：本機以預定版本執行 `python -m pipeline.build --version <版本>` → 在後端 repo 執行 `npm run prepare-question-data -- <question_catalog.json>`，檢查版本／題數、測試並先部署 Worker → 才在題庫 main 打 tag、push 發布 GitHub Release。預部署清單與 Release 必須來自相同題庫 commit、相同版本；其間若改題庫，需重新 build 與更新 Worker。Worker 將清單打包進程式，不會在請求時連 GitHub；新增題目未進清單前上傳會被略過、留言／許願寫入會被拒絕。
+
 ## 主題標記
 
 ### 複數主題的規則

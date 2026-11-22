@@ -124,6 +124,9 @@ def test_build_preserves_existing_formats(tmp_path, monkeypatch):
     assert manifest["bank_version"] == pool["bank_version"]
     assert manifest["schema_version"] == B.SCHEMA_VERSION == 1
     assert manifest["question_count"] == 6
+    catalog = json.loads((C.DIST_DIR / "question_catalog.json").read_text("utf-8"))
+    assert catalog == {"bank_version": "2026.11.04-1", "question_count": 6,
+                       "questions": [{"id": q["id"], "option_count": 4} for q in qs]}
     db = C.DIST_DIR / "questions.sqlite"
     assert manifest["sqlite"]["sha256"] == hashlib.sha256(db.read_bytes()).hexdigest()
     assert manifest["sqlite"]["size"] == db.stat().st_size
@@ -143,4 +146,5 @@ def test_release_includes_all_build_artifacts():
     release = next(step for step in workflow["jobs"]["build"]["steps"]
                    if step.get("uses", "").startswith("softprops/action-gh-release@"))
     assert release["with"]["files"].splitlines() == [
-        "dist/questions.sqlite", "dist/manifest.json", "dist/battle_pool.json"]
+        "dist/questions.sqlite", "dist/manifest.json", "dist/battle_pool.json",
+        "dist/question_catalog.json"]

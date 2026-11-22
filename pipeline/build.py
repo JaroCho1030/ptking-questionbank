@@ -7,6 +7,7 @@
     dist/questions.sqlite   App 內建與遠端更新都用這個檔（含附圖 BLOB）
     dist/manifest.json      App 啟動時先抓這個檔比版本號
     dist/battle_pool.json   對戰出題與判分用的題目 ID、承認答案
+    dist/question_catalog.json   全部題目 ID 與選項數
 
 版本號規則：YYYY.MM.DD-N（同一天第 N 次），App 端用字串比較（新版 > 舊版）即可，所以要補零。
 schema_version 只在資料表結構不相容時才 +1，App 用它決定能不能吃這份題庫。
@@ -150,6 +151,23 @@ def make_battle_pool(version: str, entries: Iterable[tuple[str, dict]]) -> dict:
             "questions": questions}
 
 
+def make_question_catalog(version: str, entries: Iterable[dict]) -> dict:
+    """全部題目皆納入；選項鍵決定數量，空文字仍是有效選項。"""
+    questions = []
+    seen = set()
+    for q in entries:
+        qid = q["id"]
+        if qid in seen:
+            raise ValueError(f"重複題目 ID：{qid}")
+        seen.add(qid)
+        # SQLite 目前只有 A–D；不讓額外選項在建庫時被默默丟掉。
+        if set(q["options"]) != set(C.OPTION_LETTERS):
+            raise ValueError(f"{qid} 的選項必須是 A–D")
+        questions.append({"id": qid, "option_count": len(q["options"])})
+    questions.sort(key=lambda q: q["id"])
+    return {"bank_version": version, "question_count": len(questions), "questions": questions}
+
+
 def _sha256_file(p: Path) -> str:
     h = hashlib.sha256()
     with p.open("rb") as f:
@@ -199,6 +217,7 @@ def build(version: str, release_base_url: str | None) -> None:
     exams_summary = []
     q_total = 0
     all_questions: dict[str, dict] = {}
+    catalog_entries = []
     battle_entries = []
     for p in sorted(C.JSON_DIR.glob("*/*.json")):
         data = json.loads(p.read_text("utf-8"))
@@ -208,6 +227,7 @@ def build(version: str, release_base_url: str | None) -> None:
                     (ex["id"], ex["roc_year"], ex["round"], ex["subject_code"], ex.get("paper_code"),
                      len(qs), ex.get("source_q"), ex.get("source_s"), ex.get("source_m")))
         for q in qs:
+            catalog_entries.append(q)
             all_questions[q["id"]] = q
             con.execute(
                 "INSERT INTO questions VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
@@ -235,6 +255,7 @@ def build(version: str, release_base_url: str | None) -> None:
                               "subject_code": ex["subject_code"], "question_count": len(qs)})
         q_total += len(qs)
 
+    catalog = make_question_catalog(version, catalog_entries)
     n_expl, n_stale = _insert_explanations(con, all_questions)
     if n_stale:
         print(f"[warn] {n_stale} 則詳解的答案已被更正（answers_hash 不符），沒有收錄；重跑 explain")
@@ -270,6 +291,8 @@ def build(version: str, release_base_url: str | None) -> None:
     (C.DIST_DIR / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), "utf-8")
     battle_pool = make_battle_pool(version, battle_entries)
     (C.DIST_DIR / "battle_pool.json").write_text(json.dumps(battle_pool, ensure_ascii=False, indent=2), "utf-8")
+    (C.DIST_DIR / "question_catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2), "utf-8")
+    print(f"question_catalog → {C.DIST_DIR / 'question_catalog.json'}（{catalog['question_count']} 題）")
     print(f"questions.sqlite {db_path.stat().st_size / 1e6:.1f} MB，{q_total} 題（詳解 {n_expl} 題），版本 {version}")
     print(f"manifest → {C.DIST_DIR / 'manifest.json'}")
     print(f"battle_pool → {C.DIST_DIR / 'battle_pool.json'}（{battle_pool['question_count']} 題）")
