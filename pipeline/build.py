@@ -143,8 +143,12 @@ def make_battle_pool(version: str, entries: Iterable[tuple[str, dict]]) -> dict:
     for subject_code, question in entries:
         if is_battle_eligible(question):
             counts[subject_code] += 1
+            # chars：題幹＋四選項字元數（與篩選同口徑），伺服器用來估電腦對手的作答時間
+            chars = (len(question["stem"])
+                     + sum(len(question["options"][k]) for k in C.OPTION_LETTERS))
             questions.append({"id": question["id"],
-                              "accepted_answers": list(question["accepted_answers"])})
+                              "accepted_answers": list(question["accepted_answers"]),
+                              "chars": chars})
     questions.sort(key=lambda q: q["id"])
     return {"bank_version": version, "max_chars": BATTLE_MAX_CHARS,
             "question_count": len(questions), "subject_counts": counts,

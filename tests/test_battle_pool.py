@@ -57,13 +57,13 @@ def test_answers_preserved_and_updated_without_mutating_input():
     q = question(accepted_answers=["C", "A"])
     before = copy.deepcopy(q)
     pool = B.make_battle_pool("v1", [("NEURO", q)])
-    assert pool["questions"] == [{"id": q["id"], "accepted_answers": ["C", "A"]}]
+    assert pool["questions"] == [{"id": q["id"], "accepted_answers": ["C", "A"], "chars": 6}]
     assert q == before
     pool["questions"][0]["accepted_answers"].append("D")
     assert q == before
     q["accepted_answers"] = ["B", "D"]
     assert B.make_battle_pool("v2", [("NEURO", q)])["questions"] == [
-        {"id": q["id"], "accepted_answers": ["B", "D"]}]
+        {"id": q["id"], "accepted_answers": ["B", "D"], "chars": 6}]
 
 
 def test_order_counts_and_exam_subject():
@@ -78,7 +78,7 @@ def test_order_counts_and_exam_subject():
     assert entries == before
     assert pool == {"bank_version": "version", "max_chars": 150, "question_count": 3,
                     "subject_counts": dict(zip(SUBJECT_CODES, [1, 0, 0, 2, 0, 0])),
-                    "questions": [{"id": qid, "accepted_answers": ["A"]} for qid in
+                    "questions": [{"id": qid, "accepted_answers": ["A"], "chars": 6} for qid in
                                   ["108-1-BASIC-001", "108-1-NEURO-001", "108-1-NEURO-002"]]}
     assert list(pool["subject_counts"]) == SUBJECT_CODES
     assert sum(pool["subject_counts"].values()) == pool["question_count"]
@@ -112,8 +112,8 @@ def test_build_preserves_existing_formats(tmp_path, monkeypatch):
     assert pool == {
         "bank_version": "2026.11.04-1", "max_chars": 150, "question_count": 2,
         "subject_counts": dict(zip(SUBJECT_CODES, [0, 0, 0, 2, 0, 0])),
-        "questions": [{"id": qs[0]["id"], "accepted_answers": ["C", "A"]},
-                      {"id": qs[5]["id"], "accepted_answers": ["A"]}],
+        "questions": [{"id": qs[0]["id"], "accepted_answers": ["C", "A"], "chars": 6},
+                      {"id": qs[5]["id"], "accepted_answers": ["A"], "chars": 150}],
     }
     assert list(pool["subject_counts"]) == SUBJECT_CODES
     manifest = json.loads((C.DIST_DIR / "manifest.json").read_text("utf-8"))

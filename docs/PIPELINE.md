@@ -48,6 +48,7 @@ App 的對戰模式只從這份清單出題，伺服器用它判分。`pipeline.
 - 排除：題組題（`group_id` 不是 null）、送分題（`is_voided`）、有附圖的題（`has_figure`）、題目過長的題。
 - 過長＝`stem` 加四個選項文字的字元數超過 150（Python `len`，不去空白、不正規化）。
 - 答案可複數的題照收，`accepted_answers` 原樣帶上。
+- 每題帶 `chars`（`stem` 加四個選項的字元數，同篩選口徑）：伺服器用它估電腦對手的作答時間，不影響判分。
 - 答案被更正 → 下一版 Release 的清單跟著變；題目 ID 不變。
 - `questions` 依 ID 排序；`subject_counts` 依科目代碼表的順序。
 - 不改 `manifest.json`、`questions.sqlite` 的格式（舊版 App 照常更新）；`schema_version` 不變。
